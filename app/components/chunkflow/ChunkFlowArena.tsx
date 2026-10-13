@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Question } from '../../types/chunkflow';
+import type { PerformanceStats, Question } from '../../types/chunkflow';
 
 interface ChunkFlowArenaProps {
   question: Question;
@@ -8,6 +8,7 @@ interface ChunkFlowArenaProps {
   lastEvaluation: { isCorrect: boolean; latencyMs: number } | null;
   showFeedback: boolean;
   onNextQuestion?: () => void;
+  stats?: PerformanceStats;
 }
 
 export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
@@ -17,8 +18,16 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   lastEvaluation,
   showFeedback,
   onNextQuestion,
+  stats,
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
+
+  const getAccuracyColor = (acc: number) => {
+    if (!stats || stats.totalAttempts === 0) return 'text-zinc-400';
+    if (acc >= 85) return 'text-emerald-400';
+    if (acc >= 70) return 'text-amber-400';
+    return 'text-rose-400';
+  };
 
   // Determine card style based on state and feedback
   const getCardStyle = () => {
@@ -38,7 +47,48 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto flex flex-col gap-6">
+    <div className="w-full max-w-4xl mx-auto flex flex-col gap-4">
+      {/* Telemetry Metrics Bar (Relocated Directly Above the Progress Bar) */}
+      {stats && (
+        <div className="w-full flex items-center justify-between px-2 text-xs font-mono">
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <span className="text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
+              Accuracy
+            </span>
+            <span className={`text-xs sm:text-sm font-bold ${getAccuracyColor(stats.accuracy)}`}>
+              {stats.totalAttempts > 0 ? `${stats.accuracy}%` : '--'}
+            </span>
+          </div>
+
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <span className="text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
+              Avg Latency
+            </span>
+            <span className="text-xs sm:text-sm font-bold text-zinc-200">
+              {stats.avgLatencyMs > 0 ? `${stats.avgLatencyMs}ms` : '--'}
+            </span>
+          </div>
+
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <span className="text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
+              Speed
+            </span>
+            <span className="text-xs sm:text-sm font-bold text-cyan-300">
+              {stats.chunksPerMin > 0 ? `${stats.chunksPerMin} cpm` : '--'}
+            </span>
+          </div>
+
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <span className="text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
+              Streak
+            </span>
+            <span className="text-xs sm:text-sm font-bold text-amber-400 flex items-center gap-1">
+              {stats.currentStreak > 0 ? `${stats.currentStreak} 🔥` : '0'}
+            </span>
+          </div>
+        </div>
+      )}
+
       {/* Top Countdown / Focus Bar */}
       <div className="w-full bg-zinc-900/80 h-1.5 rounded-full overflow-hidden border border-zinc-800/80">
         <div
@@ -70,27 +120,27 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
           </span>
         </div>
 
-        {/* Large Typography Sentence Chunks */}
+        {/* Large Typography Sentence Chunks (Stable box geometry with 0 layout shift) */}
         <div className="w-full text-center flex flex-wrap justify-center items-center gap-x-2.5 gap-y-3.5 my-4">
           {question.chunks.map((chunk, index) => {
-            if (chunk.isTargetSlot) {
-              return (
-                <span
-                  key={index}
-                  className="relative group inline-flex items-center px-4 py-2 rounded-xl text-xl md:text-3xl font-bold tracking-tight bg-cyan-950/80 text-cyan-200 border-2 border-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.4)] ring-2 ring-cyan-500/20 transition-transform duration-200 hover:scale-[1.02]"
-                >
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] font-mono tracking-widest uppercase bg-cyan-500 text-zinc-950 font-black shadow-sm">
-                    {chunk.type ? `${chunk.type.toUpperCase()} SLOT` : 'TARGET SLOT'}
-                  </span>
-                  {chunk.text}
-                </span>
-              );
+            const isRevealed = focusState !== 'idle' || showFeedback;
+
+            let chunkStyle = 'border-transparent bg-transparent text-zinc-300';
+            if (isRevealed) {
+              if (chunk.isTargetSlot) {
+                chunkStyle =
+                  'border-cyan-400 bg-cyan-950/80 text-cyan-200 shadow-[0_0_20px_rgba(6,182,212,0.4)] ring-2 ring-cyan-500/20';
+              } else if (chunk.type === 'subject') {
+                chunkStyle = 'border-sky-500/40 bg-sky-950/25 text-sky-200';
+              } else {
+                chunkStyle = 'border-transparent bg-transparent text-zinc-400';
+              }
             }
 
             return (
               <span
                 key={index}
-                className="text-xl md:text-3xl font-medium text-zinc-300 tracking-normal hover:text-zinc-100 transition-colors"
+                className={`relative inline-flex items-center px-3.5 py-1.5 rounded-xl border-2 text-xl md:text-3xl font-semibold tracking-tight transition-all duration-300 ${chunkStyle}`}
               >
                 {chunk.text}
               </span>

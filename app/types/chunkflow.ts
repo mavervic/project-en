@@ -44,3 +44,7 @@ export interface CategoryStat {
   accuracy: number;
   avgLatencyMs: number;
 }
+
+export interface ChunkFlowSettings {
+  showGuidance: boolean;
+}

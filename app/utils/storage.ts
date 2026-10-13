@@ -1,6 +1,16 @@
-import type { CategoryStat, PerformanceStats, UserPerformance } from '../types/chunkflow';
+import type {
+  CategoryStat,
+  ChunkFlowSettings,
+  PerformanceStats,
+  UserPerformance,
+} from '../types/chunkflow';
 
 const STORAGE_KEY = 'chunkflow_performance_v1';
+const SETTINGS_STORAGE_KEY = 'chunkflow_settings_v1';
+
+const DEFAULT_SETTINGS: ChunkFlowSettings = {
+  showGuidance: false,
+};
 
 export function loadPerformanceRecords(): UserPerformance[] {
   if (typeof window === 'undefined') return [];
@@ -109,4 +119,29 @@ export function computeCategoryStats(records: UserPerformance[]): Record<string,
   }
 
   return statsMap;
+}
+
+export function loadSettings(): ChunkFlowSettings {
+  if (typeof window === 'undefined') return DEFAULT_SETTINGS;
+  try {
+    const raw = window.localStorage.getItem(SETTINGS_STORAGE_KEY);
+    if (!raw) return DEFAULT_SETTINGS;
+    const parsed = JSON.parse(raw);
+    if (typeof parsed === 'object' && parsed !== null && typeof parsed.showGuidance === 'boolean') {
+      return parsed;
+    }
+  } catch (err) {
+    console.warn('Failed to load ChunkFlow settings from localStorage', err);
+  }
+  return DEFAULT_SETTINGS;
+}
+
+export function saveSettings(settings: ChunkFlowSettings): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settings));
+    } catch (err) {
+      console.warn('Failed to save ChunkFlow settings to localStorage', err);
+    }
+  }
 }

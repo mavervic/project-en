@@ -40,15 +40,17 @@ export function useFocusFadeTimer({
 
     const updateFrame = () => {
       const elapsed = Date.now() - startTimeRef.current;
+      const totalDurationMs = pauseDurationMs + transitionDurationMs;
 
+      // Progress bar advances smoothly and immediately from t = 0 across the full duration
+      const progress = Math.min(100, (elapsed / totalDurationMs) * 100);
+      setProgressPercent(progress);
+
+      // Focus state transitions independently from idle to focusing after pauseDurationMs
       if (elapsed < pauseDurationMs) {
         setFocusState('idle');
-        setProgressPercent(0);
       } else {
         setFocusState('focusing');
-        const transitionElapsed = elapsed - pauseDurationMs;
-        const progress = Math.min(100, (transitionElapsed / transitionDurationMs) * 100);
-        setProgressPercent(progress);
       }
 
       rafRef.current = requestAnimationFrame(updateFrame);
