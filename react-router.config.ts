@@ -1,7 +1,8 @@
 import type { Config } from "@react-router/dev/config";
 
 export default {
-  // Config options...
-  // Server-side render by default, to enable SPA mode set this to `false`
-  ssr: true,
+  // Disable server-side rendering for SPA static deployment on GitHub Pages
+  ssr: false,
+  // GitHub Pages subpath for repository https://github.com/mavervic/project-en
+  basename: "/project-en/",
 } satisfies Config;
