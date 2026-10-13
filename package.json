@@ -6,8 +6,14 @@
   "scripts": {
     "build": "react-router build && node scripts/copy-404.js",
     "dev": "react-router dev",
+    "format": "pretty-quick --staged",
+    "format:all": "prettier --write .",
+    "prepare": "simple-git-hooks",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm pretty-quick --staged"
   },
   "dependencies": {
     "@react-router/node": "^8.4.0",
@@ -23,6 +29,9 @@
     "@types/node": "^22",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
+    "prettier": "^3.9.10",
+    "pretty-quick": "^4.2.2",
+    "simple-git-hooks": "^2.14.0",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3",
     "vite": "^8.0.3"
