@@ -2,6 +2,7 @@
   "name": "project-en",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@9.14.4",
   "scripts": {
     "build": "react-router build && node scripts/copy-404.js",
     "dev": "react-router dev",
