@@ -7,9 +7,16 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-zinc-950 text-zinc-100 min-h-screen antialiased selection:bg-cyan-500/30 selection:text-cyan-200;
+  color-scheme: dark;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
 }
