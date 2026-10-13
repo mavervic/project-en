@@ -1,5 +1,4 @@
 import React from 'react';
-import type { PerformanceStats } from '../../types/chunkflow';
 
 interface HeaderHUDProps {
   practiceMode: 'smart' | 'random';
@@ -16,21 +15,22 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
 }) => {
   return (
     <header className="w-full border-b border-zinc-800/80 bg-zinc-950/70 backdrop-blur-md sticky top-0 z-30 px-3 sm:px-4 md:px-8 py-3 flex items-center justify-between gap-3 sm:gap-4">
-      {/* Brand & Mode Tag */}
-      <div className="flex items-center gap-2 sm:gap-3">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-indigo-600 flex items-center justify-center font-black text-zinc-950 text-sm shadow-[0_0_15px_rgba(6,182,212,0.4)]">
-            CF
-          </div>
-          <span className="hidden sm:inline-block font-extrabold text-lg md:text-xl tracking-tight text-white">
-            Chunk<span className="text-cyan-400">Flow</span>
-          </span>
+      {/* Brand */}
+      <div className="flex items-center gap-2">
+        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-indigo-600 flex items-center justify-center font-black text-zinc-950 text-sm shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+          CF
         </div>
+        <span className="hidden sm:inline-block font-extrabold text-lg md:text-xl tracking-tight text-white">
+          Chunk<span className="text-cyan-400">Flow</span>
+        </span>
+      </div>
 
+      {/* Action Controls Cluster */}
+      <div className="flex items-center gap-2">
         <button
           onClick={onTogglePracticeMode}
           title="Click to toggle practice algorithm"
-          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono font-medium border border-zinc-800 bg-zinc-900 hover:border-zinc-700 text-zinc-300 transition-colors cursor-pointer"
+          className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium border border-zinc-800 bg-zinc-900 hover:border-zinc-700 text-zinc-300 transition-colors cursor-pointer"
         >
           <span
             className={`w-1.5 h-1.5 rounded-full ${
@@ -42,10 +42,6 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
           </span>
           <span className="xs:hidden">{practiceMode === 'smart' ? 'Drill' : 'Random'}</span>
         </button>
-      </div>
-
-      {/* Right Action Buttons */}
-      <div className="flex items-center gap-2">
         <button
           onClick={onOpenAnalytics}
           title="Analytics"

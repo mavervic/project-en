@@ -48,11 +48,11 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
 
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-4">
-      {/* Telemetry Metrics Bar (Relocated Directly Above the Progress Bar) */}
+      {/* Telemetry Metrics Bar (2x2 on Mobile, 4-column on sm+) */}
       {stats && (
-        <div className="w-full flex items-center justify-between px-2 text-xs font-mono">
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <span className="text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 px-2 py-1 text-xs font-mono">
+          <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
               Accuracy
             </span>
             <span className={`text-xs sm:text-sm font-bold ${getAccuracyColor(stats.accuracy)}`}>
@@ -60,8 +60,8 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             </span>
           </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <span className="text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
+          <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
               Avg Latency
             </span>
             <span className="text-xs sm:text-sm font-bold text-zinc-200">
@@ -69,8 +69,8 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             </span>
           </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <span className="text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
+          <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
               Speed
             </span>
             <span className="text-xs sm:text-sm font-bold text-cyan-300">
@@ -78,8 +78,8 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             </span>
           </div>
 
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            <span className="text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
+          <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
               Streak
             </span>
             <span className="text-xs sm:text-sm font-bold text-amber-400 flex items-center gap-1">
@@ -113,11 +113,6 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
         <div className="absolute top-4 left-6 flex items-center gap-2 text-xs font-mono tracking-wider text-zinc-500 uppercase">
           <span className="inline-block w-2 h-2 rounded-full bg-cyan-400/80 animate-ping" />
           <span>Syntactic Focus Arena</span>
-          <span className="text-zinc-600">|</span>
-          <span className="text-zinc-400">
-            Target: {question.correctAnswers.time.toUpperCase()}{' '}
-            {question.correctAnswers.voice.toUpperCase()}
-          </span>
         </div>
 
         {/* Large Typography Sentence Chunks (Stable box geometry with 0 layout shift) */}
