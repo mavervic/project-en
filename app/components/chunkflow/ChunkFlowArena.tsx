@@ -48,8 +48,8 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
                 ? 'bg-emerald-400'
                 : 'bg-rose-500'
               : focusState === 'focusing'
-              ? 'bg-gradient-to-r from-cyan-500 to-indigo-500'
-              : 'bg-zinc-600'
+                ? 'bg-gradient-to-r from-cyan-500 to-indigo-500'
+                : 'bg-zinc-600'
           }`}
           style={{ width: `${Math.max(0, Math.min(100, progressPercent))}%` }}
         />
@@ -65,7 +65,8 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
           <span>Syntactic Focus Arena</span>
           <span className="text-zinc-600">|</span>
           <span className="text-zinc-400">
-            Target: {question.correctAnswers.time.toUpperCase()} {question.correctAnswers.voice.toUpperCase()}
+            Target: {question.correctAnswers.time.toUpperCase()}{' '}
+            {question.correctAnswers.voice.toUpperCase()}
           </span>
         </div>
 
@@ -111,15 +112,14 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             <div className="flex items-center gap-2.5 flex-wrap">
               <span
                 className={`px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase ${
-                  isCorrect
-                    ? 'bg-emerald-500 text-zinc-950'
-                    : 'bg-rose-500 text-zinc-950'
+                  isCorrect ? 'bg-emerald-500 text-zinc-950' : 'bg-rose-500 text-zinc-950'
                 }`}
               >
                 {isCorrect ? 'PERFECT MATCH' : 'INCORRECT'}
               </span>
               <span className="text-xs font-mono text-zinc-400">
-                Reaction Time: <strong className="text-zinc-200">{lastEvaluation.latencyMs}ms</strong>
+                Reaction Time:{' '}
+                <strong className="text-zinc-200">{lastEvaluation.latencyMs}ms</strong>
               </span>
               <span className="text-xs font-mono text-zinc-400">
                 Correct:{' '}
@@ -128,9 +128,7 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
                 </strong>
               </span>
             </div>
-            <p className="text-sm text-zinc-300 leading-relaxed mt-1">
-              {question.grammarNote}
-            </p>
+            <p className="text-sm text-zinc-300 leading-relaxed mt-1">{question.grammarNote}</p>
           </div>
 
           {onNextQuestion && (

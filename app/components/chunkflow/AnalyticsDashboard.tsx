@@ -43,7 +43,8 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
               <span className="text-cyan-400">Keybr-Style</span> Performance Analytics
             </h2>
             <p className="text-xs text-zinc-400 mt-1">
-              Local telemetry tracking reaction latency, streak retention, and syntactic category weaknesses.
+              Local telemetry tracking reaction latency, streak retention, and syntactic category
+              weaknesses.
             </p>
           </div>
           <button
@@ -57,15 +58,21 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
         {/* Global Summary Metrics */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">Overall Accuracy</span>
+            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
+              Overall Accuracy
+            </span>
             <div className="text-2xl font-extrabold font-mono text-emerald-400 mt-1">
               {stats.totalAttempts > 0 ? `${stats.accuracy}%` : '--'}
             </div>
-            <span className="text-[10px] text-zinc-400">{stats.correctAttempts} / {stats.totalAttempts} correct</span>
+            <span className="text-[10px] text-zinc-400">
+              {stats.correctAttempts} / {stats.totalAttempts} correct
+            </span>
           </div>
 
           <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">Avg Reaction</span>
+            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
+              Avg Reaction
+            </span>
             <div className="text-2xl font-extrabold font-mono text-cyan-300 mt-1">
               {stats.avgLatencyMs > 0 ? `${stats.avgLatencyMs}ms` : '--'}
             </div>
@@ -73,7 +80,9 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           </div>
 
           <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">Throughput</span>
+            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
+              Throughput
+            </span>
             <div className="text-2xl font-extrabold font-mono text-indigo-300 mt-1">
               {stats.chunksPerMin > 0 ? `${stats.chunksPerMin} cpm` : '--'}
             </div>
@@ -81,7 +90,9 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           </div>
 
           <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
-            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">Best Streak</span>
+            <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
+              Best Streak
+            </span>
             <div className="text-2xl font-extrabold font-mono text-amber-400 mt-1">
               {stats.currentStreak} 🔥
             </div>
@@ -112,7 +123,10 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           ) : (
             <div className="h-32 flex items-end gap-1.5 pt-4 border-b border-zinc-800">
               {recentHistory.map((item, idx) => {
-                const heightPercent = Math.min(100, Math.max(12, (item.latencyMs / maxLatency) * 100));
+                const heightPercent = Math.min(
+                  100,
+                  Math.max(12, (item.latencyMs / maxLatency) * 100)
+                );
                 return (
                   <div
                     key={idx}
@@ -186,16 +200,21 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
                           cat.accuracy >= 80
                             ? 'bg-emerald-400'
                             : cat.accuracy >= 60
-                            ? 'bg-amber-400'
-                            : 'bg-rose-500'
+                              ? 'bg-amber-400'
+                              : 'bg-rose-500'
                         }`}
                         style={{ width: `${cat.accuracy}%` }}
                       />
                     </div>
 
                     <div className="flex items-center justify-between text-xs font-mono text-zinc-400 mt-0.5">
-                      <span>Accuracy: <strong className="text-zinc-200">{cat.accuracy}%</strong> ({cat.correct}/{cat.total})</span>
-                      <span>Latency: <strong className="text-zinc-200">{cat.avgLatencyMs}ms</strong></span>
+                      <span>
+                        Accuracy: <strong className="text-zinc-200">{cat.accuracy}%</strong> (
+                        {cat.correct}/{cat.total})
+                      </span>
+                      <span>
+                        Latency: <strong className="text-zinc-200">{cat.avgLatencyMs}ms</strong>
+                      </span>
                     </div>
                   </div>
                 );

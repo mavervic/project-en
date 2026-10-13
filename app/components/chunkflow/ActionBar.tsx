@@ -154,14 +154,20 @@ export const ActionBar: React.FC<ActionBarProps> = ({
       <div className="w-full pt-3 border-t border-zinc-800/80 text-center text-xs font-mono">
         {selectedVoice && !selectedTime && (
           <span className="text-cyan-300 flex items-center justify-center gap-1.5 animate-pulse">
-            <span>Voice selected: <strong>{selectedVoice.toUpperCase()}</strong> ✓</span>
+            <span>
+              Voice selected: <strong>{selectedVoice.toUpperCase()}</strong> ✓
+            </span>
             <span className="text-zinc-500">|</span>
-            <span className="text-zinc-300">Now press [1] Present, [2] Past, or [3] Future to submit!</span>
+            <span className="text-zinc-300">
+              Now press [1] Present, [2] Past, or [3] Future to submit!
+            </span>
           </span>
         )}
         {!selectedVoice && selectedTime && (
           <span className="text-indigo-300 flex items-center justify-center gap-1.5 animate-pulse">
-            <span>Tense selected: <strong>{selectedTime.toUpperCase()}</strong> ✓</span>
+            <span>
+              Tense selected: <strong>{selectedTime.toUpperCase()}</strong> ✓
+            </span>
             <span className="text-zinc-500">|</span>
             <span className="text-zinc-300">Now press [A] Active or [P] Passive to submit!</span>
           </span>

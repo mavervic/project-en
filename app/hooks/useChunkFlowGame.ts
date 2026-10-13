@@ -1,7 +1,13 @@
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import type { Question, TimeChoice, UserPerformance, VoiceChoice } from '../types/chunkflow';
 import { STARTER_QUESTIONS } from '../data/starterQuestions';
-import { clearPerformanceRecords, computeCategoryStats, computeStats, loadPerformanceRecords, savePerformanceRecord } from '../utils/storage';
+import {
+  clearPerformanceRecords,
+  computeCategoryStats,
+  computeStats,
+  loadPerformanceRecords,
+  savePerformanceRecord,
+} from '../utils/storage';
 import { getQuestionCategory, selectNextQuestion } from '../utils/sampling';
 import { useFocusFadeTimer } from './useFocusFadeTimer';
 
@@ -23,7 +29,10 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
 
   const [selectedVoice, setSelectedVoice] = useState<VoiceChoice | null>(null);
   const [selectedTime, setSelectedTime] = useState<TimeChoice | null>(null);
-  const [lastEvaluation, setLastEvaluation] = useState<{ isCorrect: boolean; latencyMs: number } | null>(null);
+  const [lastEvaluation, setLastEvaluation] = useState<{
+    isCorrect: boolean;
+    latencyMs: number;
+  } | null>(null);
   const [showFeedback, setShowFeedback] = useState<boolean>(false);
 
   // Synchronous refs to prevent race conditions or stale closure issues during fast typing

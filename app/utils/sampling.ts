@@ -21,9 +21,10 @@ export function selectNextQuestion(
   }
 
   // Filter out current question if possible to prevent immediate repetition
-  const pool = questions.length > 1 && currentQuestionId
-    ? questions.filter((q) => q.id !== currentQuestionId)
-    : questions;
+  const pool =
+    questions.length > 1 && currentQuestionId
+      ? questions.filter((q) => q.id !== currentQuestionId)
+      : questions;
 
   if (pool.length === 1) {
     return pool[0];

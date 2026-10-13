@@ -71,8 +71,9 @@ export default function Home() {
             Identify the Grammatical Slot
           </h1>
           <p className="text-xs md:text-sm text-zinc-400 max-w-lg mx-auto">
-            Classify the highlighted chunk’s <strong className="text-zinc-200">Voice</strong> (Active/Passive) and{' '}
-            <strong className="text-zinc-200">Tense</strong> (Present/Past/Future) before the background completely darkens.
+            Classify the highlighted chunk’s <strong className="text-zinc-200">Voice</strong>{' '}
+            (Active/Passive) and <strong className="text-zinc-200">Tense</strong>{' '}
+            (Present/Past/Future) before the background completely darkens.
           </p>
         </div>
 
@@ -98,24 +99,42 @@ export default function Home() {
         {/* Keyboard Shortcut Guidance Bar */}
         <div className="w-full max-w-4xl flex flex-wrap items-center justify-center gap-x-6 gap-y-2 py-3 px-4 rounded-xl bg-zinc-900/30 border border-zinc-900 text-xs font-mono text-zinc-500">
           <span className="flex items-center gap-1.5">
-            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">A / J</kbd> Active
+            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">
+              A / J
+            </kbd>{' '}
+            Active
           </span>
           <span className="flex items-center gap-1.5">
-            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">P / K</kbd> Passive
-          </span>
-          <span className="text-zinc-700">|</span>
-          <span className="flex items-center gap-1.5">
-            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">1</kbd> Present
-          </span>
-          <span className="flex items-center gap-1.5">
-            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">2</kbd> Past
-          </span>
-          <span className="flex items-center gap-1.5">
-            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">3</kbd> Future
+            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">
+              P / K
+            </kbd>{' '}
+            Passive
           </span>
           <span className="text-zinc-700">|</span>
           <span className="flex items-center gap-1.5">
-            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">Space / Enter</kbd> Next
+            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">
+              1
+            </kbd>{' '}
+            Present
+          </span>
+          <span className="flex items-center gap-1.5">
+            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">
+              2
+            </kbd>{' '}
+            Past
+          </span>
+          <span className="flex items-center gap-1.5">
+            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">
+              3
+            </kbd>{' '}
+            Future
+          </span>
+          <span className="text-zinc-700">|</span>
+          <span className="flex items-center gap-1.5">
+            <kbd className="px-1.5 py-0.5 rounded bg-zinc-800 border border-zinc-700 text-zinc-300 text-[11px] font-bold">
+              Space / Enter
+            </kbd>{' '}
+            Next
           </span>
         </div>
       </main>

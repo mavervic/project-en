@@ -27,9 +27,7 @@ export function useKeyboardShortcuts({
       // Don't intercept if user is typing in form controls
       if (
         target &&
-        (target.tagName === 'INPUT' ||
-          target.tagName === 'TEXTAREA' ||
-          target.isContentEditable)
+        (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)
       ) {
         return;
       }
@@ -41,12 +39,7 @@ export function useKeyboardShortcuts({
 
       // If feedback is showing, Space or Enter triggers Next Question
       if (showFeedback && onNextQuestion) {
-        if (
-          code === 'Space' ||
-          code === 'Enter' ||
-          rawKey === ' ' ||
-          rawKey === 'enter'
-        ) {
+        if (code === 'Space' || code === 'Enter' || rawKey === ' ' || rawKey === 'enter') {
           event.preventDefault();
           onNextQuestion();
           return;
