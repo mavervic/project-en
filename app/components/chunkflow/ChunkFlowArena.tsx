@@ -15,6 +15,8 @@ interface ChunkFlowArenaProps {
   onSelectSubjectChunk?: (index: number) => void;
   chunkMisfireIndex?: number | null;
   subjectMisfireIndex?: number | null;
+  onPlayAudio?: () => void;
+  isSpeaking?: boolean;
 }
 
 export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
@@ -31,6 +33,8 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   onSelectSubjectChunk,
   chunkMisfireIndex,
   subjectMisfireIndex,
+  onPlayAudio,
+  isSpeaking = false,
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
 
@@ -172,6 +176,33 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             </span>
           )}
         </div>
+
+        {/* Replay Audio Button */}
+        {onPlayAudio && (
+          <button
+            type="button"
+            data-testid="replay-audio-btn"
+            onClick={onPlayAudio}
+            title="朗誦句子音檔"
+            aria-label="朗誦句子音檔"
+            className="absolute top-4 right-6 p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-zinc-900/90 border border-zinc-700/80 hover:border-cyan-400 text-zinc-300 hover:text-cyan-300 transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm"
+          >
+            <svg
+              className={`w-4 h-4 ${isSpeaking ? 'text-cyan-400 animate-pulse' : 'text-zinc-400'}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z"
+              />
+            </svg>
+            <span className="hidden sm:inline">朗誦</span>
+          </button>
+        )}
 
         {/* Large Typography Sentence Chunks (Stable box geometry with 0 layout shift) */}
         <div className="w-full text-center flex flex-wrap justify-center items-center gap-x-2.5 gap-y-3.5 my-4">

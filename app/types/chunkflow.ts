@@ -15,6 +15,7 @@ export interface Question {
     aspect?: 'simple' | 'continuous' | 'perfect';
   };
   grammarNote: string; // 解答與範例說明
+  trainingId?: string; // e.g., 'parker-01'
 }
 
 export interface UserPerformance {
@@ -56,8 +57,38 @@ export interface CategoryStat {
   avgLatencyMs: number;
 }
 
+export type TrainingSortPolicy = 'weakest' | 'sequential';
+export type SpeechAccent = 'AU' | 'GB' | 'US' | 'CA';
+
 export interface ChunkFlowSettings {
   showGuidance: boolean;
+  trainingSortPolicy?: TrainingSortPolicy;
+  narrationEnabled?: boolean;
+  speechAccent?: SpeechAccent;
+}
+
+export interface QuestionBankMeta {
+  id: string;
+  name: string;
+  description: string;
+  totalQuestions: number;
+  totalTrainings: number;
+}
+
+export interface QuestionBank extends QuestionBankMeta {
+  questions: Question[];
+}
+
+export interface TrainingUnitTelemetry {
+  trainingId: string;
+  lessonName: string;
+  unitNumber: number;
+  totalAttempts: number;
+  correctAttempts: number;
+  accuracy: number; // 0 - 100
+  avgLatencyMs: number;
+  bestStreak: number;
+  masteryTier: 0 | 1 | 2 | 3 | 4;
 }
 
 export interface QuestionValidationResult {

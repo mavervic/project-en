@@ -1,40 +1,81 @@
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
-import type { Question, TimeChoice, UserPerformance, VoiceChoice } from '../types/chunkflow';
+import type {
+  Question,
+  TimeChoice,
+  TrainingSortPolicy,
+  TrainingUnitTelemetry,
+  UserPerformance,
+  VoiceChoice,
+} from '../types/chunkflow';
 import { STARTER_QUESTIONS } from '../data/starterQuestions';
+import { getBankQuestions } from '../data/banks';
 import {
   clearCustomQuestions,
   clearPerformanceRecords,
   computeCategoryStats,
   computeStats,
+  computeTrainingTelemetry,
+  loadActiveBankId,
   loadCustomQuestions,
   loadPerformanceRecords,
   loadSubjectVerbDrill,
+  loadTrainingSortPolicy,
+  saveActiveBankId,
   saveCustomQuestions,
   savePerformanceRecord,
   saveSubjectVerbDrill,
+  saveTrainingSortPolicy,
 } from '../utils/storage';
 import { getQuestionCategory, selectNextQuestion } from '../utils/sampling';
+import {
+  computeUnitStatus,
+  getNextQuestionInUnit,
+  resolveProgressiveCurriculum,
+} from '../utils/curriculum';
 import { useFocusFadeTimer } from './useFocusFadeTimer';
 
-export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTIONS) {
+export function useChunkFlowGame(initialQuestions?: Question[]) {
+  const [activeBankId, setActiveBankIdState] = useState<string>(() => loadActiveBankId());
+  const [activeTrainingId, setActiveTrainingIdState] = useState<string | null>(null);
+  const [trainingSortPolicy, setTrainingSortPolicyState] = useState<TrainingSortPolicy>(() =>
+    loadTrainingSortPolicy()
+  );
+
   const [questions, setQuestions] = useState<Question[]>(() => {
+    if (initialQuestions && initialQuestions.length > 0) {
+      return initialQuestions;
+    }
     if (typeof window !== 'undefined') {
       const custom = loadCustomQuestions();
       if (custom.length > 0) return custom;
+      const bankId = loadActiveBankId();
+      return getBankQuestions(bankId);
     }
-    return initialQuestions;
+    return getBankQuestions('parker');
   });
   const [history, setHistory] = useState<UserPerformance[]>([]);
   const [practiceMode, setPracticeMode] = useState<'smart' | 'random'>('smart');
 
-  // Load history & custom questions on mount
+  // Load history & custom questions on mount, resolving progressive curriculum
   useEffect(() => {
     const records = loadPerformanceRecords();
     setHistory(records);
     const custom = loadCustomQuestions();
+    const activeQs = custom.length > 0 ? custom : questions;
     if (custom.length > 0) {
       setQuestions(custom);
-      setCurrentQuestion(custom[0]);
+    }
+    try {
+      const progressive = resolveProgressiveCurriculum(activeQs, records, activeTrainingId);
+      setCurrentQuestion(progressive.question);
+      if (!activeTrainingId && progressive.trainingId) {
+        setActiveTrainingIdState(progressive.trainingId);
+      }
+    } catch {
+      // Fallback to first question
+      if (activeQs[0]) {
+        setCurrentQuestion(activeQs[0]);
+      }
     }
   }, []);
 
@@ -61,7 +102,7 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
   });
   const [roundStage, setRoundStage] = useState<'subject' | 'verb' | 'classify'>(() => {
     const drillEnabled = loadSubjectVerbDrill();
-    const hasSubject = initialQuestions[0]?.chunks.some((c) => c.type === 'subject');
+    const hasSubject = questions[0]?.chunks.some((c) => c.type === 'subject');
     return drillEnabled && hasSubject ? 'subject' : 'classify';
   });
   const [chunkMisfireIndex, setChunkMisfireIndex] = useState<number | null>(null);
@@ -73,6 +114,19 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
   // Derived stats
   const stats = useMemo(() => computeStats(history), [history]);
   const categoryStats = useMemo(() => computeCategoryStats(history), [history]);
+  const trainingTelemetry = useMemo(
+    () => computeTrainingTelemetry(history, questions),
+    [history, questions]
+  );
+
+  // Filter candidates by activeTrainingId if set
+  const activeQuestions = useMemo(() => {
+    if (activeTrainingId) {
+      const filtered = questions.filter((q) => q.trainingId === activeTrainingId);
+      if (filtered.length > 0) return filtered;
+    }
+    return questions;
+  }, [questions, activeTrainingId]);
 
   // Advance to next question
   const advanceToNextQuestion = useCallback(() => {
@@ -85,11 +139,16 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     setChunkMisfireIndex(null);
 
     let nextQ: Question;
-    if (practiceMode === 'smart') {
-      nextQ = selectNextQuestion(questions, history, currentQuestion.id);
+    const { unattemptedQuestions } = computeUnitStatus(activeQuestions, history);
+    const unattemptedRemaining = unattemptedQuestions.filter((q) => q.id !== currentQuestion.id);
+
+    if (unattemptedRemaining.length > 0) {
+      nextQ = unattemptedRemaining[0];
+    } else if (practiceMode === 'smart') {
+      nextQ = selectNextQuestion(activeQuestions, history, currentQuestion.id);
     } else {
-      const candidates = questions.filter((q) => q.id !== currentQuestion.id);
-      nextQ = candidates[Math.floor(Math.random() * candidates.length)] || questions[0];
+      const candidates = activeQuestions.filter((q) => q.id !== currentQuestion.id);
+      nextQ = candidates[Math.floor(Math.random() * candidates.length)] || activeQuestions[0];
     }
 
     const hasSubject = nextQ.chunks.some((c) => c.type === 'subject');
@@ -98,7 +157,7 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     setCurrentQuestion(nextQ);
     questionStartTimeRef.current = Date.now();
     startTimer();
-  }, [practiceMode, questions, history, currentQuestion.id, isSubjectVerbDrill, startTimer]);
+  }, [practiceMode, activeQuestions, history, currentQuestion.id, isSubjectVerbDrill, startTimer]);
 
   const toggleSubjectVerbDrill = useCallback(() => {
     setIsSubjectVerbDrill((prev) => {
@@ -240,10 +299,71 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     [questions, isSubjectVerbDrill, startTimer]
   );
 
+  const handleSelectBank = useCallback(
+    (bankId: string) => {
+      setActiveBankIdState(bankId);
+      saveActiveBankId(bankId);
+      clearCustomQuestions();
+      const bankQs = getBankQuestions(bankId);
+      setQuestions(bankQs);
+      const progressive = resolveProgressiveCurriculum(bankQs, history);
+      const targetQ = progressive.question;
+      setActiveTrainingIdState(progressive.trainingId);
+      setCurrentQuestion(targetQ);
+
+      selectedVoiceRef.current = null;
+      selectedTimeRef.current = null;
+      setSelectedVoice(null);
+      setSelectedTime(null);
+      setLastEvaluation(null);
+      setShowFeedback(false);
+      setChunkMisfireIndex(null);
+      const hasSubject = targetQ?.chunks.some((c) => c.type === 'subject');
+      setRoundStage(isSubjectVerbDrill && hasSubject ? 'subject' : 'classify');
+      questionStartTimeRef.current = Date.now();
+      startTimer();
+    },
+    [history, isSubjectVerbDrill, startTimer]
+  );
+
+  const handleSelectTraining = useCallback(
+    (trainingId: string | null) => {
+      setActiveTrainingIdState(trainingId);
+      if (trainingId) {
+        const filtered = questions.filter((q) => q.trainingId === trainingId);
+        if (filtered.length > 0) {
+          const nextQ = getNextQuestionInUnit(filtered, history);
+          setCurrentQuestion(nextQ);
+          selectedVoiceRef.current = null;
+          selectedTimeRef.current = null;
+          setSelectedVoice(null);
+          setSelectedTime(null);
+          setLastEvaluation(null);
+          setShowFeedback(false);
+          setChunkMisfireIndex(null);
+          const hasSubject = nextQ?.chunks.some((c) => c.type === 'subject');
+          setRoundStage(isSubjectVerbDrill && hasSubject ? 'subject' : 'classify');
+          questionStartTimeRef.current = Date.now();
+          startTimer();
+        }
+      }
+    },
+    [questions, history, isSubjectVerbDrill, startTimer]
+  );
+
+  const handleSetTrainingSortPolicy = useCallback((policy: TrainingSortPolicy) => {
+    setTrainingSortPolicyState(policy);
+    saveTrainingSortPolicy(policy);
+  }, []);
+
   const handleResetQuestions = useCallback(() => {
     clearCustomQuestions();
-    setQuestions(initialQuestions);
-    const firstQ = initialQuestions[0];
+    const defaultQs =
+      initialQuestions && initialQuestions.length > 0
+        ? initialQuestions
+        : getBankQuestions(activeBankId);
+    setQuestions(defaultQs);
+    const firstQ = defaultQs[0];
     setCurrentQuestion(firstQ);
 
     // Reset turn state
@@ -258,7 +378,7 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     setRoundStage(isSubjectVerbDrill && hasSubject ? 'subject' : 'classify');
     questionStartTimeRef.current = Date.now();
     startTimer();
-  }, [initialQuestions, isSubjectVerbDrill, startTimer]);
+  }, [activeBankId, initialQuestions, isSubjectVerbDrill, startTimer]);
 
   const isCustomBank = useMemo(() => {
     if (typeof window === 'undefined') return false;
@@ -276,6 +396,7 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     progressPercent,
     stats,
     categoryStats,
+    trainingTelemetry,
     history,
     practiceMode,
     isCustomBank,
@@ -283,8 +404,14 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     roundStage,
     chunkMisfireIndex,
     subjectMisfireIndex: chunkMisfireIndex,
+    activeBankId,
+    activeTrainingId,
+    trainingSortPolicy,
     setPracticeMode,
     toggleSubjectVerbDrill,
+    handleSelectBank,
+    handleSelectTraining,
+    handleSetTrainingSortPolicy,
     handleSelectChunk,
     handleSelectSubjectChunk,
     handleSelectVoice,

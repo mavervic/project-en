@@ -1,13 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { Route } from './+types/home';
 import { useChunkFlowGame } from '../hooks/useChunkFlowGame';
 import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts';
+import { useSpeechNarration } from '../hooks/useSpeechNarration';
 import { HeaderHUD } from '../components/chunkflow/HeaderHUD';
 import { ChunkFlowArena } from '../components/chunkflow/ChunkFlowArena';
 import { ActionBar } from '../components/chunkflow/ActionBar';
 import { AnalyticsDashboard } from '../components/chunkflow/AnalyticsDashboard';
 import { SettingsModal } from '../components/chunkflow/SettingsModal';
 import { ImportQuestionsModal } from '../components/chunkflow/ImportQuestionsModal';
+import { TrainingMatrix } from '../components/chunkflow/TrainingMatrix';
+import { TrainingMatrixDrawer } from '../components/chunkflow/TrainingMatrixDrawer';
+import { getRegisteredBanks } from '../data/banks';
 import { loadSettings, saveSettings } from '../utils/storage';
 import type { ChunkFlowSettings } from '../types/chunkflow';
 
@@ -26,15 +30,25 @@ export default function Home() {
   const [isAnalyticsOpen, setIsAnalyticsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isImportOpen, setIsImportOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth >= 1024;
+    }
+    return true;
+  });
   const [settings, setSettings] = useState<ChunkFlowSettings>(() => loadSettings());
 
-  const handleUpdateSettings = (newSettings: Partial<ChunkFlowSettings>) => {
-    setSettings((prev) => {
-      const updated = { ...prev, ...newSettings };
-      saveSettings(updated);
-      return updated;
-    });
-  };
+  const {
+    narrationEnabled,
+    toggleNarration,
+    accent,
+    setAccent,
+    speak,
+    isSpeaking,
+    canSelectAccents,
+  } = useSpeechNarration();
+
+  const registeredBanks = getRegisteredBanks();
 
   const {
     questions,
@@ -47,14 +61,21 @@ export default function Home() {
     progressPercent,
     stats,
     categoryStats,
+    trainingTelemetry,
     history,
     practiceMode,
     isCustomBank,
     isSubjectVerbDrill,
     roundStage,
     subjectMisfireIndex,
+    activeBankId,
+    activeTrainingId,
+    trainingSortPolicy,
     setPracticeMode,
     toggleSubjectVerbDrill,
+    handleSelectBank,
+    handleSelectTraining,
+    handleSetTrainingSortPolicy,
     handleSelectSubjectChunk,
     handleSelectVoice,
     handleSelectTime,
@@ -63,6 +84,24 @@ export default function Home() {
     handleImportQuestions,
     handleResetQuestions,
   } = useChunkFlowGame();
+
+  const handleUpdateSettings = (newSettings: Partial<ChunkFlowSettings>) => {
+    setSettings((prev) => {
+      const updated = { ...prev, ...newSettings };
+      saveSettings(updated);
+      if (newSettings.trainingSortPolicy) {
+        handleSetTrainingSortPolicy(newSettings.trainingSortPolicy);
+      }
+      return updated;
+    });
+  };
+
+  // Auto-play sentence narration on new question when enabled
+  useEffect(() => {
+    if (narrationEnabled && currentQuestion?.sentence) {
+      speak(currentQuestion.sentence);
+    }
+  }, [currentQuestion?.id, narrationEnabled, speak]);
 
   const isAnyModalOpen = isAnalyticsOpen || isSettingsOpen || isImportOpen;
 
@@ -74,8 +113,26 @@ export default function Home() {
     showFeedback,
   });
 
+  const hasTrainings = Object.keys(trainingTelemetry).length > 0;
+
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div
+      className={`min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans selection:bg-cyan-500/30 selection:text-cyan-200 transition-[padding] duration-300 ${
+        isDrawerOpen && hasTrainings ? 'lg:pl-72' : ''
+      }`}
+    >
+      {/* Collapsible Left Glassmorphic Training Matrix Drawer */}
+      {hasTrainings && (
+        <TrainingMatrixDrawer
+          isOpen={isDrawerOpen}
+          onClose={() => setIsDrawerOpen(false)}
+          telemetry={trainingTelemetry}
+          activeTrainingId={activeTrainingId}
+          onSelectTraining={handleSelectTraining}
+          sortPolicy={settings.trainingSortPolicy ?? trainingSortPolicy}
+        />
+      )}
+
       {/* Top Navigation & Realtime HUD */}
       <HeaderHUD
         practiceMode={practiceMode}
@@ -87,6 +144,16 @@ export default function Home() {
         onOpenAnalytics={() => setIsAnalyticsOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
         onOpenImport={() => setIsImportOpen(true)}
+        activeBankId={activeBankId}
+        onSelectBank={handleSelectBank}
+        banks={registeredBanks}
+        narrationEnabled={narrationEnabled}
+        onToggleNarration={toggleNarration}
+        accent={accent}
+        onSelectAccent={setAccent}
+        canSelectAccents={canSelectAccents}
+        showMatrix={isDrawerOpen && hasTrainings}
+        onToggleMatrix={hasTrainings ? () => setIsDrawerOpen((prev) => !prev) : undefined}
       />
 
       {/* Main Training Arena */}
@@ -140,6 +207,8 @@ export default function Home() {
           isSubjectVerbDrill={isSubjectVerbDrill}
           onSelectChunk={handleSelectSubjectChunk}
           chunkMisfireIndex={subjectMisfireIndex}
+          onPlayAudio={() => speak(currentQuestion.sentence)}
+          isSpeaking={isSpeaking}
         />
 
         {/* Action Controls & Hotkey Buttons */}

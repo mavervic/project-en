@@ -114,4 +114,106 @@ describe('Review Findings Verification (RED phase before fix)', () => {
       ).toBeDefined();
     });
   });
+
+  describe('Training Matrix & Narration Review Findings', () => {
+    it('retains SpeechSynthesisUtterance in ref to prevent premature GC and cleans up on unmount', async () => {
+      const mockSpeak = vi.fn();
+      const mockCancel = vi.fn();
+      let capturedUtterance: any = null;
+
+      class MockUtterance {
+        text: string;
+        voice: any = null;
+        lang = '';
+        rate = 1;
+        onstart: any = null;
+        onend: any = null;
+        onerror: any = null;
+        constructor(text: string) {
+          this.text = text;
+        }
+      }
+      (window as any).SpeechSynthesisUtterance = MockUtterance;
+      (globalThis as any).SpeechSynthesisUtterance = MockUtterance;
+
+      mockSpeak.mockImplementation((utt) => {
+        capturedUtterance = utt;
+      });
+
+      window.speechSynthesis = {
+        speak: mockSpeak,
+        cancel: mockCancel,
+        getVoices: vi.fn().mockReturnValue([{ name: 'US English', lang: 'en-US' }]),
+        onvoiceschanged: null,
+      } as any;
+
+      const { renderHook } = await import('@testing-library/react');
+      const { useSpeechNarration } = await import('../app/hooks/useSpeechNarration');
+
+      const { result, unmount } = renderHook(() => useSpeechNarration());
+
+      act(() => {
+        result.current.toggleNarration(); // enable
+      });
+
+      act(() => {
+        result.current.speak('Testing speech synthesis retain ref');
+      });
+
+      expect(mockSpeak).toHaveBeenCalledTimes(1);
+      expect(capturedUtterance).not.toBeNull();
+
+      // Trigger onend -> cleans up
+      act(() => {
+        if (capturedUtterance && capturedUtterance.onend) {
+          (capturedUtterance.onend as any)({} as any);
+        }
+      });
+      expect(result.current.isSpeaking).toBe(false);
+
+      // Unmounting calls cancel
+      unmount();
+      expect(mockCancel).toHaveBeenCalled();
+    });
+
+    it('aligns edge column tooltips properly in TrainingMatrixDrawer', async () => {
+      const { TrainingMatrixDrawer } =
+        await import('../app/components/chunkflow/TrainingMatrixDrawer');
+
+      const mockTelemetry: any = {};
+      for (let i = 1; i <= 5; i++) {
+        const id = `parker-0${i}`;
+        mockTelemetry[id] = {
+          trainingId: id,
+          lessonName: `第 0${i} 課`,
+          unitNumber: i,
+          totalAttempts: 5,
+          correctAttempts: 4,
+          accuracy: 80,
+          avgLatencyMs: 1200,
+          bestStreak: 3,
+          masteryTier: 3,
+        };
+      }
+
+      render(
+        <TrainingMatrixDrawer
+          isOpen={true}
+          onClose={vi.fn()}
+          telemetry={mockTelemetry}
+          activeTrainingId={null}
+          onSelectTraining={vi.fn()}
+          sortPolicy="sequential"
+        />
+      );
+
+      // Col 0: parker-01 tooltip should have left-0
+      const tooltip01 = screen.getByTestId('training-tooltip-parker-01');
+      expect(tooltip01.className).toContain('left-0');
+
+      // Col 4: parker-05 tooltip should have right-0
+      const tooltip05 = screen.getByTestId('training-tooltip-parker-05');
+      expect(tooltip05.className).toContain('right-0');
+    });
+  });
 });

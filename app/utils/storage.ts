@@ -4,15 +4,25 @@ import type {
   PerformanceStats,
   Question,
   QuestionValidationResult,
+  SpeechAccent,
+  TrainingSortPolicy,
+  TrainingUnitTelemetry,
   UserPerformance,
 } from '../types/chunkflow';
 
 const STORAGE_KEY = 'chunkflow_performance_v1';
 const SETTINGS_STORAGE_KEY = 'chunkflow_settings_v1';
 const CUSTOM_QUESTIONS_STORAGE_KEY = 'chunkflow_custom_questions_v1';
+const TRAINING_SORT_STORAGE_KEY = 'chunkflow_training_sort_v1';
+const NARRATION_STORAGE_KEY = 'chunkflow_narration_enabled_v1';
+const SPEECH_ACCENT_STORAGE_KEY = 'chunkflow_speech_accent_v1';
+const ACTIVE_BANK_STORAGE_KEY = 'chunkflow_active_bank_v1';
 
 const DEFAULT_SETTINGS: ChunkFlowSettings = {
   showGuidance: false,
+  trainingSortPolicy: 'weakest',
+  narrationEnabled: false,
+  speechAccent: 'US',
 };
 
 export function loadPerformanceRecords(): UserPerformance[] {
@@ -230,7 +240,12 @@ export function loadSettings(): ChunkFlowSettings {
     if (!raw) return DEFAULT_SETTINGS;
     const parsed = JSON.parse(raw);
     if (typeof parsed === 'object' && parsed !== null && typeof parsed.showGuidance === 'boolean') {
-      return parsed;
+      return {
+        showGuidance: parsed.showGuidance ?? DEFAULT_SETTINGS.showGuidance,
+        trainingSortPolicy: parsed.trainingSortPolicy ?? DEFAULT_SETTINGS.trainingSortPolicy,
+        narrationEnabled: parsed.narrationEnabled ?? DEFAULT_SETTINGS.narrationEnabled,
+        speechAccent: parsed.speechAccent ?? DEFAULT_SETTINGS.speechAccent,
+      };
     }
   } catch (err) {
     console.warn('Failed to load ChunkFlow settings from localStorage', err);
@@ -246,6 +261,173 @@ export function saveSettings(settings: ChunkFlowSettings): void {
       console.warn('Failed to save ChunkFlow settings to localStorage', err);
     }
   }
+}
+
+export function loadTrainingSortPolicy(): TrainingSortPolicy {
+  if (typeof window === 'undefined') return 'weakest';
+  try {
+    const raw = window.localStorage.getItem(TRAINING_SORT_STORAGE_KEY);
+    if (raw === 'sequential' || raw === 'weakest') {
+      return raw;
+    }
+  } catch (err) {
+    console.warn('Failed to load training sort policy from localStorage', err);
+  }
+  return 'weakest';
+}
+
+export function saveTrainingSortPolicy(policy: TrainingSortPolicy): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(TRAINING_SORT_STORAGE_KEY, policy);
+    } catch (err) {
+      console.warn('Failed to save training sort policy to localStorage', err);
+    }
+  }
+}
+
+export function loadNarrationEnabled(): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    const raw = window.localStorage.getItem(NARRATION_STORAGE_KEY);
+    if (raw === null) return false;
+    return raw === 'true';
+  } catch (err) {
+    console.warn('Failed to load narration enabled setting from localStorage', err);
+    return false;
+  }
+}
+
+export function saveNarrationEnabled(enabled: boolean): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(NARRATION_STORAGE_KEY, String(enabled));
+    } catch (err) {
+      console.warn('Failed to save narration enabled setting to localStorage', err);
+    }
+  }
+}
+
+export function loadSpeechAccent(): SpeechAccent {
+  if (typeof window === 'undefined') return 'US';
+  try {
+    const raw = window.localStorage.getItem(SPEECH_ACCENT_STORAGE_KEY);
+    if (raw === 'AU' || raw === 'GB' || raw === 'US' || raw === 'CA') {
+      return raw;
+    }
+  } catch (err) {
+    console.warn('Failed to load speech accent from localStorage', err);
+  }
+  return 'US';
+}
+
+export function saveSpeechAccent(accent: SpeechAccent): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(SPEECH_ACCENT_STORAGE_KEY, accent);
+    } catch (err) {
+      console.warn('Failed to save speech accent to localStorage', err);
+    }
+  }
+}
+
+export function loadActiveBankId(): string {
+  if (typeof window === 'undefined') return 'parker';
+  try {
+    const raw = window.localStorage.getItem(ACTIVE_BANK_STORAGE_KEY);
+    if (raw) return raw;
+  } catch (err) {
+    console.warn('Failed to load active bank ID from localStorage', err);
+  }
+  return 'parker';
+}
+
+export function saveActiveBankId(id: string): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(ACTIVE_BANK_STORAGE_KEY, id);
+    } catch (err) {
+      console.warn('Failed to save active bank ID to localStorage', err);
+    }
+  }
+}
+
+export function computeMasteryTier(totalAttempts: number, accuracy: number): 0 | 1 | 2 | 3 | 4 {
+  if (totalAttempts === 0) return 0;
+  if (accuracy < 60) return 1;
+  if (accuracy < 80) return 2;
+  if (accuracy < 90) return 3;
+  return 4;
+}
+
+export function computeTrainingTelemetry(
+  history: UserPerformance[],
+  questions: Question[]
+): Record<string, TrainingUnitTelemetry> {
+  const questionTrainingMap = new Map<string, string>();
+  const trainingIds = new Set<string>();
+
+  for (const q of questions) {
+    if (q.trainingId) {
+      questionTrainingMap.set(q.id, q.trainingId);
+      trainingIds.add(q.trainingId);
+    }
+  }
+
+  const trainingRecordsMap = new Map<string, UserPerformance[]>();
+  for (const tId of trainingIds) {
+    trainingRecordsMap.set(tId, []);
+  }
+
+  for (const record of history) {
+    const tId = questionTrainingMap.get(record.questionId);
+    if (tId && trainingRecordsMap.has(tId)) {
+      trainingRecordsMap.get(tId)!.push(record);
+    }
+  }
+
+  const result: Record<string, TrainingUnitTelemetry> = {};
+
+  for (const tId of trainingIds) {
+    const records = trainingRecordsMap.get(tId) || [];
+    const totalAttempts = records.length;
+    const correctAttempts = records.filter((r) => r.isCorrect).length;
+    const accuracy = totalAttempts > 0 ? Math.round((correctAttempts / totalAttempts) * 100) : 0;
+    const totalLatency = records.reduce((acc, r) => acc + r.latencyMs, 0);
+    const avgLatencyMs = totalAttempts > 0 ? Math.round(totalLatency / totalAttempts) : 0;
+
+    let bestStreak = 0;
+    let runningStreak = 0;
+    for (const r of records) {
+      if (r.isCorrect) {
+        runningStreak++;
+        if (runningStreak > bestStreak) {
+          bestStreak = runningStreak;
+        }
+      } else {
+        runningStreak = 0;
+      }
+    }
+
+    const match = tId.match(/\d+/);
+    const unitNumber = match ? parseInt(match[0], 10) : 0;
+    const padded = unitNumber > 0 ? String(unitNumber).padStart(2, '0') : tId;
+    const lessonName = `第 ${padded} 課`;
+
+    result[tId] = {
+      trainingId: tId,
+      lessonName,
+      unitNumber,
+      totalAttempts,
+      correctAttempts,
+      accuracy,
+      avgLatencyMs,
+      bestStreak,
+      masteryTier: computeMasteryTier(totalAttempts, accuracy),
+    };
+  }
+
+  return result;
 }
 
 export function loadCustomQuestions(): Question[] {
@@ -420,6 +602,8 @@ export function validateQuestionsJson(raw: string): QuestionValidationResult {
           aspect: q.correctAnswers.aspect,
         },
         grammarNote,
+        trainingId:
+          typeof q.trainingId === 'string' && q.trainingId.trim() ? q.trainingId.trim() : undefined,
       });
     }
   });

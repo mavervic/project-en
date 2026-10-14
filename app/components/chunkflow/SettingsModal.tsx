@@ -63,6 +63,42 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               />
             </button>
           </div>
+
+          {/* Training Sort Policy */}
+          <div className="flex flex-col gap-2 p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
+            <div className="flex flex-col gap-0.5">
+              <span className="text-sm font-semibold text-zinc-100">訓練單元排序方式</span>
+              <span className="text-xs text-zinc-400 leading-relaxed">
+                選擇訓練單元卡片的排列順序：成績最差優先（針對弱點）或依課次順序（1~50）。
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-2 mt-2">
+              <button
+                type="button"
+                data-testid="sort-policy-weakest"
+                onClick={() => onUpdateSettings({ trainingSortPolicy: 'weakest' })}
+                className={`px-3 py-2 rounded-lg text-xs font-medium border text-center transition-all cursor-pointer ${
+                  settings.trainingSortPolicy !== 'sequential'
+                    ? 'bg-cyan-500/15 border-cyan-500/50 text-cyan-300 font-semibold'
+                    : 'bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:text-zinc-200'
+                }`}
+              >
+                成績最差優先 (預設)
+              </button>
+              <button
+                type="button"
+                data-testid="sort-policy-sequential"
+                onClick={() => onUpdateSettings({ trainingSortPolicy: 'sequential' })}
+                className={`px-3 py-2 rounded-lg text-xs font-medium border text-center transition-all cursor-pointer ${
+                  settings.trainingSortPolicy === 'sequential'
+                    ? 'bg-cyan-500/15 border-cyan-500/50 text-cyan-300 font-semibold'
+                    : 'bg-zinc-800/50 border-zinc-700 text-zinc-400 hover:text-zinc-200'
+                }`}
+              >
+                依課次順序 (1~50)
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Footer */}

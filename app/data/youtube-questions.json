@@ -1,0 +1,465 @@
+[
+  {
+    "id": "yt-01",
+    "sentence": "A woman is watering plants.",
+    "chunks": [
+      {
+        "text": "A woman",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is watering",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "plants.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is watering」為現在進行式主動語態 (Present Continuous Active)。主詞 A woman 主動執行澆花動作（TOEIC Part 1 常考進行式描述人物動作）。"
+  },
+  {
+    "id": "yt-02",
+    "sentence": "Bicycles are leaning against the wall.",
+    "chunks": [
+      {
+        "text": "Bicycles",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are leaning",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "against the wall.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「are leaning」為現在進行式主動語態 (Present Continuous Active)。主詞 Bicycles 靠在牆邊（TOEIC Part 1 物體狀態常以主動進行式呈現）。"
+  },
+  {
+    "id": "yt-03",
+    "sentence": "The boat is being loaded with cargo.",
+    "chunks": [
+      {
+        "text": "The boat",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is being loaded",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with cargo.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is being loaded」為現在進行式被動語態 (Present Continuous Passive, is being + p.p.)。主詞 The boat 為受動者，表示船隻正在被裝載貨物。"
+  },
+  {
+    "id": "yt-04",
+    "sentence": "I will transfer you to my administrative assistant.",
+    "chunks": [
+      {
+        "text": "I",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will transfer",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to my administrative assistant.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will transfer」為未來簡單式主動語態 (Future Active)。主詞 I 主動將通話轉接給行政助理（商務電話情境常用句）。"
+  },
+  {
+    "id": "yt-05",
+    "sentence": "Your office number has changed, hasn't it?",
+    "chunks": [
+      {
+        "text": "Your office number",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has changed,",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "hasn't it?",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「has changed」為現在完成式主動語態 (Present Perfect Active)。主詞 Your office number 已發生變更，後接反詰問句。"
+  },
+  {
+    "id": "yt-06",
+    "sentence": "A 15 percent discount applies to this copy machine.",
+    "chunks": [
+      {
+        "text": "A 15 percent discount",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "applies",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to this copy machine.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「applies」為現在簡單式主動語態 (Present Simple Active)。折扣適用於此影印機，主詞為第三人稱單數動詞加 s。"
+  },
+  {
+    "id": "yt-07",
+    "sentence": "The file cabinet is being assembled.",
+    "chunks": [
+      {
+        "text": "The file cabinet",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is being assembled.",
+        "isTargetSlot": true,
+        "type": "verb"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is being assembled」為現在進行式被動語態 (Present Continuous Passive)。主詞 The file cabinet 正處於被組裝之動作中。"
+  },
+  {
+    "id": "yt-08",
+    "sentence": "They are standing in line in front of the service window.",
+    "chunks": [
+      {
+        "text": "They",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are standing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in line",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "in front of the service window.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「are standing」為現在進行式主動語態 (Present Continuous Active)。主詞 They 主動站立排隊。"
+  },
+  {
+    "id": "yt-09",
+    "sentence": "The photography contest is suggested to promote our camera sales.",
+    "chunks": [
+      {
+        "text": "The photography contest",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is suggested",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to promote our camera sales.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is suggested」為現在簡單式被動語態 (Present Simple Passive)。攝影比賽被建議舉辦，以提升銷售。"
+  },
+  {
+    "id": "yt-10",
+    "sentence": "I bought a coffee maker just the other day.",
+    "chunks": [
+      {
+        "text": "I",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "bought",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a coffee maker",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "just the other day.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「bought」為過去簡單式主動語態 (Past Simple Active)。搭配過去時間副詞片語 the other day。"
+  },
+  {
+    "id": "yt-11",
+    "sentence": "The next interview starts at 1:30.",
+    "chunks": [
+      {
+        "text": "The next interview",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "starts",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "at 1:30.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「starts」為現在簡單式主動語態 (Present Simple Active)。表既定行程或時刻表的未來動作以現在式表達。"
+  },
+  {
+    "id": "yt-12",
+    "sentence": "Eugene will serve as the senior manager of human resources.",
+    "chunks": [
+      {
+        "text": "Eugene",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will serve",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "as the senior manager of human resources.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will serve」為未來簡單式主動語態 (Future Active)。主詞 Eugene 將擔任人資資深經理職務。"
+  },
+  {
+    "id": "yt-13",
+    "sentence": "The information brochure was designed by the graphics team.",
+    "chunks": [
+      {
+        "text": "The information brochure",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was designed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the graphics team.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「was designed」為過去簡單式被動語態 (Past Simple Passive, was + p.p.)。資訊手冊由美工團隊設計完成。"
+  },
+  {
+    "id": "yt-14",
+    "sentence": "I called this morning and spoke to a helpful service technician.",
+    "chunks": [
+      {
+        "text": "I",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "called",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "this morning",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "and spoke to a helpful service technician.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「called」為過去簡單式主動語態 (Past Simple Active)。描述今早已發生的電話通訊動作。"
+  },
+  {
+    "id": "yt-15",
+    "sentence": "The laptop comes with a two-year warranty.",
+    "chunks": [
+      {
+        "text": "The laptop",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "comes",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with a two-year warranty.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「comes」為現在簡單式主動語態 (Present Simple Active)。說明商品現行保固規格事實。"
+  },
+  {
+    "id": "yt-16",
+    "sentence": "The automatic front door was repaired by the technician today.",
+    "chunks": [
+      {
+        "text": "The automatic front door",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was repaired",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the technician today.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「was repaired」為過去簡單式被動語態 (Past Simple Passive, was + p.p.)。自動前門由技術人員修復。"
+  }
+]
