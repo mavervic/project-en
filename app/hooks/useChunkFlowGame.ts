@@ -60,7 +60,9 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     return loadSubjectVerbDrill();
   });
   const [roundStage, setRoundStage] = useState<'subject' | 'verb' | 'classify'>(() => {
-    return loadSubjectVerbDrill() ? 'subject' : 'classify';
+    const drillEnabled = loadSubjectVerbDrill();
+    const hasSubject = initialQuestions[0]?.chunks.some((c) => c.type === 'subject');
+    return drillEnabled && hasSubject ? 'subject' : 'classify';
   });
   const [chunkMisfireIndex, setChunkMisfireIndex] = useState<number | null>(null);
 
@@ -80,7 +82,6 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     setSelectedTime(null);
     setLastEvaluation(null);
     setShowFeedback(false);
-    setRoundStage(isSubjectVerbDrill ? 'subject' : 'classify');
     setChunkMisfireIndex(null);
 
     let nextQ: Question;
@@ -91,6 +92,9 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
       nextQ = candidates[Math.floor(Math.random() * candidates.length)] || questions[0];
     }
 
+    const hasSubject = nextQ.chunks.some((c) => c.type === 'subject');
+    setRoundStage(isSubjectVerbDrill && hasSubject ? 'subject' : 'classify');
+
     setCurrentQuestion(nextQ);
     questionStartTimeRef.current = Date.now();
     startTimer();
@@ -100,11 +104,12 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     setIsSubjectVerbDrill((prev) => {
       const next = !prev;
       saveSubjectVerbDrill(next);
-      setRoundStage(next ? 'subject' : 'classify');
+      const hasSubject = currentQuestion.chunks.some((c) => c.type === 'subject');
+      setRoundStage(next && hasSubject ? 'subject' : 'classify');
       setChunkMisfireIndex(null);
       return next;
     });
-  }, []);
+  }, [currentQuestion]);
 
   const handleSelectChunk = useCallback(
     (chunkIndex: number) => {
@@ -216,7 +221,8 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
       }
       saveCustomQuestions(updated);
       setQuestions(updated);
-      setCurrentQuestion(updated[0]);
+      const firstQ = updated[0];
+      setCurrentQuestion(firstQ);
 
       // Reset turn state
       selectedVoiceRef.current = null;
@@ -225,16 +231,20 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
       setSelectedTime(null);
       setLastEvaluation(null);
       setShowFeedback(false);
+      setChunkMisfireIndex(null);
+      const hasSubject = firstQ?.chunks.some((c) => c.type === 'subject');
+      setRoundStage(isSubjectVerbDrill && hasSubject ? 'subject' : 'classify');
       questionStartTimeRef.current = Date.now();
       startTimer();
     },
-    [questions, startTimer]
+    [questions, isSubjectVerbDrill, startTimer]
   );
 
   const handleResetQuestions = useCallback(() => {
     clearCustomQuestions();
     setQuestions(initialQuestions);
-    setCurrentQuestion(initialQuestions[0]);
+    const firstQ = initialQuestions[0];
+    setCurrentQuestion(firstQ);
 
     // Reset turn state
     selectedVoiceRef.current = null;
@@ -243,9 +253,12 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     setSelectedTime(null);
     setLastEvaluation(null);
     setShowFeedback(false);
+    setChunkMisfireIndex(null);
+    const hasSubject = firstQ?.chunks.some((c) => c.type === 'subject');
+    setRoundStage(isSubjectVerbDrill && hasSubject ? 'subject' : 'classify');
     questionStartTimeRef.current = Date.now();
     startTimer();
-  }, [initialQuestions, startTimer]);
+  }, [initialQuestions, isSubjectVerbDrill, startTimer]);
 
   const isCustomBank = useMemo(() => {
     if (typeof window === 'undefined') return false;
