@@ -59,11 +59,13 @@ export default function Home() {
     handleResetQuestions,
   } = useChunkFlowGame();
 
+  const isAnyModalOpen = isAnalyticsOpen || isSettingsOpen || isImportOpen;
+
   useKeyboardShortcuts({
     onSelectVoice: handleSelectVoice,
     onSelectTime: handleSelectTime,
     onNextQuestion: advanceToNextQuestion,
-    disabled: showFeedback,
+    disabled: showFeedback || isAnyModalOpen,
     showFeedback,
   });
 

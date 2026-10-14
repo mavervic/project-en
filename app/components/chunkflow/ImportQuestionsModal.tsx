@@ -95,17 +95,28 @@ export const ImportQuestionsModal: React.FC<ImportQuestionsModalProps> = ({
   const [errors, setErrors] = useState<string[]>([]);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [isCopied, setIsCopied] = useState(false);
+  const [copyError, setCopyError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   if (!isOpen) return null;
 
   const handleCopyPrompt = async () => {
+    setCopyError(null);
+    if (typeof navigator === 'undefined' || !navigator.clipboard?.writeText) {
+      setCopyError(
+        'Clipboard unavailable in this browser context (e.g. non-HTTPS). Please copy manually from the box below.'
+      );
+      return;
+    }
     try {
       await navigator.clipboard.writeText(TOEIC_AI_PROMPT_TEMPLATE);
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2500);
     } catch (err) {
       console.error('Failed to copy to clipboard', err);
+      setCopyError(
+        'Clipboard unavailable in this browser context. Please copy manually from the box below.'
+      );
     }
   };
 
@@ -360,6 +371,14 @@ export const ImportQuestionsModal: React.FC<ImportQuestionsModalProps> = ({
                 </li>
               </ol>
             </div>
+
+            {/* Copy Error Notice (e.g. non-secure HTTP context) */}
+            {copyError && (
+              <div className="p-3.5 rounded-xl bg-amber-950/40 border border-amber-500/50 text-xs font-mono text-amber-200 flex items-center gap-2">
+                <span>⚠</span>
+                <span>{copyError}</span>
+              </div>
+            )}
 
             {/* Prompt Preview & Copy Button */}
             <div className="relative rounded-xl border border-zinc-800 bg-black/60 overflow-hidden">

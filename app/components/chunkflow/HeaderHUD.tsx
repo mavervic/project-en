@@ -49,6 +49,7 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
           <button
             onClick={onOpenImport}
             title="Import custom questions"
+            aria-label="Import custom questions"
             className="px-2.5 sm:px-3 py-1.5 rounded-lg border border-zinc-700/80 hover:border-cyan-500/80 bg-zinc-900/90 hover:bg-zinc-800 text-xs font-medium text-zinc-200 tracking-wide transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
           >
             <svg
