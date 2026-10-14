@@ -5,6 +5,7 @@ interface HeaderHUDProps {
   onTogglePracticeMode: () => void;
   onOpenAnalytics: () => void;
   onOpenSettings: () => void;
+  onOpenImport?: () => void;
 }
 
 export const HeaderHUD: React.FC<HeaderHUDProps> = ({
@@ -12,6 +13,7 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
   onTogglePracticeMode,
   onOpenAnalytics,
   onOpenSettings,
+  onOpenImport,
 }) => {
   return (
     <header className="w-full border-b border-zinc-800/80 bg-zinc-950/70 backdrop-blur-md sticky top-0 z-30 px-3 sm:px-4 md:px-8 py-3 flex items-center justify-between gap-3 sm:gap-4">
@@ -42,6 +44,29 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
           </span>
           <span className="xs:hidden">{practiceMode === 'smart' ? 'Drill' : 'Random'}</span>
         </button>
+
+        {onOpenImport && (
+          <button
+            onClick={onOpenImport}
+            title="Import custom questions"
+            className="px-2.5 sm:px-3 py-1.5 rounded-lg border border-zinc-700/80 hover:border-cyan-500/80 bg-zinc-900/90 hover:bg-zinc-800 text-xs font-medium text-zinc-200 tracking-wide transition-all shadow-sm flex items-center gap-1.5 cursor-pointer"
+          >
+            <svg
+              className="w-3.5 h-3.5 text-cyan-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+              />
+            </svg>
+            <span className="hidden sm:inline">Import</span>
+          </button>
+        )}
         <button
           onClick={onOpenAnalytics}
           title="Analytics"

@@ -48,3 +48,9 @@ export interface CategoryStat {
 export interface ChunkFlowSettings {
   showGuidance: boolean;
 }
+
+export interface QuestionValidationResult {
+  valid: boolean;
+  errors: string[];
+  questions: Question[];
+}

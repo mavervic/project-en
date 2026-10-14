@@ -7,6 +7,7 @@ import { ChunkFlowArena } from '../components/chunkflow/ChunkFlowArena';
 import { ActionBar } from '../components/chunkflow/ActionBar';
 import { AnalyticsDashboard } from '../components/chunkflow/AnalyticsDashboard';
 import { SettingsModal } from '../components/chunkflow/SettingsModal';
+import { ImportQuestionsModal } from '../components/chunkflow/ImportQuestionsModal';
 import { loadSettings, saveSettings } from '../utils/storage';
 import type { ChunkFlowSettings } from '../types/chunkflow';
 
@@ -24,6 +25,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const [isAnalyticsOpen, setIsAnalyticsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [isImportOpen, setIsImportOpen] = useState(false);
   const [settings, setSettings] = useState<ChunkFlowSettings>(() => loadSettings());
 
   const handleUpdateSettings = (newSettings: Partial<ChunkFlowSettings>) => {
@@ -35,6 +37,7 @@ export default function Home() {
   };
 
   const {
+    questions,
     currentQuestion,
     selectedVoice,
     selectedTime,
@@ -46,11 +49,14 @@ export default function Home() {
     categoryStats,
     history,
     practiceMode,
+    isCustomBank,
     setPracticeMode,
     handleSelectVoice,
     handleSelectTime,
     advanceToNextQuestion,
     handleResetHistory,
+    handleImportQuestions,
+    handleResetQuestions,
   } = useChunkFlowGame();
 
   useKeyboardShortcuts({
@@ -71,6 +77,7 @@ export default function Home() {
         }
         onOpenAnalytics={() => setIsAnalyticsOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
+        onOpenImport={() => setIsImportOpen(true)}
       />
 
       {/* Main Training Arena */}
@@ -179,6 +186,16 @@ export default function Home() {
         onClose={() => setIsSettingsOpen(false)}
         settings={settings}
         onUpdateSettings={handleUpdateSettings}
+      />
+
+      {/* Import Custom Questions Modal */}
+      <ImportQuestionsModal
+        isOpen={isImportOpen}
+        onClose={() => setIsImportOpen(false)}
+        totalQuestions={questions.length}
+        isCustomBank={isCustomBank}
+        onImportQuestions={handleImportQuestions}
+        onResetToDefaults={handleResetQuestions}
       />
     </div>
   );

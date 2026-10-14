@@ -2,11 +2,14 @@ import type {
   CategoryStat,
   ChunkFlowSettings,
   PerformanceStats,
+  Question,
+  QuestionValidationResult,
   UserPerformance,
 } from '../types/chunkflow';
 
 const STORAGE_KEY = 'chunkflow_performance_v1';
 const SETTINGS_STORAGE_KEY = 'chunkflow_settings_v1';
+const CUSTOM_QUESTIONS_STORAGE_KEY = 'chunkflow_custom_questions_v1';
 
 const DEFAULT_SETTINGS: ChunkFlowSettings = {
   showGuidance: false,
@@ -144,4 +147,195 @@ export function saveSettings(settings: ChunkFlowSettings): void {
       console.warn('Failed to save ChunkFlow settings to localStorage', err);
     }
   }
+}
+
+export function loadCustomQuestions(): Question[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const raw = window.localStorage.getItem(CUSTOM_QUESTIONS_STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) {
+      return parsed;
+    }
+  } catch (err) {
+    console.warn('Failed to load custom questions from localStorage', err);
+  }
+  return [];
+}
+
+export function saveCustomQuestions(questions: Question[]): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(CUSTOM_QUESTIONS_STORAGE_KEY, JSON.stringify(questions));
+    } catch (err) {
+      console.warn('Failed to save custom questions to localStorage', err);
+    }
+  }
+}
+
+export function clearCustomQuestions(): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.removeItem(CUSTOM_QUESTIONS_STORAGE_KEY);
+    } catch (err) {
+      console.warn('Failed to clear custom questions from localStorage', err);
+    }
+  }
+}
+
+export function validateQuestionsJson(raw: string): QuestionValidationResult {
+  const errors: string[] = [];
+
+  if (!raw || typeof raw !== 'string' || !raw.trim()) {
+    return {
+      valid: false,
+      errors: ['Input is empty. Please paste valid JSON text or upload a .json file.'],
+      questions: [],
+    };
+  }
+
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(raw);
+  } catch (err) {
+    return {
+      valid: false,
+      errors: [`Invalid JSON syntax: ${(err as Error).message}`],
+      questions: [],
+    };
+  }
+
+  const items = Array.isArray(parsed) ? parsed : [parsed];
+  if (items.length === 0) {
+    return {
+      valid: false,
+      errors: ['JSON array contains no question items.'],
+      questions: [],
+    };
+  }
+
+  const validatedQuestions: Question[] = [];
+
+  items.forEach((item, index) => {
+    const qNum = index + 1;
+    if (typeof item !== 'object' || item === null) {
+      errors.push(`Item #${qNum} is not a valid question object.`);
+      return;
+    }
+
+    const q = item as Record<string, any>;
+
+    // 1. Sentence check
+    if (typeof q.sentence !== 'string' || !q.sentence.trim()) {
+      errors.push(`Question #${qNum}: Missing or empty 'sentence' string.`);
+    }
+
+    // 2. Chunks check
+    let foundTargetIndex = -1;
+    if (!Array.isArray(q.chunks) || q.chunks.length === 0) {
+      errors.push(`Question #${qNum}: 'chunks' must be a non-empty array of chunk objects.`);
+    } else {
+      let targetSlotCount = 0;
+      q.chunks.forEach((chunk: any, cIdx: number) => {
+        if (typeof chunk !== 'object' || chunk === null) {
+          errors.push(
+            `Question #${qNum}, Chunk #${cIdx + 1}: Must be an object with 'text' and 'isTargetSlot'.`
+          );
+          return;
+        }
+        if (typeof chunk.text !== 'string' || !chunk.text.trim()) {
+          errors.push(`Question #${qNum}, Chunk #${cIdx + 1}: Missing or empty chunk 'text'.`);
+        }
+        if (typeof chunk.isTargetSlot !== 'boolean') {
+          errors.push(
+            `Question #${qNum}, Chunk #${cIdx + 1}: 'isTargetSlot' must be a boolean (true or false).`
+          );
+        } else if (chunk.isTargetSlot) {
+          targetSlotCount++;
+          if (foundTargetIndex === -1) {
+            foundTargetIndex = cIdx;
+          }
+        }
+      });
+
+      if (targetSlotCount === 0) {
+        errors.push(
+          `Question #${qNum}: Exactly one chunk must have 'isTargetSlot: true' (found 0).`
+        );
+      } else if (targetSlotCount > 1) {
+        errors.push(
+          `Question #${qNum}: Only one chunk can have 'isTargetSlot: true' (found ${targetSlotCount}).`
+        );
+      }
+    }
+
+    // 3. Target Slot Index
+    const targetSlotIndex =
+      typeof q.targetSlotIndex === 'number' && q.targetSlotIndex >= 0
+        ? q.targetSlotIndex
+        : foundTargetIndex >= 0
+          ? foundTargetIndex
+          : 0;
+
+    // 4. Correct Answers check
+    if (typeof q.correctAnswers !== 'object' || q.correctAnswers === null) {
+      errors.push(`Question #${qNum}: Missing 'correctAnswers' object.`);
+    } else {
+      const validVoices = ['active', 'passive'];
+      const validTimes = ['present', 'past', 'future'];
+
+      if (!validVoices.includes(q.correctAnswers.voice)) {
+        errors.push(
+          `Question #${qNum}: 'correctAnswers.voice' must be either 'active' or 'passive' (received: ${q.correctAnswers.voice}).`
+        );
+      }
+      if (!validTimes.includes(q.correctAnswers.time)) {
+        errors.push(
+          `Question #${qNum}: 'correctAnswers.time' must be 'present', 'past', or 'future' (received: ${q.correctAnswers.time}).`
+        );
+      }
+    }
+
+    // 5. Grammar Note check
+    const grammarNote = typeof q.grammarNote === 'string' ? q.grammarNote : '';
+
+    if (errors.length === 0) {
+      const id =
+        typeof q.id === 'string' && q.id.trim()
+          ? q.id.trim()
+          : `q-custom-${Date.now()}-${index}-${Math.random().toString(36).slice(2, 7)}`;
+
+      validatedQuestions.push({
+        id,
+        sentence: q.sentence.trim(),
+        chunks: q.chunks.map((c: any) => ({
+          text: String(c.text).trim(),
+          isTargetSlot: Boolean(c.isTargetSlot),
+          type: c.type,
+        })),
+        targetSlotIndex: foundTargetIndex >= 0 ? foundTargetIndex : targetSlotIndex,
+        correctAnswers: {
+          voice: q.correctAnswers.voice,
+          time: q.correctAnswers.time,
+          aspect: q.correctAnswers.aspect,
+        },
+        grammarNote,
+      });
+    }
+  });
+
+  if (errors.length > 0) {
+    return {
+      valid: false,
+      errors,
+      questions: [],
+    };
+  }
+
+  return {
+    valid: true,
+    errors: [],
+    questions: validatedQuestions,
+  };
 }

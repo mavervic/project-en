@@ -2,24 +2,38 @@ import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import type { Question, TimeChoice, UserPerformance, VoiceChoice } from '../types/chunkflow';
 import { STARTER_QUESTIONS } from '../data/starterQuestions';
 import {
+  clearCustomQuestions,
   clearPerformanceRecords,
   computeCategoryStats,
   computeStats,
+  loadCustomQuestions,
   loadPerformanceRecords,
+  saveCustomQuestions,
   savePerformanceRecord,
 } from '../utils/storage';
 import { getQuestionCategory, selectNextQuestion } from '../utils/sampling';
 import { useFocusFadeTimer } from './useFocusFadeTimer';
 
 export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTIONS) {
-  const [questions] = useState<Question[]>(initialQuestions);
+  const [questions, setQuestions] = useState<Question[]>(() => {
+    if (typeof window !== 'undefined') {
+      const custom = loadCustomQuestions();
+      if (custom.length > 0) return custom;
+    }
+    return initialQuestions;
+  });
   const [history, setHistory] = useState<UserPerformance[]>([]);
   const [practiceMode, setPracticeMode] = useState<'smart' | 'random'>('smart');
 
-  // Load history on mount
+  // Load history & custom questions on mount
   useEffect(() => {
     const records = loadPerformanceRecords();
     setHistory(records);
+    const custom = loadCustomQuestions();
+    if (custom.length > 0) {
+      setQuestions(custom);
+      setCurrentQuestion(custom[0]);
+    }
   }, []);
 
   // Pick initial question
@@ -135,7 +149,56 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     startTimer();
   }, [startTimer]);
 
+  const handleImportQuestions = useCallback(
+    (newQuestions: Question[], mode: 'append' | 'replace') => {
+      let updated: Question[];
+      if (mode === 'append') {
+        const existingIds = new Set(questions.map((q) => q.id));
+        const filtered = newQuestions.filter((q) => !existingIds.has(q.id));
+        updated = [...questions, ...filtered];
+      } else {
+        updated = newQuestions;
+      }
+      saveCustomQuestions(updated);
+      setQuestions(updated);
+      setCurrentQuestion(updated[0]);
+
+      // Reset turn state
+      selectedVoiceRef.current = null;
+      selectedTimeRef.current = null;
+      setSelectedVoice(null);
+      setSelectedTime(null);
+      setLastEvaluation(null);
+      setShowFeedback(false);
+      questionStartTimeRef.current = Date.now();
+      startTimer();
+    },
+    [questions, startTimer]
+  );
+
+  const handleResetQuestions = useCallback(() => {
+    clearCustomQuestions();
+    setQuestions(initialQuestions);
+    setCurrentQuestion(initialQuestions[0]);
+
+    // Reset turn state
+    selectedVoiceRef.current = null;
+    selectedTimeRef.current = null;
+    setSelectedVoice(null);
+    setSelectedTime(null);
+    setLastEvaluation(null);
+    setShowFeedback(false);
+    questionStartTimeRef.current = Date.now();
+    startTimer();
+  }, [initialQuestions, startTimer]);
+
+  const isCustomBank = useMemo(() => {
+    if (typeof window === 'undefined') return false;
+    return loadCustomQuestions().length > 0;
+  }, [questions]);
+
   return {
+    questions,
     currentQuestion,
     selectedVoice,
     selectedTime,
@@ -147,10 +210,13 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     categoryStats,
     history,
     practiceMode,
+    isCustomBank,
     setPracticeMode,
     handleSelectVoice,
     handleSelectTime,
     advanceToNextQuestion,
     handleResetHistory,
+    handleImportQuestions,
+    handleResetQuestions,
   };
 }
