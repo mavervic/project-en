@@ -28,13 +28,24 @@ export interface UserPerformance {
 export type VoiceChoice = 'active' | 'passive';
 export type TimeChoice = 'present' | 'past' | 'future';
 
+export interface RecentStats {
+  accuracy: number; // 0 - 100 percentage over recent attempts (up to 10)
+  avgLatencyMs: number;
+  chunksPerMin: number;
+  sampleSize: number;
+  totalAttempts: number;
+  correctAttempts: number;
+}
+
 export interface PerformanceStats {
-  accuracy: number; // 0 - 100 percentage
+  accuracy: number; // 0 - 100 lifetime percentage
   avgLatencyMs: number;
   chunksPerMin: number;
   currentStreak: number;
+  bestStreak: number;
   totalAttempts: number;
   correctAttempts: number;
+  recent: RecentStats;
 }
 
 export interface CategoryStat {

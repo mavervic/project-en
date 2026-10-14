@@ -8,8 +8,10 @@ import {
   computeStats,
   loadCustomQuestions,
   loadPerformanceRecords,
+  loadSubjectVerbDrill,
   saveCustomQuestions,
   savePerformanceRecord,
+  saveSubjectVerbDrill,
 } from '../utils/storage';
 import { getQuestionCategory, selectNextQuestion } from '../utils/sampling';
 import { useFocusFadeTimer } from './useFocusFadeTimer';
@@ -54,6 +56,14 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
   const selectedTimeRef = useRef<TimeChoice | null>(null);
   const questionStartTimeRef = useRef<number>(Date.now());
 
+  const [isSubjectVerbDrill, setIsSubjectVerbDrill] = useState<boolean>(() => {
+    return loadSubjectVerbDrill();
+  });
+  const [roundStage, setRoundStage] = useState<'subject' | 'verb' | 'classify'>(() => {
+    return loadSubjectVerbDrill() ? 'subject' : 'classify';
+  });
+  const [chunkMisfireIndex, setChunkMisfireIndex] = useState<number | null>(null);
+
   const { focusState, progressPercent, startTimer, stopTimer } = useFocusFadeTimer({
     isPaused: showFeedback,
   });
@@ -70,6 +80,8 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     setSelectedTime(null);
     setLastEvaluation(null);
     setShowFeedback(false);
+    setRoundStage(isSubjectVerbDrill ? 'subject' : 'classify');
+    setChunkMisfireIndex(null);
 
     let nextQ: Question;
     if (practiceMode === 'smart') {
@@ -82,7 +94,50 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     setCurrentQuestion(nextQ);
     questionStartTimeRef.current = Date.now();
     startTimer();
-  }, [practiceMode, questions, history, currentQuestion.id, startTimer]);
+  }, [practiceMode, questions, history, currentQuestion.id, isSubjectVerbDrill, startTimer]);
+
+  const toggleSubjectVerbDrill = useCallback(() => {
+    setIsSubjectVerbDrill((prev) => {
+      const next = !prev;
+      saveSubjectVerbDrill(next);
+      setRoundStage(next ? 'subject' : 'classify');
+      setChunkMisfireIndex(null);
+      return next;
+    });
+  }, []);
+
+  const handleSelectChunk = useCallback(
+    (chunkIndex: number) => {
+      if (showFeedback) return;
+      const chunk = currentQuestion.chunks[chunkIndex];
+      if (!chunk) return;
+
+      if (roundStage === 'subject') {
+        if (chunk.type === 'subject') {
+          setChunkMisfireIndex(null);
+          setRoundStage('verb');
+        } else {
+          setChunkMisfireIndex(chunkIndex);
+          setTimeout(() => {
+            setChunkMisfireIndex((curr) => (curr === chunkIndex ? null : curr));
+          }, 800);
+        }
+      } else if (roundStage === 'verb') {
+        if (chunk.isTargetSlot || chunk.type === 'verb') {
+          setChunkMisfireIndex(null);
+          setRoundStage('classify');
+        } else {
+          setChunkMisfireIndex(chunkIndex);
+          setTimeout(() => {
+            setChunkMisfireIndex((curr) => (curr === chunkIndex ? null : curr));
+          }, 800);
+        }
+      }
+    },
+    [roundStage, showFeedback, currentQuestion]
+  );
+
+  const handleSelectSubjectChunk = handleSelectChunk;
 
   // Evaluation trigger when both voice and time are present
   const checkAnswer = useCallback(
@@ -112,7 +167,7 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
 
   const handleSelectVoice = useCallback(
     (voice: VoiceChoice) => {
-      if (showFeedback) return;
+      if (showFeedback || (isSubjectVerbDrill && roundStage !== 'classify')) return;
       selectedVoiceRef.current = voice;
       setSelectedVoice(voice);
 
@@ -120,12 +175,12 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
         checkAnswer(voice, selectedTimeRef.current);
       }
     },
-    [showFeedback, checkAnswer]
+    [showFeedback, isSubjectVerbDrill, roundStage, checkAnswer]
   );
 
   const handleSelectTime = useCallback(
     (time: TimeChoice) => {
-      if (showFeedback) return;
+      if (showFeedback || (isSubjectVerbDrill && roundStage !== 'classify')) return;
       selectedTimeRef.current = time;
       setSelectedTime(time);
 
@@ -133,7 +188,7 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
         checkAnswer(selectedVoiceRef.current, time);
       }
     },
-    [showFeedback, checkAnswer]
+    [showFeedback, isSubjectVerbDrill, roundStage, checkAnswer]
   );
 
   const handleResetHistory = useCallback(() => {
@@ -211,7 +266,14 @@ export function useChunkFlowGame(initialQuestions: Question[] = STARTER_QUESTION
     history,
     practiceMode,
     isCustomBank,
+    isSubjectVerbDrill,
+    roundStage,
+    chunkMisfireIndex,
+    subjectMisfireIndex: chunkMisfireIndex,
     setPracticeMode,
+    toggleSubjectVerbDrill,
+    handleSelectChunk,
+    handleSelectSubjectChunk,
     handleSelectVoice,
     handleSelectTime,
     advanceToNextQuestion,

@@ -3,6 +3,8 @@ import React from 'react';
 interface HeaderHUDProps {
   practiceMode: 'smart' | 'random';
   onTogglePracticeMode: () => void;
+  isSubjectVerbDrill?: boolean;
+  onToggleSubjectVerbDrill?: () => void;
   onOpenAnalytics: () => void;
   onOpenSettings: () => void;
   onOpenImport?: () => void;
@@ -11,6 +13,8 @@ interface HeaderHUDProps {
 export const HeaderHUD: React.FC<HeaderHUDProps> = ({
   practiceMode,
   onTogglePracticeMode,
+  isSubjectVerbDrill = true,
+  onToggleSubjectVerbDrill,
   onOpenAnalytics,
   onOpenSettings,
   onOpenImport,
@@ -29,6 +33,29 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
 
       {/* Action Controls Cluster */}
       <div className="flex items-center gap-2">
+        {onToggleSubjectVerbDrill && (
+          <button
+            onClick={onToggleSubjectVerbDrill}
+            title={
+              isSubjectVerbDrill
+                ? 'S+V Drill: Lock Subject chunk first, then classify Verb (Click to switch to Verb Only)'
+                : 'Verb Only Drill: Direct verb classification (Click to switch to S+V Drill)'
+            }
+            aria-label="Toggle Subject-Verb drill mode"
+            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium border border-zinc-800 bg-zinc-900 hover:border-zinc-700 text-zinc-300 transition-colors cursor-pointer"
+          >
+            <span
+              className={`w-1.5 h-1.5 rounded-full ${
+                isSubjectVerbDrill ? 'bg-cyan-400 animate-pulse' : 'bg-zinc-500'
+              }`}
+            />
+            <span className="hidden xs:inline">
+              {isSubjectVerbDrill ? 'S+V Drill' : 'Verb Only'}
+            </span>
+            <span className="xs:hidden">{isSubjectVerbDrill ? 'S+V' : 'Verb'}</span>
+          </button>
+        )}
+
         <button
           onClick={onTogglePracticeMode}
           title="Click to toggle practice algorithm"

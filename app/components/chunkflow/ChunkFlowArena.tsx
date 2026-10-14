@@ -9,6 +9,12 @@ interface ChunkFlowArenaProps {
   showFeedback: boolean;
   onNextQuestion?: () => void;
   stats?: PerformanceStats;
+  roundStage?: 'subject' | 'verb' | 'classify';
+  isSubjectVerbDrill?: boolean;
+  onSelectChunk?: (index: number) => void;
+  onSelectSubjectChunk?: (index: number) => void;
+  chunkMisfireIndex?: number | null;
+  subjectMisfireIndex?: number | null;
 }
 
 export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
@@ -19,6 +25,12 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   showFeedback,
   onNextQuestion,
   stats,
+  roundStage = 'classify',
+  isSubjectVerbDrill = false,
+  onSelectChunk,
+  onSelectSubjectChunk,
+  chunkMisfireIndex,
+  subjectMisfireIndex,
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
 
@@ -49,36 +61,65 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-4">
       {/* Telemetry Metrics Bar (2x2 on Mobile, 4-column on sm+) */}
+      {/* Telemetry Metrics Bar: Recent-10 Rolling Window (2x2 on Mobile, 4-column on sm+) */}
       {stats && (
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 px-2 py-1 text-xs font-mono">
-          <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2">
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
-              Accuracy
+          <div
+            className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2"
+            title="Rolling accuracy over the last 10 attempts"
+          >
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold flex items-center gap-1">
+              Accuracy <span className="text-[9px] text-zinc-500 font-normal">(10)</span>
             </span>
-            <span className={`text-xs sm:text-sm font-bold ${getAccuracyColor(stats.accuracy)}`}>
-              {stats.totalAttempts > 0 ? `${stats.accuracy}%` : '--'}
+            <span
+              className={`text-xs sm:text-sm font-bold ${getAccuracyColor(
+                stats.recent?.sampleSize > 0 ? stats.recent.accuracy : stats.accuracy
+              )}`}
+            >
+              {stats.recent?.sampleSize > 0
+                ? `${stats.recent.accuracy}%`
+                : stats.totalAttempts > 0
+                  ? `${stats.accuracy}%`
+                  : '--'}
             </span>
           </div>
 
-          <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2">
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
-              Avg Latency
+          <div
+            className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2"
+            title="Rolling average reaction time over the last 10 attempts"
+          >
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold flex items-center gap-1">
+              Avg Latency <span className="text-[9px] text-zinc-500 font-normal">(10)</span>
             </span>
             <span className="text-xs sm:text-sm font-bold text-zinc-200">
-              {stats.avgLatencyMs > 0 ? `${stats.avgLatencyMs}ms` : '--'}
+              {stats.recent?.sampleSize > 0 && stats.recent.avgLatencyMs > 0
+                ? `${stats.recent.avgLatencyMs}ms`
+                : stats.avgLatencyMs > 0
+                  ? `${stats.avgLatencyMs}ms`
+                  : '--'}
             </span>
           </div>
 
-          <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2">
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
-              Speed
+          <div
+            className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2"
+            title="Rolling parse throughput over the last 10 attempts"
+          >
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold flex items-center gap-1">
+              Speed <span className="text-[9px] text-zinc-500 font-normal">(10)</span>
             </span>
             <span className="text-xs sm:text-sm font-bold text-cyan-300">
-              {stats.chunksPerMin > 0 ? `${stats.chunksPerMin} cpm` : '--'}
+              {stats.recent?.sampleSize > 0 && stats.recent.chunksPerMin > 0
+                ? `${stats.recent.chunksPerMin} cpm`
+                : stats.chunksPerMin > 0
+                  ? `${stats.chunksPerMin} cpm`
+                  : '--'}
             </span>
           </div>
 
-          <div className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2">
+          <div
+            className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2"
+            title="Current consecutive correct answer streak"
+          >
             <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-zinc-500 font-semibold">
               Streak
             </span>
@@ -110,34 +151,94 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
         className={`relative min-h-[220px] rounded-2xl border p-8 md:p-12 flex flex-col justify-center items-center backdrop-blur-sm transition-all duration-300 ${getCardStyle()}`}
       >
         {/* Subtle Watermark Category Tag */}
-        <div className="absolute top-4 left-6 flex items-center gap-2 text-xs font-mono tracking-wider text-zinc-500 uppercase">
+        <div className="absolute top-4 left-6 flex items-center gap-2 text-xs font-mono tracking-wider text-zinc-500 uppercase flex-wrap">
           <span className="inline-block w-2 h-2 rounded-full bg-cyan-400/80 animate-ping" />
           <span>Syntactic Focus Arena</span>
+          {isSubjectVerbDrill && (
+            <span
+              className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-wider ${
+                roundStage === 'subject'
+                  ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse'
+                  : roundStage === 'verb'
+                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
+                    : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+              }`}
+            >
+              {roundStage === 'subject'
+                ? '1. Tap Subject Chunk'
+                : roundStage === 'verb'
+                  ? '✓ Subject Locked → 2. Tap Verb Chunk'
+                  : '✓ S+V Locked → 3. Classify Voice & Tense'}
+            </span>
+          )}
         </div>
 
         {/* Large Typography Sentence Chunks (Stable box geometry with 0 layout shift) */}
         <div className="w-full text-center flex flex-wrap justify-center items-center gap-x-2.5 gap-y-3.5 my-4">
           {question.chunks.map((chunk, index) => {
-            const isRevealed = focusState !== 'idle' || showFeedback;
+            const misfireIdx =
+              chunkMisfireIndex !== undefined && chunkMisfireIndex !== null
+                ? chunkMisfireIndex
+                : subjectMisfireIndex;
+            const isMisfired = misfireIdx === index;
+            const isSubjectChunk = chunk.type === 'subject';
+            const isVerbChunk = chunk.type === 'verb' || chunk.isTargetSlot;
+
+            const isSubjectLocked =
+              isSubjectVerbDrill && (roundStage === 'verb' || roundStage === 'classify');
+            const isVerbLocked = !isSubjectVerbDrill || roundStage === 'classify' || showFeedback;
+
+            let isInteractive = false;
+            if (!showFeedback && isSubjectVerbDrill) {
+              if (roundStage === 'subject') {
+                isInteractive = true;
+              } else if (roundStage === 'verb') {
+                isInteractive = !isSubjectChunk;
+              }
+            }
+
+            const selectHandler = onSelectChunk || onSelectSubjectChunk;
 
             let chunkStyle = 'border-transparent bg-transparent text-zinc-300';
-            if (isRevealed) {
-              if (chunk.isTargetSlot) {
-                chunkStyle =
-                  'border-cyan-400 bg-cyan-950/80 text-cyan-200 shadow-[0_0_20px_rgba(6,182,212,0.4)] ring-2 ring-cyan-500/20';
-              } else if (chunk.type === 'subject') {
-                chunkStyle = 'border-sky-500/40 bg-sky-950/25 text-sky-200';
-              } else {
-                chunkStyle = 'border-transparent bg-transparent text-zinc-400';
-              }
+            if (isMisfired) {
+              chunkStyle =
+                'border-rose-500 bg-rose-950/60 text-rose-200 shadow-[0_0_20px_rgba(244,63,94,0.4)] animate-shake';
+            } else if (isInteractive) {
+              chunkStyle =
+                'border-dashed border-zinc-700/80 hover:border-cyan-400 hover:bg-zinc-900 text-zinc-200 cursor-pointer hover:scale-105 active:scale-95 shadow-sm';
+            } else if (
+              isSubjectChunk &&
+              (isSubjectLocked || showFeedback || focusState !== 'idle')
+            ) {
+              chunkStyle =
+                'border-sky-500/60 bg-sky-950/30 text-sky-200 ring-1 ring-sky-500/30 shadow-sm';
+            } else if (isVerbChunk && isVerbLocked && (focusState !== 'idle' || showFeedback)) {
+              chunkStyle =
+                'border-cyan-400 bg-cyan-950/80 text-cyan-200 shadow-[0_0_20px_rgba(6,182,212,0.4)] ring-2 ring-cyan-500/20';
+            } else {
+              chunkStyle = 'border-transparent bg-transparent text-zinc-400';
             }
 
             return (
               <span
                 key={index}
-                className={`relative inline-flex items-center px-3.5 py-1.5 rounded-xl border-2 text-xl md:text-3xl font-semibold tracking-tight transition-all duration-300 ${chunkStyle}`}
+                onClick={isInteractive ? () => selectHandler?.(index) : undefined}
+                role={isInteractive ? 'button' : undefined}
+                tabIndex={isInteractive ? 0 : undefined}
+                aria-label={isInteractive ? `Select chunk: ${chunk.text}` : undefined}
+                className={`relative inline-flex items-center px-3.5 py-1.5 rounded-xl border-2 text-xl md:text-3xl font-semibold tracking-tight transition-all duration-200 select-none ${chunkStyle}`}
               >
                 {chunk.text}
+                {isSubjectChunk && isSubjectLocked && (
+                  <span className="ml-2 text-[10px] font-mono tracking-wider px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30 font-bold uppercase">
+                    S
+                  </span>
+                )}
+                {isVerbChunk && roundStage === 'classify' && isSubjectVerbDrill && (
+                  <span className="ml-2 text-[10px] font-mono tracking-wider px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold uppercase">
+                    V
+                  </span>
+                )}
               </span>
             );
           })}

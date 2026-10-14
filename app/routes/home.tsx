@@ -50,7 +50,12 @@ export default function Home() {
     history,
     practiceMode,
     isCustomBank,
+    isSubjectVerbDrill,
+    roundStage,
+    subjectMisfireIndex,
     setPracticeMode,
+    toggleSubjectVerbDrill,
+    handleSelectSubjectChunk,
     handleSelectVoice,
     handleSelectTime,
     advanceToNextQuestion,
@@ -65,7 +70,7 @@ export default function Home() {
     onSelectVoice: handleSelectVoice,
     onSelectTime: handleSelectTime,
     onNextQuestion: advanceToNextQuestion,
-    disabled: showFeedback || isAnyModalOpen,
+    disabled: showFeedback || isAnyModalOpen || (isSubjectVerbDrill && roundStage !== 'classify'),
     showFeedback,
   });
 
@@ -77,6 +82,8 @@ export default function Home() {
         onTogglePracticeMode={() =>
           setPracticeMode((prev) => (prev === 'smart' ? 'random' : 'smart'))
         }
+        isSubjectVerbDrill={isSubjectVerbDrill}
+        onToggleSubjectVerbDrill={toggleSubjectVerbDrill}
         onOpenAnalytics={() => setIsAnalyticsOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
         onOpenImport={() => setIsImportOpen(true)}
@@ -92,12 +99,30 @@ export default function Home() {
               <span className="uppercase text-cyan-300 font-semibold">{focusState}</span>
             </span>
             <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-              Identify the Grammatical Slot
+              {isSubjectVerbDrill && roundStage === 'subject'
+                ? 'Identify the Grammatical Subject'
+                : isSubjectVerbDrill && roundStage === 'verb'
+                  ? 'Identify the Grammatical Verb'
+                  : 'Identify the Grammatical Slot'}
             </h1>
             <p className="text-xs md:text-sm text-zinc-400 max-w-lg mx-auto">
-              Classify the highlighted chunk’s <strong className="text-zinc-200">Voice</strong>{' '}
-              (Active/Passive) and <strong className="text-zinc-200">Tense</strong>{' '}
-              (Present/Past/Future) before the background completely darkens.
+              {isSubjectVerbDrill && roundStage === 'subject' ? (
+                <>
+                  Click or tap the <strong className="text-sky-300">Subject chunk</strong> of the
+                  sentence to lock it before finding the verb.
+                </>
+              ) : isSubjectVerbDrill && roundStage === 'verb' ? (
+                <>
+                  Click or tap the <strong className="text-cyan-300">Verb chunk</strong> of the
+                  sentence to lock it before classifying voice and tense.
+                </>
+              ) : (
+                <>
+                  Classify the highlighted chunk’s <strong className="text-zinc-200">Voice</strong>{' '}
+                  (Active/Passive) and <strong className="text-zinc-200">Tense</strong>{' '}
+                  (Present/Past/Future) before the background completely darkens.
+                </>
+              )}
             </p>
           </div>
         )}
@@ -111,6 +136,10 @@ export default function Home() {
           showFeedback={showFeedback}
           onNextQuestion={advanceToNextQuestion}
           stats={stats}
+          roundStage={roundStage}
+          isSubjectVerbDrill={isSubjectVerbDrill}
+          onSelectChunk={handleSelectSubjectChunk}
+          chunkMisfireIndex={subjectMisfireIndex}
         />
 
         {/* Action Controls & Hotkey Buttons */}
@@ -119,7 +148,7 @@ export default function Home() {
           selectedTime={selectedTime}
           onSelectVoice={handleSelectVoice}
           onSelectTime={handleSelectTime}
-          disabled={showFeedback}
+          disabled={showFeedback || (isSubjectVerbDrill && roundStage !== 'classify')}
           showGuidance={settings.showGuidance}
         />
 

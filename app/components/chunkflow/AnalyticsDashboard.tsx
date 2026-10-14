@@ -55,11 +55,11 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           </button>
         </div>
 
-        {/* Global Summary Metrics */}
+        {/* Global Summary Metrics (Lifetime & Strategic Diagnostics) */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
             <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
-              Overall Accuracy
+              Lifetime Accuracy
             </span>
             <div className="text-2xl font-extrabold font-mono text-emerald-400 mt-1">
               {stats.totalAttempts > 0 ? `${stats.accuracy}%` : '--'}
@@ -71,22 +71,31 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
 
           <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
             <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
-              Avg Reaction
+              Lifetime Latency
             </span>
             <div className="text-2xl font-extrabold font-mono text-cyan-300 mt-1">
               {stats.avgLatencyMs > 0 ? `${stats.avgLatencyMs}ms` : '--'}
             </div>
-            <span className="text-[10px] text-zinc-400">Target: &lt; 2000ms</span>
+            <span className="text-[10px] text-zinc-400">
+              Target: &lt; 2000ms
+              {stats.recent?.sampleSize > 0 && (
+                <span className="ml-1 text-cyan-400/80 font-mono">
+                  (Recent: {stats.recent.avgLatencyMs}ms)
+                </span>
+              )}
+            </span>
           </div>
 
           <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
             <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-500">
-              Throughput
+              Total Practiced
             </span>
             <div className="text-2xl font-extrabold font-mono text-indigo-300 mt-1">
-              {stats.chunksPerMin > 0 ? `${stats.chunksPerMin} cpm` : '--'}
+              {stats.totalAttempts}
             </div>
-            <span className="text-[10px] text-zinc-400">Chunks parsed per min</span>
+            <span className="text-[10px] text-zinc-400">
+              {stats.chunksPerMin > 0 ? `${stats.chunksPerMin} cpm avg` : 'Sentences completed'}
+            </span>
           </div>
 
           <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
@@ -94,9 +103,9 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
               Best Streak
             </span>
             <div className="text-2xl font-extrabold font-mono text-amber-400 mt-1">
-              {stats.currentStreak} 🔥
+              {stats.bestStreak} 🔥
             </div>
-            <span className="text-[10px] text-zinc-400">Current run</span>
+            <span className="text-[10px] text-zinc-400">Current: {stats.currentStreak} 🔥</span>
           </div>
         </div>
 

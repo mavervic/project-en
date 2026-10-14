@@ -53,15 +53,75 @@ export function clearPerformanceRecords(): void {
   }
 }
 
+const BEST_STREAK_STORAGE_KEY = 'chunkflow_best_streak_v1';
+
+export function loadBestStreak(): number {
+  if (typeof window === 'undefined') return 0;
+  try {
+    const raw = window.localStorage.getItem(BEST_STREAK_STORAGE_KEY);
+    if (!raw) return 0;
+    const parsed = parseInt(raw, 10);
+    return isNaN(parsed) ? 0 : parsed;
+  } catch (err) {
+    console.warn('Failed to load best streak from localStorage', err);
+    return 0;
+  }
+}
+
+export function saveBestStreak(streak: number): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(BEST_STREAK_STORAGE_KEY, String(streak));
+    } catch (err) {
+      console.warn('Failed to save best streak to localStorage', err);
+    }
+  }
+}
+
+const SV_DRILL_STORAGE_KEY = 'chunkflow_sv_drill_v1';
+
+export function loadSubjectVerbDrill(): boolean {
+  if (typeof window === 'undefined') return true;
+  try {
+    const raw = window.localStorage.getItem(SV_DRILL_STORAGE_KEY);
+    if (raw === null) return true;
+    return raw === 'true';
+  } catch (err) {
+    console.warn('Failed to load subject-verb drill setting from localStorage', err);
+    return true;
+  }
+}
+
+export function saveSubjectVerbDrill(enabled: boolean): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(SV_DRILL_STORAGE_KEY, String(enabled));
+    } catch (err) {
+      console.warn('Failed to save subject-verb drill setting to localStorage', err);
+    }
+  }
+}
+
 export function computeStats(records: UserPerformance[]): PerformanceStats {
+  const storedBest = loadBestStreak();
+
   if (records.length === 0) {
     return {
-      accuracy: 100,
+      accuracy: 0,
       avgLatencyMs: 0,
       chunksPerMin: 0,
       currentStreak: 0,
+      bestStreak: storedBest,
       totalAttempts: 0,
       correctAttempts: 0,
+      recent: {
+        accuracy: 0,
+        avgLatencyMs: 0,
+        chunksPerMin: 0,
+        sampleSize: 0,
+        totalAttempts: 0,
+        correctAttempts: 0,
+      },
     };
   }
 
@@ -83,13 +143,52 @@ export function computeStats(records: UserPerformance[]): PerformanceStats {
     }
   }
 
+  // Calculate maximum streak achieved across all records in the dataset
+  let maxHistoricalStreak = 0;
+  let runningStreak = 0;
+  for (let i = 0; i < records.length; i++) {
+    if (records[i].isCorrect) {
+      runningStreak++;
+      if (runningStreak > maxHistoricalStreak) {
+        maxHistoricalStreak = runningStreak;
+      }
+    } else {
+      runningStreak = 0;
+    }
+  }
+
+  const bestStreak = Math.max(storedBest, maxHistoricalStreak, currentStreak);
+  if (bestStreak > storedBest) {
+    saveBestStreak(bestStreak);
+  }
+
+  // Compute Recent-10 Rolling Window
+  const recentRecords = records.slice(-10);
+  const recentSampleSize = recentRecords.length;
+  const recentCorrect = recentRecords.filter((r) => r.isCorrect).length;
+  const recentAccuracy =
+    recentSampleSize > 0 ? Math.round((recentCorrect / recentSampleSize) * 100) : 0;
+  const recentTotalLatency = recentRecords.reduce((acc, r) => acc + r.latencyMs, 0);
+  const recentAvgLatencyMs =
+    recentSampleSize > 0 ? Math.round(recentTotalLatency / recentSampleSize) : 0;
+  const recentChunksPerMin = recentAvgLatencyMs > 0 ? Math.round(60000 / recentAvgLatencyMs) : 0;
+
   return {
     accuracy,
     avgLatencyMs,
     chunksPerMin,
     currentStreak,
+    bestStreak,
     totalAttempts,
     correctAttempts,
+    recent: {
+      accuracy: recentAccuracy,
+      avgLatencyMs: recentAvgLatencyMs,
+      chunksPerMin: recentChunksPerMin,
+      sampleSize: recentSampleSize,
+      totalAttempts: recentSampleSize,
+      correctAttempts: recentCorrect,
+    },
   };
 }
 
