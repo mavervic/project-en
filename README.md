@@ -1,7 +1,7 @@
 # ChunkFlow — 英文語塊切分與時態語態直覺訓練場
 
 > **ChunkFlow (project-en)** 是一個專為建立英文時態、語態與句構直覺設計的高強度、鍵盤優先（Keyboard-First）互動訓練 Web 應用程式。
-> 透過將句子切分為語法語塊（Syntactic Chunks），搭配漸進式視覺聚焦壓力（Focus Fade）與弱點加權推題演算法，幫助學習者在高壓極短時間內建立對句子核心動詞「時態（Tense）」與「語態（Voice）」的即時直覺反應。
+> 透過將句子切分為語法語塊（Syntactic Chunks），搭配兩階段主動詞鎖定（S-V Lock）、約束交替出題（Constrained Alternation Shuffle）、漸進式視覺聚焦壓力（Focus Fade）與沉浸式語音朗讀，幫助學習者在極短時間內建立對句子主謂骨幹、時態（Tense）與語態（Voice）的瞬間直覺反應。
 
 ---
 
@@ -21,39 +21,70 @@ ChunkFlow 訓練的核心在於將英文句子的動詞形態迅速拆解為**�
 
 ---
 
+## 📚 豐富題庫矩陣 (Question Banks)
+
+ChunkFlow 內建分類多層次的題庫系統，支援即時切換與獨立訓練單元鎖定：
+
+### 1. TOEIC Part 5 文法句型題庫
+
+專門針對新制多益 Part 5 短文填空與核心句構設計：
+
+- **Level 1 基礎句型 (S-V 緊鄰)**：共 **5 個訓練單元（150 題）**。短主詞與主要動詞緊鄰，精確平衡主被動與現在/過去/未來 6 種基本時態組合。
+- **Level 2 中階句型 (介系詞隔離)**：共 **3 個訓練單元（90 題）**。主詞與動詞間穿插介系詞片語隔離修飾，解鎖完成式與進行式複雜結構。
+- **Level 3 高階句型 (真假動詞陷阱)**：共 **1 個訓練單元（30 題）**。強化分詞後位修飾、關係子句與真假動詞干擾陷阱判斷。
+
+### 2. 核心精選與自訂題庫匯入 (Custom Import)
+
+- **核心多益題庫 (Starter)**：ChunkFlow 精選 12 題經典句型。
+- **自訂 JSON 題庫匯入**：支援學習者依規範格式自訂與匯入題目，資料全端本機儲存保護隱私。
+
+---
+
 ## ✨ 核心特色 (Features)
 
-### 1. 🧩 語法語塊切分 (Syntactic Chunk Parsing)
+### 1. 🧩 語法語塊切分與 S-V 階梯鎖定 (Syntactic Chunks & S-V Drill)
 
-- 每道題目將句子精準切分為主詞（Subject）、動詞核心槽位（Verb Target Slot）、受詞（Object）與修飾子句/介系詞片語（Clause / Modifier）。
-- 讓學習者跳脫逐字翻譯的思考慣性，一眼抓住英文句子的骨幹與主被動關係。
+- 將句子結構拆解為主詞（Subject）、動詞核心槽位（Verb Target Slot）、受詞（Object）與介系詞/修飾片語。
+- **兩階段作答機制**：
+  1. 優先辨識並點選主詞語塊（S-V 緊鄰或分離鎖定）。
+  2. 解鎖進入時態與語態分類階梯，徹底根治「主謂不分」與「憑感覺作答」的盲點。
 
-### 2. ⏳ 漸進式視覺聚焦壓力 (Progressive Focus Fade)
+### 2. 🔀 約束交替洗牌演算法 (Constrained Alternation Shuffle)
 
-- 題目載入後維持 1 秒清晰視野，隨後展開 4 秒的背景漸暗轉場。
-- 強迫大腦在視覺對比度完全消退為深黑前，快速辨識出目標槽位的動詞時態與語態，模擬考試與實戰對話中的瞬間語感反應。
+- 解決傳統題庫連續出現相同句型導致大腦產生「定勢效應（Pattern Anticipation）」的問題。
+- **水線平衡出題 (Leveling Strategy)**：演算法動態監控各語法類別桶位，相鄰兩題保證語法分類互不碰撞（例如絕不連續兩題主動現在式）。
+- **100% 單元覆蓋**：單元內 30 道題目在未全部輪過前絕不重複，確保知識點無死角。
 
-### 3. ⌨️ 鍵盤優先極速操作 (Keyboard-First Flow)
+### 3. ▦ 左側壓克力訓練矩陣抽屜 (Training Matrix Drawer)
 
-- 雙手無需離開鍵盤，支援靈敏的快捷鍵操作，同時也支援滑鼠與觸控點擊：
+- 點擊頂部漢堡選單即可滑出優雅半透明的訓練單元矩陣。
+- **極簡二元完成狀態**：
+  - 未完成一輪：暗色按鈕搭配 `text-zinc-500`。
+  - 已完成一輪：高亮亮藍 `bg-cyan-400`。
+- **無干擾靠左排版**：固定 36px × 36px 尺寸方塊，靠左自然對齊 (`justify-start`)，無外框雜訊。
+- **智慧展開防護 Tooltip**：短題庫與頂部叢集自動向下展開 (`top-full mt-2`)，絕不遮擋頂部選擇器；長題庫底部智慧向上翻展。
+- **單元鎖定 (Target Lock)**：點選任一單元即可鎖定該課專注練習，點擊解鎖即可恢復題庫循環。
+
+### 4. 🔊 沉浸式語音朗讀 (Speech Narration & Custom Accent)
+
+- 整合 Web Speech API 原生語音合成引擎，題目出現時自動/點擊播放原生發音。
+- 支援美式英語（en-US）、英式英語（en-GB）、澳洲英語（en-AU）多種口音即時切換。
+
+### 5. ⌨️ 鍵盤優先極速操作 (Keyboard-First Flow)
+
+- 雙手無需離開鍵盤，支援極致靈敏的快捷鍵操作，同時完美支援手機觸控：
   - **語態 (Voice)**：`A` 或 `J`（Active 主動） / `P` 或 `K`（Passive 被動）
   - **時態 (Tense)**：`1`（Present 現在） / `2`（Past 過去） / `3`（Future 未來）
   - **換題 (Advance)**：`Space` 或 `Enter` 進入下一題
 
-### 4. 🧠 弱點加權智能推題 (Adaptive Weakness Sampling)
-
-- 提供 **Smart Mode（智能弱點優先）** 與 **Random Mode（隨機推題）**：
-  - 智能模式會動態追蹤使用者在各類別（例如 `past-passive`、`present-active` 等）的答對率與平均延遲時間（ms）。
-  - 對答錯率高或猶豫時間長的弱點語法類型自動提高抽題權重，進行針對性的刻意練習。
-
-### 5. 📊 即時 HUD 與數據分析儀表板 (Real-time HUD & Analytics Dashboard)
+### 6. 📊 即時 HUD 與弱點分析儀表板 (HUD & Analytics Dashboard)
 
 - 頂部導覽列即時計算與顯示：
   - **Accuracy**（準確率 %）
   - **Avg Latency**（平均反應延遲 ms）
   - **Streak**（連續答對次數）
-- 點擊「Analytics」可開啟詳細分析面板，檢視各語態時態組合的答題歷程、答題總數與表現分佈。
-- 所有進度與答題記錄均自動持久化儲存於瀏覽器 `localStorage`。
+- 點擊「Analytics」開啟詳細分析面板，檢視各語態時態組合的答題歷程、答題總數與弱點分佈。
+- 所有進度、設定與答題歷史均自動持久化儲存於瀏覽器 `localStorage`。
 
 ---
 
@@ -76,7 +107,9 @@ ChunkFlow 訓練的核心在於將英文句子的動詞形態迅速拆解為**�
 - **核心庫 (Core)**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
 - **樣式 (Styling)**: [Tailwind CSS v4](https://tailwindcss.com/)
 - **構建工具 (Build Tool)**: [Vite 8](https://vite.dev/)
-- **資料儲存 (Data Storage)**: Browser `localStorage` (免後端、即開即練)
+- **測試工具 (Testing)**: [Vitest](https://vitest.dev/), [Testing Library](https://testing-library.com/)
+- **方法論 (Methodology)**: [Spectra](https://github.com/kaochenlong/spectra-app) 規格驅動開發 (Spec-Driven Development)
+- **資料儲存 (Data Storage)**: Browser `localStorage` (免後端、離線即練)
 
 ---
 
@@ -98,12 +131,19 @@ pnpm run dev
 
 開啟瀏覽器前往 `http://localhost:5173` 即可開始練習！
 
-### 型別檢查與編譯
+### 執行測試套件
 
 ```bash
-# 檢查 TypeScript 型別
-pnpm run typecheck
+# 執行所有 Vitest 單元測試與整合測試
+pnpm test
 
+# 檢查 TypeScript 型別編譯
+pnpm run typecheck
+```
+
+### 生產環境打包與部署
+
+```bash
 # 建立生產環境打包版本
 pnpm run build
 
@@ -117,25 +157,37 @@ pnpm run start
 
 ```text
 app/
-├── components/chunkflow/       # 訓練場核心 UI 元件
-│   ├── ChunkFlowArena.tsx      # 核心語塊展示與暗化聚焦區
-│   ├── ActionBar.tsx           # 語態與時態按鈕控制列
-│   ├── HeaderHUD.tsx           # 頂部即時數據與狀態 HUD
-│   └── AnalyticsDashboard.tsx  # 弱點分析與答題統計儀表板
+├── components/chunkflow/         # 訓練場核心 UI 元件
+│   ├── ChunkFlowArena.tsx        # 核心語塊展示與暗化聚焦區 (S-V 兩階段鎖定)
+│   ├── ActionBar.tsx             # 語態與時態按鈕控制列
+│   ├── HeaderHUD.tsx             # 頂部即時數據、設定與題庫/抽屜切換 HUD
+│   ├── TrainingMatrixDrawer.tsx  # 左側壓克力抽屜 (題庫選擇器與 36px 訓練矩陣)
+│   ├── TrainingMatrix.tsx        # 獨立矩陣展示元件
+│   ├── AnalyticsDashboard.tsx    # 弱點分析與答題統計儀表板
+│   ├── SettingsModal.tsx         # 語音朗讀與口音偏好設定視窗
+│   └── ImportQuestionsModal.tsx  # 自訂 JSON 題庫匯入模態窗
 ├── data/
-│   └── starterQuestions.ts     # 精選商務/TOEIC 情境語塊題庫
+│   ├── toeic-part5/              # TOEIC Part 5 文法題庫
+│   │   ├── level1/               # Level 1 (5 課訓練, 150 題)
+│   │   ├── level2/               # Level 2 (3 課訓練, 90 題)
+│   │   ├── level3/               # Level 3 (1 課訓練, 30 題)
+│   │   └── index.ts              # 題庫整合與單元字典對照
+│   ├── starterQuestions.ts       # 核心精選 12 題商務句型
+│   └── banks.ts                  # 全域題庫登錄中心 (Bank Registry)
 ├── hooks/
-│   ├── useChunkFlowGame.ts     # 遊戲循環、作答評估與弱點更新狀態邏輯
-│   ├── useFocusFadeTimer.ts    # 1s 延遲 + 4s 漸變背景聚焦計時器
-│   └── useKeyboardShortcuts.ts # 全域鍵盤快捷鍵監聽
+│   ├── useChunkFlowGame.ts       # 遊戲循環、課綱推進、作答評估狀態邏輯
+│   ├── useFocusFadeTimer.ts      # 1s 延遲 + 4s 漸變背景聚焦計時器
+│   ├── useKeyboardShortcuts.ts   # 全域鍵盤快捷鍵監聽
+│   └── useSpeechNarration.ts     # Web Speech API 語音朗讀控制
 ├── types/
-│   └── chunkflow.ts            # 語塊、題目、統計數據之型別定義
+│   └── chunkflow.ts              # 語塊、題目、題庫元數據、單元數據型別定義
 ├── utils/
-│   ├── sampling.ts             # 弱點加權與隨機推題演算法
-│   └── storage.ts              # LocalStorage 持久化輔助函式
+│   ├── sampling.ts               # 約束交替洗牌 (Constrained Shuffle) 與抽題演算法
+│   ├── curriculum.ts             # 漸進式課綱推薦邏輯 (Progressive Curriculum)
+│   └── storage.ts                # LocalStorage 持久化與單元遙測統計運算
 ├── routes/
-│   └── home.tsx                # 主訓練場頁面路由
-└── app.css                     # 全域 Tailwind CSS 樣式
+│   └── home.tsx                  # 主訓練場首頁路由
+└── app.css                       # 全域 Tailwind CSS 樣式
 ```
 
 ---
