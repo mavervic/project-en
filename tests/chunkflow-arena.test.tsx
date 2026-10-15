@@ -111,4 +111,31 @@ describe('ChunkFlowArena - Copy Button & Translation Display', () => {
     expect(screen.queryByTestId('sentence-translation')).toBeNull();
     expect(screen.getByText('「reviews」為現在簡單式主動語態。')).toBeDefined();
   });
+
+  it('renders unified top utility bar and dedicated drill status pill to eliminate mobile collision', () => {
+    render(
+      <ChunkFlowArena
+        question={mockQuestionWithTranslation}
+        focusState="idle"
+        progressPercent={0}
+        lastEvaluation={null}
+        showFeedback={false}
+        isSubjectVerbDrill={true}
+        roundStage="classify"
+      />
+    );
+
+    const card = screen.getByTestId('arena-card');
+    expect(card).toBeDefined();
+
+    const watermarkText = screen.getByText('Syntactic Focus Arena');
+    expect(watermarkText.className).toContain('hidden sm:inline');
+
+    const stageBadge = screen.getByText('✓ S+V Locked → 3. Classify Voice & Tense');
+    expect(stageBadge).toBeDefined();
+    expect(stageBadge.className).toContain('rounded-full');
+
+    const copyBtn = screen.getByTestId('copy-sentence-btn');
+    expect(copyBtn).toBeDefined();
+  });
 });

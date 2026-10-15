@@ -16,36 +16,39 @@ export const TOEIC_AI_PROMPT_TEMPLATE = `You are an expert English linguist and 
 Your task is to take the following raw TOEIC Part 5 grammar error questions (questions with blanks, 4 multiple-choice options, and correct answers/explanations) and convert them into a structured JSON array for the ChunkFlow high-speed intuition trainer.
 
 ### Formatting Requirements:
-1. Each question must be segmented into natural syntactic chunks ("chunks").
+1. Each question must be segmented into natural, granular syntactic chunks ("chunks", min 4-8 chunks per sentence). Do not clump long prepositional phrases, appositives, or participle clauses together with the subject or object.
 2. Insert the correct answer into the sentence blank so the sentence is grammatically complete.
 3. Mark the primary predicate verb chunk with \`"isTargetSlot": true\` and \`"type": "verb"\`. All other chunks must have \`"isTargetSlot": false\`.
-4. Identify the grammatical subject chunk and mark it with \`"type": "subject"\`.
+4. Identify the grammatical head subject chunk and mark it with \`"type": "subject"\`. Prepositional modifiers, appositives, and participle clauses following the head subject must be separated into their own distinct chunks (\`"type": "clause"\`).
 5. Specify \`"targetSlotIndex"\` (0-indexed position of the target verb chunk in the \`chunks\` array).
 6. Specify \`"correctAnswers"\`:
    - \`"voice"\`: \`"active"\` or \`"passive"\`
    - \`"time"\`: \`"present"\`, \`"past"\`, or \`"future"\`
    - \`"aspect"\` (optional): \`"simple"\`, \`"continuous"\`, or \`"perfect"\`
-7. Provide a concise \`"grammarNote"\` in Traditional Chinese explaining the voice, tense clue (e.g., time adverbs, by-phrase), and key reasoning.
-8. Output ONLY a valid JSON array matching the schema below.
+7. Provide a fluent Traditional Chinese full-sentence translation in \`"translation"\`.
+8. Provide a concise \`"grammarNote"\` in Traditional Chinese explaining the voice, tense clue (e.g., time adverbs, by-phrase), and key reasoning.
+9. Output ONLY a valid JSON array matching the schema below.
 
 ### Output Schema:
 \`\`\`json
 [
   {
     "id": "toeic-custom-001",
-    "sentence": "The complete sentence with the correct answer filled in.",
+    "sentence": "The dedicated committee for workplace safety is currently reviewing employee incident reports.",
+    "translation": "致力於職場安全的工作委員會目前正在審核員工意外事件報告。",
     "chunks": [
-      { "text": "The subject phrase", "isTargetSlot": false, "type": "subject" },
-      { "text": "verb phrase", "isTargetSlot": true, "type": "verb" },
-      { "text": "object or prepositional modifier", "isTargetSlot": false }
+      { "text": "The dedicated committee", "isTargetSlot": false, "type": "subject" },
+      { "text": "for workplace safety", "isTargetSlot": false, "type": "clause" },
+      { "text": "is currently reviewing", "isTargetSlot": true, "type": "verb" },
+      { "text": "employee incident reports.", "isTargetSlot": false, "type": "object" }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
-      "time": "past",
-      "aspect": "simple"
+      "time": "present",
+      "aspect": "continuous"
     },
-    "grammarNote": "時態與語態解析重點說明"
+    "grammarNote": "現在進行式主動語態 (is + V-ing)。主詞 committee 為委員會主動審核報告。"
   }
 ]
 \`\`\`
@@ -62,10 +65,11 @@ Output:
   {
     "id": "toeic-custom-001",
     "sentence": "The quarterly performance review will be conducted by senior management before next Friday's executive briefing.",
+    "translation": "資深管理階層將於下週五的高階匯報前主持季度績效考核。",
     "chunks": [
       { "text": "The quarterly performance review", "isTargetSlot": false, "type": "subject" },
       { "text": "will be conducted", "isTargetSlot": true, "type": "verb" },
-      { "text": "by senior management", "isTargetSlot": false },
+      { "text": "by senior management", "isTargetSlot": false, "type": "clause" },
       { "text": "before next Friday's executive briefing.", "isTargetSlot": false, "type": "clause" }
     ],
     "targetSlotIndex": 1,
@@ -276,7 +280,7 @@ export const ImportQuestionsModal: React.FC<ImportQuestionsModalProps> = ({
                   setErrors([]);
                 }}
                 rows={9}
-                placeholder={`[\n  {\n    "sentence": "The contract was signed by the director yesterday.",\n    "chunks": [\n      { "text": "The contract", "isTargetSlot": false, "type": "subject" },\n      { "text": "was signed", "isTargetSlot": true, "type": "verb" },\n      { "text": "by the director yesterday.", "isTargetSlot": false }\n    ],\n    "targetSlotIndex": 1,\n    "correctAnswers": { "voice": "passive", "time": "past" },\n    "grammarNote": "過去被動語態 (was + p.p.)"\n  }\n]`}
+                placeholder={`[\n  {\n    "sentence": "The strategic distribution contract between the two pharmaceutical companies had been signed before the press conference began.",\n    "translation": "兩家製藥公司之間的策略經銷合約在記者會開始前便已簽署完成。",\n    "chunks": [\n      { "text": "The strategic distribution contract", "isTargetSlot": false, "type": "subject" },\n      { "text": "between the two", "isTargetSlot": false, "type": "clause" },\n      { "text": "pharmaceutical companies", "isTargetSlot": false, "type": "clause" },\n      { "text": "had been signed", "isTargetSlot": true, "type": "verb" },\n      { "text": "before the press conference began.", "isTargetSlot": false, "type": "clause" }\n    ],\n    "targetSlotIndex": 3,\n    "correctAnswers": { "voice": "passive", "time": "past" },\n    "grammarNote": "過去完成被動語態 (had been + p.p.)。"\n  }\n]`}
                 className="w-full p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 font-mono text-xs text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-y"
               />
             </div>

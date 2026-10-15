@@ -5,9 +5,19 @@
     "sentence": "Employees attending the professional leadership seminar in Seattle receive a formal certificate of completion.",
     "chunks": [
       {
-        "text": "Employees attending the professional leadership seminar in Seattle",
+        "text": "Employees",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "attending the professional leadership seminar",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "in Seattle",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "receive",
@@ -15,12 +25,17 @@
         "type": "verb"
       },
       {
-        "text": "a formal certificate of completion.",
+        "text": "a formal certificate",
         "isTargetSlot": false,
         "type": "object"
+      },
+      {
+        "text": "of completion.",
+        "isTargetSlot": false,
+        "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -35,9 +50,19 @@
     "sentence": "Any candidate seeking a managerial position in our overseas logistics division submits three professional letters of recommendation.",
     "chunks": [
       {
-        "text": "Any candidate seeking a managerial position in our overseas logistics division",
+        "text": "Any candidate",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "seeking a managerial position",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "in our overseas logistics division",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "submits",
@@ -45,12 +70,17 @@
         "type": "verb"
       },
       {
-        "text": "three professional letters of recommendation.",
+        "text": "three professional letters",
         "isTargetSlot": false,
         "type": "object"
+      },
+      {
+        "text": "of recommendation.",
+        "isTargetSlot": false,
+        "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -65,9 +95,19 @@
     "sentence": "Independent contractors hired for the headquarters renovation project routinely inspect structural integrity standards.",
     "chunks": [
       {
-        "text": "Independent contractors hired for the headquarters renovation project",
+        "text": "Independent contractors",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "hired for the headquarters",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "renovation project",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "routinely inspect",
@@ -80,7 +120,7 @@
         "type": "object"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -95,9 +135,19 @@
     "sentence": "The senior research analyst who presented key findings at yesterday's conference now leads the sustainable investment initiative.",
     "chunks": [
       {
-        "text": "The senior research analyst who presented key findings at yesterday's conference",
+        "text": "The senior research analyst",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "who presented key findings",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "at yesterday's conference",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "now leads",
@@ -110,7 +160,7 @@
         "type": "object"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -125,9 +175,19 @@
     "sentence": "Staff members participating in the charitable corporate fundraising campaign deserve special recognition from executive management.",
     "chunks": [
       {
-        "text": "Staff members participating in the charitable corporate fundraising campaign",
+        "text": "Staff members",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "participating in the charitable corporate",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "fundraising campaign",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "deserve",
@@ -145,7 +205,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -160,9 +220,19 @@
     "sentence": "The technician sent to repair the malfunctioning factory generator discovered severe mechanical wear on the internal drive belt.",
     "chunks": [
       {
-        "text": "The technician sent to repair the malfunctioning factory generator",
+        "text": "The technician",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "sent to repair",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the malfunctioning factory generator",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "discovered",
@@ -180,7 +250,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -195,9 +265,14 @@
     "sentence": "International delegates arriving from European regional subsidiaries praised the flawless coordination of the annual symposium.",
     "chunks": [
       {
-        "text": "International delegates arriving from European regional subsidiaries",
+        "text": "International delegates",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "arriving from European regional subsidiaries",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "praised",
@@ -205,12 +280,17 @@
         "type": "verb"
       },
       {
-        "text": "the flawless coordination of the annual symposium.",
+        "text": "the flawless coordination",
         "isTargetSlot": false,
         "type": "object"
+      },
+      {
+        "text": "of the annual symposium.",
+        "isTargetSlot": false,
+        "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -225,9 +305,19 @@
     "sentence": "The financial consultant who advised our board during the merger negotiations accurately predicted the subsequent market volatility.",
     "chunks": [
       {
-        "text": "The financial consultant who advised our board during the merger negotiations",
+        "text": "The financial consultant",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "who advised our board",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "during the merger negotiations",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "accurately predicted",
@@ -240,7 +330,7 @@
         "type": "object"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -255,9 +345,19 @@
     "sentence": "Passengers boarding the express commuter train bound for downtown Chicago noticed dense smoke near the rear locomotive.",
     "chunks": [
       {
-        "text": "Passengers boarding the express commuter train bound for downtown Chicago",
+        "text": "Passengers",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "boarding the express commuter train",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "bound for downtown Chicago",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "noticed",
@@ -275,7 +375,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -290,9 +390,14 @@
     "sentence": "The boutique legal firm specializing in international intellectual property law successfully defended our patent against domestic competitors.",
     "chunks": [
       {
-        "text": "The boutique legal firm specializing in international intellectual property law",
+        "text": "The boutique legal firm",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "specializing in international intellectual property law",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "successfully defended",
@@ -310,7 +415,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -325,9 +430,14 @@
     "sentence": "Vendors wishing to renew their municipal procurement contracts will submit updated product catalogs before the end of the fiscal year.",
     "chunks": [
       {
-        "text": "Vendors wishing to renew their municipal procurement contracts",
+        "text": "Vendors",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "wishing to renew their municipal procurement contracts",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will submit",
@@ -345,7 +455,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -360,9 +470,14 @@
     "sentence": "Candidates passing the rigorous written technical examination will proceed directly to final panel interviews with division heads.",
     "chunks": [
       {
-        "text": "Candidates passing the rigorous written technical examination",
+        "text": "Candidates",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "passing the rigorous written technical examination",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will proceed",
@@ -370,12 +485,17 @@
         "type": "verb"
       },
       {
-        "text": "directly to final panel interviews with division heads.",
+        "text": "directly to final panel interviews",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "with division heads.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -390,9 +510,14 @@
     "sentence": "The project manager overseeing the enterprise software migration will have resolved all technical bottlenecks by the end of this quarter.",
     "chunks": [
       {
-        "text": "The project manager overseeing the enterprise software migration",
+        "text": "The project manager",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "overseeing the enterprise software migration",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will have resolved",
@@ -410,7 +535,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -425,9 +550,19 @@
     "sentence": "Customers booking international vacation packages through our mobile application will receive complimentary airport transfer vouchers.",
     "chunks": [
       {
-        "text": "Customers booking international vacation packages through our mobile application",
+        "text": "Customers",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "booking international vacation packages",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "through our mobile application",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will receive",
@@ -440,7 +575,7 @@
         "type": "object"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -455,9 +590,19 @@
     "sentence": "Any employee demonstrating exceptional sales achievements during the fiscal year will participate in the annual executive retreat in Zurich.",
     "chunks": [
       {
-        "text": "Any employee demonstrating exceptional sales achievements during the fiscal year",
+        "text": "Any employee",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "demonstrating exceptional sales achievements",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "during the fiscal year",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will participate",
@@ -465,12 +610,17 @@
         "type": "verb"
       },
       {
-        "text": "in the annual executive retreat in Zurich.",
+        "text": "in the annual executive retreat",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "in Zurich.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -485,9 +635,14 @@
     "sentence": "Outdated network servers storing confidential personnel records are currently being replaced by the IT cybersecurity division.",
     "chunks": [
       {
-        "text": "Outdated network servers storing confidential personnel records",
+        "text": "Outdated network servers",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "storing confidential personnel records",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "are currently being replaced",
@@ -495,12 +650,17 @@
         "type": "verb"
       },
       {
-        "text": "by the IT cybersecurity division.",
+        "text": "by the IT",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "cybersecurity division.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -515,9 +675,14 @@
     "sentence": "Defective automotive parts manufactured at the suburban assembly plant are routinely returned to the original supplier for inspection.",
     "chunks": [
       {
-        "text": "Defective automotive parts manufactured at the suburban assembly plant",
+        "text": "Defective automotive parts",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "manufactured at the suburban assembly plant",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "are routinely returned",
@@ -525,12 +690,17 @@
         "type": "verb"
       },
       {
-        "text": "to the original supplier for inspection.",
+        "text": "to the original supplier",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "for inspection.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -545,9 +715,14 @@
     "sentence": "Architectural blueprints submitted by external design consultants are currently being examined by the municipal building commission.",
     "chunks": [
       {
-        "text": "Architectural blueprints submitted by external design consultants",
+        "text": "Architectural blueprints",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "submitted by external design consultants",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "are currently being examined",
@@ -555,12 +730,17 @@
         "type": "verb"
       },
       {
-        "text": "by the municipal building commission.",
+        "text": "by the municipal",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "building commission.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -575,9 +755,14 @@
     "sentence": "Valuable artwork displayed throughout the executive dining lounge is strictly protected by advanced infrared motion sensors.",
     "chunks": [
       {
-        "text": "Valuable artwork displayed throughout the executive dining lounge",
+        "text": "Valuable artwork",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "displayed throughout the executive dining lounge",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "is strictly protected",
@@ -585,12 +770,17 @@
         "type": "verb"
       },
       {
-        "text": "by advanced infrared motion sensors.",
+        "text": "by advanced",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "infrared motion sensors.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -605,9 +795,14 @@
     "sentence": "Heavy machinery deployed on the highway expansion project is carefully monitored by remote electronic tracking systems.",
     "chunks": [
       {
-        "text": "Heavy machinery deployed on the highway expansion project",
+        "text": "Heavy machinery",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "deployed on the highway expansion project",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "is carefully monitored",
@@ -615,12 +810,17 @@
         "type": "verb"
       },
       {
-        "text": "by remote electronic tracking systems.",
+        "text": "by remote electronic",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "tracking systems.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -635,9 +835,14 @@
     "sentence": "Financial audit statements prepared by junior accounting staff were thoroughly reviewed by the partner before the shareholder meeting.",
     "chunks": [
       {
-        "text": "Financial audit statements prepared by junior accounting staff",
+        "text": "Financial audit statements",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "prepared by junior accounting staff",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "were thoroughly reviewed",
@@ -645,12 +850,17 @@
         "type": "verb"
       },
       {
-        "text": "by the partner before the shareholder meeting.",
+        "text": "by the partner",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "before the shareholder meeting.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -665,9 +875,14 @@
     "sentence": "Fragile glassware containers packed inside wooden transit crates were heavily damaged during severe oceanic turbulence.",
     "chunks": [
       {
-        "text": "Fragile glassware containers packed inside wooden transit crates",
+        "text": "Fragile glassware containers",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "packed inside wooden transit crates",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "were heavily damaged",
@@ -675,12 +890,17 @@
         "type": "verb"
       },
       {
-        "text": "during severe oceanic turbulence.",
+        "text": "during severe",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "oceanic turbulence.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -695,9 +915,14 @@
     "sentence": "Key organizational revisions proposed by the restructuring taskforce were formally adopted by the executive board last month.",
     "chunks": [
       {
-        "text": "Key organizational revisions proposed by the restructuring taskforce",
+        "text": "Key organizational revisions",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "proposed by the restructuring taskforce",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "were formally adopted",
@@ -715,7 +940,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -730,9 +955,14 @@
     "sentence": "Airline passengers stranded at the international transit terminal were promptly provided with complimentary hotel vouchers overnight.",
     "chunks": [
       {
-        "text": "Airline passengers stranded at the international transit terminal",
+        "text": "Airline passengers",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "stranded at the international transit terminal",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "were promptly provided",
@@ -740,12 +970,17 @@
         "type": "verb"
       },
       {
-        "text": "with complimentary hotel vouchers overnight.",
+        "text": "with complimentary hotel vouchers",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "overnight.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -760,9 +995,14 @@
     "sentence": "Official press portfolios assembled by marketing department interns were immediately dispatched to accredited news agencies yesterday.",
     "chunks": [
       {
-        "text": "Official press portfolios assembled by marketing department interns",
+        "text": "Official press portfolios",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "assembled by marketing department interns",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "were immediately dispatched",
@@ -780,7 +1020,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -795,9 +1035,14 @@
     "sentence": "Unclaimed baggage remaining in the international arrivals hall will be transferred to long-term storage facilities tomorrow morning.",
     "chunks": [
       {
-        "text": "Unclaimed baggage remaining in the international arrivals hall",
+        "text": "Unclaimed baggage",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "remaining in the international arrivals hall",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will be transferred",
@@ -815,7 +1060,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",
@@ -830,9 +1075,14 @@
     "sentence": "Commercial structures built before current earthquake resistance codes will have been reinforced by certified engineers before the next safety audit.",
     "chunks": [
       {
-        "text": "Commercial structures built before current earthquake resistance codes",
+        "text": "Commercial structures",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "built before current earthquake resistance codes",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will have been reinforced",
@@ -850,7 +1100,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",
@@ -865,9 +1115,14 @@
     "sentence": "Confidential survey data gathered during the consumer focus group will be securely stored on an encrypted cloud server.",
     "chunks": [
       {
-        "text": "Confidential survey data gathered during the consumer focus group",
+        "text": "Confidential survey data",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "gathered during the consumer focus group",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will be securely stored",
@@ -875,12 +1130,17 @@
         "type": "verb"
       },
       {
-        "text": "on an encrypted cloud server.",
+        "text": "on an encrypted",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "cloud server.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",
@@ -895,9 +1155,14 @@
     "sentence": "Technical documentation submitted by foreign engineering vendors will have been translated into three languages before the commercial product launch.",
     "chunks": [
       {
-        "text": "Technical documentation submitted by foreign engineering vendors",
+        "text": "Technical documentation",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "submitted by foreign engineering vendors",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will have been translated",
@@ -915,7 +1180,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",
@@ -930,9 +1195,14 @@
     "sentence": "Grant proposals received after the posted application deadline will not be evaluated by the regional research committee.",
     "chunks": [
       {
-        "text": "Grant proposals received after the posted application deadline",
+        "text": "Grant proposals",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "received after the posted application deadline",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will not be evaluated",
@@ -940,12 +1210,17 @@
         "type": "verb"
       },
       {
-        "text": "by the regional research committee.",
+        "text": "by the regional",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "research committee.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",

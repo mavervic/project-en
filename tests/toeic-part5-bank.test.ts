@@ -33,6 +33,8 @@ describe('TOEIC Part 5 Question Banks', () => {
           expect(q.id).toBeDefined();
           expect(q.sentence).toBeTruthy();
           expect(q.chunks.length).toBeGreaterThanOrEqual(2);
+          const reconstructed = q.chunks.map((c) => c.text).join(' ');
+          expect(reconstructed).toBe(q.sentence);
           expect(q.targetSlotIndex).toBeGreaterThanOrEqual(0);
           expect(q.targetSlotIndex).toBeLessThan(q.chunks.length);
           expect(q.chunks[q.targetSlotIndex].isTargetSlot).toBe(true);
@@ -43,6 +45,36 @@ describe('TOEIC Part 5 Question Banks', () => {
           expect(q.translation!.trim().length).toBeGreaterThan(0);
         });
       });
+
+      if (name === 'Level 1') {
+        it('has at least 4 chunks for every Level 1 question', () => {
+          questions.forEach((q) => {
+            expect(q.chunks.length).toBeGreaterThanOrEqual(4);
+          });
+        });
+      }
+
+      if (name === 'Level 2') {
+        it('has at least 5 chunks for every Level 2 question with isolated head subject and modifier', () => {
+          questions.forEach((q) => {
+            expect(q.chunks.length).toBeGreaterThanOrEqual(5);
+            // Subject chunk must precede intervening clause/modifier chunk before targetSlot
+            expect(q.chunks[0].type).toBe('subject');
+            expect(q.targetSlotIndex).toBeGreaterThanOrEqual(2);
+          });
+        });
+      }
+
+      if (name === 'Level 3') {
+        it('has at least 5 chunks for every Level 3 question isolating participle/relative clause modifiers', () => {
+          questions.forEach((q) => {
+            expect(q.chunks.length).toBeGreaterThanOrEqual(5);
+            // Subject chunk is isolated from participle/clause distractor before targetSlot
+            expect(q.chunks[0].type).toBe('subject');
+            expect(q.targetSlotIndex).toBeGreaterThanOrEqual(2);
+          });
+        });
+      }
 
       it('has 5 questions for each of the 6 voice and time combinations', () => {
         const combinations: Record<string, number> = {

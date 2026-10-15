@@ -575,6 +575,10 @@ export function validateQuestionsJson(raw: string): QuestionValidationResult {
           aspect: q.correctAnswers.aspect,
         },
         grammarNote,
+        translation:
+          typeof q.translation === 'string' && q.translation.trim()
+            ? q.translation.trim()
+            : undefined,
         trainingId:
           typeof q.trainingId === 'string' && q.trainingId.trim() ? q.trainingId.trim() : undefined,
       });

@@ -5,9 +5,14 @@
     "sentence": "The senior director of the international marketing department has announced new overseas expansion targets.",
     "chunks": [
       {
-        "text": "The senior director of the international marketing department",
+        "text": "The senior director",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "of the international marketing department",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "has announced",
@@ -15,12 +20,17 @@
         "type": "verb"
       },
       {
-        "text": "new overseas expansion targets.",
+        "text": "new overseas",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "expansion targets.",
         "isTargetSlot": false,
         "type": "object"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -35,9 +45,19 @@
     "sentence": "The dedicated committee for workplace safety and health is currently reviewing employee incident reports.",
     "chunks": [
       {
-        "text": "The dedicated committee for workplace safety and health",
+        "text": "The dedicated committee",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "for workplace safety",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "and health",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "is currently reviewing",
@@ -50,7 +70,7 @@
         "type": "object"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -65,9 +85,19 @@
     "sentence": "The chief financial officer along with several senior analysts has evaluated the quarterly revenue forecast.",
     "chunks": [
       {
-        "text": "The chief financial officer along with several senior analysts",
+        "text": "The chief financial officer",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "along with",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "several senior analysts",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "has evaluated",
@@ -80,7 +110,7 @@
         "type": "object"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -95,9 +125,14 @@
     "sentence": "The project coordinator in charge of corporate client accounts has organized several networking events recently.",
     "chunks": [
       {
-        "text": "The project coordinator in charge of corporate client accounts",
+        "text": "The project coordinator",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "in charge of corporate client accounts",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "has organized",
@@ -115,7 +150,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -130,9 +165,19 @@
     "sentence": "The experienced team of software developers from our branch office is developing an integrated inventory system.",
     "chunks": [
       {
-        "text": "The experienced team of software developers from our branch office",
+        "text": "The experienced team",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "of software developers",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "from our branch office",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "is developing",
@@ -145,7 +190,7 @@
         "type": "object"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
@@ -160,9 +205,14 @@
     "sentence": "The lead architect for the municipal commercial center was presenting structural blueprints when the fire alarm rang.",
     "chunks": [
       {
-        "text": "The lead architect for the municipal commercial center",
+        "text": "The lead architect",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "for the municipal commercial center",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "was presenting",
@@ -180,7 +230,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -195,9 +245,14 @@
     "sentence": "The senior recruiter in the human resources department had screened dozens of qualified applicants before noon.",
     "chunks": [
       {
-        "text": "The senior recruiter in the human resources department",
+        "text": "The senior recruiter",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "in the human resources department",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "had screened",
@@ -215,7 +270,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -230,9 +285,19 @@
     "sentence": "The production supervisor at our manufacturing plant in Busan had resolved supply bottlenecks before operations resumed.",
     "chunks": [
       {
-        "text": "The production supervisor at our manufacturing plant in Busan",
+        "text": "The production supervisor",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "at our manufacturing plant",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "in Busan",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "had resolved",
@@ -250,7 +315,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -265,9 +330,14 @@
     "sentence": "The principal consultant from an independent auditing agency was examining tax records when regulators contacted him.",
     "chunks": [
       {
-        "text": "The principal consultant from an independent auditing agency",
+        "text": "The principal consultant",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "from an independent auditing agency",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "was examining",
@@ -285,7 +355,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -300,9 +370,19 @@
     "sentence": "The lead researcher with extensive expertise in artificial intelligence had published several groundbreaking studies prior to joining our firm.",
     "chunks": [
       {
-        "text": "The lead researcher with extensive expertise in artificial intelligence",
+        "text": "The lead researcher",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "with extensive expertise",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "in artificial intelligence",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "had published",
@@ -320,7 +400,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
@@ -335,9 +415,14 @@
     "sentence": "The executive management team at our European corporate headquarters will be discussing cross-border tax policies tomorrow afternoon.",
     "chunks": [
       {
-        "text": "The executive management team at our European corporate headquarters",
+        "text": "The executive management team",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "at our European corporate headquarters",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will be discussing",
@@ -355,7 +440,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -370,9 +455,19 @@
     "sentence": "The construction crew under the supervision of chief engineer Miller will have finished structural foundation work by next Friday.",
     "chunks": [
       {
-        "text": "The construction crew under the supervision of chief engineer Miller",
+        "text": "The construction crew",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "under the supervision",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "of chief engineer Miller",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will have finished",
@@ -390,7 +485,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -405,9 +500,14 @@
     "sentence": "The public relations spokesperson for the technology conglomerate will be answering media questions during the live broadcast.",
     "chunks": [
       {
-        "text": "The public relations spokesperson for the technology conglomerate",
+        "text": "The public relations spokesperson",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "for the technology conglomerate",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will be answering",
@@ -425,7 +525,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -440,9 +540,19 @@
     "sentence": "The accounting department with assistance from external financial auditors will have reconciled all balance sheets before the fiscal quarter ends.",
     "chunks": [
       {
-        "text": "The accounting department with assistance from external financial auditors",
+        "text": "The accounting department",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "with assistance",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "from external financial auditors",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will have reconciled",
@@ -460,7 +570,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -475,9 +585,14 @@
     "sentence": "The logistics manager in our automated distribution facility will be monitoring shipping schedules throughout the peak holiday period.",
     "chunks": [
       {
-        "text": "The logistics manager in our automated distribution facility",
+        "text": "The logistics manager",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "in our automated distribution facility",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will be monitoring",
@@ -495,7 +610,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
@@ -510,9 +625,19 @@
     "sentence": "The formal application for the international commercial trade license has been approved by the regulatory commission.",
     "chunks": [
       {
-        "text": "The formal application for the international commercial trade license",
+        "text": "The formal application",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "for the international",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "commercial trade license",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "has been approved",
@@ -525,7 +650,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -540,9 +665,19 @@
     "sentence": "The main conference room on the third floor of the administrative building is currently being renovated for the executive summit.",
     "chunks": [
       {
-        "text": "The main conference room on the third floor of the administrative building",
+        "text": "The main conference room",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "on the third floor",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "of the administrative building",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "is currently being renovated",
@@ -555,7 +690,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -570,9 +705,19 @@
     "sentence": "A comprehensive series of instructional manuals for junior technicians has been compiled by our training specialists.",
     "chunks": [
       {
-        "text": "A comprehensive series of instructional manuals for junior technicians",
+        "text": "A comprehensive series",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "of instructional manuals",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "for junior technicians",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "has been compiled",
@@ -585,7 +730,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -600,9 +745,19 @@
     "sentence": "The digital archive of corporate contracts from the past decade is being migrated to secure cloud servers.",
     "chunks": [
       {
-        "text": "The digital archive of corporate contracts from the past decade",
+        "text": "The digital archive",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "of corporate contracts",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "from the past decade",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "is being migrated",
@@ -615,7 +770,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -630,9 +785,19 @@
     "sentence": "The proposal for an employee wellness program with gym subsidies has been welcomed by staff members across all divisions.",
     "chunks": [
       {
-        "text": "The proposal for an employee wellness program with gym subsidies",
+        "text": "The proposal",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "for an employee wellness program",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "with gym subsidies",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "has been welcomed",
@@ -640,12 +805,17 @@
         "type": "verb"
       },
       {
-        "text": "by staff members across all divisions.",
+        "text": "by staff members",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "across all divisions.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
@@ -660,9 +830,19 @@
     "sentence": "The strategic distribution contract between the two pharmaceutical companies had been signed before the press conference began.",
     "chunks": [
       {
-        "text": "The strategic distribution contract between the two pharmaceutical companies",
+        "text": "The strategic distribution contract",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "between the two",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "pharmaceutical companies",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "had been signed",
@@ -675,7 +855,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 3,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -690,9 +870,14 @@
     "sentence": "The electrical wiring system throughout the historic commercial facility was being upgraded when the regional power failure occurred.",
     "chunks": [
       {
-        "text": "The electrical wiring system throughout the historic commercial facility",
+        "text": "The electrical wiring system",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "throughout the historic commercial facility",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "was being upgraded",
@@ -700,12 +885,17 @@
         "type": "verb"
       },
       {
-        "text": "when the regional power failure occurred.",
+        "text": "when",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the regional power failure occurred.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -720,9 +910,14 @@
     "sentence": "A comprehensive audit of foreign subsidiary financial accounts had been completed before federal tax investigators arrived.",
     "chunks": [
       {
-        "text": "A comprehensive audit of foreign subsidiary financial accounts",
+        "text": "A comprehensive audit",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "of foreign subsidiary financial accounts",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "had been completed",
@@ -730,12 +925,17 @@
         "type": "verb"
       },
       {
-        "text": "before federal tax investigators arrived.",
+        "text": "before",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "federal tax investigators arrived.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -750,9 +950,14 @@
     "sentence": "The promotional video for the luxury electric vehicle was being filmed on coastal roads when heavy rains began.",
     "chunks": [
       {
-        "text": "The promotional video for the luxury electric vehicle",
+        "text": "The promotional video",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "for the luxury electric vehicle",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "was being filmed",
@@ -770,7 +975,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -785,9 +990,14 @@
     "sentence": "The emergency evacuation corridor through the underground parking structure had been inspected prior to the annual safety drill.",
     "chunks": [
       {
-        "text": "The emergency evacuation corridor through the underground parking structure",
+        "text": "The emergency evacuation corridor",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "through the underground parking structure",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "had been inspected",
@@ -795,12 +1005,17 @@
         "type": "verb"
       },
       {
-        "text": "prior to the annual safety drill.",
+        "text": "prior to",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the annual safety drill.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "past",
@@ -815,9 +1030,14 @@
     "sentence": "The full structural inspection of the manufacturing plant will have been completed by certified engineers before operations resume.",
     "chunks": [
       {
-        "text": "The full structural inspection of the manufacturing plant",
+        "text": "The full structural inspection",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "of the manufacturing plant",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will have been completed",
@@ -835,7 +1055,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",
@@ -850,9 +1070,14 @@
     "sentence": "All outstanding invoices from overseas equipment vendors will have been settled by the treasury department before the fiscal year concludes.",
     "chunks": [
       {
-        "text": "All outstanding invoices from overseas equipment vendors",
+        "text": "All outstanding invoices",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "from overseas equipment vendors",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will have been settled",
@@ -870,7 +1095,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",
@@ -885,9 +1110,14 @@
     "sentence": "The final evaluation report regarding pharmaceutical laboratory safety will be submitted to the government ministry next Monday.",
     "chunks": [
       {
-        "text": "The final evaluation report regarding pharmaceutical laboratory safety",
+        "text": "The final evaluation report",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "regarding pharmaceutical laboratory safety",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will be submitted",
@@ -905,7 +1135,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",
@@ -920,9 +1150,14 @@
     "sentence": "The modern training center for incoming customer support representatives will be unveiled during the upcoming global conference.",
     "chunks": [
       {
-        "text": "The modern training center for incoming customer support representatives",
+        "text": "The modern training center",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "for incoming customer support representatives",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will be unveiled",
@@ -930,12 +1165,17 @@
         "type": "verb"
       },
       {
-        "text": "during the upcoming global conference.",
+        "text": "during",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the upcoming global conference.",
         "isTargetSlot": false,
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",
@@ -950,9 +1190,14 @@
     "sentence": "New safety protocols for operating high-temperature blast furnaces will have been implemented throughout the factory by the end of next month.",
     "chunks": [
       {
-        "text": "New safety protocols for operating high-temperature blast furnaces",
+        "text": "New safety protocols",
         "isTargetSlot": false,
         "type": "subject"
+      },
+      {
+        "text": "for operating high-temperature blast furnaces",
+        "isTargetSlot": false,
+        "type": "clause"
       },
       {
         "text": "will have been implemented",
@@ -970,7 +1215,7 @@
         "type": "clause"
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "passive",
       "time": "future",

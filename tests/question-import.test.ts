@@ -139,4 +139,33 @@ describe('Question Import & Validation Specification Tests', () => {
       expect(cleared.length).toBe(0);
     });
   });
+
+  describe('TOEIC AI Prompt Template & Schema', () => {
+    it('mandates translation and granular chunking in the prompt template', async () => {
+      const { TOEIC_AI_PROMPT_TEMPLATE } =
+        await import('../app/components/chunkflow/ImportQuestionsModal');
+      expect(TOEIC_AI_PROMPT_TEMPLATE).toContain('"translation"');
+      expect(TOEIC_AI_PROMPT_TEMPLATE).toContain('Traditional Chinese');
+      expect(TOEIC_AI_PROMPT_TEMPLATE).toContain('granular syntactic chunks');
+      expect(TOEIC_AI_PROMPT_TEMPLATE).toContain('min 4-8 chunks');
+
+      // Extract the example output block from the prompt template and validate it
+      const outputMarker = 'Output:\n';
+      const startIdx = TOEIC_AI_PROMPT_TEMPLATE.indexOf(outputMarker);
+      expect(startIdx).toBeGreaterThan(0);
+      const endMarker = '### Raw TOEIC';
+      const endIdx = TOEIC_AI_PROMPT_TEMPLATE.indexOf(endMarker);
+      expect(endIdx).toBeGreaterThan(startIdx);
+
+      const exampleJson = TOEIC_AI_PROMPT_TEMPLATE.slice(
+        startIdx + outputMarker.length,
+        endIdx
+      ).trim();
+      const validation = validateQuestionsJson(exampleJson);
+      expect(validation.valid).toBe(true);
+      expect(validation.questions[0].translation).toBeDefined();
+      expect(validation.questions[0].translation!.length).toBeGreaterThan(0);
+      expect(validation.questions[0].chunks.length).toBeGreaterThanOrEqual(4);
+    });
+  });
 });

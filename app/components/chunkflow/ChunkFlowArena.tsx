@@ -175,15 +175,149 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
 
       {/* Main Sentence Arena Card */}
       <div
-        className={`relative min-h-[220px] rounded-2xl border p-8 md:p-12 flex flex-col justify-center items-center backdrop-blur-sm transition-all duration-300 ${getCardStyle()}`}
+        data-testid="arena-card"
+        className={`relative min-h-[220px] rounded-2xl border p-4 sm:p-6 md:p-8 flex flex-col justify-between items-center backdrop-blur-sm transition-all duration-300 ${getCardStyle()}`}
       >
-        {/* Subtle Watermark Category Tag */}
-        <div className="absolute top-4 left-6 flex items-center gap-2 text-xs font-mono tracking-wider text-zinc-500 uppercase flex-wrap">
-          <span className="inline-block w-2 h-2 rounded-full bg-cyan-400/80 animate-ping" />
-          <span>Syntactic Focus Arena</span>
-          {isSubjectVerbDrill && (
+        {/* Arena Card Top Bar */}
+        <div className="w-full flex items-center justify-between gap-3 text-xs font-mono tracking-wider text-zinc-500 uppercase">
+          {/* Subtle Watermark Category Tag */}
+          <div className="flex items-center gap-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-cyan-400/80 animate-ping" />
+            <span className="hidden sm:inline">Syntactic Focus Arena</span>
+          </div>
+
+          {/* Arena Audio & Utility Controls */}
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            {onToggleNarration && (
+              <button
+                type="button"
+                data-testid="narration-toggle-btn"
+                onClick={onToggleNarration}
+                title={narrationEnabled ? '靜音朗誦' : '開啟朗誦'}
+                aria-label={narrationEnabled ? 'Mute speech' : 'Enable speech'}
+                className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm ${
+                  narrationEnabled
+                    ? 'bg-cyan-500/15 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/25'
+                    : 'bg-zinc-900/90 border-zinc-700/80 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300'
+                }`}
+              >
+                {narrationEnabled ? (
+                  <svg
+                    className="w-4 h-4 text-cyan-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="w-4 h-4 text-zinc-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"
+                    />
+                  </svg>
+                )}
+                <span className="hidden sm:inline">{narrationEnabled ? '朗誦開' : '靜音'}</span>
+              </button>
+            )}
+
+            {onPlayAudio && (
+              <button
+                type="button"
+                data-testid="replay-audio-btn"
+                onClick={onPlayAudio}
+                title="重播音檔"
+                aria-label="重播音檔"
+                className="p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-zinc-900/90 border border-zinc-700/80 hover:border-cyan-400 text-zinc-300 hover:text-cyan-300 transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm"
+              >
+                <svg
+                  className={`w-4 h-4 ${isSpeaking ? 'text-cyan-400 animate-spin' : 'text-zinc-400'}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                  />
+                </svg>
+                <span className="hidden sm:inline">重播</span>
+              </button>
+            )}
+
+            {/* Copy Sentence Button */}
+            <button
+              type="button"
+              data-testid="copy-sentence-btn"
+              onClick={handleCopySentence}
+              title={isCopied ? '已複製！' : '複製句子'}
+              aria-label="複製句子"
+              className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-all cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm ${
+                isCopied
+                  ? 'bg-emerald-500/15 border-emerald-500/50 text-emerald-300'
+                  : 'bg-zinc-900/90 border-zinc-700/80 hover:border-cyan-400 text-zinc-300 hover:text-cyan-300'
+              }`}
+            >
+              {isCopied ? (
+                <svg
+                  className="w-4 h-4 text-emerald-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-4 h-4 text-zinc-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                  />
+                </svg>
+              )}
+              <span className="hidden sm:inline">{isCopied ? '已複製' : '複製'}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Dedicated Drill Stage Status Row (Centered, pill style) */}
+        {isSubjectVerbDrill && (
+          <div className="w-full flex justify-center items-center my-2 sm:my-3">
             <span
-              className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-wider ${
+              className={`px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold tracking-wider text-center shadow-sm max-w-full ${
                 roundStage === 'subject'
                   ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse'
                   : roundStage === 'verb'
@@ -197,137 +331,11 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
                   ? '✓ Subject Locked → 2. Tap Verb Chunk'
                   : '✓ S+V Locked → 3. Classify Voice & Tense'}
             </span>
-          )}
-        </div>
-
-        {/* Arena Audio Controls */}
-        <div className="absolute top-4 right-6 flex items-center gap-2">
-          {onToggleNarration && (
-            <button
-              type="button"
-              data-testid="narration-toggle-btn"
-              onClick={onToggleNarration}
-              title={narrationEnabled ? '靜音朗誦' : '開啟朗誦'}
-              aria-label={narrationEnabled ? 'Mute speech' : 'Enable speech'}
-              className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm ${
-                narrationEnabled
-                  ? 'bg-cyan-500/15 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/25'
-                  : 'bg-zinc-900/90 border-zinc-700/80 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300'
-              }`}
-            >
-              {narrationEnabled ? (
-                <svg
-                  className="w-4 h-4 text-cyan-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="w-4 h-4 text-zinc-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"
-                  />
-                </svg>
-              )}
-              <span className="hidden sm:inline">{narrationEnabled ? '朗誦開' : '靜音'}</span>
-            </button>
-          )}
-
-          {onPlayAudio && (
-            <button
-              type="button"
-              data-testid="replay-audio-btn"
-              onClick={onPlayAudio}
-              title="重播音檔"
-              aria-label="重播音檔"
-              className="p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-zinc-900/90 border border-zinc-700/80 hover:border-cyan-400 text-zinc-300 hover:text-cyan-300 transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm"
-            >
-              <svg
-                className={`w-4 h-4 ${isSpeaking ? 'text-cyan-400 animate-spin' : 'text-zinc-400'}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                />
-              </svg>
-              <span className="hidden sm:inline">重播</span>
-            </button>
-          )}
-
-          {/* Copy Sentence Button */}
-          <button
-            type="button"
-            data-testid="copy-sentence-btn"
-            onClick={handleCopySentence}
-            title={isCopied ? '已複製！' : '複製句子'}
-            aria-label="複製句子"
-            className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-all cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm ${
-              isCopied
-                ? 'bg-emerald-500/15 border-emerald-500/50 text-emerald-300'
-                : 'bg-zinc-900/90 border-zinc-700/80 hover:border-cyan-400 text-zinc-300 hover:text-cyan-300'
-            }`}
-          >
-            {isCopied ? (
-              <svg
-                className="w-4 h-4 text-emerald-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="w-4 h-4 text-zinc-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                />
-              </svg>
-            )}
-            <span className="hidden sm:inline">{isCopied ? '已複製' : '複製'}</span>
-          </button>
-        </div>
+          </div>
+        )}
 
         {/* Large Typography Sentence Chunks (Stable box geometry with 0 layout shift) */}
-        <div className="w-full text-center flex flex-wrap justify-center items-center gap-x-2.5 gap-y-3.5 my-4">
+        <div className="w-full text-center flex flex-wrap justify-center items-center gap-x-2.5 gap-y-3.5 my-auto py-3 sm:py-4">
           {question.chunks.map((chunk, index) => {
             const misfireIdx =
               chunkMisfireIndex !== undefined && chunkMisfireIndex !== null

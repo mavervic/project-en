@@ -160,7 +160,12 @@
         "type": "object"
       },
       {
-        "text": "to our cafeteria daily.",
+        "text": "to our cafeteria",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "daily.",
         "isTargetSlot": false,
         "type": "clause"
       }
@@ -645,7 +650,12 @@
         "type": "verb"
       },
       {
-        "text": "according to company guidelines.",
+        "text": "according to",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "company guidelines.",
         "isTargetSlot": false,
         "type": "clause"
       }
@@ -675,7 +685,12 @@
         "type": "verb"
       },
       {
-        "text": "in fireproof storage cabinets.",
+        "text": "in",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "fireproof storage cabinets.",
         "isTargetSlot": false,
         "type": "clause"
       }
@@ -915,7 +930,12 @@
         "type": "verb"
       },
       {
-        "text": "during the office renovation.",
+        "text": "during",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the office renovation.",
         "isTargetSlot": false,
         "type": "clause"
       }
