@@ -76,3 +76,91 @@ export function selectNextQuestion(
 
   return pool[pool.length - 1];
 }
+
+/**
+ * Fisher-Yates shuffle helper for arrays returning a new array copy.
+ */
+export function shuffleArray<T>(items: T[]): T[] {
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+/**
+ * Constrained shuffle algorithm that ensures no two adjacent items share the same category,
+ * provided that no single category dominates the pool (e.g. max category count <= ceil(total / 2)).
+ * If adjacent avoidance is impossible due to severe imbalance, it gracefully minimizes collisions.
+ *
+ * @param items Array of items to shuffle.
+ * @param getCategory Function returning a category key for an item.
+ * @param previousCategory Optional category of the item immediately preceding this shuffle.
+ */
+export function constrainedShuffle<T>(
+  items: T[],
+  getCategory: (item: T) => string,
+  previousCategory?: string
+): T[] {
+  if (items.length <= 1) return [...items];
+
+  // Group items by category bucket
+  const buckets = new Map<string, T[]>();
+  for (const item of items) {
+    const cat = getCategory(item);
+    const list = buckets.get(cat) || [];
+    list.push(item);
+    buckets.set(cat, list);
+  }
+
+  // Pre-shuffle within each bucket
+  for (const [cat, list] of buckets.entries()) {
+    buckets.set(cat, shuffleArray(list));
+  }
+
+  const result: T[] = [];
+  let lastCat = previousCategory;
+
+  while (result.length < items.length) {
+    // Collect non-empty buckets
+    const availableBuckets: string[] = [];
+    const fallbackBuckets: string[] = [];
+
+    for (const [cat, list] of buckets.entries()) {
+      if (list.length > 0) {
+        fallbackBuckets.push(cat);
+        if (cat !== lastCat) {
+          availableBuckets.push(cat);
+        }
+      }
+    }
+
+    if (availableBuckets.length === 0 && fallbackBuckets.length === 0) {
+      break;
+    }
+
+    // Prefer candidate buckets that differ from lastCat; fallback if all remaining belong to lastCat
+    const candidateBuckets = availableBuckets.length > 0 ? availableBuckets : fallbackBuckets;
+
+    // Leveling strategy: prioritize buckets with the maximum remaining items
+    let maxCount = 0;
+    for (const cat of candidateBuckets) {
+      const count = buckets.get(cat)!.length;
+      if (count > maxCount) {
+        maxCount = count;
+      }
+    }
+
+    const priorityBuckets = candidateBuckets.filter((cat) => buckets.get(cat)!.length === maxCount);
+
+    const chosenCat = priorityBuckets[Math.floor(Math.random() * priorityBuckets.length)];
+    const chosenBucket = buckets.get(chosenCat)!;
+    const item = chosenBucket.pop()!;
+
+    result.push(item);
+    lastCat = chosenCat;
+  }
+
+  return result;
+}

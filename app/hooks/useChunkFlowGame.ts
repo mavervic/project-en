@@ -21,7 +21,7 @@ import {
   saveCustomQuestions,
   savePerformanceRecord,
 } from '../utils/storage';
-import { getQuestionCategory, selectNextQuestion } from '../utils/sampling';
+import { constrainedShuffle, getQuestionCategory, selectNextQuestion } from '../utils/sampling';
 import {
   computeUnitStatus,
   getNextQuestionInUnit,
@@ -132,7 +132,13 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     const unattemptedRemaining = unattemptedQuestions.filter((q) => q.id !== currentQuestion.id);
 
     if (unattemptedRemaining.length > 0) {
-      nextQ = unattemptedRemaining[0];
+      const prevCategory = getQuestionCategory(currentQuestion);
+      const shuffled = constrainedShuffle(
+        unattemptedRemaining,
+        (q) => getQuestionCategory(q),
+        prevCategory
+      );
+      nextQ = shuffled[0];
     } else if (practiceMode === 'smart') {
       nextQ = selectNextQuestion(activeQuestions, history, currentQuestion.id);
     } else {
@@ -336,7 +342,8 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
         ? initialQuestions
         : getBankQuestions(activeBankId);
     setQuestions(defaultQs);
-    const firstQ = defaultQs[0];
+    const progressive = resolveProgressiveCurriculum(defaultQs, []);
+    const firstQ = progressive.question || defaultQs[0];
     setCurrentQuestion(firstQ);
 
     // Reset turn state

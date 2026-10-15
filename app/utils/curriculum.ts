@@ -1,4 +1,5 @@
 import type { Question, UserPerformance } from '../types/chunkflow';
+import { constrainedShuffle, getQuestionCategory } from './sampling';
 
 export type UnitCompletionStatus = 'not-started' | 'in-progress' | 'completed';
 
@@ -63,7 +64,8 @@ export function computeUnitStatus(
 
 export function getNextQuestionInUnit(
   unitQuestions: Question[],
-  history: UserPerformance[]
+  history: UserPerformance[],
+  previousQuestionId?: string
 ): Question {
   if (unitQuestions.length === 0) {
     throw new Error('Unit has no questions');
@@ -71,9 +73,24 @@ export function getNextQuestionInUnit(
 
   const { unattemptedQuestions } = computeUnitStatus(unitQuestions, history);
 
-  // Resume with the first unattempted question in order
+  // Resume with unattempted questions using constrained shuffle to alternate categories
   if (unattemptedQuestions.length > 0) {
-    return unattemptedQuestions[0];
+    let prevCategory: string | undefined;
+    if (previousQuestionId) {
+      const prevQ = unitQuestions.find((q) => q.id === previousQuestionId);
+      if (prevQ) prevCategory = getQuestionCategory(prevQ);
+    } else if (history.length > 0) {
+      const lastRecord = history[history.length - 1];
+      const lastQ = unitQuestions.find((q) => q.id === lastRecord.questionId);
+      if (lastQ) prevCategory = getQuestionCategory(lastQ);
+    }
+
+    const shuffled = constrainedShuffle(
+      unattemptedQuestions,
+      (q) => getQuestionCategory(q),
+      prevCategory
+    );
+    return shuffled[0];
   }
 
   // If all attempted, prioritize question with error or lowest accuracy
@@ -87,6 +104,19 @@ export function getNextQuestionInUnit(
   }
 
   return unitQuestions[0];
+}
+
+/**
+ * Returns all unattempted questions in a unit shuffled with category alternation constraints.
+ */
+export function getUnattemptedDeck(
+  unitQuestions: Question[],
+  history: UserPerformance[],
+  previousCategory?: string
+): Question[] {
+  const { unattemptedQuestions } = computeUnitStatus(unitQuestions, history);
+  if (unattemptedQuestions.length <= 1) return unattemptedQuestions;
+  return constrainedShuffle(unattemptedQuestions, (q) => getQuestionCategory(q), previousCategory);
 }
 
 export interface ProgressiveCurriculumResult {
