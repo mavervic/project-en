@@ -37,7 +37,33 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
     return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, []);
 
+  // Close bank dropdown menu when drawer closes
+  useEffect(() => {
+    if (!isOpen) {
+      setIsBankMenuOpen(false);
+    }
+  }, [isOpen]);
+
   const activeBank = banks.find((b) => b.id === activeBankId);
+
+  // Group banks by category
+  const categorizedBanks = useMemo(() => {
+    const groups: { category: string; banks: QuestionBankMeta[] }[] = [];
+    const map = new Map<string, QuestionBankMeta[]>();
+
+    for (const bank of banks) {
+      const cat = bank.category || '其他題庫';
+      if (!map.has(cat)) {
+        map.set(cat, []);
+      }
+      map.get(cat)!.push(bank);
+    }
+
+    for (const [category, groupBanks] of map.entries()) {
+      groups.push({ category, banks: groupBanks });
+    }
+    return groups;
+  }, [banks]);
 
   const units = useMemo(() => {
     const list = Object.values(telemetry);
@@ -69,22 +95,22 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
       <aside
         data-testid="training-matrix-drawer"
         aria-label="Training matrix drawer"
-        className={`fixed inset-y-0 left-0 z-50 w-72 flex flex-col backdrop-blur-xl bg-zinc-950/85 border-r border-zinc-800/80 shadow-2xl transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[calc(100vw-2rem)] flex flex-col backdrop-blur-xl bg-zinc-950/85 border-r border-zinc-800/80 shadow-2xl transition-all duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full invisible pointer-events-none'
         }`}
       >
         {/* Drawer Header */}
-        <div className="flex items-center justify-between px-3.5 py-3 border-b border-zinc-800/80 bg-zinc-950/40">
+        <div className="flex items-center justify-between px-3.5 py-3 border-b border-zinc-800/80 bg-zinc-950/40 min-w-0 w-full">
           {onSelectBank && banks.length > 0 ? (
-            <div className="relative flex-1 mr-2" ref={bankMenuRef}>
+            <div className="relative flex-1 min-w-0 mr-2" ref={bankMenuRef}>
               <button
                 type="button"
                 data-testid="bank-switcher-btn"
                 onClick={() => setIsBankMenuOpen((prev) => !prev)}
-                className="w-full inline-flex items-center justify-between gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium border border-zinc-700/80 bg-zinc-900/90 hover:border-cyan-500/80 text-zinc-200 transition-all cursor-pointer shadow-sm"
+                className="w-full inline-flex items-center justify-between gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium border border-zinc-700/80 bg-zinc-900/90 hover:border-cyan-500/80 text-zinc-200 transition-all cursor-pointer shadow-sm min-w-0"
                 title="切換題庫"
               >
-                <div className="flex items-center gap-1.5 truncate">
+                <div className="flex items-center gap-1.5 truncate min-w-0">
                   <svg
                     className="w-3.5 h-3.5 text-cyan-400 shrink-0"
                     fill="none"
@@ -98,7 +124,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                       d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
                     />
                   </svg>
-                  <span className="font-semibold text-cyan-300 truncate">
+                  <span className="font-semibold text-cyan-300 truncate min-w-0">
                     {activeBank?.name ?? '題庫'}
                   </span>
                   <span className="text-[10px] text-zinc-400 font-mono shrink-0">
@@ -123,39 +149,51 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
               {isBankMenuOpen && (
                 <div
                   data-testid="bank-dropdown-menu"
-                  className="absolute left-0 mt-2 w-full rounded-xl border border-zinc-800 bg-zinc-900/95 p-1.5 shadow-2xl backdrop-blur-md z-50 animate-fadeIn"
+                  className="absolute left-0 mt-2 w-full max-h-80 overflow-y-auto rounded-xl border border-zinc-800 bg-zinc-900/95 p-1.5 shadow-2xl backdrop-blur-md z-50 animate-fadeIn custom-scrollbar"
                 >
                   <div className="px-2.5 py-1 text-[11px] font-semibold text-zinc-400 border-b border-zinc-800/80 mb-1">
                     選擇題庫
                   </div>
-                  {banks.map((bank) => {
-                    const isCurrent = bank.id === activeBankId;
-                    return (
-                      <button
-                        key={bank.id}
-                        type="button"
-                        data-testid={`select-bank-${bank.id}`}
-                        onClick={() => {
-                          onSelectBank(bank.id);
-                          setIsBankMenuOpen(false);
-                        }}
-                        className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-between ${
-                          isCurrent
-                            ? 'bg-cyan-500/15 text-cyan-300 font-semibold'
-                            : 'text-zinc-300 hover:bg-zinc-800 hover:text-white'
-                        }`}
+                  {categorizedBanks.map((group) => (
+                    <div key={group.category} className="mb-2 last:mb-0">
+                      <div
+                        data-testid={`bank-category-header-${group.category}`}
+                        className="px-2.5 py-1 text-[10px] font-bold text-zinc-500 uppercase tracking-wider"
                       >
-                        <div className="flex flex-col">
-                          <span>{bank.name}</span>
-                          <span className="text-[10px] text-zinc-500">
-                            {bank.totalQuestions} 題
-                            {bank.totalTrainings > 1 ? ` · ${bank.totalTrainings} 訓練` : ''}
-                          </span>
-                        </div>
-                        {isCurrent && <span className="text-cyan-400">✓</span>}
-                      </button>
-                    );
-                  })}
+                        {group.category}
+                      </div>
+                      <div className="space-y-0.5">
+                        {group.banks.map((bank) => {
+                          const isCurrent = bank.id === activeBankId;
+                          return (
+                            <button
+                              key={bank.id}
+                              type="button"
+                              data-testid={`select-bank-${bank.id}`}
+                              onClick={() => {
+                                onSelectBank(bank.id);
+                                setIsBankMenuOpen(false);
+                              }}
+                              className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-between ${
+                                isCurrent
+                                  ? 'bg-cyan-500/15 text-cyan-300 font-semibold'
+                                  : 'text-zinc-300 hover:bg-zinc-800 hover:text-white'
+                              }`}
+                            >
+                              <div className="flex flex-col truncate pr-2 min-w-0 flex-1">
+                                <span className="truncate">{bank.name}</span>
+                                <span className="text-[10px] text-zinc-500 truncate">
+                                  {bank.totalQuestions} 題
+                                  {bank.totalTrainings > 1 ? ` · ${bank.totalTrainings} 訓練` : ''}
+                                </span>
+                              </div>
+                              {isCurrent && <span className="text-cyan-400 shrink-0">✓</span>}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               )}
             </div>

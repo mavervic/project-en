@@ -50,8 +50,40 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
 
   return (
     <header className="w-full border-b border-zinc-800/80 bg-zinc-950/70 backdrop-blur-md sticky top-0 z-30 px-3 sm:px-4 md:px-8 py-2.5 flex items-center justify-between gap-3 sm:gap-4">
-      {/* Left: Brand & Bank Switcher */}
-      <div className="flex items-center gap-3">
+      {/* Left: Hamburger Drawer Toggle & Brand */}
+      <div className="flex items-center gap-2 sm:gap-3">
+        {/* Matrix Drawer Hamburger Toggle */}
+        {onToggleMatrix && (
+          <button
+            type="button"
+            data-testid="matrix-drawer-toggle"
+            onClick={onToggleMatrix}
+            title={showMatrix ? '隱藏訓練矩陣' : '顯示訓練矩陣'}
+            aria-label="開啟訓練矩陣"
+            className={`p-1.5 sm:p-2 rounded-lg border transition-all cursor-pointer items-center justify-center ${
+              showMatrix
+                ? 'hidden'
+                : 'flex bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200'
+            }`}
+          >
+            <span data-testid="toggle-matrix-btn" className="sr-only" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        )}
+
         {/* Brand */}
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400 to-indigo-600 flex items-center justify-center font-black text-zinc-950 text-sm shadow-[0_0_15px_rgba(6,182,212,0.4)]">
@@ -65,25 +97,6 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
 
       {/* Right: Action Controls Cluster */}
       <div className="flex items-center gap-2">
-        {/* Matrix Toggle Button */}
-        {onToggleMatrix && (
-          <button
-            type="button"
-            data-testid="toggle-matrix-btn"
-            onClick={onToggleMatrix}
-            title={showMatrix ? '隱藏訓練矩陣' : '顯示訓練矩陣'}
-            aria-label="Toggle training matrix"
-            className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium border transition-colors cursor-pointer ${
-              showMatrix
-                ? 'bg-cyan-500/15 border-cyan-500/40 text-cyan-300'
-                : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200'
-            }`}
-          >
-            <span className="font-mono text-sm">▦</span>
-            <span className="hidden md:inline">訓練矩陣</span>
-          </button>
-        )}
-
         {/* Practice Algorithm Mode */}
         <button
           onClick={onTogglePracticeMode}

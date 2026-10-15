@@ -1,0 +1,957 @@
+[
+  {
+    "id": "toeic-l3-01",
+    "trainingId": "level3-01",
+    "sentence": "Employees attending the professional leadership seminar in Seattle receive a formal certificate of completion.",
+    "chunks": [
+      {
+        "text": "Employees attending the professional leadership seminar in Seattle",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "receive",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a formal certificate of completion.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「receive」為現在簡單式主動語態 (Present Simple Active)。【真假動詞陷阱】分詞「attending...」為現在分詞後位修飾主詞 Employees（假動詞），句子的真正謂語動詞是「receive」（真動詞，主動領取證書）。",
+    "translation": "參加西雅圖專業領導力研討會的員工會獲得正式的結業證書。"
+  },
+  {
+    "id": "toeic-l3-02",
+    "trainingId": "level3-01",
+    "sentence": "Any candidate seeking a managerial position in our overseas logistics division submits three professional letters of recommendation.",
+    "chunks": [
+      {
+        "text": "Any candidate seeking a managerial position in our overseas logistics division",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "submits",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "three professional letters of recommendation.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「submits」為現在簡單式主動語態 (Present Simple Active)。【真假動詞陷阱】分詞「seeking...」為假動詞（現在分詞修飾語），真正主詞為單數「Any candidate」，主要謂語動詞為「submits」（真動詞，主動呈交推薦信）。",
+    "translation": "任何申請我們海外物流部門管理職位的應徵者，均須提交三封專業推薦信。"
+  },
+  {
+    "id": "toeic-l3-03",
+    "trainingId": "level3-01",
+    "sentence": "Independent contractors hired for the headquarters renovation project routinely inspect structural integrity standards.",
+    "chunks": [
+      {
+        "text": "Independent contractors hired for the headquarters renovation project",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "routinely inspect",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "structural integrity standards.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「routinely inspect」為現在簡單式主動語態 (Present Simple Active)。【真假動詞陷阱】「hired for...」為過去分詞修飾語（假動詞，被聘用的），句子的真正謂語動詞是「inspect」（真動詞，主動定期檢查安全結構）。",
+    "translation": "為總部整修工程聘請的獨立承包商定期檢查結構完整性標準。"
+  },
+  {
+    "id": "toeic-l3-04",
+    "trainingId": "level3-01",
+    "sentence": "The senior research analyst who presented key findings at yesterday's conference now leads the sustainable investment initiative.",
+    "chunks": [
+      {
+        "text": "The senior research analyst who presented key findings at yesterday's conference",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "now leads",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the sustainable investment initiative.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「now leads」為現在簡單式主動語態 (Present Simple Active)。【關係子句陷阱】關係子句中的「who presented...」為子句內部動詞，主句真正的核心動詞為「leads」（真動詞，現在主動領導永續專案）。",
+    "translation": "在昨天會議上發表關鍵調查結果的資深研究分析師，現正領導永續投資倡議。"
+  },
+  {
+    "id": "toeic-l3-05",
+    "trainingId": "level3-01",
+    "sentence": "Staff members participating in the charitable corporate fundraising campaign deserve special recognition from executive management.",
+    "chunks": [
+      {
+        "text": "Staff members participating in the charitable corporate fundraising campaign",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "deserve",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "special recognition",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "from executive management.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「deserve」為現在簡單式主動語態 (Present Simple Active)。【真假動詞陷阱】「participating in...」為現在分詞修飾語（假動詞），句子的真正主要動詞為「deserve」（真動詞，員工們值得表揚）。",
+    "translation": "參與企業慈善募款活動的員工值得管理階層的特別嘉許。"
+  },
+  {
+    "id": "toeic-l3-06",
+    "trainingId": "level3-01",
+    "sentence": "The technician sent to repair the malfunctioning factory generator discovered severe mechanical wear on the internal drive belt.",
+    "chunks": [
+      {
+        "text": "The technician sent to repair the malfunctioning factory generator",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "discovered",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "severe mechanical wear",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "on the internal drive belt.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「discovered」為過去簡單式主動語態 (Past Simple Active)。【真假動詞陷阱】「sent to repair...」為過去分詞片語修飾主詞 The technician（假動詞），句子的真正謂語動詞為「discovered」（真動詞，主動發現皮帶磨損）。",
+    "translation": "被派遣去維修故障工廠發電機的技術人員發現內部傳動皮帶有嚴重的機械磨損。"
+  },
+  {
+    "id": "toeic-l3-07",
+    "trainingId": "level3-01",
+    "sentence": "International delegates arriving from European regional subsidiaries praised the flawless coordination of the annual symposium.",
+    "chunks": [
+      {
+        "text": "International delegates arriving from European regional subsidiaries",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "praised",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the flawless coordination of the annual symposium.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「praised」為過去簡單式主動語態 (Past Simple Active)。【真假動詞陷阱】「arriving from...」為分詞修飾語（假動詞），句子的主要動詞為「praised」（真動詞，代表們主動讚賞研討會規劃）。",
+    "translation": "來自歐洲區域子公司的國際代表對年度研討會的完美協調讚不絕口。"
+  },
+  {
+    "id": "toeic-l3-08",
+    "trainingId": "level3-01",
+    "sentence": "The financial consultant who advised our board during the merger negotiations accurately predicted the subsequent market volatility.",
+    "chunks": [
+      {
+        "text": "The financial consultant who advised our board during the merger negotiations",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "accurately predicted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the subsequent market volatility.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「accurately predicted」為過去簡單式主動語態 (Past Simple Active)。【關係子句陷阱】關係子句「who advised...」中的 advised 是從屬動詞，主句的主要謂語動詞為「accurately predicted」（真動詞，精準預測市場震盪）。",
+    "translation": "在併購談判期間為我們董事會提供諮詢的財務顧問，準確預測了隨後的市場波動。"
+  },
+  {
+    "id": "toeic-l3-09",
+    "trainingId": "level3-01",
+    "sentence": "Passengers boarding the express commuter train bound for downtown Chicago noticed dense smoke near the rear locomotive.",
+    "chunks": [
+      {
+        "text": "Passengers boarding the express commuter train bound for downtown Chicago",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "noticed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "dense smoke",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "near the rear locomotive.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「noticed」為過去簡單式主動語態 (Past Simple Active)。【雙重分詞陷阱】「boarding...」與「bound for...」皆為非謂語分詞修飾語，句子的主要動詞為「noticed」（真動詞，乘客主動注意到濃煙）。",
+    "translation": "登上開往芝加哥市中心特快通勤列車的乘客注意到後方車頭附近有濃煙。"
+  },
+  {
+    "id": "toeic-l3-10",
+    "trainingId": "level3-01",
+    "sentence": "The boutique legal firm specializing in international intellectual property law successfully defended our patent against domestic competitors.",
+    "chunks": [
+      {
+        "text": "The boutique legal firm specializing in international intellectual property law",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "successfully defended",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "our patent",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "against domestic competitors.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「successfully defended」為過去簡單式主動語態 (Past Simple Active)。【分詞陷阱】「specializing in...」為現在分詞後位修飾語（假動詞），句子的真正謂語動詞為「successfully defended」（真動詞，主動成功為專利辯護）。",
+    "translation": "這家專精於國際智慧財產權法的精品律師事務所成功捍衛了我們的專利，抵擋了國內競爭對手。"
+  },
+  {
+    "id": "toeic-l3-11",
+    "trainingId": "level3-01",
+    "sentence": "Vendors wishing to renew their municipal procurement contracts will submit updated product catalogs before the end of the fiscal year.",
+    "chunks": [
+      {
+        "text": "Vendors wishing to renew their municipal procurement contracts",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will submit",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "updated product catalogs",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before the end of the fiscal year.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will submit」為未來簡單式主動語態 (Future Simple Active)。【分詞陷阱】分詞「wishing to renew...」修飾主詞 Vendors，句子的主要謂語動詞為「will submit」（真動詞，廠商將主動提交型錄）。",
+    "translation": "希望續簽市政採購合約的供應商將在會計年度結束前提交更新的產品型錄。"
+  },
+  {
+    "id": "toeic-l3-12",
+    "trainingId": "level3-01",
+    "sentence": "Candidates passing the rigorous written technical examination will proceed directly to final panel interviews with division heads.",
+    "chunks": [
+      {
+        "text": "Candidates passing the rigorous written technical examination",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will proceed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "directly to final panel interviews with division heads.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will proceed」為未來簡單式主動語態 (Future Simple Active)。【分詞陷阱】現在分詞片語「passing the rigorous...」為修飾語，主要謂語動詞為「will proceed」（真動詞，合格者將進入面試）。",
+    "translation": "通過嚴格技術筆試的候選人將直接進入與各部門主管的最終小組面試。"
+  },
+  {
+    "id": "toeic-l3-13",
+    "trainingId": "level3-01",
+    "sentence": "The project manager overseeing the enterprise software migration will have resolved all technical bottlenecks by the end of this quarter.",
+    "chunks": [
+      {
+        "text": "The project manager overseeing the enterprise software migration",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will have resolved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "all technical bottlenecks",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "by the end of this quarter.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「will have resolved」為未來完成式主動語態 (Future Perfect Active)。【分詞陷阱】分詞「overseeing...」修飾經理，依時間標記 by the end of this quarter，專案經理屆時將已主動排除所有系統瓶頸。",
+    "translation": "負責監督企業軟體遷移的專案經理將在本季末前解決所有技術瓶頸。"
+  },
+  {
+    "id": "toeic-l3-14",
+    "trainingId": "level3-01",
+    "sentence": "Customers booking international vacation packages through our mobile application will receive complimentary airport transfer vouchers.",
+    "chunks": [
+      {
+        "text": "Customers booking international vacation packages through our mobile application",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will receive",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "complimentary airport transfer vouchers.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will receive」為未來簡單式主動語態 (Future Simple Active)。【分詞陷阱】「booking...」為分詞修飾語，真正主要謂語動詞為「will receive」（真動詞，訂票客戶將主動獲贈接送券）。",
+    "translation": "透過我們手機應用程式預訂國際度假套裝行程的顧客，將獲得免費機場接送憑證。"
+  },
+  {
+    "id": "toeic-l3-15",
+    "trainingId": "level3-01",
+    "sentence": "Any employee demonstrating exceptional sales achievements during the fiscal year will participate in the annual executive retreat in Zurich.",
+    "chunks": [
+      {
+        "text": "Any employee demonstrating exceptional sales achievements during the fiscal year",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will participate",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in the annual executive retreat in Zurich.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will participate」為未來簡單式主動語態 (Future Simple Active)。【分詞陷阱】「demonstrating...」為分詞修飾語，主要謂語動詞為「will participate」（真動詞，績優員工將受邀出席高階會議）。",
+    "translation": "任何在會計年度內展現卓越銷售業績的員工，將可參加在蘇黎世舉行的年度高階主管靜修會。"
+  },
+  {
+    "id": "toeic-l3-16",
+    "trainingId": "level3-01",
+    "sentence": "Outdated network servers storing confidential personnel records are currently being replaced by the IT cybersecurity division.",
+    "chunks": [
+      {
+        "text": "Outdated network servers storing confidential personnel records",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are currently being replaced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the IT cybersecurity division.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「are currently being replaced」為現在進行被動式 (Present Continuous Passive, are being + p.p.)。【分詞陷阱】「storing...」為分詞修飾語（假動詞），核心主詞「Outdated network servers」目前正被資安部門更換中。",
+    "translation": "儲存機密人事檔案的老舊網路伺服器目前正在由資訊安全部門進行更換。"
+  },
+  {
+    "id": "toeic-l3-17",
+    "trainingId": "level3-01",
+    "sentence": "Defective automotive parts manufactured at the suburban assembly plant are routinely returned to the original supplier for inspection.",
+    "chunks": [
+      {
+        "text": "Defective automotive parts manufactured at the suburban assembly plant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are routinely returned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to the original supplier for inspection.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are routinely returned」為現在簡單式被動語態 (Present Simple Passive)。【分詞陷阱】「manufactured at...」為過去分詞修飾語（假動詞，被製造的），真正主要謂語動詞是「are returned」（瑕疵零件定期被退回廠商）。",
+    "translation": "郊區組裝廠製造的有瑕疵汽車零件通常會退回原供應商進行檢驗。"
+  },
+  {
+    "id": "toeic-l3-18",
+    "trainingId": "level3-01",
+    "sentence": "Architectural blueprints submitted by external design consultants are currently being examined by the municipal building commission.",
+    "chunks": [
+      {
+        "text": "Architectural blueprints submitted by external design consultants",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are currently being examined",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the municipal building commission.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「are currently being examined」為現在進行被動式 (Present Continuous Passive, are being + p.p.)。【分詞陷阱】「submitted by...」為過去分詞修飾語，建築設計圖紙目前正被市政委員會嚴格審查中。",
+    "translation": "外部設計顧問提交的建築藍圖目前正在由市建築委員會進行審查。"
+  },
+  {
+    "id": "toeic-l3-19",
+    "trainingId": "level3-01",
+    "sentence": "Valuable artwork displayed throughout the executive dining lounge is strictly protected by advanced infrared motion sensors.",
+    "chunks": [
+      {
+        "text": "Valuable artwork displayed throughout the executive dining lounge",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is strictly protected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by advanced infrared motion sensors.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is strictly protected」為現在簡單式被動語態 (Present Simple Passive)。【分詞陷阱】「displayed throughout...」為過去分詞後位修飾，不可數主詞「Valuable artwork」被紅外線感應設備嚴密保護。",
+    "translation": "高階主管餐廳展示的珍貴藝術品受到先進紅外線動態感測器的嚴密保護。"
+  },
+  {
+    "id": "toeic-l3-20",
+    "trainingId": "level3-01",
+    "sentence": "Heavy machinery deployed on the highway expansion project is carefully monitored by remote electronic tracking systems.",
+    "chunks": [
+      {
+        "text": "Heavy machinery deployed on the highway expansion project",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is carefully monitored",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by remote electronic tracking systems.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is carefully monitored」為現在簡單式被動語態 (Present Simple Passive)。【分詞陷阱】「deployed on...」為過去分詞修飾語，不可數名詞主詞「Heavy machinery」正受到遠端系統嚴格監控。",
+    "translation": "部署在公路擴建工程中的重型機具受到遠端電子追蹤系統的嚴密監控。"
+  },
+  {
+    "id": "toeic-l3-21",
+    "trainingId": "level3-01",
+    "sentence": "Financial audit statements prepared by junior accounting staff were thoroughly reviewed by the partner before the shareholder meeting.",
+    "chunks": [
+      {
+        "text": "Financial audit statements prepared by junior accounting staff",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were thoroughly reviewed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the partner before the shareholder meeting.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「were thoroughly reviewed」為過去簡單式被動語態 (Past Simple Passive, were + p.p.)。【分詞陷阱】「prepared by...」為過去分詞修飾語（假動詞），財務報表在股東大會前已被合夥會計師仔細複審。",
+    "translation": "由初級會計人員編制的財務審計報表在股東大會前已由合夥人進行了徹底審查。"
+  },
+  {
+    "id": "toeic-l3-22",
+    "trainingId": "level3-01",
+    "sentence": "Fragile glassware containers packed inside wooden transit crates were heavily damaged during severe oceanic turbulence.",
+    "chunks": [
+      {
+        "text": "Fragile glassware containers packed inside wooden transit crates",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were heavily damaged",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "during severe oceanic turbulence.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「were heavily damaged」為過去簡單式被動語態 (Past Simple Passive)。【分詞陷阱】「packed inside...」為過去分詞修飾語，玻璃容器在海上航行途中遭受嚴重破損。",
+    "translation": "裝在木製運輸箱內的易碎玻璃容器在劇烈的海上顛簸中嚴重受損。"
+  },
+  {
+    "id": "toeic-l3-23",
+    "trainingId": "level3-01",
+    "sentence": "Key organizational revisions proposed by the restructuring taskforce were formally adopted by the executive board last month.",
+    "chunks": [
+      {
+        "text": "Key organizational revisions proposed by the restructuring taskforce",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were formally adopted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the executive board",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "last month.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「were formally adopted」為過去簡單式被動語態 (Past Simple Passive)。【分詞陷阱】「proposed by...」為分詞修飾語（假動詞），句子的真正謂語動詞為「were adopted」（改革方案上月已被董事會正式採納）。",
+    "translation": "改組專案小組提出的關鍵組織修訂方案已於上個月由執行董事會正式採納。"
+  },
+  {
+    "id": "toeic-l3-24",
+    "trainingId": "level3-01",
+    "sentence": "Airline passengers stranded at the international transit terminal were promptly provided with complimentary hotel vouchers overnight.",
+    "chunks": [
+      {
+        "text": "Airline passengers stranded at the international transit terminal",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were promptly provided",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with complimentary hotel vouchers overnight.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「were promptly provided」為過去簡單式被動語態 (Past Simple Passive)。【分詞陷阱】「stranded at...」為過去分詞修飾語（假動詞，受困滯留的），主要動詞為「were provided」（旅客被迅速發放過夜住宿券）。",
+    "translation": "滯留在國際轉機航廈的航空公司乘客當晚立即獲得了免費住宿券。"
+  },
+  {
+    "id": "toeic-l3-25",
+    "trainingId": "level3-01",
+    "sentence": "Official press portfolios assembled by marketing department interns were immediately dispatched to accredited news agencies yesterday.",
+    "chunks": [
+      {
+        "text": "Official press portfolios assembled by marketing department interns",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were immediately dispatched",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to accredited news agencies",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "yesterday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「were immediately dispatched」為過去簡單式被動語態 (Past Simple Passive)。【分詞陷阱】「assembled by...」為過去分詞修飾語，新聞資料袋昨天已被立即分送至各認證新聞機構。",
+    "translation": "行銷部實習生整理的官方新聞資料夾昨天已立即寄送給認可的新聞機構。"
+  },
+  {
+    "id": "toeic-l3-26",
+    "trainingId": "level3-01",
+    "sentence": "Unclaimed baggage remaining in the international arrivals hall will be transferred to long-term storage facilities tomorrow morning.",
+    "chunks": [
+      {
+        "text": "Unclaimed baggage remaining in the international arrivals hall",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be transferred",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to long-term storage facilities",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "tomorrow morning.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be transferred」為未來簡單式被動語態 (Future Simple Passive)。【分詞陷阱】現在分詞片語「remaining in...」為修飾語（假動詞），核心主詞「Unclaimed baggage」明天上午將被移送至保管庫。",
+    "translation": "留在國際入境大廳無人認領的行李將於明天早上轉移至長期保管設施。"
+  },
+  {
+    "id": "toeic-l3-27",
+    "trainingId": "level3-01",
+    "sentence": "Commercial structures built before current earthquake resistance codes will have been reinforced by certified engineers before the next safety audit.",
+    "chunks": [
+      {
+        "text": "Commercial structures built before current earthquake resistance codes",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will have been reinforced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by certified engineers",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "before the next safety audit.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「will have been reinforced」為未來完成式被動語態 (Future Perfect Passive, will have been + p.p.)。【分詞陷阱】「built before...」為過去分詞修飾語，在下回安檢前，這些建築屆時將已被加固強化。",
+    "translation": "在現行耐震法規前建造的商業建築將在下一次安全審計前由合格工程師完成補強。"
+  },
+  {
+    "id": "toeic-l3-28",
+    "trainingId": "level3-01",
+    "sentence": "Confidential survey data gathered during the consumer focus group will be securely stored on an encrypted cloud server.",
+    "chunks": [
+      {
+        "text": "Confidential survey data gathered during the consumer focus group",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be securely stored",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on an encrypted cloud server.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be securely stored」為未來簡單式被動語態 (Future Simple Passive)。【分詞陷阱】過去分詞片語「gathered during...」修飾主詞 data，該問卷數據將被安全儲存於加密伺服器。",
+    "translation": "在消費者焦點小組中收集的機密調查數據將安全存儲在加密的雲端伺服器上。"
+  },
+  {
+    "id": "toeic-l3-29",
+    "trainingId": "level3-01",
+    "sentence": "Technical documentation submitted by foreign engineering vendors will have been translated into three languages before the commercial product launch.",
+    "chunks": [
+      {
+        "text": "Technical documentation submitted by foreign engineering vendors",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will have been translated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "into three languages",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "before the commercial product launch.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「will have been translated」為未來完成式被動語態 (Future Perfect Passive)。【分詞陷阱】「submitted by...」為過去分詞修飾語，技術手冊在產品上市前將已被翻譯成三種語言。",
+    "translation": "外國工程供應商提交的技術文件將在商業產品上市前翻譯成三種語言。"
+  },
+  {
+    "id": "toeic-l3-30",
+    "trainingId": "level3-01",
+    "sentence": "Grant proposals received after the posted application deadline will not be evaluated by the regional research committee.",
+    "chunks": [
+      {
+        "text": "Grant proposals received after the posted application deadline",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will not be evaluated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the regional research committee.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will not be evaluated」為未來簡單式被動語態否定式 (Future Simple Passive)。【分詞陷阱】「received after...」為過去分詞修飾語，逾期送達的申請案將不會被委員會進行評審。",
+    "translation": "在公告申請截止日期之後收到的補助金提案將不會由區域研究委員會進行評估。"
+  }
+]

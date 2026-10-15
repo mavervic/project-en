@@ -7,6 +7,7 @@ export interface SlotChunk {
 export interface Question {
   id: string;
   sentence: string;
+  translation?: string; // Traditional Chinese sentence translation
   chunks: SlotChunk[];
   targetSlotIndex: number;
   correctAnswers: {
@@ -69,6 +70,7 @@ export interface QuestionBankMeta {
   id: string;
   name: string;
   description: string;
+  category?: string; // Grouping category in switcher (e.g. 'TOEIC Part 5 文法句型', 'TOEIC Listening 聽力題庫')
   totalQuestions: number;
   totalTrainings: number;
 }

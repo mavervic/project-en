@@ -411,7 +411,57 @@ describe('TrainingMatrixDrawer Component', () => {
     );
 
     expect(drawer.className).toContain('-translate-x-full');
+    expect(drawer.className).toContain('invisible');
     expect(screen.queryByTestId('drawer-backdrop')).toBeNull();
+  });
+
+  it('resets open bank menu when drawer closes', async () => {
+    const { TrainingMatrixDrawer } =
+      await import('../app/components/chunkflow/TrainingMatrixDrawer');
+    const telemetry = createMockTelemetry(5);
+    const mockBanks = [
+      {
+        id: 'starter',
+        name: 'Starter',
+        description: '',
+        category: 'TOEIC Part 5 文法句型',
+        totalQuestions: 10,
+        totalTrainings: 1,
+      },
+    ];
+
+    const { rerender } = render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={telemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+        banks={mockBanks}
+        activeBankId="starter"
+        onSelectBank={vi.fn()}
+      />
+    );
+
+    const switcherBtn = screen.getByTestId('bank-switcher-btn');
+    fireEvent.click(switcherBtn);
+    expect(screen.getByTestId('bank-dropdown-menu')).toBeDefined();
+
+    // Close drawer
+    rerender(
+      <TrainingMatrixDrawer
+        isOpen={false}
+        onClose={vi.fn()}
+        telemetry={telemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+        banks={mockBanks}
+        activeBankId="starter"
+        onSelectBank={vi.fn()}
+      />
+    );
+
+    expect(screen.queryByTestId('bank-dropdown-menu')).toBeNull();
   });
 
   it('allows clicking training block to select and unselect', async () => {
@@ -461,6 +511,7 @@ describe('TrainingMatrixDrawer Component', () => {
         id: 'starter',
         name: '核心多益題庫',
         description: '12 題',
+        category: 'TOEIC Part 5 文法句型',
         totalQuestions: 12,
         totalTrainings: 1,
       },
@@ -468,6 +519,7 @@ describe('TrainingMatrixDrawer Component', () => {
         id: 'parker',
         name: '怕渴題庫',
         description: '50 課',
+        category: 'TOEIC Listening 聽力題庫',
         totalQuestions: 1302,
         totalTrainings: 50,
       },
@@ -491,6 +543,10 @@ describe('TrainingMatrixDrawer Component', () => {
 
     fireEvent.click(switcherBtn);
     expect(screen.getByTestId('bank-dropdown-menu')).toBeDefined();
+
+    // Verify category headers
+    expect(screen.getByTestId('bank-category-header-TOEIC Part 5 文法句型')).toBeDefined();
+    expect(screen.getByTestId('bank-category-header-TOEIC Listening 聽力題庫')).toBeDefined();
 
     const starterOption = screen.getByTestId('select-bank-starter');
     fireEvent.click(starterOption);
