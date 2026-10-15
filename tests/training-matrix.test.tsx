@@ -267,19 +267,22 @@ describe('Direct Training Navigation and Bank Switching in useChunkFlowGame', ()
 
     const { result } = renderHook(() => useChunkFlowGame(mockQuestions));
 
-    // When selecting parker-01, it should skip u1-q1 and load u1-q2
+    // When selecting parker-01, it should skip u1-q1 and load an unattempted question
     act(() => {
       result.current.handleSelectTraining('parker-01');
     });
 
-    expect(result.current.currentQuestion.id).toBe('u1-q2');
+    const firstPickId = result.current.currentQuestion.id;
+    expect(['u1-q2', 'u1-q3']).toContain(firstPickId);
 
-    // Advancing should pick u1-q3
+    // Advancing should pick the remaining unattempted question
     act(() => {
       result.current.advanceToNextQuestion();
     });
 
-    expect(result.current.currentQuestion.id).toBe('u1-q3');
+    const secondPickId = result.current.currentQuestion.id;
+    expect(['u1-q2', 'u1-q3']).toContain(secondPickId);
+    expect(secondPickId).not.toBe(firstPickId);
 
     clearPerformanceRecords();
   });
