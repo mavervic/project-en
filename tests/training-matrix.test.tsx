@@ -19,6 +19,7 @@ function createMockTelemetry(count = 50): Record<string, TrainingUnitTelemetry> 
       avgLatencyMs: i === 3 ? 1200 : 0,
       bestStreak: i === 3 ? 5 : 0,
       masteryTier: i === 3 ? 4 : 0,
+      isCompleted: i === 3,
     };
   }
   return result;
@@ -416,6 +417,104 @@ describe('TrainingMatrixDrawer Component', () => {
     expect(drawer.className).toContain('-translate-x-full');
     expect(drawer.className).toContain('invisible');
     expect(screen.queryByTestId('drawer-backdrop')).toBeNull();
+  });
+
+  it('renders left-aligned borderless clusters with fixed 36px buttons', async () => {
+    const { TrainingMatrixDrawer } =
+      await import('../app/components/chunkflow/TrainingMatrixDrawer');
+    const telemetry = createMockTelemetry(5);
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={telemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+      />
+    );
+
+    const cluster0 = screen.getByTestId('training-cluster-0');
+    expect(cluster0.className).toContain('justify-start');
+    expect(cluster0.className).not.toContain('justify-between');
+    expect(cluster0.className).not.toContain('border-zinc-800');
+
+    const block01 = screen.getByTestId('training-block-parker-01');
+    expect(block01.className).toContain('w-[36px]');
+    expect(block01.className).toContain('h-[36px]');
+  });
+
+  it('guards tooltip vertical expansion so short banks expand downwards and long banks expand upwards at bottom', async () => {
+    const { TrainingMatrixDrawer } =
+      await import('../app/components/chunkflow/TrainingMatrixDrawer');
+    const shortTelemetry = createMockTelemetry(5); // 1 cluster
+
+    const { rerender } = render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={shortTelemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+      />
+    );
+
+    // In a short bank (1 cluster), tooltip must expand downwards (top-full)
+    const shortTooltip = screen.getByTestId('training-tooltip-parker-01');
+    expect(shortTooltip.className).toContain('top-full');
+    expect(shortTooltip.className).not.toContain('bottom-full');
+
+    // In a long bank (50 units = 10 clusters)
+    const longTelemetry = createMockTelemetry(50);
+    rerender(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={longTelemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+      />
+    );
+
+    // Row 0 expands downwards
+    const topTooltip = screen.getByTestId('training-tooltip-parker-01');
+    expect(topTooltip.className).toContain('top-full');
+
+    // Row 9 (bottom) expands upwards
+    const bottomTooltip = screen.getByTestId('training-tooltip-parker-50');
+    expect(bottomTooltip.className).toContain('bottom-full');
+  });
+
+  it('renders minimal two-state completion legend and applies completion styles on buttons', async () => {
+    const { TrainingMatrixDrawer } =
+      await import('../app/components/chunkflow/TrainingMatrixDrawer');
+    const telemetry = createMockTelemetry(5);
+    // Parker 01: uncompleted
+    telemetry['parker-01'].isCompleted = false;
+    // Parker 03: completed
+    telemetry['parker-03'].isCompleted = true;
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={telemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+      />
+    );
+
+    // Legend
+    expect(screen.getByText('進度標示')).toBeDefined();
+    expect(screen.getByText('未完成一輪')).toBeDefined();
+    expect(screen.getAllByText('已完成一輪').length).toBeGreaterThanOrEqual(1);
+
+    // Button styles
+    const uncompletedBlock = screen.getByTestId('training-block-parker-01');
+    expect(uncompletedBlock.className).toContain('text-zinc-500');
+
+    const completedBlock = screen.getByTestId('training-block-parker-03');
+    expect(completedBlock.className).toContain('bg-cyan-400');
   });
 
   it('resets open bank menu when drawer closes', async () => {

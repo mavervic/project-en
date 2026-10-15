@@ -118,6 +118,7 @@ describe('Lesson-Scoped Performance Metric Aggregation', () => {
     expect(telemetry['parker-01'].masteryTier).toBe(2); // 75% -> Tier 2
     expect(telemetry['parker-01'].lessonName).toBe('第 01 課');
     expect(telemetry['parker-01'].unitNumber).toBe(1);
+    expect(telemetry['parker-01'].isCompleted).toBe(true);
 
     // Unattempted unit parker-02
     expect(telemetry['parker-02']).toBeDefined();
@@ -127,6 +128,7 @@ describe('Lesson-Scoped Performance Metric Aggregation', () => {
     expect(telemetry['parker-02'].avgLatencyMs).toBe(0);
     expect(telemetry['parker-02'].bestStreak).toBe(0);
     expect(telemetry['parker-02'].masteryTier).toBe(0);
+    expect(telemetry['parker-02'].isCompleted).toBe(false);
   });
 });
 

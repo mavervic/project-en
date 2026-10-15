@@ -339,11 +339,16 @@ export function computeTrainingTelemetry(
 ): Record<string, TrainingUnitTelemetry> {
   const questionTrainingMap = new Map<string, string>();
   const trainingIds = new Set<string>();
+  const unitQuestionsMap = new Map<string, string[]>();
 
   for (const q of questions) {
     if (q.trainingId) {
       questionTrainingMap.set(q.id, q.trainingId);
       trainingIds.add(q.trainingId);
+      if (!unitQuestionsMap.has(q.trainingId)) {
+        unitQuestionsMap.set(q.trainingId, []);
+      }
+      unitQuestionsMap.get(q.trainingId)!.push(q.id);
     }
   }
 
@@ -363,6 +368,10 @@ export function computeTrainingTelemetry(
 
   for (const tId of trainingIds) {
     const records = trainingRecordsMap.get(tId) || [];
+    const unitQIds = unitQuestionsMap.get(tId) || [];
+    const attemptedQIds = new Set(records.map((r) => r.questionId));
+    const isCompleted = unitQIds.length > 0 && attemptedQIds.size >= unitQIds.length;
+
     const totalAttempts = records.length;
     const correctAttempts = records.filter((r) => r.isCorrect).length;
     const accuracy = totalAttempts > 0 ? Math.round((correctAttempts / totalAttempts) * 100) : 0;
@@ -397,6 +406,7 @@ export function computeTrainingTelemetry(
       avgLatencyMs,
       bestStreak,
       masteryTier: computeMasteryTier(totalAttempts, accuracy),
+      isCompleted,
     };
   }
 

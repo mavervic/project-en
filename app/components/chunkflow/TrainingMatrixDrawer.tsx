@@ -254,27 +254,15 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
 
         {/* Legend */}
         <div className="px-4 py-2 border-b border-zinc-800/40 bg-zinc-950/20 flex items-center justify-between text-[10px] text-zinc-400">
-          <span className="text-zinc-500 font-mono">熟練度</span>
-          <div className="flex items-center gap-2">
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-sm bg-zinc-900 border border-zinc-800" />
-              <span>未練</span>
+          <span className="text-zinc-500 font-mono">進度標示</span>
+          <div className="flex items-center gap-3">
+            <span className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-sm bg-zinc-900 border border-zinc-800" />
+              <span className="text-zinc-500">未完成一輪</span>
             </span>
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-sm bg-blue-950 border border-blue-900" />
-              <span>&lt;60%</span>
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-sm bg-blue-800 border border-blue-600" />
-              <span>60%</span>
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-sm bg-blue-600 border border-cyan-400" />
-              <span>80%</span>
-            </span>
-            <span className="flex items-center gap-1">
-              <span className="w-2 h-2 rounded-sm bg-cyan-400" />
-              <span>≥90%</span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-sm bg-cyan-400" />
+              <span className="text-zinc-300">已完成一輪</span>
             </span>
           </div>
         </div>
@@ -288,11 +276,14 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
             <div
               key={`cluster-${clusterIdx}`}
               data-testid={`training-cluster-${clusterIdx}`}
-              className="flex items-center justify-between gap-1 p-1 rounded-xl bg-zinc-900/40 border border-zinc-800/60 shadow-inner"
+              className="flex items-center justify-start gap-1.5 p-1 rounded-xl bg-zinc-900/30"
             >
               {cluster.map((unit, colIdx) => {
                 const isSelected = activeTrainingId === unit.trainingId;
-                const tierStyle = MASTERY_TIER_STYLES[unit.masteryTier];
+                const isCompleted = Boolean(unit.isCompleted);
+                const completionStyle = isCompleted
+                  ? 'bg-cyan-400 border-white/80 text-zinc-950 font-bold shadow-[0_0_10px_rgba(6,182,212,0.3)] hover:bg-cyan-300'
+                  : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-700 hover:text-zinc-300';
 
                 // Dynamically align tooltip horizontally to stay safely within narrow drawer boundaries
                 const tooltipAlignClass =
@@ -302,18 +293,20 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                       ? 'right-0 translate-x-0'
                       : 'left-1/2 -translate-x-1/2';
 
-                // Position tooltip above for lower clusters to prevent clipping at scroll bottom
+                // Position tooltip above for lower clusters to prevent clipping at scroll bottom (only when list is long enough)
                 const tooltipVerticalClass =
-                  clusterIdx >= clusters.length - 2 ? 'bottom-full mb-2' : 'top-full mt-2';
+                  clusters.length > 2 && clusterIdx >= clusters.length - 2
+                    ? 'bottom-full mb-2'
+                    : 'top-full mt-2';
 
                 return (
-                  <div key={unit.trainingId} className="relative group flex-1 flex justify-center">
+                  <div key={unit.trainingId} className="relative group flex-shrink-0">
                     <button
                       type="button"
                       data-testid={`training-block-${unit.trainingId}`}
                       onClick={() => onSelectTraining(isSelected ? null : unit.trainingId)}
                       aria-label={`${unit.lessonName}: 正確率 ${unit.accuracy}%, 嘗試 ${unit.totalAttempts} 次`}
-                      className={`h-9 w-full max-w-[42px] rounded-lg border text-xs font-mono transition-all duration-150 flex items-center justify-center cursor-pointer select-none ${tierStyle} ${
+                      className={`w-[36px] h-[36px] rounded-lg border text-xs font-mono transition-all duration-150 flex items-center justify-center cursor-pointer select-none ${completionStyle} ${
                         isSelected
                           ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-zinc-950 scale-105 z-10'
                           : ''
@@ -331,8 +324,14 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                         <span className="font-semibold text-xs text-zinc-100">
                           {unit.lessonName}
                         </span>
-                        <span className="text-[10px] font-mono text-cyan-400">
-                          T{unit.masteryTier}
+                        <span
+                          className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${
+                            isCompleted
+                              ? 'bg-cyan-500/20 text-cyan-300 font-bold'
+                              : 'bg-zinc-800 text-zinc-400'
+                          }`}
+                        >
+                          {isCompleted ? '已完成一輪' : '未完成'}
                         </span>
                       </div>
 

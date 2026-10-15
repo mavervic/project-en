@@ -89,6 +89,7 @@ export interface TrainingUnitTelemetry {
   avgLatencyMs: number;
   bestStreak: number;
   masteryTier: 0 | 1 | 2 | 3 | 4;
+  isCompleted: boolean;
 }
 
 export interface QuestionValidationResult {
