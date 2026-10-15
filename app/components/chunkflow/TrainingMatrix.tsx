@@ -48,7 +48,7 @@ export const TrainingMatrix: React.FC<TrainingMatrixProps> = ({
             ▦
           </div>
           <span className="text-sm font-semibold tracking-wide text-zinc-200">
-            訓練單元矩陣 (50 課)
+            訓練單元矩陣 ({units.length} 課)
           </span>
           {activeTrainingId && (
             <span

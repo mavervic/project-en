@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "toeic-l1-61",
+    "trainingId": "level1-03",
+    "sentence": "The chief editor reviews submitted articles before final printing.",
+    "chunks": [
+      {
+        "text": "The chief editor",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "reviews",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "submitted articles",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before final printing.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「reviews」為現在簡單式主動語態 (Present Simple Active)。主詞為短名詞片語「The chief editor」（主編），單數主詞搭配第三人稱單數動詞加 s，主動審視投稿文章。",
+    "translation": "主編在最終印刷前會審閱所有投稿文章。"
+  },
+  {
+    "id": "toeic-l1-62",
+    "trainingId": "level1-03",
+    "sentence": "The customer representative resolves client complaints in a timely manner.",
+    "chunks": [
+      {
+        "text": "The customer representative",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "resolves",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "client complaints",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in a timely manner.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「resolves」為現在簡單式主動語態 (Present Simple Active)。主詞「The customer representative」（客服專員）及時主動處理客戶投訴。",
+    "translation": "客服專員會及時解決客戶的投訴問題。"
+  },
+  {
+    "id": "toeic-l1-63",
+    "trainingId": "level1-03",
+    "sentence": "Our research division evaluates consumer feedback after each product test.",
+    "chunks": [
+      {
+        "text": "Our research division",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "evaluates",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "consumer feedback",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "after each product test.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「evaluates」為現在簡單式主動語態 (Present Simple Active)。單數主詞「Our research division」（研究部門）在每次產品測試後主動評估消費者反饋。",
+    "translation": "我們的研發部門在每次產品測試後都會評估消費者反饋。"
+  },
+  {
+    "id": "toeic-l1-64",
+    "trainingId": "level1-03",
+    "sentence": "The project lead monitors daily task progress during team briefings.",
+    "chunks": [
+      {
+        "text": "The project lead",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "monitors",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "daily task progress",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "during team briefings.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「monitors」為現在簡單式主動語態 (Present Simple Active)。主詞「The project lead」（專案主管）在晨會簡報期間主動監控每日工作進展。",
+    "translation": "專案負責人在團隊簡報會議中監控每日的工作進度。"
+  },
+  {
+    "id": "toeic-l1-65",
+    "trainingId": "level1-03",
+    "sentence": "The executive assistant schedules executive appointments in the digital calendar.",
+    "chunks": [
+      {
+        "text": "The executive assistant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "schedules",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "executive appointments",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in the digital calendar.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「schedules」為現在簡單式主動語態 (Present Simple Active)。主詞「The executive assistant」（特助）主動將主管會面行程排定於電子行事曆。",
+    "translation": "行政特助在數位行事曆中安排主管的預約行程。"
+  },
+  {
+    "id": "toeic-l1-66",
+    "trainingId": "level1-03",
+    "sentence": "The sales representative negotiated discount terms with the wholesale distributor.",
+    "chunks": [
+      {
+        "text": "The sales representative",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "negotiated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "discount terms",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "with the wholesale distributor.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「negotiated」為過去簡單式主動語態 (Past Simple Active)。主詞「The sales representative」（業務代表）主動與批發經銷商協商折扣條款。",
+    "translation": "業務代表與批發經銷商洽談了折扣條款。"
+  },
+  {
+    "id": "toeic-l1-67",
+    "trainingId": "level1-03",
+    "sentence": "The safety inspector examined building fire extinguishers during the walk-through.",
+    "chunks": [
+      {
+        "text": "The safety inspector",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "examined",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "building fire extinguishers",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "during the walk-through.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「examined」為過去簡單式主動語態 (Past Simple Active)。主詞「The safety inspector」（安全檢查員）於實地巡視時主動查驗大樓滅火設備。",
+    "translation": "安全檢查員在實地巡查期間檢查了大樓的滅火器。"
+  },
+  {
+    "id": "toeic-l1-68",
+    "trainingId": "level1-03",
+    "sentence": "Our marketing team launched the digital promotion campaign last month.",
+    "chunks": [
+      {
+        "text": "Our marketing team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "launched",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the digital promotion campaign",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "last month.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「launched」為過去簡單式主動語態 (Past Simple Active)。時間標記 last month 指向過去，主詞「Our marketing team」（行銷團隊）上個月主動推出數位促銷活動。",
+    "translation": "我們的行銷團隊上個月啟動了數位推廣活動。"
+  },
+  {
+    "id": "toeic-l1-69",
+    "trainingId": "level1-03",
+    "sentence": "The billing specialist corrected invoice discrepancies before sending the statements.",
+    "chunks": [
+      {
+        "text": "The billing specialist",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "corrected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "invoice discrepancies",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before sending the statements.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「corrected」為過去簡單式主動語態 (Past Simple Active)。主詞「The billing specialist」（帳務專員）在寄出對帳單之前主動更正發票差錯。",
+    "translation": "帳務專員在寄出結算單之前更正了發票金額不符之處。"
+  },
+  {
+    "id": "toeic-l1-70",
+    "trainingId": "level1-03",
+    "sentence": "The building manager shut off the water valve during repairs.",
+    "chunks": [
+      {
+        "text": "The building manager",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "shut off",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the water valve",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "during repairs.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「shut off」為過去簡單式主動語態 (Past Simple Active, shut 過去式與原形同形)。主詞「The building manager」（大樓經理）在搶修工程期間主動關閉水閥。",
+    "translation": "大樓管理員在維修期間關閉了水閥。"
+  },
+  {
+    "id": "toeic-l1-71",
+    "trainingId": "level1-03",
+    "sentence": "The HR director will interview potential candidates on Wednesday.",
+    "chunks": [
+      {
+        "text": "The HR director",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will interview",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "potential candidates",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "on Wednesday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will interview」為未來簡單式主動語態 (Future Simple Active)。由 will + 原形動詞構成，主詞「The HR director」（人資總監）週三將主動面試潛在候選人。",
+    "translation": "人資總監將於週三面試潛在的求職候選人。"
+  },
+  {
+    "id": "toeic-l1-72",
+    "trainingId": "level1-03",
+    "sentence": "The lead engineer will supervise installation procedures at the factory.",
+    "chunks": [
+      {
+        "text": "The lead engineer",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will supervise",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "installation procedures",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "at the factory.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will supervise」為未來簡單式主動語態 (Future Simple Active)。主詞「The lead engineer」（總工程師）將在廠區現場主動督導設備安裝程序。",
+    "translation": "首席工程師將在工廠監督設備安裝流程。"
+  },
+  {
+    "id": "toeic-l1-73",
+    "trainingId": "level1-03",
+    "sentence": "Our design department will release the updated product catalog soon.",
+    "chunks": [
+      {
+        "text": "Our design department",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will release",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the updated product catalog",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "soon.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will release」為未來簡單式主動語態 (Future Simple Active)。時間副詞 soon 指向未來，主詞「Our design department」（設計部門）不久後將主動發布最新產品型錄。",
+    "translation": "我們的設計部門很快就會發布最新的產品目錄。"
+  },
+  {
+    "id": "toeic-l1-74",
+    "trainingId": "level1-03",
+    "sentence": "The operations manager will reorganize the warehouse layout next quarter.",
+    "chunks": [
+      {
+        "text": "The operations manager",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will reorganize",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the warehouse layout",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "next quarter.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will reorganize」為未來簡單式主動語態 (Future Simple Active)。主詞「The operations manager」（營運經理）下一季度將主動重新規劃倉儲動線配置。",
+    "translation": "營運經理將在下一季度重新調整倉庫格局規劃。"
+  },
+  {
+    "id": "toeic-l1-75",
+    "trainingId": "level1-03",
+    "sentence": "The vice president will host the annual charity dinner next Friday.",
+    "chunks": [
+      {
+        "text": "The vice president",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will host",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the annual charity dinner",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "next Friday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will host」為未來簡單式主動語態 (Future Simple Active)。主詞「The vice president」（副總裁）下週五將主動主持年度慈善晚宴。",
+    "translation": "副總裁將於下週五主持年度慈善晚宴。"
+  },
+  {
+    "id": "toeic-l1-76",
+    "trainingId": "level1-03",
+    "sentence": "Electronic access cards are issued to authorized personnel at the security desk.",
+    "chunks": [
+      {
+        "text": "Electronic access cards",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are issued",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to authorized personnel",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "at the security desk.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are issued」為現在簡單式被動語態 (Present Simple Passive, are + p.p.)。複數主詞「Electronic access cards」（電子門禁卡）在警衛處僅發放給獲授權人員。",
+    "translation": "電子通行卡在警衛處僅發放給獲得授權的人員。"
+  },
+  {
+    "id": "toeic-l1-77",
+    "trainingId": "level1-03",
+    "sentence": "Company expense reports are reviewed by division managers weekly.",
+    "chunks": [
+      {
+        "text": "Company expense reports",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are reviewed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by division managers",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "weekly.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are reviewed」為現在簡單式被動語態 (Present Simple Passive)。主詞「Company expense reports」（公司報銷報表）每週固定由各部門主管查核複審。",
+    "translation": "公司費用報銷報告每週由部門經理審核。"
+  },
+  {
+    "id": "toeic-l1-78",
+    "trainingId": "level1-03",
+    "sentence": "Customer contact information is encrypted securely in our central database.",
+    "chunks": [
+      {
+        "text": "Customer contact information",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is encrypted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "securely",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "in our central database.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is encrypted」為現在簡單式被動語態 (Present Simple Passive)。不可數名詞主詞「Customer contact information」（客戶通訊資料）在中央資料庫中受到加密保護。",
+    "translation": "客戶聯絡資訊安全加密儲存於我們的中央資料庫中。"
+  },
+  {
+    "id": "toeic-l1-79",
+    "trainingId": "level1-03",
+    "sentence": "All employee promotions are announced by the CEO during the quarterly meeting.",
+    "chunks": [
+      {
+        "text": "All employee promotions",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are announced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the CEO",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "during the quarterly meeting.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are announced」為現在簡單式被動語態 (Present Simple Passive)。複數主詞「All employee promotions」（所有員工升遷名單）在季度會議中由執行長正式公佈。",
+    "translation": "全體員工晉升名單由執行長在季度會議期間公布。"
+  },
+  {
+    "id": "toeic-l1-80",
+    "trainingId": "level1-03",
+    "sentence": "Workplace safety equipment is inspected by certified technicians regularly.",
+    "chunks": [
+      {
+        "text": "Workplace safety equipment",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is inspected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by certified technicians",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "regularly.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is inspected」為現在簡單式被動語態 (Present Simple Passive)。不可數集合名詞「Workplace safety equipment」（廠區工安設備）定期由合格技師進行查檢。",
+    "translation": "工作場所的安全設備定期由合格技術人員進行檢查。"
+  },
+  {
+    "id": "toeic-l1-81",
+    "trainingId": "level1-03",
+    "sentence": "The quarterly report was printed by the graphics department yesterday.",
+    "chunks": [
+      {
+        "text": "The quarterly report",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was printed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the graphics department",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "yesterday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「was printed」為過去簡單式被動語態 (Past Simple Passive, was + p.p.)。單數主詞「The quarterly report」（季度報告書）昨日由美工印製部門印刷完畢。",
+    "translation": "季度報告昨天已由圖文設計部門列印完成。"
+  },
+  {
+    "id": "toeic-l1-82",
+    "trainingId": "level1-03",
+    "sentence": "The vendor contract was renewed for another fiscal year last week.",
+    "chunks": [
+      {
+        "text": "The vendor contract",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was renewed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for another fiscal year",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "last week.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「was renewed」為過去簡單式被動語態 (Past Simple Passive)。主詞「The vendor contract」（供應商合約）上週已獲續約一年。",
+    "translation": "該供應商合約上週已續約一個會計年度。"
+  },
+  {
+    "id": "toeic-l1-83",
+    "trainingId": "level1-03",
+    "sentence": "The executive lounge was cleaned thoroughly by the custodial staff yesterday.",
+    "chunks": [
+      {
+        "text": "The executive lounge",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was cleaned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "thoroughly",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "by the custodial staff yesterday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「was cleaned」為過去簡單式被動語態 (Past Simple Passive)。單數主詞「The executive lounge」（主管貴賓室）昨天已由清潔人員徹底打掃清潔。",
+    "translation": "高階主管休息室昨天已由清潔人員徹底打掃乾淨。"
+  },
+  {
+    "id": "toeic-l1-84",
+    "trainingId": "level1-03",
+    "sentence": "The commercial shipment was inspected by harbor customs officials yesterday.",
+    "chunks": [
+      {
+        "text": "The commercial shipment",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was inspected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by harbor customs officials",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "yesterday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「was inspected」為過去簡單式被動語態 (Past Simple Passive)。主詞「The commercial shipment」（商務貨運批次）昨天受到港口海關官員檢查完畢。",
+    "translation": "該批商業貨物昨天由港口海關官員進行了查驗。"
+  },
+  {
+    "id": "toeic-l1-85",
+    "trainingId": "level1-03",
+    "sentence": "The budget allocation was approved by the board during the morning session.",
+    "chunks": [
+      {
+        "text": "The budget allocation",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was approved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the board",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "during the morning session.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「was approved」為過去簡單式被動語態 (Past Simple Passive)。單數主詞「The budget allocation」（預算分配額度）於上午會議中由董事會表決通過。",
+    "translation": "預算分配案已在上午會議中由董事會批准通過。"
+  },
+  {
+    "id": "toeic-l1-86",
+    "trainingId": "level1-03",
+    "sentence": "The quarterly bonus will be deposited into employee bank accounts on Friday.",
+    "chunks": [
+      {
+        "text": "The quarterly bonus",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be deposited",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "into employee bank accounts",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "on Friday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be deposited」為未來簡單式被動語態 (Future Simple Passive, will be + p.p.)。主詞「The quarterly bonus」（季度獎金）週五將直接存入員工銀行帳戶。",
+    "translation": "季度獎金將於週五存入員工的銀行帳戶。"
+  },
+  {
+    "id": "toeic-l1-87",
+    "trainingId": "level1-03",
+    "sentence": "The new cafeteria will be opened to corporate staff next month.",
+    "chunks": [
+      {
+        "text": "The new cafeteria",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be opened",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to corporate staff",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "next month.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be opened」為未來簡單式被動語態 (Future Simple Passive)。主詞「The new cafeteria」（新員工餐廳）下個月將對公司全體同仁正式開放。",
+    "translation": "新的員工餐廳將於下個月開放給全體同仁使用。"
+  },
+  {
+    "id": "toeic-l1-88",
+    "trainingId": "level1-03",
+    "sentence": "Final sales figures will be disclosed by the director at tomorrow's press briefing.",
+    "chunks": [
+      {
+        "text": "Final sales figures",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be disclosed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the director",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "at tomorrow's press briefing.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be disclosed」為未來簡單式被動語態 (Future Simple Passive)。主詞「Final sales figures」（最終銷售數據）將由處長在明天的記者簡報會上對外揭露。",
+    "translation": "最終銷售數據將由處長在明天的記者會上正式公布。"
+  },
+  {
+    "id": "toeic-l1-89",
+    "trainingId": "level1-03",
+    "sentence": "The software upgrade will be installed across all office workstations tonight.",
+    "chunks": [
+      {
+        "text": "The software upgrade",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be installed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "across all office workstations",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "tonight.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be installed」為未來簡單式被動語態 (Future Simple Passive)。主詞「The software upgrade」（軟體升級版）今晚將在全辦公室工作站全面安裝。",
+    "translation": "軟體升級程式今晚將安裝至全公司所有辦公工作站。"
+  },
+  {
+    "id": "toeic-l1-90",
+    "trainingId": "level1-03",
+    "sentence": "The building entrance will be locked by security guards after normal business hours.",
+    "chunks": [
+      {
+        "text": "The building entrance",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be locked",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by security guards",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "after normal business hours.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be locked」為未來簡單式被動語態 (Future Simple Passive)。主詞「The building entrance」（大樓大門）在一般營業時間過後將由警衛上鎖。",
+    "translation": "大樓正門在正常營業時間結束後將由警衛上鎖。"
+  }
+]

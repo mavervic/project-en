@@ -382,8 +382,8 @@ export function computeTrainingTelemetry(
       }
     }
 
-    const match = tId.match(/\d+/);
-    const unitNumber = match ? parseInt(match[0], 10) : 0;
+    const match = tId.match(/(\d+)(?!.*\d)/);
+    const unitNumber = match ? parseInt(match[1], 10) : 0;
     const padded = unitNumber > 0 ? String(unitNumber).padStart(2, '0') : tId;
     const lessonName = `第 ${padded} 課`;
 

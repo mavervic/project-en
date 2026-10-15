@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "toeic-l2-61",
+    "trainingId": "level2-03",
+    "sentence": "The head scientist at the biomedical research institute has published groundbreaking clinical findings in a prestigious journal.",
+    "chunks": [
+      {
+        "text": "The head scientist",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "at the biomedical research institute",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "has published",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "groundbreaking clinical findings",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in a prestigious journal.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「has published」為現在完成式主動語態 (Present Perfect Active)。句首主詞為單數「The head scientist」，隔著介系詞片語「at the biomedical research institute」，主動在知名期刊發表臨床研究成果。",
+    "translation": "生醫研究所首席科學家已在頂尖學術期刊上發表了開創性的臨床研究成果。"
+  },
+  {
+    "id": "toeic-l2-62",
+    "trainingId": "level2-03",
+    "sentence": "The marketing coordinator for regional retail stores is currently planning a promotional campaign for the upcoming holiday.",
+    "chunks": [
+      {
+        "text": "The marketing coordinator",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for regional retail stores",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "is currently planning",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a promotional campaign",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for the upcoming holiday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is currently planning」為現在進行式主動語態 (Present Continuous Active)。主詞核心為「The marketing coordinator」，目前正主動規劃連假促銷專案。",
+    "translation": "負責區域門市的行銷協調專員目前正在為即將到來的假期籌劃促銷活動。"
+  },
+  {
+    "id": "toeic-l2-63",
+    "trainingId": "level2-03",
+    "sentence": "The purchasing specialist in the commercial procurement department has negotiated volume discounts with local manufacturers.",
+    "chunks": [
+      {
+        "text": "The purchasing specialist",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "in the commercial procurement department",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "has negotiated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "volume discounts",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "with local manufacturers.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「has negotiated」為現在完成式主動語態 (Present Perfect Active)。主詞「The purchasing specialist」被長介系詞片語隔離，主動與本地製造商達成批發折扣協議。",
+    "translation": "商業採購部的採購專員已與在地製造商談妥了大宗採購折扣。"
+  },
+  {
+    "id": "toeic-l2-64",
+    "trainingId": "level2-03",
+    "sentence": "The engineering team at our semiconductor fabrication plant is developing new energy-efficient processors for mobile devices.",
+    "chunks": [
+      {
+        "text": "The engineering team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "at our semiconductor fabrication plant",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "is developing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "new energy-efficient processors",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for mobile devices.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is developing」為現在進行式主動語態 (Present Continuous Active)。集合名詞主詞「The engineering team」搭配單數動詞 is developing，正主動研發節能處理器晶片。",
+    "translation": "我們半導體晶圓廠的工程團隊正在研發適用於行動裝置的全新節能處理器。"
+  },
+  {
+    "id": "toeic-l2-65",
+    "trainingId": "level2-03",
+    "sentence": "The corporate spokesperson for the telecommunications enterprise has issued an official statement regarding the merger.",
+    "chunks": [
+      {
+        "text": "The corporate spokesperson",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for the telecommunications enterprise",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "has issued",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "an official statement",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "regarding the merger.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「has issued」為現在完成式主動語態 (Present Perfect Active)。主詞核心為「The corporate spokesperson」，跳過介系詞片語，主動對合併案發表官方聲明。",
+    "translation": "這家電信企業的公司發言人已就合併案發表了官方聲明。"
+  },
+  {
+    "id": "toeic-l2-66",
+    "trainingId": "level2-03",
+    "sentence": "The warehouse director at the overseas transit center had resolved shipping delays before the weekend arrived.",
+    "chunks": [
+      {
+        "text": "The warehouse director",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "at the overseas transit center",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "had resolved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "shipping delays",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before the weekend arrived.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「had resolved」為過去完成式主動語態 (Past Perfect Active)。在週末來臨前，主詞「The warehouse director」已主動排除所有出貨延遲障礙。",
+    "translation": "海外轉運中心的倉儲主管在週末到來前已解決了物流延誤問題。"
+  },
+  {
+    "id": "toeic-l2-67",
+    "trainingId": "level2-03",
+    "sentence": "The financial analyst from the investment advisory firm was calculating quarterly profit margins when the system crashed.",
+    "chunks": [
+      {
+        "text": "The financial analyst",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "from the investment advisory firm",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "was calculating",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "quarterly profit margins",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "when the system crashed.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「was calculating」為過去進行式主動語態 (Past Continuous Active)。主詞核心為「The financial analyst」，當電腦當機時正主動核算季度利潤率。",
+    "translation": "當系統當機時，投資顧問公司的財務分析師正在計算季度利潤率。"
+  },
+  {
+    "id": "toeic-l2-68",
+    "trainingId": "level2-03",
+    "sentence": "The branch manager in charge of retail operations had surpassed the quarterly sales quota before mid-December.",
+    "chunks": [
+      {
+        "text": "The branch manager",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "in charge of retail operations",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "had surpassed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the quarterly sales quota",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before mid-December.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「had surpassed」為過去完成式主動語態 (Past Perfect Active)。在十二月中旬之前，主詞「The branch manager」已主動超額達成季度業績配額。",
+    "translation": "負責零售營運的分行經理在十二月中旬前已超額完成了季度銷售目標。"
+  },
+  {
+    "id": "toeic-l2-69",
+    "trainingId": "level2-03",
+    "sentence": "The compliance officer from the environmental protection agency was evaluating factory emission levels throughout the morning.",
+    "chunks": [
+      {
+        "text": "The compliance officer",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "from the environmental protection agency",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "was evaluating",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "factory emission levels",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "throughout the morning.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「was evaluating」為過去進行式主動語態 (Past Continuous Active)。主詞核心為「The compliance officer」，整個上午都在工廠持續主動評估廢氣排放量。",
+    "translation": "環保局的法規合規官員整個上午都在評估工廠的排放水準。"
+  },
+  {
+    "id": "toeic-l2-70",
+    "trainingId": "level2-03",
+    "sentence": "The software architect with extensive cloud experience had designed the network framework prior to deployment.",
+    "chunks": [
+      {
+        "text": "The software architect",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "with extensive cloud experience",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "had designed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the network framework",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "prior to deployment.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「had designed」為過去完成式主動語態 (Past Perfect Active)。在部署上線前，具備深厚經驗的主詞「The software architect」已主動設計好網路架構。",
+    "translation": "擁有豐富雲端經驗的軟體架構師在部署上線前已設計完成了網路架構。"
+  },
+  {
+    "id": "toeic-l2-71",
+    "trainingId": "level2-03",
+    "sentence": "The senior economist from the national banking association will be analyzing labor market statistics during tomorrow's panel.",
+    "chunks": [
+      {
+        "text": "The senior economist",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "from the national banking association",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be analyzing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "labor market statistics",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "during tomorrow's panel.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「will be analyzing」為未來進行式主動語態 (Future Continuous Active)。主詞「The senior economist」在明天座談會期間將主動剖析勞動市場統計數據。",
+    "translation": "全國銀行協會的資深經濟學家將在明天的專家座談會上深入分析勞動市場數據。"
+  },
+  {
+    "id": "toeic-l2-72",
+    "trainingId": "level2-03",
+    "sentence": "The lead contractor for the municipal bridge renovation will have completed road surface repaving before the holiday rush.",
+    "chunks": [
+      {
+        "text": "The lead contractor",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for the municipal bridge renovation",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will have completed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "road surface repaving",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before the holiday rush.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「will have completed」為未來完成式主動語態 (Future Perfect Active)。在假期車潮湧現前，主詞「The lead contractor」屆時將已主動鋪設完成路面。",
+    "translation": "負責市區橋樑翻修工程的總承包商將在假期車流高峰前完成路面重鋪。"
+  },
+  {
+    "id": "toeic-l2-73",
+    "trainingId": "level2-03",
+    "sentence": "The technical coordinator in our customer assistance division will be demonstrating software capabilities throughout the conference.",
+    "chunks": [
+      {
+        "text": "The technical coordinator",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "in our customer assistance division",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be demonstrating",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "software capabilities",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "throughout the conference.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「will be demonstrating」為未來進行式主動語態 (Future Continuous Active)。整個年會展覽期間，主詞「The technical coordinator」將主動向客戶展示軟體功能。",
+    "translation": "客戶支援部門的技術協調專員將在整個會議期間現場展示軟體功能。"
+  },
+  {
+    "id": "toeic-l2-74",
+    "trainingId": "level2-03",
+    "sentence": "The audit taskforce under the direction of Ms. Tanaka will have reviewed all expense vouchers by Wednesday afternoon.",
+    "chunks": [
+      {
+        "text": "The audit taskforce",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "under the direction of Ms. Tanaka",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will have reviewed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "all expense vouchers",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "by Wednesday afternoon.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「will have reviewed」為未來完成式主動語態 (Future Perfect Active)。在週三下午前，由田中女士帶領的主詞「The audit taskforce」將已主動核驗所有報銷憑證。",
+    "translation": "由田中女士領導的審計專案小組將在週三下午前審核完全部報銷憑證。"
+  },
+  {
+    "id": "toeic-l2-75",
+    "trainingId": "level2-03",
+    "sentence": "The executive team from our Tokyo branch office will be visiting our domestic facilities next month.",
+    "chunks": [
+      {
+        "text": "The executive team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "from our Tokyo branch office",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be visiting",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "our domestic facilities",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "next month.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「will be visiting」為未來進行式主動語態 (Future Continuous Active)。下個月期間，主詞「The executive team」將主動前來巡視國內廠區設施。",
+    "translation": "來自東京分公司的高階主管團隊將於下個月參訪我們的國內各項設施。"
+  },
+  {
+    "id": "toeic-l2-76",
+    "trainingId": "level2-03",
+    "sentence": "The commercial agreement for digital media broadcasting rights has been finalized by entertainment executives this week.",
+    "chunks": [
+      {
+        "text": "The commercial agreement",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for digital media broadcasting rights",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "has been finalized",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by entertainment executives",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "this week.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「has been finalized」為現在完成式被動語態 (Present Perfect Passive, has been + p.p.)。主詞「The commercial agreement」本週已由娛樂業高層敲定定案。",
+    "translation": "數位媒體轉播權的商業協議本週已由娛樂產業主管敲定完成。"
+  },
+  {
+    "id": "toeic-l2-77",
+    "trainingId": "level2-03",
+    "sentence": "The ventilation ductwork throughout the industrial chemical plant is currently being inspected by safety engineers today.",
+    "chunks": [
+      {
+        "text": "The ventilation ductwork",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "throughout the industrial chemical plant",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "is currently being inspected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by safety engineers",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "today.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is currently being inspected」為現在進行式被動語態 (Present Continuous Passive)。化學工廠各處的主詞「The ventilation ductwork」今日正被安全工程師仔細檢測。",
+    "translation": "工業化學工廠各處的通風管道系統今天正由工安工程師進行安全檢查。"
+  },
+  {
+    "id": "toeic-l2-78",
+    "trainingId": "level2-03",
+    "sentence": "A revised version of the employee conduct manual has been published on the internal intranet recently.",
+    "chunks": [
+      {
+        "text": "A revised version",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "of the employee conduct manual",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "has been published",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on the internal intranet",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "recently.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「has been published」為現在完成式被動語態 (Present Perfect Passive)。單數主詞「A revised version」最近已被發布在公司內部網路供全員閱覽。",
+    "translation": "員工行為準則手冊的修訂版本最近已公布在公司內部網路上。"
+  },
+  {
+    "id": "toeic-l2-79",
+    "trainingId": "level2-03",
+    "sentence": "The historic facade of the municipal library building is being restored by specialized artisans this season.",
+    "chunks": [
+      {
+        "text": "The historic facade",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "of the municipal library building",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "is being restored",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by specialized artisans",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "this season.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is being restored」為現在進行式被動語態 (Present Continuous Passive)。主詞「The historic facade」本季正由專業工匠修復保存中。",
+    "translation": "市立圖書館大樓的歷史外牆本季正由專業工匠進行細緻修復。"
+  },
+  {
+    "id": "toeic-l2-80",
+    "trainingId": "level2-03",
+    "sentence": "The budget proposal for corporate charity initiatives has been approved by the trustees for the upcoming year.",
+    "chunks": [
+      {
+        "text": "The budget proposal",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for corporate charity initiatives",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "has been approved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the trustees",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "for the upcoming year.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「has been approved」為現在完成式被動語態 (Present Perfect Passive)。主詞「The budget proposal」已獲董事會理事表決通過實施。",
+    "translation": "企業慈善公益計畫的預算提案已獲得信託董事會批准以供來年執行。"
+  },
+  {
+    "id": "toeic-l2-81",
+    "trainingId": "level2-03",
+    "sentence": "The strategic blueprint for international market expansion had been endorsed by senior partners prior to launch.",
+    "chunks": [
+      {
+        "text": "The strategic blueprint",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for international market expansion",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "had been endorsed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by senior partners",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "prior to launch.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「had been endorsed」為過去完成式被動語態 (Past Perfect Passive)。在發布實施之前，主詞「The strategic blueprint」已被資深合夥人背書支持。",
+    "translation": "國際市場拓展的策略藍圖在啟動前已獲得資深合夥人的全面背書。"
+  },
+  {
+    "id": "toeic-l2-82",
+    "trainingId": "level2-03",
+    "sentence": "The main passenger concourse at the international flight terminal was being cleaned by maintenance personnel during the layover.",
+    "chunks": [
+      {
+        "text": "The main passenger concourse",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "at the international flight terminal",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "was being cleaned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by maintenance personnel",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "during the layover.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「was being cleaned」為過去進行式被動語態 (Past Continuous Passive)。主詞「The main passenger concourse」在轉機中停期間正由清潔人員打掃整理。",
+    "translation": "國際航班航廈的主要旅客大廳在轉機空檔期間正由清潔人員打掃。"
+  },
+  {
+    "id": "toeic-l2-83",
+    "trainingId": "level2-03",
+    "sentence": "The tax documents from the previous three fiscal periods had been archived by the accounting staff before the audit.",
+    "chunks": [
+      {
+        "text": "The tax documents",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "from the previous three fiscal periods",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "had been archived",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the accounting staff",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "before the audit.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「had been archived」為過去完成式被動語態 (Past Perfect Passive)。在查稅審計展開前，主詞「The tax documents」已由會計同仁妥善存檔歸檔。",
+    "translation": "前三個會計期間的稅務文件在審計展開前已由會計同仁妥善歸檔。"
+  },
+  {
+    "id": "toeic-l2-84",
+    "trainingId": "level2-03",
+    "sentence": "The corporate video for the annual shareholders meeting was being produced by a media studio all last week.",
+    "chunks": [
+      {
+        "text": "The corporate video",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for the annual shareholders meeting",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "was being produced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by a media studio",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "all last week.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「was being produced」為過去進行式被動語態 (Past Continuous Passive)。上週整週期間，主詞「The corporate video」正由專業影音工作室製作中。",
+    "translation": "股東常會所需的企業宣傳短片上週整週都由專業媒體工作室緊鑼密鼓製作中。"
+  },
+  {
+    "id": "toeic-l2-85",
+    "trainingId": "level2-03",
+    "sentence": "The security protocol for handling hazardous laboratory materials had been revised by safety supervisors before the inspection.",
+    "chunks": [
+      {
+        "text": "The security protocol",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for handling hazardous laboratory materials",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "had been revised",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by safety supervisors",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "before the inspection.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「had been revised」為過去完成式被動語態 (Past Perfect Passive)。在檢查之前，主詞「The security protocol」已被安全主管審核修訂完畢。",
+    "translation": "處理實驗室危險物品的安全規範在官方檢查前已由工安主管修訂完畢。"
+  },
+  {
+    "id": "toeic-l2-86",
+    "trainingId": "level2-03",
+    "sentence": "The electrical wiring in the commercial shopping center will have been replaced by licensed electricians before November.",
+    "chunks": [
+      {
+        "text": "The electrical wiring",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "in the commercial shopping center",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will have been replaced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by licensed electricians",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "before November.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「will have been replaced」為未來完成式被動語態 (Future Perfect Passive, will have been + p.p.)。十一月前，商場的主詞「The electrical wiring」將已被持證電工更換完成。",
+    "translation": "大型購物中心的電線線路將在十一月前由合格電工人員更換完畢。"
+  },
+  {
+    "id": "toeic-l2-87",
+    "trainingId": "level2-03",
+    "sentence": "The research summary regarding consumer shopping habits will be distributed to branch managers next Monday.",
+    "chunks": [
+      {
+        "text": "The research summary",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "regarding consumer shopping habits",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be distributed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to branch managers",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "next Monday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be distributed」為未來簡單式被動語態 (Future Simple Passive)。主詞「The research summary」下週一將分送給各分店經理。",
+    "translation": "關於消費者購物習性的研究摘要將於下週一發送給各分店經理。"
+  },
+  {
+    "id": "toeic-l2-88",
+    "trainingId": "level2-03",
+    "sentence": "All outstanding invoices for heavy machinery shipments will have been settled by the finance team before year-end.",
+    "chunks": [
+      {
+        "text": "All outstanding invoices",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for heavy machinery shipments",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will have been settled",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the finance team",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "before year-end.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「will have been settled」為未來完成式被動語態 (Future Perfect Passive)。在年底之前，重型機具貨款的主詞「All outstanding invoices」將已全數結清。",
+    "translation": "所有重型機械設備運輸的未結發票將在年底前由財務團隊結清。"
+  },
+  {
+    "id": "toeic-l2-89",
+    "trainingId": "level2-03",
+    "sentence": "The modern training center for incoming customer service staff will be opened by executive leaders next month.",
+    "chunks": [
+      {
+        "text": "The modern training center",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for incoming customer service staff",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be opened",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by executive leaders",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "next month.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be opened」為未來簡單式被動語態 (Future Simple Passive)。主詞「The modern training center」下個月將由高層領導剪綵開張。",
+    "translation": "專為新進客服人員打造的現代化培訓中心將於下個月由高階主管正式啟用。"
+  },
+  {
+    "id": "toeic-l2-90",
+    "trainingId": "level2-03",
+    "sentence": "New corporate guidelines for remote employment practices will have been finalized by human resources by next month.",
+    "chunks": [
+      {
+        "text": "New corporate guidelines",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "for remote employment practices",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will have been finalized",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by human resources",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "by next month.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「will have been finalized」為未來完成式被動語態 (Future Perfect Passive)。下個月之前，人資部門將已正式敲定遠距辦公的主詞「New corporate guidelines」。",
+    "translation": "關於遠距工作實踐的新公司指導準則將在下個月之前由人資部門最終確定。"
+  }
+]

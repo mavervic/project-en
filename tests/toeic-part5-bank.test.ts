@@ -1,31 +1,60 @@
 import { describe, it, expect } from 'vitest';
 import {
   TOEIC_PART5_LEVEL1_QUESTIONS,
+  TOEIC_PART5_LEVEL1_T2_QUESTIONS,
+  TOEIC_PART5_LEVEL1_T3_QUESTIONS,
+  TOEIC_PART5_LEVEL1_T4_QUESTIONS,
+  TOEIC_PART5_LEVEL1_T5_QUESTIONS,
   TOEIC_PART5_LEVEL2_QUESTIONS,
+  TOEIC_PART5_LEVEL2_T2_QUESTIONS,
+  TOEIC_PART5_LEVEL2_T3_QUESTIONS,
   TOEIC_PART5_LEVEL3_QUESTIONS,
   TOEIC_PART5_L1_META,
   TOEIC_PART5_L2_META,
   TOEIC_PART5_L3_META,
   TOEIC_PART5_BANKS,
+  TOEIC_PART5_QUESTIONS_BY_UNIT,
 } from '../app/data/toeic-part5';
 import { getRegisteredBanks, getBankById, getBankQuestions } from '../app/data/banks';
+import { computeTrainingTelemetry } from '../app/utils/storage';
 
 describe('TOEIC Part 5 Question Banks', () => {
   const levels = [
-    { name: 'Level 1', questions: TOEIC_PART5_LEVEL1_QUESTIONS, meta: TOEIC_PART5_L1_META },
-    { name: 'Level 2', questions: TOEIC_PART5_LEVEL2_QUESTIONS, meta: TOEIC_PART5_L2_META },
-    { name: 'Level 3', questions: TOEIC_PART5_LEVEL3_QUESTIONS, meta: TOEIC_PART5_L3_META },
+    { name: 'Level 1 (Training 1)', questions: TOEIC_PART5_LEVEL1_QUESTIONS },
+    { name: 'Level 1 (Training 2)', questions: TOEIC_PART5_LEVEL1_T2_QUESTIONS },
+    { name: 'Level 1 (Training 3)', questions: TOEIC_PART5_LEVEL1_T3_QUESTIONS },
+    { name: 'Level 1 (Training 4)', questions: TOEIC_PART5_LEVEL1_T4_QUESTIONS },
+    { name: 'Level 1 (Training 5)', questions: TOEIC_PART5_LEVEL1_T5_QUESTIONS },
+    { name: 'Level 2 (Training 1)', questions: TOEIC_PART5_LEVEL2_QUESTIONS },
+    { name: 'Level 2 (Training 2)', questions: TOEIC_PART5_LEVEL2_T2_QUESTIONS },
+    { name: 'Level 2 (Training 3)', questions: TOEIC_PART5_LEVEL2_T3_QUESTIONS },
+    { name: 'Level 3 (Training 1)', questions: TOEIC_PART5_LEVEL3_QUESTIONS },
   ];
 
-  levels.forEach(({ name, questions, meta }) => {
+  describe('Question Bank Metadata', () => {
+    it('configures Level 1 metadata with 150 questions across 5 training units', () => {
+      expect(TOEIC_PART5_L1_META.totalQuestions).toBe(150);
+      expect(TOEIC_PART5_L1_META.totalTrainings).toBe(5);
+      expect(TOEIC_PART5_L1_META.category).toBe('TOEIC Part 5 文法句型');
+    });
+
+    it('configures Level 2 metadata with 90 questions across 3 training units', () => {
+      expect(TOEIC_PART5_L2_META.totalQuestions).toBe(90);
+      expect(TOEIC_PART5_L2_META.totalTrainings).toBe(3);
+      expect(TOEIC_PART5_L2_META.category).toBe('TOEIC Part 5 文法句型');
+    });
+
+    it('configures Level 3 metadata with 30 questions across 1 training unit', () => {
+      expect(TOEIC_PART5_L3_META.totalQuestions).toBe(30);
+      expect(TOEIC_PART5_L3_META.totalTrainings).toBe(1);
+      expect(TOEIC_PART5_L3_META.category).toBe('TOEIC Part 5 文法句型');
+    });
+  });
+
+  levels.forEach(({ name, questions }) => {
     describe(name, () => {
       it('has exactly 30 questions', () => {
         expect(questions).toHaveLength(30);
-        expect(meta.totalQuestions).toBe(30);
-      });
-
-      it('has category set to TOEIC Part 5 文法句型', () => {
-        expect(meta.category).toBe('TOEIC Part 5 文法句型');
       });
 
       it('has valid structure and non-empty translation for every question', () => {
@@ -46,7 +75,7 @@ describe('TOEIC Part 5 Question Banks', () => {
         });
       });
 
-      if (name === 'Level 1') {
+      if (name.startsWith('Level 1')) {
         it('has at least 4 chunks for every Level 1 question', () => {
           questions.forEach((q) => {
             expect(q.chunks.length).toBeGreaterThanOrEqual(4);
@@ -54,7 +83,7 @@ describe('TOEIC Part 5 Question Banks', () => {
         });
       }
 
-      if (name === 'Level 2') {
+      if (name.startsWith('Level 2')) {
         it('has at least 5 chunks for every Level 2 question with isolated head subject and modifier', () => {
           questions.forEach((q) => {
             expect(q.chunks.length).toBeGreaterThanOrEqual(5);
@@ -127,13 +156,49 @@ describe('TOEIC Part 5 Question Banks', () => {
       const l1Bank = getBankById('toeic-part5-l1');
       expect(l1Bank).toBeDefined();
       expect(l1Bank?.name).toContain('Level 1');
-      expect(l1Bank?.questions).toHaveLength(30);
+      expect(l1Bank?.questions).toHaveLength(150);
+      expect(l1Bank?.totalTrainings).toBe(5);
 
       const l2Questions = getBankQuestions('toeic-part5-l2');
-      expect(l2Questions).toHaveLength(30);
+      expect(l2Questions).toHaveLength(90);
 
       const parkerBank = getBankById('parker');
       expect(parkerBank?.category).toBe('TOEIC Listening 聽力題庫');
+    });
+
+    it('organizes Level 1 questions into 5 distinct training units with accurate telemetry', () => {
+      const l1Questions = getBankQuestions('toeic-part5-l1');
+      const telemetry = computeTrainingTelemetry([], l1Questions);
+      const unitKeys = Object.keys(telemetry);
+
+      expect(unitKeys).toEqual(['level1-01', 'level1-02', 'level1-03', 'level1-04', 'level1-05']);
+
+      expect(telemetry['level1-01'].unitNumber).toBe(1);
+      expect(telemetry['level1-01'].lessonName).toBe('第 01 課');
+      expect(telemetry['level1-05'].unitNumber).toBe(5);
+      expect(telemetry['level1-05'].lessonName).toBe('第 05 課');
+
+      // Verify questions by unit map
+      expect(TOEIC_PART5_QUESTIONS_BY_UNIT['level1-01']).toHaveLength(30);
+      expect(TOEIC_PART5_QUESTIONS_BY_UNIT['level1-05']).toHaveLength(30);
+    });
+
+    it('organizes Level 2 questions into 3 distinct training units with accurate telemetry', () => {
+      const l2Questions = getBankQuestions('toeic-part5-l2');
+      const telemetry = computeTrainingTelemetry([], l2Questions);
+      const unitKeys = Object.keys(telemetry);
+
+      expect(unitKeys).toEqual(['level2-01', 'level2-02', 'level2-03']);
+
+      expect(telemetry['level2-01'].unitNumber).toBe(1);
+      expect(telemetry['level2-01'].lessonName).toBe('第 01 課');
+      expect(telemetry['level2-02'].unitNumber).toBe(2);
+      expect(telemetry['level2-02'].lessonName).toBe('第 02 課');
+      expect(telemetry['level2-03'].unitNumber).toBe(3);
+      expect(telemetry['level2-03'].lessonName).toBe('第 03 課');
+
+      expect(TOEIC_PART5_QUESTIONS_BY_UNIT['level2-01']).toHaveLength(30);
+      expect(TOEIC_PART5_QUESTIONS_BY_UNIT['level2-03']).toHaveLength(30);
     });
   });
 });
