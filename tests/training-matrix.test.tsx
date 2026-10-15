@@ -55,12 +55,7 @@ describe('TrainingMatrix Component', () => {
     telemetry['parker-03'].masteryTier = 4;
 
     render(
-      <TrainingMatrix
-        telemetry={telemetry}
-        activeTrainingId={null}
-        onSelectTraining={vi.fn()}
-        sortPolicy="sequential"
-      />
+      <TrainingMatrix telemetry={telemetry} activeTrainingId={null} onSelectTraining={vi.fn()} />
     );
 
     const block1 = screen.getByTestId('training-block-parker-01');
@@ -121,7 +116,7 @@ describe('TrainingMatrix Component', () => {
     expect(onSelect).toHaveBeenCalledWith(null);
   });
 
-  it('orders units by sequential policy or weakest-first policy', () => {
+  it('orders units in strict ascending numerical order regardless of accuracy differences', () => {
     const telemetry = createMockTelemetry(3);
     // Unit 1: attempted, 80% accuracy
     telemetry['parker-01'].totalAttempts = 5;
@@ -131,71 +126,34 @@ describe('TrainingMatrix Component', () => {
     telemetry['parker-02'].totalAttempts = 5;
     telemetry['parker-02'].accuracy = 40;
 
-    // Unit 3: unattempted (0 attempts -> priority practice)
+    // Unit 3: unattempted (0 attempts)
     telemetry['parker-03'].totalAttempts = 0;
     telemetry['parker-03'].accuracy = 0;
 
-    // 1. Sequential order: 1, 2, 3
-    const { rerender } = render(
-      <TrainingMatrix
-        telemetry={telemetry}
-        activeTrainingId={null}
-        onSelectTraining={vi.fn()}
-        sortPolicy="sequential"
-      />
+    render(
+      <TrainingMatrix telemetry={telemetry} activeTrainingId={null} onSelectTraining={vi.fn()} />
     );
 
-    let blocks = screen.getAllByRole('button', { name: /課/ });
+    const blocks = screen.getAllByRole('button', { name: /課/ });
     expect(blocks[0].textContent).toBe('01');
     expect(blocks[1].textContent).toBe('02');
     expect(blocks[2].textContent).toBe('03');
-
-    // 2. Weakest first: unattempted (-1) -> 03, then lowest accuracy -> 02, then 01
-    rerender(
-      <TrainingMatrix
-        telemetry={telemetry}
-        activeTrainingId={null}
-        onSelectTraining={vi.fn()}
-        sortPolicy="weakest"
-      />
-    );
-
-    blocks = screen.getAllByRole('button', { name: /課/ });
-    expect(blocks[0].textContent).toBe('03'); // unattempted first
-    expect(blocks[1].textContent).toBe('02'); // 40% accuracy next
-    expect(blocks[2].textContent).toBe('01'); // 80% accuracy last
   });
 });
 
-describe('SettingsModal Training Sort Policy Controls', () => {
-  it('allows toggling between weakest-first and sequential sort order', () => {
-    const onUpdate = vi.fn();
-
-    const { rerender } = render(
+describe('SettingsModal Controls', () => {
+  it('does not render training sort policy controls in SettingsModal', () => {
+    render(
       <SettingsModal
         isOpen={true}
         onClose={vi.fn()}
-        settings={{ showGuidance: false, trainingSortPolicy: 'weakest' }}
-        onUpdateSettings={onUpdate}
+        settings={{ showGuidance: false }}
+        onUpdateSettings={vi.fn()}
       />
     );
 
-    const seqBtn = screen.getByTestId('sort-policy-sequential');
-    fireEvent.click(seqBtn);
-    expect(onUpdate).toHaveBeenCalledWith({ trainingSortPolicy: 'sequential' });
-
-    rerender(
-      <SettingsModal
-        isOpen={true}
-        onClose={vi.fn()}
-        settings={{ showGuidance: false, trainingSortPolicy: 'sequential' }}
-        onUpdateSettings={onUpdate}
-      />
-    );
-
-    const weakBtn = screen.getByTestId('sort-policy-weakest');
-    fireEvent.click(weakBtn);
-    expect(onUpdate).toHaveBeenCalledWith({ trainingSortPolicy: 'weakest' });
+    expect(screen.queryByTestId('sort-policy-sequential')).toBeNull();
+    expect(screen.queryByTestId('sort-policy-weakest')).toBeNull();
   });
 });
 
@@ -491,5 +449,51 @@ describe('TrainingMatrixDrawer Component', () => {
     // Clicking selected block deselects
     fireEvent.click(block);
     expect(onSelect).toHaveBeenCalledWith(null);
+  });
+
+  it('renders Question Bank switcher in drawer header and handles bank selection', async () => {
+    const { TrainingMatrixDrawer } =
+      await import('../app/components/chunkflow/TrainingMatrixDrawer');
+    const telemetry = createMockTelemetry(10);
+    const onSelectBank = vi.fn();
+    const mockBanks = [
+      {
+        id: 'starter',
+        name: '核心多益題庫',
+        description: '12 題',
+        totalQuestions: 12,
+        totalTrainings: 1,
+      },
+      {
+        id: 'parker',
+        name: '怕渴題庫',
+        description: '50 課',
+        totalQuestions: 1302,
+        totalTrainings: 50,
+      },
+    ];
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={telemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+        banks={mockBanks}
+        activeBankId="parker"
+        onSelectBank={onSelectBank}
+      />
+    );
+
+    const switcherBtn = screen.getByTestId('bank-switcher-btn');
+    expect(switcherBtn.textContent).toContain('怕渴題庫');
+
+    fireEvent.click(switcherBtn);
+    expect(screen.getByTestId('bank-dropdown-menu')).toBeDefined();
+
+    const starterOption = screen.getByTestId('select-bank-starter');
+    fireEvent.click(starterOption);
+    expect(onSelectBank).toHaveBeenCalledWith('starter');
   });
 });

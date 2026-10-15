@@ -5,18 +5,11 @@ import { ACCENT_CONFIG } from '../../hooks/useSpeechNarration';
 interface HeaderHUDProps {
   practiceMode: 'smart' | 'random';
   onTogglePracticeMode: () => void;
-  isSubjectVerbDrill?: boolean;
-  onToggleSubjectVerbDrill?: () => void;
   onOpenAnalytics: () => void;
   onOpenSettings: () => void;
   onOpenImport?: () => void;
-  // Question Bank
-  activeBankId?: string;
-  onSelectBank?: (bankId: string) => void;
-  banks?: QuestionBankMeta[];
   // Audio narration
   narrationEnabled?: boolean;
-  onToggleNarration?: () => void;
   accent?: SpeechAccent;
   onSelectAccent?: (accent: SpeechAccent) => void;
   canSelectAccents?: boolean;
@@ -28,34 +21,23 @@ interface HeaderHUDProps {
 export const HeaderHUD: React.FC<HeaderHUDProps> = ({
   practiceMode,
   onTogglePracticeMode,
-  isSubjectVerbDrill = true,
-  onToggleSubjectVerbDrill,
   onOpenAnalytics,
   onOpenSettings,
   onOpenImport,
-  activeBankId = 'parker',
-  onSelectBank,
-  banks = [],
   narrationEnabled = false,
-  onToggleNarration,
   accent = 'US',
   onSelectAccent,
   canSelectAccents = false,
   showMatrix = true,
   onToggleMatrix,
 }) => {
-  const [isBankMenuOpen, setIsBankMenuOpen] = useState(false);
   const [isAccentMenuOpen, setIsAccentMenuOpen] = useState(false);
 
-  const bankMenuRef = useRef<HTMLDivElement>(null);
   const accentMenuRef = useRef<HTMLDivElement>(null);
 
   // Close menus on outside click
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
-      if (bankMenuRef.current && !bankMenuRef.current.contains(e.target as Node)) {
-        setIsBankMenuOpen(false);
-      }
       if (accentMenuRef.current && !accentMenuRef.current.contains(e.target as Node)) {
         setIsAccentMenuOpen(false);
       }
@@ -64,7 +46,6 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
     return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, []);
 
-  const activeBank = banks.find((b) => b.id === activeBankId);
   const currentAccentConfig = ACCENT_CONFIG[accent] || ACCENT_CONFIG.US;
 
   return (
@@ -80,86 +61,6 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
             Chunk<span className="text-cyan-400">Flow</span>
           </span>
         </div>
-
-        {/* Question Bank Switcher Pill */}
-        {onSelectBank && banks.length > 0 && (
-          <div className="relative" ref={bankMenuRef}>
-            <button
-              type="button"
-              data-testid="bank-switcher-btn"
-              onClick={() => setIsBankMenuOpen((prev) => !prev)}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium border border-zinc-700/80 bg-zinc-900/90 hover:border-cyan-500/80 text-zinc-200 transition-all cursor-pointer shadow-sm"
-              title="切換題庫"
-            >
-              <svg
-                className="w-3.5 h-3.5 text-cyan-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                />
-              </svg>
-              <span className="font-semibold text-cyan-300">{activeBank?.name ?? '怕渴題庫'}</span>
-              <svg
-                className="w-3 h-3 text-zinc-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-
-            {isBankMenuOpen && (
-              <div
-                data-testid="bank-dropdown-menu"
-                className="absolute left-0 mt-2 w-56 rounded-xl border border-zinc-800 bg-zinc-900/95 p-1.5 shadow-2xl backdrop-blur-md z-50 animate-fadeIn"
-              >
-                <div className="px-2.5 py-1 text-[11px] font-semibold text-zinc-400 border-b border-zinc-800/80 mb-1">
-                  選擇題庫
-                </div>
-                {banks.map((bank) => {
-                  const isCurrent = bank.id === activeBankId;
-                  return (
-                    <button
-                      key={bank.id}
-                      type="button"
-                      data-testid={`select-bank-${bank.id}`}
-                      onClick={() => {
-                        onSelectBank(bank.id);
-                        setIsBankMenuOpen(false);
-                      }}
-                      className={`w-full text-left px-3 py-2 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-between ${
-                        isCurrent
-                          ? 'bg-cyan-500/15 text-cyan-300 font-semibold'
-                          : 'text-zinc-300 hover:bg-zinc-800 hover:text-white'
-                      }`}
-                    >
-                      <div className="flex flex-col">
-                        <span>{bank.name}</span>
-                        <span className="text-[10px] text-zinc-500">
-                          {bank.totalQuestions} 題
-                          {bank.totalTrainings > 1 ? ` · ${bank.totalTrainings} 訓練` : ''}
-                        </span>
-                      </div>
-                      {isCurrent && <span className="text-cyan-400">✓</span>}
-                    </button>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        )}
       </div>
 
       {/* Right: Action Controls Cluster */}
@@ -180,30 +81,6 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
           >
             <span className="font-mono text-sm">▦</span>
             <span className="hidden md:inline">訓練矩陣</span>
-          </button>
-        )}
-
-        {/* S+V Drill Toggle */}
-        {onToggleSubjectVerbDrill && (
-          <button
-            onClick={onToggleSubjectVerbDrill}
-            title={
-              isSubjectVerbDrill
-                ? 'S+V Drill: 先鎖定主詞再識別動詞 (點擊切換為純動詞)'
-                : 'Verb Only: 直接識別動詞 (點擊切換為 S+V 模式)'
-            }
-            aria-label="Toggle Subject-Verb drill mode"
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium border border-zinc-800 bg-zinc-900 hover:border-zinc-700 text-zinc-300 transition-colors cursor-pointer"
-          >
-            <span
-              className={`w-1.5 h-1.5 rounded-full ${
-                isSubjectVerbDrill ? 'bg-cyan-400 animate-pulse' : 'bg-zinc-500'
-              }`}
-            />
-            <span className="hidden xs:inline">
-              {isSubjectVerbDrill ? 'S+V Drill' : 'Verb Only'}
-            </span>
-            <span className="xs:hidden">{isSubjectVerbDrill ? 'S+V' : 'Verb'}</span>
           </button>
         )}
 
@@ -288,62 +165,6 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
               </div>
             )}
           </div>
-        )}
-
-        {/* Audio Narration Toggle (Default OFF, located in top-right) */}
-        {onToggleNarration && (
-          <button
-            type="button"
-            data-testid="narration-toggle-btn"
-            onClick={onToggleNarration}
-            title={
-              narrationEnabled ? '句子朗誦已啟用 (點擊關閉)' : '句子朗誦已停用 (預設關閉，點擊開啟)'
-            }
-            aria-label={narrationEnabled ? '停用句子朗誦' : '啟用句子朗誦'}
-            className={`p-1.5 rounded-lg border transition-all cursor-pointer shadow-sm flex items-center justify-center ${
-              narrationEnabled
-                ? 'border-cyan-500/80 bg-cyan-500/15 text-cyan-300 shadow-[0_0_10px_rgba(6,182,212,0.3)]'
-                : 'border-zinc-800 bg-zinc-900/90 text-zinc-500 hover:text-zinc-300 hover:border-zinc-700'
-            }`}
-          >
-            {narrationEnabled ? (
-              // Speaker with sound waves
-              <svg
-                className="w-4 h-4 text-cyan-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z"
-                />
-              </svg>
-            ) : (
-              // Mute speaker
-              <svg
-                className="w-4 h-4 text-zinc-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"
-                />
-              </svg>
-            )}
-          </button>
         )}
 
         {/* Import */}

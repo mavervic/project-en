@@ -72,41 +72,33 @@ describe('Subject-Verb Drill Mode Settings Specification', () => {
       expect(result.current.roundStage).toBe('classify');
     });
 
-    it('initializes roundStage directly to "classify" when isSubjectVerbDrill is false', async () => {
+    it('always enforces roundStage "subject" on questions containing a subject chunk', async () => {
       const { renderHook } = await import('@testing-library/react');
       const { useChunkFlowGame } = await import('../app/hooks/useChunkFlowGame');
 
-      saveSubjectVerbDrill(false);
       const { result } = renderHook(() => useChunkFlowGame());
 
-      expect(result.current.isSubjectVerbDrill).toBe(false);
-      expect(result.current.roundStage).toBe('classify');
+      expect(result.current.isSubjectVerbDrill).toBe(true);
+      expect(result.current.roundStage).toBe('subject');
     });
   });
 
   describe('UI Component Integration', () => {
-    it('renders S+V Drill toggle in HeaderHUD and responds to clicks', async () => {
-      const { render, screen, fireEvent } = await import('@testing-library/react');
+    it('does not render S+V Drill toggle in HeaderHUD', async () => {
+      const { render, screen } = await import('@testing-library/react');
       const { HeaderHUD } = await import('../app/components/chunkflow/HeaderHUD');
-      const onToggle = vi.fn();
 
       render(
         <HeaderHUD
           practiceMode="smart"
           onTogglePracticeMode={vi.fn()}
-          isSubjectVerbDrill={true}
-          onToggleSubjectVerbDrill={onToggle}
           onOpenAnalytics={vi.fn()}
           onOpenSettings={vi.fn()}
         />
       );
 
-      const toggleBtn = screen.getByRole('button', { name: /toggle subject-verb drill mode/i });
-      expect(toggleBtn).toBeDefined();
-      expect(toggleBtn.textContent).toContain('S+V Drill');
-
-      fireEvent.click(toggleBtn);
-      expect(onToggle).toHaveBeenCalledTimes(1);
+      const toggleBtn = screen.queryByRole('button', { name: /toggle subject-verb drill mode/i });
+      expect(toggleBtn).toBeNull();
     });
 
     it('renders interactive subject chunks in ChunkFlowArena during subject stage', async () => {

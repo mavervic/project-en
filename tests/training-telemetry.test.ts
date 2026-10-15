@@ -2,8 +2,6 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import {
   computeMasteryTier,
   computeTrainingTelemetry,
-  loadTrainingSortPolicy,
-  saveTrainingSortPolicy,
   loadNarrationEnabled,
   saveNarrationEnabled,
   loadSpeechAccent,
@@ -135,14 +133,6 @@ describe('Lesson-Scoped Performance Metric Aggregation', () => {
 describe('Settings and Preferences Persistence', () => {
   beforeEach(() => {
     window.localStorage.clear();
-  });
-
-  it('persists and loads training sort policy with default weakest', () => {
-    expect(loadTrainingSortPolicy()).toBe('weakest');
-    saveTrainingSortPolicy('sequential');
-    expect(loadTrainingSortPolicy()).toBe('sequential');
-    saveTrainingSortPolicy('weakest');
-    expect(loadTrainingSortPolicy()).toBe('weakest');
   });
 
   it('persists and loads sentence narration toggle with default false', () => {

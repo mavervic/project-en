@@ -57,12 +57,10 @@ export interface CategoryStat {
   avgLatencyMs: number;
 }
 
-export type TrainingSortPolicy = 'weakest' | 'sequential';
 export type SpeechAccent = 'AU' | 'GB' | 'US' | 'CA';
 
 export interface ChunkFlowSettings {
   showGuidance: boolean;
-  trainingSortPolicy?: TrainingSortPolicy;
   narrationEnabled?: boolean;
   speechAccent?: SpeechAccent;
 }

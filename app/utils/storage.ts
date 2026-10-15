@@ -5,7 +5,6 @@ import type {
   Question,
   QuestionValidationResult,
   SpeechAccent,
-  TrainingSortPolicy,
   TrainingUnitTelemetry,
   UserPerformance,
 } from '../types/chunkflow';
@@ -13,14 +12,12 @@ import type {
 const STORAGE_KEY = 'chunkflow_performance_v1';
 const SETTINGS_STORAGE_KEY = 'chunkflow_settings_v1';
 const CUSTOM_QUESTIONS_STORAGE_KEY = 'chunkflow_custom_questions_v1';
-const TRAINING_SORT_STORAGE_KEY = 'chunkflow_training_sort_v1';
 const NARRATION_STORAGE_KEY = 'chunkflow_narration_enabled_v1';
 const SPEECH_ACCENT_STORAGE_KEY = 'chunkflow_speech_accent_v1';
 const ACTIVE_BANK_STORAGE_KEY = 'chunkflow_active_bank_v1';
 
 const DEFAULT_SETTINGS: ChunkFlowSettings = {
   showGuidance: false,
-  trainingSortPolicy: 'weakest',
   narrationEnabled: false,
   speechAccent: 'US',
 };
@@ -242,7 +239,6 @@ export function loadSettings(): ChunkFlowSettings {
     if (typeof parsed === 'object' && parsed !== null && typeof parsed.showGuidance === 'boolean') {
       return {
         showGuidance: parsed.showGuidance ?? DEFAULT_SETTINGS.showGuidance,
-        trainingSortPolicy: parsed.trainingSortPolicy ?? DEFAULT_SETTINGS.trainingSortPolicy,
         narrationEnabled: parsed.narrationEnabled ?? DEFAULT_SETTINGS.narrationEnabled,
         speechAccent: parsed.speechAccent ?? DEFAULT_SETTINGS.speechAccent,
       };
@@ -259,29 +255,6 @@ export function saveSettings(settings: ChunkFlowSettings): void {
       window.localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settings));
     } catch (err) {
       console.warn('Failed to save ChunkFlow settings to localStorage', err);
-    }
-  }
-}
-
-export function loadTrainingSortPolicy(): TrainingSortPolicy {
-  if (typeof window === 'undefined') return 'weakest';
-  try {
-    const raw = window.localStorage.getItem(TRAINING_SORT_STORAGE_KEY);
-    if (raw === 'sequential' || raw === 'weakest') {
-      return raw;
-    }
-  } catch (err) {
-    console.warn('Failed to load training sort policy from localStorage', err);
-  }
-  return 'weakest';
-}
-
-export function saveTrainingSortPolicy(policy: TrainingSortPolicy): void {
-  if (typeof window !== 'undefined') {
-    try {
-      window.localStorage.setItem(TRAINING_SORT_STORAGE_KEY, policy);
-    } catch (err) {
-      console.warn('Failed to save training sort policy to localStorage', err);
     }
   }
 }

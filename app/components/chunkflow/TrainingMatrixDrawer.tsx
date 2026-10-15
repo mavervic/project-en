@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import type { TrainingSortPolicy, TrainingUnitTelemetry } from '../../types/chunkflow';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
+import type { QuestionBankMeta, TrainingUnitTelemetry } from '../../types/chunkflow';
 import { MASTERY_TIER_STYLES } from './TrainingMatrix';
 
 export interface TrainingMatrixDrawerProps {
@@ -8,7 +8,9 @@ export interface TrainingMatrixDrawerProps {
   telemetry: Record<string, TrainingUnitTelemetry>;
   activeTrainingId: string | null;
   onSelectTraining: (trainingId: string | null) => void;
-  sortPolicy?: TrainingSortPolicy;
+  banks?: QuestionBankMeta[];
+  activeBankId?: string;
+  onSelectBank?: (bankId: string) => void;
 }
 
 export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
@@ -17,29 +19,30 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
   telemetry,
   activeTrainingId,
   onSelectTraining,
-  sortPolicy = 'weakest',
+  banks = [],
+  activeBankId,
+  onSelectBank,
 }) => {
+  const [isBankMenuOpen, setIsBankMenuOpen] = useState(false);
+  const bankMenuRef = useRef<HTMLDivElement>(null);
+
+  // Close menus on outside click
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (bankMenuRef.current && !bankMenuRef.current.contains(e.target as Node)) {
+        setIsBankMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleOutsideClick);
+    return () => document.removeEventListener('mousedown', handleOutsideClick);
+  }, []);
+
+  const activeBank = banks.find((b) => b.id === activeBankId);
+
   const units = useMemo(() => {
     const list = Object.values(telemetry);
-
-    if (sortPolicy === 'sequential') {
-      return [...list].sort((a, b) => a.unitNumber - b.unitNumber);
-    }
-
-    // Weakest first: unattempted (0 attempts) or lowest accuracy first
-    return [...list].sort((a, b) => {
-      const aVal = a.totalAttempts === 0 ? -1 : a.accuracy;
-      const bVal = b.totalAttempts === 0 ? -1 : b.accuracy;
-
-      if (aVal !== bVal) {
-        return aVal - bVal;
-      }
-      if (a.avgLatencyMs !== b.avgLatencyMs) {
-        return b.avgLatencyMs - a.avgLatencyMs;
-      }
-      return a.unitNumber - b.unitNumber;
-    });
-  }, [telemetry, sortPolicy]);
+    return [...list].sort((a, b) => a.unitNumber - b.unitNumber);
+  }, [telemetry]);
 
   // Group into clusters of 5 units (1 cluster per row)
   const clusters = useMemo(() => {
@@ -71,18 +74,104 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
         }`}
       >
         {/* Drawer Header */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-800/80 bg-zinc-950/40">
-          <div className="flex items-center gap-2">
-            <div className="flex h-6 w-6 items-center justify-center rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">
-              ▦
+        <div className="flex items-center justify-between px-3.5 py-3 border-b border-zinc-800/80 bg-zinc-950/40">
+          {onSelectBank && banks.length > 0 ? (
+            <div className="relative flex-1 mr-2" ref={bankMenuRef}>
+              <button
+                type="button"
+                data-testid="bank-switcher-btn"
+                onClick={() => setIsBankMenuOpen((prev) => !prev)}
+                className="w-full inline-flex items-center justify-between gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium border border-zinc-700/80 bg-zinc-900/90 hover:border-cyan-500/80 text-zinc-200 transition-all cursor-pointer shadow-sm"
+                title="切換題庫"
+              >
+                <div className="flex items-center gap-1.5 truncate">
+                  <svg
+                    className="w-3.5 h-3.5 text-cyan-400 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    />
+                  </svg>
+                  <span className="font-semibold text-cyan-300 truncate">
+                    {activeBank?.name ?? '題庫'}
+                  </span>
+                  <span className="text-[10px] text-zinc-400 font-mono shrink-0">
+                    ({units.length} 課)
+                  </span>
+                </div>
+                <svg
+                  className="w-3 h-3 text-zinc-400 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {isBankMenuOpen && (
+                <div
+                  data-testid="bank-dropdown-menu"
+                  className="absolute left-0 mt-2 w-full rounded-xl border border-zinc-800 bg-zinc-900/95 p-1.5 shadow-2xl backdrop-blur-md z-50 animate-fadeIn"
+                >
+                  <div className="px-2.5 py-1 text-[11px] font-semibold text-zinc-400 border-b border-zinc-800/80 mb-1">
+                    選擇題庫
+                  </div>
+                  {banks.map((bank) => {
+                    const isCurrent = bank.id === activeBankId;
+                    return (
+                      <button
+                        key={bank.id}
+                        type="button"
+                        data-testid={`select-bank-${bank.id}`}
+                        onClick={() => {
+                          onSelectBank(bank.id);
+                          setIsBankMenuOpen(false);
+                        }}
+                        className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs transition-colors cursor-pointer flex items-center justify-between ${
+                          isCurrent
+                            ? 'bg-cyan-500/15 text-cyan-300 font-semibold'
+                            : 'text-zinc-300 hover:bg-zinc-800 hover:text-white'
+                        }`}
+                      >
+                        <div className="flex flex-col">
+                          <span>{bank.name}</span>
+                          <span className="text-[10px] text-zinc-500">
+                            {bank.totalQuestions} 題
+                            {bank.totalTrainings > 1 ? ` · ${bank.totalTrainings} 訓練` : ''}
+                          </span>
+                        </div>
+                        {isCurrent && <span className="text-cyan-400">✓</span>}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
             </div>
-            <div>
-              <span className="text-sm font-semibold tracking-wide text-zinc-100">訓練矩陣</span>
-              <span className="ml-1.5 text-[11px] text-zinc-400 font-mono">
-                ({units.length} 課)
-              </span>
+          ) : (
+            <div className="flex items-center gap-2">
+              <div className="flex h-6 w-6 items-center justify-center rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">
+                ▦
+              </div>
+              <div>
+                <span className="text-sm font-semibold tracking-wide text-zinc-100">訓練矩陣</span>
+                <span className="ml-1.5 text-[11px] text-zinc-400 font-mono">
+                  ({units.length} 課)
+                </span>
+              </div>
             </div>
-          </div>
+          )}
 
           <button
             type="button"
@@ -90,7 +179,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
             onClick={onClose}
             title="收合抽屜"
             aria-label="Close drawer"
-            className="p-1 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-800/80 transition-colors cursor-pointer"
+            className="p-1 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-800/80 transition-colors cursor-pointer shrink-0"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path

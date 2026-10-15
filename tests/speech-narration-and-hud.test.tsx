@@ -163,33 +163,20 @@ describe('HeaderHUD Audio Narration, Bank Switcher, and Matrix Controls', () => 
     },
   ];
 
-  it('renders Question Bank switcher and handles bank selection', () => {
-    const onSelectBank = vi.fn();
+  it('does not render bank switcher button in HeaderHUD', () => {
     render(
       <HeaderHUD
         practiceMode="smart"
         onTogglePracticeMode={vi.fn()}
         onOpenAnalytics={vi.fn()}
         onOpenSettings={vi.fn()}
-        activeBankId="parker"
-        onSelectBank={onSelectBank}
-        banks={mockBanks}
       />
     );
 
-    const switcherBtn = screen.getByTestId('bank-switcher-btn');
-    expect(switcherBtn.textContent).toContain('怕渴題庫');
-
-    fireEvent.click(switcherBtn);
-    expect(screen.getByTestId('bank-dropdown-menu')).toBeDefined();
-
-    const starterOption = screen.getByTestId('select-bank-starter');
-    fireEvent.click(starterOption);
-    expect(onSelectBank).toHaveBeenCalledWith('starter');
+    expect(screen.queryByTestId('bank-switcher-btn')).toBeNull();
   });
 
-  it('renders Narration toggle button in top-right with default inactive state', () => {
-    const onToggleNarration = vi.fn();
+  it('does not render narration toggle button in HeaderHUD', () => {
     render(
       <HeaderHUD
         practiceMode="smart"
@@ -197,16 +184,10 @@ describe('HeaderHUD Audio Narration, Bank Switcher, and Matrix Controls', () => 
         onOpenAnalytics={vi.fn()}
         onOpenSettings={vi.fn()}
         narrationEnabled={false}
-        onToggleNarration={onToggleNarration}
       />
     );
 
-    const toggleBtn = screen.getByTestId('narration-toggle-btn');
-    expect(toggleBtn).toBeDefined();
-    expect(toggleBtn.className).toContain('text-zinc-500'); // inactive style
-
-    fireEvent.click(toggleBtn);
-    expect(onToggleNarration).toHaveBeenCalledTimes(1);
+    expect(screen.queryByTestId('narration-toggle-btn')).toBeNull();
   });
 
   it('hides flag dropdown when narration is disabled', () => {
@@ -287,20 +268,21 @@ describe('HeaderHUD Audio Narration, Bank Switcher, and Matrix Controls', () => 
   });
 });
 
-describe('ChunkFlowArena Replay Audio Integration', () => {
+describe('ChunkFlowArena Audio Controls & Replay Integration', () => {
+  const mockQuestion = {
+    id: 'q1',
+    sentence: 'The board will review.',
+    chunks: [
+      { text: 'The board', isTargetSlot: false, type: 'subject' as const },
+      { text: 'will review.', isTargetSlot: true, type: 'verb' as const },
+    ],
+    targetSlotIndex: 1,
+    correctAnswers: { voice: 'active' as const, time: 'future' as const },
+    grammarNote: 'note',
+  };
+
   it('renders audio replay button and handles click', () => {
     const onPlayAudio = vi.fn();
-    const mockQuestion = {
-      id: 'q1',
-      sentence: 'The board will review.',
-      chunks: [
-        { text: 'The board', isTargetSlot: false, type: 'subject' as const },
-        { text: 'will review.', isTargetSlot: true, type: 'verb' as const },
-      ],
-      targetSlotIndex: 1,
-      correctAnswers: { voice: 'active' as const, time: 'future' as const },
-      grammarNote: 'note',
-    };
 
     render(
       <ChunkFlowArena
@@ -316,7 +298,46 @@ describe('ChunkFlowArena Replay Audio Integration', () => {
 
     const audioBtn = screen.getByTestId('replay-audio-btn');
     expect(audioBtn).toBeDefined();
+    expect(audioBtn.textContent).toContain('重播');
     fireEvent.click(audioBtn);
     expect(onPlayAudio).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders narration toggle button in Arena and handles toggle click', () => {
+    const onToggleNarration = vi.fn();
+
+    const { rerender } = render(
+      <ChunkFlowArena
+        question={mockQuestion}
+        focusState="idle"
+        progressPercent={100}
+        lastEvaluation={null}
+        showFeedback={false}
+        narrationEnabled={false}
+        onToggleNarration={onToggleNarration}
+      />
+    );
+
+    const toggleBtn = screen.getByTestId('narration-toggle-btn');
+    expect(toggleBtn).toBeDefined();
+    expect(toggleBtn.textContent).toContain('靜音');
+
+    fireEvent.click(toggleBtn);
+    expect(onToggleNarration).toHaveBeenCalledTimes(1);
+
+    // Rerender as enabled
+    rerender(
+      <ChunkFlowArena
+        question={mockQuestion}
+        focusState="idle"
+        progressPercent={100}
+        lastEvaluation={null}
+        showFeedback={false}
+        narrationEnabled={true}
+        onToggleNarration={onToggleNarration}
+      />
+    );
+
+    expect(screen.getByTestId('narration-toggle-btn').textContent).toContain('朗誦開');
   });
 });

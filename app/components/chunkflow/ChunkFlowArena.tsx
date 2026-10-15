@@ -17,6 +17,8 @@ interface ChunkFlowArenaProps {
   subjectMisfireIndex?: number | null;
   onPlayAudio?: () => void;
   isSpeaking?: boolean;
+  narrationEnabled?: boolean;
+  onToggleNarration?: () => void;
 }
 
 export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
@@ -35,6 +37,8 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   subjectMisfireIndex,
   onPlayAudio,
   isSpeaking = false,
+  narrationEnabled = false,
+  onToggleNarration,
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
 
@@ -177,32 +181,86 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
           )}
         </div>
 
-        {/* Replay Audio Button */}
-        {onPlayAudio && (
-          <button
-            type="button"
-            data-testid="replay-audio-btn"
-            onClick={onPlayAudio}
-            title="朗誦句子音檔"
-            aria-label="朗誦句子音檔"
-            className="absolute top-4 right-6 p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-zinc-900/90 border border-zinc-700/80 hover:border-cyan-400 text-zinc-300 hover:text-cyan-300 transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm"
-          >
-            <svg
-              className={`w-4 h-4 ${isSpeaking ? 'text-cyan-400 animate-pulse' : 'text-zinc-400'}`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        {/* Arena Audio Controls */}
+        <div className="absolute top-4 right-6 flex items-center gap-2">
+          {onToggleNarration && (
+            <button
+              type="button"
+              data-testid="narration-toggle-btn"
+              onClick={onToggleNarration}
+              title={narrationEnabled ? '靜音朗誦' : '開啟朗誦'}
+              aria-label={narrationEnabled ? 'Mute speech' : 'Enable speech'}
+              className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm ${
+                narrationEnabled
+                  ? 'bg-cyan-500/15 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/25'
+                  : 'bg-zinc-900/90 border-zinc-700/80 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300'
+              }`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z"
-              />
-            </svg>
-            <span className="hidden sm:inline">朗誦</span>
-          </button>
-        )}
+              {narrationEnabled ? (
+                <svg
+                  className="w-4 h-4 text-cyan-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15.536 8.464a5 5 0 010 7.072M18.364 5.636a9 9 0 010 12.728M11 5L6 9H2v6h4l5 4V5z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-4 h-4 text-zinc-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"
+                  />
+                </svg>
+              )}
+              <span className="hidden sm:inline">{narrationEnabled ? '朗誦開' : '靜音'}</span>
+            </button>
+          )}
+
+          {onPlayAudio && (
+            <button
+              type="button"
+              data-testid="replay-audio-btn"
+              onClick={onPlayAudio}
+              title="重播音檔"
+              aria-label="重播音檔"
+              className="p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-zinc-900/90 border border-zinc-700/80 hover:border-cyan-400 text-zinc-300 hover:text-cyan-300 transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm"
+            >
+              <svg
+                className={`w-4 h-4 ${isSpeaking ? 'text-cyan-400 animate-spin' : 'text-zinc-400'}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                />
+              </svg>
+              <span className="hidden sm:inline">重播</span>
+            </button>
+          )}
+        </div>
 
         {/* Large Typography Sentence Chunks (Stable box geometry with 0 layout shift) */}
         <div className="w-full text-center flex flex-wrap justify-center items-center gap-x-2.5 gap-y-3.5 my-4">

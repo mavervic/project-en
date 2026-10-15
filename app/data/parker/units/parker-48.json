@@ -1,0 +1,442 @@
+[
+  {
+    "id": "parker-48-q01",
+    "sentence": "The regional sales director will announce the quarterly bonus targets tomorrow.",
+    "chunks": [
+      {
+        "text": "The regional sales director",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will announce",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the quarterly bonus targets tomorrow.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will announce」為未來簡單式主動語態 (Future Simple Active)。主詞為「The regional sales director」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q02",
+    "sentence": "All defective hardware components were replaced by the maintenance contractor yesterday.",
+    "chunks": [
+      {
+        "text": "All defective hardware components",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were replaced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the maintenance contractor yesterday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「were replaced」為過去簡單式被動語態 (Past Simple Passive)。主詞為「All defective hardware components」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q03",
+    "sentence": "The engineering team is testing the autonomous navigation system in the warehouse.",
+    "chunks": [
+      {
+        "text": "The engineering team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is testing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the autonomous navigation system in the warehouse.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is testing」為現在進行式主動語態 (Present Continuous Active)。主詞為「The engineering team」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q04",
+    "sentence": "New safety guidelines have been distributed to all factory employees this morning.",
+    "chunks": [
+      {
+        "text": "New safety guidelines",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "have been distributed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to all factory employees this morning.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「have been distributed」為現在完成式被動語態 (Present Perfect Passive)。主詞為「New safety guidelines」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q05",
+    "sentence": "The client signed the revised commercial lease agreement after thorough legal review.",
+    "chunks": [
+      {
+        "text": "The client",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "signed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the revised commercial lease agreement",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "after thorough legal review.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「signed」為過去簡單式主動語態 (Past Simple Active)。主詞為「The client」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q06",
+    "sentence": "The shipping container is being loaded with heavy industrial machinery at port.",
+    "chunks": [
+      {
+        "text": "The shipping container",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is being loaded",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with heavy industrial machinery at port.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is being loaded」為現在進行式被動語態 (Present Continuous Passive)。主詞為「The shipping container」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q07",
+    "sentence": "Our customer support department handles hundreds of international inquiries daily.",
+    "chunks": [
+      {
+        "text": "Our customer support department",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "handles",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "hundreds of international inquiries daily.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「handles」為現在簡單式主動語態 (Present Simple Active)。主詞為「Our customer support department」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q08",
+    "sentence": "The annual financial audit will be conducted by an external accounting firm.",
+    "chunks": [
+      {
+        "text": "The annual financial audit",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be conducted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by an external accounting firm.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be conducted」為未來簡單式被動語態 (Future Simple Passive)。主詞為「The annual financial audit」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q09",
+    "sentence": "Several passengers are boarding the express commuter train at platform three.",
+    "chunks": [
+      {
+        "text": "Several passengers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are boarding",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the express commuter train at platform three.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「are boarding」為現在進行式主動語態 (Present Continuous Active)。主詞為「Several passengers」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q10",
+    "sentence": "The senior marketing specialist has organized a series of promotional webinars.",
+    "chunks": [
+      {
+        "text": "The senior marketing specialist",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has organized",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a series of promotional webinars.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「has organized」為現在完成式主動語態 (Present Perfect Active)。主詞為「The senior marketing specialist」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q11",
+    "sentence": "Confidential patient documents were archived in a secure digital vault.",
+    "chunks": [
+      {
+        "text": "Confidential patient documents",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were archived",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in a secure digital vault.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「were archived」為過去簡單式被動語態 (Past Simple Passive)。主詞為「Confidential patient documents」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q12",
+    "sentence": "The flight attendant will demonstrate essential aircraft safety procedures shortly.",
+    "chunks": [
+      {
+        "text": "The flight attendant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will demonstrate",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "essential aircraft safety procedures shortly.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will demonstrate」為未來簡單式主動語態 (Future Simple Active)。主詞為「The flight attendant」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q13",
+    "sentence": "A modern solar installation is being inspected by the local utility inspector.",
+    "chunks": [
+      {
+        "text": "A modern solar installation",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is being inspected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the local utility inspector.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is being inspected」為現在進行式被動語態 (Present Continuous Passive)。主詞為「A modern solar installation」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q14",
+    "sentence": "The human resources committee scheduled interviews with all five final candidates.",
+    "chunks": [
+      {
+        "text": "The human resources committee",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "scheduled",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "interviews with all five final candidates.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「scheduled」為現在簡單式主動語態 (Present Simple Active)。主詞為「The human resources committee」。",
+    "trainingId": "parker-48"
+  },
+  {
+    "id": "parker-48-q15",
+    "sentence": "All laboratory specimens have been verified according to international standards.",
+    "chunks": [
+      {
+        "text": "All laboratory specimens",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "have been verified",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "according to international standards.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「have been verified」為現在完成式被動語態 (Present Perfect Passive)。主詞為「All laboratory specimens」。",
+    "trainingId": "parker-48"
+  }
+]

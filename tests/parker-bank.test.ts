@@ -68,6 +68,24 @@ describe('Structured 50-Unit Parker TOEIC Question Bank', () => {
     expect(PARKER_BANK_META.totalTrainings).toBe(50);
     expect(PARKER_BANK_META.totalQuestions).toBe(PARKER_QUESTIONS.length);
   });
+
+  it('partitions questions across 50 dedicated unit JSON files', async () => {
+    const { PARKER_QUESTIONS_BY_UNIT } = await import('../app/data/parker/index');
+    expect(Object.keys(PARKER_QUESTIONS_BY_UNIT).length).toBe(50);
+
+    let totalFromUnits = 0;
+    for (let i = 1; i <= 50; i++) {
+      const unitId = `parker-${String(i).padStart(2, '0')}`;
+      const unitQs = PARKER_QUESTIONS_BY_UNIT[unitId];
+      expect(unitQs).toBeDefined();
+      expect(unitQs.length).toBeGreaterThan(0);
+      for (const q of unitQs) {
+        expect(q.trainingId).toBe(unitId);
+      }
+      totalFromUnits += unitQs.length;
+    }
+    expect(totalFromUnits).toBe(PARKER_QUESTIONS.length);
+  });
 });
 
 describe('Modular Question Bank Switching and Registry', () => {

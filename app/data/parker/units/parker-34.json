@@ -1,0 +1,943 @@
+[
+  {
+    "id": "parker-34-q01",
+    "sentence": "Didn't you see the message from mr barton.",
+    "chunks": [
+      {
+        "text": "Didn't",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "see",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the message from mr barton.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「see」為過去簡單式主動語態 (Past Simple Active)。主詞為「you」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q02",
+    "sentence": "What time does elliot leave for boston.",
+    "chunks": [
+      {
+        "text": "What time does",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "elliot",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "leave",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for boston.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「leave」為現在簡單式主動語態 (Present Simple Active)。主詞為「elliot」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q03",
+    "sentence": "The woman is handing out some leaflets.",
+    "chunks": [
+      {
+        "text": "The woman",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is handing out",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "some leaflets.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is handing out」為現在進行式主動語態 (Present Continuous Active)。主詞為「The woman」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q04",
+    "sentence": "Leaves are scattered on the path.",
+    "chunks": [
+      {
+        "text": "Leaves",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are scattered",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on the path.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are scattered」為現在簡單式被動語態 (Present Simple Passive)。主詞為「Leaves」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q05",
+    "sentence": "Would you prefer korean or thai food for lunch.",
+    "chunks": [
+      {
+        "text": "Would",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "prefer",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "korean or thai food for lunch.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「prefer」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q06",
+    "sentence": "Do you mind working on weekends and holidays.",
+    "chunks": [
+      {
+        "text": "Do",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "mind",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "working on weekends and holidays.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「mind」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q07",
+    "sentence": "The man is handing merchandise to a cashier.",
+    "chunks": [
+      {
+        "text": "The man",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is handing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "merchandise to a cashier.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is handing」為現在進行式主動語態 (Present Continuous Active)。主詞為「The man」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q08",
+    "sentence": "This year's annual sales conference will take place in moscow isn't it.",
+    "chunks": [
+      {
+        "text": "This year's annual sales conference",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will take",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "place in moscow isn't it.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will take」為未來簡單式主動語態 (Future Simple Active)。主詞為「This year's annual sales conference」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q09",
+    "sentence": ". who is the first presenter of the workshop tomorrow morning who is the first presenter.",
+    "chunks": [
+      {
+        "text": "who",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the first presenter of the workshop tomorrow morning who is the first presenter.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is」為現在簡單式主動語態 (Present Simple Active)。主詞為「who」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q10",
+    "sentence": "The concert starts at half past seven does it.",
+    "chunks": [
+      {
+        "text": "The concert",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "starts",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "at half past seven does it.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「starts」為現在簡單式主動語態 (Present Simple Active)。主詞為「The concert」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q11",
+    "sentence": ". do you think we should have more travel allowances do you think we should have.",
+    "chunks": [
+      {
+        "text": "do",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "think",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "we should have more travel allowances do you think we should have.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「think」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q12",
+    "sentence": ". how long is the parking lot going to be under construction how long is the.",
+    "chunks": [
+      {
+        "text": "how long is",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the parking lot",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "going",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to be under construction how long is the.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「going」為現在進行式主動語態 (Present Continuous Active)。主詞為「the parking lot」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q13",
+    "sentence": "Would you like to pay the fee now or send a check later.",
+    "chunks": [
+      {
+        "text": "Would",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "like",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to pay the fee now or send a check later.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「like」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q14",
+    "sentence": ". why did they stop manufacturing this product why did they stop manufacturing this product why.",
+    "chunks": [
+      {
+        "text": "why did",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "they",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "stop",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "manufacturing this product why did they stop manufacturing this product why.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「stop」為過去簡單式主動語態 (Past Simple Active)。主詞為「they」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q15",
+    "sentence": ". the exhibit hall's entrance is right across from a convenience store the exhibit hall's entrance.",
+    "chunks": [
+      {
+        "text": "the exhibit hall's entrance",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "right across",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "from a convenience store the exhibit hall's entrance.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is」為現在簡單式主動語態 (Present Simple Active)。主詞為「the exhibit hall's entrance」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q16",
+    "sentence": "Don't you understand the negative comments are damaging the reputation of our company.",
+    "chunks": [
+      {
+        "text": "Don't",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "understand",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the negative comments are damaging the reputation of our company.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「understand」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q17",
+    "sentence": ". the consultant suggested that the packaging of our electronic devices be redesigned to be more.",
+    "chunks": [
+      {
+        "text": "the consultant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "suggested",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "that the packaging of our electronic devices be redesigned",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to be more.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「suggested」為過去簡單式被動語態 (Past Simple Passive)。主詞為「the consultant」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q18",
+    "sentence": ". are they going to announce the latest progress of the development project at the press.",
+    "chunks": [
+      {
+        "text": "are",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "they",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "going",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to announce the latest progress of the development project at the press.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「going」為現在進行式主動語態 (Present Continuous Active)。主詞為「they」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q19",
+    "sentence": ". a five dollar service charge will be made on all withdrawals and ten dollars for.",
+    "chunks": [
+      {
+        "text": "a five dollar service charge",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be made",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on all withdrawals and ten dollars for.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be made」為未來簡單式被動語態 (Future Simple Passive)。主詞為「a five dollar service charge」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q20",
+    "sentence": ". i think things will turn around as long as we follow the suggestions the analysts.",
+    "chunks": [
+      {
+        "text": "i",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "think",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "things will turn around as long as we follow the suggestions the analysts.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「think」為未來簡單式主動語態 (Future Simple Active)。主詞為「i」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q21",
+    "sentence": "The arrangement of tables facilitated group discussions and interaction among the participants.",
+    "chunks": [
+      {
+        "text": "The arrangement",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "of",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "tables facilitated group discussions and interaction among the participants.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「of」為現在簡單式主動語態 (Present Simple Active)。主詞為「The arrangement」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q22",
+    "sentence": "The regular retail price of each copy is 35 yet by subscribing today you will enjoy a 40 early bird discount.",
+    "chunks": [
+      {
+        "text": "The regular retail price of each copy",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "35 yet",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "by subscribing today you will enjoy a 40 early bird discount.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is」為未來簡單式主動語態 (Future Simple Active)。主詞為「The regular retail price of each copy」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q23",
+    "sentence": ". there have been a lot of negative comments about after sales service posted on our.",
+    "chunks": [
+      {
+        "text": "there have been a lot of negative comments about after",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "sales service",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "posted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on our.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「posted」為現在簡單式主動語態 (Present Simple Active)。主詞為「sales service」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q24",
+    "sentence": "Attention united airline flight 607 to san diego will have a gate change please wait at the departure lounge for further information.",
+    "chunks": [
+      {
+        "text": "Attention united airline flight 607 to san diego",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will have",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a gate change please wait",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "at the departure lounge for further information.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will have」為未來簡單式主動語態 (Future Simple Active)。主詞為「Attention united airline flight 607 to san diego」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q25",
+    "sentence": ". my assistant phoned yesterday requesting an estimated cost of a catered lunch that we need.",
+    "chunks": [
+      {
+        "text": "my assistant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "phoned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "yesterday requesting an estimated cost of a catered lunch that we need.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「phoned」為過去簡單式主動語態 (Past Simple Active)。主詞為「my assistant」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q26",
+    "sentence": "The workshop features specially designed activities that can equip participants with leadership qualities and team building skills.",
+    "chunks": [
+      {
+        "text": "The workshop",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "features",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "specially designed activities that can equip participants",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "with leadership qualities and team building skills.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「features」為現在簡單式主動語態 (Present Simple Active)。主詞為「The workshop」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q27",
+    "sentence": "Our on-site instructors are committed to providing you with the most solid and effective training on interpersonal skills and leadership skills.",
+    "chunks": [
+      {
+        "text": "Our on-site instructors",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "committed",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to providing you with the most solid and effective training on interpersonal skills and leadership skills.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are」為現在簡單式主動語態 (Present Simple Active)。主詞為「Our on-site instructors」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q28",
+    "sentence": "We are the only fitness center in the city with professional dietitians on staff providing our customers with personal meal plans and consultation services.",
+    "chunks": [
+      {
+        "text": "We",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the only fitness center",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in the city with professional dietitians on staff providing our customers with personal meal plans and consultation services.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are」為現在簡單式主動語態 (Present Simple Active)。主詞為「We」。",
+    "trainingId": "parker-34"
+  },
+  {
+    "id": "parker-34-q29",
+    "sentence": ". hello i'm calling about the database courses advertised on your website i see you offer.",
+    "chunks": [
+      {
+        "text": "hello",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "i",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "'m calling",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "about the database courses advertised",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "on your website i see you offer.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「'm calling」為現在進行式主動語態 (Present Continuous Active)。主詞為「i」。",
+    "trainingId": "parker-34"
+  }
+]

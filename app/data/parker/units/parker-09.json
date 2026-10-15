@@ -1,0 +1,167 @@
+[
+  {
+    "id": "parker-09-q01",
+    "sentence": "The client contacted me this morning and asked if it was too late to alter the design.",
+    "chunks": [
+      {
+        "text": "The client",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "contacted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "me this morning and asked if it was too late",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to alter the design.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「contacted」為過去簡單式主動語態 (Past Simple Active)。主詞為「The client」。",
+    "trainingId": "parker-09"
+  },
+  {
+    "id": "parker-09-q02",
+    "sentence": "Hello I have a reservation for a for night stay it should be under the name George McKenzie hello I have a reservation for a fornight stay it should be under the name George McKenzie George McKenzie.",
+    "chunks": [
+      {
+        "text": "Hello",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "I",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "have",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a reservation",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for a for night stay it should be under the name George McKenzie hello I have a reservation for a fornight stay it should be under the name George McKenzie George McKenzie.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「have」為現在簡單式主動語態 (Present Simple Active)。主詞為「I」。",
+    "trainingId": "parker-09"
+  },
+  {
+    "id": "parker-09-q03",
+    "sentence": "The results of the market analysis showed a lot of potential demand for our services in Singapore.",
+    "chunks": [
+      {
+        "text": "The results of the market analysis",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "showed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a lot of potential demand",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for our services in Singapore.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「showed」為過去簡單式主動語態 (Past Simple Active)。主詞為「The results of the market analysis」。",
+    "trainingId": "parker-09"
+  },
+  {
+    "id": "parker-09-q04",
+    "sentence": "Visitors are encouraged to take advantage of the guided tour starting every hour on the hour.",
+    "chunks": [
+      {
+        "text": "Visitors",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are encouraged",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to take advantage of the guided tour starting every hour on the hour.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are encouraged」為現在簡單式被動語態 (Present Simple Passive)。主詞為「Visitors」。",
+    "trainingId": "parker-09"
+  },
+  {
+    "id": "parker-09-q05",
+    "sentence": "The assembly plants in Mumbai will be closed for a week for the annual safety inspection.",
+    "chunks": [
+      {
+        "text": "The assembly plants in Mumbai",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be closed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for a week for the annual safety inspection.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be closed」為未來簡單式被動語態 (Future Simple Passive)。主詞為「The assembly plants in Mumbai」。",
+    "trainingId": "parker-09"
+  }
+]

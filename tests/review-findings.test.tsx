@@ -203,7 +203,6 @@ describe('Review Findings Verification (RED phase before fix)', () => {
           telemetry={mockTelemetry}
           activeTrainingId={null}
           onSelectTraining={vi.fn()}
-          sortPolicy="sequential"
         />
       );
 
@@ -214,6 +213,82 @@ describe('Review Findings Verification (RED phase before fix)', () => {
       // Col 4: parker-05 tooltip should have right-0
       const tooltip05 = screen.getByTestId('training-tooltip-parker-05');
       expect(tooltip05.className).toContain('right-0');
+    });
+  });
+
+  describe('Streamlined Gameplay & Bank Split Review Findings', () => {
+    it('Finding 1: renders drawer toggle button in HeaderHUD when registered banks exist even if telemetry is empty', () => {
+      const onToggleMatrix = vi.fn();
+      render(
+        <HeaderHUD
+          practiceMode="smart"
+          onTogglePracticeMode={vi.fn()}
+          onOpenAnalytics={vi.fn()}
+          onOpenSettings={vi.fn()}
+          showMatrix={true}
+          onToggleMatrix={onToggleMatrix}
+        />
+      );
+
+      const toggleBtn = screen.getByTestId('toggle-matrix-btn');
+      expect(toggleBtn).toBeDefined();
+      fireEvent.click(toggleBtn);
+      expect(onToggleMatrix).toHaveBeenCalledTimes(1);
+    });
+
+    it('Finding 2: allows force-speaking on manual replay requests even when narration is disabled', async () => {
+      const { renderHook, act } = await import('@testing-library/react');
+      const { useSpeechNarration } = await import('../app/hooks/useSpeechNarration');
+
+      window.localStorage.clear();
+      const mockSpeak = vi.fn();
+      class MockSpeechSynthesisUtterance {
+        text: string;
+        voice: any = null;
+        lang = '';
+        rate = 1;
+        onstart: any = null;
+        onend: any = null;
+        onerror: any = null;
+        constructor(text: string) {
+          this.text = text;
+        }
+      }
+      (window as any).SpeechSynthesisUtterance = MockSpeechSynthesisUtterance;
+      Object.defineProperty(window, 'speechSynthesis', {
+        value: {
+          speak: mockSpeak,
+          cancel: vi.fn(),
+          getVoices: vi.fn().mockReturnValue([]),
+          onvoiceschanged: null,
+        },
+        writable: true,
+        configurable: true,
+      });
+
+      const { result } = renderHook(() => useSpeechNarration());
+      expect(result.current.narrationEnabled).toBe(false);
+
+      // Normal speak without force does not speak when muted
+      act(() => {
+        result.current.speak('Unforced sentence');
+      });
+      expect(mockSpeak).not.toHaveBeenCalled();
+
+      // Speak with force: true speaks even when muted
+      act(() => {
+        result.current.speak('Forced replay sentence', { force: true });
+      });
+      expect(mockSpeak).toHaveBeenCalledTimes(1);
+      expect(mockSpeak.mock.calls[0][0].text).toBe('Forced replay sentence');
+    });
+
+    it('Finding 3: does not export toggleSubjectVerbDrill from useChunkFlowGame', async () => {
+      const { renderHook } = await import('@testing-library/react');
+      const { useChunkFlowGame } = await import('../app/hooks/useChunkFlowGame');
+
+      const { result } = renderHook(() => useChunkFlowGame());
+      expect((result.current as any).toggleSubjectVerbDrill).toBeUndefined();
     });
   });
 });

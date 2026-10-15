@@ -70,12 +70,9 @@ export default function Home() {
     subjectMisfireIndex,
     activeBankId,
     activeTrainingId,
-    trainingSortPolicy,
     setPracticeMode,
-    toggleSubjectVerbDrill,
     handleSelectBank,
     handleSelectTraining,
-    handleSetTrainingSortPolicy,
     handleSelectSubjectChunk,
     handleSelectVoice,
     handleSelectTime,
@@ -89,9 +86,6 @@ export default function Home() {
     setSettings((prev) => {
       const updated = { ...prev, ...newSettings };
       saveSettings(updated);
-      if (newSettings.trainingSortPolicy) {
-        handleSetTrainingSortPolicy(newSettings.trainingSortPolicy);
-      }
       return updated;
     });
   };
@@ -114,22 +108,25 @@ export default function Home() {
   });
 
   const hasTrainings = Object.keys(trainingTelemetry).length > 0;
+  const canOpenDrawer = registeredBanks.length > 0 || hasTrainings;
 
   return (
     <div
       className={`min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans selection:bg-cyan-500/30 selection:text-cyan-200 transition-[padding] duration-300 ${
-        isDrawerOpen && hasTrainings ? 'lg:pl-72' : ''
+        isDrawerOpen && canOpenDrawer ? 'lg:pl-72' : ''
       }`}
     >
       {/* Collapsible Left Glassmorphic Training Matrix Drawer */}
-      {hasTrainings && (
+      {canOpenDrawer && (
         <TrainingMatrixDrawer
           isOpen={isDrawerOpen}
           onClose={() => setIsDrawerOpen(false)}
           telemetry={trainingTelemetry}
           activeTrainingId={activeTrainingId}
           onSelectTraining={handleSelectTraining}
-          sortPolicy={settings.trainingSortPolicy ?? trainingSortPolicy}
+          banks={registeredBanks}
+          activeBankId={activeBankId}
+          onSelectBank={handleSelectBank}
         />
       )}
 
@@ -139,21 +136,15 @@ export default function Home() {
         onTogglePracticeMode={() =>
           setPracticeMode((prev) => (prev === 'smart' ? 'random' : 'smart'))
         }
-        isSubjectVerbDrill={isSubjectVerbDrill}
-        onToggleSubjectVerbDrill={toggleSubjectVerbDrill}
         onOpenAnalytics={() => setIsAnalyticsOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
         onOpenImport={() => setIsImportOpen(true)}
-        activeBankId={activeBankId}
-        onSelectBank={handleSelectBank}
-        banks={registeredBanks}
         narrationEnabled={narrationEnabled}
-        onToggleNarration={toggleNarration}
         accent={accent}
         onSelectAccent={setAccent}
         canSelectAccents={canSelectAccents}
-        showMatrix={isDrawerOpen && hasTrainings}
-        onToggleMatrix={hasTrainings ? () => setIsDrawerOpen((prev) => !prev) : undefined}
+        showMatrix={isDrawerOpen && canOpenDrawer}
+        onToggleMatrix={canOpenDrawer ? () => setIsDrawerOpen((prev) => !prev) : undefined}
       />
 
       {/* Main Training Arena */}
@@ -207,8 +198,10 @@ export default function Home() {
           isSubjectVerbDrill={isSubjectVerbDrill}
           onSelectChunk={handleSelectSubjectChunk}
           chunkMisfireIndex={subjectMisfireIndex}
-          onPlayAudio={() => speak(currentQuestion.sentence)}
+          onPlayAudio={() => speak(currentQuestion.sentence, { force: true })}
           isSpeaking={isSpeaking}
+          narrationEnabled={narrationEnabled}
+          onToggleNarration={toggleNarration}
         />
 
         {/* Action Controls & Hotkey Buttons */}

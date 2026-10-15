@@ -1,11 +1,10 @@
 import React, { useMemo } from 'react';
-import type { TrainingSortPolicy, TrainingUnitTelemetry } from '~/types/chunkflow';
+import type { TrainingUnitTelemetry } from '~/types/chunkflow';
 
 export interface TrainingMatrixProps {
   telemetry: Record<string, TrainingUnitTelemetry>;
   activeTrainingId: string | null;
   onSelectTraining: (trainingId: string | null) => void;
-  sortPolicy?: TrainingSortPolicy;
   className?: string;
 }
 
@@ -21,32 +20,12 @@ export const TrainingMatrix: React.FC<TrainingMatrixProps> = ({
   telemetry,
   activeTrainingId,
   onSelectTraining,
-  sortPolicy = 'weakest',
   className = '',
 }) => {
   const units = useMemo(() => {
     const list = Object.values(telemetry);
-
-    if (sortPolicy === 'sequential') {
-      return [...list].sort((a, b) => a.unitNumber - b.unitNumber);
-    }
-
-    // Weakest first: unattempted (0 attempts) or lowest accuracy first
-    return [...list].sort((a, b) => {
-      // Prioritize attempted units with lower accuracy, then unattempted
-      const aVal = a.totalAttempts === 0 ? -1 : a.accuracy;
-      const bVal = b.totalAttempts === 0 ? -1 : b.accuracy;
-
-      if (aVal !== bVal) {
-        return aVal - bVal;
-      }
-      // If same accuracy, sort by slower latency
-      if (a.avgLatencyMs !== b.avgLatencyMs) {
-        return b.avgLatencyMs - a.avgLatencyMs;
-      }
-      return a.unitNumber - b.unitNumber;
-    });
-  }, [telemetry, sortPolicy]);
+    return [...list].sort((a, b) => a.unitNumber - b.unitNumber);
+  }, [telemetry]);
 
   // Group into clusters of 5
   const clusters = useMemo(() => {

@@ -1,0 +1,909 @@
+[
+  {
+    "id": "parker-36-q01",
+    "sentence": "They are trimming the bushes.",
+    "chunks": [
+      {
+        "text": "They",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are trimming",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the bushes.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「are trimming」為現在進行式主動語態 (Present Continuous Active)。主詞為「They」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q02",
+    "sentence": "The swimming pool is surrounded by fences.",
+    "chunks": [
+      {
+        "text": "The swimming pool",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is surrounded",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by fences.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is surrounded」為現在簡單式被動語態 (Present Simple Passive)。主詞為「The swimming pool」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q03",
+    "sentence": "Who's your regular dentist.",
+    "chunks": [
+      {
+        "text": "The subject",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "'s",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "your regular dentist.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「's」為現在簡單式主動語態 (Present Simple Active)。主詞為「The subject」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q04",
+    "sentence": ". the keyboards are currently in use the keyboards are currently in use the keyboards are.",
+    "chunks": [
+      {
+        "text": "the keyboards",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "currently",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in use the keyboards are currently in use the keyboards are.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are」為現在簡單式主動語態 (Present Simple Active)。主詞為「the keyboards」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q05",
+    "sentence": "Would you like my notes from yesterday's meeting.",
+    "chunks": [
+      {
+        "text": "Would",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "like",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "my notes from yesterday's meeting.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「like」為過去簡單式主動語態 (Past Simple Active)。主詞為「you」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q06",
+    "sentence": "The street is occupied by protesters.",
+    "chunks": [
+      {
+        "text": "The street",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is occupied",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by protesters.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is occupied」為現在簡單式被動語態 (Present Simple Passive)。主詞為「The street」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q07",
+    "sentence": "When will they announce the next round of promotions.",
+    "chunks": [
+      {
+        "text": "When will",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "they",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "announce",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the next round of promotions.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「announce」為未來簡單式主動語態 (Future Simple Active)。主詞為「they」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q08",
+    "sentence": "Which company designed our booth for last year's exhibition.",
+    "chunks": [
+      {
+        "text": "Which company",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "designed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "our booth for last year's exhibition.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「designed」為過去簡單式主動語態 (Past Simple Active)。主詞為「Which company」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q09",
+    "sentence": ". pedestrians are heading towards the same direction pedestrians are heading towards the same direction pedestrians.",
+    "chunks": [
+      {
+        "text": "pedestrians",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are heading",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "towards the same direction pedestrians are heading towards the same direction pedestrians.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「are heading」為現在進行式主動語態 (Present Continuous Active)。主詞為「pedestrians」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q10",
+    "sentence": ". is it possible to have the dishwasher installed by the end of the week is.",
+    "chunks": [
+      {
+        "text": "is",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "it",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "it possible",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to have the dishwasher installed by the end of the week is.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is」為現在簡單式主動語態 (Present Simple Active)。主詞為「it」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q11",
+    "sentence": ". aren't we relocating to bangkok this year aren't we relocating to bangkok this year aren't.",
+    "chunks": [
+      {
+        "text": "aren't",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "we",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "relocating",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to bangkok this year aren't we relocating to bangkok this year aren't.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「relocating」為現在進行式主動語態 (Present Continuous Active)。主詞為「we」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q12",
+    "sentence": ". where should we set up the laboratory equipment where should we set up the laboratory.",
+    "chunks": [
+      {
+        "text": "where should",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "we",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "set up",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the laboratory equipment where should we set up the laboratory.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「set up」為現在簡單式主動語態 (Present Simple Active)。主詞為「we」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q13",
+    "sentence": ". would you mind emailing me a copy of the annual report would you mind emailing.",
+    "chunks": [
+      {
+        "text": "would",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "mind",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "emailing me a copy of the annual report would you mind emailing.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「mind」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q14",
+    "sentence": ". when do you expect the auditors from the headquarters when do you expect the auditors.",
+    "chunks": [
+      {
+        "text": "when do",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "you",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "expect",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the auditors",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "from the headquarters when do you expect the auditors.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「expect」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q15",
+    "sentence": ". the nearest petrol station is two blocks away the nearest petrol station is two blocks.",
+    "chunks": [
+      {
+        "text": "the nearest petrol station",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "two blocks away the nearest petrol station is two blocks.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is」為現在簡單式主動語態 (Present Simple Active)。主詞為「the nearest petrol station」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q16",
+    "sentence": "I'd like to renew these library books.",
+    "chunks": [
+      {
+        "text": "I",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "'d like",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to renew these library books.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「'd like」為現在簡單式主動語態 (Present Simple Active)。主詞為「I」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q17",
+    "sentence": ". with over 50 employees attending we will need a larger conference room with over 50.",
+    "chunks": [
+      {
+        "text": "with over 50 employees attending",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "we",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will need",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a larger conference room with over 50.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will need」為未來簡單式主動語態 (Future Simple Active)。主詞為「we」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q18",
+    "sentence": ". it's time for our assembly plant's biennial safety inspection it's time for our assembly plant's.",
+    "chunks": [
+      {
+        "text": "it",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "'s",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "time",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for our assembly plant's biennial safety inspection it's time for our assembly plant's.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「's」為現在簡單式主動語態 (Present Simple Active)。主詞為「it」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q19",
+    "sentence": "Hello i would like to place an order from your dinner menu and have delivery to my office.",
+    "chunks": [
+      {
+        "text": "Hello",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "i",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would like",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to place an order from your dinner menu and have delivery to my office.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would like」為現在簡單式主動語態 (Present Simple Active)。主詞為「i」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q20",
+    "sentence": ". our internet service is so slow and it really affects our work i think it's.",
+    "chunks": [
+      {
+        "text": "our internet service",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "so slow and it really affects our work i think it's.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is」為現在簡單式主動語態 (Present Simple Active)。主詞為「our internet service」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q21",
+    "sentence": ". i can't believe this opportunity slipped through our fingers after two years of hard work.",
+    "chunks": [
+      {
+        "text": "i",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "can't believe",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "this opportunity slipped through our fingers",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "after two years of hard work.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「can't believe」為現在簡單式主動語態 (Present Simple Active)。主詞為「i」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q22",
+    "sentence": "It's going to take us a little longer than we anticipated to complete our customer satisfaction survey.",
+    "chunks": [
+      {
+        "text": "It",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "'s going",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to take us a little longer than we anticipated to complete our customer satisfaction survey.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「's going」為現在進行式主動語態 (Present Continuous Active)。主詞為「It」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q23",
+    "sentence": "According to the survey more than 75 percent of the staff want to have some gym facilities in the workplace according to the survey more than 75 of the staff want to have some gym facilities in the workplace.",
+    "chunks": [
+      {
+        "text": "According to the survey",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "more than 75 percent of the staff",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "want",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to have some gym facilities in the workplace according to the survey more than 75 of the staff want to have some gym facilities in the workplace.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「want」為現在簡單式主動語態 (Present Simple Active)。主詞為「more than 75 percent of the staff」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q24",
+    "sentence": "Passengers affected by the delay are advised to enjoy the refreshments we set up in the lounge on the second floor.",
+    "chunks": [
+      {
+        "text": "Passengers affected by the delay",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are advised",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to enjoy the refreshments we set up in the lounge on the second floor.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「are advised」為現在簡單式被動語態 (Present Simple Passive)。主詞為「Passengers affected by the delay」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q25",
+    "sentence": "We hope to have the product launched on august 1st therefore we may need to double the number of our production workers.",
+    "chunks": [
+      {
+        "text": "We",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "hope",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to have the product launched on august 1st therefore we may need to double the number of our production workers.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「hope」為現在簡單式主動語態 (Present Simple Active)。主詞為「We」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q26",
+    "sentence": "In order to be fully prepared for opening day i am requesting that all staff show up one and a half hours before opening time for a meeting.",
+    "chunks": [
+      {
+        "text": "In order to be fully prepared for opening day",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "i",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "am requesting",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "that all staff show up one and a half hours",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before opening time for a meeting.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「am requesting」為現在進行式主動語態 (Present Continuous Active)。主詞為「i」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q27",
+    "sentence": "As a gesture of our gratitude we would very much like you to accept the enclosed voucher for 100 which can be used on any future purchase as a gesture of our gratitude we would very much like you to accept the enclosed voucher for one hundred dollars which can be used on any future purchase on the ipad.",
+    "chunks": [
+      {
+        "text": "As a gesture of our gratitude",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "we",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "very much like you",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to accept the enclosed voucher for 100 which can be used on any future purchase as a gesture of our gratitude we would very much like you to accept the enclosed voucher for one hundred dollars which can be used on any future purchase on the ipad.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would」為現在簡單式被動語態 (Present Simple Passive)。主詞為「we」。",
+    "trainingId": "parker-36"
+  },
+  {
+    "id": "parker-36-q28",
+    "sentence": ". the attraction features five kilometers of hiking trails a spectacular waterfall and several camping spots.",
+    "chunks": [
+      {
+        "text": "the attraction",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "features",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "five kilometers of hiking trails a spectacular waterfall and several camping spots.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「features」為現在簡單式主動語態 (Present Simple Active)。主詞為「the attraction」。",
+    "trainingId": "parker-36"
+  }
+]

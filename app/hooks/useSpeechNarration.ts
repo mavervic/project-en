@@ -126,9 +126,9 @@ export function useSpeechNarration() {
   }, []);
 
   const speak = useCallback(
-    (text: string) => {
+    (text: string, options?: { force?: boolean }) => {
       if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
-      if (!narrationEnabled) return;
+      if (!narrationEnabled && !options?.force) return;
 
       window.speechSynthesis.cancel();
       activeUtteranceRef.current = null;

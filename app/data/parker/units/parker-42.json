@@ -1,0 +1,922 @@
+[
+  {
+    "id": "parker-42-q01",
+    "sentence": "The sales figures exceeded our expectations.",
+    "chunks": [
+      {
+        "text": "The sales figures",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "exceeded",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "our expectations.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「exceeded」為過去簡單式主動語態 (Past Simple Active)。主詞為「The sales figures」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q02",
+    "sentence": "The company's Revenue increased by 10 compared to last year.",
+    "chunks": [
+      {
+        "text": "The company's Revenue",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "increased",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by 10 compared to last year.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「increased」為過去簡單式主動語態 (Past Simple Active)。主詞為「The company's Revenue」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q03",
+    "sentence": "The manufacturing process needs to be streamlined to increase efficiency.",
+    "chunks": [
+      {
+        "text": "The manufacturing process",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "needs",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to be streamlined to increase efficiency.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「needs」為現在簡單式主動語態 (Present Simple Active)。主詞為「The manufacturing process」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q04",
+    "sentence": "The new accounting software will make it easier to track our finances.",
+    "chunks": [
+      {
+        "text": "The new accounting software",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will make",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "it easier to track our finances.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will make」為未來簡單式主動語態 (Future Simple Active)。主詞為「The new accounting software」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q05",
+    "sentence": "The company is experiencing a shortage of skilled workers.",
+    "chunks": [
+      {
+        "text": "The company",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is experiencing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a shortage of skilled workers.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is experiencing」為現在進行式主動語態 (Present Continuous Active)。主詞為「The company」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q06",
+    "sentence": "The company is introducing a new product line to capture a larger market share.",
+    "chunks": [
+      {
+        "text": "The company",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is introducing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a new product line",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to capture a larger market share.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is introducing」為現在進行式主動語態 (Present Continuous Active)。主詞為「The company」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q07",
+    "sentence": "Our financial performance is closely monitored by its stakeholders.",
+    "chunks": [
+      {
+        "text": "Our financial performance",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is closely monitored",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by its stakeholders.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is closely monitored」為現在簡單式被動語態 (Present Simple Passive)。主詞為「Our financial performance」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q08",
+    "sentence": "Their brand image has been negatively affected by recent controversies.",
+    "chunks": [
+      {
+        "text": "Their brand image",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has been negatively affected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by recent controversies.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「has been negatively affected」為現在完成式被動語態 (Present Perfect Passive)。主詞為「Their brand image」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q09",
+    "sentence": "Our team needs to prioritize our tasks to ensure that we meet the deadlines.",
+    "chunks": [
+      {
+        "text": "Our team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "needs",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to prioritize our tasks to ensure that we meet the deadlines.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「needs」為現在簡單式主動語態 (Present Simple Active)。主詞為「Our team」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q10",
+    "sentence": ". we need to finalize the budget for next year before the end of this quarter.",
+    "chunks": [
+      {
+        "text": "we",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "need",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to finalize the budget for next year before the end of this quarter.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「need」為現在簡單式主動語態 (Present Simple Active)。主詞為「we」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q11",
+    "sentence": ". the company is implementing a new policy to reduce waste and increase sustainability the company.",
+    "chunks": [
+      {
+        "text": "the company",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is implementing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a new policy",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to reduce waste and increase sustainability the company.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is implementing」為現在進行式主動語態 (Present Continuous Active)。主詞為「the company」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q12",
+    "sentence": ". we need to conduct a thorough analysis of our competitors before launching our new product.",
+    "chunks": [
+      {
+        "text": "we",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "need",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to conduct a thorough analysis of our competitors before launching our new product.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「need」為現在簡單式主動語態 (Present Simple Active)。主詞為「we」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q13",
+    "sentence": ". our team needs to sharpen our communication skills to work more efficiently our team needs.",
+    "chunks": [
+      {
+        "text": "our team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "needs",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to sharpen our communication skills to work more efficiently our team needs.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「needs」為現在簡單式主動語態 (Present Simple Active)。主詞為「our team」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q14",
+    "sentence": ". the human resources department is conducting performance evaluations for employees the human resources department is.",
+    "chunks": [
+      {
+        "text": "the human resources department",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is conducting",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "performance evaluations",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for employees the human resources department is.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is conducting」為現在進行式主動語態 (Present Continuous Active)。主詞為「the human resources department」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q15",
+    "sentence": ". our new office building is equipped with state-of-the-art technology and modern amenities our new office.",
+    "chunks": [
+      {
+        "text": "our new office building",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is equipped",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with state-of-the-art technology and modern amenities our new office.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is equipped」為現在簡單式被動語態 (Present Simple Passive)。主詞為「our new office building」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q16",
+    "sentence": ". the admission fee is non-refundable even if you don't attend the event the admission fee.",
+    "chunks": [
+      {
+        "text": "the admission fee",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "non-refundable even if you don't attend the event the admission fee.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is」為現在簡單式主動語態 (Present Simple Active)。主詞為「the admission fee」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q17",
+    "sentence": ". I checked in online but I still need to get my boarding pass at the.",
+    "chunks": [
+      {
+        "text": "I",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "checked in",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "online but I still need",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to get my boarding pass at the.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「checked in」為過去簡單式主動語態 (Past Simple Active)。主詞為「I」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q18",
+    "sentence": "All flammable materials must be properly stored in a ventilated area.",
+    "chunks": [
+      {
+        "text": "All flammable materials",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "must be properly stored",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in a ventilated area.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「must be properly stored」為現在簡單式被動語態 (Present Simple Passive)。主詞為「All flammable materials」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q19",
+    "sentence": ". this brand is known for producing dependable and long-lasting appliances this brand is known for.",
+    "chunks": [
+      {
+        "text": "this brand",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is known",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for producing dependable and long-lasting appliances this brand is known for.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is known」為現在簡單式被動語態 (Present Simple Passive)。主詞為「this brand」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q20",
+    "sentence": ". the flight attendants instructed the passengers to fasten their seat belts due to expected turbulence.",
+    "chunks": [
+      {
+        "text": "the flight attendants",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "instructed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the passengers",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to fasten their seat belts due to expected turbulence.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「instructed」為過去簡單式主動語態 (Past Simple Active)。主詞為「the flight attendants」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q21",
+    "sentence": ". the employee orientation program is designed to familiarize new hires with the company's policies and.",
+    "chunks": [
+      {
+        "text": "the employee orientation program",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is designed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to familiarize new hires with the company's policies and.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is designed」為現在簡單式被動語態 (Present Simple Passive)。主詞為「the employee orientation program」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q22",
+    "sentence": ". the training session covered a variety of topics including customer service sales techniques and communication.",
+    "chunks": [
+      {
+        "text": "the training session",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "covered",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a variety of topics including customer service sales techniques and communication.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「covered」為過去簡單式主動語態 (Past Simple Active)。主詞為「the training session」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q23",
+    "sentence": ". the company's management team is considering various strategies to increase market share and boost profits.",
+    "chunks": [
+      {
+        "text": "the company's management team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is considering",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "various strategies",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to increase market share and boost profits.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "「is considering」為現在進行式主動語態 (Present Continuous Active)。主詞為「the company's management team」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q24",
+    "sentence": ". the seminar will focus on the latest trends and developments in the field of artificial.",
+    "chunks": [
+      {
+        "text": "the seminar",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will focus",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on the latest trends and developments in the field of artificial.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will focus」為未來簡單式主動語態 (Future Simple Active)。主詞為「the seminar」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q25",
+    "sentence": "Our new TV commercial will feature a famous actress endorsing our new line of skin care.",
+    "chunks": [
+      {
+        "text": "Our new TV commercial",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will feature",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a famous actress endorsing our new line of skin care.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will feature」為未來簡單式主動語態 (Future Simple Active)。主詞為「Our new TV commercial」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q26",
+    "sentence": ". the quality control team identified a defect in the manufacturing process and implemented corrective actions.",
+    "chunks": [
+      {
+        "text": "the quality control team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "identified",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a defect",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in the manufacturing process and implemented corrective actions.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "「identified」為過去簡單式主動語態 (Past Simple Active)。主詞為「the quality control team」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q27",
+    "sentence": ". the inventory management system allows us to track our stock levels and reorder when necessary.",
+    "chunks": [
+      {
+        "text": "the inventory management system",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "allows",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "us",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to track our stock levels and reorder when necessary.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「allows」為現在簡單式主動語態 (Present Simple Active)。主詞為「the inventory management system」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q28",
+    "sentence": ". the legal department is responsible for ensuring that the company's operation complies with all relevant.",
+    "chunks": [
+      {
+        "text": "the legal department",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "responsible",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for ensuring that the company's operation complies with all relevant.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「is」為現在簡單式主動語態 (Present Simple Active)。主詞為「the legal department」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q29",
+    "sentence": "The marketing team develops advertising campaigns across various media channels to promote the company's products and services.",
+    "chunks": [
+      {
+        "text": "The marketing team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "develops",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "advertising campaigns across various media channels",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to promote the company's products and services.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「develops」為現在簡單式主動語態 (Present Simple Active)。主詞為「The marketing team」。",
+    "trainingId": "parker-42"
+  },
+  {
+    "id": "parker-42-q30",
+    "sentence": ". High inflation can lead to a decrease in the purchasing power of money making it.",
+    "chunks": [
+      {
+        "text": "High inflation",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "can lead",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to a decrease in the purchasing power of money making it.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「can lead」為現在簡單式主動語態 (Present Simple Active)。主詞為「High inflation」。",
+    "trainingId": "parker-42"
+  }
+]
