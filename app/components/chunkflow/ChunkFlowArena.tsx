@@ -19,6 +19,7 @@ interface ChunkFlowArenaProps {
   isSpeaking?: boolean;
   narrationEnabled?: boolean;
   onToggleNarration?: () => void;
+  onSpeakChunk?: (text: string) => void;
 }
 
 export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
@@ -39,6 +40,7 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   isSpeaking = false,
   narrationEnabled = false,
   onToggleNarration,
+  onSpeakChunk,
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
   const [isCopied, setIsCopied] = useState(false);
@@ -350,56 +352,74 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             const isVerbLocked = !isSubjectVerbDrill || roundStage === 'classify' || showFeedback;
 
             let isInteractive = false;
+            let clickHandler: (() => void) | undefined = undefined;
+
+            const selectHandler = onSelectChunk || onSelectSubjectChunk;
+
             if (!showFeedback && isSubjectVerbDrill) {
               if (roundStage === 'subject') {
                 isInteractive = true;
+                clickHandler = () => selectHandler?.(index);
               } else if (roundStage === 'verb') {
                 isInteractive = !isSubjectChunk;
+                clickHandler = () => selectHandler?.(index);
               }
+            } else if (showFeedback && onSpeakChunk) {
+              isInteractive = true;
+              clickHandler = () => onSpeakChunk(chunk.text);
             }
-
-            const selectHandler = onSelectChunk || onSelectSubjectChunk;
 
             let chunkStyle = 'border-transparent bg-transparent text-zinc-300';
             if (isMisfired) {
               chunkStyle =
                 'border-rose-500 bg-rose-950/60 text-rose-200 shadow-[0_0_20px_rgba(244,63,94,0.4)] animate-shake';
+            } else if (showFeedback) {
+              if (isSubjectChunk) {
+                chunkStyle =
+                  'border-sky-500/60 bg-sky-950/30 text-sky-200 ring-1 ring-sky-500/30 shadow-sm cursor-pointer hover:bg-sky-900/40 hover:scale-105 active:scale-95 transition-all';
+              } else if (isVerbChunk && isVerbLocked) {
+                chunkStyle =
+                  'border-cyan-400 bg-cyan-950/80 text-cyan-200 shadow-[0_0_20px_rgba(6,182,212,0.4)] ring-2 ring-cyan-500/20 cursor-pointer hover:bg-cyan-900/50 hover:scale-105 active:scale-95 transition-all';
+              } else {
+                chunkStyle =
+                  'border-dashed border-zinc-700/60 hover:border-cyan-400 hover:bg-zinc-900 text-zinc-300 cursor-pointer hover:scale-105 active:scale-95 shadow-sm transition-all';
+              }
             } else if (isInteractive) {
               chunkStyle =
                 'border-dashed border-zinc-700/80 hover:border-cyan-400 hover:bg-zinc-900 text-zinc-200 cursor-pointer hover:scale-105 active:scale-95 shadow-sm';
-            } else if (
-              isSubjectChunk &&
-              (isSubjectLocked || showFeedback || focusState !== 'idle')
-            ) {
+            } else if (isSubjectChunk && (isSubjectLocked || focusState !== 'idle')) {
               chunkStyle =
                 'border-sky-500/60 bg-sky-950/30 text-sky-200 ring-1 ring-sky-500/30 shadow-sm';
-            } else if (isVerbChunk && isVerbLocked && (focusState !== 'idle' || showFeedback)) {
+            } else if (isVerbChunk && isVerbLocked && focusState !== 'idle') {
               chunkStyle =
                 'border-cyan-400 bg-cyan-950/80 text-cyan-200 shadow-[0_0_20px_rgba(6,182,212,0.4)] ring-2 ring-cyan-500/20';
             } else {
               chunkStyle = 'border-transparent bg-transparent text-zinc-400';
             }
 
+            const chunkAriaLabel = showFeedback
+              ? `朗讀語塊: ${chunk.text}`
+              : isInteractive
+                ? `Select chunk: ${chunk.text}`
+                : undefined;
+
             return (
               <span
                 key={index}
-                onClick={isInteractive ? () => selectHandler?.(index) : undefined}
+                onClick={clickHandler}
+                onKeyDown={(e) => {
+                  if (isInteractive && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault();
+                    clickHandler?.();
+                  }
+                }}
                 role={isInteractive ? 'button' : undefined}
                 tabIndex={isInteractive ? 0 : undefined}
-                aria-label={isInteractive ? `Select chunk: ${chunk.text}` : undefined}
+                aria-label={chunkAriaLabel}
+                title={showFeedback ? `點擊朗讀 "${chunk.text}"` : undefined}
                 className={`relative inline-flex items-center px-3.5 py-1.5 rounded-xl border-2 text-xl md:text-3xl font-semibold tracking-tight transition-all duration-200 select-none ${chunkStyle}`}
               >
                 {chunk.text}
-                {isSubjectChunk && isSubjectLocked && (
-                  <span className="ml-2 text-[10px] font-mono tracking-wider px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/30 font-bold uppercase">
-                    S
-                  </span>
-                )}
-                {isVerbChunk && roundStage === 'classify' && isSubjectVerbDrill && (
-                  <span className="ml-2 text-[10px] font-mono tracking-wider px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold uppercase">
-                    V
-                  </span>
-                )}
               </span>
             );
           })}

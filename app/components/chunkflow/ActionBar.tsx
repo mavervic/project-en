@@ -7,7 +7,6 @@ interface ActionBarProps {
   onSelectVoice: (voice: VoiceChoice) => void;
   onSelectTime: (time: TimeChoice) => void;
   disabled?: boolean;
-  showGuidance?: boolean;
 }
 
 export const ActionBar: React.FC<ActionBarProps> = ({
@@ -16,7 +15,6 @@ export const ActionBar: React.FC<ActionBarProps> = ({
   onSelectVoice,
   onSelectTime,
   disabled = false,
-  showGuidance = true,
 }) => {
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-4 p-5 md:p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-md">
@@ -151,39 +149,6 @@ export const ActionBar: React.FC<ActionBarProps> = ({
           </div>
         </div>
       </div>
-
-      {/* Dynamic Status / Guidance Hint */}
-      {(showGuidance || selectedVoice || selectedTime) && (
-        <div className="w-full pt-3 border-t border-zinc-800/80 text-center text-xs font-mono">
-          {selectedVoice && !selectedTime && (
-            <span className="text-cyan-300 flex items-center justify-center gap-1.5 animate-pulse">
-              <span>
-                Voice: <strong>{selectedVoice.toUpperCase()}</strong> ✓
-              </span>
-              <span className="text-zinc-500">|</span>
-              <span className="text-zinc-300">
-                {showGuidance ? 'Now select Tense [1 / 2 / 3] to submit!' : 'Select Tense'}
-              </span>
-            </span>
-          )}
-          {!selectedVoice && selectedTime && (
-            <span className="text-indigo-300 flex items-center justify-center gap-1.5 animate-pulse">
-              <span>
-                Tense: <strong>{selectedTime.toUpperCase()}</strong> ✓
-              </span>
-              <span className="text-zinc-500">|</span>
-              <span className="text-zinc-300">
-                {showGuidance ? 'Now select Voice [A / P] to submit!' : 'Select Voice'}
-              </span>
-            </span>
-          )}
-          {!selectedVoice && !selectedTime && showGuidance && (
-            <span className="text-zinc-500">
-              Select Voice and Tense in any order to submit answer.
-            </span>
-          )}
-        </div>
-      )}
     </div>
   );
 };

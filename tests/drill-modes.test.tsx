@@ -174,8 +174,10 @@ describe('Subject-Verb Drill Mode Settings Specification', () => {
 
       // Verify stage watermark badge
       expect(screen.getByText(/2. Tap Verb Chunk/i)).toBeDefined();
-      // Subject should show locked [S] badge
-      expect(screen.getByText('S')).toBeDefined();
+      // Subject should show locked styling without inline S badge
+      const subjectSpan = screen.getByText('The committee');
+      expect(subjectSpan.className).toContain('border-sky-500/60');
+      expect(screen.queryByText(/^S$/)).toBeNull();
 
       // Click the verb chunk
       const verbBtn = screen.getByRole('button', { name: /select chunk: approved/i });

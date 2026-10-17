@@ -138,4 +138,64 @@ describe('ChunkFlowArena - Copy Button & Translation Display', () => {
     const copyBtn = screen.getByTestId('copy-sentence-btn');
     expect(copyBtn).toBeDefined();
   });
+
+  it('does not render inline S and V badges when Subject and Verb are locked', () => {
+    render(
+      <ChunkFlowArena
+        question={mockQuestionWithTranslation}
+        focusState="idle"
+        progressPercent={0}
+        lastEvaluation={null}
+        showFeedback={false}
+        isSubjectVerbDrill={true}
+        roundStage="classify"
+      />
+    );
+
+    const subjectChunk = screen.getByText('The supervisor');
+    expect(subjectChunk).toBeDefined();
+    expect(screen.queryByText(/^S$/)).toBeNull();
+    expect(screen.queryByText(/^V$/)).toBeNull();
+  });
+
+  it('triggers onSpeakChunk when a chunk is clicked in showFeedback state', () => {
+    const onSpeakChunk = vi.fn();
+    render(
+      <ChunkFlowArena
+        question={mockQuestionWithTranslation}
+        focusState="evaluated"
+        progressPercent={100}
+        lastEvaluation={{ isCorrect: true, latencyMs: 1000 }}
+        showFeedback={true}
+        onSpeakChunk={onSpeakChunk}
+      />
+    );
+
+    const chunk = screen.getByText('The supervisor');
+    fireEvent.click(chunk);
+
+    expect(onSpeakChunk).toHaveBeenCalledTimes(1);
+    expect(onSpeakChunk).toHaveBeenCalledWith('The supervisor');
+  });
+
+  it('triggers onSpeakChunk via Enter or Space keydown in showFeedback state', () => {
+    const onSpeakChunk = vi.fn();
+    render(
+      <ChunkFlowArena
+        question={mockQuestionWithTranslation}
+        focusState="evaluated"
+        progressPercent={100}
+        lastEvaluation={{ isCorrect: true, latencyMs: 1000 }}
+        showFeedback={true}
+        onSpeakChunk={onSpeakChunk}
+      />
+    );
+
+    const chunk = screen.getByText('The supervisor');
+    fireEvent.keyDown(chunk, { key: 'Enter' });
+    expect(onSpeakChunk).toHaveBeenCalledWith('The supervisor');
+
+    fireEvent.keyDown(chunk, { key: ' ' });
+    expect(onSpeakChunk).toHaveBeenCalledTimes(2);
+  });
 });

@@ -46,6 +46,9 @@ export default function Home() {
     speak,
     isSpeaking,
     canSelectAccents,
+    voices,
+    selectedVoiceURI,
+    setVoiceURI,
   } = useSpeechNarration();
 
   const registeredBanks = getRegisteredBanks();
@@ -149,42 +152,6 @@ export default function Home() {
 
       {/* Main Training Arena */}
       <main className="flex-1 flex flex-col justify-center items-center px-4 md:px-8 py-6 md:py-12 max-w-5xl mx-auto w-full gap-6 md:gap-8">
-        {settings.showGuidance && (
-          <div className="text-center space-y-2">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium tracking-wide bg-zinc-900 border border-zinc-800 text-zinc-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-              FOCUS STATE:{' '}
-              <span className="uppercase text-cyan-300 font-semibold">{focusState}</span>
-            </span>
-            <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white">
-              {isSubjectVerbDrill && roundStage === 'subject'
-                ? 'Identify the Grammatical Subject'
-                : isSubjectVerbDrill && roundStage === 'verb'
-                  ? 'Identify the Grammatical Verb'
-                  : 'Identify the Grammatical Slot'}
-            </h1>
-            <p className="text-xs md:text-sm text-zinc-400 max-w-lg mx-auto">
-              {isSubjectVerbDrill && roundStage === 'subject' ? (
-                <>
-                  Click or tap the <strong className="text-sky-300">Subject chunk</strong> of the
-                  sentence to lock it before finding the verb.
-                </>
-              ) : isSubjectVerbDrill && roundStage === 'verb' ? (
-                <>
-                  Click or tap the <strong className="text-cyan-300">Verb chunk</strong> of the
-                  sentence to lock it before classifying voice and tense.
-                </>
-              ) : (
-                <>
-                  Classify the highlighted chunk’s <strong className="text-zinc-200">Voice</strong>{' '}
-                  (Active/Passive) and <strong className="text-zinc-200">Tense</strong>{' '}
-                  (Present/Past/Future) before the background completely darkens.
-                </>
-              )}
-            </p>
-          </div>
-        )}
-
         {/* Central Sentence Arena */}
         <ChunkFlowArena
           question={currentQuestion}
@@ -202,6 +169,7 @@ export default function Home() {
           isSpeaking={isSpeaking}
           narrationEnabled={narrationEnabled}
           onToggleNarration={toggleNarration}
+          onSpeakChunk={(text) => speak(text, { force: true })}
         />
 
         {/* Action Controls & Hotkey Buttons */}
@@ -211,7 +179,6 @@ export default function Home() {
           onSelectVoice={handleSelectVoice}
           onSelectTime={handleSelectTime}
           disabled={showFeedback || (isSubjectVerbDrill && roundStage !== 'classify')}
-          showGuidance={settings.showGuidance}
         />
 
         {/* Keyboard Shortcut Guidance Bar (desktop only) */}
@@ -279,6 +246,12 @@ export default function Home() {
         onClose={() => setIsSettingsOpen(false)}
         settings={settings}
         onUpdateSettings={handleUpdateSettings}
+        accent={accent}
+        onSelectAccent={setAccent}
+        voices={voices}
+        selectedVoiceURI={selectedVoiceURI}
+        onSelectVoiceURI={setVoiceURI}
+        onPreviewVoice={speak}
       />
 
       {/* Import Custom Questions Modal */}

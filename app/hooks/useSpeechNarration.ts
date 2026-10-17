@@ -3,8 +3,10 @@ import type { SpeechAccent } from '../types/chunkflow';
 import {
   loadNarrationEnabled,
   loadSpeechAccent,
+  loadSpeechVoiceURI,
   saveNarrationEnabled,
   saveSpeechAccent,
+  saveSpeechVoiceURI,
 } from '../utils/storage';
 
 export const ACCENT_CONFIG: Record<
@@ -17,6 +19,9 @@ export const ACCENT_CONFIG: Record<
   CA: { flag: '🇨🇦', label: '加拿大 (CA)', langPrefix: 'en-CA' },
 };
 
+export const ACCENT_PREVIEW_SENTENCE =
+  'The director scheduled a conference about our water project.';
+
 function isNaturalVoice(voice: SpeechSynthesisVoice): boolean {
   const name = voice.name.toLowerCase();
   return name.includes('natural') || name.includes('online') || name.includes('neural');
@@ -27,6 +32,9 @@ export function useSpeechNarration() {
     loadNarrationEnabled()
   );
   const [accent, setAccentState] = useState<SpeechAccent>(() => loadSpeechAccent());
+  const [selectedVoiceURI, setSelectedVoiceURIState] = useState<string | null>(() =>
+    loadSpeechVoiceURI()
+  );
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
   const [canSelectAccents, setCanSelectAccents] = useState<boolean>(false);
@@ -73,11 +81,24 @@ export function useSpeechNarration() {
     };
   }, []);
 
+  const setVoiceURI = useCallback((uri: string | null) => {
+    setSelectedVoiceURIState(uri);
+    saveSpeechVoiceURI(uri);
+  }, []);
+
   const resolveVoice = useCallback(
     (targetAccent: SpeechAccent): SpeechSynthesisVoice | null => {
       if (voices.length === 0) return null;
 
       const targetPrefix = ACCENT_CONFIG[targetAccent].langPrefix;
+
+      // Priority 0: Explicitly user-selected voice URI matching target accent
+      if (selectedVoiceURI) {
+        const found = voices.find((v) => v.voiceURI === selectedVoiceURI);
+        if (found && found.lang.replace('_', '-').startsWith(targetPrefix)) {
+          return found;
+        }
+      }
 
       // Priority 1: Match selected accent with Natural / Online / Neural in name
       const naturalMatch = voices.find((v) => {
@@ -88,7 +109,16 @@ export function useSpeechNarration() {
         return naturalMatch;
       }
 
-      // Priority 2: Standard US English fallback
+      // Priority 2: Standard regional match for selected accent
+      const regionalMatch = voices.find((v) => {
+        const lang = v.lang.replace('_', '-');
+        return lang.startsWith(targetPrefix);
+      });
+      if (regionalMatch) {
+        return regionalMatch;
+      }
+
+      // Priority 3: Standard US English fallback
       const usNatural = voices.find((v) => {
         const lang = v.lang.replace('_', '-');
         return lang.startsWith('en-US') && isNaturalVoice(v);
@@ -104,7 +134,7 @@ export function useSpeechNarration() {
 
       return standardUs || voices[0] || null;
     },
-    [voices]
+    [voices, selectedVoiceURI]
   );
 
   const toggleNarration = useCallback(() => {
@@ -123,10 +153,21 @@ export function useSpeechNarration() {
   const setAccent = useCallback((newAccent: SpeechAccent) => {
     setAccentState(newAccent);
     saveSpeechAccent(newAccent);
+    // When accent is explicitly switched, reset specific voice URI so accent resolution applies
+    setSelectedVoiceURIState(null);
+    saveSpeechVoiceURI(null);
   }, []);
 
   const speak = useCallback(
-    (text: string, options?: { force?: boolean }) => {
+    (
+      text: string,
+      options?: {
+        force?: boolean;
+        voice?: SpeechSynthesisVoice | null;
+        voiceURI?: string;
+        accent?: SpeechAccent;
+      }
+    ) => {
       if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
       if (!narrationEnabled && !options?.force) return;
 
@@ -136,12 +177,21 @@ export function useSpeechNarration() {
       const utterance = new SpeechSynthesisUtterance(text);
       activeUtteranceRef.current = utterance;
 
-      const chosenVoice = resolveVoice(accent);
+      let chosenVoice: SpeechSynthesisVoice | null = null;
+      if (options?.voice) {
+        chosenVoice = options.voice;
+      } else if (options?.voiceURI) {
+        chosenVoice = voices.find((v) => v.voiceURI === options.voiceURI) || null;
+      }
+      if (!chosenVoice) {
+        chosenVoice = resolveVoice(options?.accent || accent);
+      }
+
       if (chosenVoice) {
         utterance.voice = chosenVoice;
         utterance.lang = chosenVoice.lang;
       } else {
-        utterance.lang = ACCENT_CONFIG[accent].langPrefix;
+        utterance.lang = ACCENT_CONFIG[options?.accent || accent].langPrefix;
       }
       utterance.rate = 0.95;
 
@@ -157,7 +207,7 @@ export function useSpeechNarration() {
 
       window.speechSynthesis.speak(utterance);
     },
-    [narrationEnabled, accent, resolveVoice]
+    [narrationEnabled, accent, resolveVoice, voices]
   );
 
   const stop = useCallback(() => {
@@ -177,5 +227,9 @@ export function useSpeechNarration() {
     stop,
     isSpeaking,
     canSelectAccents,
+    voices,
+    selectedVoiceURI,
+    setVoiceURI,
+    resolveVoice,
   };
 }

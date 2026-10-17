@@ -304,7 +304,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                     <button
                       type="button"
                       data-testid={`training-block-${unit.trainingId}`}
-                      onClick={() => onSelectTraining(isSelected ? null : unit.trainingId)}
+                      onClick={() => onSelectTraining(unit.trainingId)}
                       aria-label={`${unit.lessonName}: 正確率 ${unit.accuracy}%, 嘗試 ${unit.totalAttempts} 次`}
                       className={`w-[36px] h-[36px] rounded-lg border text-xs font-mono transition-all duration-150 flex items-center justify-center cursor-pointer select-none ${completionStyle} ${
                         isSelected

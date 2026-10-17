@@ -64,6 +64,7 @@ export interface ChunkFlowSettings {
   showGuidance: boolean;
   narrationEnabled?: boolean;
   speechAccent?: SpeechAccent;
+  speechVoiceURI?: string;
 }
 
 export interface QuestionBankMeta {

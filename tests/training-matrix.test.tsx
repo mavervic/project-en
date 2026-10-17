@@ -112,8 +112,13 @@ describe('TrainingMatrix Component', () => {
     expect(screen.getByTestId('active-filter-indicator')).toBeDefined();
     expect(block2.className).toContain('ring-2 ring-cyan-400');
 
-    // Clicking again should toggle off (pass null)
+    // Clicking again preserves selection
     fireEvent.click(block2);
+    expect(onSelect).toHaveBeenCalledWith('parker-02');
+
+    // Clearing active filter is done via unlock button
+    const unlockBtn = screen.getByRole('button', { name: /清除鎖定/i });
+    fireEvent.click(unlockBtn);
     expect(onSelect).toHaveBeenCalledWith(null);
   });
 
@@ -598,8 +603,13 @@ describe('TrainingMatrixDrawer Component', () => {
     );
 
     expect(screen.getByTestId('active-filter-indicator')).toBeDefined();
-    // Clicking selected block deselects
+    // Clicking selected block preserves selection
     fireEvent.click(block);
+    expect(onSelect).toHaveBeenCalledWith('parker-02');
+
+    // Clearing active filter is done via unlock button
+    const unlockBtn = screen.getByRole('button', { name: /清除鎖定/i });
+    fireEvent.click(unlockBtn);
     expect(onSelect).toHaveBeenCalledWith(null);
   });
 

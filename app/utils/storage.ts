@@ -14,6 +14,7 @@ const SETTINGS_STORAGE_KEY = 'chunkflow_settings_v1';
 const CUSTOM_QUESTIONS_STORAGE_KEY = 'chunkflow_custom_questions_v1';
 const NARRATION_STORAGE_KEY = 'chunkflow_narration_enabled_v1';
 const SPEECH_ACCENT_STORAGE_KEY = 'chunkflow_speech_accent_v1';
+const SPEECH_VOICE_URI_STORAGE_KEY = 'chunkflow_speech_voice_uri_v1';
 const ACTIVE_BANK_STORAGE_KEY = 'chunkflow_active_bank_v1';
 
 const DEFAULT_SETTINGS: ChunkFlowSettings = {
@@ -300,6 +301,30 @@ export function saveSpeechAccent(accent: SpeechAccent): void {
       window.localStorage.setItem(SPEECH_ACCENT_STORAGE_KEY, accent);
     } catch (err) {
       console.warn('Failed to save speech accent to localStorage', err);
+    }
+  }
+}
+
+export function loadSpeechVoiceURI(): string | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    return window.localStorage.getItem(SPEECH_VOICE_URI_STORAGE_KEY);
+  } catch (err) {
+    console.warn('Failed to load speech voice URI from localStorage', err);
+    return null;
+  }
+}
+
+export function saveSpeechVoiceURI(uri: string | null): void {
+  if (typeof window !== 'undefined') {
+    try {
+      if (uri) {
+        window.localStorage.setItem(SPEECH_VOICE_URI_STORAGE_KEY, uri);
+      } else {
+        window.localStorage.removeItem(SPEECH_VOICE_URI_STORAGE_KEY);
+      }
+    } catch (err) {
+      console.warn('Failed to save speech voice URI to localStorage', err);
     }
   }
 }

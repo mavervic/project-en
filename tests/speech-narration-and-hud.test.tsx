@@ -143,6 +143,34 @@ describe('Speech Narration Hook (useSpeechNarration)', () => {
     // canSelectAccents should be false because no regional Natural voices
     expect(result.current.canSelectAccents).toBe(false);
   });
+
+  it('does not use selectedVoiceURI if it does not match the requested target accent', () => {
+    const availableVoices = [
+      { voiceURI: 'v-us-custom', name: 'Custom US Voice', lang: 'en-US' },
+      { voiceURI: 'v-gb-natural', name: 'Sonia Online (Natural)', lang: 'en-GB' },
+    ] as unknown as SpeechSynthesisVoice[];
+
+    (window.speechSynthesis.getVoices as any).mockReturnValue(availableVoices);
+
+    const { result } = renderHook(() => useSpeechNarration());
+
+    act(() => {
+      if (window.speechSynthesis.onvoiceschanged) {
+        (window.speechSynthesis.onvoiceschanged as any)();
+      }
+      result.current.toggleNarration();
+      result.current.setVoiceURI('v-us-custom');
+    });
+
+    // Speaking with explicit accent 'GB' should resolve to GB voice, ignoring 'v-us-custom'
+    act(() => {
+      result.current.speak('Hello UK', { force: true, accent: 'GB' });
+    });
+
+    expect(mockSpeak).toHaveBeenCalled();
+    const utterance = mockSpeak.mock.calls[0][0];
+    expect(utterance.voice.voiceURI).toBe('v-gb-natural');
+  });
 });
 
 describe('HeaderHUD Audio Narration, Bank Switcher, and Matrix Controls', () => {
@@ -339,5 +367,137 @@ describe('ChunkFlowArena Audio Controls & Replay Integration', () => {
     );
 
     expect(screen.getByTestId('narration-toggle-btn').textContent).toContain('朗誦開');
+  });
+});
+
+describe('SettingsModal Voice Settings Controls', () => {
+  const mockVoices = [
+    { voiceURI: 'v-au-1', name: 'Natasha (Natural)', lang: 'en-AU' },
+    { voiceURI: 'v-ca-1', name: 'Liam (Natural)', lang: 'en-CA' },
+    { voiceURI: 'v-gb-1', name: 'Sonia (Natural)', lang: 'en-GB' },
+    { voiceURI: 'v-us-1', name: 'Jenny (Natural)', lang: 'en-US' },
+    { voiceURI: 'v-us-2', name: 'Guy (Natural)', lang: 'en-US' },
+  ] as unknown as SpeechSynthesisVoice[];
+
+  it('renders 4-flag accent switch and handles flag selection with auto-preview', async () => {
+    const { SettingsModal } = await import('../app/components/chunkflow/SettingsModal');
+    const { ACCENT_PREVIEW_SENTENCE } = await import('../app/hooks/useSpeechNarration');
+    const onSelectAccent = vi.fn();
+    const onSelectVoiceURI = vi.fn();
+    const onPreviewVoice = vi.fn();
+
+    render(
+      <SettingsModal
+        isOpen={true}
+        onClose={vi.fn()}
+        accent="US"
+        onSelectAccent={onSelectAccent}
+        voices={mockVoices}
+        selectedVoiceURI="v-us-1"
+        onSelectVoiceURI={onSelectVoiceURI}
+        onPreviewVoice={onPreviewVoice}
+      />
+    );
+
+    expect(screen.getByTestId('voice-settings-section')).toBeDefined();
+    expect(screen.getByTestId('accent-flag-switch')).toBeDefined();
+    expect(screen.getByTestId('voice-priority-guidance')).toBeDefined();
+    expect(screen.getByTestId('voice-priority-guidance').textContent).toContain('Natural / Neural');
+
+    // Ensure redundant voice name preview is removed next to label
+    expect(screen.queryByTestId('selected-voice-name')).toBeNull();
+
+    const auBtn = screen.getByTestId('flag-switch-AU');
+    const caBtn = screen.getByTestId('flag-switch-CA');
+    const gbBtn = screen.getByTestId('flag-switch-GB');
+    const usBtn = screen.getByTestId('flag-switch-US');
+
+    expect(auBtn.textContent).toContain('🇦🇺');
+    expect(caBtn.textContent).toContain('🇨🇦');
+    expect(gbBtn.textContent).toContain('🇬🇧');
+    expect(usBtn.textContent).toContain('🇺🇸');
+
+    // Click GB flag -> triggers selection and auto-preview
+    fireEvent.click(gbBtn);
+    expect(onSelectAccent).toHaveBeenCalledWith('GB');
+    expect(onPreviewVoice).toHaveBeenCalledWith(
+      ACCENT_PREVIEW_SENTENCE,
+      expect.objectContaining({ force: true, accent: 'GB' })
+    );
+
+    const select = screen.getByTestId('voice-dropdown-select') as HTMLSelectElement;
+    expect(select.value).toBe('v-us-1');
+
+    // Change voice in dropdown -> triggers selection and auto-preview
+    fireEvent.change(select, { target: { value: 'v-us-2' } });
+    expect(onSelectVoiceURI).toHaveBeenCalledWith('v-us-2');
+    expect(onPreviewVoice).toHaveBeenCalledWith(
+      ACCENT_PREVIEW_SENTENCE,
+      expect.objectContaining({ force: true, voiceURI: 'v-us-2' })
+    );
+  });
+
+  it('filters available voices by the selected accent in the dropdown', async () => {
+    const { SettingsModal } = await import('../app/components/chunkflow/SettingsModal');
+
+    const { rerender } = render(
+      <SettingsModal
+        isOpen={true}
+        onClose={vi.fn()}
+        accent="AU"
+        onSelectAccent={vi.fn()}
+        voices={mockVoices}
+      />
+    );
+
+    const select = screen.getByTestId('voice-dropdown-select') as HTMLSelectElement;
+    expect(select.options.length).toBe(1);
+    expect(select.options[0].textContent).toContain('Natasha');
+
+    rerender(
+      <SettingsModal
+        isOpen={true}
+        onClose={vi.fn()}
+        accent="US"
+        onSelectAccent={vi.fn()}
+        voices={mockVoices}
+      />
+    );
+
+    const updatedSelect = screen.getByTestId('voice-dropdown-select') as HTMLSelectElement;
+    expect(updatedSelect.options.length).toBe(2);
+  });
+
+  it('disables flag switch and displays empty notice when an accent has no available synthesizers', async () => {
+    const { SettingsModal } = await import('../app/components/chunkflow/SettingsModal');
+    // Voices list with only US voices
+    const usOnlyVoices = [
+      { voiceURI: 'v-us-1', name: 'Jenny (Natural)', lang: 'en-US' },
+    ] as unknown as SpeechSynthesisVoice[];
+
+    render(
+      <SettingsModal
+        isOpen={true}
+        onClose={vi.fn()}
+        accent="AU"
+        onSelectAccent={vi.fn()}
+        voices={usOnlyVoices}
+      />
+    );
+
+    const auBtn = screen.getByTestId('flag-switch-AU') as HTMLButtonElement;
+    const usBtn = screen.getByTestId('flag-switch-US') as HTMLButtonElement;
+
+    // AU has no voices in usOnlyVoices -> disabled
+    expect(auBtn.disabled).toBe(true);
+    expect(auBtn.className).toContain('cursor-not-allowed');
+
+    // US has voice -> enabled
+    expect(usBtn.disabled).toBe(false);
+
+    // Dropdown for AU should be disabled with empty notice
+    const select = screen.getByTestId('voice-dropdown-select') as HTMLSelectElement;
+    expect(select.disabled).toBe(true);
+    expect(select.options[0].textContent).toContain('目前裝置無此國家的可用語音合成器');
   });
 });
