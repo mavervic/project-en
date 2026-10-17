@@ -1,7 +1,7 @@
 # ChunkFlow — 英文語塊切分與時態語態直覺訓練場
 
 > **ChunkFlow (project-en)** 是一個專為建立英文時態、語態與句構直覺設計的高強度、鍵盤優先（Keyboard-First）互動訓練 Web 應用程式。
-> 透過將句子切分為語法語塊（Syntactic Chunks），搭配兩階段主動詞鎖定（S-V Lock）、約束交替出題（Constrained Alternation Shuffle）、漸進式視覺聚焦壓力（Focus Fade）與沉浸式語音朗讀，幫助學習者在極短時間內建立對句子主謂骨幹、時態（Tense）與語態（Voice）的瞬間直覺反應。
+> 透過將句子切分為語法語塊（Syntactic Chunks），搭配兩階段主動詞鎖定（S-V Lock）、聽音辨識盲聽模式（Blind Listening Recognition）、約束交替出題（Constrained Alternation Shuffle）、漸進式視覺聚焦壓力（Focus Fade）與沉浸式語音朗讀，幫助學習者在極短時間內建立對句子主謂骨幹、時態（Tense）與語態（Voice）的瞬間直覺反應。
 
 ---
 
@@ -74,9 +74,13 @@ ChunkFlow 內建分類多層次的題庫系統，支援即時切換與獨立訓�
 - **智慧展開防護 Tooltip**：短題庫與頂部叢集自動向下展開 (`top-full mt-2`)，絕不遮擋頂部選擇器；長題庫底部智慧向上翻展。
 - **單元鎖定 (Target Lock)**：點選任一單元即可鎖定該課專注練習，點擊解鎖即可恢復題庫循環。
 
-### 4. 🔊 沉浸式語音朗讀與多國口音 (Speech Narration & Accent Settings)
+### 4. 🔊 沉浸式語音朗讀、多國口音與聽音辨識模式 (Speech Narration & Blind Listening Mode)
 
 - 整合 Web Speech API 原生語音合成引擎，題目出現時自動/點擊播放原生發音。
+- **👁️ 聽音辨識盲聽模式 (Blind Listening Recognition Mode)**：
+  - 點擊訓練場右上角靜音按鈕左側的**眼睛切換按鈕（聽音辨識）**，即可將作答中的句子語塊文字變為全透明（`text-transparent`）並隱藏色框提示，訓練純靠聽覺辨識文法結構。
+  - **直入語態與時態分類**：開啟聽音辨識時，自動跳過點選主詞與動詞的步驟，讓學習者聽完句子後直接判斷並選擇**語態（Active / Passive）**與**時態（Present / Past / Future）**。
+  - **自動解除靜音與作答後對照**：若在靜音狀態下開啟聽音辨識，系統會自動開啟語音朗誦並立即播放當前題目；完成作答進入解析（Feedback）畫面時自動恢復顯示完整句子文字與主謂標示以便對照檢討，進入下一題時再自動變回透明（開關狀態自動記憶於 `localStorage`）。
 - **四國口音國旗切換**：支援澳洲 (🇦🇺 en-AU)、加拿大 (🇨🇦 en-CA)、英國 (🇬🇧 en-GB)、美國 (🇺🇸 en-US) 快速切換，切換時自動撥放各國口音特色金句試聽。
 - **高相容性語音優選與防斷機制**：內建智慧評分排序、排除已知異常線上語音（如 Edge 多語串流合成器）、冷卻延遲防抖與自動離線/本機語音降級（Fallback）。
 - **作答後語塊點擊朗讀 (Click-to-Pronounce)**：題目完成作答後，點擊任一語法語塊（Chunk）即可單獨朗讀該片語，方便強化弱點發音與斷句感。
