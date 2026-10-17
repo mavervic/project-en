@@ -4,6 +4,7 @@ import React from 'react';
 import { TrainingMatrix } from '../app/components/chunkflow/TrainingMatrix';
 import { SettingsModal } from '../app/components/chunkflow/SettingsModal';
 import type { Question, TrainingUnitTelemetry } from '../app/types/chunkflow';
+import { TOEIC_PART5_META, TOEIC_PART5_BANK } from '../app/data/toeic-part5';
 
 function createMockTelemetry(count = 50): Record<string, TrainingUnitTelemetry> {
   const result: Record<string, TrainingUnitTelemetry> = {};
@@ -663,5 +664,177 @@ describe('TrainingMatrixDrawer Component', () => {
     const starterOption = screen.getByTestId('select-bank-starter');
     fireEvent.click(starterOption);
     expect(onSelectBank).toHaveBeenCalledWith('starter');
+  });
+
+  it('renders LeetCode Study Plan grouped drawer layout when bank has curriculum groups', async () => {
+    const { TrainingMatrixDrawer } =
+      await import('../app/components/chunkflow/TrainingMatrixDrawer');
+    const onSelectTraining = vi.fn();
+
+    const mockTelemetry: Record<string, TrainingUnitTelemetry> = {
+      'level1-01': {
+        trainingId: 'level1-01',
+        lessonName: '第 01 課',
+        unitNumber: 1,
+        totalAttempts: 10,
+        correctAttempts: 10,
+        accuracy: 100,
+        avgLatencyMs: 1200,
+        bestStreak: 10,
+        masteryTier: 4,
+        isCompleted: true,
+      },
+      'level2-01': {
+        trainingId: 'level2-01',
+        lessonName: '第 01 課',
+        unitNumber: 1,
+        totalAttempts: 0,
+        correctAttempts: 0,
+        accuracy: 0,
+        avgLatencyMs: 0,
+        bestStreak: 0,
+        masteryTier: 0,
+        isCompleted: false,
+      },
+      'level3-02': {
+        trainingId: 'level3-02',
+        lessonName: '第 01 課',
+        unitNumber: 1,
+        totalAttempts: 5,
+        correctAttempts: 3,
+        accuracy: 60,
+        avgLatencyMs: 1500,
+        bestStreak: 3,
+        masteryTier: 2,
+        isCompleted: false,
+      },
+    };
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={mockTelemetry}
+        activeTrainingId={null}
+        onSelectTraining={onSelectTraining}
+        banks={[TOEIC_PART5_META]}
+        activeBankId="toeic-part5"
+      />
+    );
+
+    // Grouped study plan container should be rendered, not the 5-block matrix
+    expect(screen.getByTestId('training-groups-container')).toBeDefined();
+    expect(screen.queryByTestId('training-clusters-container')).toBeNull();
+
+    // Verify 5 curriculum group cards
+    expect(screen.getByTestId('training-group-group-part5-l1')).toBeDefined();
+    expect(screen.getByTestId('training-group-group-part5-l2')).toBeDefined();
+    expect(screen.getByTestId('training-group-group-part5-l3-participle')).toBeDefined();
+    expect(screen.getByTestId('training-group-group-part5-l3-modal')).toBeDefined();
+    expect(screen.getByTestId('training-group-group-part5-l3-subjunctive')).toBeDefined();
+
+    // Verify group headers contain title and count
+    const l1Group = screen.getByTestId('training-group-group-part5-l1');
+    expect(l1Group.textContent).toContain('Level 1: 基礎句型 (S-V 緊鄰)');
+    expect(l1Group.textContent).toContain('5 課');
+
+    // Verify row status icons (completed checkmark vs uncompleted circle)
+    expect(screen.getByTestId('status-completed-level1-01')).toBeDefined();
+    expect(screen.getByTestId('status-uncompleted-level2-01')).toBeDefined();
+
+    // Verify difficulty color-coding
+    const l1Row = screen.getByTestId('training-row-level1-01');
+    expect(l1Row.textContent).toContain('01. S-V 緊鄰基礎 (一)');
+    expect(l1Row.textContent).toContain('Easy');
+    expect(l1Row.querySelector('.text-emerald-400')).toBeDefined();
+
+    const l2Row = screen.getByTestId('training-row-level2-01');
+    expect(l2Row.textContent).toContain('01. 介系詞隔離 (一)');
+    expect(l2Row.textContent).toContain('Medium');
+    expect(l2Row.querySelector('.text-amber-400')).toBeDefined();
+
+    const l3ModalRow = screen.getByTestId('training-row-level3-02');
+    expect(l3ModalRow.textContent).toContain('01. 情態動詞與過去推測');
+    expect(l3ModalRow.textContent).toContain('Hard');
+    expect(l3ModalRow.querySelector('.text-rose-400')).toBeDefined();
+
+    // Clicking row calls onSelectTraining
+    fireEvent.click(l1Row);
+    expect(onSelectTraining).toHaveBeenCalledWith('level1-01');
+  });
+
+  it('toggles tag pill badges visibility across all rows via Show tags switch', async () => {
+    const { TrainingMatrixDrawer } =
+      await import('../app/components/chunkflow/TrainingMatrixDrawer');
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={{}}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+        banks={[TOEIC_PART5_META]}
+        activeBankId="toeic-part5"
+      />
+    );
+
+    // Initial state: Show tags is enabled (aria-checked=true)
+    const showTagsSwitch = screen.getByTestId('show-tags-switch');
+    expect(showTagsSwitch.getAttribute('aria-checked')).toBe('true');
+
+    // Tags row should exist
+    expect(screen.getByTestId('tag-row-level1-01')).toBeDefined();
+    expect(screen.getByTestId('tag-row-level1-01').textContent).toContain('S-V 緊鄰');
+
+    // Click toggle to disable
+    fireEvent.click(showTagsSwitch);
+    expect(showTagsSwitch.getAttribute('aria-checked')).toBe('false');
+
+    // Tags rows should be hidden
+    expect(screen.queryByTestId('tag-row-level1-01')).toBeNull();
+    expect(screen.queryByTestId('tag-row-level2-01')).toBeNull();
+
+    // Click toggle again to re-enable
+    fireEvent.click(showTagsSwitch);
+    expect(showTagsSwitch.getAttribute('aria-checked')).toBe('true');
+    expect(screen.getByTestId('tag-row-level1-01')).toBeDefined();
+  });
+
+  it('preserves clustered 5-block matrix layout when bank has no curriculum groups (Parker bank)', async () => {
+    const { TrainingMatrixDrawer } =
+      await import('../app/components/chunkflow/TrainingMatrixDrawer');
+    const mockBanks = [
+      {
+        id: 'parker',
+        name: '怕渴題庫',
+        description: '50 課',
+        category: 'TOEIC Listening 聽力題庫',
+        totalQuestions: 1302,
+        totalTrainings: 50,
+      },
+    ];
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={createMockTelemetry(10)}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+        banks={mockBanks}
+        activeBankId="parker"
+      />
+    );
+
+    // Clustered matrix layout should be rendered
+    expect(screen.getByTestId('training-clusters-container')).toBeDefined();
+    expect(screen.queryByTestId('training-groups-container')).toBeNull();
+    expect(screen.queryByTestId('show-tags-switch')).toBeNull();
+
+    // Verify 36px fixed block size
+    const block01 = screen.getByTestId('training-block-parker-01');
+    expect(block01.className).toContain('w-[36px]');
+    expect(block01.className).toContain('h-[36px]');
   });
 });

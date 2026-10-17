@@ -2,13 +2,14 @@ import type { Question, QuestionBank, QuestionBankMeta } from '../types/chunkflo
 import { STARTER_QUESTIONS } from './starterQuestions';
 import { PARKER_BANK, PARKER_BANK_META, PARKER_QUESTIONS } from './parker';
 import {
+  TOEIC_PART5_BANK,
+  TOEIC_PART5_META,
   TOEIC_PART5_L1_BANK,
   TOEIC_PART5_L1_META,
   TOEIC_PART5_L2_BANK,
   TOEIC_PART5_L2_META,
   TOEIC_PART5_L3_BANK,
   TOEIC_PART5_L3_META,
-  TOEIC_PART5_BANKS,
 } from './toeic-part5';
 
 export const STARTER_BANK_META: QuestionBankMeta = {
@@ -29,28 +30,29 @@ export const STARTER_BANK: QuestionBank = {
 };
 
 export const REGISTERED_BANKS: Record<string, QuestionBank> = {
-  'toeic-part5-l1': TOEIC_PART5_L1_BANK,
-  'toeic-part5-l2': TOEIC_PART5_L2_BANK,
-  'toeic-part5-l3': TOEIC_PART5_L3_BANK,
+  'toeic-part5': TOEIC_PART5_BANK,
+  'toeic-part5-l1': TOEIC_PART5_BANK,
+  'toeic-part5-l2': TOEIC_PART5_BANK,
+  'toeic-part5-l3': TOEIC_PART5_BANK,
   starter: STARTER_BANK,
   parker: PARKER_BANK,
 };
 
 export function getRegisteredBanks(): QuestionBankMeta[] {
-  return [
-    TOEIC_PART5_L1_META,
-    TOEIC_PART5_L2_META,
-    TOEIC_PART5_L3_META,
-    STARTER_BANK_META,
-    PARKER_BANK_META,
-  ];
+  return [TOEIC_PART5_META, STARTER_BANK_META, PARKER_BANK_META];
 }
 
 export function getBankById(id: string): QuestionBank | undefined {
+  if (id === 'toeic-part5-l1' || id === 'toeic-part5-l2' || id === 'toeic-part5-l3') {
+    return TOEIC_PART5_BANK;
+  }
   return REGISTERED_BANKS[id];
 }
 
 export function getBankQuestions(id: string): Question[] {
+  if (id === 'toeic-part5-l1' || id === 'toeic-part5-l2' || id === 'toeic-part5-l3') {
+    return TOEIC_PART5_BANK.questions;
+  }
   return REGISTERED_BANKS[id]?.questions ?? STARTER_BANK.questions;
 }
 

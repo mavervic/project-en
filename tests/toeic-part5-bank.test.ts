@@ -14,11 +14,18 @@ import {
   TOEIC_PART5_L1_META,
   TOEIC_PART5_L2_META,
   TOEIC_PART5_L3_META,
+  TOEIC_PART5_META,
+  TOEIC_PART5_BANK,
+  TOEIC_PART5_GROUPS,
+  ALL_TOEIC_PART5_QUESTIONS,
+  ALL_TOEIC_PART5_LEVEL1_QUESTIONS,
+  ALL_TOEIC_PART5_LEVEL2_QUESTIONS,
+  ALL_TOEIC_PART5_LEVEL3_QUESTIONS,
   TOEIC_PART5_BANKS,
   TOEIC_PART5_QUESTIONS_BY_UNIT,
 } from '../app/data/toeic-part5';
 import { getRegisteredBanks, getBankById, getBankQuestions } from '../app/data/banks';
-import { computeTrainingTelemetry } from '../app/utils/storage';
+import { computeTrainingTelemetry, loadActiveBankId } from '../app/utils/storage';
 
 describe('TOEIC Part 5 Question Banks', () => {
   const levels = [
@@ -52,6 +59,62 @@ describe('TOEIC Part 5 Question Banks', () => {
       expect(TOEIC_PART5_L3_META.totalQuestions).toBe(90);
       expect(TOEIC_PART5_L3_META.totalTrainings).toBe(3);
       expect(TOEIC_PART5_L3_META.category).toBe('TOEIC Part 5 文法句型');
+    });
+
+    it('configures unified TOEIC Part 5 bank with 330 questions, 11 units, and 5 structured curriculum groups', () => {
+      expect(TOEIC_PART5_META.id).toBe('toeic-part5');
+      expect(TOEIC_PART5_META.totalQuestions).toBe(330);
+      expect(TOEIC_PART5_META.totalTrainings).toBe(11);
+      expect(TOEIC_PART5_META.category).toBe('TOEIC Part 5 文法句型');
+      expect(ALL_TOEIC_PART5_QUESTIONS).toHaveLength(330);
+      expect(TOEIC_PART5_BANK.questions).toHaveLength(330);
+
+      // Verify the 5 curriculum groups
+      expect(TOEIC_PART5_GROUPS).toHaveLength(5);
+
+      const [group1, group2, group3, group4, group5] = TOEIC_PART5_GROUPS;
+
+      // Group 1: Level 1
+      expect(group1.id).toBe('group-part5-l1');
+      expect(group1.title).toContain('Level 1');
+      expect(group1.units).toHaveLength(5);
+      group1.units.forEach((u) => {
+        expect(u.difficulty).toBe('Easy');
+        expect(u.tags.length).toBeGreaterThan(0);
+      });
+
+      // Group 2: Level 2
+      expect(group2.id).toBe('group-part5-l2');
+      expect(group2.title).toContain('Level 2');
+      expect(group2.units).toHaveLength(3);
+      group2.units.forEach((u) => {
+        expect(u.difficulty).toBe('Medium');
+        expect(u.tags.length).toBeGreaterThan(0);
+      });
+
+      // Group 3: Level 3 Participle
+      expect(group3.id).toBe('group-part5-l3-participle');
+      expect(group3.title).toContain('真假動詞陷阱');
+      expect(group3.units).toHaveLength(1);
+      expect(group3.units[0].trainingId).toBe('level3-01');
+      expect(group3.units[0].difficulty).toBe('Hard');
+      expect(group3.units[0].tags).toContain('真假動詞');
+
+      // Group 4: Level 3 Modal Perfect
+      expect(group4.id).toBe('group-part5-l3-modal');
+      expect(group4.title).toContain('Modal Perfect');
+      expect(group4.units).toHaveLength(1);
+      expect(group4.units[0].trainingId).toBe('level3-02');
+      expect(group4.units[0].difficulty).toBe('Hard');
+      expect(group4.units[0].tags).toContain('Modal Perfect');
+
+      // Group 5: Level 3 Subjunctive & Inversion
+      expect(group5.id).toBe('group-part5-l3-subjunctive');
+      expect(group5.title).toContain('倒裝');
+      expect(group5.units).toHaveLength(1);
+      expect(group5.units[0].trainingId).toBe('level3-03');
+      expect(group5.units[0].difficulty).toBe('Hard');
+      expect(group5.units[0].tags).toContain('假設語氣');
     });
   });
 
@@ -135,47 +198,86 @@ describe('TOEIC Part 5 Question Banks', () => {
   });
 
   describe('Bank Registry Integration', () => {
-    it('registers all 5 banks with appropriate categories', () => {
+    it('registers unified toeic-part5 along with starter and parker banks', () => {
       const banks = getRegisteredBanks();
-      expect(banks).toHaveLength(5);
+      expect(banks).toHaveLength(3);
 
       const bankIds = banks.map((b) => b.id);
-      expect(bankIds).toEqual([
-        'toeic-part5-l1',
-        'toeic-part5-l2',
-        'toeic-part5-l3',
-        'starter',
-        'parker',
-      ]);
+      expect(bankIds).toEqual(['toeic-part5', 'starter', 'parker']);
 
       const part5Banks = banks.filter((b) => b.category === 'TOEIC Part 5 文法句型');
       const listeningBanks = banks.filter((b) => b.category === 'TOEIC Listening 聽力題庫');
 
-      expect(part5Banks).toHaveLength(4);
+      expect(part5Banks).toHaveLength(2);
+      expect(part5Banks.map((b) => b.id)).toEqual(['toeic-part5', 'starter']);
       expect(listeningBanks).toHaveLength(1);
       expect(listeningBanks[0].id).toBe('parker');
     });
 
-    it('retrieves banks and questions correctly by ID', () => {
-      const l1Bank = getBankById('toeic-part5-l1');
-      expect(l1Bank).toBeDefined();
-      expect(l1Bank?.name).toContain('Level 1');
-      expect(l1Bank?.questions).toHaveLength(150);
-      expect(l1Bank?.totalTrainings).toBe(5);
+    it('retrieves unified bank and questions correctly by ID', () => {
+      const part5Bank = getBankById('toeic-part5');
+      expect(part5Bank).toBeDefined();
+      expect(part5Bank?.name).toBe('TOEIC Part 5 核心文法題庫');
+      expect(part5Bank?.questions).toHaveLength(330);
+      expect(part5Bank?.totalTrainings).toBe(11);
+      expect(part5Bank?.groups).toHaveLength(5);
 
-      const l2Questions = getBankQuestions('toeic-part5-l2');
-      expect(l2Questions).toHaveLength(90);
+      const part5Questions = getBankQuestions('toeic-part5');
+      expect(part5Questions).toHaveLength(330);
 
       const parkerBank = getBankById('parker');
       expect(parkerBank?.category).toBe('TOEIC Listening 聽力題庫');
     });
 
-    it('organizes Level 1 questions into 5 distinct training units with accurate telemetry', () => {
-      const l1Questions = getBankQuestions('toeic-part5-l1');
-      const telemetry = computeTrainingTelemetry([], l1Questions);
+    it('implements backward compatibility fallback resolving legacy IDs to unified toeic-part5', () => {
+      // getBankById fallback
+      const l1Bank = getBankById('toeic-part5-l1');
+      expect(l1Bank).toBeDefined();
+      expect(l1Bank?.id).toBe('toeic-part5');
+      expect(l1Bank?.questions).toHaveLength(330);
+
+      const l2Bank = getBankById('toeic-part5-l2');
+      expect(l2Bank).toBeDefined();
+      expect(l2Bank?.id).toBe('toeic-part5');
+
+      const l3Bank = getBankById('toeic-part5-l3');
+      expect(l3Bank).toBeDefined();
+      expect(l3Bank?.id).toBe('toeic-part5');
+
+      // getBankQuestions fallback
+      expect(getBankQuestions('toeic-part5-l1')).toHaveLength(330);
+      expect(getBankQuestions('toeic-part5-l2')).toHaveLength(330);
+      expect(getBankQuestions('toeic-part5-l3')).toHaveLength(330);
+
+      // loadActiveBankId fallback from localStorage
+      window.localStorage.setItem('chunkflow_active_bank_v1', 'toeic-part5-l1');
+      expect(loadActiveBankId()).toBe('toeic-part5');
+      window.localStorage.setItem('chunkflow_active_bank_v1', 'toeic-part5-l2');
+      expect(loadActiveBankId()).toBe('toeic-part5');
+      window.localStorage.setItem('chunkflow_active_bank_v1', 'toeic-part5-l3');
+      expect(loadActiveBankId()).toBe('toeic-part5');
+      window.localStorage.removeItem('chunkflow_active_bank_v1');
+    });
+
+    it('organizes unified Part 5 questions into 11 distinct training units with accurate telemetry', () => {
+      const allQuestions = getBankQuestions('toeic-part5');
+      const telemetry = computeTrainingTelemetry([], allQuestions);
       const unitKeys = Object.keys(telemetry);
 
-      expect(unitKeys).toEqual(['level1-01', 'level1-02', 'level1-03', 'level1-04', 'level1-05']);
+      expect(unitKeys).toHaveLength(11);
+      expect(unitKeys).toEqual([
+        'level1-01',
+        'level1-02',
+        'level1-03',
+        'level1-04',
+        'level1-05',
+        'level2-01',
+        'level2-02',
+        'level2-03',
+        'level3-01',
+        'level3-02',
+        'level3-03',
+      ]);
 
       expect(telemetry['level1-01'].unitNumber).toBe(1);
       expect(telemetry['level1-01'].lessonName).toBe('第 01 課');
@@ -188,7 +290,7 @@ describe('TOEIC Part 5 Question Banks', () => {
     });
 
     it('organizes Level 2 questions into 3 distinct training units with accurate telemetry', () => {
-      const l2Questions = getBankQuestions('toeic-part5-l2');
+      const l2Questions = ALL_TOEIC_PART5_LEVEL2_QUESTIONS;
       const telemetry = computeTrainingTelemetry([], l2Questions);
       const unitKeys = Object.keys(telemetry);
 
@@ -206,7 +308,7 @@ describe('TOEIC Part 5 Question Banks', () => {
     });
 
     it('organizes Level 3 questions into 3 distinct training units with accurate telemetry', () => {
-      const l3Questions = getBankQuestions('toeic-part5-l3');
+      const l3Questions = ALL_TOEIC_PART5_LEVEL3_QUESTIONS;
       const telemetry = computeTrainingTelemetry([], l3Questions);
       const unitKeys = Object.keys(telemetry);
 

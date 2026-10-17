@@ -67,6 +67,22 @@ export interface ChunkFlowSettings {
   speechVoiceURI?: string;
 }
 
+export type TrainingDifficulty = 'Easy' | 'Medium' | 'Hard';
+
+export interface TrainingUnitMeta {
+  trainingId: string;
+  title: string;
+  unitNumber: number;
+  difficulty: TrainingDifficulty;
+  tags: string[];
+}
+
+export interface TrainingGroup {
+  id: string;
+  title: string;
+  units: TrainingUnitMeta[];
+}
+
 export interface QuestionBankMeta {
   id: string;
   name: string;
@@ -74,6 +90,7 @@ export interface QuestionBankMeta {
   category?: string; // Grouping category in switcher (e.g. 'TOEIC Part 5 文法句型', 'TOEIC Listening 聽力題庫')
   totalQuestions: number;
   totalTrainings: number;
+  groups?: TrainingGroup[];
 }
 
 export interface QuestionBank extends QuestionBankMeta {

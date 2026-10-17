@@ -1,5 +1,6 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import type { QuestionBankMeta, TrainingUnitTelemetry } from '../../types/chunkflow';
+import { getBankById } from '../../data/banks';
 import { MASTERY_TIER_STYLES } from './TrainingMatrix';
 
 export interface TrainingMatrixDrawerProps {
@@ -24,6 +25,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
   onSelectBank,
 }) => {
   const [isBankMenuOpen, setIsBankMenuOpen] = useState(false);
+  const [showTags, setShowTags] = useState(true);
   const bankMenuRef = useRef<HTMLDivElement>(null);
 
   // Close menus on outside click
@@ -44,7 +46,10 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
     }
   }, [isOpen]);
 
-  const activeBank = banks.find((b) => b.id === activeBankId);
+  const activeBank =
+    banks.find((b) => b.id === activeBankId) ??
+    (activeBankId ? getBankById(activeBankId) : undefined);
+  const hasCurriculumGroups = Boolean(activeBank?.groups && activeBank.groups.length > 0);
 
   // Group banks by category
   const categorizedBanks = useMemo(() => {
@@ -66,18 +71,33 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
   }, [banks]);
 
   const units = useMemo(() => {
+    if (hasCurriculumGroups && activeBank?.groups) {
+      return activeBank.groups.flatMap((g) => g.units);
+    }
     const list = Object.values(telemetry);
     return [...list].sort((a, b) => a.unitNumber - b.unitNumber);
-  }, [telemetry]);
+  }, [telemetry, hasCurriculumGroups, activeBank]);
+
+  const activeTrainingName = useMemo(() => {
+    if (!activeTrainingId) return null;
+    if (hasCurriculumGroups && activeBank?.groups) {
+      const match = activeBank.groups
+        .flatMap((g) => g.units)
+        .find((u) => u.trainingId === activeTrainingId);
+      if (match) return match.title;
+    }
+    return telemetry[activeTrainingId]?.lessonName ?? activeTrainingId;
+  }, [activeTrainingId, hasCurriculumGroups, activeBank, telemetry]);
 
   // Group into clusters of 5 units (1 cluster per row)
   const clusters = useMemo(() => {
+    const list = Object.values(telemetry).sort((a, b) => a.unitNumber - b.unitNumber);
     const res: TrainingUnitTelemetry[][] = [];
-    for (let i = 0; i < units.length; i += 5) {
-      res.push(units.slice(i, i + 5));
+    for (let i = 0; i < list.length; i += 5) {
+      res.push(list.slice(i, i + 5));
     }
     return res;
-  }, [units]);
+  }, [telemetry]);
 
   return (
     <>
@@ -238,7 +258,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
               className="text-xs font-medium text-cyan-300 flex items-center gap-1.5"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-              鎖定: {telemetry[activeTrainingId]?.lessonName ?? activeTrainingId}
+              鎖定: {activeTrainingName ?? activeTrainingId}
             </span>
             <button
               type="button"
@@ -252,126 +272,281 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
           </div>
         )}
 
-        {/* Legend */}
-        <div className="px-4 py-2 border-b border-zinc-800/40 bg-zinc-950/20 flex items-center justify-between text-[10px] text-zinc-400">
-          <span className="text-zinc-500 font-mono">進度標示</span>
-          <div className="flex items-center gap-3">
-            <span className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 rounded-sm bg-zinc-900 border border-zinc-800" />
-              <span className="text-zinc-500">未完成一輪</span>
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="w-2.5 h-2.5 rounded-sm bg-cyan-400" />
-              <span className="text-zinc-300">已完成一輪</span>
-            </span>
-          </div>
-        </div>
-
-        {/* Clustered 5-Block Stack Body */}
-        <div
-          data-testid="training-clusters-container"
-          className="flex-1 overflow-y-auto px-3.5 py-3 space-y-2.5 custom-scrollbar"
-        >
-          {clusters.map((cluster, clusterIdx) => (
-            <div
-              key={`cluster-${clusterIdx}`}
-              data-testid={`training-cluster-${clusterIdx}`}
-              className="flex items-center justify-start gap-1.5 p-1 rounded-xl bg-zinc-900/30"
+        {/* Study Plan Subheader & Show Tags Switch */}
+        {hasCurriculumGroups && (
+          <div className="flex items-center justify-between px-3.5 py-2 border-b border-zinc-800/60 bg-zinc-950/40">
+            <span className="text-xs font-medium text-zinc-400">課程進度</span>
+            <button
+              type="button"
+              data-testid="show-tags-switch"
+              role="switch"
+              aria-checked={showTags}
+              onClick={() => setShowTags((prev) => !prev)}
+              className="group flex cursor-pointer outline-none items-center gap-1.5 text-xs text-zinc-400 hover:text-zinc-200 select-none transition-colors"
             >
-              {cluster.map((unit, colIdx) => {
-                const isSelected = activeTrainingId === unit.trainingId;
-                const isCompleted = Boolean(unit.isCompleted);
-                const completionStyle = isCompleted
-                  ? 'bg-cyan-400 border-white/80 text-zinc-950 font-bold shadow-[0_0_10px_rgba(6,182,212,0.3)] hover:bg-cyan-300'
-                  : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-700 hover:text-zinc-300';
+              <span
+                className={`flex h-4 w-4 items-center justify-center rounded border transition-colors ${
+                  showTags
+                    ? 'bg-cyan-500 border-cyan-400 text-zinc-950'
+                    : 'bg-zinc-800 border-zinc-700 text-transparent'
+                }`}
+              >
+                <svg className="w-3 h-3" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </span>
+              <span className="leading-5">Show tags</span>
+            </button>
+          </div>
+        )}
 
-                // Dynamically align tooltip horizontally to stay safely within narrow drawer boundaries
-                const tooltipAlignClass =
-                  colIdx <= 1
-                    ? 'left-0 translate-x-0'
-                    : colIdx >= 3
-                      ? 'right-0 translate-x-0'
-                      : 'left-1/2 -translate-x-1/2';
+        {/* Legend */}
+        {!hasCurriculumGroups && (
+          <div className="px-4 py-2 border-b border-zinc-800/40 bg-zinc-950/20 flex items-center justify-between text-[10px] text-zinc-400">
+            <span className="text-zinc-500 font-mono">進度標示</span>
+            <div className="flex items-center gap-3">
+              <span className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-sm bg-zinc-900 border border-zinc-800" />
+                <span className="text-zinc-500">未完成一輪</span>
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-sm bg-cyan-400" />
+                <span className="text-zinc-300">已完成一輪</span>
+              </span>
+            </div>
+          </div>
+        )}
 
-                // Position tooltip above for lower clusters to prevent clipping at scroll bottom (only when list is long enough)
-                const tooltipVerticalClass =
-                  clusters.length > 2 && clusterIdx >= clusters.length - 2
-                    ? 'bottom-full mb-2'
-                    : 'top-full mt-2';
+        {/* Clustered 5-Block Stack Body vs LeetCode Study Plan Grouped Body */}
+        {hasCurriculumGroups && activeBank?.groups ? (
+          <div
+            data-testid="training-groups-container"
+            className="flex-1 overflow-y-auto px-3.5 py-3 space-y-3 custom-scrollbar"
+          >
+            {activeBank.groups.map((group) => (
+              <div
+                key={group.id}
+                data-testid={`training-group-${group.id}`}
+                className="w-full overflow-hidden rounded-lg border border-zinc-800/80 bg-zinc-900/20"
+              >
+                {/* Group Header */}
+                <div className="flex h-10 items-center justify-between px-3.5 bg-zinc-900/80 border-b border-zinc-800/80 text-xs font-semibold text-zinc-300">
+                  <span className="truncate pr-2">{group.title}</span>
+                  <span className="text-[10px] text-zinc-500 font-mono shrink-0">
+                    ({group.units.length} 課)
+                  </span>
+                </div>
 
-                return (
-                  <div key={unit.trainingId} className="relative group flex-shrink-0">
-                    <button
-                      type="button"
-                      data-testid={`training-block-${unit.trainingId}`}
-                      onClick={() => onSelectTraining(unit.trainingId)}
-                      aria-label={`${unit.lessonName}: 正確率 ${unit.accuracy}%, 嘗試 ${unit.totalAttempts} 次`}
-                      className={`w-[36px] h-[36px] rounded-lg border text-xs font-mono transition-all duration-150 flex items-center justify-center cursor-pointer select-none ${completionStyle} ${
-                        isSelected
-                          ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-zinc-950 scale-105 z-10'
-                          : ''
-                      }`}
-                    >
-                      {String(unit.unitNumber).padStart(2, '0')}
-                    </button>
+                {/* Lesson Rows */}
+                <div className="divide-y divide-zinc-800/60">
+                  {group.units.map((unit) => {
+                    const isSelected = activeTrainingId === unit.trainingId;
+                    const unitTel = telemetry[unit.trainingId];
+                    const isCompleted = Boolean(unitTel?.isCompleted);
 
-                    {/* Hover Telemetry Tooltip */}
-                    <div
-                      data-testid={`training-tooltip-${unit.trainingId}`}
-                      className={`pointer-events-none absolute ${tooltipAlignClass} ${tooltipVerticalClass} w-48 rounded-xl border border-zinc-700 bg-zinc-950/95 p-3 shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 backdrop-blur-md`}
-                    >
-                      <div className="flex items-center justify-between border-b border-zinc-800 pb-1.5 mb-2">
-                        <span className="font-semibold text-xs text-zinc-100">
-                          {unit.lessonName}
-                        </span>
-                        <span
-                          className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${
-                            isCompleted
-                              ? 'bg-cyan-500/20 text-cyan-300 font-bold'
-                              : 'bg-zinc-800 text-zinc-400'
-                          }`}
-                        >
-                          {isCompleted ? '已完成一輪' : '未完成'}
-                        </span>
-                      </div>
+                    const difficultyClass =
+                      unit.difficulty === 'Easy'
+                        ? 'text-emerald-400'
+                        : unit.difficulty === 'Medium'
+                          ? 'text-amber-400'
+                          : 'text-rose-400';
 
-                      <div className="space-y-1 text-[11px] font-mono text-zinc-300">
-                        <div className="flex justify-between">
-                          <span className="text-zinc-500">嘗試題數:</span>
-                          <span className="font-bold text-zinc-200">{unit.totalAttempts} 次</span>
+                    return (
+                      <button
+                        key={unit.trainingId}
+                        type="button"
+                        data-testid={`training-row-${unit.trainingId}`}
+                        onClick={() => onSelectTraining(isSelected ? null : unit.trainingId)}
+                        className={`w-full text-left min-h-[50px] px-3.5 py-2.5 flex flex-col justify-center cursor-pointer transition-colors duration-150 ${
+                          isSelected
+                            ? 'bg-zinc-800/90 ring-1 ring-cyan-500/50'
+                            : 'hover:bg-zinc-900/50'
+                        }`}
+                      >
+                        <div className="flex items-center space-x-3 w-full">
+                          {/* Completion status icon */}
+                          <div className="flex items-center shrink-0">
+                            {isCompleted ? (
+                              <svg
+                                data-testid={`status-completed-${unit.trainingId}`}
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="w-4 h-4 text-emerald-400"
+                                aria-label="Completed"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                                  clipRule="evenodd"
+                                />
+                              </svg>
+                            ) : (
+                              <svg
+                                data-testid={`status-uncompleted-${unit.trainingId}`}
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                                className="w-4 h-4 text-zinc-600"
+                                aria-label="Not completed"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16z"
+                                  clipRule="evenodd"
+                                />
+                              </svg>
+                            )}
+                          </div>
+
+                          {/* Lesson Title & Difficulty */}
+                          <div className="relative flex h-full w-full items-center justify-between min-w-0">
+                            <span
+                              className={`text-xs sm:text-sm font-medium truncate pr-2 ${
+                                isSelected ? 'text-cyan-300 font-semibold' : 'text-zinc-200'
+                              }`}
+                            >
+                              {unit.title}
+                            </span>
+                            <span className={`text-xs font-semibold shrink-0 ${difficultyClass}`}>
+                              {unit.difficulty}
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-zinc-500">正確率:</span>
+
+                        {/* Tag Badges */}
+                        {showTags && unit.tags && unit.tags.length > 0 && (
+                          <div
+                            data-testid={`tag-row-${unit.trainingId}`}
+                            className="mt-1.5 ml-7 flex flex-wrap gap-1"
+                          >
+                            {unit.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-medium bg-zinc-800/70 text-zinc-400"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div
+            data-testid="training-clusters-container"
+            className="flex-1 overflow-y-auto px-3.5 py-3 space-y-2.5 custom-scrollbar"
+          >
+            {clusters.map((cluster, clusterIdx) => (
+              <div
+                key={`cluster-${clusterIdx}`}
+                data-testid={`training-cluster-${clusterIdx}`}
+                className="flex items-center justify-start gap-1.5 p-1 rounded-xl bg-zinc-900/30"
+              >
+                {cluster.map((unit, colIdx) => {
+                  const isSelected = activeTrainingId === unit.trainingId;
+                  const isCompleted = Boolean(unit.isCompleted);
+                  const completionStyle = isCompleted
+                    ? 'bg-cyan-400 border-white/80 text-zinc-950 font-bold shadow-[0_0_10px_rgba(6,182,212,0.3)] hover:bg-cyan-300'
+                    : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-700 hover:text-zinc-300';
+
+                  // Dynamically align tooltip horizontally to stay safely within narrow drawer boundaries
+                  const tooltipAlignClass =
+                    colIdx <= 1
+                      ? 'left-0 translate-x-0'
+                      : colIdx >= 3
+                        ? 'right-0 translate-x-0'
+                        : 'left-1/2 -translate-x-1/2';
+
+                  // Position tooltip above for lower clusters to prevent clipping at scroll bottom (only when list is long enough)
+                  const tooltipVerticalClass =
+                    clusters.length > 2 && clusterIdx >= clusters.length - 2
+                      ? 'bottom-full mb-2'
+                      : 'top-full mt-2';
+
+                  return (
+                    <div key={unit.trainingId} className="relative group flex-shrink-0">
+                      <button
+                        type="button"
+                        data-testid={`training-block-${unit.trainingId}`}
+                        onClick={() => onSelectTraining(unit.trainingId)}
+                        aria-label={`${unit.lessonName}: 正確率 ${unit.accuracy}%, 嘗試 ${unit.totalAttempts} 次`}
+                        className={`w-[36px] h-[36px] rounded-lg border text-xs font-mono transition-all duration-150 flex items-center justify-center cursor-pointer select-none ${completionStyle} ${
+                          isSelected
+                            ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-zinc-950 scale-105 z-10'
+                            : ''
+                        }`}
+                      >
+                        {String(unit.unitNumber).padStart(2, '0')}
+                      </button>
+
+                      {/* Hover Telemetry Tooltip */}
+                      <div
+                        data-testid={`training-tooltip-${unit.trainingId}`}
+                        className={`pointer-events-none absolute ${tooltipAlignClass} ${tooltipVerticalClass} w-48 rounded-xl border border-zinc-700 bg-zinc-950/95 p-3 shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 backdrop-blur-md`}
+                      >
+                        <div className="flex items-center justify-between border-b border-zinc-800 pb-1.5 mb-2">
+                          <span className="font-semibold text-xs text-zinc-100">
+                            {unit.lessonName}
+                          </span>
                           <span
-                            className={`font-bold ${
-                              unit.accuracy >= 80
-                                ? 'text-emerald-400'
-                                : unit.accuracy >= 60
-                                  ? 'text-blue-400'
-                                  : 'text-amber-400'
+                            className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${
+                              isCompleted
+                                ? 'bg-cyan-500/20 text-cyan-300 font-bold'
+                                : 'bg-zinc-800 text-zinc-400'
                             }`}
                           >
-                            {unit.accuracy}%
+                            {isCompleted ? '已完成一輪' : '未完成'}
                           </span>
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-zinc-500">平均延遲:</span>
-                          <span className="text-zinc-200">
-                            {unit.avgLatencyMs > 0 ? `${unit.avgLatencyMs} ms` : '-'}
-                          </span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-zinc-500">最佳連擊:</span>
-                          <span className="text-cyan-400">{unit.bestStreak} 題</span>
+
+                        <div className="space-y-1 text-[11px] font-mono text-zinc-300">
+                          <div className="flex justify-between">
+                            <span className="text-zinc-500">嘗試題數:</span>
+                            <span className="font-bold text-zinc-200">{unit.totalAttempts} 次</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-zinc-500">正確率:</span>
+                            <span
+                              className={`font-bold ${
+                                unit.accuracy >= 80
+                                  ? 'text-emerald-400'
+                                  : unit.accuracy >= 60
+                                    ? 'text-blue-400'
+                                    : 'text-amber-400'
+                              }`}
+                            >
+                              {unit.accuracy}%
+                            </span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-zinc-500">平均延遲:</span>
+                            <span className="text-zinc-200">
+                              {unit.avgLatencyMs > 0 ? `${unit.avgLatencyMs} ms` : '-'}
+                            </span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-zinc-500">最佳連擊:</span>
+                            <span className="text-cyan-400">{unit.bestStreak} 題</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          ))}
-        </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        )}
       </aside>
     </>
   );

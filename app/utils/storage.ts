@@ -357,7 +357,12 @@ export function loadActiveBankId(): string {
   if (typeof window === 'undefined') return 'parker';
   try {
     const raw = window.localStorage.getItem(ACTIVE_BANK_STORAGE_KEY);
-    if (raw) return raw;
+    if (raw) {
+      if (raw === 'toeic-part5-l1' || raw === 'toeic-part5-l2' || raw === 'toeic-part5-l3') {
+        return 'toeic-part5';
+      }
+      return raw;
+    }
   } catch (err) {
     console.warn('Failed to load active bank ID from localStorage', err);
   }
