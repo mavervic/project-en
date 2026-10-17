@@ -110,6 +110,30 @@ export function saveSubjectVerbDrill(enabled: boolean): void {
   }
 }
 
+const BLIND_MODE_STORAGE_KEY = 'chunkflow_blind_mode_v1';
+
+export function loadBlindModeEnabled(): boolean {
+  if (typeof window === 'undefined') return false;
+  try {
+    const raw = window.localStorage.getItem(BLIND_MODE_STORAGE_KEY);
+    if (raw === null) return false;
+    return raw === 'true';
+  } catch (err) {
+    console.warn('Failed to load blind mode setting from localStorage', err);
+    return false;
+  }
+}
+
+export function saveBlindModeEnabled(enabled: boolean): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(BLIND_MODE_STORAGE_KEY, String(enabled));
+    } catch (err) {
+      console.warn('Failed to save blind mode setting to localStorage', err);
+    }
+  }
+}
+
 export function computeStats(records: UserPerformance[]): PerformanceStats {
   const storedBest = loadBestStreak();
 

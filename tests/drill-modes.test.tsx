@@ -1,6 +1,11 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { cleanup } from '@testing-library/react';
-import { loadSubjectVerbDrill, saveSubjectVerbDrill } from '../app/utils/storage';
+import {
+  loadBlindModeEnabled,
+  loadSubjectVerbDrill,
+  saveBlindModeEnabled,
+  saveSubjectVerbDrill,
+} from '../app/utils/storage';
 
 describe('Subject-Verb Drill Mode Settings Specification', () => {
   beforeEach(() => {
@@ -23,6 +28,18 @@ describe('Subject-Verb Drill Mode Settings Specification', () => {
 
       saveSubjectVerbDrill(true);
       expect(loadSubjectVerbDrill()).toBe(true);
+    });
+
+    it('defaults blindModeEnabled to false and persists boolean settings under chunkflow_blind_mode_v1', () => {
+      expect(loadBlindModeEnabled()).toBe(false);
+
+      saveBlindModeEnabled(true);
+      expect(window.localStorage.getItem('chunkflow_blind_mode_v1')).toBe('true');
+      expect(loadBlindModeEnabled()).toBe(true);
+
+      saveBlindModeEnabled(false);
+      expect(window.localStorage.getItem('chunkflow_blind_mode_v1')).toBe('false');
+      expect(loadBlindModeEnabled()).toBe(false);
     });
   });
 
@@ -212,6 +229,55 @@ describe('Subject-Verb Drill Mode Settings Specification', () => {
       // Even though S+V drill is enabled, absence of subject chunk should gracefully fallback to classify
       expect(result.current.isSubjectVerbDrill).toBe(true);
       expect(result.current.roundStage).toBe('classify');
+    });
+
+    it('bypasses subject and verb selection (roundStage "classify") when blindModeEnabled is true and restores "subject" when toggled off', async () => {
+      const { renderHook, act } = await import('@testing-library/react');
+      const { useChunkFlowGame } = await import('../app/hooks/useChunkFlowGame');
+
+      const { result } = renderHook(() => useChunkFlowGame());
+
+      // Starts in 'subject' when blindModeEnabled is false
+      expect(result.current.blindModeEnabled).toBe(false);
+      expect(result.current.roundStage).toBe('subject');
+
+      // Toggle blind mode ON -> jumps directly to 'classify'
+      let nextBlindState = false;
+      act(() => {
+        nextBlindState = result.current.toggleBlindMode();
+      });
+      expect(nextBlindState).toBe(true);
+      expect(result.current.blindModeEnabled).toBe(true);
+      expect(result.current.roundStage).toBe('classify');
+      expect(window.localStorage.getItem('chunkflow_blind_mode_v1')).toBe('true');
+
+      // Advancing to next question while blindModeEnabled is true stays in 'classify'
+      act(() => {
+        result.current.advanceToNextQuestion();
+      });
+      expect(result.current.roundStage).toBe('classify');
+
+      // Toggling blind mode OFF on an unevaluated question with subject restores 'subject'
+      act(() => {
+        nextBlindState = result.current.toggleBlindMode();
+      });
+      expect(nextBlindState).toBe(false);
+      expect(result.current.blindModeEnabled).toBe(false);
+      expect(result.current.roundStage).toBe('subject');
+
+      // Answering directly in blind mode works without tapping subject/verb chunks
+      act(() => {
+        result.current.toggleBlindMode();
+      });
+      expect(result.current.roundStage).toBe('classify');
+      const targetVoice = result.current.currentQuestion.correctAnswers.voice;
+      const targetTime = result.current.currentQuestion.correctAnswers.time;
+      act(() => {
+        result.current.handleSelectVoice(targetVoice);
+        result.current.handleSelectTime(targetTime);
+      });
+      expect(result.current.showFeedback).toBe(true);
+      expect(result.current.lastEvaluation?.isCorrect).toBe(true);
     });
   });
 });

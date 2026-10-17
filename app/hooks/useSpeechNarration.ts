@@ -167,6 +167,11 @@ export function useSpeechNarration() {
     });
   }, []);
 
+  const enableNarration = useCallback(() => {
+    setNarrationEnabledState(true);
+    saveNarrationEnabled(true);
+  }, []);
+
   const setAccent = useCallback((newAccent: SpeechAccent) => {
     setAccentState(newAccent);
     saveSpeechAccent(newAccent);
@@ -267,6 +272,7 @@ export function useSpeechNarration() {
   return {
     narrationEnabled,
     toggleNarration,
+    enableNarration,
     accent,
     setAccent,
     speak,

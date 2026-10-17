@@ -19,6 +19,8 @@ interface ChunkFlowArenaProps {
   isSpeaking?: boolean;
   narrationEnabled?: boolean;
   onToggleNarration?: () => void;
+  blindModeEnabled?: boolean;
+  onToggleBlindMode?: () => void;
   onSpeakChunk?: (text: string) => void;
 }
 
@@ -40,6 +42,8 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   isSpeaking = false,
   narrationEnabled = false,
   onToggleNarration,
+  blindModeEnabled = false,
+  onToggleBlindMode,
   onSpeakChunk,
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
@@ -190,6 +194,62 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
 
           {/* Arena Audio & Utility Controls */}
           <div className="flex items-center gap-1.5 sm:gap-2">
+            {/* Blind Listening Mode Eye Toggle Button (Left of Narration Button) */}
+            <button
+              type="button"
+              data-testid="blind-mode-toggle-btn"
+              onClick={onToggleBlindMode}
+              title={blindModeEnabled ? '關閉聽音辨識（顯示文字）' : '開啟聽音辨識（隱藏文字）'}
+              aria-label={
+                blindModeEnabled
+                  ? 'Show text (disable blind listening mode)'
+                  : 'Hide text (enable blind listening mode)'
+              }
+              aria-pressed={blindModeEnabled}
+              className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm ${
+                blindModeEnabled
+                  ? 'bg-cyan-500/15 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/25'
+                  : 'bg-zinc-900/90 border-zinc-700/80 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300'
+              }`}
+            >
+              {blindModeEnabled ? (
+                <svg
+                  className="w-4 h-4 text-cyan-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-4 h-4 text-zinc-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+              )}
+              <span className="hidden sm:inline">{blindModeEnabled ? '聽音中' : '聽音辨識'}</span>
+            </button>
+
             {onToggleNarration && (
               <button
                 type="button"
@@ -316,22 +376,26 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
         </div>
 
         {/* Dedicated Drill Stage Status Row (Centered, pill style) */}
-        {isSubjectVerbDrill && (
+        {(isSubjectVerbDrill || blindModeEnabled) && (
           <div className="w-full flex justify-center items-center my-2 sm:my-3">
             <span
               className={`px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold tracking-wider text-center shadow-sm max-w-full ${
-                roundStage === 'subject'
-                  ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse'
-                  : roundStage === 'verb'
-                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
-                    : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                blindModeEnabled
+                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                  : roundStage === 'subject'
+                    ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse'
+                    : roundStage === 'verb'
+                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
+                      : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
               }`}
             >
-              {roundStage === 'subject'
-                ? '1. Tap Subject Chunk'
-                : roundStage === 'verb'
-                  ? '✓ Subject Locked → 2. Tap Verb Chunk'
-                  : '✓ S+V Locked → 3. Classify Voice & Tense'}
+              {blindModeEnabled
+                ? '🎧 Listening Mode → Classify Voice & Tense'
+                : roundStage === 'subject'
+                  ? '1. Tap Subject Chunk'
+                  : roundStage === 'verb'
+                    ? '✓ Subject Locked → 2. Tap Verb Chunk'
+                    : '✓ S+V Locked → 3. Classify Voice & Tense'}
             </span>
           </div>
         )}
@@ -339,6 +403,7 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
         {/* Large Typography Sentence Chunks (Stable box geometry with 0 layout shift) */}
         <div className="w-full text-center flex flex-wrap justify-center items-center gap-x-2.5 gap-y-3.5 my-auto py-3 sm:py-4">
           {question.chunks.map((chunk, index) => {
+            const isTextHidden = Boolean(blindModeEnabled && !showFeedback);
             const misfireIdx =
               chunkMisfireIndex !== undefined && chunkMisfireIndex !== null
                 ? chunkMisfireIndex
@@ -356,7 +421,7 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
 
             const selectHandler = onSelectChunk || onSelectSubjectChunk;
 
-            if (!showFeedback && isSubjectVerbDrill) {
+            if (!showFeedback && !isTextHidden && isSubjectVerbDrill) {
               if (roundStage === 'subject') {
                 isInteractive = true;
                 clickHandler = () => selectHandler?.(index);
@@ -370,7 +435,9 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             }
 
             let chunkStyle = 'border-transparent bg-transparent text-zinc-300';
-            if (isMisfired) {
+            if (isTextHidden) {
+              chunkStyle = 'border-transparent bg-transparent text-transparent';
+            } else if (isMisfired) {
               chunkStyle =
                 'border-rose-500 bg-rose-950/60 text-rose-200 shadow-[0_0_20px_rgba(244,63,94,0.4)] animate-shake';
             } else if (showFeedback) {

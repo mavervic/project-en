@@ -15,9 +15,11 @@ import {
   computeStats,
   computeTrainingTelemetry,
   loadActiveBankId,
+  loadBlindModeEnabled,
   loadCustomQuestions,
   loadPerformanceRecords,
   saveActiveBankId,
+  saveBlindModeEnabled,
   saveCustomQuestions,
   savePerformanceRecord,
 } from '../utils/storage';
@@ -32,6 +34,10 @@ import { useFocusFadeTimer } from './useFocusFadeTimer';
 export function useChunkFlowGame(initialQuestions?: Question[]) {
   const [activeBankId, setActiveBankIdState] = useState<string>(() => loadActiveBankId());
   const [activeTrainingId, setActiveTrainingIdState] = useState<string | null>(null);
+  const [blindModeEnabled, setBlindModeEnabledState] = useState<boolean>(() =>
+    loadBlindModeEnabled()
+  );
+  const blindModeRef = useRef<boolean>(blindModeEnabled);
 
   const [questions, setQuestions] = useState<Question[]>(() => {
     if (initialQuestions && initialQuestions.length > 0) {
@@ -52,6 +58,9 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
   useEffect(() => {
     const records = loadPerformanceRecords();
     setHistory(records);
+    const initialBlind = loadBlindModeEnabled();
+    blindModeRef.current = initialBlind;
+    setBlindModeEnabledState(initialBlind);
     const custom = loadCustomQuestions();
     const activeQs = custom.length > 0 ? custom : questions;
     if (custom.length > 0) {
@@ -60,6 +69,8 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     try {
       const progressive = resolveProgressiveCurriculum(activeQs, records, activeTrainingId);
       setCurrentQuestion(progressive.question);
+      const hasSubject = progressive.question?.chunks.some((c) => c.type === 'subject');
+      setRoundStage(!initialBlind && hasSubject ? 'subject' : 'classify');
       if (!activeTrainingId && progressive.trainingId) {
         setActiveTrainingIdState(progressive.trainingId);
       }
@@ -67,6 +78,8 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
       // Fallback to first question
       if (activeQs[0]) {
         setCurrentQuestion(activeQs[0]);
+        const hasSubject = activeQs[0]?.chunks.some((c) => c.type === 'subject');
+        setRoundStage(!initialBlind && hasSubject ? 'subject' : 'classify');
       }
     }
   }, []);
@@ -91,6 +104,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
 
   const isSubjectVerbDrill = true;
   const [roundStage, setRoundStage] = useState<'subject' | 'verb' | 'classify'>(() => {
+    if (loadBlindModeEnabled()) return 'classify';
     const hasSubject = questions[0]?.chunks.some((c) => c.type === 'subject');
     return hasSubject ? 'subject' : 'classify';
   });
@@ -116,6 +130,19 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     }
     return questions;
   }, [questions, activeTrainingId]);
+
+  const toggleBlindMode = useCallback((): boolean => {
+    const next = !blindModeRef.current;
+    blindModeRef.current = next;
+    setBlindModeEnabledState(next);
+    saveBlindModeEnabled(next);
+    setChunkMisfireIndex(null);
+    if (!showFeedback) {
+      const hasSubject = currentQuestion?.chunks.some((c) => c.type === 'subject');
+      setRoundStage(!next && hasSubject ? 'subject' : 'classify');
+    }
+    return next;
+  }, [showFeedback, currentQuestion]);
 
   // Advance to next question
   const advanceToNextQuestion = useCallback(() => {
@@ -147,7 +174,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     }
 
     const hasSubject = nextQ.chunks.some((c) => c.type === 'subject');
-    setRoundStage(hasSubject ? 'subject' : 'classify');
+    setRoundStage(!blindModeRef.current && hasSubject ? 'subject' : 'classify');
 
     setCurrentQuestion(nextQ);
     questionStartTimeRef.current = Date.now();
@@ -156,7 +183,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
 
   const handleSelectChunk = useCallback(
     (chunkIndex: number) => {
-      if (showFeedback) return;
+      if (showFeedback || blindModeRef.current) return;
       const chunk = currentQuestion.chunks[chunkIndex];
       if (!chunk) return;
 
@@ -276,7 +303,9 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
       setShowFeedback(false);
       setChunkMisfireIndex(null);
       const hasSubject = firstQ?.chunks.some((c) => c.type === 'subject');
-      setRoundStage(isSubjectVerbDrill && hasSubject ? 'subject' : 'classify');
+      setRoundStage(
+        !blindModeRef.current && isSubjectVerbDrill && hasSubject ? 'subject' : 'classify'
+      );
       questionStartTimeRef.current = Date.now();
       startTimer();
     },
@@ -303,7 +332,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
       setShowFeedback(false);
       setChunkMisfireIndex(null);
       const hasSubject = targetQ?.chunks.some((c) => c.type === 'subject');
-      setRoundStage(hasSubject ? 'subject' : 'classify');
+      setRoundStage(!blindModeRef.current && hasSubject ? 'subject' : 'classify');
       questionStartTimeRef.current = Date.now();
       startTimer();
     },
@@ -326,7 +355,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
           setShowFeedback(false);
           setChunkMisfireIndex(null);
           const hasSubject = nextQ?.chunks.some((c) => c.type === 'subject');
-          setRoundStage(hasSubject ? 'subject' : 'classify');
+          setRoundStage(!blindModeRef.current && hasSubject ? 'subject' : 'classify');
           questionStartTimeRef.current = Date.now();
           startTimer();
         }
@@ -355,7 +384,9 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     setShowFeedback(false);
     setChunkMisfireIndex(null);
     const hasSubject = firstQ?.chunks.some((c) => c.type === 'subject');
-    setRoundStage(isSubjectVerbDrill && hasSubject ? 'subject' : 'classify');
+    setRoundStage(
+      !blindModeRef.current && isSubjectVerbDrill && hasSubject ? 'subject' : 'classify'
+    );
     questionStartTimeRef.current = Date.now();
     startTimer();
   }, [activeBankId, initialQuestions, isSubjectVerbDrill, startTimer]);
@@ -381,12 +412,14 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     practiceMode,
     isCustomBank,
     isSubjectVerbDrill,
+    blindModeEnabled,
     roundStage,
     chunkMisfireIndex,
     subjectMisfireIndex: chunkMisfireIndex,
     activeBankId,
     activeTrainingId,
     setPracticeMode,
+    toggleBlindMode,
     handleSelectBank,
     handleSelectTraining,
     handleSelectChunk,

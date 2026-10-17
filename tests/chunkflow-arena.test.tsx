@@ -198,4 +198,85 @@ describe('ChunkFlowArena - Copy Button & Translation Display', () => {
     fireEvent.keyDown(chunk, { key: ' ' });
     expect(onSpeakChunk).toHaveBeenCalledTimes(2);
   });
+
+  it('renders blind mode eye toggle button to the left of narration button and toggles blind mode', () => {
+    const onToggleBlindMode = vi.fn();
+    const onToggleNarration = vi.fn();
+
+    render(
+      <ChunkFlowArena
+        question={mockQuestionWithTranslation}
+        focusState="idle"
+        progressPercent={0}
+        lastEvaluation={null}
+        showFeedback={false}
+        blindModeEnabled={false}
+        onToggleBlindMode={onToggleBlindMode}
+        narrationEnabled={false}
+        onToggleNarration={onToggleNarration}
+      />
+    );
+
+    const blindBtn = screen.getByTestId('blind-mode-toggle-btn');
+    const narrationBtn = screen.getByTestId('narration-toggle-btn');
+    expect(blindBtn).toBeDefined();
+    expect(narrationBtn).toBeDefined();
+
+    // Verify blind-mode-toggle-btn precedes narration-toggle-btn in DOM order
+    expect(
+      blindBtn.compareDocumentPosition(narrationBtn) & Node.DOCUMENT_POSITION_FOLLOWING
+    ).toBeTruthy();
+
+    fireEvent.click(blindBtn);
+    expect(onToggleBlindMode).toHaveBeenCalledTimes(1);
+  });
+
+  it('applies text-transparent to chunks when blindModeEnabled is true and showFeedback is false, and reveals text when showFeedback becomes true', () => {
+    const { rerender } = render(
+      <ChunkFlowArena
+        question={mockQuestionWithTranslation}
+        focusState="focusing"
+        progressPercent={50}
+        lastEvaluation={null}
+        showFeedback={false}
+        blindModeEnabled={true}
+        isSubjectVerbDrill={true}
+        roundStage="classify"
+      />
+    );
+
+    // Listening mode pill badge is displayed
+    expect(screen.getByText('🎧 Listening Mode → Classify Voice & Tense')).toBeDefined();
+
+    // All chunks have text-transparent and do not leak subject/verb borders
+    const subjectChunk = screen.getByText('The supervisor');
+    const verbChunk = screen.getByText('reviews');
+    const objectChunk = screen.getByText('daily attendance reports every morning.');
+
+    expect(subjectChunk.className).toContain('text-transparent');
+    expect(subjectChunk.className).not.toContain('border-sky-500/60');
+    expect(verbChunk.className).toContain('text-transparent');
+    expect(verbChunk.className).not.toContain('border-cyan-400');
+    expect(objectChunk.className).toContain('text-transparent');
+
+    // Upon evaluation (showFeedback = true), text-transparent is removed and highlights are revealed
+    rerender(
+      <ChunkFlowArena
+        question={mockQuestionWithTranslation}
+        focusState="evaluated"
+        progressPercent={100}
+        lastEvaluation={{ isCorrect: true, latencyMs: 950 }}
+        showFeedback={true}
+        blindModeEnabled={true}
+        isSubjectVerbDrill={true}
+        roundStage="classify"
+      />
+    );
+
+    expect(subjectChunk.className).not.toContain('text-transparent');
+    expect(subjectChunk.className).toContain('border-sky-500/60');
+    expect(verbChunk.className).not.toContain('text-transparent');
+    expect(verbChunk.className).toContain('border-cyan-400');
+    expect(objectChunk.className).not.toContain('text-transparent');
+  });
 });

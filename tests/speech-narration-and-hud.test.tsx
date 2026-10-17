@@ -66,6 +66,24 @@ describe('Speech Narration Hook (useSpeechNarration)', () => {
     expect(mockCancel).toHaveBeenCalled();
   });
 
+  it('enables narration idempotently via enableNarration and persists preference', () => {
+    const { result } = renderHook(() => useSpeechNarration());
+    expect(result.current.narrationEnabled).toBe(false);
+
+    act(() => {
+      result.current.enableNarration();
+    });
+    expect(result.current.narrationEnabled).toBe(true);
+    expect(window.localStorage.getItem('chunkflow_narration_enabled_v1')).toBe('true');
+
+    // Calling enableNarration again keeps it true
+    act(() => {
+      result.current.enableNarration();
+    });
+    expect(result.current.narrationEnabled).toBe(true);
+    expect(window.localStorage.getItem('chunkflow_narration_enabled_v1')).toBe('true');
+  });
+
   it('does not speak when narration is disabled', () => {
     const { result } = renderHook(() => useSpeechNarration());
     act(() => {
@@ -446,6 +464,54 @@ describe('ChunkFlowArena Audio Controls & Replay Integration', () => {
     );
 
     expect(screen.getByTestId('narration-toggle-btn').textContent).toContain('朗誦開');
+  });
+
+  it('auto-enables narration and speaks active question sentence when blind mode is activated while muted in Home', async () => {
+    window.localStorage.clear();
+    const mockSpeak = vi.fn();
+    const mockCancel = vi.fn();
+
+    class MockSpeechSynthesisUtterance {
+      text: string;
+      voice: any = null;
+      lang = '';
+      rate = 1;
+      onstart: any = null;
+      onend: any = null;
+      onerror: any = null;
+      constructor(text: string) {
+        this.text = text;
+      }
+    }
+    (window as any).SpeechSynthesisUtterance = MockSpeechSynthesisUtterance;
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: {
+        speak: mockSpeak,
+        cancel: mockCancel,
+        getVoices: vi.fn().mockReturnValue([]),
+        onvoiceschanged: null,
+      },
+      writable: true,
+      configurable: true,
+    });
+
+    const { default: Home } = await import('../app/routes/home');
+    render(<Home />);
+
+    const blindBtn = screen.getByTestId('blind-mode-toggle-btn');
+    const narrationBtn = screen.getByTestId('narration-toggle-btn');
+
+    expect(narrationBtn.textContent).toContain('靜音');
+    expect(mockSpeak).not.toHaveBeenCalled();
+
+    act(() => {
+      fireEvent.click(blindBtn);
+    });
+
+    expect(window.localStorage.getItem('chunkflow_blind_mode_v1')).toBe('true');
+    expect(window.localStorage.getItem('chunkflow_narration_enabled_v1')).toBe('true');
+    expect(screen.getByTestId('narration-toggle-btn').textContent).toContain('朗誦開');
+    expect(mockSpeak).toHaveBeenCalledTimes(1);
   });
 });
 

@@ -41,6 +41,7 @@ export default function Home() {
   const {
     narrationEnabled,
     toggleNarration,
+    enableNarration,
     accent,
     setAccent,
     speak,
@@ -69,11 +70,13 @@ export default function Home() {
     practiceMode,
     isCustomBank,
     isSubjectVerbDrill,
+    blindModeEnabled,
     roundStage,
     subjectMisfireIndex,
     activeBankId,
     activeTrainingId,
     setPracticeMode,
+    toggleBlindMode,
     handleSelectBank,
     handleSelectTraining,
     handleSelectSubjectChunk,
@@ -84,6 +87,17 @@ export default function Home() {
     handleImportQuestions,
     handleResetQuestions,
   } = useChunkFlowGame();
+
+  const handleToggleBlindMode = () => {
+    const nextBlind = toggleBlindMode();
+    if (nextBlind) {
+      if (!narrationEnabled) {
+        enableNarration();
+      } else if (currentQuestion?.sentence) {
+        speak(currentQuestion.sentence, { force: true });
+      }
+    }
+  };
 
   const handleUpdateSettings = (newSettings: Partial<ChunkFlowSettings>) => {
     setSettings((prev) => {
@@ -169,6 +183,8 @@ export default function Home() {
           isSpeaking={isSpeaking}
           narrationEnabled={narrationEnabled}
           onToggleNarration={toggleNarration}
+          blindModeEnabled={blindModeEnabled}
+          onToggleBlindMode={handleToggleBlindMode}
           onSpeakChunk={(text) => speak(text, { force: true })}
         />
 
