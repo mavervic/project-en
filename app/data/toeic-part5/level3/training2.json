@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "toeic-l3-31",
+    "trainingId": "level3-02",
+    "sentence": "Employees handling confidential financial data must follow strict international privacy regulations.",
+    "chunks": [
+      {
+        "text": "Employees",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "handling confidential financial data",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "must follow",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "strict international privacy regulations.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「must follow」為現在簡單式主動語態 (Present Simple Active)。【真假動詞陷阱】現在分詞片語「handling confidential financial data」後位修飾主詞 Employees（假動詞），句子的真正謂語動詞為情態助動詞「must follow」（真動詞，主動遵守規範）。",
+    "translation": "處理機密財務資料的員工必須遵守嚴格的國際隱私法規。"
+  },
+  {
+    "id": "toeic-l3-32",
+    "trainingId": "level3-02",
+    "sentence": "The regional sales director reviewing quarterly quotas can approve customized client discounts.",
+    "chunks": [
+      {
+        "text": "The regional sales director",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "reviewing quarterly quotas",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "can approve",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "customized client discounts.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「can approve」為現在簡單式主動語態 (Present Simple Active)。【真假動詞陷阱】分詞「reviewing...」為後位修飾主管的假動詞，主要動詞是表示現在權限的情態動詞片語「can approve」（真動詞）。",
+    "translation": "審核季度配額的區域業務主管有權批准客製化的客戶折扣。"
+  },
+  {
+    "id": "toeic-l3-33",
+    "trainingId": "level3-02",
+    "sentence": "Any technician operating high-precision assembly equipment should wear comprehensive protective gear.",
+    "chunks": [
+      {
+        "text": "Any technician",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "operating high-precision assembly equipment",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "should wear",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "comprehensive protective gear.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「should wear」為現在簡單式主動語態 (Present Simple Active)。【真假動詞陷阱】現在分詞「operating...」為形容詞修飾片語，句首真正的謂語動詞是情態助動詞「should wear」（應穿戴）。",
+    "translation": "任何操作高精度組裝設備的技術人員都應穿戴齊全的防護裝備。"
+  },
+  {
+    "id": "toeic-l3-34",
+    "trainingId": "level3-02",
+    "sentence": "Passengers carrying baggage exceeding thirty kilograms may incur substantial overweight surcharges.",
+    "chunks": [
+      {
+        "text": "Passengers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "carrying baggage exceeding thirty kilograms",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "may incur",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "substantial overweight surcharges.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「may incur」為現在簡單式主動語態 (Present Simple Active)。【真假動詞陷阱】包含兩層現在分詞「carrying...」與「exceeding...」干擾，主句真正動詞為情態助動詞「may incur」（可能產生費用）。",
+    "translation": "攜帶超過三十公斤行李的旅客可能會被收取高額的超重附加費。"
+  },
+  {
+    "id": "toeic-l3-35",
+    "trainingId": "level3-02",
+    "sentence": "The legal counsel representing our overseas partners cannot disclose confidential settlement terms.",
+    "chunks": [
+      {
+        "text": "The legal counsel",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "representing our overseas partners",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "cannot disclose",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "confidential settlement terms.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「cannot disclose」為現在簡單式主動語態 (Present Simple Active)。【真假動詞陷阱】分詞「representing...」修飾名詞 legal counsel（法律顧問），真正主動詞是「cannot disclose」（無法透露）。",
+    "translation": "代表我們海外合作夥伴的法律顧問不得透露保密的和解條款。"
+  },
+  {
+    "id": "toeic-l3-36",
+    "trainingId": "level3-02",
+    "sentence": "The logistics supervisor managing container shipments should have ordered replacement cargo containers earlier.",
+    "chunks": [
+      {
+        "text": "The logistics supervisor",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "managing container shipments",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "should have ordered",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "replacement cargo containers earlier.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「should have ordered」為過去完成式主動語態 (Past Perfect Active / Modal Perfect)。【時態與時間軸鎖定】「should have + p.p.」表示「過去本來應該做卻沒做」，指向過去時間軸（Past）；「managing...」為分詞修飾（假動詞）。",
+    "translation": "管理貨櫃運輸的物流主管當初本應該更早訂購替換貨櫃。"
+  },
+  {
+    "id": "toeic-l3-37",
+    "trainingId": "level3-02",
+    "sentence": "Our primary marketing consultant analyzing consumer trends could have prevented the budget shortfall.",
+    "chunks": [
+      {
+        "text": "Our primary marketing consultant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "analyzing consumer trends",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "could have prevented",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the budget shortfall.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「could have prevented」為過去完成式主動語態 (Past Perfect Active / Modal Perfect)。【時態與時間軸鎖定】「could have + p.p.」表「過去本來能夠預防卻未發生」，時間軸為過去（Past）；「analyzing...」為現在分詞後位修飾語。",
+    "translation": "分析消費者趨勢的首席行銷顧問當初本可以預防預算短缺。"
+  },
+  {
+    "id": "toeic-l3-38",
+    "trainingId": "level3-02",
+    "sentence": "The chief executive officer reviewing market conditions would have approved the international expansion.",
+    "chunks": [
+      {
+        "text": "The chief executive officer",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "reviewing market conditions",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "would have approved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the international expansion.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have approved」為過去完成式主動語態 (Past Perfect Active / Modal Perfect)。【時態與時間軸鎖定】「would have + p.p.」表示過去與事實相反的假設推斷，時間軸判定為過去（Past）；「reviewing...」為分詞修飾語。",
+    "translation": "審視市場行情的執行長當初本會批准這項國際擴張計畫。"
+  },
+  {
+    "id": "toeic-l3-39",
+    "trainingId": "level3-02",
+    "sentence": "The external accounting firm conducting the annual audit must have discovered significant financial discrepancies.",
+    "chunks": [
+      {
+        "text": "The external accounting firm",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "conducting the annual audit",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "must have discovered",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "significant financial discrepancies.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「must have discovered」為過去完成式主動語態 (Past Perfect Active / Modal Perfect)。【時態與時間軸鎖定】「must have + p.p.」表示「對過去事實的肯定推測（當時必定已經發現）」，時間軸為過去（Past）。",
+    "translation": "進行年度審計的外部會計師事務所當時必定發現了重大的財務出入。"
+  },
+  {
+    "id": "toeic-l3-40",
+    "trainingId": "level3-02",
+    "sentence": "The project coordinator tracking component deliveries might have overlooked the revised warehouse schedule.",
+    "chunks": [
+      {
+        "text": "The project coordinator",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "tracking component deliveries",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "might have overlooked",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the revised warehouse schedule.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「might have overlooked」為過去完成式主動語態 (Past Perfect Active / Modal Perfect)。【時態與時間軸鎖定】「might have + p.p.」表示對過去弱推測（當時可能忽略了），時間軸為過去（Past）。",
+    "translation": "追蹤零件交貨的專案協調員當時可能忽略了修改後的倉庫時間表。"
+  },
+  {
+    "id": "toeic-l3-41",
+    "trainingId": "level3-02",
+    "sentence": "A special committee appointed by the board will evaluate all incoming merger bids.",
+    "chunks": [
+      {
+        "text": "A special committee",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "appointed by the board",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will evaluate",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "all incoming merger bids.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will evaluate」為未來簡單式主動語態 (Future Simple Active)。【真假動詞陷阱】過去分詞「appointed by the board」後位修飾主詞 committee（假動詞），真正主要動詞為「will evaluate」（真動詞，主動評估）。",
+    "translation": "由董事會任命的特別委員會將會評估所有收到的合併投標案。"
+  },
+  {
+    "id": "toeic-l3-42",
+    "trainingId": "level3-02",
+    "sentence": "Technicians trained in advanced cybersecurity will implement automated intrusion detection systems.",
+    "chunks": [
+      {
+        "text": "Technicians",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "trained in advanced cybersecurity",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will implement",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "automated intrusion detection systems.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will implement」為未來簡單式主動語態 (Future Simple Active)。【真假動詞陷阱】「trained...」為過去分詞修飾語，主句主要動詞為「will implement」（真動詞，未來實施）。",
+    "translation": "受過進階網路安全訓練的技術人員將會實施自動化入侵偵測系統。"
+  },
+  {
+    "id": "toeic-l3-43",
+    "trainingId": "level3-02",
+    "sentence": "The renovation crew modernizing the downtown corporate offices will finish the structural upgrades next month.",
+    "chunks": [
+      {
+        "text": "The renovation crew",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "modernizing the downtown corporate offices",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will finish",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the structural upgrades next month.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will finish」為未來簡單式主動語態 (Future Simple Active)。現在分詞「modernizing...」後位修飾主詞「The renovation crew」，主句真正謂語動詞為「will finish」。",
+    "translation": "翻新市中心企業辦公室的裝修團隊將在下個月完成結構升級。"
+  },
+  {
+    "id": "toeic-l3-44",
+    "trainingId": "level3-02",
+    "sentence": "The executive director representing our regional branch will deliver the opening keynote address.",
+    "chunks": [
+      {
+        "text": "The executive director",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "representing our regional branch",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will deliver",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the opening keynote address.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will deliver」為未來簡單式主動語態 (Future Simple Active)。分詞「representing...」為假動詞修飾語，主要動詞為「will deliver」（主動發表演說）。",
+    "translation": "代表我們地區分部的執行董事將發表開幕專題演說。"
+  },
+  {
+    "id": "toeic-l3-45",
+    "trainingId": "level3-02",
+    "sentence": "Inspectors reviewing factory environmental standards will present a comprehensive safety audit report.",
+    "chunks": [
+      {
+        "text": "Inspectors",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "reviewing factory environmental standards",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will present",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a comprehensive safety audit report.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will present」為未來簡單式主動語態 (Future Simple Active)。分詞「reviewing...」修飾主詞 Inspectors，主要動詞為「will present」。",
+    "translation": "審核工廠環境標準的稽核員將提交一份全面的安全審計報告。"
+  },
+  {
+    "id": "toeic-l3-46",
+    "trainingId": "level3-02",
+    "sentence": "All confidential documents stored in the executive archives must be protected with dual-factor authentication.",
+    "chunks": [
+      {
+        "text": "All confidential documents",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "stored in the executive archives",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "must be protected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with dual-factor authentication.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「must be protected」為現在簡單式被動語態 (Present Simple Passive)。【真假動詞陷阱】過去分詞「stored in the executive archives」修飾主詞 documents（假動詞），真正謂語動詞為情態助動詞被動式「must be protected」（必須被保護）。",
+    "translation": "存放在高階主管檔案庫中的所有機密文件都必須透過雙重認證受到保護。"
+  },
+  {
+    "id": "toeic-l3-47",
+    "trainingId": "level3-02",
+    "sentence": "Reimbursement claims submitted without official receipts cannot be processed by the finance division.",
+    "chunks": [
+      {
+        "text": "Reimbursement claims",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "submitted without official receipts",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "cannot be processed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the finance division.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「cannot be processed」為現在簡單式被動語態 (Present Simple Passive)。【真假動詞陷阱】過去分詞「submitted...」修飾 claims，真正動詞為「cannot be processed」（無法被處理）。",
+    "translation": "未附上正式收據的報銷申請無法由財務部門進行處理。"
+  },
+  {
+    "id": "toeic-l3-48",
+    "trainingId": "level3-02",
+    "sentence": "Heavy construction machinery operating near residential zones should be inspected on a weekly basis.",
+    "chunks": [
+      {
+        "text": "Heavy construction machinery",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "operating near residential zones",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "should be inspected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on a weekly basis.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「should be inspected」為現在簡單式被動語態 (Present Simple Passive)。現在分詞「operating...」後位修飾主詞 machinery，主要動詞為情態被動式「should be inspected」（應每週被檢查）。",
+    "translation": "在住宅區附近運作的大型施工機械應每週接受一次檢查。"
+  },
+  {
+    "id": "toeic-l3-49",
+    "trainingId": "level3-02",
+    "sentence": "Corporate investment plans drafted by external analysts can be modified before final ratification.",
+    "chunks": [
+      {
+        "text": "Corporate investment plans",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "drafted by external analysts",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "can be modified",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "before final ratification.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「can be modified」為現在簡單式被動語態 (Present Simple Passive)。過去分詞「drafted...」為假動詞修飾語，主句主要動詞為「can be modified」（可以被修改）。",
+    "translation": "由外部分析師起草的企業投資計畫在最終核准前均可被修改。"
+  },
+  {
+    "id": "toeic-l3-50",
+    "trainingId": "level3-02",
+    "sentence": "Outdated desktop workstations used across administrative offices may be replaced under the new IT budget.",
+    "chunks": [
+      {
+        "text": "Outdated desktop workstations",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "used across administrative offices",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "may be replaced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "under the new IT budget.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「may be replaced」為現在簡單式被動語態 (Present Simple Passive)。過去分詞「used across...」修飾 workstations，真正動詞為情態助動詞被動式「may be replaced」（可能會被更換）。",
+    "translation": "行政辦公室使用的過時桌上型工作站可能會在新資訊科技預算下被汰換。"
+  },
+  {
+    "id": "toeic-l3-51",
+    "trainingId": "level3-02",
+    "sentence": "The delayed shipment holding critical assembly parts should have been delivered by expedited freight.",
+    "chunks": [
+      {
+        "text": "The delayed shipment",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "holding critical assembly parts",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "should have been delivered",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by expedited freight.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「should have been delivered」為過去完成式被動語態 (Past Perfect Passive / Modal Perfect Passive)。【時態與時間軸鎖定】「should have been + p.p.」表「過去本應被送達卻未送達」，為被動語態且時間軸鎖定為過去（Past）；「holding...」為現在分詞後位修飾。",
+    "translation": "裝有關鍵組裝零件的延誤貨物當初本應該透過快捷貨運送達。"
+  },
+  {
+    "id": "toeic-l3-52",
+    "trainingId": "level3-02",
+    "sentence": "The massive factory fire damaging sensitive warehouse inventory could have been avoided with automated sprinklers.",
+    "chunks": [
+      {
+        "text": "The massive factory fire",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "damaging sensitive warehouse inventory",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "could have been avoided",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with automated sprinklers.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「could have been avoided」為過去完成式被動語態 (Past Perfect Passive / Modal Perfect Passive)。【時態與時間軸鎖定】「could have been + p.p.」表示過去原本可以被避免的憾事，時間軸為過去（Past）；「damaging...」為現在分詞修飾語。",
+    "translation": "損壞倉庫敏感庫存的大規模工廠火災當初本可以透過自動灑水器避免。"
+  },
+  {
+    "id": "toeic-l3-53",
+    "trainingId": "level3-02",
+    "sentence": "The emergency financial relief package requested by retail tenants would have been approved without bureaucratic delays.",
+    "chunks": [
+      {
+        "text": "The emergency financial relief package",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "requested by retail tenants",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "would have been approved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "without bureaucratic delays.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have been approved」為過去完成式被動語態 (Past Perfect Passive / Modal Perfect Passive)。【時態與時間軸鎖定】「would have been + p.p.」表過去與事實相反之被動假設，時間軸為過去（Past）；「requested by...」為過去分詞修飾語（假動詞）。",
+    "translation": "零售租戶申請的緊急財務紓困方案若沒有官僚延誤本會獲得批准。"
+  },
+  {
+    "id": "toeic-l3-54",
+    "trainingId": "level3-02",
+    "sentence": "The unauthorized payment transfer detected by internal auditors must have been executed by an external hacker.",
+    "chunks": [
+      {
+        "text": "The unauthorized payment transfer",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "detected by internal auditors",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "must have been executed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by an external hacker.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「must have been executed」為過去完成式被動語態 (Past Perfect Passive / Modal Perfect Passive)。【時態與時間軸鎖定】「must have been + p.p.」表示對過去事實極有把握的被動推測（必定已被執行），時間軸為過去（Past）。",
+    "translation": "內部稽核員發現的未授權轉帳款項當時必定是被外部駭客所執行的。"
+  },
+  {
+    "id": "toeic-l3-55",
+    "trainingId": "level3-02",
+    "sentence": "The original contract terms drafted during preliminary negotiations might have been misunderstood by overseas suppliers.",
+    "chunks": [
+      {
+        "text": "The original contract terms",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "drafted during preliminary negotiations",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "might have been misunderstood",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by overseas suppliers.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「might have been misunderstood」為過去完成式被動語態 (Past Perfect Passive / Modal Perfect Passive)。【時態與時間軸鎖定】「might have been + p.p.」對過去事件弱推斷（當時可能被誤解了），時間軸為過去（Past）。",
+    "translation": "初步談判期間起草的原始合約條款當時可能已被海外供應商誤解。"
+  },
+  {
+    "id": "toeic-l3-56",
+    "trainingId": "level3-02",
+    "sentence": "The architectural plans submitted by the design firm will be evaluated by the municipal zoning board.",
+    "chunks": [
+      {
+        "text": "The architectural plans",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "submitted by the design firm",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be evaluated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the municipal zoning board.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be evaluated」為未來簡單式被動語態 (Future Simple Passive)。過去分詞片語「submitted...」修飾 plans，主要動詞為「will be evaluated」（將會被審核）。",
+    "translation": "設計公司提交的建築圖面將由市政分區委員會進行審核。"
+  },
+  {
+    "id": "toeic-l3-57",
+    "trainingId": "level3-02",
+    "sentence": "Replacement server components ordered from the domestic manufacturer will be delivered before Friday afternoon.",
+    "chunks": [
+      {
+        "text": "Replacement server components",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "ordered from the domestic manufacturer",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be delivered",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "before Friday afternoon.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be delivered」為未來簡單式被動語態 (Future Simple Passive)。過去分詞「ordered from...」後位修飾 components，主句真正謂語動詞為「will be delivered」（將被送達）。",
+    "translation": "向國內製造商訂購的伺服器更換零件將在週五下午前送達。"
+  },
+  {
+    "id": "toeic-l3-58",
+    "trainingId": "level3-02",
+    "sentence": "Outstanding travel expense claims verified by department supervisors will be reimbursed through direct deposit.",
+    "chunks": [
+      {
+        "text": "Outstanding travel expense claims",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "verified by department supervisors",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be reimbursed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "through direct deposit.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be reimbursed」為未來簡單式被動語態 (Future Simple Passive)。過去分詞「verified...」修飾 claims，真正謂語動詞為「will be reimbursed」（將獲報銷）。",
+    "translation": "經部門主管核實的未結清差旅費申請將透過直接匯款進行報銷。"
+  },
+  {
+    "id": "toeic-l3-59",
+    "trainingId": "level3-02",
+    "sentence": "Refurbished office furniture donated by the technology firm will be transported to non-profit learning centers.",
+    "chunks": [
+      {
+        "text": "Refurbished office furniture",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "donated by the technology firm",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be transported",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to non-profit learning centers.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be transported」為未來簡單式被動語態 (Future Simple Passive)。分詞「donated by...」修飾 furniture，主句主要動詞為「will be transported」（將被運送）。",
+    "translation": "這家科技公司捐贈的翻新辦公家具將被運送至非營利學習中心。"
+  },
+  {
+    "id": "toeic-l3-60",
+    "trainingId": "level3-02",
+    "sentence": "The commercial lease agreements finalized by international corporate attorneys will be signed early next week.",
+    "chunks": [
+      {
+        "text": "The commercial lease agreements",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "finalized by international corporate attorneys",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "will be signed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "early next week.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be signed」為未來簡單式被動語態 (Future Simple Passive)。過去分詞「finalized by...」後位修飾主詞 agreements，主句主要動詞為「will be signed」（將被簽署）。",
+    "translation": "由國際企業律師敲定的商業租賃協議將在下週初完成簽署。"
+  }
+]

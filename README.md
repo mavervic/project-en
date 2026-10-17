@@ -19,6 +19,12 @@ ChunkFlow 訓練的核心在於將英文句子的動詞形態迅速拆解為**�
 | **完成被動 (Perfect Passive)**    | I have been interviewed    | I had been interviewed      | I will have been interviewed           |
 | **進行被動 (Continuous Passive)** | I am **being** interviewed | I was **being** interviewed | _(極罕用，實務以 Simple Passive 取代)_ |
 
+> [!TIP]
+> **高階時態拓展：情態完成式 (Modal Perfect) 與假設語氣 (Unreal Past)**
+>
+> - **情態完成式 (`Modal + have + p.p.`)**：如 `should have / could have / would have / must have submitted`，語義錨定在**過去事實**的推測、歸責或遺憾，在 ChunkFlow 時間軸上一律歸類為 **過去 (Past)**，破除見到 `would` 誤判為未來的直覺盲點。
+> - **條件假設語氣與倒裝 (Conditionals & Inversions)**：涵蓋真實條件句與非真實條件句（`If S had p.p., S would have p.p.`），以及省略 `If` 的高階商務倒裝（`Had the audit been completed...` / `Should you have questions...`），鎖定主句與從句各自的真動詞骨幹。
+
 ---
 
 ## 📚 豐富題庫矩陣 (Question Banks)
@@ -27,11 +33,14 @@ ChunkFlow 內建分類多層次的題庫系統，支援即時切換與獨立訓�
 
 ### 1. TOEIC Part 5 文法句型題庫
 
-專門針對新制多益 Part 5 短文填空與核心句構設計：
+專門針對新制多益 Part 5 短文填空與核心句構設計，總題數達 **330 題**：
 
 - **Level 1 基礎句型 (S-V 緊鄰)**：共 **5 個訓練單元（150 題）**。短主詞與主要動詞緊鄰，精確平衡主被動與現在/過去/未來 6 種基本時態組合。
 - **Level 2 中階句型 (介系詞隔離)**：共 **3 個訓練單元（90 題）**。主詞與動詞間穿插介系詞片語隔離修飾，解鎖完成式與進行式複雜結構。
-- **Level 3 高階句型 (真假動詞陷阱)**：共 **1 個訓練單元（30 題）**。強化分詞後位修飾、關係子句與真假動詞干擾陷阱判斷。
+- **Level 3 高階句型 (真假動詞、情態完成式與倒裝語氣)**：共 **3 個訓練單元（90 題）**：
+  - **Unit 1 (真假動詞陷阱)**：強化分詞後位修飾（`-ing` / `-ed`）、關係子句與真假動詞（Finite vs. Non-finite Verbs）干擾陷阱判斷。
+  - **Unit 2 (情態助動詞與 Modal Perfect)**：涵蓋 `should/could/would/must have + p.p.`（過去推測與未竟之憾）、情態被動式（`can/must be + p.p.`、`could have been + p.p.`）與推測語態。
+  - **Unit 3 (條件假設語氣與倒裝句型)**：涵蓋真實條件句、非真實條件句（Counterfactual / Unreal Past）以及省略 `If` 的高階倒裝結構（`Had S p.p.`、`Should S V`、`Were S to V`）。
 
 ### 2. 核心精選與自訂題庫匯入 (Custom Import)
 
@@ -65,10 +74,12 @@ ChunkFlow 內建分類多層次的題庫系統，支援即時切換與獨立訓�
 - **智慧展開防護 Tooltip**：短題庫與頂部叢集自動向下展開 (`top-full mt-2`)，絕不遮擋頂部選擇器；長題庫底部智慧向上翻展。
 - **單元鎖定 (Target Lock)**：點選任一單元即可鎖定該課專注練習，點擊解鎖即可恢復題庫循環。
 
-### 4. 🔊 沉浸式語音朗讀 (Speech Narration & Custom Accent)
+### 4. 🔊 沉浸式語音朗讀與多國口音 (Speech Narration & Accent Settings)
 
 - 整合 Web Speech API 原生語音合成引擎，題目出現時自動/點擊播放原生發音。
-- 支援美式英語（en-US）、英式英語（en-GB）、澳洲英語（en-AU）多種口音即時切換。
+- **四國口音國旗切換**：支援澳洲 (🇦🇺 en-AU)、加拿大 (🇨🇦 en-CA)、英國 (🇬🇧 en-GB)、美國 (🇺🇸 en-US) 快速切換，切換時自動撥放各國口音特色金句試聽。
+- **高相容性語音優選與防斷機制**：內建智慧評分排序、排除已知異常線上語音（如 Edge 多語串流合成器）、冷卻延遲防抖與自動離線/本機語音降級（Fallback）。
+- **作答後語塊點擊朗讀 (Click-to-Pronounce)**：題目完成作答後，點擊任一語法語塊（Chunk）即可單獨朗讀該片語，方便強化弱點發音與斷句感。
 
 ### 5. ⌨️ 鍵盤優先極速操作 (Keyboard-First Flow)
 
@@ -170,7 +181,7 @@ app/
 │   ├── toeic-part5/              # TOEIC Part 5 文法題庫
 │   │   ├── level1/               # Level 1 (5 課訓練, 150 題)
 │   │   ├── level2/               # Level 2 (3 課訓練, 90 題)
-│   │   ├── level3/               # Level 3 (1 課訓練, 30 題)
+│   │   ├── level3/               # Level 3 (3 課訓練, 90 題)
 │   │   └── index.ts              # 題庫整合與單元字典對照
 │   ├── starterQuestions.ts       # 核心精選 12 題商務句型
 │   └── banks.ts                  # 全域題庫登錄中心 (Bank Registry)

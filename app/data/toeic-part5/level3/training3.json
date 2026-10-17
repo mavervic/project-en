@@ -1,0 +1,1047 @@
+[
+  {
+    "id": "toeic-l3-61",
+    "trainingId": "level3-03",
+    "sentence": "If the executive management team approved additional funding, our engineering department would hire ten software developers.",
+    "chunks": [
+      {
+        "text": "If the executive management team approved additional funding,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "our engineering department",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would hire",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "ten software developers.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would hire」為與現在事實相反的假設語氣主動式 (Unreal Present Active)。【假設語氣與真假動詞陷阱】條件子句中的「approved」為假設過去式（假動詞/條件動詞），主要子句的核心謂語動詞為「would hire」（真動詞，假設現在會聘請）。時間軸判定為現在（Present）。",
+    "translation": "如果高階管理團隊批准額外資金，我們的工程部門現在就會聘請十名軟體工程師。"
+  },
+  {
+    "id": "toeic-l3-62",
+    "trainingId": "level3-03",
+    "sentence": "Were our regional sales representatives more experienced in negotiation, they could secure higher enterprise profit margins.",
+    "chunks": [
+      {
+        "text": "Were our regional sales representatives more experienced in negotiation,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "they",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "could secure",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "higher enterprise profit margins.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「could secure」為與現在事實相反的假設語氣主動式 (Unreal Present Active)。【倒裝假設語氣】句首「Were...」為省略 If 之倒裝條件句（= If our regional sales representatives were...），主要子句的真正謂語動詞為「could secure」（真動詞，主動爭取到）。時間軸為現在（Present）。",
+    "translation": "如果我們的區域業務代表更有談判經驗，他們現在就能爭取到更高的企業利潤率。"
+  },
+  {
+    "id": "toeic-l3-63",
+    "trainingId": "level3-03",
+    "sentence": "If the logistics department maintained a centralized digital tracking dashboard, the warehouse manager could monitor shipments effortlessly.",
+    "chunks": [
+      {
+        "text": "If the logistics department maintained a centralized digital tracking dashboard,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the warehouse manager",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "could monitor",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "shipments effortlessly.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「could monitor」為與現在事實相反的假設語氣主動式 (Unreal Present Active)。【真假動詞陷阱】條件子句動詞「maintained」非主要動詞，主要子句謂語動詞為「could monitor」（真動詞）。時間軸判定為現在（Present）。",
+    "translation": "如果物流部門維護集中式的數位追蹤儀表板，倉庫經理現在就能毫不費力地監控貨物。"
+  },
+  {
+    "id": "toeic-l3-64",
+    "trainingId": "level3-03",
+    "sentence": "If our corporate headquarters were closer to the international airport, visiting clients would appreciate the convenience.",
+    "chunks": [
+      {
+        "text": "If our corporate headquarters were closer to the international airport,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "visiting clients",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would appreciate",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the convenience.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would appreciate」為與現在事實相反的假設語氣主動式 (Unreal Present Active)。主詞「visiting clients」（來訪客戶）後方之真正謂語動詞為「would appreciate」（主動讚賞），時間軸為現在（Present）。",
+    "translation": "如果我們的企業總部離國際機場更近，來訪的客戶現在一定會讚賞這樣的便利。"
+  },
+  {
+    "id": "toeic-l3-65",
+    "trainingId": "level3-03",
+    "sentence": "Were the marketing division to adopt artificial intelligence analytics, our brand would reach broader demographics.",
+    "chunks": [
+      {
+        "text": "Were the marketing division to adopt artificial intelligence analytics,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "our brand",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would reach",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "broader demographics.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would reach」為現在假設語氣主動式 (Unreal Present Active)。【倒裝句型】「Were S to V」倒裝表示對未來或現在極不可能發生之假設，主要子句之主要謂語動詞為「would reach」（真動詞）。",
+    "translation": "如果行銷部門採用人工智慧分析，我們的品牌現在將能觸及更廣泛的受眾族群。"
+  },
+  {
+    "id": "toeic-l3-66",
+    "trainingId": "level3-03",
+    "sentence": "If the overseas manufacturing facility had received the raw materials on schedule, technicians would have completed the order.",
+    "chunks": [
+      {
+        "text": "If the overseas manufacturing facility had received the raw materials on schedule,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "technicians",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would have completed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the order.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have completed」為與過去事實相反的假設語氣主動式 (Counterfactual Unreal Past Active)。【多益經典考點】條件子句「had received」為過去完成式，主要子句謂語動詞必須為「would have + p.p.」，時間軸鎖定為過去（Past）。",
+    "translation": "如果海外製造廠當初按時收到原物料，技術人員當初早就完成該訂單了。"
+  },
+  {
+    "id": "toeic-l3-67",
+    "trainingId": "level3-03",
+    "sentence": "Had the senior software architect identified the database vulnerability earlier, the technical team would have prevented the server breach.",
+    "chunks": [
+      {
+        "text": "Had the senior software architect identified the database vulnerability earlier,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the technical team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would have prevented",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the server breach.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have prevented」為與過去事實相反的假設語氣主動式 (Counterfactual Unreal Past Active)。【多益必考 Had 倒裝】「Had S p.p.」為「If S had p.p.」之倒裝，主要子句謂語為「would have prevented」（真動詞，過去本來會預防）。時間軸為過去（Past）。",
+    "translation": "如果資深軟體架構師當初早點發現資料庫漏洞，技術團隊當初本可以防止伺服器入侵。"
+  },
+  {
+    "id": "toeic-l3-68",
+    "trainingId": "level3-03",
+    "sentence": "If the human resources committee had offered a more competitive salary package, the lead candidate would have accepted the executive position.",
+    "chunks": [
+      {
+        "text": "If the human resources committee had offered a more competitive salary package,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the lead candidate",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would have accepted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the executive position.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have accepted」為過去假設語氣主動式 (Counterfactual Unreal Past Active)。條件子句「had offered」與主要子句動詞「would have accepted」配對，表達與過去事實相反之假設，時間軸為過去（Past）。",
+    "translation": "如果人資委員會當初提供更具競爭力的薪資方案，首席候選人當初就會接受該主管職位。"
+  },
+  {
+    "id": "toeic-l3-69",
+    "trainingId": "level3-03",
+    "sentence": "Had our financial analysts anticipated the currency devaluation in Europe, our company could have mitigated substantial exchange losses.",
+    "chunks": [
+      {
+        "text": "Had our financial analysts anticipated the currency devaluation in Europe,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "our company",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "could have mitigated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "substantial exchange losses.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「could have mitigated」為過去假設語氣主動式 (Counterfactual Unreal Past Active)。【倒裝考點】「Had our financial analysts anticipated...」為過去假設倒裝句，主句動詞「could have mitigated」（當時本可以減輕損失），時間軸為過去（Past）。",
+    "translation": "如果我們的財務分析師當初預料到歐洲貨幣貶值，我們公司當初本可以減輕可觀的匯兌損失。"
+  },
+  {
+    "id": "toeic-l3-70",
+    "trainingId": "level3-03",
+    "sentence": "If the research division had secured the proprietary patent last autumn, our firm would have launched the biotechnology product sooner.",
+    "chunks": [
+      {
+        "text": "If the research division had secured the proprietary patent last autumn,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "our firm",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would have launched",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the biotechnology product sooner.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have launched」為過去假設語氣主動式 (Counterfactual Unreal Past Active)。主要子句謂語動詞「would have launched」表過去與事實相反，時間軸鎖定為過去（Past）。",
+    "translation": "如果研發部門去年秋天就取得了專利權，我們公司當初早就更早推出該生技產品了。"
+  },
+  {
+    "id": "toeic-l3-71",
+    "trainingId": "level3-03",
+    "sentence": "If prospective clients request customized product demonstrations, our regional sales team will provide on-site technical support.",
+    "chunks": [
+      {
+        "text": "If prospective clients request customized product demonstrations,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "our regional sales team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will provide",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on-site technical support.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will provide」為未來條件句主動式 (Future Real Conditional Active)。條件子句以現在式「request」表未來可能情況，主要子句核心謂語動詞為未來式「will provide」（將提供）。",
+    "translation": "如果潛在客戶要求客製化產品展示，我們的區域銷售團隊將提供現場技術支援。"
+  },
+  {
+    "id": "toeic-l3-72",
+    "trainingId": "level3-03",
+    "sentence": "Should any airline passenger require wheelchair assistance, airport ground personnel will dispatch a specialized transit vehicle.",
+    "chunks": [
+      {
+        "text": "Should any airline passenger require wheelchair assistance,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "airport ground personnel",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will dispatch",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a specialized transit vehicle.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will dispatch」為未來條件句主動式 (Future Real Conditional Active)。【多益高頻 Should 倒裝】「Should S + 原形動詞」為「If S should V」之倒裝，主要子句使用未來式動詞「will dispatch」（真動詞，未來將派遣）。",
+    "translation": "如果任何航空旅客需要輪椅協助，機場地勤人員將派遣專用接駁車。"
+  },
+  {
+    "id": "toeic-l3-73",
+    "trainingId": "level3-03",
+    "sentence": "If the building contractor completes the structural renovation ahead of schedule, the corporate tenant will move operations in November.",
+    "chunks": [
+      {
+        "text": "If the building contractor completes the structural renovation ahead of schedule,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the corporate tenant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will move",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "operations in November.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will move」為未來條件句主動式 (Future Real Conditional Active)。條件子句現在式「completes」，主要子句為「will move」（將遷移業務）。",
+    "translation": "如果建築承包商提前完成結構整修，企業租戶將在十一月搬遷業務。"
+  },
+  {
+    "id": "toeic-l3-74",
+    "trainingId": "level3-03",
+    "sentence": "Should the municipal transport authority approve the expansion permit, our logistics firm will establish a new freight terminal.",
+    "chunks": [
+      {
+        "text": "Should the municipal transport authority approve the expansion permit,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "our logistics firm",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will establish",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a new freight terminal.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will establish」為未來條件句主動式 (Future Real Conditional Active)。【倒裝考點】「Should the authority approve...」表未來萬一發生之條件，主要子句動詞為「will establish」（將建立）。",
+    "translation": "如果市政交通主管機關批准擴建許可，我們的物流公司將設立新的貨運碼頭。"
+  },
+  {
+    "id": "toeic-l3-75",
+    "trainingId": "level3-03",
+    "sentence": "If the corporate audit committee uncovers substantial accounting irregularities, the regulatory agency will launch a formal inquiry.",
+    "chunks": [
+      {
+        "text": "If the corporate audit committee uncovers substantial accounting irregularities,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the regulatory agency",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will launch",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a formal inquiry.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will launch」為未來條件句主動式 (Future Real Conditional Active)。條件子句現在式動詞「uncovers」，主要子句動詞為「will launch」（將展開正式調查）。",
+    "translation": "如果企業審計委員會發現重大的會計不合規問題，監管機構將展開正式調查。"
+  },
+  {
+    "id": "toeic-l3-76",
+    "trainingId": "level3-03",
+    "sentence": "If budget allocation guidelines were more flexible, these innovative research projects would be approved without hesitation.",
+    "chunks": [
+      {
+        "text": "If budget allocation guidelines were more flexible,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "these innovative research projects",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would be approved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "without hesitation.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would be approved」為與現在事實相反的假設語氣被動式 (Unreal Present Passive)。條件子句「were」表示現在假設，主要子句謂語動詞為「would be approved」（真動詞，會被批准）。時間軸為現在（Present）。",
+    "translation": "如果預算分配準則現在更有彈性，這些創新研究專案毫不猶豫就會被批准。"
+  },
+  {
+    "id": "toeic-l3-77",
+    "trainingId": "level3-03",
+    "sentence": "Were international trade tariffs reduced across the continent, commercial cargo would be transported at significantly lower shipping costs.",
+    "chunks": [
+      {
+        "text": "Were international trade tariffs reduced across the continent,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "commercial cargo",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would be transported",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "at significantly lower shipping costs.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would be transported」為與現在事實相反的假設語氣被動式 (Unreal Present Passive)。【倒裝句型】「Were tariffs reduced...」為省略 If 倒裝（= If tariffs were reduced...），主要子句動詞為「would be transported」（將被運送）。時間軸為現在（Present）。",
+    "translation": "如果整個大陸的國際貿易關稅現在被降低，商業貨物就能以顯著更低的運費被運輸。"
+  },
+  {
+    "id": "toeic-l3-78",
+    "trainingId": "level3-03",
+    "sentence": "If the proposed enterprise software were installed across all departments, quarterly efficiency metrics would be enhanced noticeably.",
+    "chunks": [
+      {
+        "text": "If the proposed enterprise software were installed across all departments,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "quarterly efficiency metrics",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would be enhanced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "noticeably.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would be enhanced」為現在假設語氣被動式 (Unreal Present Passive)。主要子句主詞為指標 metrics，動詞為「would be enhanced」（會被提升），時間軸為現在（Present）。",
+    "translation": "如果擬議的企業軟體被安裝在所有部門，季度效率指標現在就會得到顯著提升。"
+  },
+  {
+    "id": "toeic-l3-79",
+    "trainingId": "level3-03",
+    "sentence": "Were corporate governance standards enforced more rigorously, executive misconduct would be detected immediately.",
+    "chunks": [
+      {
+        "text": "Were corporate governance standards enforced more rigorously,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "executive misconduct",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would be detected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "immediately.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would be detected」為現在假設語氣被動式 (Unreal Present Passive)。【倒裝考點】「Were standards enforced...」為條件句倒裝，主句真正謂語動詞為「would be detected」（會立即被偵測到）。",
+    "translation": "如果公司治理標準現在被更嚴格執行，高層不當行為現在就會立即被發覺。"
+  },
+  {
+    "id": "toeic-l3-80",
+    "trainingId": "level3-03",
+    "sentence": "If factory ventilation ducts were inspected periodically, industrial air contaminants would be eliminated at the source.",
+    "chunks": [
+      {
+        "text": "If factory ventilation ducts were inspected periodically,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "industrial air contaminants",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would be eliminated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "at the source.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "「would be eliminated」為現在假設語氣被動式 (Unreal Present Passive)。主要子句主詞 contaminants（污染物），動詞為「would be eliminated」（將在源頭被消除）。",
+    "translation": "如果工廠通風管現在定期接受檢查，工業空氣污染物現在就會在源頭被消除。"
+  },
+  {
+    "id": "toeic-l3-81",
+    "trainingId": "level3-03",
+    "sentence": "If the building sprinkler system had functioned properly, the warehouse storage facility would have been saved from destruction.",
+    "chunks": [
+      {
+        "text": "If the building sprinkler system had functioned properly,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the warehouse storage facility",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would have been saved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "from destruction.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have been saved」為與過去事實相反的假設語氣被動式 (Counterfactual Unreal Past Passive)。【多益高頻考點】「had functioned」條件子句搭配主要子句「would have been + p.p.」，時間軸為過去（Past），語態為被動（Passive）。",
+    "translation": "如果建築物灑水系統當初正常運作，倉庫儲存設施當初早就免於被銷毀。"
+  },
+  {
+    "id": "toeic-l3-82",
+    "trainingId": "level3-03",
+    "sentence": "Had the safety hazard been identified during the preliminary walk-through, the factory shutdown would have been avoided.",
+    "chunks": [
+      {
+        "text": "Had the safety hazard been identified during the preliminary walk-through,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the factory shutdown",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would have been avoided.",
+        "isTargetSlot": true,
+        "type": "verb"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have been avoided」為與過去事實相反的假設語氣被動式 (Counterfactual Unreal Past Passive)。【倒裝考點】「Had the hazard been identified...」（= If the hazard had been identified...），主要子句謂語動詞為「would have been avoided」（本可以被避免）。時間軸為過去（Past）。",
+    "translation": "如果安全隱患在初步視察期間就已被識別，工廠停工事件當初本可以被避免。"
+  },
+  {
+    "id": "toeic-l3-83",
+    "trainingId": "level3-03",
+    "sentence": "If the international shipping manifest had been verified at customs, the commercial cargo containers would have been released immediately.",
+    "chunks": [
+      {
+        "text": "If the international shipping manifest had been verified at customs,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the commercial cargo containers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would have been released",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "immediately.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have been released」為過去假設語氣被動式 (Counterfactual Unreal Past Passive)。主句動詞「would have been released」（當時本會被放行），時間軸為過去（Past）。",
+    "translation": "如果國際貨運清單當初在海關處就被核實，商業貨櫃當時本會立刻被放行。"
+  },
+  {
+    "id": "toeic-l3-84",
+    "trainingId": "level3-03",
+    "sentence": "Had the contract amendments been finalized before the quarterly board meeting, the joint venture would have been ratified by unanimous consent.",
+    "chunks": [
+      {
+        "text": "Had the contract amendments been finalized before the quarterly board meeting,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the joint venture",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "would have been ratified",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by unanimous consent.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「would have been ratified」為過去假設語氣被動式 (Counterfactual Unreal Past Passive)。【倒裝考點】「Had the amendments been finalized...」，主句謂語動詞為「would have been ratified」（本會獲一致同意批准），時間軸為過去（Past）。",
+    "translation": "如果合約修正案在季度董事會前就已敲定，該合資企業當初本會獲得一致同意批准。"
+  },
+  {
+    "id": "toeic-l3-85",
+    "trainingId": "level3-03",
+    "sentence": "If the defective battery cells had been detected during factory quality testing, the global recall could have been prevented entirely.",
+    "chunks": [
+      {
+        "text": "If the defective battery cells had been detected during factory quality testing,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the global recall",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "could have been prevented",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "entirely.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "「could have been prevented」為過去假設語氣被動式 (Counterfactual Unreal Past Passive)。主句動詞「could have been prevented」（當時本完全可以被預防），時間軸為過去（Past）。",
+    "translation": "如果缺陷電池芯在工廠品管測試時就被發現，這場全球召回當初本完全可以被預防。"
+  },
+  {
+    "id": "toeic-l3-86",
+    "trainingId": "level3-03",
+    "sentence": "If customer payments are delayed beyond thirty days, enterprise service accounts will be suspended automatically.",
+    "chunks": [
+      {
+        "text": "If customer payments are delayed beyond thirty days,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "enterprise service accounts",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be suspended",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "automatically.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be suspended」為未來條件句被動式 (Future Real Conditional Passive)。條件子句以現在式「are delayed」表示未來可能條件，主要子句動詞為「will be suspended」（將自動被暫停）。",
+    "translation": "如果客戶付款拖延超過三十天，企業服務帳戶將自動被暫停。"
+  },
+  {
+    "id": "toeic-l3-87",
+    "trainingId": "level3-03",
+    "sentence": "Should design modifications be requested by the architectural client, detailed blueprints will be revised by senior engineers.",
+    "chunks": [
+      {
+        "text": "Should design modifications be requested by the architectural client,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "detailed blueprints",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be revised",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by senior engineers.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be revised」為未來條件句被動式 (Future Real Conditional Passive)。【Should 倒裝】「Should modifications be requested...」（= If modifications should be requested...），主要子句動詞為「will be revised」（將由資深工程師修改）。",
+    "translation": "如果建築客戶提出設計修改要求，詳細藍圖將由資深工程師進行修改。"
+  },
+  {
+    "id": "toeic-l3-88",
+    "trainingId": "level3-03",
+    "sentence": "If the corporate merger is approved by the regulatory commission, thousands of new jobs will be created nationwide.",
+    "chunks": [
+      {
+        "text": "If the corporate merger is approved by the regulatory commission,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "thousands of new jobs",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be created",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "nationwide.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be created」為未來條件句被動式 (Future Real Conditional Passive)。條件子句現在式「is approved」，主要子句動詞為「will be created」（將在全國被創造）。",
+    "translation": "如果這起企業合併案獲得監管委員會批准，全國將會創造數以千計的新工作機會。"
+  },
+  {
+    "id": "toeic-l3-89",
+    "trainingId": "level3-03",
+    "sentence": "Should defective hardware components be identified during factory inspection, replacement units will be shipped immediately.",
+    "chunks": [
+      {
+        "text": "Should defective hardware components be identified during factory inspection,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "replacement units",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be shipped",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "immediately.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be shipped」為未來條件句被動式 (Future Real Conditional Passive)。【倒裝考點】「Should components be identified...」，主要子句謂語動詞為「will be shipped」（將立刻被寄出）。",
+    "translation": "如果工廠檢驗期間發現瑕疵硬體零件，替換組件將會立刻被寄出。"
+  },
+  {
+    "id": "toeic-l3-90",
+    "trainingId": "level3-03",
+    "sentence": "If the municipal expansion permit is finalized before December, the new research facility will be constructed near the university.",
+    "chunks": [
+      {
+        "text": "If the municipal expansion permit is finalized before December,",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "the new research facility",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be constructed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "near the university.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "「will be constructed」為未來條件句被動式 (Future Real Conditional Passive)。條件句現在被動式「is finalized」，主要子句動詞為「will be constructed」（將在大學附近被興建）。",
+    "translation": "如果市政擴建許可在十二月前敲定，新的研究設施將會在大學附近被興建。"
+  }
+]
