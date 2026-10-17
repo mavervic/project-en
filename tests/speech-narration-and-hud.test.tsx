@@ -171,6 +171,85 @@ describe('Speech Narration Hook (useSpeechNarration)', () => {
     const utterance = mockSpeak.mock.calls[0][0];
     expect(utterance.voice.voiceURI).toBe('v-gb-natural');
   });
+
+  it('automatically falls back to an offline local voice when an online voice fails with onerror', () => {
+    vi.useFakeTimers();
+    const onlineGb = {
+      voiceURI: 'v-gb-online',
+      name: 'Microsoft Sonia Online (Natural)',
+      lang: 'en-GB',
+      localService: false,
+    };
+    const localUs = {
+      voiceURI: 'v-us-local',
+      name: 'Microsoft Zira Desktop',
+      lang: 'en-US',
+      localService: true,
+    };
+
+    (window.speechSynthesis.getVoices as any).mockReturnValue([onlineGb, localUs]);
+
+    const { result } = renderHook(() => useSpeechNarration());
+
+    act(() => {
+      if (window.speechSynthesis.onvoiceschanged) {
+        (window.speechSynthesis.onvoiceschanged as any)();
+      }
+      result.current.toggleNarration();
+    });
+
+    act(() => {
+      result.current.speak('Testing fallback', { force: true, accent: 'GB' });
+    });
+
+    expect(mockSpeak).toHaveBeenCalledTimes(1);
+    const firstUtterance = mockSpeak.mock.calls[0][0];
+    expect(firstUtterance.voice.voiceURI).toBe('v-gb-online');
+
+    // Simulate online voice failing with interrupted or network error
+    act(() => {
+      if (firstUtterance.onerror) {
+        firstUtterance.onerror({ error: 'interrupted' });
+      }
+      vi.advanceTimersByTime(100);
+    });
+
+    // Should have retried speaking with localUs fallback
+    expect(mockSpeak).toHaveBeenCalledTimes(2);
+    const retryUtterance = mockSpeak.mock.calls[1][0];
+    expect(retryUtterance.voice.voiceURI).toBe('v-us-local');
+    vi.useRealTimers();
+  });
+
+  it('prioritizes stable non-multilingual natural voices over multilingual ones', () => {
+    const mixedVoices = [
+      {
+        voiceURI: 'v-ada',
+        name: 'Microsoft Ada Multilingual Online (Natural) - English (United Kingdom)',
+        lang: 'en-GB',
+      },
+      {
+        voiceURI: 'v-sonia',
+        name: 'Microsoft Sonia Online (Natural) - English (United Kingdom)',
+        lang: 'en-GB',
+      },
+    ] as unknown as SpeechSynthesisVoice[];
+
+    (window.speechSynthesis.getVoices as any).mockReturnValue(mixedVoices);
+    const { result } = renderHook(() => useSpeechNarration());
+
+    act(() => {
+      if (window.speechSynthesis.onvoiceschanged) {
+        (window.speechSynthesis.onvoiceschanged as any)();
+      }
+      result.current.toggleNarration();
+      result.current.speak('Hello UK', { force: true, accent: 'GB' });
+    });
+
+    expect(mockSpeak).toHaveBeenCalled();
+    const utterance = mockSpeak.mock.calls[0][0];
+    expect(utterance.voice.voiceURI).toBe('v-sonia');
+  });
 });
 
 describe('HeaderHUD Audio Narration, Bank Switcher, and Matrix Controls', () => {
@@ -499,5 +578,39 @@ describe('SettingsModal Voice Settings Controls', () => {
     const select = screen.getByTestId('voice-dropdown-select') as HTMLSelectElement;
     expect(select.disabled).toBe(true);
     expect(select.options[0].textContent).toContain('目前裝置無此國家的可用語音合成器');
+  });
+
+  it('excludes problematic multilingual voices from dropdown when stable voices exist', async () => {
+    const { SettingsModal } = await import('../app/components/chunkflow/SettingsModal');
+    const mixedGbVoices = [
+      {
+        voiceURI: 'v-ada',
+        name: 'Microsoft Ada Multilingual Online (Natural) - English (United Kingdom)',
+        lang: 'en-GB',
+      },
+      {
+        voiceURI: 'v-ollie',
+        name: 'Microsoft Ollie Multilingual Online (Natural) - English (United Kingdom)',
+        lang: 'en-GB',
+      },
+      {
+        voiceURI: 'v-sonia',
+        name: 'Microsoft Sonia Online (Natural) - English (United Kingdom)',
+        lang: 'en-GB',
+      },
+      {
+        voiceURI: 'v-ryan',
+        name: 'Microsoft Ryan Online (Natural) - English (United Kingdom)',
+        lang: 'en-GB',
+      },
+    ] as unknown as SpeechSynthesisVoice[];
+
+    render(<SettingsModal isOpen={true} onClose={vi.fn()} accent="GB" voices={mixedGbVoices} />);
+
+    const select = screen.getByTestId('voice-dropdown-select') as HTMLSelectElement;
+    // Should filter out Ada and Ollie, keeping only Sonia and Ryan
+    expect(select.options.length).toBe(2);
+    expect(select.options[0].textContent).toContain('Sonia');
+    expect(select.options[1].textContent).toContain('Ryan');
   });
 });

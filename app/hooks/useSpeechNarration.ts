@@ -22,9 +22,13 @@ export const ACCENT_CONFIG: Record<
 export const ACCENT_PREVIEW_SENTENCE =
   'The director scheduled a conference about our water project.';
 
-function isNaturalVoice(voice: SpeechSynthesisVoice): boolean {
+export function isNaturalVoice(voice: SpeechSynthesisVoice): boolean {
   const name = voice.name.toLowerCase();
   return name.includes('natural') || name.includes('online') || name.includes('neural');
+}
+
+export function isMultilingualVoice(voice: SpeechSynthesisVoice): boolean {
+  return voice.name.toLowerCase().includes('multilingual');
 }
 
 export function useSpeechNarration() {
@@ -39,10 +43,14 @@ export function useSpeechNarration() {
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
   const [canSelectAccents, setCanSelectAccents] = useState<boolean>(false);
   const activeUtteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const speechTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Clean up any speaking utterance on unmount
   useEffect(() => {
     return () => {
+      if (speechTimeoutRef.current) {
+        clearTimeout(speechTimeoutRef.current);
+      }
       if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
         window.speechSynthesis.cancel();
         activeUtteranceRef.current = null;
@@ -100,7 +108,16 @@ export function useSpeechNarration() {
         }
       }
 
-      // Priority 1: Match selected accent with Natural / Online / Neural in name
+      // Priority 1: Match selected accent with stable Natural / Online / Neural (non-multilingual)
+      const stableNaturalMatch = voices.find((v) => {
+        const lang = v.lang.replace('_', '-');
+        return lang.startsWith(targetPrefix) && isNaturalVoice(v) && !isMultilingualVoice(v);
+      });
+      if (stableNaturalMatch) {
+        return stableNaturalMatch;
+      }
+
+      // Priority 1b: Fallback to any natural match (including multilingual)
       const naturalMatch = voices.find((v) => {
         const lang = v.lang.replace('_', '-');
         return lang.startsWith(targetPrefix) && isNaturalVoice(v);
@@ -171,11 +188,10 @@ export function useSpeechNarration() {
       if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
       if (!narrationEnabled && !options?.force) return;
 
-      window.speechSynthesis.cancel();
-      activeUtteranceRef.current = null;
-
-      const utterance = new SpeechSynthesisUtterance(text);
-      activeUtteranceRef.current = utterance;
+      if (speechTimeoutRef.current) {
+        clearTimeout(speechTimeoutRef.current);
+        speechTimeoutRef.current = null;
+      }
 
       let chosenVoice: SpeechSynthesisVoice | null = null;
       if (options?.voice) {
@@ -187,30 +203,60 @@ export function useSpeechNarration() {
         chosenVoice = resolveVoice(options?.accent || accent);
       }
 
-      if (chosenVoice) {
-        utterance.voice = chosenVoice;
-        utterance.lang = chosenVoice.lang;
+      const executeSpeak = (targetVoice: SpeechSynthesisVoice | null, isRetry = false) => {
+        const utterance = new SpeechSynthesisUtterance(text);
+        activeUtteranceRef.current = utterance;
+
+        if (targetVoice) {
+          utterance.voice = targetVoice;
+          utterance.lang = targetVoice.lang;
+        } else {
+          utterance.lang = ACCENT_CONFIG[options?.accent || accent].langPrefix;
+        }
+        utterance.rate = 0.95;
+
+        utterance.onstart = () => setIsSpeaking(true);
+        utterance.onend = () => {
+          activeUtteranceRef.current = null;
+          setIsSpeaking(false);
+        };
+        utterance.onerror = (e) => {
+          // If an online voice failed and this wasn't already a retry, fall back to a local/standard voice
+          if (!isRetry && targetVoice && !targetVoice.localService) {
+            const fallbackVoice =
+              voices.find((v) => v.localService && v.lang.startsWith('en')) || null;
+            if (fallbackVoice && fallbackVoice.voiceURI !== targetVoice.voiceURI) {
+              speechTimeoutRef.current = setTimeout(() => {
+                executeSpeak(fallbackVoice, true);
+              }, 50);
+              return;
+            }
+          }
+          activeUtteranceRef.current = null;
+          setIsSpeaking(false);
+        };
+
+        window.speechSynthesis.speak(utterance);
+      };
+
+      if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
+        window.speechSynthesis.cancel();
+        // Give Chromium/Edge a tick after cancel() to tear down speech channel before streaming online voices
+        speechTimeoutRef.current = setTimeout(() => {
+          executeSpeak(chosenVoice);
+        }, 50);
       } else {
-        utterance.lang = ACCENT_CONFIG[options?.accent || accent].langPrefix;
+        executeSpeak(chosenVoice);
       }
-      utterance.rate = 0.95;
-
-      utterance.onstart = () => setIsSpeaking(true);
-      utterance.onend = () => {
-        activeUtteranceRef.current = null;
-        setIsSpeaking(false);
-      };
-      utterance.onerror = () => {
-        activeUtteranceRef.current = null;
-        setIsSpeaking(false);
-      };
-
-      window.speechSynthesis.speak(utterance);
     },
     [narrationEnabled, accent, resolveVoice, voices]
   );
 
   const stop = useCallback(() => {
+    if (speechTimeoutRef.current) {
+      clearTimeout(speechTimeoutRef.current);
+      speechTimeoutRef.current = null;
+    }
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
       activeUtteranceRef.current = null;

@@ -1,6 +1,10 @@
 import React, { useMemo } from 'react';
 import type { ChunkFlowSettings, SpeechAccent } from '../../types/chunkflow';
-import { ACCENT_CONFIG, ACCENT_PREVIEW_SENTENCE } from '../../hooks/useSpeechNarration';
+import {
+  ACCENT_CONFIG,
+  ACCENT_PREVIEW_SENTENCE,
+  isMultilingualVoice,
+} from '../../hooks/useSpeechNarration';
 
 export interface SettingsModalProps {
   isOpen: boolean;
@@ -58,19 +62,23 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
     return availability;
   }, [voices]);
 
-  // Filter voices that match the active accent prefix
+  // Filter voices that match the active accent prefix (excluding problematic Multilingual voices if stable dedicated voices exist)
   const filteredVoices = useMemo(() => {
     if (voices.length === 0) return [];
-    return voices.filter((v) => {
+    const matching = voices.filter((v) => {
       const lang = v.lang.replace('_', '-');
       return lang.startsWith(targetPrefix);
     });
+    const stable = matching.filter((v) => !isMultilingualVoice(v));
+    return stable.length > 0 ? stable : matching;
   }, [voices, targetPrefix]);
 
   // Determine currently active voice
   const activeVoice = useMemo(() => {
     if (selectedVoiceURI) {
-      const found = voices.find((v) => v.voiceURI === selectedVoiceURI);
+      const found = voices.find(
+        (v) => v.voiceURI === selectedVoiceURI && v.lang.replace('_', '-').startsWith(targetPrefix)
+      );
       if (found) return found;
     }
     // Prefer natural voice matching target accent
@@ -79,7 +87,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
       return name.includes('natural') || name.includes('online') || name.includes('neural');
     });
     return naturalMatch || filteredVoices[0] || null;
-  }, [selectedVoiceURI, voices, filteredVoices]);
+  }, [selectedVoiceURI, voices, filteredVoices, targetPrefix]);
 
   const handleSelectAccent = (accKey: SpeechAccent) => {
     onSelectAccent?.(accKey);
