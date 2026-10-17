@@ -472,7 +472,7 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
 
             return (
               <span
-                key={index}
+                key={`${question.id}-${index}`}
                 onClick={clickHandler}
                 onKeyDown={(e) => {
                   if (isInteractive && (e.key === 'Enter' || e.key === ' ')) {
@@ -484,7 +484,9 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
                 tabIndex={isInteractive ? 0 : undefined}
                 aria-label={chunkAriaLabel}
                 title={showFeedback ? `點擊朗讀 "${chunk.text}"` : undefined}
-                className={`relative inline-flex items-center px-3.5 py-1.5 rounded-xl border-2 text-xl md:text-3xl font-semibold tracking-tight transition-all duration-200 select-none ${chunkStyle}`}
+                className={`relative inline-flex items-center px-3.5 py-1.5 rounded-xl border-2 text-xl md:text-3xl font-semibold tracking-tight ${
+                  isTextHidden ? 'transition-none' : 'transition-all duration-200'
+                } select-none ${chunkStyle}`}
               >
                 {chunk.text}
               </span>

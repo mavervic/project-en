@@ -279,4 +279,65 @@ describe('ChunkFlowArena - Copy Button & Translation Display', () => {
     expect(verbChunk.className).toContain('border-cyan-400');
     expect(objectChunk.className).not.toContain('text-transparent');
   });
+
+  it('mounts fresh chunk elements with transition-none and text-transparent when advancing to the next question in blind mode to prevent text flash', () => {
+    const nextQuestion: Question = {
+      id: 'test-q-next',
+      sentence: 'The board approved the new proposal yesterday.',
+      chunks: [
+        { text: 'The board', isTargetSlot: false, type: 'subject' },
+        { text: 'approved', isTargetSlot: true, type: 'verb' },
+        { text: 'the new proposal yesterday.', isTargetSlot: false, type: 'object' },
+      ],
+      targetSlotIndex: 1,
+      correctAnswers: {
+        voice: 'active',
+        time: 'past',
+        aspect: 'simple',
+      },
+      grammarNote: '「approved」為過去簡單式主動語態。',
+    };
+
+    const { rerender } = render(
+      <ChunkFlowArena
+        question={mockQuestionWithTranslation}
+        focusState="evaluated"
+        progressPercent={100}
+        lastEvaluation={{ isCorrect: true, latencyMs: 900 }}
+        showFeedback={true}
+        blindModeEnabled={true}
+        isSubjectVerbDrill={true}
+        roundStage="classify"
+      />
+    );
+
+    const prevSubjectEl = screen.getByText('The supervisor');
+    expect(prevSubjectEl.className).not.toContain('text-transparent');
+
+    // Advance to next question: showFeedback becomes false and question changes
+    rerender(
+      <ChunkFlowArena
+        question={nextQuestion}
+        focusState="idle"
+        progressPercent={0}
+        lastEvaluation={null}
+        showFeedback={false}
+        blindModeEnabled={true}
+        isSubjectVerbDrill={true}
+        roundStage="classify"
+      />
+    );
+
+    const nextSubjectEl = screen.getByText('The board');
+    const nextVerbEl = screen.getByText('approved');
+
+    // Must be a newly mounted DOM element (not reusing the old visible span)
+    expect(nextSubjectEl).not.toBe(prevSubjectEl);
+    // Must immediately have text-transparent and transition-none (no 200ms color fade delay)
+    expect(nextSubjectEl.className).toContain('text-transparent');
+    expect(nextSubjectEl.className).toContain('transition-none');
+    expect(nextSubjectEl.className).not.toContain('transition-all');
+    expect(nextVerbEl.className).toContain('text-transparent');
+    expect(nextVerbEl.className).toContain('transition-none');
+  });
 });
