@@ -11,6 +11,7 @@ import { STARTER_QUESTIONS } from '../data/starterQuestions';
 import { getBankQuestions } from '../data/banks';
 import {
   clearCustomQuestions,
+  clearMarkedChunks,
   clearPerformanceRecords,
   computeCategoryStats,
   computeStats,

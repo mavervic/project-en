@@ -8,7 +8,7 @@ import type { TrainingUnitTelemetry } from '../app/types/chunkflow';
 describe('TrainingMatrixDrawer - Listening Badges', () => {
   const mockTelemetry: Record<string, TrainingUnitTelemetry> = {};
 
-  TOEIC_LISTENING_META.groups
+  (TOEIC_LISTENING_META.groups ?? [])
     .flatMap((g) => g.units)
     .forEach((unit, idx) => {
       mockTelemetry[unit.trainingId] = {
