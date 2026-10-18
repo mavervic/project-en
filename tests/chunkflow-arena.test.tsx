@@ -340,4 +340,51 @@ describe('ChunkFlowArena - Copy Button & Translation Display', () => {
     expect(nextVerbEl.className).toContain('text-transparent');
     expect(nextVerbEl.className).toContain('transition-none');
   });
+
+  it('plays speech on single click and copies chunk to clipboard on double click during showFeedback', async () => {
+    const onSpeakChunk = vi.fn();
+    const cancelMock = vi.fn();
+    (window as any).speechSynthesis = {
+      cancel: cancelMock,
+      speak: vi.fn(),
+    };
+
+    render(
+      <ChunkFlowArena
+        question={mockQuestionWithTranslation}
+        focusState="evaluated"
+        progressPercent={100}
+        lastEvaluation={{ isCorrect: true, latencyMs: 900 }}
+        showFeedback={true}
+        onSpeakChunk={onSpeakChunk}
+      />
+    );
+
+    const chunkEl = screen.getByText('The supervisor');
+    expect(chunkEl.getAttribute('title')).toContain('點擊朗讀・雙擊複製');
+
+    // Single click triggers onSpeakChunk
+    fireEvent.click(chunkEl);
+    expect(onSpeakChunk).toHaveBeenCalledWith('The supervisor');
+
+    // Double click triggers clipboard copy and cancels speech
+    await act(async () => {
+      fireEvent.doubleClick(chunkEl);
+    });
+
+    expect(cancelMock).toHaveBeenCalled();
+    expect(writeTextMock).toHaveBeenCalledWith('The supervisor');
+
+    // Floating badge appears
+    const toast = screen.getByTestId('chunk-copied-toast-0');
+    expect(toast).toBeDefined();
+    expect(toast.textContent).toContain('已複製');
+
+    // After timer advances 1200ms, toast disappears
+    act(() => {
+      vi.advanceTimersByTime(1300);
+    });
+
+    expect(screen.queryByTestId('chunk-copied-toast-0')).toBeNull();
+  });
 });

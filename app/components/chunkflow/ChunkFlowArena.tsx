@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import type { PerformanceStats, Question } from '../../types/chunkflow';
 
 interface ChunkFlowArenaProps {
@@ -50,6 +50,27 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
   const [isCopied, setIsCopied] = useState(false);
+  const [copiedChunkIndex, setCopiedChunkIndex] = useState<number | null>(null);
+  const copyChunkTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleDoubleClickChunk = async (chunkText: string, index: number) => {
+    // Stop any in-flight utterance so speech doesn't overlap on double click
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(chunkText);
+      }
+      setCopiedChunkIndex(index);
+      if (copyChunkTimeoutRef.current) clearTimeout(copyChunkTimeoutRef.current);
+      copyChunkTimeoutRef.current = setTimeout(() => {
+        setCopiedChunkIndex(null);
+      }, 1200);
+    } catch (err) {
+      console.warn('Failed to copy chunk to clipboard:', err);
+    }
+  };
 
   const handleCopySentence = async () => {
     try {
@@ -474,8 +495,10 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
               chunkStyle = 'border-transparent bg-transparent text-zinc-400';
             }
 
+            const isCopiedChunk = copiedChunkIndex === index;
+
             const chunkAriaLabel = showFeedback
-              ? `朗讀語塊: ${chunk.text}`
+              ? `朗讀語塊 (雙擊複製): ${chunk.text}`
               : isInteractive
                 ? `Select chunk: ${chunk.text}`
                 : undefined;
@@ -484,6 +507,9 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
               <span
                 key={`${question.id}-${index}`}
                 onClick={clickHandler}
+                onDoubleClick={
+                  showFeedback ? () => handleDoubleClickChunk(chunk.text, index) : undefined
+                }
                 onKeyDown={(e) => {
                   if (isInteractive && (e.key === 'Enter' || e.key === ' ')) {
                     e.preventDefault();
@@ -493,11 +519,24 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
                 role={isInteractive ? 'button' : undefined}
                 tabIndex={isInteractive ? 0 : undefined}
                 aria-label={chunkAriaLabel}
-                title={showFeedback ? `點擊朗讀 "${chunk.text}"` : undefined}
+                title={showFeedback ? `點擊朗讀・雙擊複製 "${chunk.text}"` : undefined}
                 className={`relative inline-flex items-center px-3.5 py-1.5 rounded-xl border-2 text-xl md:text-3xl font-semibold tracking-tight ${
                   isTextHidden ? 'transition-none' : 'transition-all duration-200'
-                } select-none ${chunkStyle}`}
+                } select-none ${
+                  isCopiedChunk
+                    ? 'border-emerald-400 bg-emerald-950/60 text-emerald-200 shadow-[0_0_20px_rgba(52,211,153,0.4)] ring-2 ring-emerald-400/40 scale-105'
+                    : chunkStyle
+                }`}
               >
+                {/* Floating Copied Badge */}
+                {isCopiedChunk && (
+                  <span
+                    data-testid={`chunk-copied-toast-${index}`}
+                    className="absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500 text-zinc-950 shadow-lg animate-fadeIn z-30 pointer-events-none whitespace-nowrap font-mono"
+                  >
+                    ✓ 已複製
+                  </span>
+                )}
                 {chunk.text}
               </span>
             );
