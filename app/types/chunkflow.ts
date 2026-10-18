@@ -125,6 +125,8 @@ export interface TrainingUnitTelemetry {
   bestStreak: number;
   masteryTier: 0 | 1 | 2 | 3 | 4;
   isCompleted: boolean;
+  totalQuestions?: number;
+  attemptedQuestions?: number;
 }
 
 export interface QuestionValidationResult {

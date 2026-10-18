@@ -123,4 +123,69 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
     const tooltipBadge = screen.getByTestId('cluster-marked-badge-listening-01');
     expect(tooltipBadge.textContent).toContain('4 個');
   });
+
+  it('renders attempted/total question progress ratio under status tag when showTags is active', () => {
+    const customTelemetry = {
+      ...mockTelemetry,
+      'listening-01': {
+        ...mockTelemetry['listening-01'],
+        totalQuestions: 3,
+        attemptedQuestions: 2,
+        isCompleted: false,
+      },
+    };
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={customTelemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+        banks={[TOEIC_LISTENING_META]}
+        activeBankId="toeic-listening"
+      />
+    );
+
+    const progressRatio = screen.getByTestId('unit-progress-listening-01');
+    expect(progressRatio).toBeDefined();
+    expect(progressRatio.textContent).toBe('2/3');
+  });
+
+  it('renders descriptive title tooltip confirming completion status on hover', () => {
+    const customTelemetry = {
+      ...mockTelemetry,
+      'listening-02': {
+        ...mockTelemetry['listening-02'],
+        totalQuestions: 3,
+        attemptedQuestions: 3,
+        isCompleted: true,
+      },
+      'listening-01': {
+        ...mockTelemetry['listening-01'],
+        totalQuestions: 3,
+        attemptedQuestions: 2,
+        isCompleted: false,
+      },
+    };
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={customTelemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+        banks={[TOEIC_LISTENING_META]}
+        activeBankId="toeic-listening"
+      />
+    );
+
+    const completedRow = screen.getByTestId('training-row-listening-02') as HTMLButtonElement;
+    expect(completedRow.title).toContain('3/3');
+    expect(completedRow.title).toContain('已完成');
+
+    const inProgressRow = screen.getByTestId('training-row-listening-01') as HTMLButtonElement;
+    expect(inProgressRow.title).toContain('2/3');
+  });
 });

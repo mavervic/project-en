@@ -617,6 +617,8 @@ export function computeTrainingTelemetry(
       bestStreak,
       masteryTier: computeMasteryTier(totalAttempts, accuracy),
       isCompleted,
+      totalQuestions: unitQIds.length,
+      attemptedQuestions: attemptedQIds.size,
     };
   }
 

@@ -218,75 +218,64 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
           {/* Arena Audio & Utility Controls */}
           <div className="flex items-center gap-1.5 sm:gap-2">
             {/* Blind Listening Mode Eye Toggle Button (Left of Narration Button) */}
-            <button
-              type="button"
-              data-testid="blind-mode-toggle-btn"
-              disabled={isListeningMode}
-              onClick={isListeningMode ? undefined : onToggleBlindMode}
-              title={
-                isListeningMode
-                  ? '純聽力模式：開局強制遮蔽，播畢後自動揭示'
-                  : blindModeEnabled
-                    ? '關閉聽音辨識（顯示文字）'
-                    : '開啟聽音辨識（隱藏文字）'
-              }
-              aria-label={
-                isListeningMode
-                  ? 'Listening mode active (fixed blind mode)'
-                  : blindModeEnabled
+            {!isListeningMode && (
+              <button
+                type="button"
+                data-testid="blind-mode-toggle-btn"
+                onClick={onToggleBlindMode}
+                title={blindModeEnabled ? '關閉聽音辨識（顯示文字）' : '開啟聽音辨識（隱藏文字）'}
+                aria-label={
+                  blindModeEnabled
                     ? 'Show text (disable blind listening mode)'
                     : 'Hide text (enable blind listening mode)'
-              }
-              aria-pressed={blindModeEnabled}
-              className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-colors flex items-center gap-1.5 text-xs font-medium shadow-sm ${
-                isListeningMode
-                  ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-300/80 cursor-default select-none'
-                  : blindModeEnabled
+                }
+                aria-pressed={blindModeEnabled}
+                className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-colors flex items-center gap-1.5 text-xs font-medium shadow-sm ${
+                  blindModeEnabled
                     ? 'bg-cyan-500/15 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/25 cursor-pointer'
                     : 'bg-zinc-900/90 border-zinc-700/80 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300 cursor-pointer'
-              }`}
-            >
-              {isListeningMode || blindModeEnabled ? (
-                <svg
-                  className="w-4 h-4 text-cyan-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="w-4 h-4 text-zinc-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-              )}
-              <span className="hidden sm:inline">
-                {isListeningMode ? '純聽力' : blindModeEnabled ? '聽音中' : '聽音辨識'}
-              </span>
-            </button>
+                }`}
+              >
+                {blindModeEnabled ? (
+                  <svg
+                    className="w-4 h-4 text-cyan-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="w-4 h-4 text-zinc-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                  </svg>
+                )}
+                <span className="hidden sm:inline">{blindModeEnabled ? '聽音中' : '聽音辨識'}</span>
+              </button>
+            )}
 
-            {onToggleNarration && (
+            {!isListeningMode && onToggleNarration && (
               <button
                 type="button"
                 data-testid="narration-toggle-btn"

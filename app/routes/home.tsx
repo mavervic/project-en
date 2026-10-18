@@ -198,6 +198,16 @@ export default function Home() {
     }
   };
 
+  const handleBankChange = useCallback(
+    (bankId: string) => {
+      handleSelectBank(bankId);
+      if (bankId === 'toeic-listening') {
+        enableNarration();
+      }
+    },
+    [handleSelectBank, enableNarration]
+  );
+
   const handleUpdateSettings = (newSettings: Partial<ChunkFlowSettings>) => {
     setSettings((prev) => {
       const updated = { ...prev, ...newSettings };
@@ -275,7 +285,7 @@ export default function Home() {
           onSelectTraining={handleSelectTraining}
           banks={registeredBanks}
           activeBankId={activeBankId}
-          onSelectBank={handleSelectBank}
+          onSelectBank={handleBankChange}
           markedChunksCountMap={markedChunksCountMap}
         />
       )}

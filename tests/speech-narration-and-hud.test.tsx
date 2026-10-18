@@ -728,4 +728,29 @@ describe('SettingsModal Voice Settings Controls', () => {
     expect(select.options[0].textContent).toContain('Sonia');
     expect(select.options[1].textContent).toContain('Ryan');
   });
+
+  it('voices preview utterance with newly chosen speech rate on rate button click', async () => {
+    const { SettingsModal } = await import('../app/components/chunkflow/SettingsModal');
+    const { ACCENT_PREVIEW_SENTENCE } = await import('../app/hooks/useSpeechNarration');
+    const onPreviewVoice = vi.fn();
+    const onUpdateSettings = vi.fn();
+
+    render(
+      <SettingsModal
+        isOpen={true}
+        onClose={vi.fn()}
+        onPreviewVoice={onPreviewVoice}
+        onUpdateSettings={onUpdateSettings}
+      />
+    );
+
+    const rateBtn = screen.getByTestId('rate-button-1.5');
+    fireEvent.click(rateBtn);
+
+    expect(onUpdateSettings).toHaveBeenCalledWith({ listeningSpeechRate: 1.5 });
+    expect(onPreviewVoice).toHaveBeenCalledWith(
+      ACCENT_PREVIEW_SENTENCE,
+      expect.objectContaining({ rate: 1.5, force: true })
+    );
+  });
 });

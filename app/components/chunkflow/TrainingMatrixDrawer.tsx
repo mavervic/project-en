@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useRef, useEffect } from 'react';
 import type { QuestionBankMeta, TrainingUnitTelemetry } from '../../types/chunkflow';
-import { getBankById } from '../../data/banks';
+import { getBankById, getBankQuestions } from '../../data/banks';
 import { MASTERY_TIER_STYLES } from './TrainingMatrix';
 
 export interface TrainingMatrixDrawerProps {
@@ -52,6 +52,20 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
     banks.find((b) => b.id === activeBankId) ??
     (activeBankId ? getBankById(activeBankId) : undefined);
   const hasCurriculumGroups = Boolean(activeBank?.groups && activeBank.groups.length > 0);
+
+  const bankQuestions = useMemo(() => {
+    return getBankQuestions(activeBankId || 'parker');
+  }, [activeBankId]);
+
+  const unitQuestionCountMap = useMemo(() => {
+    const map: Record<string, number> = {};
+    for (const q of bankQuestions) {
+      if (q.trainingId) {
+        map[q.trainingId] = (map[q.trainingId] || 0) + 1;
+      }
+    }
+    return map;
+  }, [bankQuestions]);
 
   // Group banks by category
   const categorizedBanks = useMemo(() => {
@@ -350,6 +364,18 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                     const unitTel = telemetry[unit.trainingId];
                     const isCompleted = Boolean(unitTel?.isCompleted);
                     const markedCount = markedChunksCountMap[unit.trainingId] || 0;
+                    const total =
+                      unitTel?.totalQuestions ?? unitQuestionCountMap[unit.trainingId] ?? 0;
+                    const attempted =
+                      unitTel?.attemptedQuestions ??
+                      (isCompleted ? total : Math.min(unitTel?.totalAttempts || 0, total));
+                    const isAllDone = total > 0 && (isCompleted || attempted >= total);
+                    const tooltipText =
+                      total > 0
+                        ? isAllDone
+                          ? `${unit.title}: 進度 ${attempted}/${total} 題已完成`
+                          : `${unit.title}: 進度 ${attempted}/${total} 題`
+                        : unit.title;
 
                     const difficultyClass =
                       unit.difficulty === 'Easy'
@@ -363,6 +389,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                         key={unit.trainingId}
                         type="button"
                         data-testid={`training-row-${unit.trainingId}`}
+                        title={tooltipText}
                         onClick={() => onSelectTraining(isSelected ? null : unit.trainingId)}
                         className={`w-full text-left min-h-[50px] px-3.5 py-2.5 flex flex-col justify-center cursor-pointer transition-colors duration-150 ${
                           isSelected
@@ -371,8 +398,8 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                         }`}
                       >
                         <div className="flex items-center space-x-3 w-full">
-                          {/* Completion status icon */}
-                          <div className="flex items-center shrink-0">
+                          {/* Completion status icon & progress counter */}
+                          <div className="flex flex-col items-center justify-center shrink-0 min-w-[28px]">
                             {isCompleted ? (
                               <svg
                                 data-testid={`status-completed-${unit.trainingId}`}
@@ -403,6 +430,14 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                                   clipRule="evenodd"
                                 />
                               </svg>
+                            )}
+                            {showTags && total > 0 && (
+                              <span
+                                data-testid={`unit-progress-${unit.trainingId}`}
+                                className="text-[10px] font-mono text-zinc-500 mt-0.5 leading-none whitespace-nowrap"
+                              >
+                                {attempted}/{total}
+                              </span>
                             )}
                           </div>
 
@@ -469,6 +504,18 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                   const isSelected = activeTrainingId === unit.trainingId;
                   const isCompleted = Boolean(unit.isCompleted);
                   const markedCount = markedChunksCountMap[unit.trainingId] || 0;
+                  const total = unit.totalQuestions ?? unitQuestionCountMap[unit.trainingId] ?? 0;
+                  const attempted =
+                    unit.attemptedQuestions ??
+                    (isCompleted ? total : Math.min(unit.totalAttempts || 0, total));
+                  const isAllDone = total > 0 && (isCompleted || attempted >= total);
+                  const clusterTitle =
+                    total > 0
+                      ? isAllDone
+                        ? `${unit.lessonName}: 進度 ${attempted}/${total} 題已完成`
+                        : `${unit.lessonName}: 進度 ${attempted}/${total} 題`
+                      : `${unit.lessonName}: 正確率 ${unit.accuracy}%, 嘗試 ${unit.totalAttempts} 次`;
+
                   const completionStyle = isCompleted
                     ? 'bg-cyan-400 border-white/80 text-zinc-950 font-bold shadow-[0_0_10px_rgba(6,182,212,0.3)] hover:bg-cyan-300'
                     : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-700 hover:text-zinc-300';
@@ -493,6 +540,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                         type="button"
                         data-testid={`training-block-${unit.trainingId}`}
                         onClick={() => onSelectTraining(unit.trainingId)}
+                        title={clusterTitle}
                         aria-label={`${unit.lessonName}: 正確率 ${unit.accuracy}%, 嘗試 ${unit.totalAttempts} 次`}
                         className={`w-[36px] h-[36px] rounded-lg border text-xs font-mono transition-all duration-150 flex items-center justify-center cursor-pointer select-none relative ${completionStyle} ${
                           isSelected

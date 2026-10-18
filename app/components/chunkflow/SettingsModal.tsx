@@ -114,12 +114,21 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
   const handleSelectAccent = (accKey: SpeechAccent) => {
     onSelectAccent?.(accKey);
-    onPreviewVoice?.(ACCENT_PREVIEW_SENTENCE, { force: true, accent: accKey });
+    onPreviewVoice?.(ACCENT_PREVIEW_SENTENCE, {
+      force: true,
+      accent: accKey,
+      rate: activeSpeechRate,
+    });
   };
 
   const handleSelectVoiceURI = (voiceURI: string) => {
     onSelectVoiceURI?.(voiceURI);
-    onPreviewVoice?.(ACCENT_PREVIEW_SENTENCE, { force: true, voiceURI, accent });
+    onPreviewVoice?.(ACCENT_PREVIEW_SENTENCE, {
+      force: true,
+      voiceURI,
+      accent,
+      rate: activeSpeechRate,
+    });
   };
 
   const handleSelectSequenceMode = (mode: NarrationSequenceMode) => {
@@ -269,6 +278,42 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               </div>
             </div>
 
+            {/* Speech Rate Selection */}
+            <div className="flex flex-col gap-1.5 mt-1">
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-medium text-zinc-300">
+                  朗誦速度 (Playback Speed)
+                </label>
+                <span className="text-xs font-mono text-cyan-400">{activeSpeechRate}x</span>
+              </div>
+              <div
+                data-testid="speech-rate-switch"
+                role="group"
+                aria-label="朗誦速度切換"
+                className="grid grid-cols-4 sm:grid-cols-7 gap-1 bg-zinc-950 p-1.5 rounded-xl border border-zinc-800/90"
+              >
+                {SPEECH_RATES.map((rate) => {
+                  const isSelected = activeSpeechRate === rate;
+                  return (
+                    <button
+                      key={rate}
+                      type="button"
+                      data-testid={`rate-button-${rate}`}
+                      onClick={() => handleSelectSpeechRate(rate)}
+                      aria-pressed={isSelected}
+                      className={`py-1.5 px-1 rounded-lg text-xs font-mono transition-all cursor-pointer text-center ${
+                        isSelected
+                          ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-bold ring-1 ring-cyan-500/30'
+                          : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900 border border-transparent'
+                      }`}
+                    >
+                      {rate}x
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
             {/* Voice Priority Hint */}
             <div
               data-testid="voice-priority-guidance"
@@ -294,13 +339,11 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <span className="text-sm font-semibold text-zinc-100 flex items-center gap-2">
                 <span className="text-base">🎧</span> 聽力題庫朗誦設定
               </span>
-              <span className="text-xs font-mono text-cyan-400">
-                {activeSpeechRate}x · {activePauseInterval}ms
-              </span>
+              <span className="text-xs font-mono text-cyan-400">{activePauseInterval}ms</span>
             </div>
 
             <p className="text-xs text-zinc-400 leading-relaxed">
-              設定聽力題庫的朗誦順序循環、朗誦速度與語句間隔停頓時間。
+              設定聽力題庫的朗誦順序循環與語句間隔停頓時間。
             </p>
 
             {/* Sequence Mode Selection */}
@@ -368,37 +411,6 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   <span>⚠️</span> 目前裝置無可用中文語音，播放時將自動退回「純英雙播」。
                 </div>
               )}
-            </div>
-
-            {/* Speech Rate Selection */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium text-zinc-300">朗誦速度 (Playback Speed)</label>
-              <div
-                data-testid="speech-rate-switch"
-                role="group"
-                aria-label="朗誦速度切換"
-                className="grid grid-cols-4 sm:grid-cols-7 gap-1 bg-zinc-950 p-1.5 rounded-xl border border-zinc-800/90"
-              >
-                {SPEECH_RATES.map((rate) => {
-                  const isSelected = activeSpeechRate === rate;
-                  return (
-                    <button
-                      key={rate}
-                      type="button"
-                      data-testid={`rate-button-${rate}`}
-                      onClick={() => handleSelectSpeechRate(rate)}
-                      aria-pressed={isSelected}
-                      className={`py-1.5 px-1 rounded-lg text-xs font-mono transition-all cursor-pointer text-center ${
-                        isSelected
-                          ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-bold ring-1 ring-cyan-500/30'
-                          : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900 border border-transparent'
-                      }`}
-                    >
-                      {rate}x
-                    </button>
-                  );
-                })}
-              </div>
             </div>
 
             {/* Pause Interval Selection */}

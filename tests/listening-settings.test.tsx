@@ -16,12 +16,15 @@ describe('SettingsModal - Listening Drill Settings', () => {
     window.localStorage.clear();
   });
 
-  it('renders listening settings section with sequence mode, rate, and interval controls', () => {
+  it('renders speech rate switch inside voice settings section and sequence/interval inside listening section', () => {
     render(<SettingsModal isOpen={true} onClose={vi.fn()} hasChineseVoice={true} />);
 
-    expect(screen.getByTestId('listening-settings-section')).toBeDefined();
+    const voiceSection = screen.getByTestId('voice-settings-section');
+    const listeningSection = screen.getByTestId('listening-settings-section');
+
+    expect(voiceSection.querySelector('[data-testid="speech-rate-switch"]')).not.toBeNull();
+    expect(listeningSection.querySelector('[data-testid="speech-rate-switch"]')).toBeNull();
     expect(screen.getByTestId('listening-sequence-mode-switch')).toBeDefined();
-    expect(screen.getByTestId('speech-rate-switch')).toBeDefined();
     expect(screen.getByTestId('pause-interval-input')).toBeDefined();
   });
 

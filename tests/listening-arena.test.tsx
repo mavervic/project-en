@@ -117,8 +117,11 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
     expect(result.current.blindModeEnabled).toBe(true);
   });
 
-  it('renders blind-mode-toggle-btn as disabled pure listening badge in listening mode', () => {
+  it('omits blind-mode-toggle-btn and narration-toggle-btn in listening mode while keeping replay button', () => {
     const onToggleBlindMode = vi.fn();
+    const onToggleNarration = vi.fn();
+    const onPlayAudio = vi.fn();
+
     render(
       <ChunkFlowArena
         question={sampleQuestion}
@@ -128,15 +131,60 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
         showFeedback={false}
         blindModeEnabled={true}
         onToggleBlindMode={onToggleBlindMode}
+        narrationEnabled={true}
+        onToggleNarration={onToggleNarration}
+        onPlayAudio={onPlayAudio}
         isListeningMode={true}
       />
     );
 
-    const btn = screen.getByTestId('blind-mode-toggle-btn') as HTMLButtonElement;
-    expect(btn.disabled).toBe(true);
-    expect(btn.textContent).toContain('純聽力');
+    expect(screen.queryByTestId('blind-mode-toggle-btn')).toBeNull();
+    expect(screen.queryByTestId('narration-toggle-btn')).toBeNull();
+    expect(screen.getByTestId('replay-audio-btn')).toBeDefined();
+    expect(screen.getByTestId('copy-sentence-btn')).toBeDefined();
+  });
 
-    fireEvent.click(btn);
-    expect(onToggleBlindMode).not.toHaveBeenCalled();
+  it('enforces auto-unmute and enables narration when switching to toeic-listening bank in Home', async () => {
+    window.localStorage.clear();
+    window.localStorage.setItem('chunkflow_narration_enabled_v1', 'false');
+    window.localStorage.setItem('chunkflow_active_bank_id_v1', 'starter');
+
+    const mockSpeak = vi.fn();
+    class MockSpeechSynthesisUtterance {
+      text: string;
+      constructor(text: string) {
+        this.text = text;
+      }
+    }
+    (window as any).SpeechSynthesisUtterance = MockSpeechSynthesisUtterance;
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: {
+        speak: mockSpeak,
+        cancel: vi.fn(),
+        getVoices: vi.fn().mockReturnValue([]),
+        onvoiceschanged: null,
+      },
+      writable: true,
+      configurable: true,
+    });
+
+    const { default: Home } = await import('../app/routes/home');
+    render(<Home />);
+
+    // In starter bank, narration toggle button is visible and shows 靜音
+    const narrationBtn = screen.getByTestId('narration-toggle-btn');
+    expect(narrationBtn.textContent).toContain('靜音');
+
+    // Open bank switcher and select toeic-listening
+    const bankSwitcherBtn = screen.getByTestId('bank-switcher-btn');
+    fireEvent.click(bankSwitcherBtn);
+
+    const listeningBankBtn = screen.getByTestId('select-bank-toeic-listening');
+    act(() => {
+      fireEvent.click(listeningBankBtn);
+    });
+
+    // Narration must now be auto-enabled
+    expect(window.localStorage.getItem('chunkflow_narration_enabled_v1')).toBe('true');
   });
 });
