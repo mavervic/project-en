@@ -42,7 +42,27 @@ ChunkFlow 內建分類多層次的題庫系統，支援即時切換與獨立訓�
   - **Unit 2 (情態助動詞與 Modal Perfect)**：涵蓋 `should/could/would/must have + p.p.`（過去推測與未竟之憾）、情態被動式（`can/must be + p.p.`、`could have been + p.p.`）與推測語態。
   - **Unit 3 (條件假設語氣與倒裝句型)**：涵蓋真實條件句、非真實條件句（Counterfactual / Unreal Past）以及省略 `If` 的高階倒裝結構（`Had S p.p.`、`Should S V`、`Were S to V`）。
 
-### 2. 核心精選與自訂題庫匯入 (Custom Import)
+### 2. TOEIC Listening 聽力題庫 (13 大商務情境)
+
+專為提升多益聽力短文與商業情境對話解構能力設計，涵蓋 **13 組獨立商務情境訓練分組**：
+
+1. **Travel 航空與差旅** (出差、交通、航班動態)
+2. **Dining out 商務餐敘** (訂位、商務聚會、菜單)
+3. **Entertainment 文娛活動** (商務接待、藝文觀光)
+4. **Housing 辦公與租賃** (房產租賃、搬遷、裝潢)
+5. **Purchasing 採購與供應** (供應商詢價、訂單處理)
+6. **Personnel 人力資源** (人才招募、面試、員工福利)
+7. **Offices 辦公室行政** (行政事務、會議排程、辦公設備)
+8. **Health 職場健康安全** (健檢、職安保險、工傷防範)
+9. **General Business 綜合商業** (合約簽署、跨部門溝通、銷售)
+10. **Manufacturing 生產製造** (生產線、品管標準、製程)
+11. **Corporate Development 企業發展** (策略併購、企業擴張)
+12. **Technical areas 科技與資訊** (軟硬體維護、系統部署)
+13. **Financing & Budgeting 財務與預算** (財務報表、預算審計)
+
+每道題目皆提供嚴謹的句構語塊切分（Chunks）與繁體中文翻譯，支援自動盲聽、多階段朗誦、音檔完畢後語塊盲點標記與筆記匯出。
+
+### 3. 核心精選與自訂題庫匯入 (Custom Import)
 
 - **核心多益題庫 (Starter)**：ChunkFlow 精選 12 題經典句型。
 - **自訂 JSON 題庫匯入**：支援學習者依規範格式自訂與匯入題目，資料全端本機儲存保護隱私。
@@ -83,9 +103,40 @@ ChunkFlow 內建分類多層次的題庫系統，支援即時切換與獨立訓�
   - **自動解除靜音與作答後對照**：若在靜音狀態下開啟聽音辨識，系統會自動開啟語音朗誦並立即播放當前題目；完成作答進入解析（Feedback）畫面時自動恢復顯示完整句子文字與主謂標示以便對照檢討，進入下一題時再自動變回透明（開關狀態自動記憶於 `localStorage`）。
 - **四國口音國旗切換**：支援澳洲 (🇦🇺 en-AU)、加拿大 (🇨🇦 en-CA)、英國 (🇬🇧 en-GB)、美國 (🇺🇸 en-US) 快速切換，切換時自動撥放各國口音特色金句試聽。
 - **高相容性語音優選與防斷機制**：內建智慧評分排序、排除已知異常線上語音（如 Edge 多語串流合成器）、冷卻延遲防抖與自動離線/本機語音降級（Fallback）。
-- **作答後語塊點擊朗讀 (Click-to-Pronounce)**：題目完成作答後，點擊任一語法語塊（Chunk）即可單獨朗讀該片語，方便強化弱點發音與斷句感。
+- **作答後語塊點擊朗讀與雙擊複製 (Click-to-Pronounce & Double-Click-to-Copy)**：
+  - **單擊語塊**：單獨朗讀該片語，強化弱點發音與斷句感。
+  - **雙擊語塊**：直接將該語塊文字複製到剪貼簿，自動中斷當前語音防止重疊干擾，並於語塊上方即時浮現 `✓ 已複製` 翠綠色微互動提示，大幅加速查字典與外掛筆記流程。
 
-### 5. ⌨️ 鍵盤優先極速操作 (Keyboard-First Flow)
+### 5. 🎧 TOEIC 13 大商務情境聽力與語塊盲點標記 (Listening Mode & Chunk Notes)
+
+專為克服「聽力節奏太快、聽完不知道哪個字聽不懂」設計的純聽力刻意練習流：
+
+- **多階段智慧朗讀序列**：
+  - **預設模式 (`en2-zh1-en1`)**：英文 2 次 $\to$ 中文 1 次 $\to$ 英文 1 次（聽覺初聽 $\to$ 確認 $\to$ 語意定錨 $\to$ 結構內化）。
+  - **自動中文降級機制**：若客戶端瀏覽器缺乏相容中文語音，系統自動安全降級為雙英文 (`en2`) 播放，保證朗讀流程永不中斷或報錯。
+  - **多元模式切換**：亦可手動切換為純雙英文 (`en2`) 或純單英文 (`en1`)。
+- **可調控語速與句間停頓**：
+  - 支援 `0.9, 1.0, 1.1, 1.25, 1.5, 1.75, 2.0` 多檔播放速度切換。
+  - 支援 `400ms ~ 2000ms`（預設 700ms）自訂句間呼吸停頓間隔。
+- **純聽力沉浸訓練流**：
+  - 每一題自動以遮蔽（Blind）模式開局，自動啟動語音序列。
+  - 免去文法判斷打擾，語音播畢後自動於下方揭示繁體中文翻譯，直覺對照聽力盲點。
+- **播畢語塊盲點標記 (Chunk Chips)**：
+  - 語音播放完畢後，底部即時切換為該題目的互動語塊按鈕（Chunk Chips）。
+  - 點選即可將聽不清楚的單字或片語標記為盲點（呈現琥珀色高亮光暈），一鍵收錄至本機筆記本。
+
+### 6. 📓 兩層式聽力盲點筆記本與抽屜 Telemetry (Listening Notebook & Badges)
+
+- **左側抽屜即時 Telemetry 標籤**：
+  - 開啟左側抽屜時，13 大商務訓練單元旁會即時顯示該單元已標記的盲點數量標籤（例如 `3 語塊`），練習弱點一目了然。
+- **全域聽力筆記本視窗 (Listening Notebook Modal)**：
+  - 頂部導覽列提供專屬 `Notebook` 按鈕（附即時標記總數徽章）。
+  - **多維度檢視**：支援 13 大情境主題下拉篩選與關鍵字全文搜尋。
+  - **完整語境對照**：筆記清晰列出盲點語塊、母句完整英文句子、中文翻譯與所屬主題。
+  - **一鍵匯出**：支援複製為「Markdown 格式」與「純文字格式」，無縫貼至 Notion、Obsidian 或製作 Anki 卡片。
+  - **增刪管理**：支援個別語塊手動移除與一鍵全部清空。
+
+### 7. ⌨️ 鍵盤優先極速操作 (Keyboard-First Flow)
 
 - 雙手無需離開鍵盤，支援極致靈敏的快捷鍵操作，同時完美支援手機觸控：
   - **語態 (Voice)**：`A` 或 `J`（Active 主動） / `P` 或 `K`（Passive 被動）
@@ -173,13 +224,15 @@ pnpm run start
 ```text
 app/
 ├── components/chunkflow/         # 訓練場核心 UI 元件
-│   ├── ChunkFlowArena.tsx        # 核心語塊展示與暗化聚焦區 (S-V 兩階段鎖定)
-│   ├── ActionBar.tsx             # 語態與時態按鈕控制列
-│   ├── HeaderHUD.tsx             # 頂部即時數據、設定與題庫/抽屜切換 HUD
-│   ├── TrainingMatrixDrawer.tsx  # 左側壓克力抽屜 (題庫選擇器與 36px 訓練矩陣)
+│   ├── ChunkFlowArena.tsx        # 核心語塊展示與暗化聚焦區 (S-V 兩階段鎖定 / 雙擊複製語塊)
+│   ├── ActionBar.tsx             # 語態與時態按鈕控制列 (文法模式)
+│   ├── ListeningChunkBar.tsx     # 聽力題庫語塊盲點標記按鈕列
+│   ├── ListeningNotebookModal.tsx# 聽力盲點筆記本與 Markdown 匯出視窗
+│   ├── HeaderHUD.tsx             # 頂部即時數據、設定、筆記本與題庫/抽屜切換 HUD
+│   ├── TrainingMatrixDrawer.tsx  # 左側壓克力抽屜 (題庫選擇器與 13 組情境矩陣)
 │   ├── TrainingMatrix.tsx        # 獨立矩陣展示元件
 │   ├── AnalyticsDashboard.tsx    # 弱點分析與答題統計儀表板
-│   ├── SettingsModal.tsx         # 語音朗讀與口音偏好設定視窗
+│   ├── SettingsModal.tsx         # 語音朗讀、循環口播順序與停頓/語速偏好設定視窗
 │   └── ImportQuestionsModal.tsx  # 自訂 JSON 題庫匯入模態窗
 ├── data/
 │   ├── toeic-part5/              # TOEIC Part 5 文法題庫
@@ -187,19 +240,21 @@ app/
 │   │   ├── level2/               # Level 2 (3 課訓練, 90 題)
 │   │   ├── level3/               # Level 3 (3 課訓練, 90 題)
 │   │   └── index.ts              # 題庫整合與單元字典對照
+│   ├── toeic-listening/          # TOEIC 13 大商務情境聽力題庫
+│   │   └── index.ts              # 13 大商務情境訓練組定義與樣本題庫
 │   ├── starterQuestions.ts       # 核心精選 12 題商務句型
 │   └── banks.ts                  # 全域題庫登錄中心 (Bank Registry)
 ├── hooks/
 │   ├── useChunkFlowGame.ts       # 遊戲循環、課綱推進、作答評估狀態邏輯
 │   ├── useFocusFadeTimer.ts      # 1s 延遲 + 4s 漸變背景聚焦計時器
 │   ├── useKeyboardShortcuts.ts   # 全域鍵盤快捷鍵監聽
-│   └── useSpeechNarration.ts     # Web Speech API 語音朗讀控制
+│   └── useSpeechNarration.ts     # Web Speech API 語音朗讀控制 (多語次序列與停頓控制)
 ├── types/
 │   └── chunkflow.ts              # 語塊、題目、題庫元數據、單元數據型別定義
 ├── utils/
 │   ├── sampling.ts               # 約束交替洗牌 (Constrained Shuffle) 與抽題演算法
 │   ├── curriculum.ts             # 漸進式課綱推薦邏輯 (Progressive Curriculum)
-│   └── storage.ts                # LocalStorage 持久化與單元遙測統計運算
+│   └── storage.ts                # LocalStorage 持久化、聽力盲點筆記與遙測統計運算
 ├── routes/
 │   └── home.tsx                  # 主訓練場首頁路由
 └── app.css                       # 全域 Tailwind CSS 樣式
