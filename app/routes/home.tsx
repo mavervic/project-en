@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import type { Route } from './+types/home';
 import { useChunkFlowGame } from '../hooks/useChunkFlowGame';
 import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts';
@@ -48,6 +48,7 @@ export default function Home() {
     setAccent,
     speak,
     speakListeningSequence,
+    stop,
     isSpeaking,
     canSelectAccents,
     voices,
@@ -101,8 +102,13 @@ export default function Home() {
     handleResetQuestions,
   } = useChunkFlowGame();
 
+  const lastSpokenQuestionIdRef = useRef<string | null>(null);
+
   const handleRestartQuestion = useCallback(() => {
     restartCurrentQuestion();
+    if (currentQuestion?.id) {
+      lastSpokenQuestionIdRef.current = currentQuestion.id;
+    }
     if (isListeningMode && currentQuestion?.sentence) {
       speakListeningSequence(currentQuestion.sentence, currentQuestion.translation, {
         force: true,
@@ -121,6 +127,62 @@ export default function Home() {
     settings,
     handleListeningNarrationComplete,
     narrationEnabled,
+    speakListeningSequence,
+    speak,
+  ]);
+
+  // Pure audio replay (without resetting question or blind/feedback state)
+  const handlePlayAudio = useCallback(() => {
+    if (isListeningMode && currentQuestion?.sentence) {
+      speakListeningSequence(currentQuestion.sentence, currentQuestion.translation, {
+        force: true,
+        mode: settings.listeningNarrationMode,
+        pauseIntervalMs: settings.listeningPauseIntervalMs,
+        rate: settings.listeningSpeechRate,
+        onComplete: handleListeningNarrationComplete,
+      });
+    } else if (currentQuestion?.sentence) {
+      speak(currentQuestion.sentence, { force: true });
+    }
+  }, [
+    isListeningMode,
+    currentQuestion,
+    settings,
+    handleListeningNarrationComplete,
+    speakListeningSequence,
+    speak,
+  ]);
+
+  const handleToggleNarration = useCallback(() => {
+    const nextEnabled = toggleNarration();
+    if (!nextEnabled) {
+      stop();
+      if (isListeningMode && !showFeedback) {
+        handleListeningNarrationComplete();
+      }
+    } else {
+      if (!showFeedback && currentQuestion?.sentence) {
+        lastSpokenQuestionIdRef.current = currentQuestion.id;
+        if (isListeningMode) {
+          speakListeningSequence(currentQuestion.sentence, currentQuestion.translation, {
+            mode: settings.listeningNarrationMode,
+            pauseIntervalMs: settings.listeningPauseIntervalMs,
+            rate: settings.listeningSpeechRate,
+            onComplete: handleListeningNarrationComplete,
+          });
+        } else {
+          speak(currentQuestion.sentence);
+        }
+      }
+    }
+  }, [
+    toggleNarration,
+    stop,
+    isListeningMode,
+    showFeedback,
+    handleListeningNarrationComplete,
+    currentQuestion,
+    settings,
     speakListeningSequence,
     speak,
   ]);
@@ -147,21 +209,35 @@ export default function Home() {
   // Auto-play sentence narration on new question when enabled
   useEffect(() => {
     if (!currentQuestion?.sentence) return;
+
+    if (!narrationEnabled) {
+      if (isListeningMode && !showFeedback) {
+        handleListeningNarrationComplete();
+      }
+      return;
+    }
+
+    if (lastSpokenQuestionIdRef.current === currentQuestion.id || showFeedback) {
+      return;
+    }
+
+    lastSpokenQuestionIdRef.current = currentQuestion.id;
+
     if (isListeningMode) {
       speakListeningSequence(currentQuestion.sentence, currentQuestion.translation, {
-        force: true,
         mode: settings.listeningNarrationMode,
         pauseIntervalMs: settings.listeningPauseIntervalMs,
         rate: settings.listeningSpeechRate,
         onComplete: handleListeningNarrationComplete,
       });
-    } else if (narrationEnabled) {
+    } else {
       speak(currentQuestion.sentence);
     }
   }, [
     currentQuestion?.id,
     isListeningMode,
     narrationEnabled,
+    showFeedback,
     speak,
     speakListeningSequence,
     handleListeningNarrationComplete,
@@ -238,10 +314,10 @@ export default function Home() {
           isSubjectVerbDrill={isSubjectVerbDrill}
           onSelectChunk={handleSelectSubjectChunk}
           chunkMisfireIndex={subjectMisfireIndex}
-          onPlayAudio={handleRestartQuestion}
+          onPlayAudio={handlePlayAudio}
           isSpeaking={isSpeaking}
           narrationEnabled={narrationEnabled}
-          onToggleNarration={toggleNarration}
+          onToggleNarration={handleToggleNarration}
           blindModeEnabled={blindModeEnabled}
           onToggleBlindMode={handleToggleBlindMode}
           onSpeakChunk={(text) => speak(text, { force: true })}

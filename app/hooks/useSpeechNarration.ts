@@ -189,18 +189,28 @@ export function useSpeechNarration() {
     [voices, selectedVoiceURI]
   );
 
-  const toggleNarration = useCallback(() => {
-    setNarrationEnabledState((prev) => {
-      const next = !prev;
-      saveNarrationEnabled(next);
-      if (!next && typeof window !== 'undefined' && 'speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        activeUtteranceRef.current = null;
-        setIsSpeaking(false);
-      }
-      return next;
-    });
+  const stop = useCallback(() => {
+    activeSequenceIdRef.current++;
+    if (speechTimeoutRef.current) {
+      clearTimeout(speechTimeoutRef.current);
+      speechTimeoutRef.current = null;
+    }
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      activeUtteranceRef.current = null;
+      setIsSpeaking(false);
+    }
   }, []);
+
+  const toggleNarration = useCallback((): boolean => {
+    const nextVal = !narrationEnabled;
+    setNarrationEnabledState(nextVal);
+    saveNarrationEnabled(nextVal);
+    if (!nextVal) {
+      stop();
+    }
+    return nextVal;
+  }, [narrationEnabled, stop]);
 
   const enableNarration = useCallback(() => {
     setNarrationEnabledState(true);
@@ -414,19 +424,6 @@ export function useSpeechNarration() {
     },
     [narrationEnabled, accent, resolveVoice, voices]
   );
-
-  const stop = useCallback(() => {
-    activeSequenceIdRef.current++;
-    if (speechTimeoutRef.current) {
-      clearTimeout(speechTimeoutRef.current);
-      speechTimeoutRef.current = null;
-    }
-    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      activeUtteranceRef.current = null;
-      setIsSpeaking(false);
-    }
-  }, []);
 
   return {
     narrationEnabled,

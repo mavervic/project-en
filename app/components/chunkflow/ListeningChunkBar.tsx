@@ -60,8 +60,8 @@ export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
                   data-testid="listening-replay-btn"
                   onClick={onReplayAudio}
                   disabled={disabled}
-                  title="重新播放本題語音"
-                  aria-label="重新播放本題語音"
+                  title="重做本題（回到開局遮蔽狀態重新朗讀）"
+                  aria-label="重做本題"
                   className={`px-2.5 py-1 rounded-lg border transition-all flex items-center gap-1.5 text-xs font-sans cursor-pointer active:scale-95 shadow-sm ${
                     isAudioPlaying
                       ? 'border-cyan-400 bg-cyan-500/20 text-cyan-200'
@@ -81,7 +81,7 @@ export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
                       d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                     />
                   </svg>
-                  <span>{isAudioPlaying ? '播放中...' : '重新聽這題'}</span>
+                  <span>{isAudioPlaying ? '播放中...' : '重新聽這題 (重做)'}</span>
                 </button>
               )}
             </>

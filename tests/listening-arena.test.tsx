@@ -116,4 +116,27 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
     expect(result.current.showFeedback).toBe(false);
     expect(result.current.blindModeEnabled).toBe(true);
   });
+
+  it('renders blind-mode-toggle-btn as disabled pure listening badge in listening mode', () => {
+    const onToggleBlindMode = vi.fn();
+    render(
+      <ChunkFlowArena
+        question={sampleQuestion}
+        focusState="idle"
+        progressPercent={100}
+        lastEvaluation={null}
+        showFeedback={false}
+        blindModeEnabled={true}
+        onToggleBlindMode={onToggleBlindMode}
+        isListeningMode={true}
+      />
+    );
+
+    const btn = screen.getByTestId('blind-mode-toggle-btn') as HTMLButtonElement;
+    expect(btn.disabled).toBe(true);
+    expect(btn.textContent).toContain('純聽力');
+
+    fireEvent.click(btn);
+    expect(onToggleBlindMode).not.toHaveBeenCalled();
+  });
 });

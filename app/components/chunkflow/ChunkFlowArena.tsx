@@ -221,21 +221,32 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             <button
               type="button"
               data-testid="blind-mode-toggle-btn"
-              onClick={onToggleBlindMode}
-              title={blindModeEnabled ? '關閉聽音辨識（顯示文字）' : '開啟聽音辨識（隱藏文字）'}
+              disabled={isListeningMode}
+              onClick={isListeningMode ? undefined : onToggleBlindMode}
+              title={
+                isListeningMode
+                  ? '純聽力模式：開局強制遮蔽，播畢後自動揭示'
+                  : blindModeEnabled
+                    ? '關閉聽音辨識（顯示文字）'
+                    : '開啟聽音辨識（隱藏文字）'
+              }
               aria-label={
-                blindModeEnabled
-                  ? 'Show text (disable blind listening mode)'
-                  : 'Hide text (enable blind listening mode)'
+                isListeningMode
+                  ? 'Listening mode active (fixed blind mode)'
+                  : blindModeEnabled
+                    ? 'Show text (disable blind listening mode)'
+                    : 'Hide text (enable blind listening mode)'
               }
               aria-pressed={blindModeEnabled}
-              className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-colors cursor-pointer flex items-center gap-1.5 text-xs font-medium shadow-sm ${
-                blindModeEnabled
-                  ? 'bg-cyan-500/15 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/25'
-                  : 'bg-zinc-900/90 border-zinc-700/80 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300'
+              className={`p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-colors flex items-center gap-1.5 text-xs font-medium shadow-sm ${
+                isListeningMode
+                  ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-300/80 cursor-default select-none'
+                  : blindModeEnabled
+                    ? 'bg-cyan-500/15 border-cyan-500/50 text-cyan-300 hover:bg-cyan-500/25 cursor-pointer'
+                    : 'bg-zinc-900/90 border-zinc-700/80 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300 cursor-pointer'
               }`}
             >
-              {blindModeEnabled ? (
+              {isListeningMode || blindModeEnabled ? (
                 <svg
                   className="w-4 h-4 text-cyan-400"
                   fill="none"
@@ -270,7 +281,9 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
                   />
                 </svg>
               )}
-              <span className="hidden sm:inline">{blindModeEnabled ? '聽音中' : '聽音辨識'}</span>
+              <span className="hidden sm:inline">
+                {isListeningMode ? '純聽力' : blindModeEnabled ? '聽音中' : '聽音辨識'}
+              </span>
             </button>
 
             {onToggleNarration && (

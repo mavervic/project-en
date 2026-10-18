@@ -513,6 +513,55 @@ describe('ChunkFlowArena Audio Controls & Replay Integration', () => {
     expect(screen.getByTestId('narration-toggle-btn').textContent).toContain('朗誦開');
     expect(mockSpeak).toHaveBeenCalledTimes(1);
   });
+
+  it('mutes narration on toggle button click, stops speech, and does not re-trigger speech playback', async () => {
+    window.localStorage.setItem('chunkflow_narration_enabled_v1', 'true');
+    const mockSpeak = vi.fn();
+    const mockCancel = vi.fn();
+
+    class MockSpeechSynthesisUtterance {
+      text: string;
+      voice: any = null;
+      lang = '';
+      rate = 1;
+      onstart: any = null;
+      onend: any = null;
+      onerror: any = null;
+      constructor(text: string) {
+        this.text = text;
+      }
+    }
+    (window as any).SpeechSynthesisUtterance = MockSpeechSynthesisUtterance;
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: {
+        speak: mockSpeak,
+        cancel: mockCancel,
+        getVoices: vi.fn().mockReturnValue([]),
+        onvoiceschanged: null,
+      },
+      writable: true,
+      configurable: true,
+    });
+
+    const { default: Home } = await import('../app/routes/home');
+    render(<Home />);
+
+    const narrationBtn = screen.getByTestId('narration-toggle-btn');
+    expect(narrationBtn.textContent).toContain('朗誦開');
+    expect(mockSpeak).toHaveBeenCalledTimes(1);
+
+    mockSpeak.mockClear();
+
+    // Click to mute
+    act(() => {
+      fireEvent.click(narrationBtn);
+    });
+
+    expect(narrationBtn.textContent).toContain('靜音');
+    expect(mockCancel).toHaveBeenCalled();
+    // Clicking mute MUST NOT trigger speak!
+    expect(mockSpeak).not.toHaveBeenCalled();
+  });
 });
 
 describe('SettingsModal Voice Settings Controls', () => {
