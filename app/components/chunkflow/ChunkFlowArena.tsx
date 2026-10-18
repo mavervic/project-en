@@ -22,6 +22,7 @@ interface ChunkFlowArenaProps {
   blindModeEnabled?: boolean;
   onToggleBlindMode?: () => void;
   onSpeakChunk?: (text: string) => void;
+  isListeningMode?: boolean;
 }
 
 export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
@@ -45,6 +46,7 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   blindModeEnabled = false,
   onToggleBlindMode,
   onSpeakChunk,
+  isListeningMode = false,
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
   const [isCopied, setIsCopied] = useState(false);
@@ -376,26 +378,34 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
         </div>
 
         {/* Dedicated Drill Stage Status Row (Centered, pill style) */}
-        {(isSubjectVerbDrill || blindModeEnabled) && (
+        {(isSubjectVerbDrill || blindModeEnabled || isListeningMode) && (
           <div className="w-full flex justify-center items-center my-2 sm:my-3">
             <span
               className={`px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold tracking-wider text-center shadow-sm max-w-full ${
-                blindModeEnabled
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
-                  : roundStage === 'subject'
-                    ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse'
-                    : roundStage === 'verb'
-                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
-                      : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                isListeningMode
+                  ? showFeedback
+                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                    : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
+                  : blindModeEnabled
+                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                    : roundStage === 'subject'
+                      ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse'
+                      : roundStage === 'verb'
+                        ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
+                        : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
               }`}
             >
-              {blindModeEnabled
-                ? '🎧 Listening Mode → Classify Voice & Tense'
-                : roundStage === 'subject'
-                  ? '1. Tap Subject Chunk'
-                  : roundStage === 'verb'
-                    ? '✓ Subject Locked → 2. Tap Verb Chunk'
-                    : '✓ S+V Locked → 3. Classify Voice & Tense'}
+              {isListeningMode
+                ? showFeedback
+                  ? '✓ 聽力播放完成 → 點選下方語塊標記盲點'
+                  : '🎧 聽音辨識中...'
+                : blindModeEnabled
+                  ? '🎧 Listening Mode → Classify Voice & Tense'
+                  : roundStage === 'subject'
+                    ? '1. Tap Subject Chunk'
+                    : roundStage === 'verb'
+                      ? '✓ Subject Locked → 2. Tap Verb Chunk'
+                      : '✓ S+V Locked → 3. Classify Voice & Tense'}
             </span>
           </div>
         )}
@@ -495,52 +505,82 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
         </div>
       </div>
 
-      {/* Feedback & Grammar Note Reveal */}
-      {showFeedback && lastEvaluation && (
+      {/* Feedback & Grammar Note Reveal (or Listening Mode Translation Reveal) */}
+      {showFeedback && (lastEvaluation || isListeningMode) && (
         <div
+          data-testid="feedback-reveal-card"
           className={`rounded-xl border p-5 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${
-            isCorrect
-              ? 'bg-emerald-950/30 border-emerald-500/40 text-emerald-200'
-              : 'bg-rose-950/30 border-rose-500/40 text-rose-200'
+            isListeningMode
+              ? 'bg-cyan-950/25 border-cyan-500/40 text-cyan-100 shadow-[0_0_30px_rgba(6,182,212,0.15)]'
+              : isCorrect
+                ? 'bg-emerald-950/30 border-emerald-500/40 text-emerald-200'
+                : 'bg-rose-950/30 border-rose-500/40 text-rose-200'
           }`}
         >
           <div className="flex flex-col gap-1.5 flex-1">
             <div className="flex items-center gap-2.5 flex-wrap">
-              <span
-                className={`px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase ${
-                  isCorrect ? 'bg-emerald-500 text-zinc-950' : 'bg-rose-500 text-zinc-950'
-                }`}
-              >
-                {isCorrect ? 'PERFECT MATCH' : 'INCORRECT'}
-              </span>
-              <span className="text-xs font-mono text-zinc-400">
-                Reaction Time:{' '}
-                <strong className="text-zinc-200">{lastEvaluation.latencyMs}ms</strong>
-              </span>
-              <span className="text-xs font-mono text-zinc-400">
-                Correct:{' '}
-                <strong className="text-cyan-300 capitalize">
-                  {question.correctAnswers.time} {question.correctAnswers.voice}
-                </strong>
-              </span>
+              {isListeningMode ? (
+                <>
+                  <span className="px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase bg-cyan-500 text-zinc-950">
+                    LISTEN & DECODE
+                  </span>
+                  <span className="text-xs font-mono text-zinc-400">
+                    點選下方語塊標記盲點，完成後前往下一題
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span
+                    className={`px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase ${
+                      isCorrect ? 'bg-emerald-500 text-zinc-950' : 'bg-rose-500 text-zinc-950'
+                    }`}
+                  >
+                    {isCorrect ? 'PERFECT MATCH' : 'INCORRECT'}
+                  </span>
+                  <span className="text-xs font-mono text-zinc-400">
+                    Reaction Time:{' '}
+                    <strong className="text-zinc-200">{lastEvaluation?.latencyMs}ms</strong>
+                  </span>
+                  <span className="text-xs font-mono text-zinc-400">
+                    Correct:{' '}
+                    <strong className="text-cyan-300 capitalize">
+                      {question.correctAnswers.time} {question.correctAnswers.voice}
+                    </strong>
+                  </span>
+                </>
+              )}
             </div>
+
             {question.translation && (
               <p
                 data-testid="sentence-translation"
                 className="text-sm font-medium text-zinc-200 mt-1 flex items-center gap-2"
               >
                 <span className="text-[10px] px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400 font-normal">
-                  翻譯
+                  中文翻譯
                 </span>
                 <span>{question.translation}</span>
               </p>
             )}
-            <p className="text-sm text-zinc-300 leading-relaxed mt-1">{question.grammarNote}</p>
+
+            {isListeningMode && (
+              <p
+                data-testid="revealed-english-sentence"
+                className="text-xs font-mono text-zinc-400 mt-0.5"
+              >
+                {question.sentence}
+              </p>
+            )}
+
+            {question.grammarNote && !isListeningMode && (
+              <p className="text-sm text-zinc-300 leading-relaxed mt-1">{question.grammarNote}</p>
+            )}
           </div>
 
           {onNextQuestion && (
             <button
               onClick={onNextQuestion}
+              data-testid="next-question-btn"
               className="px-5 py-2.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 text-sm font-semibold tracking-wide shadow-md hover:shadow-lg transition-all self-end sm:self-center cursor-pointer whitespace-nowrap"
             >
               Next Sentence →

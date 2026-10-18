@@ -198,20 +198,20 @@ describe('TOEIC Part 5 Question Banks', () => {
   });
 
   describe('Bank Registry Integration', () => {
-    it('registers unified toeic-part5 along with starter and parker banks', () => {
+    it('registers unified toeic-part5 along with starter, parker, and toeic-listening banks', () => {
       const banks = getRegisteredBanks();
-      expect(banks).toHaveLength(3);
+      expect(banks).toHaveLength(4);
 
       const bankIds = banks.map((b) => b.id);
-      expect(bankIds).toEqual(['toeic-part5', 'starter', 'parker']);
+      expect(bankIds).toEqual(['toeic-part5', 'starter', 'parker', 'toeic-listening']);
 
       const part5Banks = banks.filter((b) => b.category === 'TOEIC Part 5 文法句型');
       const listeningBanks = banks.filter((b) => b.category === 'TOEIC Listening 聽力題庫');
 
       expect(part5Banks).toHaveLength(2);
       expect(part5Banks.map((b) => b.id)).toEqual(['toeic-part5', 'starter']);
-      expect(listeningBanks).toHaveLength(1);
-      expect(listeningBanks[0].id).toBe('parker');
+      expect(listeningBanks).toHaveLength(2);
+      expect(listeningBanks.map((b) => b.id)).toEqual(['parker', 'toeic-listening']);
     });
 
     it('retrieves unified bank and questions correctly by ID', () => {

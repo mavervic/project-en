@@ -11,6 +11,11 @@ import {
   TOEIC_PART5_L3_BANK,
   TOEIC_PART5_L3_META,
 } from './toeic-part5';
+import {
+  TOEIC_LISTENING_BANK,
+  TOEIC_LISTENING_META,
+  TOEIC_LISTENING_QUESTIONS,
+} from './toeic-listening';
 
 export const STARTER_BANK_META: QuestionBankMeta = {
   id: 'starter',
@@ -30,6 +35,7 @@ export const STARTER_BANK: QuestionBank = {
 };
 
 export const REGISTERED_BANKS: Record<string, QuestionBank> = {
+  'toeic-listening': TOEIC_LISTENING_BANK,
   'toeic-part5': TOEIC_PART5_BANK,
   'toeic-part5-l1': TOEIC_PART5_BANK,
   'toeic-part5-l2': TOEIC_PART5_BANK,
@@ -39,7 +45,7 @@ export const REGISTERED_BANKS: Record<string, QuestionBank> = {
 };
 
 export function getRegisteredBanks(): QuestionBankMeta[] {
-  return [TOEIC_PART5_META, STARTER_BANK_META, PARKER_BANK_META];
+  return [TOEIC_PART5_META, STARTER_BANK_META, PARKER_BANK_META, TOEIC_LISTENING_META];
 }
 
 export function getBankById(id: string): QuestionBank | undefined {

@@ -1,6 +1,8 @@
 import type {
   CategoryStat,
   ChunkFlowSettings,
+  MarkedChunkRecord,
+  NarrationSequenceMode,
   PerformanceStats,
   Question,
   QuestionValidationResult,
@@ -16,11 +18,18 @@ const NARRATION_STORAGE_KEY = 'chunkflow_narration_enabled_v1';
 const SPEECH_ACCENT_STORAGE_KEY = 'chunkflow_speech_accent_v1';
 const SPEECH_VOICE_URI_STORAGE_KEY = 'chunkflow_speech_voice_uri_v1';
 const ACTIVE_BANK_STORAGE_KEY = 'chunkflow_active_bank_v1';
+const LISTENING_NARRATION_MODE_KEY = 'chunkflow_listening_narration_mode_v1';
+const LISTENING_PAUSE_INTERVAL_KEY = 'chunkflow_listening_pause_interval_v1';
+const LISTENING_SPEECH_RATE_KEY = 'chunkflow_listening_speech_rate_v1';
+const LISTENING_NOTEBOOK_STORAGE_KEY = 'chunkflow_listening_notebook_v1';
 
 const DEFAULT_SETTINGS: ChunkFlowSettings = {
   showGuidance: false,
   narrationEnabled: false,
   speechAccent: 'US',
+  listeningNarrationMode: 'en2-zh1-en1',
+  listeningPauseIntervalMs: 700,
+  listeningSpeechRate: 1.0,
 };
 
 export function loadPerformanceRecords(): UserPerformance[] {
@@ -377,6 +386,153 @@ export function saveActiveBankId(id: string): void {
       console.warn('Failed to save active bank ID to localStorage', err);
     }
   }
+}
+
+export function loadListeningNarrationMode(): NarrationSequenceMode {
+  if (typeof window === 'undefined') return 'en2-zh1-en1';
+  try {
+    const raw = window.localStorage.getItem(LISTENING_NARRATION_MODE_KEY);
+    if (raw === 'en2-zh1-en1' || raw === 'en2' || raw === 'en1') {
+      return raw;
+    }
+  } catch (err) {
+    console.warn('Failed to load listening narration mode from localStorage', err);
+  }
+  return 'en2-zh1-en1';
+}
+
+export function saveListeningNarrationMode(mode: NarrationSequenceMode): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(LISTENING_NARRATION_MODE_KEY, mode);
+    } catch (err) {
+      console.warn('Failed to save listening narration mode to localStorage', err);
+    }
+  }
+}
+
+export function loadListeningPauseInterval(): number {
+  if (typeof window === 'undefined') return 700;
+  try {
+    const raw = window.localStorage.getItem(LISTENING_PAUSE_INTERVAL_KEY);
+    if (raw) {
+      const parsed = parseInt(raw, 10);
+      if (!isNaN(parsed) && parsed >= 400 && parsed <= 2000) {
+        return parsed;
+      }
+    }
+  } catch (err) {
+    console.warn('Failed to load listening pause interval from localStorage', err);
+  }
+  return 700;
+}
+
+export function saveListeningPauseInterval(ms: number): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(LISTENING_PAUSE_INTERVAL_KEY, String(ms));
+    } catch (err) {
+      console.warn('Failed to save listening pause interval to localStorage', err);
+    }
+  }
+}
+
+export function loadListeningSpeechRate(): number {
+  if (typeof window === 'undefined') return 1.0;
+  try {
+    const raw = window.localStorage.getItem(LISTENING_SPEECH_RATE_KEY);
+    if (raw) {
+      const parsed = parseFloat(raw);
+      if (!isNaN(parsed) && parsed >= 0.5 && parsed <= 3.0) {
+        return parsed;
+      }
+    }
+  } catch (err) {
+    console.warn('Failed to load listening speech rate from localStorage', err);
+  }
+  return 1.0;
+}
+
+export function saveListeningSpeechRate(rate: number): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(LISTENING_SPEECH_RATE_KEY, String(rate));
+    } catch (err) {
+      console.warn('Failed to save listening speech rate to localStorage', err);
+    }
+  }
+}
+
+export function loadMarkedChunks(): MarkedChunkRecord[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const raw = window.localStorage.getItem(LISTENING_NOTEBOOK_STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) {
+      return parsed;
+    }
+  } catch (err) {
+    console.warn('Failed to load marked chunks from localStorage', err);
+  }
+  return [];
+}
+
+export function saveMarkedChunk(record: MarkedChunkRecord): MarkedChunkRecord[] {
+  const current = loadMarkedChunks();
+  const existingIdx = current.findIndex((c) => c.id === record.id);
+  let updated: MarkedChunkRecord[];
+  if (existingIdx >= 0) {
+    updated = [...current];
+    updated[existingIdx] = record;
+  } else {
+    updated = [...current, record];
+  }
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(LISTENING_NOTEBOOK_STORAGE_KEY, JSON.stringify(updated));
+    } catch (err) {
+      console.warn('Failed to save marked chunk to localStorage', err);
+    }
+  }
+  return updated;
+}
+
+export function removeMarkedChunk(id: string): MarkedChunkRecord[] {
+  const current = loadMarkedChunks();
+  const updated = current.filter((c) => c.id !== id);
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(LISTENING_NOTEBOOK_STORAGE_KEY, JSON.stringify(updated));
+    } catch (err) {
+      console.warn('Failed to remove marked chunk from localStorage', err);
+    }
+  }
+  return updated;
+}
+
+export function clearMarkedChunks(): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.removeItem(LISTENING_NOTEBOOK_STORAGE_KEY);
+    } catch (err) {
+      console.warn('Failed to clear marked chunks from localStorage', err);
+    }
+  }
+}
+
+export function getMarkedChunksCountByTrainingId(trainingId: string): number {
+  const chunks = loadMarkedChunks();
+  return chunks.filter((c) => c.trainingId === trainingId).length;
+}
+
+export function getMarkedChunksCountMap(): Record<string, number> {
+  const chunks = loadMarkedChunks();
+  const map: Record<string, number> = {};
+  for (const c of chunks) {
+    map[c.trainingId] = (map[c.trainingId] || 0) + 1;
+  }
+  return map;
 }
 
 export function computeMasteryTier(totalAttempts: number, accuracy: number): 0 | 1 | 2 | 3 | 4 {

@@ -12,6 +12,7 @@ export interface TrainingMatrixDrawerProps {
   banks?: QuestionBankMeta[];
   activeBankId?: string;
   onSelectBank?: (bankId: string) => void;
+  markedChunksCountMap?: Record<string, number>;
 }
 
 export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
@@ -23,6 +24,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
   banks = [],
   activeBankId,
   onSelectBank,
+  markedChunksCountMap = {},
 }) => {
   const [isBankMenuOpen, setIsBankMenuOpen] = useState(false);
   const [showTags, setShowTags] = useState(true);
@@ -347,6 +349,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                     const isSelected = activeTrainingId === unit.trainingId;
                     const unitTel = telemetry[unit.trainingId];
                     const isCompleted = Boolean(unitTel?.isCompleted);
+                    const markedCount = markedChunksCountMap[unit.trainingId] || 0;
 
                     const difficultyClass =
                       unit.difficulty === 'Easy'
@@ -405,13 +408,23 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
 
                           {/* Lesson Title & Difficulty */}
                           <div className="relative flex h-full w-full items-center justify-between min-w-0">
-                            <span
-                              className={`text-xs sm:text-sm font-medium truncate pr-2 ${
-                                isSelected ? 'text-cyan-300 font-semibold' : 'text-zinc-200'
-                              }`}
-                            >
-                              {unit.title}
-                            </span>
+                            <div className="flex items-center min-w-0 pr-2">
+                              <span
+                                className={`text-xs sm:text-sm font-medium truncate ${
+                                  isSelected ? 'text-cyan-300 font-semibold' : 'text-zinc-200'
+                                }`}
+                              >
+                                {unit.title}
+                              </span>
+                              {markedCount > 0 && (
+                                <span
+                                  data-testid={`marked-chunk-badge-${unit.trainingId}`}
+                                  className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 shrink-0"
+                                >
+                                  {markedCount} 語塊
+                                </span>
+                              )}
+                            </div>
                             <span className={`text-xs font-semibold shrink-0 ${difficultyClass}`}>
                               {unit.difficulty}
                             </span>
@@ -455,6 +468,7 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                 {cluster.map((unit, colIdx) => {
                   const isSelected = activeTrainingId === unit.trainingId;
                   const isCompleted = Boolean(unit.isCompleted);
+                  const markedCount = markedChunksCountMap[unit.trainingId] || 0;
                   const completionStyle = isCompleted
                     ? 'bg-cyan-400 border-white/80 text-zinc-950 font-bold shadow-[0_0_10px_rgba(6,182,212,0.3)] hover:bg-cyan-300'
                     : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:border-zinc-700 hover:text-zinc-300';
@@ -480,13 +494,19 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                         data-testid={`training-block-${unit.trainingId}`}
                         onClick={() => onSelectTraining(unit.trainingId)}
                         aria-label={`${unit.lessonName}: 正確率 ${unit.accuracy}%, 嘗試 ${unit.totalAttempts} 次`}
-                        className={`w-[36px] h-[36px] rounded-lg border text-xs font-mono transition-all duration-150 flex items-center justify-center cursor-pointer select-none ${completionStyle} ${
+                        className={`w-[36px] h-[36px] rounded-lg border text-xs font-mono transition-all duration-150 flex items-center justify-center cursor-pointer select-none relative ${completionStyle} ${
                           isSelected
                             ? 'ring-2 ring-cyan-400 ring-offset-2 ring-offset-zinc-950 scale-105 z-10'
                             : ''
                         }`}
                       >
                         {String(unit.unitNumber).padStart(2, '0')}
+                        {markedCount > 0 && (
+                          <span
+                            data-testid={`cluster-marked-dot-${unit.trainingId}`}
+                            className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-amber-400 ring-1 ring-zinc-950"
+                          />
+                        )}
                       </button>
 
                       {/* Hover Telemetry Tooltip */}
@@ -538,6 +558,15 @@ export const TrainingMatrixDrawer: React.FC<TrainingMatrixDrawerProps> = ({
                             <span className="text-zinc-500">最佳連擊:</span>
                             <span className="text-cyan-400">{unit.bestStreak} 題</span>
                           </div>
+                          {markedCount > 0 && (
+                            <div
+                              data-testid={`cluster-marked-badge-${unit.trainingId}`}
+                              className="flex justify-between pt-1 border-t border-zinc-800/60"
+                            >
+                              <span className="text-zinc-500">標記語塊:</span>
+                              <span className="font-bold text-amber-300">{markedCount} 個</span>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>

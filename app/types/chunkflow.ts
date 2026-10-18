@@ -60,11 +60,28 @@ export interface CategoryStat {
 
 export type SpeechAccent = 'AU' | 'GB' | 'US' | 'CA';
 
+export type NarrationSequenceMode = 'en2-zh1-en1' | 'en2' | 'en1';
+
+export interface MarkedChunkRecord {
+  id: string; // e.g. `${questionId}-${chunkIndex}`
+  questionId: string;
+  trainingId: string;
+  chunkText: string;
+  chunkIndex: number;
+  sentence: string;
+  translation?: string;
+  topic?: string;
+  timestamp: number;
+}
+
 export interface ChunkFlowSettings {
   showGuidance: boolean;
   narrationEnabled?: boolean;
   speechAccent?: SpeechAccent;
   speechVoiceURI?: string;
+  listeningNarrationMode?: NarrationSequenceMode;
+  listeningPauseIntervalMs?: number;
+  listeningSpeechRate?: number;
 }
 
 export type TrainingDifficulty = 'Easy' | 'Medium' | 'Hard';

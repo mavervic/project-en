@@ -1,10 +1,19 @@
 import React, { useMemo } from 'react';
-import type { ChunkFlowSettings, SpeechAccent } from '../../types/chunkflow';
+import type { ChunkFlowSettings, NarrationSequenceMode, SpeechAccent } from '../../types/chunkflow';
 import {
   ACCENT_CONFIG,
   ACCENT_PREVIEW_SENTENCE,
+  findChineseVoice,
   isMultilingualVoice,
 } from '../../hooks/useSpeechNarration';
+import {
+  loadListeningNarrationMode,
+  loadListeningPauseInterval,
+  loadListeningSpeechRate,
+  saveListeningNarrationMode,
+  saveListeningPauseInterval,
+  saveListeningSpeechRate,
+} from '../../utils/storage';
 
 export interface SettingsModalProps {
   isOpen: boolean;
@@ -16,6 +25,7 @@ export interface SettingsModalProps {
   voices?: SpeechSynthesisVoice[];
   selectedVoiceURI?: string | null;
   onSelectVoiceURI?: (voiceURI: string) => void;
+  hasChineseVoice?: boolean;
   onPreviewVoice?: (
     text: string,
     options?: {
@@ -23,23 +33,36 @@ export interface SettingsModalProps {
       voice?: SpeechSynthesisVoice | null;
       voiceURI?: string;
       accent?: SpeechAccent;
+      rate?: number;
     }
   ) => void;
 }
 
 const ACCENT_ORDER: SpeechAccent[] = ['AU', 'CA', 'GB', 'US'];
+const SPEECH_RATES = [0.9, 1.0, 1.1, 1.25, 1.5, 1.75, 2.0];
+const PAUSE_INTERVALS = [600, 700, 800, 1000];
 
 export const SettingsModal: React.FC<SettingsModalProps> = ({
   isOpen,
   onClose,
+  settings,
+  onUpdateSettings,
   accent = 'US',
   onSelectAccent,
   voices = [],
   selectedVoiceURI,
   onSelectVoiceURI,
+  hasChineseVoice,
   onPreviewVoice,
 }) => {
   if (!isOpen) return null;
+
+  const resolvedHasChineseVoice =
+    hasChineseVoice !== undefined ? hasChineseVoice : Boolean(findChineseVoice(voices));
+
+  const activeSequenceMode = settings?.listeningNarrationMode ?? loadListeningNarrationMode();
+  const activePauseInterval = settings?.listeningPauseIntervalMs ?? loadListeningPauseInterval();
+  const activeSpeechRate = settings?.listeningSpeechRate ?? loadListeningSpeechRate();
 
   const currentAccentConfig = ACCENT_CONFIG[accent] || ACCENT_CONFIG.US;
   const targetPrefix = currentAccentConfig.langPrefix;
@@ -97,6 +120,27 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const handleSelectVoiceURI = (voiceURI: string) => {
     onSelectVoiceURI?.(voiceURI);
     onPreviewVoice?.(ACCENT_PREVIEW_SENTENCE, { force: true, voiceURI, accent });
+  };
+
+  const handleSelectSequenceMode = (mode: NarrationSequenceMode) => {
+    saveListeningNarrationMode(mode);
+    onUpdateSettings?.({ listeningNarrationMode: mode });
+  };
+
+  const handleSelectSpeechRate = (rate: number) => {
+    saveListeningSpeechRate(rate);
+    onUpdateSettings?.({ listeningSpeechRate: rate });
+    onPreviewVoice?.(ACCENT_PREVIEW_SENTENCE, {
+      force: true,
+      accent,
+      voiceURI: selectedVoiceURI ?? undefined,
+      rate,
+    });
+  };
+
+  const handleSelectPauseInterval = (intervalMs: number) => {
+    saveListeningPauseInterval(intervalMs);
+    onUpdateSettings?.({ listeningPauseIntervalMs: intervalMs });
   };
 
   return (
@@ -238,6 +282,159 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 線上合成語音；若瀏覽器或作業系統無此口音之自然語音，將自動採用該地區本機語音，或回退至標準美式英語
                 (en-US)。
               </p>
+            </div>
+          </div>
+
+          {/* Listening Settings Section */}
+          <div
+            data-testid="listening-settings-section"
+            className="flex flex-col gap-3.5 p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80"
+          >
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-semibold text-zinc-100 flex items-center gap-2">
+                <span className="text-base">🎧</span> 聽力題庫朗誦設定
+              </span>
+              <span className="text-xs font-mono text-cyan-400">
+                {activeSpeechRate}x · {activePauseInterval}ms
+              </span>
+            </div>
+
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              設定聽力題庫的朗誦順序循環、朗誦速度與語句間隔停頓時間。
+            </p>
+
+            {/* Sequence Mode Selection */}
+            <div className="flex flex-col gap-1.5">
+              <label className="text-xs font-medium text-zinc-300">
+                朗誦順序模式 (Narration Sequence)
+              </label>
+              <div
+                data-testid="listening-sequence-mode-switch"
+                role="group"
+                aria-label="朗誦順序模式"
+                className="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-zinc-950 p-1.5 rounded-xl border border-zinc-800/90"
+              >
+                <button
+                  type="button"
+                  data-testid="sequence-mode-en2-zh1-en1"
+                  onClick={() => handleSelectSequenceMode('en2-zh1-en1')}
+                  aria-pressed={activeSequenceMode === 'en2-zh1-en1'}
+                  className={`py-2 px-2 rounded-lg text-xs font-medium flex flex-col items-center justify-center gap-0.5 transition-all cursor-pointer ${
+                    activeSequenceMode === 'en2-zh1-en1'
+                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm font-bold ring-1 ring-cyan-500/30'
+                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900 border border-transparent'
+                  }`}
+                >
+                  <span className="font-semibold">預設循環</span>
+                  <span className="text-[10px] text-zinc-400 font-mono">英x2→中x1→英x1</span>
+                </button>
+
+                <button
+                  type="button"
+                  data-testid="sequence-mode-en2"
+                  onClick={() => handleSelectSequenceMode('en2')}
+                  aria-pressed={activeSequenceMode === 'en2'}
+                  className={`py-2 px-2 rounded-lg text-xs font-medium flex flex-col items-center justify-center gap-0.5 transition-all cursor-pointer ${
+                    activeSequenceMode === 'en2'
+                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm font-bold ring-1 ring-cyan-500/30'
+                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900 border border-transparent'
+                  }`}
+                >
+                  <span className="font-semibold">純英雙播</span>
+                  <span className="text-[10px] text-zinc-400 font-mono">英 x2</span>
+                </button>
+
+                <button
+                  type="button"
+                  data-testid="sequence-mode-en1"
+                  onClick={() => handleSelectSequenceMode('en1')}
+                  aria-pressed={activeSequenceMode === 'en1'}
+                  className={`py-2 px-2 rounded-lg text-xs font-medium flex flex-col items-center justify-center gap-0.5 transition-all cursor-pointer ${
+                    activeSequenceMode === 'en1'
+                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-sm font-bold ring-1 ring-cyan-500/30'
+                      : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900 border border-transparent'
+                  }`}
+                >
+                  <span className="font-semibold">精簡單播</span>
+                  <span className="text-[10px] text-zinc-400 font-mono">英 x1</span>
+                </button>
+              </div>
+
+              {!resolvedHasChineseVoice && activeSequenceMode === 'en2-zh1-en1' && (
+                <div
+                  data-testid="chinese-voice-fallback-hint"
+                  className="text-[11px] text-amber-400/90 bg-amber-950/20 border border-amber-800/40 rounded-lg p-2 flex items-center gap-1.5"
+                >
+                  <span>⚠️</span> 目前裝置無可用中文語音，播放時將自動退回「純英雙播」。
+                </div>
+              )}
+            </div>
+
+            {/* Speech Rate Selection */}
+            <div className="flex flex-col gap-1.5">
+              <label className="text-xs font-medium text-zinc-300">朗誦速度 (Playback Speed)</label>
+              <div
+                data-testid="speech-rate-switch"
+                role="group"
+                aria-label="朗誦速度切換"
+                className="grid grid-cols-4 sm:grid-cols-7 gap-1 bg-zinc-950 p-1.5 rounded-xl border border-zinc-800/90"
+              >
+                {SPEECH_RATES.map((rate) => {
+                  const isSelected = activeSpeechRate === rate;
+                  return (
+                    <button
+                      key={rate}
+                      type="button"
+                      data-testid={`rate-button-${rate}`}
+                      onClick={() => handleSelectSpeechRate(rate)}
+                      aria-pressed={isSelected}
+                      className={`py-1.5 px-1 rounded-lg text-xs font-mono transition-all cursor-pointer text-center ${
+                        isSelected
+                          ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-bold ring-1 ring-cyan-500/30'
+                          : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900 border border-transparent'
+                      }`}
+                    >
+                      {rate}x
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Pause Interval Selection */}
+            <div className="flex flex-col gap-1.5">
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-medium text-zinc-300">
+                  語句間隔停頓 (Pause Interval)
+                </label>
+                <span className="text-xs font-mono text-zinc-400">{activePauseInterval}ms</span>
+              </div>
+              <div
+                data-testid="pause-interval-input"
+                role="group"
+                aria-label="語句間隔停頓時間"
+                className="grid grid-cols-4 gap-1.5 bg-zinc-950 p-1.5 rounded-xl border border-zinc-800/90"
+              >
+                {PAUSE_INTERVALS.map((ms) => {
+                  const isSelected = activePauseInterval === ms;
+                  return (
+                    <button
+                      key={ms}
+                      type="button"
+                      data-testid={`interval-button-${ms}`}
+                      onClick={() => handleSelectPauseInterval(ms)}
+                      aria-pressed={isSelected}
+                      className={`py-1.5 px-2 rounded-lg text-xs font-mono transition-all cursor-pointer text-center ${
+                        isSelected
+                          ? 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/50 font-bold ring-1 ring-indigo-500/30'
+                          : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900 border border-transparent'
+                      }`}
+                    >
+                      {ms}ms
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

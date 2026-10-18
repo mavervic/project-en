@@ -16,6 +16,9 @@ interface HeaderHUDProps {
   // Matrix Visibility Toggle
   showMatrix?: boolean;
   onToggleMatrix?: () => void;
+  // Listening Notebook
+  onOpenNotebook?: () => void;
+  markedChunksCount?: number;
 }
 
 export const HeaderHUD: React.FC<HeaderHUDProps> = ({
@@ -30,6 +33,8 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
   canSelectAccents = false,
   showMatrix = true,
   onToggleMatrix,
+  onOpenNotebook,
+  markedChunksCount,
 }) => {
   const [isAccentMenuOpen, setIsAccentMenuOpen] = useState(false);
 
@@ -202,6 +207,39 @@ export const HeaderHUD: React.FC<HeaderHUDProps> = ({
               />
             </svg>
             <span className="hidden sm:inline">Import</span>
+          </button>
+        )}
+
+        {/* Listening Notebook */}
+        {onOpenNotebook && (
+          <button
+            onClick={onOpenNotebook}
+            data-testid="header-notebook-btn"
+            title="聽力盲點筆記本"
+            className="px-2.5 sm:px-3 py-1.5 rounded-lg border border-zinc-700/80 hover:border-amber-500/80 bg-zinc-900/90 hover:bg-zinc-800 text-xs font-medium text-zinc-200 tracking-wide transition-all shadow-sm flex items-center gap-1.5 cursor-pointer relative"
+          >
+            <svg
+              className="w-3.5 h-3.5 text-amber-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+              />
+            </svg>
+            <span className="hidden sm:inline">Notebook</span>
+            {markedChunksCount !== undefined && markedChunksCount > 0 && (
+              <span
+                data-testid="header-notebook-count"
+                className="ml-0.5 px-1.5 py-0.2 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40"
+              >
+                {markedChunksCount}
+              </span>
+            )}
           </button>
         )}
 

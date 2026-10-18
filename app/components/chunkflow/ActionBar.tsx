@@ -1,12 +1,19 @@
 import React from 'react';
-import type { TimeChoice, VoiceChoice } from '../../types/chunkflow';
+import type { SlotChunk, TimeChoice, VoiceChoice } from '../../types/chunkflow';
+import { ListeningChunkBar } from './ListeningChunkBar';
 
-interface ActionBarProps {
+export interface ActionBarProps {
   selectedVoice: VoiceChoice | null;
   selectedTime: TimeChoice | null;
   onSelectVoice: (voice: VoiceChoice) => void;
   onSelectTime: (time: TimeChoice) => void;
   disabled?: boolean;
+  isListeningMode?: boolean;
+  chunks?: SlotChunk[];
+  markedChunkIndices?: number[];
+  onToggleMarkChunk?: (index: number) => void;
+  isNarrationPlaying?: boolean;
+  onNextQuestion?: () => void;
 }
 
 export const ActionBar: React.FC<ActionBarProps> = ({
@@ -15,7 +22,26 @@ export const ActionBar: React.FC<ActionBarProps> = ({
   onSelectVoice,
   onSelectTime,
   disabled = false,
+  isListeningMode = false,
+  chunks = [],
+  markedChunkIndices = [],
+  onToggleMarkChunk = () => {},
+  isNarrationPlaying = false,
+  onNextQuestion,
 }) => {
+  if (isListeningMode) {
+    return (
+      <ListeningChunkBar
+        chunks={chunks}
+        markedChunkIndices={markedChunkIndices}
+        onToggleMarkChunk={onToggleMarkChunk}
+        isNarrationPlaying={isNarrationPlaying}
+        onNextQuestion={onNextQuestion}
+        disabled={disabled}
+      />
+    );
+  }
+
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-4 p-5 md:p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-md">
       <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-6">

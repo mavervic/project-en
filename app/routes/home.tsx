@@ -9,6 +9,7 @@ import { ActionBar } from '../components/chunkflow/ActionBar';
 import { AnalyticsDashboard } from '../components/chunkflow/AnalyticsDashboard';
 import { SettingsModal } from '../components/chunkflow/SettingsModal';
 import { ImportQuestionsModal } from '../components/chunkflow/ImportQuestionsModal';
+import { ListeningNotebookModal } from '../components/chunkflow/ListeningNotebookModal';
 import { TrainingMatrix } from '../components/chunkflow/TrainingMatrix';
 import { TrainingMatrixDrawer } from '../components/chunkflow/TrainingMatrixDrawer';
 import { getRegisteredBanks } from '../data/banks';
@@ -30,6 +31,7 @@ export default function Home() {
   const [isAnalyticsOpen, setIsAnalyticsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isImportOpen, setIsImportOpen] = useState(false);
+  const [isNotebookOpen, setIsNotebookOpen] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(() => {
     if (typeof window !== 'undefined') {
       return window.innerWidth >= 1024;
@@ -45,11 +47,13 @@ export default function Home() {
     accent,
     setAccent,
     speak,
+    speakListeningSequence,
     isSpeaking,
     canSelectAccents,
     voices,
     selectedVoiceURI,
     setVoiceURI,
+    hasChineseVoice,
   } = useSpeechNarration();
 
   const registeredBanks = getRegisteredBanks();
@@ -75,6 +79,14 @@ export default function Home() {
     subjectMisfireIndex,
     activeBankId,
     activeTrainingId,
+    isListeningMode,
+    markedChunkIndices,
+    markedChunks,
+    markedChunksCountMap,
+    handleToggleMarkChunk,
+    handleRemoveMarkedChunk,
+    handleClearMarkedChunks,
+    handleListeningNarrationComplete,
     setPracticeMode,
     toggleBlindMode,
     handleSelectBank,
@@ -109,12 +121,31 @@ export default function Home() {
 
   // Auto-play sentence narration on new question when enabled
   useEffect(() => {
-    if (narrationEnabled && currentQuestion?.sentence) {
+    if (!currentQuestion?.sentence) return;
+    if (isListeningMode) {
+      speakListeningSequence(currentQuestion.sentence, currentQuestion.translation, {
+        force: true,
+        mode: settings.listeningNarrationMode,
+        pauseIntervalMs: settings.listeningPauseIntervalMs,
+        rate: settings.listeningSpeechRate,
+        onComplete: handleListeningNarrationComplete,
+      });
+    } else if (narrationEnabled) {
       speak(currentQuestion.sentence);
     }
-  }, [currentQuestion?.id, narrationEnabled, speak]);
+  }, [
+    currentQuestion?.id,
+    isListeningMode,
+    narrationEnabled,
+    speak,
+    speakListeningSequence,
+    handleListeningNarrationComplete,
+    settings.listeningNarrationMode,
+    settings.listeningPauseIntervalMs,
+    settings.listeningSpeechRate,
+  ]);
 
-  const isAnyModalOpen = isAnalyticsOpen || isSettingsOpen || isImportOpen;
+  const isAnyModalOpen = isAnalyticsOpen || isSettingsOpen || isImportOpen || isNotebookOpen;
 
   useKeyboardShortcuts({
     onSelectVoice: handleSelectVoice,
@@ -144,6 +175,7 @@ export default function Home() {
           banks={registeredBanks}
           activeBankId={activeBankId}
           onSelectBank={handleSelectBank}
+          markedChunksCountMap={markedChunksCountMap}
         />
       )}
 
@@ -156,6 +188,8 @@ export default function Home() {
         onOpenAnalytics={() => setIsAnalyticsOpen(true)}
         onOpenSettings={() => setIsSettingsOpen(true)}
         onOpenImport={() => setIsImportOpen(true)}
+        onOpenNotebook={() => setIsNotebookOpen(true)}
+        markedChunksCount={markedChunks.length}
         narrationEnabled={narrationEnabled}
         accent={accent}
         onSelectAccent={setAccent}
@@ -179,13 +213,26 @@ export default function Home() {
           isSubjectVerbDrill={isSubjectVerbDrill}
           onSelectChunk={handleSelectSubjectChunk}
           chunkMisfireIndex={subjectMisfireIndex}
-          onPlayAudio={() => speak(currentQuestion.sentence, { force: true })}
+          onPlayAudio={() => {
+            if (isListeningMode) {
+              speakListeningSequence(currentQuestion.sentence, currentQuestion.translation, {
+                force: true,
+                mode: settings.listeningNarrationMode,
+                pauseIntervalMs: settings.listeningPauseIntervalMs,
+                rate: settings.listeningSpeechRate,
+                onComplete: handleListeningNarrationComplete,
+              });
+            } else {
+              speak(currentQuestion.sentence, { force: true });
+            }
+          }}
           isSpeaking={isSpeaking}
           narrationEnabled={narrationEnabled}
           onToggleNarration={toggleNarration}
           blindModeEnabled={blindModeEnabled}
           onToggleBlindMode={handleToggleBlindMode}
           onSpeakChunk={(text) => speak(text, { force: true })}
+          isListeningMode={isListeningMode}
         />
 
         {/* Action Controls & Hotkey Buttons */}
@@ -194,7 +241,15 @@ export default function Home() {
           selectedTime={selectedTime}
           onSelectVoice={handleSelectVoice}
           onSelectTime={handleSelectTime}
-          disabled={showFeedback || (isSubjectVerbDrill && roundStage !== 'classify')}
+          disabled={
+            !isListeningMode && (showFeedback || (isSubjectVerbDrill && roundStage !== 'classify'))
+          }
+          isListeningMode={isListeningMode}
+          chunks={currentQuestion?.chunks}
+          markedChunkIndices={markedChunkIndices}
+          onToggleMarkChunk={handleToggleMarkChunk}
+          isNarrationPlaying={isSpeaking && !showFeedback}
+          onNextQuestion={advanceToNextQuestion}
         />
 
         {/* Keyboard Shortcut Guidance Bar (desktop only) */}
@@ -267,6 +322,7 @@ export default function Home() {
         voices={voices}
         selectedVoiceURI={selectedVoiceURI}
         onSelectVoiceURI={setVoiceURI}
+        hasChineseVoice={hasChineseVoice}
         onPreviewVoice={speak}
       />
 
@@ -278,6 +334,15 @@ export default function Home() {
         isCustomBank={isCustomBank}
         onImportQuestions={handleImportQuestions}
         onResetToDefaults={handleResetQuestions}
+      />
+
+      {/* Listening Notebook Modal */}
+      <ListeningNotebookModal
+        isOpen={isNotebookOpen}
+        onClose={() => setIsNotebookOpen(false)}
+        markedChunks={markedChunks}
+        onRemoveChunk={handleRemoveMarkedChunk}
+        onClearAll={handleClearMarkedChunks}
       />
     </div>
   );
