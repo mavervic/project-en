@@ -14,6 +14,8 @@ export interface ActionBarProps {
   onToggleMarkChunk?: (index: number) => void;
   isNarrationPlaying?: boolean;
   onNextQuestion?: () => void;
+  onReplayAudio?: () => void;
+  isAudioPlaying?: boolean;
 }
 
 export const ActionBar: React.FC<ActionBarProps> = ({
@@ -28,6 +30,8 @@ export const ActionBar: React.FC<ActionBarProps> = ({
   onToggleMarkChunk = () => {},
   isNarrationPlaying = false,
   onNextQuestion,
+  onReplayAudio,
+  isAudioPlaying = false,
 }) => {
   if (isListeningMode) {
     return (
@@ -38,6 +42,8 @@ export const ActionBar: React.FC<ActionBarProps> = ({
         isNarrationPlaying={isNarrationPlaying}
         onNextQuestion={onNextQuestion}
         disabled={disabled}
+        onReplayAudio={onReplayAudio}
+        isAudioPlaying={isAudioPlaying}
       />
     );
   }

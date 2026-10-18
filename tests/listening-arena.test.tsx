@@ -95,4 +95,25 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
     expect(result.current.showFeedback).toBe(false);
     expect(result.current.blindModeEnabled).toBe(true);
   });
+
+  it('resets showFeedback and restores blind mode on restartCurrentQuestion', () => {
+    window.localStorage.clear();
+    const { result } = renderHook(() => useChunkFlowGame());
+
+    act(() => {
+      result.current.handleSelectBank('toeic-listening');
+      result.current.handleListeningNarrationComplete();
+    });
+
+    const currentId = result.current.currentQuestion.id;
+    expect(result.current.showFeedback).toBe(true);
+
+    act(() => {
+      result.current.restartCurrentQuestion();
+    });
+
+    expect(result.current.currentQuestion.id).toBe(currentId);
+    expect(result.current.showFeedback).toBe(false);
+    expect(result.current.blindModeEnabled).toBe(true);
+  });
 });

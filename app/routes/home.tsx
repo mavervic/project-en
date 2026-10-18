@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import type { Route } from './+types/home';
 import { useChunkFlowGame } from '../hooks/useChunkFlowGame';
 import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts';
@@ -95,10 +95,35 @@ export default function Home() {
     handleSelectVoice,
     handleSelectTime,
     advanceToNextQuestion,
+    restartCurrentQuestion,
     handleResetHistory,
     handleImportQuestions,
     handleResetQuestions,
   } = useChunkFlowGame();
+
+  const handleRestartQuestion = useCallback(() => {
+    restartCurrentQuestion();
+    if (isListeningMode && currentQuestion?.sentence) {
+      speakListeningSequence(currentQuestion.sentence, currentQuestion.translation, {
+        force: true,
+        mode: settings.listeningNarrationMode,
+        pauseIntervalMs: settings.listeningPauseIntervalMs,
+        rate: settings.listeningSpeechRate,
+        onComplete: handleListeningNarrationComplete,
+      });
+    } else if (currentQuestion?.sentence && narrationEnabled) {
+      speak(currentQuestion.sentence, { force: true });
+    }
+  }, [
+    restartCurrentQuestion,
+    isListeningMode,
+    currentQuestion,
+    settings,
+    handleListeningNarrationComplete,
+    narrationEnabled,
+    speakListeningSequence,
+    speak,
+  ]);
 
   const handleToggleBlindMode = () => {
     const nextBlind = toggleBlindMode();
@@ -213,19 +238,7 @@ export default function Home() {
           isSubjectVerbDrill={isSubjectVerbDrill}
           onSelectChunk={handleSelectSubjectChunk}
           chunkMisfireIndex={subjectMisfireIndex}
-          onPlayAudio={() => {
-            if (isListeningMode) {
-              speakListeningSequence(currentQuestion.sentence, currentQuestion.translation, {
-                force: true,
-                mode: settings.listeningNarrationMode,
-                pauseIntervalMs: settings.listeningPauseIntervalMs,
-                rate: settings.listeningSpeechRate,
-                onComplete: handleListeningNarrationComplete,
-              });
-            } else {
-              speak(currentQuestion.sentence, { force: true });
-            }
-          }}
+          onPlayAudio={handleRestartQuestion}
           isSpeaking={isSpeaking}
           narrationEnabled={narrationEnabled}
           onToggleNarration={toggleNarration}
@@ -250,6 +263,8 @@ export default function Home() {
           onToggleMarkChunk={handleToggleMarkChunk}
           isNarrationPlaying={isSpeaking && !showFeedback}
           onNextQuestion={advanceToNextQuestion}
+          onReplayAudio={handleRestartQuestion}
+          isAudioPlaying={isSpeaking}
         />
 
         {/* Keyboard Shortcut Guidance Bar (desktop only) */}

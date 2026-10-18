@@ -264,6 +264,30 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     startTimer();
   }, [practiceMode, activeQuestions, history, currentQuestion.id, activeBankId, startTimer]);
 
+  // Restart / re-enter current question (re-doing the current question from initial blind state)
+  const restartCurrentQuestion = useCallback(() => {
+    selectedVoiceRef.current = null;
+    selectedTimeRef.current = null;
+    setSelectedVoice(null);
+    setSelectedTime(null);
+    setLastEvaluation(null);
+    setShowFeedback(false);
+    setChunkMisfireIndex(null);
+
+    const isListening = activeBankId === 'toeic-listening';
+    if (isListening) {
+      blindModeRef.current = true;
+      setBlindModeEnabledState(true);
+      saveBlindModeEnabled(true);
+    }
+
+    const hasSubject = currentQuestion?.chunks.some((c) => c.type === 'subject');
+    setRoundStage(!blindModeRef.current && hasSubject && !isListening ? 'subject' : 'classify');
+
+    questionStartTimeRef.current = Date.now();
+    startTimer();
+  }, [activeBankId, currentQuestion, startTimer]);
+
   const handleSelectChunk = useCallback(
     (chunkIndex: number) => {
       if (showFeedback || blindModeRef.current) return;
@@ -549,6 +573,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     handleSelectVoice,
     handleSelectTime,
     advanceToNextQuestion,
+    restartCurrentQuestion,
     handleResetHistory,
     handleImportQuestions,
     handleResetQuestions,

@@ -92,4 +92,41 @@ describe('ListeningChunkBar and ActionBar Delegation', () => {
     expect(screen.queryByTestId('chunk-bar-next-btn')).toBeNull();
     expect(screen.queryByText('點選聽不清楚的單字或片語加入筆記')).toBeNull();
   });
+
+  it('renders replay button in chunk notes state and triggers onReplayAudio when clicked', () => {
+    const onReplayAudio = vi.fn();
+    render(
+      <ListeningChunkBar
+        chunks={sampleChunks}
+        markedChunkIndices={[]}
+        onToggleMarkChunk={vi.fn()}
+        isNarrationPlaying={false}
+        onReplayAudio={onReplayAudio}
+        isAudioPlaying={false}
+      />
+    );
+
+    const replayBtn = screen.getByTestId('listening-replay-btn');
+    expect(replayBtn).toBeDefined();
+    expect(replayBtn.textContent).toContain('重新聽這題');
+
+    fireEvent.click(replayBtn);
+    expect(onReplayAudio).toHaveBeenCalledTimes(1);
+  });
+
+  it('displays playing state on replay button when isAudioPlaying is true', () => {
+    render(
+      <ListeningChunkBar
+        chunks={sampleChunks}
+        markedChunkIndices={[]}
+        onToggleMarkChunk={vi.fn()}
+        isNarrationPlaying={false}
+        onReplayAudio={vi.fn()}
+        isAudioPlaying={true}
+      />
+    );
+
+    const replayBtn = screen.getByTestId('listening-replay-btn');
+    expect(replayBtn.textContent).toContain('播放中...');
+  });
 });

@@ -8,6 +8,8 @@ export interface ListeningChunkBarProps {
   isNarrationPlaying: boolean;
   onNextQuestion?: () => void;
   disabled?: boolean;
+  onReplayAudio?: () => void;
+  isAudioPlaying?: boolean;
 }
 
 export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
@@ -17,6 +19,8 @@ export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
   isNarrationPlaying,
   onNextQuestion,
   disabled = false,
+  onReplayAudio,
+  isAudioPlaying = false,
 }) => {
   return (
     <div
@@ -24,7 +28,7 @@ export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
       className="w-full max-w-4xl mx-auto flex flex-col gap-4 p-5 md:p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 backdrop-blur-md transition-all"
     >
       {/* Top Header */}
-      <div className="flex items-center justify-between gap-3 border-b border-zinc-800/80 pb-3">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-800/80 pb-3">
         <div className="flex items-center gap-2">
           <span
             className={`w-2 h-2 rounded-full ${
@@ -36,7 +40,7 @@ export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
           </span>
         </div>
 
-        <div className="text-xs font-mono">
+        <div className="text-xs font-mono flex items-center gap-3">
           {isNarrationPlaying ? (
             <span
               data-testid="audio-playing-indicator"
@@ -45,9 +49,42 @@ export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
               <span>🎧</span> 語音播放中...
             </span>
           ) : (
-            <span className="text-zinc-400">
-              已標記 <strong className="text-amber-400">{markedChunkIndices.length}</strong> 個語塊
-            </span>
+            <>
+              <span className="text-zinc-400">
+                已標記 <strong className="text-amber-400">{markedChunkIndices.length}</strong>{' '}
+                個語塊
+              </span>
+              {onReplayAudio && (
+                <button
+                  type="button"
+                  data-testid="listening-replay-btn"
+                  onClick={onReplayAudio}
+                  disabled={disabled}
+                  title="重新播放本題語音"
+                  aria-label="重新播放本題語音"
+                  className={`px-2.5 py-1 rounded-lg border transition-all flex items-center gap-1.5 text-xs font-sans cursor-pointer active:scale-95 shadow-sm ${
+                    isAudioPlaying
+                      ? 'border-cyan-400 bg-cyan-500/20 text-cyan-200'
+                      : 'border-cyan-500/40 bg-cyan-950/40 hover:bg-cyan-900/60 text-cyan-300 hover:text-cyan-100 hover:border-cyan-400'
+                  }`}
+                >
+                  <svg
+                    className={`w-3.5 h-3.5 ${isAudioPlaying ? 'text-cyan-300 animate-spin' : 'text-cyan-400'}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                    />
+                  </svg>
+                  <span>{isAudioPlaying ? '播放中...' : '重新聽這題'}</span>
+                </button>
+              )}
+            </>
           )}
         </div>
       </div>
