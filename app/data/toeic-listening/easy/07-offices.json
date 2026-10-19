@@ -1,0 +1,812 @@
+[
+  {
+    "id": "listening-07-easy-01",
+    "trainingId": "listening-07-easy",
+    "sentence": "The administrative assistant reserved meeting room B for the client presentation.",
+    "translation": "行政助理預訂了 B 會議室供客戶簡報使用。",
+    "chunks": [
+      {
+        "text": "The administrative assistant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reserved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "meeting room B for the client presentation.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reserved 為過去簡單式主動語態，主詞為行政助理。"
+  },
+  {
+    "id": "listening-07-easy-02",
+    "trainingId": "listening-07-easy",
+    "sentence": "The office copier was repaired by a technician yesterday morning.",
+    "translation": "辦公室影印機昨天上午已由技術員修好。",
+    "chunks": [
+      {
+        "text": "The office copier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was repaired",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by a technician yesterday morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "影印機被維修，was repaired 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-easy-03",
+    "trainingId": "listening-07-easy",
+    "sentence": "The receptionist gives guest passes to all building visitors.",
+    "translation": "接待人員給所有大樓訪客發放訪客通行證。",
+    "chunks": [
+      {
+        "text": "The receptionist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "gives",
+        "isTargetSlot": true
+      },
+      {
+        "text": "guest passes to all building visitors.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "gives 為現在簡單式，描述接待櫃檯常規作業。"
+  },
+  {
+    "id": "listening-07-easy-04",
+    "trainingId": "listening-07-easy",
+    "sentence": "The cooling system will be serviced this coming Saturday.",
+    "translation": "空調冷氣系統將於本週六進行保養維修。",
+    "chunks": [
+      {
+        "text": "The cooling system",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be serviced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "this coming Saturday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "空調系統將被保養，will be serviced 為未來被動式。"
+  },
+  {
+    "id": "listening-07-easy-05",
+    "trainingId": "listening-07-easy",
+    "sentence": "The IT specialist is connecting the projector in the boardroom.",
+    "translation": "IT 專員正在會議室連接投影機。",
+    "chunks": [
+      {
+        "text": "The IT specialist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is connecting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the projector in the boardroom.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is connecting 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-07-easy-06",
+    "trainingId": "listening-07-easy",
+    "sentence": "The storage cabinet was stocked with new envelopes and staplers.",
+    "translation": "儲藏櫃裡已補齊了新信封和訂書機。",
+    "chunks": [
+      {
+        "text": "The storage cabinet",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was stocked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with new envelopes and staplers.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "置物櫃被補齊用品，was stocked 為過去被動式。"
+  },
+  {
+    "id": "listening-07-easy-07",
+    "trainingId": "listening-07-easy",
+    "sentence": "The janitorial crew vacuums the carpets every weekday evening.",
+    "translation": "清潔團隊每個平日傍晚吸地毯。",
+    "chunks": [
+      {
+        "text": "The janitorial crew",
+        "isTargetSlot": false
+      },
+      {
+        "text": "vacuums",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the carpets every weekday evening.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "vacuums 為現在簡單式主動語態，表示例行清掃。"
+  },
+  {
+    "id": "listening-07-easy-08",
+    "trainingId": "listening-07-easy",
+    "sentence": "Management announced the department relocation plan yesterday.",
+    "translation": "管理層昨天宣布了部門遷徙計畫。",
+    "chunks": [
+      {
+        "text": "Management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "announced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the department relocation plan yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "announced 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-easy-09",
+    "trainingId": "listening-07-easy",
+    "sentence": "Fresh paper has been added to the central printer tray.",
+    "translation": "新紙張已添加至中央印表機紙匣中。",
+    "chunks": [
+      {
+        "text": "Fresh paper",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been added",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the central printer tray.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "紙張已被放入托盤，has been added 為現在完成被動式。"
+  },
+  {
+    "id": "listening-07-easy-10",
+    "trainingId": "listening-07-easy",
+    "sentence": "Our company installed a modern espresso machine in the lounge.",
+    "translation": "我們公司在茶水間安裝了一台新型義式咖啡機。",
+    "chunks": [
+      {
+        "text": "Our company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a modern espresso machine in the lounge.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "installed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-easy-11",
+    "trainingId": "listening-07-easy",
+    "sentence": "The main office door locks automatically at seven in the evening.",
+    "translation": "辦公室大門每晚七點自動上鎖。",
+    "chunks": [
+      {
+        "text": "The main office door",
+        "isTargetSlot": false
+      },
+      {
+        "text": "locks",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically at seven in the evening.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "locks 表自動鎖上的常規狀態，為現在簡單式。"
+  },
+  {
+    "id": "listening-07-easy-12",
+    "trainingId": "listening-07-easy",
+    "sentence": "A holiday schedule notice was posted on the cafeteria message board.",
+    "translation": "放假排程公告已被張貼在員工餐廳公佈欄上。",
+    "chunks": [
+      {
+        "text": "A holiday schedule notice",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was posted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on the cafeteria message board.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "公告被張貼，was posted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-easy-13",
+    "trainingId": "listening-07-easy",
+    "sentence": "Technicians will replace the old telephone sets next Tuesday.",
+    "translation": "技術員將於下週二更換舊電話機。",
+    "chunks": [
+      {
+        "text": "Technicians",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will replace",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the old telephone sets next Tuesday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will replace 表未來的更換計畫，為一般未來式。"
+  },
+  {
+    "id": "listening-07-easy-14",
+    "trainingId": "listening-07-easy",
+    "sentence": "The office clerk sorts incoming postal letters every morning.",
+    "translation": "辦公室文員每天早晨分揀收進來的郵件。",
+    "chunks": [
+      {
+        "text": "The office clerk",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sorts",
+        "isTargetSlot": true
+      },
+      {
+        "text": "incoming postal letters every morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "sorts 表每天早晨例行信件分類，現在簡單式。"
+  },
+  {
+    "id": "listening-07-easy-15",
+    "trainingId": "listening-07-easy",
+    "sentence": "The whiteboard was cleaned after the marketing strategy session.",
+    "translation": "行銷策略會議結束後，白板已被擦拭乾淨。",
+    "chunks": [
+      {
+        "text": "The whiteboard",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was cleaned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "after the marketing strategy session.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "白板被擦拭乾淨，was cleaned 為過去被動式。"
+  },
+  {
+    "id": "listening-07-easy-16",
+    "trainingId": "listening-07-easy",
+    "sentence": "Emily borrowed a spare laptop charger from IT.",
+    "translation": "艾蜜莉向 IT 部門借了一個備用筆電充電器。",
+    "chunks": [
+      {
+        "text": "Emily",
+        "isTargetSlot": false
+      },
+      {
+        "text": "borrowed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a spare laptop charger from IT.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "borrowed 表借用完畢，過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-easy-17",
+    "trainingId": "listening-07-easy",
+    "sentence": "The indoor greenery is watered by the maintenance staff twice a week.",
+    "translation": "維護人員每週兩次為室內植栽澆水。",
+    "chunks": [
+      {
+        "text": "The indoor greenery",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is watered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the maintenance staff twice a week.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "室內盆栽每週被澆水兩次，is watered 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-07-easy-18",
+    "trainingId": "listening-07-easy",
+    "sentence": "We are testing the video conferencing equipment right now.",
+    "translation": "我們現在正在測試視訊會議設備。",
+    "chunks": [
+      {
+        "text": "We",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are testing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the video conferencing equipment right now.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "are testing 表示現在正在測試設備，現在進行式。"
+  },
+  {
+    "id": "listening-07-easy-19",
+    "trainingId": "listening-07-easy",
+    "sentence": "A routine safety drill will occur at ten tomorrow morning.",
+    "translation": "例行消防演習將於明天上午十點舉行。",
+    "chunks": [
+      {
+        "text": "A routine safety drill",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will occur",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at ten tomorrow morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will occur 表明天上午預定的演習，一般未來式。"
+  },
+  {
+    "id": "listening-07-easy-20",
+    "trainingId": "listening-07-easy",
+    "sentence": "The paper shredder bin was emptied before the lunch break.",
+    "translation": "碎紙機廢紙桶在午休前已被清空。",
+    "chunks": [
+      {
+        "text": "The paper shredder bin",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was emptied",
+        "isTargetSlot": true
+      },
+      {
+        "text": "before the lunch break.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "碎紙機紙桶被清空，was emptied 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-easy-21",
+    "trainingId": "listening-07-easy",
+    "sentence": "Employees label their food containers in the shared fridge.",
+    "translation": "員工會在共用冰箱裡的食物盒上貼標籤。",
+    "chunks": [
+      {
+        "text": "Employees",
+        "isTargetSlot": false
+      },
+      {
+        "text": "label",
+        "isTargetSlot": true
+      },
+      {
+        "text": "their food containers in the shared fridge.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "label 表大家平時習慣貼上標籤，現在簡單式。"
+  },
+  {
+    "id": "listening-07-easy-22",
+    "trainingId": "listening-07-easy",
+    "sentence": "A new card reader was installed at the side entrance yesterday.",
+    "translation": "側門昨天安裝了新的感應讀卡機。",
+    "chunks": [
+      {
+        "text": "A new card reader",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at the side entrance yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讀卡機被安裝，was installed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-easy-23",
+    "trainingId": "listening-07-easy",
+    "sentence": "The office manager inspected the open work area before leaving.",
+    "translation": "辦公室經理在離開前檢查了開放式工作區域。",
+    "chunks": [
+      {
+        "text": "The office manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "inspected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the open work area before leaving.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "inspected 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-easy-24",
+    "trainingId": "listening-07-easy",
+    "sentence": "Recycling containers are placed near each printing station.",
+    "translation": "回收桶放置在每個列印區旁。",
+    "chunks": [
+      {
+        "text": "Recycling containers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are placed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "near each printing station.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "回收桶被放置，are placed 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-07-easy-25",
+    "trainingId": "listening-07-easy",
+    "sentence": "The building custodian replaced the overhead lights in hallway C.",
+    "translation": "大樓管理員更換了 C 走廊的頂燈。",
+    "chunks": [
+      {
+        "text": "The building custodian",
+        "isTargetSlot": false
+      },
+      {
+        "text": "replaced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the overhead lights in hallway C.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "replaced 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-easy-26",
+    "trainingId": "listening-07-easy",
+    "sentence": "The IT department changes the guest network password monthly.",
+    "translation": "IT 部門每月更換一次訪客網路密碼。",
+    "chunks": [
+      {
+        "text": "The IT department",
+        "isTargetSlot": false
+      },
+      {
+        "text": "changes",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the guest network password monthly.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "monthly 表每月更換，changes 為現在簡單式。"
+  },
+  {
+    "id": "listening-07-easy-27",
+    "trainingId": "listening-07-easy",
+    "sentence": "Adjustable monitor arms will be provided for all workstation desks.",
+    "translation": "所有工作站桌子都將配備可調節的螢幕支架。",
+    "chunks": [
+      {
+        "text": "Adjustable monitor arms",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be provided",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for all workstation desks.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "螢幕支架將被提供，will be provided 為未來被動式。"
+  },
+  {
+    "id": "listening-07-easy-28",
+    "trainingId": "listening-07-easy",
+    "sentence": "Alex adjusted the room thermostat by two degrees.",
+    "translation": "亞歷克斯將房間溫控器調升了兩度。",
+    "chunks": [
+      {
+        "text": "Alex",
+        "isTargetSlot": false
+      },
+      {
+        "text": "adjusted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the room thermostat by two degrees.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "adjusted 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-easy-29",
+    "trainingId": "listening-07-easy",
+    "sentence": "The delivery has arrived at the main reception counter.",
+    "translation": "快遞已送達大廳接待櫃檯。",
+    "chunks": [
+      {
+        "text": "The delivery",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has arrived",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at the main reception counter.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "has arrived 表示包裹剛送達，為現在完成式。"
+  },
+  {
+    "id": "listening-07-easy-30",
+    "trainingId": "listening-07-easy",
+    "sentence": "The speakerphone was tested prior to the international call.",
+    "translation": "在國際通話前，會議擴音電話已完成測試。",
+    "chunks": [
+      {
+        "text": "The speakerphone",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was tested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "prior to the international call.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "擴音電話被測試，was tested 為過去簡單被動式。"
+  }
+]

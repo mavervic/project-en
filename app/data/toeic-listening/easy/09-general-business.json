@@ -1,0 +1,812 @@
+[
+  {
+    "id": "listening-09-easy-01",
+    "trainingId": "listening-09-easy",
+    "sentence": "The managing director signed the partnership agreement this afternoon.",
+    "translation": "常務董事今天下午簽署了合夥協議。",
+    "chunks": [
+      {
+        "text": "The managing director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "signed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the partnership agreement this afternoon.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "signed 表主動完成簽約動作，為過去簡單式。"
+  },
+  {
+    "id": "listening-09-easy-02",
+    "trainingId": "listening-09-easy",
+    "sentence": "The revenue report was presented to board members yesterday morning.",
+    "translation": "營收報告已於昨天上午向董事會成員進行簡報。",
+    "chunks": [
+      {
+        "text": "The revenue report",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was presented",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to board members yesterday morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "營收報告被呈報，was presented 為過去被動式。"
+  },
+  {
+    "id": "listening-09-easy-03",
+    "trainingId": "listening-09-easy",
+    "sentence": "Our marketing team will launch the advertising campaign next Monday.",
+    "translation": "我們的行銷團隊將於下週一發起廣告宣傳活動。",
+    "chunks": [
+      {
+        "text": "Our marketing team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will launch",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the advertising campaign next Monday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will launch 表未來的行銷活動推出，一般未來式。"
+  },
+  {
+    "id": "listening-09-easy-04",
+    "trainingId": "listening-09-easy",
+    "sentence": "The committee evaluates new project proposals every month.",
+    "translation": "委員會每個月評估新的專案企劃案。",
+    "chunks": [
+      {
+        "text": "The committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "evaluates",
+        "isTargetSlot": true
+      },
+      {
+        "text": "new project proposals every month.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "evaluates 表每個月定期評估，為現在簡單式。"
+  },
+  {
+    "id": "listening-09-easy-05",
+    "trainingId": "listening-09-easy",
+    "sentence": "The project timeline was discussed in detail during the morning meeting.",
+    "translation": "專案進度時程在早會上進行了詳細討論。",
+    "chunks": [
+      {
+        "text": "The project timeline",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was discussed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in detail during the morning meeting.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "專案時程被討論，was discussed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-09-easy-06",
+    "trainingId": "listening-09-easy",
+    "sentence": "The customer service team is analyzing client feedback forms right now.",
+    "translation": "客服團隊現在正在分析客戶回饋問卷。",
+    "chunks": [
+      {
+        "text": "The customer service team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is analyzing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "client feedback forms right now.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is analyzing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-09-easy-07",
+    "trainingId": "listening-09-easy",
+    "sentence": "The service agreement has been renewed for another twelve months.",
+    "translation": "服務合約已順利續約十二個月。",
+    "chunks": [
+      {
+        "text": "The service agreement",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been renewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for another twelve months.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "合約已被續約，has been renewed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-09-easy-08",
+    "trainingId": "listening-09-easy",
+    "sentence": "The regional branch reached its annual target ahead of schedule.",
+    "translation": "區域分部提前達成了年度目標。",
+    "chunks": [
+      {
+        "text": "The regional branch",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reached",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its annual target ahead of schedule.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reached 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-easy-09",
+    "trainingId": "listening-09-easy",
+    "sentence": "Formal invitations were mailed to all major shareholders.",
+    "translation": "正式邀請函已郵寄給所有大股東。",
+    "chunks": [
+      {
+        "text": "Formal invitations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were mailed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to all major shareholders.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "邀請函被寄出，were mailed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-09-easy-10",
+    "trainingId": "listening-09-easy",
+    "sentence": "The vice president outlines business objectives at the annual summit.",
+    "translation": "副總裁在年度高峰會上概述業務目標。",
+    "chunks": [
+      {
+        "text": "The vice president",
+        "isTargetSlot": false
+      },
+      {
+        "text": "outlines",
+        "isTargetSlot": true
+      },
+      {
+        "text": "business objectives at the annual summit.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "outlines 表每年高峰會上的常規流程，為現在簡單式。"
+  },
+  {
+    "id": "listening-09-easy-11",
+    "trainingId": "listening-09-easy",
+    "sentence": "A press release will be published on the corporate website tomorrow.",
+    "translation": "新聞稿將於明天在公司官方網站上發布。",
+    "chunks": [
+      {
+        "text": "A press release",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be published",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on the corporate website tomorrow.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "新聞稿將被發布，will be published 為未來被動式。"
+  },
+  {
+    "id": "listening-09-easy-12",
+    "trainingId": "listening-09-easy",
+    "sentence": "The consulting agency conducted a nationwide market study last month.",
+    "translation": "顧問機構上個月進行了一項全國性市場調查。",
+    "chunks": [
+      {
+        "text": "The consulting agency",
+        "isTargetSlot": false
+      },
+      {
+        "text": "conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a nationwide market study last month.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "conducted 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-easy-13",
+    "trainingId": "listening-09-easy",
+    "sentence": "The policy change was approved by the board of directors.",
+    "translation": "該政策變更已獲得董事會批准。",
+    "chunks": [
+      {
+        "text": "The policy change",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the board of directors.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "政策變更被董事會核准，was approved 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-09-easy-14",
+    "trainingId": "listening-09-easy",
+    "sentence": "The sales representatives prepare product demonstrations for potential buyers.",
+    "translation": "業務代表為潛在買家準備產品示範展示。",
+    "chunks": [
+      {
+        "text": "The sales representatives",
+        "isTargetSlot": false
+      },
+      {
+        "text": "prepare",
+        "isTargetSlot": true
+      },
+      {
+        "text": "product demonstrations for potential buyers.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "prepare 表業務代表的例行準備工作，為現在簡單式。"
+  },
+  {
+    "id": "listening-09-easy-15",
+    "trainingId": "listening-09-easy",
+    "sentence": "Customer satisfaction has increased over the past six months.",
+    "translation": "過去六個月中客戶滿意度顯著提升。",
+    "chunks": [
+      {
+        "text": "Customer satisfaction",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has increased",
+        "isTargetSlot": true
+      },
+      {
+        "text": "over the past six months.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "has increased 表過去六個月至今的增長趨勢，為現在完成式。"
+  },
+  {
+    "id": "listening-09-easy-16",
+    "trainingId": "listening-09-easy",
+    "sentence": "The commercial agreement was signed at the international business forum.",
+    "translation": "該商業合約在國際商業論壇上簽署完成。",
+    "chunks": [
+      {
+        "text": "The commercial agreement",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was signed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at the international business forum.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "協議被簽署，was signed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-09-easy-17",
+    "trainingId": "listening-09-easy",
+    "sentence": "Our business analyst researched competing products across three markets.",
+    "translation": "我們的商業分析師調查了三個市場的競爭對手產品。",
+    "chunks": [
+      {
+        "text": "Our business analyst",
+        "isTargetSlot": false
+      },
+      {
+        "text": "researched",
+        "isTargetSlot": true
+      },
+      {
+        "text": "competing products across three markets.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "researched 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-easy-18",
+    "trainingId": "listening-09-easy",
+    "sentence": "The collaboration will create new opportunities in renewable energy.",
+    "translation": "該項合作將在再生能源領域創造新機會。",
+    "chunks": [
+      {
+        "text": "The collaboration",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will create",
+        "isTargetSlot": true
+      },
+      {
+        "text": "new opportunities in renewable energy.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will create 表未來即將創造的商機，一般未來式。"
+  },
+  {
+    "id": "listening-09-easy-19",
+    "trainingId": "listening-09-easy",
+    "sentence": "The updated terms of service were emailed to all account holders this week.",
+    "translation": "更新後的服務條款本週已透過電子郵件寄送給所有帳戶持有人。",
+    "chunks": [
+      {
+        "text": "The updated terms of service",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were emailed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to all account holders this week.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "條款被電子郵件發送，were emailed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-09-easy-20",
+    "trainingId": "listening-09-easy",
+    "sentence": "The account executive is setting up a conference call with foreign partners.",
+    "translation": "業務主管正在安排與國外夥伴的電話會議。",
+    "chunks": [
+      {
+        "text": "The account executive",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is setting up",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a conference call with foreign partners.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is setting up 表正在安排電話會議，現在進行式。"
+  },
+  {
+    "id": "listening-09-easy-21",
+    "trainingId": "listening-09-easy",
+    "sentence": "Our company provides twenty-four-hour technical assistance.",
+    "translation": "我們公司提供二十四小時全天候技術支援。",
+    "chunks": [
+      {
+        "text": "Our company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "provides",
+        "isTargetSlot": true
+      },
+      {
+        "text": "twenty-four-hour technical assistance.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "provides 為現在簡單式，表公司長期提供的支援服務。"
+  },
+  {
+    "id": "listening-09-easy-22",
+    "trainingId": "listening-09-easy",
+    "sentence": "The preliminary merger proposal was rejected by the regulatory commission.",
+    "translation": "初步併購提案已被監管委員會駁回。",
+    "chunks": [
+      {
+        "text": "The preliminary merger proposal",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was rejected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the regulatory commission.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "提案被監管委員會否決，was rejected 為過去被動式。"
+  },
+  {
+    "id": "listening-09-easy-23",
+    "trainingId": "listening-09-easy",
+    "sentence": "The marketing director introduced the latest product line at the expo.",
+    "translation": "行銷總監在博覽會上介紹了最新的產品線。",
+    "chunks": [
+      {
+        "text": "The marketing director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "introduced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the latest product line at the expo.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "introduced 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-easy-24",
+    "trainingId": "listening-09-easy",
+    "sentence": "The revised contract will be reviewed by our legal department shortly.",
+    "translation": "修改後的合約很快將由我們的法務部門審核。",
+    "chunks": [
+      {
+        "text": "The revised contract",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be reviewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by our legal department shortly.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "修改後的合約將被審查，will be reviewed 為未來被動式。"
+  },
+  {
+    "id": "listening-09-easy-25",
+    "trainingId": "listening-09-easy",
+    "sentence": "Entrepreneurs exchange contact details at the networking breakfast.",
+    "translation": "創業者在商務交流早餐會上交換聯絡方式。",
+    "chunks": [
+      {
+        "text": "Entrepreneurs",
+        "isTargetSlot": false
+      },
+      {
+        "text": "exchange",
+        "isTargetSlot": true
+      },
+      {
+        "text": "contact details at the networking breakfast.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "exchange 為現在簡單式，描述交流餐會上的常見行為。"
+  },
+  {
+    "id": "listening-09-easy-26",
+    "trainingId": "listening-09-easy",
+    "sentence": "The meeting date has been confirmed for the third of October.",
+    "translation": "開會日期已確定在十月三日舉行。",
+    "chunks": [
+      {
+        "text": "The meeting date",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been confirmed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for the third of October.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "開會日期已被確認，has been confirmed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-09-easy-27",
+    "trainingId": "listening-09-easy",
+    "sentence": "The chief financial officer approved the digital advertising expenditure.",
+    "translation": "財務長核准了數位廣告支出預算。",
+    "chunks": [
+      {
+        "text": "The chief financial officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the digital advertising expenditure.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "approved 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-easy-28",
+    "trainingId": "listening-09-easy",
+    "sentence": "The sales team is practicing the presentation for key clients.",
+    "translation": "銷售團隊正在練習針對重要客戶的業務簡報。",
+    "chunks": [
+      {
+        "text": "The sales team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is practicing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the presentation for key clients.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is practicing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-09-easy-29",
+    "trainingId": "listening-09-easy",
+    "sentence": "The delivery deadline was extended by two additional weeks.",
+    "translation": "交付截止期限延長了兩週。",
+    "chunks": [
+      {
+        "text": "The delivery deadline",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was extended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by two additional weeks.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "截止日期被延長，was extended 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-09-easy-30",
+    "trainingId": "listening-09-easy",
+    "sentence": "The enterprise values long-term relationships with business clients.",
+    "translation": "這家企業非常重視與企業客戶的長期關係。",
+    "chunks": [
+      {
+        "text": "The enterprise",
+        "isTargetSlot": false
+      },
+      {
+        "text": "values",
+        "isTargetSlot": true
+      },
+      {
+        "text": "long-term relationships with business clients.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "values 為現在簡單式，表企業核心價值。"
+  }
+]

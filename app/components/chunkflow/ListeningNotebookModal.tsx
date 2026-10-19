@@ -22,8 +22,10 @@ export const ListeningNotebookModal: React.FC<ListeningNotebookModalProps> = ({
   const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
 
   const getTopicTitle = (trainingId: string) => {
-    const found = TOEIC_LISTENING_UNITS.find((u) => u.trainingId === trainingId);
-    return found ? found.title : trainingId;
+    const found = TOEIC_LISTENING_UNITS.find(
+      (u) => u.trainingId === trainingId || u.trainingId.startsWith(trainingId)
+    );
+    return found ? found.title.replace(/\s*\((Easy|Medium|Hard)\)$/i, '') : trainingId;
   };
 
   // Unique topics present in marked chunks

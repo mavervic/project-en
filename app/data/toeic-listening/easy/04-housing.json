@@ -1,0 +1,906 @@
+[
+  {
+    "id": "listening-04-easy-01",
+    "trainingId": "listening-04-easy",
+    "sentence": "The leasing office will review your commercial apartment rental application today.",
+    "translation": "租賃辦公室今天將審核您的商務公寓租賃申請。",
+    "chunks": [
+      {
+        "text": "The leasing office",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will review",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "your commercial apartment rental application",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "today.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will review)。"
+  },
+  {
+    "id": "listening-04-easy-02",
+    "trainingId": "listening-04-easy",
+    "sentence": "All corporate apartments are fully furnished with modern home appliances.",
+    "translation": "所有商務公寓均配備齊全的現代化家用電器。",
+    "chunks": [
+      {
+        "text": "All corporate apartments",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are fully furnished",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with modern home appliances.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (are furnished)。"
+  },
+  {
+    "id": "listening-04-easy-03",
+    "trainingId": "listening-04-easy",
+    "sentence": "Tenants must pay their monthly rent by the first day of each month.",
+    "translation": "房客必須在每月第一天前繳納月租。",
+    "chunks": [
+      {
+        "text": "Tenants",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "must pay",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "their monthly rent",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "by the first day of each month.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 (must pay)。"
+  },
+  {
+    "id": "listening-04-easy-04",
+    "trainingId": "listening-04-easy",
+    "sentence": "The property manager signed the two-year commercial lease agreement yesterday.",
+    "translation": "物業經理昨天簽署了為期兩年的商業租賃合約。",
+    "chunks": [
+      {
+        "text": "The property manager",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "signed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the two-year commercial lease agreement",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (signed)。"
+  },
+  {
+    "id": "listening-04-easy-05",
+    "trainingId": "listening-04-easy",
+    "sentence": "Utility expenses are included in the overall monthly rental payment.",
+    "translation": "水電公共雜費已包含在每月的總租金中。",
+    "chunks": [
+      {
+        "text": "Utility expenses",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are included",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in the overall monthly rental payment.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (are included)。"
+  },
+  {
+    "id": "listening-04-easy-06",
+    "trainingId": "listening-04-easy",
+    "sentence": "The maintenance crew is repairing the heating ventilation system in building B.",
+    "translation": "維修小組正在維修 B 棟建築的暖氣通風系統。",
+    "chunks": [
+      {
+        "text": "The maintenance crew",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is repairing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the heating ventilation system in building B.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動 (is repairing)。"
+  },
+  {
+    "id": "listening-04-easy-07",
+    "trainingId": "listening-04-easy",
+    "sentence": "A security deposit was collected before handing over the apartment keys.",
+    "translation": "在交付公寓鑰匙之前已收取了押金。",
+    "chunks": [
+      {
+        "text": "A security deposit",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was collected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "before handing over the apartment keys.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was collected)。"
+  },
+  {
+    "id": "listening-04-easy-08",
+    "trainingId": "listening-04-easy",
+    "sentence": "The real estate agent showed three potential office spaces to our committee.",
+    "translation": "房地產仲介向我們委員會展示了三處具潛力的辦公空間。",
+    "chunks": [
+      {
+        "text": "The real estate agent",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "showed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "three potential office spaces",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to our committee.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (showed)。"
+  },
+  {
+    "id": "listening-04-easy-09",
+    "trainingId": "listening-04-easy",
+    "sentence": "The residential complex features a modern fitness center and swimming pool.",
+    "translation": "該住宅社區設有現代化的健身中心與游泳池。",
+    "chunks": [
+      {
+        "text": "The residential complex",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "features",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a modern fitness center and swimming pool.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (features)。"
+  },
+  {
+    "id": "listening-04-easy-10",
+    "trainingId": "listening-04-easy",
+    "sentence": "Building security monitors all visitor entrances around the clock.",
+    "translation": "大樓保全全天候二十四小時監控所有訪客出入口。",
+    "chunks": [
+      {
+        "text": "Building security",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "monitors",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "all visitor entrances around the clock.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (monitors)。"
+  },
+  {
+    "id": "listening-04-easy-11",
+    "trainingId": "listening-04-easy",
+    "sentence": "The roof was inspected by certified structural engineers last month.",
+    "translation": "上個月經由合格結構工程師檢查了屋頂狀況。",
+    "chunks": [
+      {
+        "text": "The roof",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was inspected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by certified structural engineers last month.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was inspected)。"
+  },
+  {
+    "id": "listening-04-easy-12",
+    "trainingId": "listening-04-easy",
+    "sentence": "Our firm will relocate its headquarters to a newly constructed tower downtown.",
+    "translation": "我們公司將把總部遷往市中心一座新建的大樓。",
+    "chunks": [
+      {
+        "text": "Our firm",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will relocate",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "its headquarters to a newly constructed tower downtown.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will relocate)。"
+  },
+  {
+    "id": "listening-04-easy-13",
+    "trainingId": "listening-04-easy",
+    "sentence": "Parking permits can be obtained from the resident management center.",
+    "translation": "停車許可證可在住戶管理中心辦理領取。",
+    "chunks": [
+      {
+        "text": "Parking permits",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "can be obtained",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "from the resident management center.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態被動 (can be obtained)。"
+  },
+  {
+    "id": "listening-04-easy-14",
+    "trainingId": "listening-04-easy",
+    "sentence": "The landlord painted the living room walls before the new tenant arrived.",
+    "translation": "房東在由新房客入住前重新粉刷了客廳牆面。",
+    "chunks": [
+      {
+        "text": "The landlord",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "painted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the living room walls before the new tenant arrived.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (painted)。"
+  },
+  {
+    "id": "listening-04-easy-15",
+    "trainingId": "listening-04-easy",
+    "sentence": "Smoke detectors are installed in every bedroom and hallway for fire safety.",
+    "translation": "每個臥室與走廊都安裝了煙霧偵測器以確保消防安全。",
+    "chunks": [
+      {
+        "text": "Smoke detectors",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are installed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in every bedroom and hallway for fire safety.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (are installed)。"
+  },
+  {
+    "id": "listening-04-easy-16",
+    "trainingId": "listening-04-easy",
+    "sentence": "The tenant has reported a minor plumbing issue in the master bathroom.",
+    "translation": "房客通報了主衛浴的一處輕微水管問題。",
+    "chunks": [
+      {
+        "text": "The tenant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has reported",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a minor plumbing issue in the master bathroom.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動 (has reported)。"
+  },
+  {
+    "id": "listening-04-easy-17",
+    "trainingId": "listening-04-easy",
+    "sentence": "The apartment balcony overlooks a scenic park and walking trail.",
+    "translation": "這間公寓的陽台俯瞰著風景優美的公園與散步步道。",
+    "chunks": [
+      {
+        "text": "The apartment balcony",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "overlooks",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a scenic park and walking trail.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (overlooks)。"
+  },
+  {
+    "id": "listening-04-easy-18",
+    "trainingId": "listening-04-easy",
+    "sentence": "The commercial lease expires at the end of the current fiscal year.",
+    "translation": "該商業租約將在本會計年度結束時到期。",
+    "chunks": [
+      {
+        "text": "The commercial lease",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "expires",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "at the end of the current fiscal year.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (expires)。"
+  },
+  {
+    "id": "listening-04-easy-19",
+    "trainingId": "listening-04-easy",
+    "sentence": "Elevator maintenance was scheduled for Friday between two and four o'clock.",
+    "translation": "電梯維護排定於週五下午兩點至四點之間進行。",
+    "chunks": [
+      {
+        "text": "Elevator maintenance",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was scheduled",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for Friday between two and four o'clock.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was scheduled)。"
+  },
+  {
+    "id": "listening-04-easy-20",
+    "trainingId": "listening-04-easy",
+    "sentence": "The moving company will deliver our office furniture tomorrow morning.",
+    "translation": "搬家公司將於明天上午送達我們的辦公家具。",
+    "chunks": [
+      {
+        "text": "The moving company",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will deliver",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "our office furniture tomorrow morning.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will deliver)。"
+  },
+  {
+    "id": "listening-04-easy-21",
+    "trainingId": "listening-04-easy",
+    "sentence": "All prospective tenants completed a background check before signing.",
+    "translation": "所有潛在房客在簽約前均已完成背景調查。",
+    "chunks": [
+      {
+        "text": "All prospective tenants",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "completed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a background check before signing.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (completed)。"
+  },
+  {
+    "id": "listening-04-easy-22",
+    "trainingId": "listening-04-easy",
+    "sentence": "The conference room is located on the third floor of the office building.",
+    "translation": "會議室位於辦公大樓的三樓。",
+    "chunks": [
+      {
+        "text": "The conference room",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is located",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on the third floor of the office building.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (is located)。"
+  },
+  {
+    "id": "listening-04-easy-23",
+    "trainingId": "listening-04-easy",
+    "sentence": "The housing cooperative holds monthly board meetings in the community room.",
+    "translation": "住戶合作社每月在社區活動室召開理事會議。",
+    "chunks": [
+      {
+        "text": "The housing cooperative",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "holds",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "monthly board meetings in the community room.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (holds)。"
+  },
+  {
+    "id": "listening-04-easy-24",
+    "trainingId": "listening-04-easy",
+    "sentence": "The broken window pane was replaced by the property repair team.",
+    "translation": "破損的窗玻璃已由物業維修小組更換完畢。",
+    "chunks": [
+      {
+        "text": "The broken window pane",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was replaced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the property repair team.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was replaced)。"
+  },
+  {
+    "id": "listening-04-easy-25",
+    "trainingId": "listening-04-easy",
+    "sentence": "Residents can reserve the rooftop barbecue terrace through the online portal.",
+    "translation": "住戶可透過線上入口網站預約頂樓烤肉露台。",
+    "chunks": [
+      {
+        "text": "Residents",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "can reserve",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the rooftop barbecue terrace through the online portal.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 (can reserve)。"
+  },
+  {
+    "id": "listening-04-easy-26",
+    "trainingId": "listening-04-easy",
+    "sentence": "The architectural design maximizes natural sunlight throughout the workday.",
+    "translation": "該建築設計在整個工作日期間將自然採光最大化。",
+    "chunks": [
+      {
+        "text": "The architectural design",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "maximizes",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "natural sunlight throughout the workday.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (maximizes)。"
+  },
+  {
+    "id": "listening-04-easy-27",
+    "trainingId": "listening-04-easy",
+    "sentence": "Emergency exit signs must remain illuminated according to city fire codes.",
+    "translation": "依據市消防法規，緊急出口指示牌必須維持常亮。",
+    "chunks": [
+      {
+        "text": "Emergency exit signs",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "must remain",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "illuminated according to city fire codes.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態連綴 (must remain)。"
+  },
+  {
+    "id": "listening-04-easy-28",
+    "trainingId": "listening-04-easy",
+    "sentence": "The rental agreement was drafted by a certified commercial property attorney.",
+    "translation": "這份租賃合約是由合格的商業不動產律師所起草。",
+    "chunks": [
+      {
+        "text": "The rental agreement",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was drafted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by a certified commercial property attorney.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was drafted)。"
+  },
+  {
+    "id": "listening-04-easy-29",
+    "trainingId": "listening-04-easy",
+    "sentence": "The landlord will provide new keycards for the electronic building entrance.",
+    "translation": "房東將為大樓電子門禁提供新的感應門禁卡。",
+    "chunks": [
+      {
+        "text": "The landlord",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will provide",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "new keycards for the electronic building entrance.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will provide)。"
+  },
+  {
+    "id": "listening-04-easy-30",
+    "trainingId": "listening-04-easy",
+    "sentence": "The janitorial team cleans the residential hallways and elevators daily.",
+    "translation": "清潔團隊每日打掃住宅走廊與電梯。",
+    "chunks": [
+      {
+        "text": "The janitorial team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "cleans",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the residential hallways and elevators daily.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (cleans)。"
+  }
+]

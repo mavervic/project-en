@@ -1,0 +1,812 @@
+[
+  {
+    "id": "listening-06-easy-01",
+    "trainingId": "listening-06-easy",
+    "sentence": "The hiring manager scheduled three job interviews for Friday.",
+    "translation": "招募主管安排了週五的三場面試。",
+    "chunks": [
+      {
+        "text": "The hiring manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "scheduled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "three job interviews for Friday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "主詞 The hiring manager 執行 scheduled 動作，為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-easy-02",
+    "trainingId": "listening-06-easy",
+    "sentence": "New staff members attended the orientation session this morning.",
+    "translation": "新員工今天早上參加了新人培訓培訓課程。",
+    "chunks": [
+      {
+        "text": "New staff members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "attended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the orientation session this morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "attended 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-easy-03",
+    "trainingId": "listening-06-easy",
+    "sentence": "Ms. Green was promoted to senior marketing specialist.",
+    "translation": "格林女士被晉升為資深行銷專員。",
+    "chunks": [
+      {
+        "text": "Ms. Green",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was promoted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to senior marketing specialist.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "被升遷使用被動語態 was promoted，為過去簡單式。"
+  },
+  {
+    "id": "listening-06-easy-04",
+    "trainingId": "listening-06-easy",
+    "sentence": "Over fifty candidates submitted their resumes online.",
+    "translation": "超過五十名求職者在線上提交了他們的履歷。",
+    "chunks": [
+      {
+        "text": "Over fifty candidates",
+        "isTargetSlot": false
+      },
+      {
+        "text": "submitted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "their resumes online.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "submitted 表主動遞交履歷，過去簡單式。"
+  },
+  {
+    "id": "listening-06-easy-05",
+    "trainingId": "listening-06-easy",
+    "sentence": "The department head conducts performance reviews every December.",
+    "translation": "部門主管每年十二月進行績效考核。",
+    "chunks": [
+      {
+        "text": "The department head",
+        "isTargetSlot": false
+      },
+      {
+        "text": "conducts",
+        "isTargetSlot": true
+      },
+      {
+        "text": "performance reviews every December.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "every December 表例行性工作，conducts 為現在簡單式。"
+  },
+  {
+    "id": "listening-06-easy-06",
+    "trainingId": "listening-06-easy",
+    "sentence": "A leadership workshop will be organized by the human resources team.",
+    "translation": "人資團隊將組織一場領導力工作坊。",
+    "chunks": [
+      {
+        "text": "A leadership workshop",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be organized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the human resources team.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "工作坊將被主辦，will be organized 為未來被動式。"
+  },
+  {
+    "id": "listening-06-easy-07",
+    "trainingId": "listening-06-easy",
+    "sentence": "Colleagues are planning a retirement party for Mr. Taylor.",
+    "translation": "同事們正在為泰勒先生籌劃退休派對。",
+    "chunks": [
+      {
+        "text": "Colleagues",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are planning",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a retirement party for Mr. Taylor.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "are planning 表示目前正在籌劃中，為現在進行式。"
+  },
+  {
+    "id": "listening-06-easy-08",
+    "trainingId": "listening-06-easy",
+    "sentence": "The formal employment offer was accepted by the selected applicant.",
+    "translation": "入職聘書已被獲選的應徵者接受。",
+    "chunks": [
+      {
+        "text": "The formal employment offer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was accepted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the selected applicant.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "聘用通知被接受，was accepted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-06-easy-09",
+    "trainingId": "listening-06-easy",
+    "sentence": "David requested three days of annual leave.",
+    "translation": "大衛申請了三天年假。",
+    "chunks": [
+      {
+        "text": "David",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "three days of annual leave.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "requested 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-easy-10",
+    "trainingId": "listening-06-easy",
+    "sentence": "Monthly wages are deposited on the last business day of the month.",
+    "translation": "每月薪資在該月最後一個工作日存入。",
+    "chunks": [
+      {
+        "text": "Monthly wages",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are deposited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on the last business day of the month.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "薪資被存入，are deposited 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-06-easy-11",
+    "trainingId": "listening-06-easy",
+    "sentence": "Security will issue your permanent building pass next week.",
+    "translation": "安衛組將於下週發放您的正式門禁卡。",
+    "chunks": [
+      {
+        "text": "Security",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will issue",
+        "isTargetSlot": true
+      },
+      {
+        "text": "your permanent building pass next week.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will issue 表未來即將核發，為一般未來式。"
+  },
+  {
+    "id": "listening-06-easy-12",
+    "trainingId": "listening-06-easy",
+    "sentence": "The human resources manual explains the company attendance guidelines.",
+    "translation": "人資手冊說明了公司的出勤規定。",
+    "chunks": [
+      {
+        "text": "The human resources manual",
+        "isTargetSlot": false
+      },
+      {
+        "text": "explains",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the company attendance guidelines.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "手冊內容用現在式 explains 表述常規規定。"
+  },
+  {
+    "id": "listening-06-easy-13",
+    "trainingId": "listening-06-easy",
+    "sentence": "Robert transferred to the regional sales division.",
+    "translation": "羅伯特調職到了區域業務部。",
+    "chunks": [
+      {
+        "text": "Robert",
+        "isTargetSlot": false
+      },
+      {
+        "text": "transferred",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the regional sales division.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "transferred 表過去發生的轉調動作，為主動過去式。"
+  },
+  {
+    "id": "listening-06-easy-14",
+    "trainingId": "listening-06-easy",
+    "sentence": "The benefits package was described by the human resources representative.",
+    "translation": "人資代表對員工福利方案進行了說明。",
+    "chunks": [
+      {
+        "text": "The benefits package",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was described",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the human resources representative.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "福利方案被說明，was described 為過去被動式。"
+  },
+  {
+    "id": "listening-06-easy-15",
+    "trainingId": "listening-06-easy",
+    "sentence": "Our organization has hired twenty software developers this quarter.",
+    "translation": "我們機構這季度已經錄用了二十名軟體開發工程師。",
+    "chunks": [
+      {
+        "text": "Our organization",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has hired",
+        "isTargetSlot": true
+      },
+      {
+        "text": "twenty software developers this quarter.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "has hired 表本季迄今已完成的招聘，為現在完成式。"
+  },
+  {
+    "id": "listening-06-easy-16",
+    "trainingId": "listening-06-easy",
+    "sentence": "The senior analyst submitted his two-week notice this morning.",
+    "translation": "資深分析師今天上午提交了兩週前離職通知。",
+    "chunks": [
+      {
+        "text": "The senior analyst",
+        "isTargetSlot": false
+      },
+      {
+        "text": "submitted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "his two-week notice this morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "submitted 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-easy-17",
+    "trainingId": "listening-06-easy",
+    "sentence": "All new workers must complete the mandatory safety module.",
+    "translation": "所有新進員工都必須完成強制性安全培訓模組。",
+    "chunks": [
+      {
+        "text": "All new workers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must complete",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the mandatory safety module.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "must complete 助動詞加原形動詞表示現在的義務要求，為主動語態。"
+  },
+  {
+    "id": "listening-06-easy-18",
+    "trainingId": "listening-06-easy",
+    "sentence": "The interview notes were compiled by the recruiting coordinator.",
+    "translation": "面試紀錄由招募協調員彙整。",
+    "chunks": [
+      {
+        "text": "The interview notes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were compiled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the recruiting coordinator.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "面試筆記被整理匯總，were compiled 為過去被動式。"
+  },
+  {
+    "id": "listening-06-easy-19",
+    "trainingId": "listening-06-easy",
+    "sentence": "The firm provides a referral bonus for qualified introductions.",
+    "translation": "公司對合格的人才推薦提供推薦獎金。",
+    "chunks": [
+      {
+        "text": "The firm",
+        "isTargetSlot": false
+      },
+      {
+        "text": "provides",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a referral bonus for qualified introductions.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "provides 表公司常態性獎勵措施，為現在簡單式。"
+  },
+  {
+    "id": "listening-06-easy-20",
+    "trainingId": "listening-06-easy",
+    "sentence": "The director will introduce the new account executive tomorrow.",
+    "translation": "主管明天將介紹新任業務經理。",
+    "chunks": [
+      {
+        "text": "The director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will introduce",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the new account executive tomorrow.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will introduce 表明天的安排，為未來式主動語態。"
+  },
+  {
+    "id": "listening-06-easy-21",
+    "trainingId": "listening-06-easy",
+    "sentence": "Employees submit their electronic timesheets by Friday.",
+    "translation": "員工需在週五前提交電子工時表。",
+    "chunks": [
+      {
+        "text": "Employees",
+        "isTargetSlot": false
+      },
+      {
+        "text": "submit",
+        "isTargetSlot": true
+      },
+      {
+        "text": "their electronic timesheets by Friday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "submit 表每週五的常態規定，現在簡單式。"
+  },
+  {
+    "id": "listening-06-easy-22",
+    "trainingId": "listening-06-easy",
+    "sentence": "Our recruitment team participated in the university career fair.",
+    "translation": "我們的招募團隊參加了大學就業博覽會。",
+    "chunks": [
+      {
+        "text": "Our recruitment team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "participated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in the university career fair.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "participated 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-easy-23",
+    "trainingId": "listening-06-easy",
+    "sentence": "Overtime hours must be authorized by a project supervisor in advance.",
+    "translation": "加班時數必須事先由專案主管批准。",
+    "chunks": [
+      {
+        "text": "Overtime hours",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must be authorized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by a project supervisor in advance.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "加班工時必須被核准，must be + 過去分詞 authorized 為被動語態。"
+  },
+  {
+    "id": "listening-06-easy-24",
+    "trainingId": "listening-06-easy",
+    "sentence": "Sarah will start her parental leave in September.",
+    "translation": "莎拉將於九月份開始休產假。",
+    "chunks": [
+      {
+        "text": "Sarah",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will start",
+        "isTargetSlot": true
+      },
+      {
+        "text": "her parental leave in September.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will start 表九月份即將開始，為一般未來式。"
+  },
+  {
+    "id": "listening-06-easy-25",
+    "trainingId": "listening-06-easy",
+    "sentence": "The candidate's credentials were verified by an external agency.",
+    "translation": "應徵者的資格已由外部機構查證。",
+    "chunks": [
+      {
+        "text": "The candidate's credentials",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were verified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by an external agency.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "資歷被查驗，were verified 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-06-easy-26",
+    "trainingId": "listening-06-easy",
+    "sentence": "Staff members wear business casual attire on weekdays.",
+    "translation": "員工在平日穿著商務休閒便服。",
+    "chunks": [
+      {
+        "text": "Staff members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "wear",
+        "isTargetSlot": true
+      },
+      {
+        "text": "business casual attire on weekdays.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "wear 表平常工作日的常態穿著，為現在簡單式。"
+  },
+  {
+    "id": "listening-06-easy-27",
+    "trainingId": "listening-06-easy",
+    "sentence": "An achievement medal was presented to the top sales agent.",
+    "translation": "成就獎章被頒發給了頂尖業務專員。",
+    "chunks": [
+      {
+        "text": "An achievement medal",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was presented",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the top sales agent.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "成就獎章被頒發，was presented 為過去被動式。"
+  },
+  {
+    "id": "listening-06-easy-28",
+    "trainingId": "listening-06-easy",
+    "sentence": "Applicants are completing the technical test in room four.",
+    "translation": "求職者正在第四會議室進行技術測驗。",
+    "chunks": [
+      {
+        "text": "Applicants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are completing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the technical test in room four.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "are completing 表正在進行的測驗，為現在進行式。"
+  },
+  {
+    "id": "listening-06-easy-29",
+    "trainingId": "listening-06-easy",
+    "sentence": "All employees have received their temporary portal login details.",
+    "translation": "所有員工都已收到人資系統的臨時登入資訊。",
+    "chunks": [
+      {
+        "text": "All employees",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have received",
+        "isTargetSlot": true
+      },
+      {
+        "text": "their temporary portal login details.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "have received 表已收到帳號資訊，為現在完成式。"
+  },
+  {
+    "id": "listening-06-easy-30",
+    "trainingId": "listening-06-easy",
+    "sentence": "The human resources manager conducted an exit interview yesterday.",
+    "translation": "人資經理昨天進行了一次離職面談。",
+    "chunks": [
+      {
+        "text": "The human resources manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an exit interview yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "conducted 為過去簡單式主動語態。"
+  }
+]

@@ -1,0 +1,985 @@
+[
+  {
+    "id": "listening-01-easy-01",
+    "trainingId": "listening-01-easy",
+    "sentence": "The departure gate has been moved to Terminal 2 due to scheduled maintenance.",
+    "translation": "由於預定的維護工程，登機門已移至第二航廈。",
+    "chunks": [
+      {
+        "text": "The departure gate",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has been moved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to Terminal 2",
+        "isTargetSlot": false
+      },
+      {
+        "text": "due to scheduled maintenance.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成被動態 (has been moved)。"
+  },
+  {
+    "id": "listening-01-easy-02",
+    "trainingId": "listening-01-easy",
+    "sentence": "Passengers must present their boarding passes before entering the boarding area.",
+    "translation": "乘客在進入登機區前必須出示登機證。",
+    "chunks": [
+      {
+        "text": "Passengers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "must present",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "their boarding passes",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before entering the boarding area.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 (must present) 搭配主動原形。"
+  },
+  {
+    "id": "listening-01-easy-03",
+    "trainingId": "listening-01-easy",
+    "sentence": "The express train to the international airport leaves from platform 3 every twenty minutes.",
+    "translation": "前往國際機場的直達列車每二十分鐘從第三月台發車。",
+    "chunks": [
+      {
+        "text": "The express train to the international airport",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "leaves",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "from platform 3",
+        "isTargetSlot": false
+      },
+      {
+        "text": "every twenty minutes.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單式 (leaves) 表示固定交通時刻。"
+  },
+  {
+    "id": "listening-01-easy-04",
+    "trainingId": "listening-01-easy",
+    "sentence": "Our travel agent booked a non-stop flight to Chicago for the sales conference.",
+    "translation": "我們的旅行社代辦為業務研討會預訂了一班直飛芝加哥的航班。",
+    "chunks": [
+      {
+        "text": "Our travel agent",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "booked",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a non-stop flight to Chicago",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for the sales conference.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (booked)。"
+  },
+  {
+    "id": "listening-01-easy-05",
+    "trainingId": "listening-01-easy",
+    "sentence": "The shuttle bus provides complimentary transportation between the hotel and the convention center.",
+    "translation": "接駁巴士在飯店與會議中心之間提供免費接送服務。",
+    "chunks": [
+      {
+        "text": "The shuttle bus",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "provides",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "complimentary transportation",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "between the hotel and the convention center.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (provides)。"
+  },
+  {
+    "id": "listening-01-easy-06",
+    "trainingId": "listening-01-easy",
+    "sentence": "All flight attendants were assisting passengers with their carry-on luggage during boarding.",
+    "translation": "登機期間，所有空服員都在協助乘客安放隨身行李。",
+    "chunks": [
+      {
+        "text": "All flight attendants",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were assisting",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "passengers with their carry-on luggage",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "during boarding.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "過去進行主動 (were assisting)。"
+  },
+  {
+    "id": "listening-01-easy-07",
+    "trainingId": "listening-01-easy",
+    "sentence": "The flight will arrive forty minutes earlier than originally scheduled.",
+    "translation": "該班機將比原定時間提早四十分鐘抵達。",
+    "chunks": [
+      {
+        "text": "The flight",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will arrive",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "forty minutes earlier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "than originally scheduled.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will arrive)。"
+  },
+  {
+    "id": "listening-01-easy-08",
+    "trainingId": "listening-01-easy",
+    "sentence": "Luggage carts are located near the baggage claim carousel for passenger convenience.",
+    "translation": "行李手推車位於行李提取轉盤旁，方便旅客使用。",
+    "chunks": [
+      {
+        "text": "Luggage carts",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are located",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "near the baggage claim carousel",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for passenger convenience.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (are located)。"
+  },
+  {
+    "id": "listening-01-easy-09",
+    "trainingId": "listening-01-easy",
+    "sentence": "The customer service desk will validate your airport parking ticket upon request.",
+    "translation": "客服櫃台可應要求為您折抵機場停車票。",
+    "chunks": [
+      {
+        "text": "The customer service desk",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will validate",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "your airport parking ticket",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "upon request.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will validate)。"
+  },
+  {
+    "id": "listening-01-easy-10",
+    "trainingId": "listening-01-easy",
+    "sentence": "The pilot announced severe turbulence over the Rocky Mountain region.",
+    "translation": "機長廣播告知洛磯山脈上空有強烈亂流。",
+    "chunks": [
+      {
+        "text": "The pilot",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "announced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "severe turbulence",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "over the Rocky Mountain region.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (announced)。"
+  },
+  {
+    "id": "listening-01-easy-11",
+    "trainingId": "listening-01-easy",
+    "sentence": "You can check your itinerary on our mobile application before departing.",
+    "translation": "您可以在出發前透過我們的手機應用程式查看行程。",
+    "chunks": [
+      {
+        "text": "You",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "can check",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "your itinerary",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "on our mobile application before departing.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 (can check) 搭配主動原形。"
+  },
+  {
+    "id": "listening-01-easy-12",
+    "trainingId": "listening-01-easy",
+    "sentence": "The ticket counter was closed for thirty minutes during system upgrades.",
+    "translation": "售票櫃台在系統升級期間暫停服務三十分鐘。",
+    "chunks": [
+      {
+        "text": "The ticket counter",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was closed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for thirty minutes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "during system upgrades.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was closed)。"
+  },
+  {
+    "id": "listening-01-easy-13",
+    "trainingId": "listening-01-easy",
+    "sentence": "Several business travelers are waiting inside the executive airline lounge.",
+    "translation": "數位商務旅客正在航空公司的商務貴賓室內候機。",
+    "chunks": [
+      {
+        "text": "Several business travelers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are waiting",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "inside the executive airline lounge.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動 (are waiting)。"
+  },
+  {
+    "id": "listening-01-easy-14",
+    "trainingId": "listening-01-easy",
+    "sentence": "Our company reimbursed travel expenses within three business days after submission.",
+    "translation": "我們公司在提交差旅費用後的三個工作天內完成了核銷。",
+    "chunks": [
+      {
+        "text": "Our company",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "reimbursed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "travel expenses",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "within three business days after submission.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (reimbursed)。"
+  },
+  {
+    "id": "listening-01-easy-15",
+    "trainingId": "listening-01-easy",
+    "sentence": "Passengers should keep their personal belongings with them at all times.",
+    "translation": "旅客應隨時妥善保管個人隨身物品。",
+    "chunks": [
+      {
+        "text": "Passengers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "should keep",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "their personal belongings",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "with them at all times.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 (should keep) 表建議規範。"
+  },
+  {
+    "id": "listening-01-easy-16",
+    "trainingId": "listening-01-easy",
+    "sentence": "The ferry departs from the downtown harbor at nine o'clock sharp.",
+    "translation": "渡輪將於九點整從市中心港口啟航。",
+    "chunks": [
+      {
+        "text": "The ferry",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "departs",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "from the downtown harbor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "at nine o'clock sharp.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (departs) 表班次排程。"
+  },
+  {
+    "id": "listening-01-easy-17",
+    "trainingId": "listening-01-easy",
+    "sentence": "Rental car keys must be returned to the drop box near the parking garage.",
+    "translation": "租賃車輛的鑰匙必須歸還至停車場旁的鑰匙箱。",
+    "chunks": [
+      {
+        "text": "Rental car keys",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "must be returned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to the drop box",
+        "isTargetSlot": false
+      },
+      {
+        "text": "near the parking garage.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態被動 (must be returned)。"
+  },
+  {
+    "id": "listening-01-easy-18",
+    "trainingId": "listening-01-easy",
+    "sentence": "The tourist information desk provides free city maps and transit guides.",
+    "translation": "旅客服務中心提供免費市區地圖與大眾運輸指南。",
+    "chunks": [
+      {
+        "text": "The tourist information desk",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "provides",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "free city maps and transit guides.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (provides)。"
+  },
+  {
+    "id": "listening-01-easy-19",
+    "trainingId": "listening-01-easy",
+    "sentence": "A subway station is directly connected to the basement of the hotel.",
+    "translation": "地鐵站與飯店地下一樓直接連通。",
+    "chunks": [
+      {
+        "text": "A subway station",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is directly connected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to the basement of the hotel.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (is connected)。"
+  },
+  {
+    "id": "listening-01-easy-20",
+    "trainingId": "listening-01-easy",
+    "sentence": "The security officer inspected all oversized baggage before flight check-in.",
+    "translation": "安檢人員在辦理登機手續前檢查了所有超大件行李。",
+    "chunks": [
+      {
+        "text": "The security officer",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "inspected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "all oversized baggage",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before flight check-in.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (inspected)。"
+  },
+  {
+    "id": "listening-01-easy-21",
+    "trainingId": "listening-01-easy",
+    "sentence": "Passengers have boarded the aircraft through the forward passenger bridge.",
+    "translation": "乘客已透過前方空橋順利登機。",
+    "chunks": [
+      {
+        "text": "Passengers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "have boarded",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the aircraft",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "through the forward passenger bridge.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動 (have boarded)。"
+  },
+  {
+    "id": "listening-01-easy-22",
+    "trainingId": "listening-01-easy",
+    "sentence": "The high-speed rail line connects major economic centers across the country.",
+    "translation": "高速鐵路連結了全國各大主要經濟中心。",
+    "chunks": [
+      {
+        "text": "The high-speed rail line",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "connects",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "major economic centers",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "across the country.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (connects)。"
+  },
+  {
+    "id": "listening-01-easy-23",
+    "trainingId": "listening-01-easy",
+    "sentence": "Hotel staff will store your luggage until your room becomes ready.",
+    "translation": "在您的房間準備好之前，飯店員工會替您保管行李。",
+    "chunks": [
+      {
+        "text": "Hotel staff",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will store",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "your luggage",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "until your room becomes ready.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will store)。"
+  },
+  {
+    "id": "listening-01-easy-24",
+    "trainingId": "listening-01-easy",
+    "sentence": "The international flight was delayed because of heavy fog over London.",
+    "translation": "由於倫敦上空的濃霧，該國際航班延誤了。",
+    "chunks": [
+      {
+        "text": "The international flight",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was delayed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "because of heavy fog over London.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was delayed)。"
+  },
+  {
+    "id": "listening-01-easy-25",
+    "trainingId": "listening-01-easy",
+    "sentence": "The corporate discount applies to all rental vehicles reserved online.",
+    "translation": "企業優惠適用於所有透過線上預訂的租賃車輛。",
+    "chunks": [
+      {
+        "text": "The corporate discount",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "applies",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to all rental vehicles reserved online.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (applies)。"
+  },
+  {
+    "id": "listening-01-easy-26",
+    "trainingId": "listening-01-easy",
+    "sentence": "Our department manager approved the business travel itinerary this morning.",
+    "translation": "我們的部門主管今天上午核准了出差行程表。",
+    "chunks": [
+      {
+        "text": "Our department manager",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "approved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the business travel itinerary",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "this morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (approved)。"
+  },
+  {
+    "id": "listening-01-easy-27",
+    "trainingId": "listening-01-easy",
+    "sentence": "Boarding passes can be printed at any self-service kiosk in the terminal.",
+    "translation": "登機證可在航廈內的任何自助報到機列印。",
+    "chunks": [
+      {
+        "text": "Boarding passes",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "can be printed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "at any self-service kiosk in the terminal.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態被動 (can be printed)。"
+  },
+  {
+    "id": "listening-01-easy-28",
+    "trainingId": "listening-01-easy",
+    "sentence": "The hotel shuttle arrives every thirty minutes outside the arrival hall.",
+    "translation": "飯店接駁車每三十分鐘抵達入境大廳外接送。",
+    "chunks": [
+      {
+        "text": "The hotel shuttle",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "arrives",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "every thirty minutes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "outside the arrival hall.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (arrives)。"
+  },
+  {
+    "id": "listening-01-easy-29",
+    "trainingId": "listening-01-easy",
+    "sentence": "The airline offers direct flights between Tokyo and San Francisco twice daily.",
+    "translation": "該航空公司每天提供兩班東京與舊金山之間的直飛航班。",
+    "chunks": [
+      {
+        "text": "The airline",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "offers",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "direct flights between Tokyo and San Francisco",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "twice daily.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (offers)。"
+  },
+  {
+    "id": "listening-01-easy-30",
+    "trainingId": "listening-01-easy",
+    "sentence": "All international travelers completed customs declarations before leaving the gate area.",
+    "translation": "所有國際旅客在離開登機口區域前填妥了海關申報表。",
+    "chunks": [
+      {
+        "text": "All international travelers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "completed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "customs declarations",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before leaving the gate area.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (completed)。"
+  }
+]

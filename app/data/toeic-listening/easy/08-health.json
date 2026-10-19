@@ -1,0 +1,812 @@
+[
+  {
+    "id": "listening-08-easy-01",
+    "trainingId": "listening-08-easy",
+    "sentence": "Dr. Adams examined the patient in the consultation room.",
+    "translation": "亞當斯醫師在診間為病人做了檢查。",
+    "chunks": [
+      {
+        "text": "Dr. Adams",
+        "isTargetSlot": false
+      },
+      {
+        "text": "examined",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the patient in the consultation room.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "examined 為過去簡單式主動語態，主詞為醫師。"
+  },
+  {
+    "id": "listening-08-easy-02",
+    "trainingId": "listening-08-easy",
+    "sentence": "Annual medical exams are scheduled for all company employees this month.",
+    "translation": "本月份為所有公司員工排定了年度健康檢查。",
+    "chunks": [
+      {
+        "text": "Annual medical exams",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are scheduled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for all company employees this month.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "健檢被安排在每個月，are scheduled 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-08-easy-03",
+    "trainingId": "listening-08-easy",
+    "sentence": "The pharmacist dispensed the prescribed medication this morning.",
+    "translation": "藥劑師今天上午配發了處方藥物。",
+    "chunks": [
+      {
+        "text": "The pharmacist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "dispensed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the prescribed medication this morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "dispensed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-easy-04",
+    "trainingId": "listening-08-easy",
+    "sentence": "Free influenza vaccines will be offered at the staff clinic next week.",
+    "translation": "下週員工診所將提供免費流感疫苗接種。",
+    "chunks": [
+      {
+        "text": "Free influenza vaccines",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be offered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at the staff clinic next week.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "流感疫苗將被提供，will be offered 為未來被動式。"
+  },
+  {
+    "id": "listening-08-easy-05",
+    "trainingId": "listening-08-easy",
+    "sentence": "Karen sent a sick leave notice to her manager.",
+    "translation": "凱倫向她的經理寄出了病假通知。",
+    "chunks": [
+      {
+        "text": "Karen",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sent",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a sick leave notice to her manager.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "sent 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-easy-06",
+    "trainingId": "listening-08-easy",
+    "sentence": "The dental appointment was confirmed by text message yesterday.",
+    "translation": "牙科預約昨天已透過簡訊確認。",
+    "chunks": [
+      {
+        "text": "The dental appointment",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was confirmed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by text message yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "牙科預約被確認，was confirmed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-08-easy-07",
+    "trainingId": "listening-08-easy",
+    "sentence": "The nurse restocked the first aid kits on every floor.",
+    "translation": "護理師補充了各樓層的急救箱用品。",
+    "chunks": [
+      {
+        "text": "The nurse",
+        "isTargetSlot": false
+      },
+      {
+        "text": "restocked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the first aid kits on every floor.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "restocked 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-easy-08",
+    "trainingId": "listening-08-easy",
+    "sentence": "The wellness consultant recommends regular posture breaks during desk work.",
+    "translation": "健康顧問建議在桌前工作期間定期休息以調整姿勢。",
+    "chunks": [
+      {
+        "text": "The wellness consultant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "recommends",
+        "isTargetSlot": true
+      },
+      {
+        "text": "regular posture breaks during desk work.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "recommends 為現在簡單式，表專家常態性建議。"
+  },
+  {
+    "id": "listening-08-easy-09",
+    "trainingId": "listening-08-easy",
+    "sentence": "The medical claim was processed by the insurance provider within two days.",
+    "translation": "醫療理賠已由保險公司在兩天內處理完畢。",
+    "chunks": [
+      {
+        "text": "The medical claim",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the insurance provider within two days.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "醫療理賠被處理，was processed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-08-easy-10",
+    "trainingId": "listening-08-easy",
+    "sentence": "The corporate wellness program subsidizes monthly gym memberships for all employees.",
+    "translation": "企業健康計畫為所有員工補貼每月健身房會費。",
+    "chunks": [
+      {
+        "text": "The corporate wellness program",
+        "isTargetSlot": false
+      },
+      {
+        "text": "subsidizes",
+        "isTargetSlot": true
+      },
+      {
+        "text": "monthly gym memberships for all employees.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "subsidizes 為現在簡單式主動語態，表公司長期福利措施。"
+  },
+  {
+    "id": "listening-08-easy-11",
+    "trainingId": "listening-08-easy",
+    "sentence": "The clinic staff measured the patient's blood pressure carefully.",
+    "translation": "診所人員仔細地測量了患者的血壓。",
+    "chunks": [
+      {
+        "text": "The clinic staff",
+        "isTargetSlot": false
+      },
+      {
+        "text": "measured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the patient's blood pressure carefully.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "measured 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-easy-12",
+    "trainingId": "listening-08-easy",
+    "sentence": "Vision screening tests will be conducted in the conference center on Thursday.",
+    "translation": "視力篩檢測試將於週四在會議中心進行。",
+    "chunks": [
+      {
+        "text": "Vision screening tests",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in the conference center on Thursday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "視力檢查將被進行，will be conducted 為未來被動式。"
+  },
+  {
+    "id": "listening-08-easy-13",
+    "trainingId": "listening-08-easy",
+    "sentence": "A certified nutritionist gave a talk on balanced workplace diets.",
+    "translation": "一位合格營養師進行了一場關於職場均衡飲食的演講。",
+    "chunks": [
+      {
+        "text": "A certified nutritionist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "gave",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a talk on balanced workplace diets.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "gave 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-easy-14",
+    "trainingId": "listening-08-easy",
+    "sentence": "The medicine refill was authorized by the family physician.",
+    "translation": "家庭醫師已核准了處方續配。",
+    "chunks": [
+      {
+        "text": "The medicine refill",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was authorized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the family physician.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "補充處方被授權，was authorized 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-08-easy-15",
+    "trainingId": "listening-08-easy",
+    "sentence": "Maintenance staff cleans drinking water dispensers every week.",
+    "translation": "維護人員每週清潔飲水機。",
+    "chunks": [
+      {
+        "text": "Maintenance staff",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cleans",
+        "isTargetSlot": true
+      },
+      {
+        "text": "drinking water dispensers every week.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "every week 表例行清潔，cleans 為現在簡單式。"
+  },
+  {
+    "id": "listening-08-easy-16",
+    "trainingId": "listening-08-easy",
+    "sentence": "Employees joined an online seminar on managing stress.",
+    "translation": "員工們參加了關於壓力管理的線上研討會。",
+    "chunks": [
+      {
+        "text": "Employees",
+        "isTargetSlot": false
+      },
+      {
+        "text": "joined",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an online seminar on managing stress.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "joined 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-easy-17",
+    "trainingId": "listening-08-easy",
+    "sentence": "Confidential health files are stored in a secured digital archive.",
+    "translation": "機密健康檔案存放在安全的數位檔案庫中。",
+    "chunks": [
+      {
+        "text": "Confidential health files",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are stored",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in a secured digital archive.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "機密健康檔案被儲存，are stored 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-08-easy-18",
+    "trainingId": "listening-08-easy",
+    "sentence": "The clinic receptionist will call patients to verify test results.",
+    "translation": "診所櫃檯人員將致電病患確認檢查結果。",
+    "chunks": [
+      {
+        "text": "The clinic receptionist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will call",
+        "isTargetSlot": true
+      },
+      {
+        "text": "patients to verify test results.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will call 表未來的聯繫通知，一般未來式。"
+  },
+  {
+    "id": "listening-08-easy-19",
+    "trainingId": "listening-08-easy",
+    "sentence": "James completed his rehabilitation exercises this afternoon.",
+    "translation": "詹姆斯今天下午完成了他的復健運動。",
+    "chunks": [
+      {
+        "text": "James",
+        "isTargetSlot": false
+      },
+      {
+        "text": "completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "his rehabilitation exercises this afternoon.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "completed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-easy-20",
+    "trainingId": "listening-08-easy",
+    "sentence": "Sanitizer dispensers have been installed near all elevator doors.",
+    "translation": "所有電梯門旁均已安裝乾洗手消毒機。",
+    "chunks": [
+      {
+        "text": "Sanitizer dispensers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "near all elevator doors.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "消毒機已被安裝，have been installed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-08-easy-21",
+    "trainingId": "listening-08-easy",
+    "sentence": "The ergonomic specialist adjusted my desk chair for better lumbar support.",
+    "translation": "人體工學專家調整了我的辦公椅，以提供更好的腰部支撐。",
+    "chunks": [
+      {
+        "text": "The ergonomic specialist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "adjusted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "my desk chair for better lumbar support.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "adjusted 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-easy-22",
+    "trainingId": "listening-08-easy",
+    "sentence": "A doctor's note was submitted along with the medical leave request.",
+    "translation": "醫師證明書已隨病假申請一同提交。",
+    "chunks": [
+      {
+        "text": "A doctor's note",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was submitted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "along with the medical leave request.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "醫師診斷證明書被提交，was submitted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-08-easy-23",
+    "trainingId": "listening-08-easy",
+    "sentence": "The health center opens promptly at eight o'clock every morning.",
+    "translation": "健康中心每天早晨八點準時開門。",
+    "chunks": [
+      {
+        "text": "The health center",
+        "isTargetSlot": false
+      },
+      {
+        "text": "opens",
+        "isTargetSlot": true
+      },
+      {
+        "text": "promptly at eight o'clock every morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "opens 為現在簡單式，表診所每天固定營業時間。"
+  },
+  {
+    "id": "listening-08-easy-24",
+    "trainingId": "listening-08-easy",
+    "sentence": "Emergency response techniques will be taught by paramedics this Friday.",
+    "translation": "救護技術員將於本週五講授緊急應變技巧。",
+    "chunks": [
+      {
+        "text": "Emergency response techniques",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be taught",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by paramedics this Friday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "急救技巧將被教授，will be taught 為未來被動式。"
+  },
+  {
+    "id": "listening-08-easy-25",
+    "trainingId": "listening-08-easy",
+    "sentence": "Many workers take multivitamins to maintain daily energy.",
+    "translation": "許多上班族服用綜合維他命以保持日常體力。",
+    "chunks": [
+      {
+        "text": "Many workers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "take",
+        "isTargetSlot": true
+      },
+      {
+        "text": "multivitamins to maintain daily energy.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "take 表日常保健習慣，為現在簡單式。"
+  },
+  {
+    "id": "listening-08-easy-26",
+    "trainingId": "listening-08-easy",
+    "sentence": "The dental checkup fee is covered under the company health insurance.",
+    "translation": "牙齒檢查費用包含在公司健康保險範圍內。",
+    "chunks": [
+      {
+        "text": "The dental checkup fee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is covered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "under the company health insurance.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "費用被涵蓋在保險中，is covered 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-08-easy-27",
+    "trainingId": "listening-08-easy",
+    "sentence": "The management team bought high-efficiency air purifiers for the floor.",
+    "translation": "管理團隊為該樓層購置了高效能空氣清淨機。",
+    "chunks": [
+      {
+        "text": "The management team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "bought",
+        "isTargetSlot": true
+      },
+      {
+        "text": "high-efficiency air purifiers for the floor.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "bought 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-easy-28",
+    "trainingId": "listening-08-easy",
+    "sentence": "The physician is discussing treatment options with the patient.",
+    "translation": "醫師正在與病患討論治療方案。",
+    "chunks": [
+      {
+        "text": "The physician",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is discussing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "treatment options with the patient.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is discussing 表正在討論病情治療，現在進行式。"
+  },
+  {
+    "id": "listening-08-easy-29",
+    "trainingId": "listening-08-easy",
+    "sentence": "An appointment reminder has been sent to the patient's smartphone.",
+    "translation": "預約提醒已發送至病患的智慧型手機。",
+    "chunks": [
+      {
+        "text": "An appointment reminder",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been sent",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the patient's smartphone.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "就診提醒已被發送，has been sent 為現在完成被動式。"
+  },
+  {
+    "id": "listening-08-easy-30",
+    "trainingId": "listening-08-easy",
+    "sentence": "The safety officer organized a workshop on workplace ergonomics.",
+    "translation": "安全主任主辦了一場關於職場人體工學的工作坊。",
+    "chunks": [
+      {
+        "text": "The safety officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "organized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a workshop on workplace ergonomics.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "organized 為過去簡單式主動語態。"
+  }
+]

@@ -28,8 +28,8 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
   it('renders marked chunk counter badges next to listening units with marked chunks', () => {
     const onSelectTraining = vi.fn();
     const markedMap = {
-      'listening-01': 3,
-      'listening-02': 1,
+      'listening-01-easy': 3,
+      'listening-02-easy': 1,
     };
 
     render(
@@ -45,18 +45,18 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
       />
     );
 
-    // listening-01 should have badge "3 語塊"
-    const travelBadge = screen.getByTestId('marked-chunk-badge-listening-01');
+    // listening-01-easy should have badge "3 語塊"
+    const travelBadge = screen.getByTestId('marked-chunk-badge-listening-01-easy');
     expect(travelBadge).toBeDefined();
     expect(travelBadge.textContent).toContain('3 語塊');
 
-    // listening-02 should have badge "1 語塊"
-    const diningBadge = screen.getByTestId('marked-chunk-badge-listening-02');
+    // listening-02-easy should have badge "1 語塊"
+    const diningBadge = screen.getByTestId('marked-chunk-badge-listening-02-easy');
     expect(diningBadge).toBeDefined();
     expect(diningBadge.textContent).toContain('1 語塊');
 
-    // listening-03 has 0 marked chunks, so no badge
-    expect(screen.queryByTestId('marked-chunk-badge-listening-03')).toBeNull();
+    // listening-03-easy has 0 marked chunks, so no badge
+    expect(screen.queryByTestId('marked-chunk-badge-listening-03-easy')).toBeNull();
   });
 
   it('renders 13 distinct business situation groups in the drawer without umbrella group', () => {
@@ -93,13 +93,13 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
         onSelectTraining={onSelectTraining}
         banks={[TOEIC_LISTENING_META]}
         activeBankId="toeic-listening"
-        markedChunksCountMap={{ 'listening-01': 2 }}
+        markedChunksCountMap={{ 'listening-01-easy': 2 }}
       />
     );
 
-    const travelRow = screen.getByTestId('training-row-listening-01');
+    const travelRow = screen.getByTestId('training-row-listening-01-easy');
     fireEvent.click(travelRow);
-    expect(onSelectTraining).toHaveBeenCalledWith('listening-01');
+    expect(onSelectTraining).toHaveBeenCalledWith('listening-01-easy');
   });
 
   it('renders marked chunk count in cluster tooltip and dot on cluster button when active bank has no groups', () => {
@@ -111,25 +111,25 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
         telemetry={mockTelemetry}
         activeTrainingId={null}
         onSelectTraining={onSelectTraining}
-        markedChunksCountMap={{ 'listening-01': 4 }}
+        markedChunksCountMap={{ 'listening-01-easy': 4 }}
       />
     );
 
     // Cluster view dot
-    const dot = screen.getByTestId('cluster-marked-dot-listening-01');
+    const dot = screen.getByTestId('cluster-marked-dot-listening-01-easy');
     expect(dot).toBeDefined();
 
     // Tooltip badge
-    const tooltipBadge = screen.getByTestId('cluster-marked-badge-listening-01');
+    const tooltipBadge = screen.getByTestId('cluster-marked-badge-listening-01-easy');
     expect(tooltipBadge.textContent).toContain('4 個');
   });
 
   it('renders attempted/total question progress ratio under status tag when showTags is active', () => {
     const customTelemetry = {
       ...mockTelemetry,
-      'listening-01': {
-        ...mockTelemetry['listening-01'],
-        totalQuestions: 3,
+      'listening-01-easy': {
+        ...mockTelemetry['listening-01-easy'],
+        totalQuestions: 30,
         attemptedQuestions: 2,
         isCompleted: false,
       },
@@ -147,23 +147,23 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
       />
     );
 
-    const progressRatio = screen.getByTestId('unit-progress-listening-01');
+    const progressRatio = screen.getByTestId('unit-progress-listening-01-easy');
     expect(progressRatio).toBeDefined();
-    expect(progressRatio.textContent).toBe('2/3');
+    expect(progressRatio.textContent).toBe('2/30');
   });
 
   it('renders descriptive title tooltip confirming completion status on hover', () => {
     const customTelemetry = {
       ...mockTelemetry,
-      'listening-02': {
-        ...mockTelemetry['listening-02'],
-        totalQuestions: 3,
-        attemptedQuestions: 3,
+      'listening-02-easy': {
+        ...mockTelemetry['listening-02-easy'],
+        totalQuestions: 30,
+        attemptedQuestions: 30,
         isCompleted: true,
       },
-      'listening-01': {
-        ...mockTelemetry['listening-01'],
-        totalQuestions: 3,
+      'listening-01-easy': {
+        ...mockTelemetry['listening-01-easy'],
+        totalQuestions: 30,
         attemptedQuestions: 2,
         isCompleted: false,
       },
@@ -181,11 +181,11 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
       />
     );
 
-    const completedRow = screen.getByTestId('training-row-listening-02') as HTMLButtonElement;
-    expect(completedRow.title).toContain('3/3');
+    const completedRow = screen.getByTestId('training-row-listening-02-easy') as HTMLButtonElement;
+    expect(completedRow.title).toContain('30/30');
     expect(completedRow.title).toContain('已完成');
 
-    const inProgressRow = screen.getByTestId('training-row-listening-01') as HTMLButtonElement;
-    expect(inProgressRow.title).toContain('2/3');
+    const inProgressRow = screen.getByTestId('training-row-listening-01-easy') as HTMLButtonElement;
+    expect(inProgressRow.title).toContain('2/30');
   });
 });

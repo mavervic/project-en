@@ -1,0 +1,812 @@
+[
+  {
+    "id": "listening-10-easy-01",
+    "trainingId": "listening-10-easy",
+    "sentence": "Factory workers assembled five hundred engines during the morning shift.",
+    "translation": "工廠工人在早班期間組裝了五百台發動機。",
+    "chunks": [
+      {
+        "text": "Factory workers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "assembled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "five hundred engines during the morning shift.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "assembled 表早班期間完成的組裝，為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-02",
+    "trainingId": "listening-10-easy",
+    "sentence": "Every manufactured component is checked for defects before packaging.",
+    "translation": "每個製造出來的零件在包裝前都經過瑕疵檢驗。",
+    "chunks": [
+      {
+        "text": "Every manufactured component",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is checked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for defects before packaging.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "零組件被檢查，is checked 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-10-easy-03",
+    "trainingId": "listening-10-easy",
+    "sentence": "Safety inspectors visited the production facility last Tuesday.",
+    "translation": "安全檢查員上週二視察了生產廠房。",
+    "chunks": [
+      {
+        "text": "Safety inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "visited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the production facility last Tuesday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "visited 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-04",
+    "trainingId": "listening-10-easy",
+    "sentence": "The main conveyor belt will be serviced during the weekend shutdown.",
+    "translation": "主輸送帶將在週末停工期間進行保養。",
+    "chunks": [
+      {
+        "text": "The main conveyor belt",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be serviced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "during the weekend shutdown.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "傳送帶將在週末被保養維修，will be serviced 為未來被動式。"
+  },
+  {
+    "id": "listening-10-easy-05",
+    "trainingId": "listening-10-easy",
+    "sentence": "The plant manager increased daily manufacturing output by twenty percent.",
+    "translation": "廠長將每日製造產量提高了百分之二十。",
+    "chunks": [
+      {
+        "text": "The plant manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "increased",
+        "isTargetSlot": true
+      },
+      {
+        "text": "daily manufacturing output by twenty percent.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "increased 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-06",
+    "trainingId": "listening-10-easy",
+    "sentence": "Robotic arms are calibrated by technicians before every shift.",
+    "translation": "機械手臂在每班上工前均由技術員校準。",
+    "chunks": [
+      {
+        "text": "Robotic arms",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are calibrated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by technicians before every shift.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "機械手臂在換班前被校準，are calibrated 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-10-easy-07",
+    "trainingId": "listening-10-easy",
+    "sentence": "Steel coils arrived at the receiving dock early this morning.",
+    "translation": "鋼捲今天清晨送達收貨碼頭。",
+    "chunks": [
+      {
+        "text": "Steel coils",
+        "isTargetSlot": false
+      },
+      {
+        "text": "arrived",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at the receiving dock early this morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "arrived 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-08",
+    "trainingId": "listening-10-easy",
+    "sentence": "Hard hats must be worn in all active production zones.",
+    "translation": "在所有運作中的生產區域內必須配戴安全帽。",
+    "chunks": [
+      {
+        "text": "Hard hats",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must be worn",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in all active production zones.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "安全帽必須被配戴，must be worn 為被動語態。"
+  },
+  {
+    "id": "listening-10-easy-09",
+    "trainingId": "listening-10-easy",
+    "sentence": "The new packing machine wraps forty cartons in one minute.",
+    "translation": "新包裝機一分鐘內可包裝四十個紙箱。",
+    "chunks": [
+      {
+        "text": "The new packing machine",
+        "isTargetSlot": false
+      },
+      {
+        "text": "wraps",
+        "isTargetSlot": true
+      },
+      {
+        "text": "forty cartons in one minute.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "wraps 為現在簡單式，描述機器的運作效能。"
+  },
+  {
+    "id": "listening-10-easy-10",
+    "trainingId": "listening-10-easy",
+    "sentence": "The finished goods inventory has been counted by warehouse personnel.",
+    "translation": "成品庫存已經由倉庫人員盤點完畢。",
+    "chunks": [
+      {
+        "text": "The finished goods inventory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been counted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by warehouse personnel.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "成品庫存已被清點，has been counted 為現在完成被動式。"
+  },
+  {
+    "id": "listening-10-easy-11",
+    "trainingId": "listening-10-easy",
+    "sentence": "The supervisor pressed the red emergency stop button immediately.",
+    "translation": "主管立即按下了紅色緊急停止按鈕。",
+    "chunks": [
+      {
+        "text": "The supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "pressed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the red emergency stop button immediately.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "pressed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-12",
+    "trainingId": "listening-10-easy",
+    "sentence": "The mixing tanks are sanitized at the end of each production cycle.",
+    "translation": "每個生產週期結束時，攪拌槽都會進行消毒。",
+    "chunks": [
+      {
+        "text": "The mixing tanks",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are sanitized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at the end of each production cycle.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "攪拌槽在週期結束時被消毒，are sanitized 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-10-easy-13",
+    "trainingId": "listening-10-easy",
+    "sentence": "The operations director will adjust the manufacturing timetable for holiday orders.",
+    "translation": "營運總監將針對節日訂單調整製造時程表。",
+    "chunks": [
+      {
+        "text": "The operations director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will adjust",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the manufacturing timetable for holiday orders.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will adjust 表未來的調整規劃，一般未來式。"
+  },
+  {
+    "id": "listening-10-easy-14",
+    "trainingId": "listening-10-easy",
+    "sentence": "Substandard parts were returned to the metal supplier yesterday.",
+    "translation": "不合格的零件昨天已被退回給金屬供應商。",
+    "chunks": [
+      {
+        "text": "Substandard parts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were returned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the metal supplier yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "不合格零件被退回，were returned 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-10-easy-15",
+    "trainingId": "listening-10-easy",
+    "sentence": "A maintenance engineer applies lubricating oil to all moving joints.",
+    "translation": "維修工程師對所有活動關節塗抹潤滑油。",
+    "chunks": [
+      {
+        "text": "A maintenance engineer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "applies",
+        "isTargetSlot": true
+      },
+      {
+        "text": "lubricating oil to all moving joints.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "applies 為現在簡單式，表工程師例行上油維護工作。"
+  },
+  {
+    "id": "listening-10-easy-16",
+    "trainingId": "listening-10-easy",
+    "sentence": "The engineering team is monitoring the speed of assembly line two.",
+    "translation": "工程團隊正在監控第二組裝線的速度。",
+    "chunks": [
+      {
+        "text": "The engineering team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is monitoring",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the speed of assembly line two.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is monitoring 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-17",
+    "trainingId": "listening-10-easy",
+    "sentence": "ISO certification was granted to our manufacturing facility last year.",
+    "translation": "我們的製造工廠去年獲得了 ISO 品質認證。",
+    "chunks": [
+      {
+        "text": "ISO certification",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was granted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to our manufacturing facility last year.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "ISO 認證被授予工廠，was granted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-10-easy-18",
+    "trainingId": "listening-10-easy",
+    "sentence": "The warehouse driver operates the electric forklift with great care.",
+    "translation": "倉庫司機非常小心地操作電動堆高機。",
+    "chunks": [
+      {
+        "text": "The warehouse driver",
+        "isTargetSlot": false
+      },
+      {
+        "text": "operates",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the electric forklift with great care.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "operates 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-19",
+    "trainingId": "listening-10-easy",
+    "sentence": "Spare motor parts will be ordered from Germany this afternoon.",
+    "translation": "備用馬達零件將於今天下午從德國訂購。",
+    "chunks": [
+      {
+        "text": "Spare motor parts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be ordered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "from Germany this afternoon.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "備用馬達零件將被訂購，will be ordered 為未來被動式。"
+  },
+  {
+    "id": "listening-10-easy-20",
+    "trainingId": "listening-10-easy",
+    "sentence": "Thirty technicians worked on the overnight assembly shift.",
+    "translation": "三十名技術員在大夜班組裝線上工作。",
+    "chunks": [
+      {
+        "text": "Thirty technicians",
+        "isTargetSlot": false
+      },
+      {
+        "text": "worked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on the overnight assembly shift.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "worked 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-21",
+    "trainingId": "listening-10-easy",
+    "sentence": "Shipping cartons are sealed with heavy-duty industrial tape.",
+    "translation": "出貨紙箱使用重型工業膠帶封口。",
+    "chunks": [
+      {
+        "text": "Shipping cartons",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are sealed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with heavy-duty industrial tape.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "紙箱被封箱，are sealed 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-10-easy-22",
+    "trainingId": "listening-10-easy",
+    "sentence": "The electronic sensor detected a minor temperature variation on the line.",
+    "translation": "電子感測器偵測到了生產線上輕微的溫度變化。",
+    "chunks": [
+      {
+        "text": "The electronic sensor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "detected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a minor temperature variation on the line.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "detected 表感測器偵測到溫度變化，為過去簡單式。"
+  },
+  {
+    "id": "listening-10-easy-23",
+    "trainingId": "listening-10-easy",
+    "sentence": "All hand tools must be returned to the rack after use.",
+    "translation": "所有手工具使用後必須放回工具架上。",
+    "chunks": [
+      {
+        "text": "All hand tools",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must be returned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the rack after use.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "工具必須被歸還，must be returned 為現在被動語態。"
+  },
+  {
+    "id": "listening-10-easy-24",
+    "trainingId": "listening-10-easy",
+    "sentence": "Workers wear protective earplugs near noisy stamping machines.",
+    "translation": "工人在嘈雜的沖壓機旁配戴防護耳塞。",
+    "chunks": [
+      {
+        "text": "Workers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "wear",
+        "isTargetSlot": true
+      },
+      {
+        "text": "protective earplugs near noisy stamping machines.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "wear 為現在簡單式，表常態防護習慣。"
+  },
+  {
+    "id": "listening-10-easy-25",
+    "trainingId": "listening-10-easy",
+    "sentence": "The obsolete laser cutter was replaced with an automated robotic system.",
+    "translation": "淘汰的雷射切割機已被自動化機器人系統所取代。",
+    "chunks": [
+      {
+        "text": "The obsolete laser cutter",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was replaced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with an automated robotic system.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "老舊設備被替換，was replaced 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-10-easy-26",
+    "trainingId": "listening-10-easy",
+    "sentence": "The night team exceeded the target output by fifty units.",
+    "translation": "夜班團隊的產出超額完成了五十件目標。",
+    "chunks": [
+      {
+        "text": "The night team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "exceeded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the target output by fifty units.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "exceeded 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-27",
+    "trainingId": "listening-10-easy",
+    "sentence": "Automobile panels are dried in a specialized heating chamber.",
+    "translation": "汽車金屬板在專門的加熱室中烘乾。",
+    "chunks": [
+      {
+        "text": "Automobile panels",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are dried",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in a specialized heating chamber.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "車體面板被烘乾，are dried 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-10-easy-28",
+    "trainingId": "listening-10-easy",
+    "sentence": "The backup generator started within seconds after the power cut.",
+    "translation": "備用發電機在停電後數秒內啟動。",
+    "chunks": [
+      {
+        "text": "The backup generator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "started",
+        "isTargetSlot": true
+      },
+      {
+        "text": "within seconds after the power cut.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "started 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-easy-29",
+    "trainingId": "listening-10-easy",
+    "sentence": "Wooden pallets are being loaded onto the freight containers now.",
+    "translation": "木棧板現在正被裝上貨運貨櫃。",
+    "chunks": [
+      {
+        "text": "Wooden pallets",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are being loaded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "onto the freight containers now.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "棧板正在被裝載，are being loaded 為現在進行被動式。"
+  },
+  {
+    "id": "listening-10-easy-30",
+    "trainingId": "listening-10-easy",
+    "sentence": "The factory will achieve full manufacturing capacity next quarter.",
+    "translation": "工廠將在下個季度達到全面滿產產能。",
+    "chunks": [
+      {
+        "text": "The factory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will achieve",
+        "isTargetSlot": true
+      },
+      {
+        "text": "full manufacturing capacity next quarter.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will achieve 表下季度即將達成滿載產能，一般未來式。"
+  }
+]

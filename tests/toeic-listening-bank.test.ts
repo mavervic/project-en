@@ -7,9 +7,9 @@ import {
 } from '../app/data/toeic-listening';
 
 describe('TOEIC Listening Bank Architecture', () => {
-  it('defines exactly 13 business situational units with proper metadata', () => {
+  it('defines exactly 13 business situational units with proper Easy tier metadata', () => {
     expect(TOEIC_LISTENING_UNITS).toHaveLength(13);
-    const expectedTitles = [
+    const expectedBaseTitles = [
       'Travel',
       'Dining out',
       'Entertainment',
@@ -25,18 +25,24 @@ describe('TOEIC Listening Bank Architecture', () => {
       'Financing & Budgeting',
     ];
     TOEIC_LISTENING_UNITS.forEach((unit, idx) => {
-      expect(unit.title).toBe(expectedTitles[idx]);
-      expect(unit.trainingId).toBe(`listening-${String(idx + 1).padStart(2, '0')}`);
+      expect(unit.title).toBe(`${expectedBaseTitles[idx]} (Easy)`);
+      expect(unit.trainingId).toBe(`listening-${String(idx + 1).padStart(2, '0')}-easy`);
       expect(unit.unitNumber).toBe(idx + 1);
-      expect(['Easy', 'Medium', 'Hard']).toContain(unit.difficulty);
+      expect(unit.difficulty).toBe('Easy');
       expect(unit.tags.length).toBeGreaterThan(0);
     });
   });
 
-  it('contains valid questions for all 13 units with translations and chunks', () => {
-    expect(TOEIC_LISTENING_QUESTIONS.length).toBeGreaterThanOrEqual(13);
+  it('contains exactly 390 valid questions (30 per unit) with translations and chunks', () => {
+    expect(TOEIC_LISTENING_QUESTIONS).toHaveLength(390);
     const unitsCovered = new Set(TOEIC_LISTENING_QUESTIONS.map((q) => q.trainingId));
     expect(unitsCovered.size).toBe(13);
+
+    for (let idx = 1; idx <= 13; idx++) {
+      const unitId = `listening-${String(idx).padStart(2, '0')}-easy`;
+      const unitQuestions = TOEIC_LISTENING_QUESTIONS.filter((q) => q.trainingId === unitId);
+      expect(unitQuestions).toHaveLength(30);
+    }
 
     for (const q of TOEIC_LISTENING_QUESTIONS) {
       expect(q.id).toBeDefined();
@@ -44,6 +50,10 @@ describe('TOEIC Listening Bank Architecture', () => {
       expect(q.translation).toBeDefined();
       expect(q.translation!.trim().length).toBeGreaterThan(0);
       expect(q.chunks.length).toBeGreaterThanOrEqual(2);
+      expect(q.targetSlotIndex).toBeGreaterThanOrEqual(0);
+      expect(q.targetSlotIndex).toBeLessThan(q.chunks.length);
+      expect(q.chunks[q.targetSlotIndex].isTargetSlot).toBe(true);
+
       for (const chunk of q.chunks) {
         expect(chunk.text.trim().length).toBeGreaterThan(0);
       }
@@ -66,9 +76,9 @@ describe('TOEIC Listening Bank Architecture', () => {
     const bank = getBankById('toeic-listening');
     expect(bank).toBeDefined();
     expect(bank?.id).toBe('toeic-listening');
-    expect(bank?.questions.length).toBe(TOEIC_LISTENING_QUESTIONS.length);
+    expect(bank?.questions.length).toBe(390);
 
     const questions = getBankQuestions('toeic-listening');
-    expect(questions.length).toBe(TOEIC_LISTENING_QUESTIONS.length);
+    expect(questions.length).toBe(390);
   });
 });

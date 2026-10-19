@@ -1,0 +1,812 @@
+[
+  {
+    "id": "listening-05-easy-01",
+    "trainingId": "listening-05-easy",
+    "sentence": "The purchasing manager ordered new ergonomic desks yesterday.",
+    "translation": "採購經理昨天訂購了新的人體工學桌。",
+    "chunks": [
+      {
+        "text": "The purchasing manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ordered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "new ergonomic desks yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "主詞 The purchasing manager 執行動作 ordered，為主動語態過去式。"
+  },
+  {
+    "id": "listening-05-easy-02",
+    "trainingId": "listening-05-easy",
+    "sentence": "The supplier invoice was approved by the accounting department.",
+    "translation": "供應商發票已被會計部門核准。",
+    "chunks": [
+      {
+        "text": "The supplier invoice",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the accounting department.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "發票是被會計部核准，was + 過去分詞 approved 形成被動語態過去式。"
+  },
+  {
+    "id": "listening-05-easy-03",
+    "trainingId": "listening-05-easy",
+    "sentence": "We received the updated product catalog this morning.",
+    "translation": "我們今天早上收到了最新的產品目錄。",
+    "chunks": [
+      {
+        "text": "We",
+        "isTargetSlot": false
+      },
+      {
+        "text": "received",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the updated product catalog this morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "主詞 We 執行 received 動作，為一般過去式主動語態。"
+  },
+  {
+    "id": "listening-05-easy-04",
+    "trainingId": "listening-05-easy",
+    "sentence": "The delivery truck will arrive at the loading dock shortly.",
+    "translation": "送貨卡車很快就會抵達裝卸碼頭。",
+    "chunks": [
+      {
+        "text": "The delivery truck",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will arrive",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at the loading dock shortly.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will arrive 表示即將發生的未來動作，為主動未來式。"
+  },
+  {
+    "id": "listening-05-easy-05",
+    "trainingId": "listening-05-easy",
+    "sentence": "The vendor offers a ten percent discount on large orders.",
+    "translation": "供應商對大宗訂單提供百分之十的折扣。",
+    "chunks": [
+      {
+        "text": "The vendor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "offers",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a ten percent discount on large orders.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "主詞 The vendor 為第三人稱單數，動詞使用 offers 表常態事實，為現在簡單式。"
+  },
+  {
+    "id": "listening-05-easy-06",
+    "trainingId": "listening-05-easy",
+    "sentence": "The bank payment has been transferred to the supplier's account.",
+    "translation": "銀行款項已轉入供應商帳戶。",
+    "chunks": [
+      {
+        "text": "The bank payment",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been transferred",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the supplier's account.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "款項已經被轉帳，has been + 過去分詞 transferred 形成現在完成被動式。"
+  },
+  {
+    "id": "listening-05-easy-07",
+    "trainingId": "listening-05-easy",
+    "sentence": "The assistant is ordering more printer paper right now.",
+    "translation": "助理現在正在訂購更多影印紙。",
+    "chunks": [
+      {
+        "text": "The assistant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is ordering",
+        "isTargetSlot": true
+      },
+      {
+        "text": "more printer paper right now.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "right now 表正在進行，is ordering 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-05-easy-08",
+    "trainingId": "listening-05-easy",
+    "sentence": "A full refund was issued for the damaged merchandise.",
+    "translation": "損壞的商品已全額退款。",
+    "chunks": [
+      {
+        "text": "A full refund",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was issued",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for the damaged merchandise.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "退款被發出，was issued 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-05-easy-09",
+    "trainingId": "listening-05-easy",
+    "sentence": "We requested a formal price estimate last Friday.",
+    "translation": "我們上週五要求了一份正式的報價單。",
+    "chunks": [
+      {
+        "text": "We",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a formal price estimate last Friday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "last Friday 為過去時間副詞，requested 表主動過去式。"
+  },
+  {
+    "id": "listening-05-easy-10",
+    "trainingId": "listening-05-easy",
+    "sentence": "The warehouse staff checks the stock level every Monday.",
+    "translation": "倉儲人員每週一檢查庫存水準。",
+    "chunks": [
+      {
+        "text": "The warehouse staff",
+        "isTargetSlot": false
+      },
+      {
+        "text": "checks",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the stock level every Monday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "every Monday 表例行規律，checks 為現在簡單式。"
+  },
+  {
+    "id": "listening-05-easy-11",
+    "trainingId": "listening-05-easy",
+    "sentence": "The purchase agreement will be signed by both executives tomorrow.",
+    "translation": "採購合約將於明天由雙方主管簽署。",
+    "chunks": [
+      {
+        "text": "The purchase agreement",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be signed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by both executives tomorrow.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "合約將在明天被簽署，will be signed 為未來被動式。"
+  },
+  {
+    "id": "listening-05-easy-12",
+    "trainingId": "listening-05-easy",
+    "sentence": "The customer service agent provided the tracking code over the phone.",
+    "translation": "客服專員在電話中提供了物流追蹤碼。",
+    "chunks": [
+      {
+        "text": "The customer service agent",
+        "isTargetSlot": false
+      },
+      {
+        "text": "provided",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the tracking code over the phone.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "主詞 The customer service agent 執行 provided 動作，為主動過去式。"
+  },
+  {
+    "id": "listening-05-easy-13",
+    "trainingId": "listening-05-easy",
+    "sentence": "An electronic receipt was sent to your registered email address.",
+    "translation": "電子收據已發送至您的註冊電子郵件地址。",
+    "chunks": [
+      {
+        "text": "An electronic receipt",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was sent",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to your registered email address.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "收據是被寄送，was sent 為過去被動式。"
+  },
+  {
+    "id": "listening-05-easy-14",
+    "trainingId": "listening-05-easy",
+    "sentence": "The company selects reliable suppliers through strict criteria.",
+    "translation": "公司透過嚴格的標準遴選可靠的供應商。",
+    "chunks": [
+      {
+        "text": "The company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "selects",
+        "isTargetSlot": true
+      },
+      {
+        "text": "reliable suppliers through strict criteria.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "描述公司評選供應商的常態作法，selects 為現在簡單式。"
+  },
+  {
+    "id": "listening-05-easy-15",
+    "trainingId": "listening-05-easy",
+    "sentence": "The shipment has been delayed due to severe weather conditions.",
+    "translation": "由於惡劣天氣條件，貨物運送已被延誤。",
+    "chunks": [
+      {
+        "text": "The shipment",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been delayed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "due to severe weather conditions.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "船運被延誤，has been delayed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-05-easy-16",
+    "trainingId": "listening-05-easy",
+    "sentence": "Our supervisor is reviewing the equipment request form.",
+    "translation": "我們的主管正在審查設備請購單。",
+    "chunks": [
+      {
+        "text": "Our supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the equipment request form.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "主管正在審查申請表，is reviewing 為現在進行式。"
+  },
+  {
+    "id": "listening-05-easy-17",
+    "trainingId": "listening-05-easy",
+    "sentence": "The broken monitors were returned to the manufacturer yesterday.",
+    "translation": "損壞的螢幕昨天已被退回給製造商。",
+    "chunks": [
+      {
+        "text": "The broken monitors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were returned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the manufacturer yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "螢幕被退回，were returned 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-05-easy-18",
+    "trainingId": "listening-05-easy",
+    "sentence": "We will discuss payment terms in the next meeting.",
+    "translation": "我們將在下次會議中討論付款條件。",
+    "chunks": [
+      {
+        "text": "We",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will discuss",
+        "isTargetSlot": true
+      },
+      {
+        "text": "payment terms in the next meeting.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will discuss 表未來的討論計畫，為一般未來式。"
+  },
+  {
+    "id": "listening-05-easy-19",
+    "trainingId": "listening-05-easy",
+    "sentence": "The receptionist opened the delivered parcels carefully.",
+    "translation": "接待人員小心地拆開了送來的包裹。",
+    "chunks": [
+      {
+        "text": "The receptionist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "opened",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the delivered parcels carefully.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "opened 表過去完成的動作，為主動過去式。"
+  },
+  {
+    "id": "listening-05-easy-20",
+    "trainingId": "listening-05-easy",
+    "sentence": "Many customers place orders through our corporate portal.",
+    "translation": "許多客戶透過我們的企業入口網站下單。",
+    "chunks": [
+      {
+        "text": "Many customers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "place",
+        "isTargetSlot": true
+      },
+      {
+        "text": "orders through our corporate portal.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "place 表普遍習慣與現狀，為現在簡單式。"
+  },
+  {
+    "id": "listening-05-easy-21",
+    "trainingId": "listening-05-easy",
+    "sentence": "The annual vendor review was held in the main boardroom.",
+    "translation": "年度供應商審查會議在主要會議室舉行。",
+    "chunks": [
+      {
+        "text": "The annual vendor review",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was held",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in the main boardroom.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "審查會議被舉行，was held 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-05-easy-22",
+    "trainingId": "listening-05-easy",
+    "sentence": "The team needs additional pens and notebooks.",
+    "translation": "團隊需要額外的原子筆和筆記本。",
+    "chunks": [
+      {
+        "text": "The team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "needs",
+        "isTargetSlot": true
+      },
+      {
+        "text": "additional pens and notebooks.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "needs 為狀態動詞現在簡單式，主詞 The team 視為單數單位。"
+  },
+  {
+    "id": "listening-05-easy-23",
+    "trainingId": "listening-05-easy",
+    "sentence": "The accountant updated the billing address in the software.",
+    "translation": "會計師更新了軟體中的帳單地址。",
+    "chunks": [
+      {
+        "text": "The accountant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "updated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the billing address in the software.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "updated 為過去簡單式，為主動動作。"
+  },
+  {
+    "id": "listening-05-easy-24",
+    "trainingId": "listening-05-easy",
+    "sentence": "The cargo containers were inspected by customs officials this morning.",
+    "translation": "貨櫃今天上午由海關人員進行了檢查。",
+    "chunks": [
+      {
+        "text": "The cargo containers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were inspected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by customs officials this morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "貨櫃被海關人員檢查，were inspected 為過去被動式。"
+  },
+  {
+    "id": "listening-05-easy-25",
+    "trainingId": "listening-05-easy",
+    "sentence": "The billing department sends invoices automatically every month.",
+    "translation": "計費部門每個月自動發送發票。",
+    "chunks": [
+      {
+        "text": "The billing department",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sends",
+        "isTargetSlot": true
+      },
+      {
+        "text": "invoices automatically every month.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "every month 表規律習慣，sends 為現在簡單式。"
+  },
+  {
+    "id": "listening-05-easy-26",
+    "trainingId": "listening-05-easy",
+    "sentence": "The new chairs will arrive on Wednesday afternoon.",
+    "translation": "新椅子將於週三下午送達。",
+    "chunks": [
+      {
+        "text": "The new chairs",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will arrive",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on Wednesday afternoon.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will arrive 表未來的預定到達時間。"
+  },
+  {
+    "id": "listening-05-easy-27",
+    "trainingId": "listening-05-easy",
+    "sentence": "The distributor announced a temporary shortage of paper rolls.",
+    "translation": "經銷商宣布紙捲暫時缺貨。",
+    "chunks": [
+      {
+        "text": "The distributor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "announced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a temporary shortage of paper rolls.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "announced 為過去式主動語態。"
+  },
+  {
+    "id": "listening-05-easy-28",
+    "trainingId": "listening-05-easy",
+    "sentence": "The package is being picked up by the courier right now.",
+    "translation": "快遞員現在正在領取包裹。",
+    "chunks": [
+      {
+        "text": "The package",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is being picked up",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the courier right now.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is being picked up 為現在進行式被動語態，包裹正在被快遞員收件。"
+  },
+  {
+    "id": "listening-05-easy-29",
+    "trainingId": "listening-05-easy",
+    "sentence": "We have confirmed the final quotation with the seller.",
+    "translation": "我們已與賣方確認最終報價。",
+    "chunks": [
+      {
+        "text": "We",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have confirmed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the final quotation with the seller.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "have confirmed 為現在完成式主動語態，表示確認已經完成。"
+  },
+  {
+    "id": "listening-05-easy-30",
+    "trainingId": "listening-05-easy",
+    "sentence": "The facility manager cleared extra floor space for incoming goods.",
+    "translation": "設施主管為即將進場的貨物清理出了額外的空間。",
+    "chunks": [
+      {
+        "text": "The facility manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cleared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "extra floor space for incoming goods.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "cleared 為過去簡單式主動語態。"
+  }
+]

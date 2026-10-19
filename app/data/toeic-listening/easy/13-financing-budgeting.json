@@ -1,0 +1,812 @@
+[
+  {
+    "id": "listening-13-easy-01",
+    "trainingId": "listening-13-easy",
+    "sentence": "The chief financial officer presented the annual budget proposal to the board.",
+    "translation": "財務長向董事會簡報了年度預算提案。",
+    "chunks": [
+      {
+        "text": "The chief financial officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "presented",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the annual budget proposal to the board.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "presented 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-02",
+    "trainingId": "listening-13-easy",
+    "sentence": "The financial audit report was approved by the independent auditing firm.",
+    "translation": "財務審計報告已由獨立會計師事務所核准。",
+    "chunks": [
+      {
+        "text": "The financial audit report",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the independent auditing firm.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "審計報告被核准，was approved 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-easy-03",
+    "trainingId": "listening-13-easy",
+    "sentence": "Sales representatives submit travel expense claims by the end of each month.",
+    "translation": "業務代表於每月末提交差旅報銷申請。",
+    "chunks": [
+      {
+        "text": "Sales representatives",
+        "isTargetSlot": false
+      },
+      {
+        "text": "submit",
+        "isTargetSlot": true
+      },
+      {
+        "text": "travel expense claims by the end of each month.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "submit 為現在簡單式，表每月例行繳交報銷單據。"
+  },
+  {
+    "id": "listening-13-easy-04",
+    "trainingId": "listening-13-easy",
+    "sentence": "Quarterly dividends will be distributed to shareholders in late October.",
+    "translation": "季度股息將於十月下旬分派給股東。",
+    "chunks": [
+      {
+        "text": "Quarterly dividends",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to shareholders in late October.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "股息將被發放，will be distributed 為未來被動式。"
+  },
+  {
+    "id": "listening-13-easy-05",
+    "trainingId": "listening-13-easy",
+    "sentence": "The enterprise repaid its commercial bank loan on time.",
+    "translation": "該企業準時償還了商業銀行貸款。",
+    "chunks": [
+      {
+        "text": "The enterprise",
+        "isTargetSlot": false
+      },
+      {
+        "text": "repaid",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its commercial bank loan on time.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "repaid 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-06",
+    "trainingId": "listening-13-easy",
+    "sentence": "The corporate tax filing was completed before the statutory filing deadline.",
+    "translation": "公司報稅作業在法定期限前已完成申報。",
+    "chunks": [
+      {
+        "text": "The corporate tax filing",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "before the statutory filing deadline.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "報稅被完成，was completed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-easy-07",
+    "trainingId": "listening-13-easy",
+    "sentence": "Management is reviewing operational cost reduction strategies.",
+    "translation": "管理階層正在檢討營運成本縮減策略。",
+    "chunks": [
+      {
+        "text": "Management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "operational cost reduction strategies.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is reviewing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-08",
+    "trainingId": "listening-13-easy",
+    "sentence": "Monthly account statements are reconciled by the accounting department.",
+    "translation": "每月帳戶對帳單由會計部門進行調節對帳。",
+    "chunks": [
+      {
+        "text": "Monthly account statements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are reconciled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the accounting department.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "對帳單被核對對帳，are reconciled 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-13-easy-09",
+    "trainingId": "listening-13-easy",
+    "sentence": "The corporation earned record profits during the third quarter.",
+    "translation": "該公司在第三季度賺得了創紀錄的利潤。",
+    "chunks": [
+      {
+        "text": "The corporation",
+        "isTargetSlot": false
+      },
+      {
+        "text": "earned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "record profits during the third quarter.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "earned 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-10",
+    "trainingId": "listening-13-easy",
+    "sentence": "The capital expenditure budget has been authorized by the executive committee.",
+    "translation": "資本支出預算已獲得執行委員會核准。",
+    "chunks": [
+      {
+        "text": "The capital expenditure budget",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been authorized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the executive committee.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "資本支出預算已被授權，has been authorized 為現在完成被動式。"
+  },
+  {
+    "id": "listening-13-easy-11",
+    "trainingId": "listening-13-easy",
+    "sentence": "The finance team learned the new cloud accounting system last week.",
+    "translation": "財務團隊上週學習了新的雲端會計系統。",
+    "chunks": [
+      {
+        "text": "The finance team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "learned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the new cloud accounting system last week.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "learned 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-12",
+    "trainingId": "listening-13-easy",
+    "sentence": "The billing error was corrected by the accounts payable team.",
+    "translation": "計費錯誤已由應付帳款團隊更正。",
+    "chunks": [
+      {
+        "text": "The billing error",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was corrected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the accounts payable team.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "錯誤被更正，was corrected 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-easy-13",
+    "trainingId": "listening-13-easy",
+    "sentence": "The investment fund holds government bonds and technology equities.",
+    "translation": "該投資基金持有政府債券和科技類股票。",
+    "chunks": [
+      {
+        "text": "The investment fund",
+        "isTargetSlot": false
+      },
+      {
+        "text": "holds",
+        "isTargetSlot": true
+      },
+      {
+        "text": "government bonds and technology equities.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "holds 為現在簡單式，表目前的投資持有組合狀況。"
+  },
+  {
+    "id": "listening-13-easy-14",
+    "trainingId": "listening-13-easy",
+    "sentence": "All receipts and invoices must be verified prior to the external audit.",
+    "translation": "所有收據和發票在外部審計前都必須經過核實。",
+    "chunks": [
+      {
+        "text": "All receipts and invoices",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must be verified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "prior to the external audit.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "收據與發票必須被查核，must be verified 為被動語態。"
+  },
+  {
+    "id": "listening-13-easy-15",
+    "trainingId": "listening-13-easy",
+    "sentence": "Payroll will deposit travel reimbursements this coming Friday.",
+    "translation": "薪資部門將於本週五存入差旅報銷款項。",
+    "chunks": [
+      {
+        "text": "Payroll",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will deposit",
+        "isTargetSlot": true
+      },
+      {
+        "text": "travel reimbursements this coming Friday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will deposit 表本週五將撥款入帳，一般未來式。"
+  },
+  {
+    "id": "listening-13-easy-16",
+    "trainingId": "listening-13-easy",
+    "sentence": "The quarterly revenue summary was released to financial media outlets yesterday.",
+    "translation": "季度營收摘要昨天已發布給財經新聞媒體。",
+    "chunks": [
+      {
+        "text": "The quarterly revenue summary",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to financial media outlets yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "總結被發布，was released 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-easy-17",
+    "trainingId": "listening-13-easy",
+    "sentence": "The finance manager noticed an unexpected variance in administrative spending.",
+    "translation": "財務經理注意到了行政支出中意想不到的差異。",
+    "chunks": [
+      {
+        "text": "The finance manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "noticed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an unexpected variance in administrative spending.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "noticed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-18",
+    "trainingId": "listening-13-easy",
+    "sentence": "Additional funds will be allocated to the research and development division.",
+    "translation": "額外資金將分配給研發部門。",
+    "chunks": [
+      {
+        "text": "Additional funds",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be allocated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the research and development division.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "資金將被分配撥款，will be allocated 為未來被動式。"
+  },
+  {
+    "id": "listening-13-easy-19",
+    "trainingId": "listening-13-easy",
+    "sentence": "The corporate accountant prepared the balance sheet for the annual report.",
+    "translation": "公司會計師為年度報告準備了資產負債表。",
+    "chunks": [
+      {
+        "text": "The corporate accountant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "prepared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the balance sheet for the annual report.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "prepared 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-20",
+    "trainingId": "listening-13-easy",
+    "sentence": "Dividend statements were sent to all registered stockholders by post.",
+    "translation": "股息明細表已透過郵寄方式寄送給所有登記股東。",
+    "chunks": [
+      {
+        "text": "Dividend statements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were sent",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to all registered stockholders by post.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "股息對帳單被寄出，were sent 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-easy-21",
+    "trainingId": "listening-13-easy",
+    "sentence": "The finance analyst forecasts lower utility costs in the coming quarter.",
+    "translation": "財務分析師預測下個季度的水電公用事業成本將降低。",
+    "chunks": [
+      {
+        "text": "The finance analyst",
+        "isTargetSlot": false
+      },
+      {
+        "text": "forecasts",
+        "isTargetSlot": true
+      },
+      {
+        "text": "lower utility costs in the coming quarter.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "forecasts 表分析師預測，現在簡單式。"
+  },
+  {
+    "id": "listening-13-easy-22",
+    "trainingId": "listening-13-easy",
+    "sentence": "A new revolving credit line was approved by the commercial bank.",
+    "translation": "商業銀行已批准了一筆新的循環信用額度。",
+    "chunks": [
+      {
+        "text": "A new revolving credit line",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the commercial bank.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "循環信用額度被核准，was approved 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-easy-23",
+    "trainingId": "listening-13-easy",
+    "sentence": "Departments monitor their monthly stationery expenses closely.",
+    "translation": "各部門密切監控每月的文具開銷。",
+    "chunks": [
+      {
+        "text": "Departments",
+        "isTargetSlot": false
+      },
+      {
+        "text": "monitor",
+        "isTargetSlot": true
+      },
+      {
+        "text": "their monthly stationery expenses closely.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "monitor 為現在簡單式，表各部門日常控管花費。"
+  },
+  {
+    "id": "listening-13-easy-24",
+    "trainingId": "listening-13-easy",
+    "sentence": "Certain capital equipment purchases are exempted from sales taxes under state law.",
+    "translation": "依據州法律，特定資本設備採購享有銷售稅減免。",
+    "chunks": [
+      {
+        "text": "Certain capital equipment purchases",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are exempted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "from sales taxes under state law.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "設備採購被依法免稅，are exempted 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-13-easy-25",
+    "trainingId": "listening-13-easy",
+    "sentence": "The receptionist balanced the office petty cash register yesterday.",
+    "translation": "接待員昨天平定了辦公室零用金帳目。",
+    "chunks": [
+      {
+        "text": "The receptionist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "balanced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the office petty cash register yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "balanced 表結算平帳，過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-26",
+    "trainingId": "listening-13-easy",
+    "sentence": "Favorable currency exchange rates boosted overseas export revenues significantly.",
+    "translation": "有利的匯率大幅提升了海外出口營收。",
+    "chunks": [
+      {
+        "text": "Favorable currency exchange rates",
+        "isTargetSlot": false
+      },
+      {
+        "text": "boosted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "overseas export revenues significantly.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "boosted 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-27",
+    "trainingId": "listening-13-easy",
+    "sentence": "An internal financial review is being conducted by the compliance team.",
+    "translation": "合規團隊正在進行內部財務審查。",
+    "chunks": [
+      {
+        "text": "An internal financial review",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is being conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the compliance team.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "內部財務審查正在被執行，is being conducted 為現在進行被動式。"
+  },
+  {
+    "id": "listening-13-easy-28",
+    "trainingId": "listening-13-easy",
+    "sentence": "Payment credit terms were extended to thirty days for preferred clients.",
+    "translation": "特選客戶的付款信用期限已延長至三十天。",
+    "chunks": [
+      {
+        "text": "Payment credit terms",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were extended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to thirty days for preferred clients.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "付款天期被延長，were extended 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-easy-29",
+    "trainingId": "listening-13-easy",
+    "sentence": "The sales division has attained ninety-five percent of its financial target.",
+    "translation": "業務部門已達成其財務目標的百分之九十五。",
+    "chunks": [
+      {
+        "text": "The sales division",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has attained",
+        "isTargetSlot": true
+      },
+      {
+        "text": "ninety-five percent of its financial target.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "has attained 為現在完成式主動語態。"
+  },
+  {
+    "id": "listening-13-easy-30",
+    "trainingId": "listening-13-easy",
+    "sentence": "The audit partners will sign the final accounting statements next Tuesday.",
+    "translation": "審計合夥人將於下週二簽署最終財務報表。",
+    "chunks": [
+      {
+        "text": "The audit partners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will sign",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the final accounting statements next Tuesday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will sign 表下週二將簽核財報，一般未來式。"
+  }
+]

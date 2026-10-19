@@ -1,0 +1,812 @@
+[
+  {
+    "id": "listening-12-easy-01",
+    "trainingId": "listening-12-easy",
+    "sentence": "The network engineer installed the latest security update last night.",
+    "translation": "網路工程師昨晚安裝了最新的安全更新。",
+    "chunks": [
+      {
+        "text": "The network engineer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the latest security update last night.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "installed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-02",
+    "trainingId": "listening-12-easy",
+    "sentence": "Database backups are performed automatically every midnight.",
+    "translation": "資料庫備份於每晚午夜自動執行。",
+    "chunks": [
+      {
+        "text": "Database backups",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are performed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically every midnight.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "備份每天半夜被執行，are performed 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-03",
+    "trainingId": "listening-12-easy",
+    "sentence": "The technician resolved the printer connectivity issue promptly.",
+    "translation": "技術人員迅速解決了印表機連線問題。",
+    "chunks": [
+      {
+        "text": "The technician",
+        "isTargetSlot": false
+      },
+      {
+        "text": "resolved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the printer connectivity issue promptly.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "resolved 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-04",
+    "trainingId": "listening-12-easy",
+    "sentence": "Workstation computers will be updated during the scheduled maintenance window.",
+    "translation": "工作站電腦將在排定的維護時段進行更新。",
+    "chunks": [
+      {
+        "text": "Workstation computers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be updated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "during the scheduled maintenance window.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "電腦將被升級更新，will be updated 為未來被動式。"
+  },
+  {
+    "id": "listening-12-easy-05",
+    "trainingId": "listening-12-easy",
+    "sentence": "The engineering team is transferring customer records to the cloud server.",
+    "translation": "工程團隊正在將客戶紀錄遷移至雲端伺服器。",
+    "chunks": [
+      {
+        "text": "The engineering team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is transferring",
+        "isTargetSlot": true
+      },
+      {
+        "text": "customer records to the cloud server.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is transferring 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-06",
+    "trainingId": "listening-12-easy",
+    "sentence": "A suspicious file was detected by the company firewall yesterday.",
+    "translation": "昨天公司防火牆偵測到一個可疑檔案。",
+    "chunks": [
+      {
+        "text": "A suspicious file",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was detected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the company firewall yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "可疑檔案被防火牆偵測到，was detected 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-07",
+    "trainingId": "listening-12-easy",
+    "sentence": "The IT support specialist reset my email account password within five minutes.",
+    "translation": "IT 支援專員在五分鐘內重設了我的電子郵件帳戶密碼。",
+    "chunks": [
+      {
+        "text": "The IT support specialist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reset",
+        "isTargetSlot": true
+      },
+      {
+        "text": "my email account password within five minutes.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reset 為過去簡單式主動語態（reset 動詞三態同形）。"
+  },
+  {
+    "id": "listening-12-easy-08",
+    "trainingId": "listening-12-easy",
+    "sentence": "Shared project folders are hosted on a secure cloud platform.",
+    "translation": "專案共享資料夾託管在安全的雲端平台上。",
+    "chunks": [
+      {
+        "text": "Shared project folders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are hosted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on a secure cloud platform.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "資料夾被託管在雲端，are hosted 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-09",
+    "trainingId": "listening-12-easy",
+    "sentence": "Software developers tested the smartphone application on multiple devices.",
+    "translation": "軟體開發人員在多種裝置上測試了智慧手機應用程式。",
+    "chunks": [
+      {
+        "text": "Software developers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "tested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the smartphone application on multiple devices.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "tested 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-10",
+    "trainingId": "listening-12-easy",
+    "sentence": "A high-speed router was installed in the third-floor server room.",
+    "translation": "三樓伺服器機房安裝了一台高速路由器。",
+    "chunks": [
+      {
+        "text": "A high-speed router",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in the third-floor server room.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "路由器被安裝，was installed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-11",
+    "trainingId": "listening-12-easy",
+    "sentence": "Quality assurance testers document software defects in the tracking system.",
+    "translation": "品保測試員在追蹤系統中記錄軟體缺陷。",
+    "chunks": [
+      {
+        "text": "Quality assurance testers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "document",
+        "isTargetSlot": true
+      },
+      {
+        "text": "software defects in the tracking system.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "document 為現在簡單式，表測試人員例行記錄缺陷。"
+  },
+  {
+    "id": "listening-12-easy-12",
+    "trainingId": "listening-12-easy",
+    "sentence": "The network crash was caused by a faulty power cable.",
+    "translation": "網路當機是由一條損壞的電源線引起的。",
+    "chunks": [
+      {
+        "text": "The network crash",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was caused",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by a faulty power cable.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "網路癱瘓被損壞線路引起，was caused 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-13",
+    "trainingId": "listening-12-easy",
+    "sentence": "The systems administrator will deploy antivirus protection to all company laptops.",
+    "translation": "系統管理員將為所有公司筆電部署防毒軟體。",
+    "chunks": [
+      {
+        "text": "The systems administrator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will deploy",
+        "isTargetSlot": true
+      },
+      {
+        "text": "antivirus protection to all company laptops.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will deploy 表未來的部署計畫，一般未來式。"
+  },
+  {
+    "id": "listening-12-easy-14",
+    "trainingId": "listening-12-easy",
+    "sentence": "Query response speeds have improved significantly after database indexing.",
+    "translation": "建立索引後，資料庫查詢回應速度顯著提升。",
+    "chunks": [
+      {
+        "text": "Query response speeds",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have improved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "significantly after database indexing.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "have improved 為現在完成式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-15",
+    "trainingId": "listening-12-easy",
+    "sentence": "The physical server racks were checked by certified hardware specialists.",
+    "translation": "實體伺服器機架已由合格硬體專家檢查完畢。",
+    "chunks": [
+      {
+        "text": "The physical server racks",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were checked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by certified hardware specialists.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "機架被專業人員檢查，were checked 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-16",
+    "trainingId": "listening-12-easy",
+    "sentence": "Security settings require two-factor authentication for remote access.",
+    "translation": "安全設定要求遠端存取必須進行雙重身分驗證。",
+    "chunks": [
+      {
+        "text": "Security settings",
+        "isTargetSlot": false
+      },
+      {
+        "text": "require",
+        "isTargetSlot": true
+      },
+      {
+        "text": "two-factor authentication for remote access.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "require 為現在簡單式，表安全規範常態要求。"
+  },
+  {
+    "id": "listening-12-easy-17",
+    "trainingId": "listening-12-easy",
+    "sentence": "The web portal interface was redesigned to enhance navigation for users.",
+    "translation": "入口網站介面已重新設計，以改善使用者的操作體驗。",
+    "chunks": [
+      {
+        "text": "The web portal interface",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was redesigned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to enhance navigation for users.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "介面被重新設計，was redesigned 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-18",
+    "trainingId": "listening-12-easy",
+    "sentence": "The support agent is diagnosing the network connectivity problem right now.",
+    "translation": "支援專員現在正在診斷網路連線問題。",
+    "chunks": [
+      {
+        "text": "The support agent",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is diagnosing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the network connectivity problem right now.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is diagnosing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-19",
+    "trainingId": "listening-12-easy",
+    "sentence": "New wireless keyboards will be distributed to the graphics department tomorrow.",
+    "translation": "新款無線鍵盤將於明天發放給美工部門。",
+    "chunks": [
+      {
+        "text": "New wireless keyboards",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the graphics department tomorrow.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "鍵盤將被分發，will be distributed 為未來被動式。"
+  },
+  {
+    "id": "listening-12-easy-20",
+    "trainingId": "listening-12-easy",
+    "sentence": "Our company renewed the annual design suite subscription.",
+    "translation": "我們公司續訂了年度設計軟體套件訂閱。",
+    "chunks": [
+      {
+        "text": "Our company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "renewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the annual design suite subscription.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "renewed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-21",
+    "trainingId": "listening-12-easy",
+    "sentence": "A digital security seminar was held for new employees in training room one.",
+    "translation": "在第一培訓室為新進員工舉辦了數位資安研討會。",
+    "chunks": [
+      {
+        "text": "A digital security seminar",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was held",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for new employees in training room one.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "講座被舉行，was held 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-22",
+    "trainingId": "listening-12-easy",
+    "sentence": "All programmers follow strict development guidelines on this project.",
+    "translation": "所有程式設計師在此專案中均遵循嚴格的開發準則。",
+    "chunks": [
+      {
+        "text": "All programmers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "follow",
+        "isTargetSlot": true
+      },
+      {
+        "text": "strict development guidelines on this project.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "follow 表工程師例行遵循標準，現在簡單式。"
+  },
+  {
+    "id": "listening-12-easy-23",
+    "trainingId": "listening-12-easy",
+    "sentence": "The damaged storage drive was replaced with a solid-state disk.",
+    "translation": "損壞的硬碟已更換為固態硬碟。",
+    "chunks": [
+      {
+        "text": "The damaged storage drive",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was replaced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with a solid-state disk.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "損壞硬碟被更換，was replaced 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-24",
+    "trainingId": "listening-12-easy",
+    "sentence": "The lead architect writes comprehensive system documentation.",
+    "translation": "首席架構師撰寫詳盡的系統架構文件。",
+    "chunks": [
+      {
+        "text": "The lead architect",
+        "isTargetSlot": false
+      },
+      {
+        "text": "writes",
+        "isTargetSlot": true
+      },
+      {
+        "text": "comprehensive system documentation.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "writes 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-25",
+    "trainingId": "listening-12-easy",
+    "sentence": "Virtual server instances have been configured by our DevOps team.",
+    "translation": "虛擬伺服器實例已由我們的維運團隊配置完成。",
+    "chunks": [
+      {
+        "text": "Virtual server instances",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been configured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by our DevOps team.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "伺服器實例已被配置完成，have been configured 為現在完成被動式。"
+  },
+  {
+    "id": "listening-12-easy-26",
+    "trainingId": "listening-12-easy",
+    "sentence": "The automated monitoring system sent an alert regarding high server load.",
+    "translation": "自動監控系統發出了關於伺服器負載過高的警報。",
+    "chunks": [
+      {
+        "text": "The automated monitoring system",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sent",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an alert regarding high server load.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "sent 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-27",
+    "trainingId": "listening-12-easy",
+    "sentence": "New fiber cables will be laid across the building next weekend.",
+    "translation": "新光纖電纜將於下週末在大樓內鋪設。",
+    "chunks": [
+      {
+        "text": "New fiber cables",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be laid",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across the building next weekend.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "光纖纜線將被鋪設，will be laid 為未來被動式。"
+  },
+  {
+    "id": "listening-12-easy-28",
+    "trainingId": "listening-12-easy",
+    "sentence": "The development team released version two point four this morning.",
+    "translation": "開發團隊今天上午發布了 2.4 版本。",
+    "chunks": [
+      {
+        "text": "The development team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "version two point four this morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "released 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-easy-29",
+    "trainingId": "listening-12-easy",
+    "sentence": "Administrator privileges were granted to the senior data analyst.",
+    "translation": "管理員權限已授予資深數據分析師。",
+    "chunks": [
+      {
+        "text": "Administrator privileges",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were granted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the senior data analyst.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "權限被授予，were granted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-easy-30",
+    "trainingId": "listening-12-easy",
+    "sentence": "The office assistant changed the black toner cartridge in the printer.",
+    "translation": "辦公室助理更換了印表機內的黑色碳粉匣。",
+    "chunks": [
+      {
+        "text": "The office assistant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "changed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the black toner cartridge in the printer.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "changed 為過去簡單式主動語態。"
+  }
+]

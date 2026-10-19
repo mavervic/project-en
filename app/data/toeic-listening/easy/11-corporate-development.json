@@ -1,0 +1,812 @@
+[
+  {
+    "id": "listening-11-easy-01",
+    "trainingId": "listening-11-easy",
+    "sentence": "The tech corporation acquired a promising artificial intelligence startup.",
+    "translation": "這家科技公司收購了一家極具前景的人工智慧新創公司。",
+    "chunks": [
+      {
+        "text": "The tech corporation",
+        "isTargetSlot": false
+      },
+      {
+        "text": "acquired",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a promising artificial intelligence startup.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "acquired 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-02",
+    "trainingId": "listening-11-easy",
+    "sentence": "A regional office will be opened in Singapore early next year.",
+    "translation": "明年初將在新加坡開設區域辦事處。",
+    "chunks": [
+      {
+        "text": "A regional office",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be opened",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in Singapore early next year.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "區域辦公室將被開設，will be opened 為未來被動式。"
+  },
+  {
+    "id": "listening-11-easy-03",
+    "trainingId": "listening-11-easy",
+    "sentence": "The board of directors approved a ten percent budget expansion for research.",
+    "translation": "董事會批准了為研發追加百分之十的預算。",
+    "chunks": [
+      {
+        "text": "The board of directors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a ten percent budget expansion for research.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "approved 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-04",
+    "trainingId": "listening-11-easy",
+    "sentence": "The strategic partnership was announced during the press conference this morning.",
+    "translation": "戰略合作夥伴關係已在今天上午的記者會上宣布。",
+    "chunks": [
+      {
+        "text": "The strategic partnership",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was announced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "during the press conference this morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "策略聯盟被公布，was announced 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-easy-05",
+    "trainingId": "listening-11-easy",
+    "sentence": "The enterprise plans to enter the Latin American retail sector.",
+    "translation": "該企業計劃進軍拉丁美洲零售市場。",
+    "chunks": [
+      {
+        "text": "The enterprise",
+        "isTargetSlot": false
+      },
+      {
+        "text": "plans",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to enter the Latin American retail sector.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "plans 為現在簡單式，表目前的策略規劃。"
+  },
+  {
+    "id": "listening-11-easy-06",
+    "trainingId": "listening-11-easy",
+    "sentence": "The new corporate logo was unveiled at the annual shareholder gathering.",
+    "translation": "新的企業商標在年度股東大會上正式亮相。",
+    "chunks": [
+      {
+        "text": "The new corporate logo",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was unveiled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at the annual shareholder gathering.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "新商標被揭幕展示，was unveiled 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-easy-07",
+    "trainingId": "listening-11-easy",
+    "sentence": "Our patent attorneys filed three international patent applications.",
+    "translation": "我們的專利律師提交了三件國際專利申請。",
+    "chunks": [
+      {
+        "text": "Our patent attorneys",
+        "isTargetSlot": false
+      },
+      {
+        "text": "filed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "three international patent applications.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "filed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-08",
+    "trainingId": "listening-11-easy",
+    "sentence": "The brand expanded into smart home consumer electronics.",
+    "translation": "該品牌拓展進入了智慧家庭消費電子領域。",
+    "chunks": [
+      {
+        "text": "The brand",
+        "isTargetSlot": false
+      },
+      {
+        "text": "expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "into smart home consumer electronics.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "expanded 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-09",
+    "trainingId": "listening-11-easy",
+    "sentence": "Future growth strategies were presented to institutional venture investors.",
+    "translation": "未來的成長策略已向機構創投投資人進行簡報。",
+    "chunks": [
+      {
+        "text": "Future growth strategies",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were presented",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to institutional venture investors.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "成長策略被展示，were presented 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-easy-10",
+    "trainingId": "listening-11-easy",
+    "sentence": "The chief executive reorganized the global sales division last month.",
+    "translation": "執行長上個月對全球業務部門進行了重組。",
+    "chunks": [
+      {
+        "text": "The chief executive",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reorganized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the global sales division last month.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reorganized 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-11",
+    "trainingId": "listening-11-easy",
+    "sentence": "A joint venture company will be established with our European partner.",
+    "translation": "我們將與歐洲合作夥伴共同成立合資公司。",
+    "chunks": [
+      {
+        "text": "A joint venture company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be established",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with our European partner.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "合資公司將被創立，will be established 為未來被動式。"
+  },
+  {
+    "id": "listening-11-easy-12",
+    "trainingId": "listening-11-easy",
+    "sentence": "The engineering team is developing a revolutionary mobile payment solution.",
+    "translation": "工程團隊正在研發一款革命性的行動支付解決方案。",
+    "chunks": [
+      {
+        "text": "The engineering team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is developing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a revolutionary mobile payment solution.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is developing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-13",
+    "trainingId": "listening-11-easy",
+    "sentence": "A market study was conducted before opening the retail store.",
+    "translation": "在開設零售門市前已進行了市場可行性研究。",
+    "chunks": [
+      {
+        "text": "A market study",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "before opening the retail store.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "市場調查被進行，was conducted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-easy-14",
+    "trainingId": "listening-11-easy",
+    "sentence": "The company secured twenty million dollars in series B funding.",
+    "translation": "該公司獲得了兩千萬美元的 B 輪融資。",
+    "chunks": [
+      {
+        "text": "The company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "secured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "twenty million dollars in series B funding.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "secured 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-15",
+    "trainingId": "listening-11-easy",
+    "sentence": "Green energy policies are promoted across all corporate subsidiaries.",
+    "translation": "所有企業子公司均在推廣綠能政策。",
+    "chunks": [
+      {
+        "text": "Green energy policies",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are promoted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across all corporate subsidiaries.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "綠能政策被推廣，are promoted 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-11-easy-16",
+    "trainingId": "listening-11-easy",
+    "sentence": "The board appointed a seasoned industry expert as advisor.",
+    "translation": "董事會任命了一位資深行業專家擔任顧問。",
+    "chunks": [
+      {
+        "text": "The board",
+        "isTargetSlot": false
+      },
+      {
+        "text": "appointed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a seasoned industry expert as advisor.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "appointed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-17",
+    "trainingId": "listening-11-easy",
+    "sentence": "The software license was granted to a major telecom provider.",
+    "translation": "該軟體許可證已授予一家大型電信運營商。",
+    "chunks": [
+      {
+        "text": "The software license",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was granted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to a major telecom provider.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "授權被授予，was granted 為過去被動式。"
+  },
+  {
+    "id": "listening-11-easy-18",
+    "trainingId": "listening-11-easy",
+    "sentence": "Our organization embraces cloud computing across all branches.",
+    "translation": "我們機構在各分部均全面擁抱雲端運算技術。",
+    "chunks": [
+      {
+        "text": "Our organization",
+        "isTargetSlot": false
+      },
+      {
+        "text": "embraces",
+        "isTargetSlot": true
+      },
+      {
+        "text": "cloud computing across all branches.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "embraces 為現在簡單式，表組織積極採納新科技的立場。"
+  },
+  {
+    "id": "listening-11-easy-19",
+    "trainingId": "listening-11-easy",
+    "sentence": "A dedicated logistics unit will be created by the end of the second quarter.",
+    "translation": "專門的物流單位將於第二季末前成立。",
+    "chunks": [
+      {
+        "text": "A dedicated logistics unit",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be created",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the end of the second quarter.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "專屬物流單位將被建立，will be created 為未來被動式。"
+  },
+  {
+    "id": "listening-11-easy-20",
+    "trainingId": "listening-11-easy",
+    "sentence": "The franchise chain opened ten new coffee shops across the region.",
+    "translation": "該連鎖加盟店在該地區新開了十家咖啡館。",
+    "chunks": [
+      {
+        "text": "The franchise chain",
+        "isTargetSlot": false
+      },
+      {
+        "text": "opened",
+        "isTargetSlot": true
+      },
+      {
+        "text": "ten new coffee shops across the region.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "opened 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-21",
+    "trainingId": "listening-11-easy",
+    "sentence": "Economic analysts predict steady business growth for our sector.",
+    "translation": "經濟分析師預測我們產業將呈現穩定商業成長。",
+    "chunks": [
+      {
+        "text": "Economic analysts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "predict",
+        "isTargetSlot": true
+      },
+      {
+        "text": "steady business growth for our sector.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "predict 表分析師常規性發布預測，現在簡單式。"
+  },
+  {
+    "id": "listening-11-easy-22",
+    "trainingId": "listening-11-easy",
+    "sentence": "A battery innovation patent was issued by the government patent office.",
+    "translation": "政府專利局已核發了一項電池創新專利。",
+    "chunks": [
+      {
+        "text": "A battery innovation patent",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was issued",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the government patent office.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "專利被核發，was issued 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-easy-23",
+    "trainingId": "listening-11-easy",
+    "sentence": "The firm hired an international management consultancy.",
+    "translation": "該公司聘請了一家國際管理諮詢公司。",
+    "chunks": [
+      {
+        "text": "The firm",
+        "isTargetSlot": false
+      },
+      {
+        "text": "hired",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an international management consultancy.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "hired 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-24",
+    "trainingId": "listening-11-easy",
+    "sentence": "The sale of factory real estate has been finalized by the corporate finance committee.",
+    "translation": "廠房房產出售案已由企業財務委員會拍板定案。",
+    "chunks": [
+      {
+        "text": "The sale of factory real estate",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the corporate finance committee.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "出售交易已被拍板定案，has been finalized 為現在完成被動式。"
+  },
+  {
+    "id": "listening-11-easy-25",
+    "trainingId": "listening-11-easy",
+    "sentence": "The multinational group operates its regional hub from central Tokyo.",
+    "translation": "該跨國集團在東京市中心營運其區域中心。",
+    "chunks": [
+      {
+        "text": "The multinational group",
+        "isTargetSlot": false
+      },
+      {
+        "text": "operates",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its regional hub from central Tokyo.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "operates 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-26",
+    "trainingId": "listening-11-easy",
+    "sentence": "Directors attended a workshop on regulatory compliance.",
+    "translation": "董事們參加了關於法規遵從的研討會。",
+    "chunks": [
+      {
+        "text": "Directors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "attended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a workshop on regulatory compliance.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "attended 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-easy-27",
+    "trainingId": "listening-11-easy",
+    "sentence": "A modern innovation laboratory will be inaugurated next month in Seattle.",
+    "translation": "一座現代化的創新實驗室將於下個月在西雅圖落成啟用。",
+    "chunks": [
+      {
+        "text": "A modern innovation laboratory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be inaugurated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "next month in Seattle.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "創新實驗室將被啟用揭幕，will be inaugurated 為未來被動式。"
+  },
+  {
+    "id": "listening-11-easy-28",
+    "trainingId": "listening-11-easy",
+    "sentence": "The startup is expanding its client reach across Southeast Asia.",
+    "translation": "這家新創公司正在將其客戶觸角拓展至東南亞。",
+    "chunks": [
+      {
+        "text": "The startup",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is expanding",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its client reach across Southeast Asia.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is expanding 表目前正積極開拓業務，現在進行式。"
+  },
+  {
+    "id": "listening-11-easy-29",
+    "trainingId": "listening-11-easy",
+    "sentence": "A joint research contract was signed with the national technology university.",
+    "translation": "與國立科技大學簽署了聯合研究合約。",
+    "chunks": [
+      {
+        "text": "A joint research contract",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was signed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with the national technology university.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "研究合約被簽署，was signed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-easy-30",
+    "trainingId": "listening-11-easy",
+    "sentence": "The company enjoys widespread brand trust among consumers.",
+    "translation": "該公司在消費者中享有廣泛的品牌信任度。",
+    "chunks": [
+      {
+        "text": "The company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enjoys",
+        "isTargetSlot": true
+      },
+      {
+        "text": "widespread brand trust among consumers.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "enjoys 為現在簡單式，表目前的信譽狀態。"
+  }
+]

@@ -1,0 +1,898 @@
+[
+  {
+    "id": "listening-03-easy-01",
+    "trainingId": "listening-03-easy",
+    "sentence": "The cultural center will host an international film exhibition this weekend.",
+    "translation": "文化中心將於本週末舉辦國際電影展覽。",
+    "chunks": [
+      {
+        "text": "The cultural center",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will host",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "an international film exhibition",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "this weekend.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will host)。"
+  },
+  {
+    "id": "listening-03-easy-02",
+    "trainingId": "listening-03-easy",
+    "sentence": "Tickets for the symphony orchestra concert were sold out in two hours.",
+    "translation": "交響樂團音樂會的門票在兩小時內即售罄。",
+    "chunks": [
+      {
+        "text": "Tickets for the symphony orchestra concert",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were sold out",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in two hours.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (were sold out)。"
+  },
+  {
+    "id": "listening-03-easy-03",
+    "trainingId": "listening-03-easy",
+    "sentence": "The modern art museum offers discounted admission for corporate membership holders.",
+    "translation": "現代藝術博物館為企業會員持有人提供優惠門票。",
+    "chunks": [
+      {
+        "text": "The modern art museum",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "offers",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "discounted admission",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for corporate membership holders.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (offers)。"
+  },
+  {
+    "id": "listening-03-easy-04",
+    "trainingId": "listening-03-easy",
+    "sentence": "A professional tour guide led visitors through the historic palace grounds.",
+    "translation": "專業導遊帶領遊客參觀歷史宮殿園區。",
+    "chunks": [
+      {
+        "text": "A professional tour guide",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "led",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "visitors through the historic palace grounds.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (led)。"
+  },
+  {
+    "id": "listening-03-easy-05",
+    "trainingId": "listening-03-easy",
+    "sentence": "The theater production has received positive reviews from leading arts critics.",
+    "translation": "該舞台劇製作獲得了知名藝術評論家的一致好評。",
+    "chunks": [
+      {
+        "text": "The theater production",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has received",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "positive reviews from leading arts critics.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動 (has received)。"
+  },
+  {
+    "id": "listening-03-easy-06",
+    "trainingId": "listening-03-easy",
+    "sentence": "Flash photography is strictly prohibited during the live theatrical performance.",
+    "translation": "現場戲劇演出期間嚴禁使用閃光燈拍照。",
+    "chunks": [
+      {
+        "text": "Flash photography",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is strictly prohibited",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "during the live theatrical performance.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (is prohibited)。"
+  },
+  {
+    "id": "listening-03-easy-07",
+    "trainingId": "listening-03-easy",
+    "sentence": "Our marketing team invited VIP clients to the charity tennis tournament.",
+    "translation": "我們的行銷團隊邀請了重要貴賓客戶參加慈善網球錦標賽。",
+    "chunks": [
+      {
+        "text": "Our marketing team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "invited",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "VIP clients to the charity tennis tournament.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (invited)。"
+  },
+  {
+    "id": "listening-03-easy-08",
+    "trainingId": "listening-03-easy",
+    "sentence": "The music festival will feature famous jazz musicians from around the world.",
+    "translation": "這場音樂節將邀請來自世界各地的知名爵士音樂家演出。",
+    "chunks": [
+      {
+        "text": "The music festival",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will feature",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "famous jazz musicians from around the world.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will feature)。"
+  },
+  {
+    "id": "listening-03-easy-09",
+    "trainingId": "listening-03-easy",
+    "sentence": "Complimentary beverages were provided during the theatrical intermission.",
+    "translation": "在中場休息期間，現場提供了免費招待的飲品。",
+    "chunks": [
+      {
+        "text": "Complimentary beverages",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were provided",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "during the theatrical intermission.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (were provided)。"
+  },
+  {
+    "id": "listening-03-easy-10",
+    "trainingId": "listening-03-easy",
+    "sentence": "The gallery curator explained the artistic techniques behind the new sculptures.",
+    "translation": "美術館策展人向大家解說了新雕塑作品背後的藝術技巧。",
+    "chunks": [
+      {
+        "text": "The gallery curator",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "explained",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the artistic techniques behind the new sculptures.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (explained)。"
+  },
+  {
+    "id": "listening-03-easy-11",
+    "trainingId": "listening-03-easy",
+    "sentence": "Audience members are requested to silence their mobile devices before showtime.",
+    "translation": "請觀眾在演出前將手機轉為靜音。",
+    "chunks": [
+      {
+        "text": "Audience members",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are requested",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to silence their mobile devices before showtime.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (are requested)。"
+  },
+  {
+    "id": "listening-03-easy-12",
+    "trainingId": "listening-03-easy",
+    "sentence": "The corporate package includes premium seating for the Broadway musical.",
+    "translation": "這份企業套票包含百老匯音樂劇的頂級座位。",
+    "chunks": [
+      {
+        "text": "The corporate package",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "includes",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "premium seating for the Broadway musical.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (includes)。"
+  },
+  {
+    "id": "listening-03-easy-13",
+    "trainingId": "listening-03-easy",
+    "sentence": "A private reception was held for international delegates after the ceremony.",
+    "translation": "典禮結束後，為國際代表舉行了私人歡迎酒會。",
+    "chunks": [
+      {
+        "text": "A private reception",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was held",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for international delegates after the ceremony.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was held)。"
+  },
+  {
+    "id": "listening-03-easy-14",
+    "trainingId": "listening-03-easy",
+    "sentence": "The stadium will open its gates two hours prior to kickoff.",
+    "translation": "體育場將在開球前兩小時開放大門。",
+    "chunks": [
+      {
+        "text": "The stadium",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will open",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "its gates two hours prior to kickoff.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will open)。"
+  },
+  {
+    "id": "listening-03-easy-15",
+    "trainingId": "listening-03-easy",
+    "sentence": "Visitors can purchase souvenirs at the museum gift shop on level one.",
+    "translation": "遊客可在一樓的博物館禮品店購買紀念品。",
+    "chunks": [
+      {
+        "text": "Visitors",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "can purchase",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "souvenirs at the museum gift shop on level one.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 (can purchase)。"
+  },
+  {
+    "id": "listening-03-easy-16",
+    "trainingId": "listening-03-easy",
+    "sentence": "The documentary film highlights environmental conservation efforts across Africa.",
+    "translation": "這部紀錄片重點介紹了非洲各地的環境保護成果。",
+    "chunks": [
+      {
+        "text": "The documentary film",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "highlights",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "environmental conservation efforts across Africa.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (highlights)。"
+  },
+  {
+    "id": "listening-03-easy-17",
+    "trainingId": "listening-03-easy",
+    "sentence": "Concert tickets have been mailed directly to the customer's billing address.",
+    "translation": "演唱會門票已直接寄送至客戶的帳單地址。",
+    "chunks": [
+      {
+        "text": "Concert tickets",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "have been mailed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "directly to the customer's billing address.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成被動 (have been mailed)。"
+  },
+  {
+    "id": "listening-03-easy-18",
+    "trainingId": "listening-03-easy",
+    "sentence": "The amusement park closes early during the winter holiday season.",
+    "translation": "該遊樂園在冬季假期期間會提早休園。",
+    "chunks": [
+      {
+        "text": "The amusement park",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "closes",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "early during the winter holiday season.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (closes)。"
+  },
+  {
+    "id": "listening-03-easy-19",
+    "trainingId": "listening-03-easy",
+    "sentence": "The orchestra director conducted the final symphony rehearsal yesterday afternoon.",
+    "translation": "管弦樂團總監昨天下午指揮了最後一場交響樂彩排。",
+    "chunks": [
+      {
+        "text": "The orchestra director",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "conducted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the final symphony rehearsal yesterday afternoon.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (conducted)。"
+  },
+  {
+    "id": "listening-03-easy-20",
+    "trainingId": "listening-03-easy",
+    "sentence": "The historical exhibition is organized chronologically across five display galleries.",
+    "translation": "這場歷史展覽依照年代順序在五個展廳中陳列。",
+    "chunks": [
+      {
+        "text": "The historical exhibition",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is organized",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "chronologically across five display galleries.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (is organized)。"
+  },
+  {
+    "id": "listening-03-easy-21",
+    "trainingId": "listening-03-easy",
+    "sentence": "The opera house offers audio guide devices in multiple foreign languages.",
+    "translation": "歌劇院提供多種外語版本的語音導覽設備。",
+    "chunks": [
+      {
+        "text": "The opera house",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "offers",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "audio guide devices in multiple foreign languages.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (offers)。"
+  },
+  {
+    "id": "listening-03-easy-22",
+    "trainingId": "listening-03-easy",
+    "sentence": "Our executive team attended a private piano recital at the embassy.",
+    "translation": "我們的主管團隊在大使館出席了一場私人鋼琴獨奏會。",
+    "chunks": [
+      {
+        "text": "Our executive team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "attended",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a private piano recital at the embassy.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (attended)。"
+  },
+  {
+    "id": "listening-03-easy-23",
+    "trainingId": "listening-03-easy",
+    "sentence": "Outdoor film screenings will be cancelled in the event of rainfall.",
+    "translation": "若遇下雨，戶外電影放映將予以取消。",
+    "chunks": [
+      {
+        "text": "Outdoor film screenings",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be cancelled",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in the event of rainfall.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來被動 (will be cancelled)。"
+  },
+  {
+    "id": "listening-03-easy-24",
+    "trainingId": "listening-03-easy",
+    "sentence": "The botanical garden showcases rare tropical plants from Southeast Asia.",
+    "translation": "這座植物園展出來自東南亞的珍稀熱帶植物。",
+    "chunks": [
+      {
+        "text": "The botanical garden",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "showcases",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "rare tropical plants from Southeast Asia.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (showcases)。"
+  },
+  {
+    "id": "listening-03-easy-25",
+    "trainingId": "listening-03-easy",
+    "sentence": "Special backstage passes were distributed to company sponsors before the performance.",
+    "translation": "特別後台通行證在演出前已發放給企業贊助商。",
+    "chunks": [
+      {
+        "text": "Special backstage passes",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were distributed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to company sponsors before the performance.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (were distributed)。"
+  },
+  {
+    "id": "listening-03-easy-26",
+    "trainingId": "listening-03-easy",
+    "sentence": "The youth choir performed traditional holiday carols in the public square.",
+    "translation": "青年合唱團在公共廣場演唱了傳統節日頌歌。",
+    "chunks": [
+      {
+        "text": "The youth choir",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "performed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "traditional holiday carols in the public square.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (performed)。"
+  },
+  {
+    "id": "listening-03-easy-27",
+    "trainingId": "listening-03-easy",
+    "sentence": "The film festival has celebrated independent filmmakers for over twenty years.",
+    "translation": "該電影節二十多年來持續讚頌獨立電影創作者。",
+    "chunks": [
+      {
+        "text": "The film festival",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has celebrated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "independent filmmakers for over twenty years.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動 (has celebrated)。"
+  },
+  {
+    "id": "listening-03-easy-28",
+    "trainingId": "listening-03-easy",
+    "sentence": "All theatergoers must present valid photo identification at the will-call window.",
+    "translation": "所有觀劇者必須在現場取票窗口出示有效附照片的身分證件。",
+    "chunks": [
+      {
+        "text": "All theatergoers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "must present",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "valid photo identification at the will-call window.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 (must present)。"
+  },
+  {
+    "id": "listening-03-easy-29",
+    "trainingId": "listening-03-easy",
+    "sentence": "The photography exhibition opens to the general public starting tomorrow morning.",
+    "translation": "該攝影展將從明天上午起向公眾開放。",
+    "chunks": [
+      {
+        "text": "The photography exhibition",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "opens",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to the general public starting tomorrow morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (opens)。"
+  },
+  {
+    "id": "listening-03-easy-30",
+    "trainingId": "listening-03-easy",
+    "sentence": "The sports arena was renovated last summer to increase spectator seating.",
+    "translation": "該體育場於去年夏天進行了翻修以增加觀眾座位。",
+    "chunks": [
+      {
+        "text": "The sports arena",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was renovated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "last summer to increase spectator seating.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was renovated)。"
+  }
+]

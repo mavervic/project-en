@@ -1,0 +1,936 @@
+[
+  {
+    "id": "listening-02-easy-01",
+    "trainingId": "listening-02-easy",
+    "sentence": "Our restaurant accommodates dietary restrictions upon advance notification.",
+    "translation": "本餐廳在提前通知的情況下可配合特殊飲食限制。",
+    "chunks": [
+      {
+        "text": "Our restaurant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "accommodates",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "dietary restrictions",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "upon advance notification.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (accommodates)。"
+  },
+  {
+    "id": "listening-02-easy-02",
+    "trainingId": "listening-02-easy",
+    "sentence": "The banquet hall was reserved for an executive luncheon tomorrow afternoon.",
+    "translation": "宴會廳已預訂供明天下午的主管午餐會使用。",
+    "chunks": [
+      {
+        "text": "The banquet hall",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was reserved",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for an executive luncheon",
+        "isTargetSlot": false
+      },
+      {
+        "text": "tomorrow afternoon.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was reserved)。"
+  },
+  {
+    "id": "listening-02-easy-03",
+    "trainingId": "listening-02-easy",
+    "sentence": "The head chef prepares fresh seafood specials every Friday evening.",
+    "translation": "主廚每週五晚上都會準備新鮮的海鮮特餐。",
+    "chunks": [
+      {
+        "text": "The head chef",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "prepares",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "fresh seafood specials",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "every Friday evening.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (prepares) 表習慣行程。"
+  },
+  {
+    "id": "listening-02-easy-04",
+    "trainingId": "listening-02-easy",
+    "sentence": "A table for six has been booked under Mr. Robinson's name.",
+    "translation": "一張六人桌已用羅賓森先生的名義預訂。",
+    "chunks": [
+      {
+        "text": "A table for six",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has been booked",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "under Mr. Robinson's name.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成被動 (has been booked)。"
+  },
+  {
+    "id": "listening-02-easy-05",
+    "trainingId": "listening-02-easy",
+    "sentence": "The server will bring the dessert menu after clearing the main course dishes.",
+    "translation": "服務生在收完主餐盤後會送上甜點菜單。",
+    "chunks": [
+      {
+        "text": "The server",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will bring",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the dessert menu",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "after clearing the main course dishes.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will bring)。"
+  },
+  {
+    "id": "listening-02-easy-06",
+    "trainingId": "listening-02-easy",
+    "sentence": "Our catering team provided delicious refreshments for the product launch.",
+    "translation": "我們的外燴團隊為新產品發表會提供了美味的茶點。",
+    "chunks": [
+      {
+        "text": "Our catering team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "provided",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "delicious refreshments",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for the product launch.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (provided)。"
+  },
+  {
+    "id": "listening-02-easy-07",
+    "trainingId": "listening-02-easy",
+    "sentence": "The bistro offers a fifteen percent discount for large corporate dinner groups.",
+    "translation": "這家小餐館為大型企業晚餐團體提供 15% 的折扣。",
+    "chunks": [
+      {
+        "text": "The bistro",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "offers",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a fifteen percent discount",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for large corporate dinner groups.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (offers)。"
+  },
+  {
+    "id": "listening-02-easy-08",
+    "trainingId": "listening-02-easy",
+    "sentence": "All outdoor patio tables were cleaned before the dinner service began.",
+    "translation": "在晚餐時段開始前，所有戶外露台餐桌均已清潔完畢。",
+    "chunks": [
+      {
+        "text": "All outdoor patio tables",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were cleaned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "before the dinner service began.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (were cleaned)。"
+  },
+  {
+    "id": "listening-02-easy-09",
+    "trainingId": "listening-02-easy",
+    "sentence": "The waiter is recommending the house specialty to our foreign guests.",
+    "translation": "服務員正在向我們的外國賓客推薦本店招牌菜。",
+    "chunks": [
+      {
+        "text": "The waiter",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is recommending",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the house specialty",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to our foreign guests.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動 (is recommending)。"
+  },
+  {
+    "id": "listening-02-easy-10",
+    "trainingId": "listening-02-easy",
+    "sentence": "Customers can pay their dining bills using mobile payment options.",
+    "translation": "顧客可以使用行動支付方式支付餐飲費用。",
+    "chunks": [
+      {
+        "text": "Customers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "can pay",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "their dining bills",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "using mobile payment options.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 (can pay)。"
+  },
+  {
+    "id": "listening-02-easy-11",
+    "trainingId": "listening-02-easy",
+    "sentence": "The restaurant was established twenty years ago in the historic financial district.",
+    "translation": "這家餐廳於二十年前在歷史悠久的金融區創立。",
+    "chunks": [
+      {
+        "text": "The restaurant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was established",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "twenty years ago in the historic financial district.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was established)。"
+  },
+  {
+    "id": "listening-02-easy-12",
+    "trainingId": "listening-02-easy",
+    "sentence": "The cafeteria manager will order fresh organic produce from local farms.",
+    "translation": "員工餐廳經理將向當地農場訂購新鮮有機農產品。",
+    "chunks": [
+      {
+        "text": "The cafeteria manager",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will order",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "fresh organic produce",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "from local farms.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will order)。"
+  },
+  {
+    "id": "listening-02-easy-13",
+    "trainingId": "listening-02-easy",
+    "sentence": "Complimentary sparkling water was served immediately when guests sat down.",
+    "translation": "賓客入座後立即獲得了免費招待的氣泡水。",
+    "chunks": [
+      {
+        "text": "Complimentary sparkling water",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was served",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "immediately when guests sat down.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去被動 (was served)。"
+  },
+  {
+    "id": "listening-02-easy-14",
+    "trainingId": "listening-02-easy",
+    "sentence": "Our private dining room seats up to twenty business associates comfortably.",
+    "translation": "我們的獨立包廂可舒適容納多達二十位商務夥伴。",
+    "chunks": [
+      {
+        "text": "Our private dining room",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "seats",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "up to twenty business associates comfortably.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (seats)。"
+  },
+  {
+    "id": "listening-02-easy-15",
+    "trainingId": "listening-02-easy",
+    "sentence": "The chef has introduced a seasonal vegetarian menu for spring.",
+    "translation": "主廚推出了春季限定的時令素食菜單。",
+    "chunks": [
+      {
+        "text": "The chef",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has introduced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a seasonal vegetarian menu for spring.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動 (has introduced)。"
+  },
+  {
+    "id": "listening-02-easy-16",
+    "trainingId": "listening-02-easy",
+    "sentence": "The bakery delivers fresh bread and pastries to our café every morning.",
+    "translation": "烘焙坊每天清晨都會將新鮮麵包與糕點送到我們咖啡館。",
+    "chunks": [
+      {
+        "text": "The bakery",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "delivers",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "fresh bread and pastries",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to our café every morning.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (delivers)。"
+  },
+  {
+    "id": "listening-02-easy-17",
+    "trainingId": "listening-02-easy",
+    "sentence": "Reservations should be confirmed at least twenty-four hours in advance.",
+    "translation": "訂位應至少提前二十四小時確認。",
+    "chunks": [
+      {
+        "text": "Reservations",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "should be confirmed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "at least twenty-four hours in advance.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態被動 (should be confirmed)。"
+  },
+  {
+    "id": "listening-02-easy-18",
+    "trainingId": "listening-02-easy",
+    "sentence": "The restaurant staff was preparing the dining area for the annual gala.",
+    "translation": "餐廳員工正在為年度盛會佈置用餐區。",
+    "chunks": [
+      {
+        "text": "The restaurant staff",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was preparing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the dining area for the annual gala.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "過去進行主動 (was preparing)。"
+  },
+  {
+    "id": "listening-02-easy-19",
+    "trainingId": "listening-02-easy",
+    "sentence": "The hotel provides breakfast buffet vouchers for all conference attendees.",
+    "translation": "飯店為所有研討會與會者提供自助早餐券。",
+    "chunks": [
+      {
+        "text": "The hotel",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "provides",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "breakfast buffet vouchers",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for all conference attendees.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (provides)。"
+  },
+  {
+    "id": "listening-02-easy-20",
+    "trainingId": "listening-02-easy",
+    "sentence": "An automatic service charge will be added for parties of eight or more.",
+    "translation": "八人以上團體將自動加收服務費。",
+    "chunks": [
+      {
+        "text": "An automatic service charge",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will be added",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for parties of eight or more.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來被動 (will be added)。"
+  },
+  {
+    "id": "listening-02-easy-21",
+    "trainingId": "listening-02-easy",
+    "sentence": "The coffee shop opens early at six thirty on weekday mornings.",
+    "translation": "這家咖啡館在平日早晨六點半便開門營業。",
+    "chunks": [
+      {
+        "text": "The coffee shop",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "opens",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "early at six thirty on weekday mornings.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動 (opens)。"
+  },
+  {
+    "id": "listening-02-easy-22",
+    "trainingId": "listening-02-easy",
+    "sentence": "The event organizer selected an Italian restaurant for the farewell dinner.",
+    "translation": "活動主辦人選擇了一家義大利餐廳舉辦歡送晚宴。",
+    "chunks": [
+      {
+        "text": "The event organizer",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "selected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "an Italian restaurant",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for the farewell dinner.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (selected)。"
+  },
+  {
+    "id": "listening-02-easy-23",
+    "trainingId": "listening-02-easy",
+    "sentence": "Special dietary requests must be submitted through our online booking portal.",
+    "translation": "特殊飲食需求必須透過我們的線上預約系統提交。",
+    "chunks": [
+      {
+        "text": "Special dietary requests",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "must be submitted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "through our online booking portal.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態被動 (must be submitted)。"
+  },
+  {
+    "id": "listening-02-easy-24",
+    "trainingId": "listening-02-easy",
+    "sentence": "The sommelier recommended an excellent regional wine for the celebration.",
+    "translation": "侍酒師為這次慶祝活動推薦了一款絕佳的當地葡萄酒。",
+    "chunks": [
+      {
+        "text": "The sommelier",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "recommended",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "an excellent regional wine for the celebration.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (recommended)。"
+  },
+  {
+    "id": "listening-02-easy-25",
+    "trainingId": "listening-02-easy",
+    "sentence": "The lunch specials are displayed on the chalkboard near the entrance.",
+    "translation": "特價午餐刊登在入口處附近的黑板上。",
+    "chunks": [
+      {
+        "text": "The lunch specials",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are displayed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on the chalkboard near the entrance.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (are displayed)。"
+  },
+  {
+    "id": "listening-02-easy-26",
+    "trainingId": "listening-02-easy",
+    "sentence": "Our executive committee dined at the rooftop garden restaurant yesterday.",
+    "translation": "我們的執行委員會昨天在頂樓花園餐廳用餐。",
+    "chunks": [
+      {
+        "text": "Our executive committee",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "dined",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "at the rooftop garden restaurant yesterday.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (dined)。"
+  },
+  {
+    "id": "listening-02-easy-27",
+    "trainingId": "listening-02-easy",
+    "sentence": "The restaurant will reopen next Monday following complete interior renovations.",
+    "translation": "該餐廳在完成全面內部裝潢後，將於下週一重新開幕。",
+    "chunks": [
+      {
+        "text": "The restaurant",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will reopen",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "next Monday following complete interior renovations.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動 (will reopen)。"
+  },
+  {
+    "id": "listening-02-easy-28",
+    "trainingId": "listening-02-easy",
+    "sentence": "Beverages are included with the executive buffet luncheon package.",
+    "translation": "飲品已包含在商務自助午餐套裝中。",
+    "chunks": [
+      {
+        "text": "Beverages",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are included",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with the executive buffet luncheon package.",
+        "isTargetSlot": false
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在被動 (are included)。"
+  },
+  {
+    "id": "listening-02-easy-29",
+    "trainingId": "listening-02-easy",
+    "sentence": "The cashier has printed the receipt for the client's accounting records.",
+    "translation": "收銀員已列印收據供客戶會計存檔。",
+    "chunks": [
+      {
+        "text": "The cashier",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has printed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the receipt for the client's accounting records.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動 (has printed)。"
+  },
+  {
+    "id": "listening-02-easy-30",
+    "trainingId": "listening-02-easy",
+    "sentence": "The hostess greeted arriving guests warmly at the reception foyer.",
+    "translation": "女侍者在接待大廳親切地迎接到訪賓客。",
+    "chunks": [
+      {
+        "text": "The hostess",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "greeted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "arriving guests warmly at the reception foyer.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動 (greeted)。"
+  }
+]
