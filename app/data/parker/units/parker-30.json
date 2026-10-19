@@ -1,36 +1,43 @@
 [
   {
     "id": "parker-30-q01",
-    "sentence": ". Isn't there an updated version of this program? Isn't there an updated version of this.",
+    "trainingId": "parker-30",
+    "sentence": "Isn't there an updated version of this software program?",
+    "translation": "難道這個軟體程式沒有更新的版本嗎？",
     "chunks": [
       {
-        "text": "The subject",
+        "text": "Isn't there",
+        "isTargetSlot": false
+      },
+      {
+        "text": "an updated version",
         "isTargetSlot": false,
         "type": "subject"
       },
       {
-        "text": "Isn't",
+        "text": "available",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "there an updated version of this program? Isn't there an updated version of this.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "for this program?",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 1,
+    "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「Isn't」為現在簡單式主動語態 (Present Simple Active)。主詞為「The subject」。",
-    "trainingId": "parker-30"
+    "grammarNote": "存在句否定疑問形式 (Isn't there)。",
+    "topic": "Technical areas"
   },
   {
     "id": "parker-30-q02",
-    "sentence": ". People are strolling along the river. People are strolling along the river. People are strolling.",
+    "trainingId": "parker-30",
+    "sentence": "People are strolling along the river.",
+    "translation": "人們正沿著河畔漫步。",
     "chunks": [
       {
         "text": "People",
@@ -43,9 +50,8 @@
         "type": "verb"
       },
       {
-        "text": "along the river. People are strolling along the river. People are strolling.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "along the river.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -54,12 +60,14 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「are strolling」為現在進行式主動語態 (Present Continuous Active)。主詞為「People」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在進行式主動語態 (are strolling)。",
+    "topic": "Entertainment"
   },
   {
     "id": "parker-30-q03",
-    "sentence": ". A church is situated near a forest. A church is situated near a forest. A.",
+    "trainingId": "parker-30",
+    "sentence": "A church is situated near a forest.",
+    "translation": "一座教堂坐落在森林附近。",
     "chunks": [
       {
         "text": "A church",
@@ -72,9 +80,8 @@
         "type": "verb"
       },
       {
-        "text": "near a forest. A church is situated near a forest. A.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "near a forest.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -83,12 +90,14 @@
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「is situated」為現在簡單式被動語態 (Present Simple Passive)。主詞為「A church」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在簡單式被動語態 (is situated)。",
+    "topic": "Housing"
   },
   {
     "id": "parker-30-q04",
-    "sentence": ". The woman is handing over her identification. The woman is handing over her identification. The.",
+    "trainingId": "parker-30",
+    "sentence": "The woman is handing over her identification.",
+    "translation": "這名女子正遞交出她的身分證明文件。",
     "chunks": [
       {
         "text": "The woman",
@@ -101,9 +110,8 @@
         "type": "verb"
       },
       {
-        "text": "her identification. The woman is handing over her identification. The.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "her identification.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -112,20 +120,17 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「is handing over」為現在進行式主動語態 (Present Continuous Active)。主詞為「The woman」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在進行式動詞片語 (is handing over)。",
+    "topic": "Travel"
   },
   {
     "id": "parker-30-q05",
-    "sentence": ". Why don't we bring up this issue at the meeting? Why don't we bring up.",
+    "trainingId": "parker-30",
+    "sentence": "Why don't we bring up this issue at the meeting?",
+    "translation": "我們何不在會議中提出這個議題呢？",
     "chunks": [
       {
-        "text": "Why don't",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "we",
+        "text": "Why don't we",
         "isTargetSlot": false,
         "type": "subject"
       },
@@ -135,36 +140,27 @@
         "type": "verb"
       },
       {
-        "text": "this issue",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "at the meeting? Why don't we bring up.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "this issue at the meeting?",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「bring up」為現在簡單式主動語態 (Present Simple Active)。主詞為「we」。",
-    "trainingId": "parker-30"
+    "grammarNote": "建議句動詞片語 (bring up)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-30-q06",
+    "trainingId": "parker-30",
     "sentence": "Have you been introduced to each other yet?",
+    "translation": "你們兩位已經互相介紹認識了嗎？",
     "chunks": [
       {
-        "text": "Have",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "you",
+        "text": "Have you",
         "isTargetSlot": false,
         "type": "subject"
       },
@@ -175,22 +171,23 @@
       },
       {
         "text": "to each other yet?",
-        "isTargetSlot": false,
-        "type": "clause"
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
-      "aspect": "simple"
+      "aspect": "perfect"
     },
-    "grammarNote": "「been introduced」為現在簡單式被動語態 (Present Simple Passive)。主詞為「you」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在完成式被動語態 (have ... been introduced)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-30-q07",
-    "sentence": ". The assistant is stacking papers on the desk. The assistant is stacking papers on the.",
+    "trainingId": "parker-30",
+    "sentence": "The assistant is stacking papers on the desk.",
+    "translation": "助理正把文件整齊堆放在辦公桌上。",
     "chunks": [
       {
         "text": "The assistant",
@@ -203,14 +200,8 @@
         "type": "verb"
       },
       {
-        "text": "papers",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "on the desk. The assistant is stacking papers on the.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "papers on the desk.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -219,20 +210,17 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「is stacking」為現在進行式主動語態 (Present Continuous Active)。主詞為「The assistant」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在進行式主動語態 (is stacking)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-30-q08",
-    "sentence": ". Do you recall which day I spoke to the manager? Do you recall which day.",
+    "trainingId": "parker-30",
+    "sentence": "Do you recall which day I spoke to the manager?",
+    "translation": "你記得我是哪一天和經理談話的嗎？",
     "chunks": [
       {
-        "text": "Do",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "you",
+        "text": "Do you",
         "isTargetSlot": false,
         "type": "subject"
       },
@@ -242,39 +230,25 @@
         "type": "verb"
       },
       {
-        "text": "which day I spoke",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "to the manager? Do you recall which day.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "which day I spoke to manager?",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「recall」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在簡單式主動語態 (recall)。",
+    "topic": "Personnel"
   },
   {
     "id": "parker-30-q09",
-    "sentence": ". Is this the right counter for opening a new savings account? Is this the right.",
+    "trainingId": "parker-30",
+    "sentence": "Is this the right counter for opening a new savings account?",
+    "translation": "請問開立新儲蓄帳戶是在這個櫃檯辦理嗎？",
     "chunks": [
-      {
-        "text": "Is",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "this",
-        "isTargetSlot": false,
-        "type": "subject"
-      },
       {
         "text": "Is",
         "isTargetSlot": true,
@@ -283,26 +257,27 @@
       {
         "text": "this the right counter",
         "isTargetSlot": false,
-        "type": "object"
+        "type": "subject"
       },
       {
-        "text": "for opening a new savings account? Is this the right.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "for opening a savings account?",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 0,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「Is」為現在簡單式主動語態 (Present Simple Active)。主詞為「this」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在簡單式疑問句 (Is)。",
+    "topic": "Financing & Budgeting"
   },
   {
     "id": "parker-30-q10",
-    "sentence": ". Customers are lining up at the entrance. Customers are lining up at the entrance. Customers.",
+    "trainingId": "parker-30",
+    "sentence": "Customers are lining up at the entrance.",
+    "translation": "顧客們正在入口處排隊。",
     "chunks": [
       {
         "text": "Customers",
@@ -315,9 +290,8 @@
         "type": "verb"
       },
       {
-        "text": "at the entrance. Customers are lining up at the entrance. Customers.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "at the entrance.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -326,59 +300,47 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「are lining up」為現在進行式主動語態 (Present Continuous Active)。主詞為「Customers」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在進行式動詞片語 (are lining up)。",
+    "topic": "Purchasing"
   },
   {
     "id": "parker-30-q11",
-    "sentence": ". Why were you absent from the meeting this morning? Why were you absent from the.",
+    "trainingId": "parker-30",
+    "sentence": "Why were you absent from the meeting this morning?",
+    "translation": "今天早上你為什麼缺席會議？",
     "chunks": [
       {
-        "text": "Why were",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "you",
+        "text": "Why were you",
         "isTargetSlot": false,
         "type": "subject"
       },
       {
-        "text": "were",
+        "text": "absent",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "you absent",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "from the meeting this morning? Why were you absent from the.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "from the meeting this morning?",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
       "time": "past",
       "aspect": "simple"
     },
-    "grammarNote": "「were」為過去簡單式主動語態 (Past Simple Active)。主詞為「you」。",
-    "trainingId": "parker-30"
+    "grammarNote": "過去簡單式狀態 (were absent)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-30-q12",
-    "sentence": ". Would you like grilled steak or do you prefer lamb chop? Would you like grilled.",
+    "trainingId": "parker-30",
+    "sentence": "Would you like grilled steak or do you prefer lamb chop?",
+    "translation": "你想吃炙烤牛排，還是比較喜歡羊排？",
     "chunks": [
       {
-        "text": "Would",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "you",
+        "text": "Would you",
         "isTargetSlot": false,
         "type": "subject"
       },
@@ -388,23 +350,24 @@
         "type": "verb"
       },
       {
-        "text": "grilled steak or do you prefer lamb chop? Would you like grilled.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "grilled steak or prefer lamb chop?",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「like」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
-    "trainingId": "parker-30"
+    "grammarNote": "情態助動詞 would 接原形動詞 (like)。",
+    "topic": "Dining out"
   },
   {
     "id": "parker-30-q13",
-    "sentence": ". The man and woman are sorting out the documents together. The man and woman are.",
+    "trainingId": "parker-30",
+    "sentence": "The man and woman are sorting out documents together.",
+    "translation": "這名男子與女子正在一起整理文件。",
     "chunks": [
       {
         "text": "The man and woman",
@@ -417,9 +380,8 @@
         "type": "verb"
       },
       {
-        "text": "the documents together. The man and woman are.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "documents together.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -428,12 +390,14 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「are sorting out」為現在進行式主動語態 (Present Continuous Active)。主詞為「The man and woman」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在進行式動詞片語 (are sorting out)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-30-q14",
-    "sentence": ". What made them decide to shut down the Chicago branch? What made them decide to.",
+    "trainingId": "parker-30",
+    "sentence": "What made them decide to shut down the Chicago branch?",
+    "translation": "是什麼促使他們決定關閉芝加哥分公司？",
     "chunks": [
       {
         "text": "What",
@@ -446,14 +410,8 @@
         "type": "verb"
       },
       {
-        "text": "them decide",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "to shut down the Chicago branch? What made them decide to.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "them decide to shut down Chicago branch?",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -462,20 +420,17 @@
       "time": "past",
       "aspect": "simple"
     },
-    "grammarNote": "「made」為過去簡單式主動語態 (Past Simple Active)。主詞為「What」。",
-    "trainingId": "parker-30"
+    "grammarNote": "過去簡單式使役動詞 (made)。",
+    "topic": "Corporate Development"
   },
   {
     "id": "parker-30-q15",
-    "sentence": ". How can we tell if the alarm system is working properly? How can we tell.",
+    "trainingId": "parker-30",
+    "sentence": "How can we tell if the alarm system is working properly?",
+    "translation": "我們如何得知警報系統是否正常運作？",
     "chunks": [
       {
-        "text": "How can",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "we",
+        "text": "How can we",
         "isTargetSlot": false,
         "type": "subject"
       },
@@ -485,23 +440,24 @@
         "type": "verb"
       },
       {
-        "text": "if the alarm system is working properly? How can we tell.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "if the alarm system is working properly?",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「tell」為現在簡單式主動語態 (Present Simple Active)。主詞為「we」。",
-    "trainingId": "parker-30"
+    "grammarNote": "情態助動詞 can 接原形動詞 (tell)。",
+    "topic": "Technical areas"
   },
   {
     "id": "parker-30-q16",
-    "sentence": ". My client is looking for a manufacturing facility in Vietnam. My client is looking for.",
+    "trainingId": "parker-30",
+    "sentence": "My client is looking for a manufacturing facility in Vietnam.",
+    "translation": "我的客戶正在越南物色一處製造廠房。",
     "chunks": [
       {
         "text": "My client",
@@ -509,14 +465,13 @@
         "type": "subject"
       },
       {
-        "text": "is looking",
+        "text": "is looking for",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "for a manufacturing facility in Vietnam. My client is looking for.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "a manufacturing facility in Vietnam.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -525,12 +480,14 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「is looking」為現在進行式主動語態 (Present Continuous Active)。主詞為「My client」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在進行式動詞片語 (is looking for)。",
+    "topic": "Manufacturing"
   },
   {
     "id": "parker-30-q17",
-    "sentence": ". I'll call back on Wednesday morning to confirm our order with you. I'll call back.",
+    "trainingId": "parker-30",
+    "sentence": "I'll call back on Wednesday morning to confirm our order with you.",
+    "translation": "我會在週三早晨回電給您確認我們的訂單。",
     "chunks": [
       {
         "text": "I",
@@ -538,19 +495,13 @@
         "type": "subject"
       },
       {
-        "text": "'ll call",
+        "text": "'ll call back",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "back",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "on Wednesday morning to confirm our order with you. I'll call back.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "on Wednesday to confirm our order.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -559,12 +510,14 @@
       "time": "future",
       "aspect": "simple"
     },
-    "grammarNote": "「'll call」為未來簡單式主動語態 (Future Simple Active)。主詞為「I」。",
-    "trainingId": "parker-30"
+    "grammarNote": "未來簡單式動詞片語 ('ll call back)。",
+    "topic": "Purchasing"
   },
   {
     "id": "parker-30-q18",
-    "sentence": ". We seem to have already gone over our budget on travel expenses this quarter. We.",
+    "trainingId": "parker-30",
+    "sentence": "We seem to have gone over our budget on travel expenses this quarter.",
+    "translation": "我們本季度在差旅費用方面的支出似乎已經超出了預算。",
     "chunks": [
       {
         "text": "We",
@@ -572,33 +525,33 @@
         "type": "subject"
       },
       {
-        "text": "seem",
+        "text": "seem to have gone over",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "to have already gone over our budget on travel expenses this quarter. We.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "our budget on travel expenses.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
-      "aspect": "simple"
+      "aspect": "perfect"
     },
-    "grammarNote": "「seem」為現在簡單式主動語態 (Present Simple Active)。主詞為「We」。",
-    "trainingId": "parker-30"
+    "grammarNote": "連綴動詞接完成不定詞 (seem to have gone over)。",
+    "topic": "Financing & Budgeting"
   },
   {
     "id": "parker-30-q19",
-    "sentence": ". Please fill out the form completely before turning it into our customer service representative. Please.",
+    "trainingId": "parker-30",
+    "sentence": "Please fill out the form completely before turning it into representative.",
+    "translation": "在將表格交給我們的客服代表之前，請完整填寫所有欄位。",
     "chunks": [
       {
-        "text": "The subject",
-        "isTargetSlot": false,
-        "type": "subject"
+        "text": "Please",
+        "isTargetSlot": false
       },
       {
         "text": "fill out",
@@ -606,14 +559,8 @@
         "type": "verb"
       },
       {
-        "text": "the form completely",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "before turning it into our customer service representative. Please.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "the form completely before submission.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -622,12 +569,14 @@
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「fill out」為現在簡單式主動語態 (Present Simple Active)。主詞為「The subject」。",
-    "trainingId": "parker-30"
+    "grammarNote": "祈使句動詞片語 (fill out)。",
+    "topic": "General Business"
   },
   {
     "id": "parker-30-q20",
-    "sentence": ". We ask all employees to bear the inconvenient situation until the renovation comes to its.",
+    "trainingId": "parker-30",
+    "sentence": "We ask all employees to bear with inconvenience until renovation is completed.",
+    "translation": "在裝修工程完全竣工之前，我們懇請全體同仁包涵所帶來的不便。",
     "chunks": [
       {
         "text": "We",
@@ -640,14 +589,8 @@
         "type": "verb"
       },
       {
-        "text": "all employees",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "to bear the inconvenient situation until the renovation comes to its.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "all employees to bear with renovation.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -656,12 +599,14 @@
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「ask」為現在簡單式主動語態 (Present Simple Active)。主詞為「We」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在簡單式主動語態 (ask)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-30-q21",
-    "sentence": ". The rise in profits is attributed to the introduction of an all-in-one sales and marketing.",
+    "trainingId": "parker-30",
+    "sentence": "The rise in profits is attributed to the all-in-one sales system.",
+    "translation": "利潤的增長歸功於全方位銷售與行銷整合系統的引進。",
     "chunks": [
       {
         "text": "The rise in profits",
@@ -669,14 +614,13 @@
         "type": "subject"
       },
       {
-        "text": "is attributed",
+        "text": "is attributed to",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "to the introduction of an all-in-one sales and marketing.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "the all-in-one sales system.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -685,12 +629,14 @@
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「is attributed」為現在簡單式被動語態 (Present Simple Passive)。主詞為「The rise in profits」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在簡單式被動片語 (is attributed to)。",
+    "topic": "Financing & Budgeting"
   },
   {
     "id": "parker-30-q22",
-    "sentence": ". Ms. Watson is now telling us more in detail about what we can do to.",
+    "trainingId": "parker-30",
+    "sentence": "Ms. Watson is now telling us in detail about what we can do to help.",
+    "translation": "華生女士現在正向我們詳細說明我們可以做些什麼來提供協助。",
     "chunks": [
       {
         "text": "Ms. Watson",
@@ -703,14 +649,8 @@
         "type": "verb"
       },
       {
-        "text": "us more",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "in detail about what we can do to.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "us what we can do to help.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -719,17 +659,18 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「is now telling」為現在進行式主動語態 (Present Continuous Active)。主詞為「Ms. Watson」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在進行式主動語態 (is telling)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-30-q23",
-    "sentence": ". In today's meeting, we are going to talk about the third item on the agenda.",
+    "trainingId": "parker-30",
+    "sentence": "In today's meeting, we are going to talk about the third item on the agenda.",
+    "translation": "在今天的會議中，我們將討論議程上的第三個項目。",
     "chunks": [
       {
-        "text": "In today's meeting",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "In today's meeting,",
+        "isTargetSlot": false
       },
       {
         "text": "we",
@@ -737,28 +678,29 @@
         "type": "subject"
       },
       {
-        "text": "are going",
+        "text": "are going to talk about",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "to talk about the third item on the agenda.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "the third item on the agenda.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 2,
     "correctAnswers": {
       "voice": "active",
-      "time": "present",
-      "aspect": "continuous"
+      "time": "future",
+      "aspect": "simple"
     },
-    "grammarNote": "「are going」為現在進行式主動語態 (Present Continuous Active)。主詞為「we」。",
-    "trainingId": "parker-30"
+    "grammarNote": "be going to 未來簡單式 (are going to talk about)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-30-q24",
-    "sentence": ". The heavy snowfall will unfortunately delay all flights scheduled to take off for Amsterdam until.",
+    "trainingId": "parker-30",
+    "sentence": "Heavy snowfall will delay all flights scheduled for Amsterdam.",
+    "translation": "強降雪不幸將導致所有原定飛往阿姆斯特丹的航班發生延誤。",
     "chunks": [
       {
         "text": "The heavy snowfall",
@@ -766,19 +708,13 @@
         "type": "subject"
       },
       {
-        "text": "will unfortunately delay",
+        "text": "will delay",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "all flights scheduled",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "to take off for Amsterdam until.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "all flights scheduled for Amsterdam.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -787,12 +723,14 @@
       "time": "future",
       "aspect": "simple"
     },
-    "grammarNote": "「will unfortunately delay」為未來簡單式主動語態 (Future Simple Active)。主詞為「The heavy snowfall」。",
-    "trainingId": "parker-30"
+    "grammarNote": "未來簡單式主動語態 (will delay)。",
+    "topic": "Travel"
   },
   {
     "id": "parker-30-q25",
-    "sentence": ". Our company plans to build a new larger factory on the outskirts of the city,.",
+    "trainingId": "parker-30",
+    "sentence": "Our company plans to build a new, larger factory on the outskirts of the city.",
+    "translation": "我們公司計畫在市郊建造一座規模更大的新工廠。",
     "chunks": [
       {
         "text": "Our company",
@@ -800,14 +738,13 @@
         "type": "subject"
       },
       {
-        "text": "plans",
+        "text": "plans to build",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "to build a new larger factory on the outskirts of the city,.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "a larger factory on outskirts.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -816,32 +753,31 @@
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「plans」為現在簡單式主動語態 (Present Simple Active)。主詞為「Our company」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在簡單式動詞片語 (plans to build)。",
+    "topic": "Manufacturing"
   },
   {
     "id": "parker-30-q26",
-    "sentence": ". Should you choose to accept this offer of employment, please remember to notify us within.",
+    "trainingId": "parker-30",
+    "sentence": "Should you accept this employment offer, please notify us within two days.",
+    "translation": "如果您決定接受這份錄取聘任，請記得在兩天之內通知我們。",
     "chunks": [
       {
-        "text": "Should",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "Should you accept offer,",
+        "isTargetSlot": false
       },
       {
-        "text": "you",
-        "isTargetSlot": false,
-        "type": "subject"
+        "text": "please",
+        "isTargetSlot": false
       },
       {
-        "text": "choose",
+        "text": "notify",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "to accept this offer of employment, please remember to notify us within.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "us within two days.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 2,
@@ -850,46 +786,44 @@
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「choose」為現在簡單式主動語態 (Present Simple Active)。主詞為「you」。",
-    "trainingId": "parker-30"
+    "grammarNote": "祈使句原形動詞 (notify)。",
+    "topic": "Personnel"
   },
   {
     "id": "parker-30-q27",
-    "sentence": ". According to our company policies, the security guards at the entrance will have to verify.",
+    "trainingId": "parker-30",
+    "sentence": "According to company policy, guards at entrance will have to verify badges.",
+    "translation": "依照公司政策，入口處的警衛必須查驗所有進入大樓人員的證件。",
     "chunks": [
       {
-        "text": "According to our company policies",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "the security guards at the entrance",
+        "text": "Security guards at the entrance",
         "isTargetSlot": false,
         "type": "subject"
       },
       {
-        "text": "will have",
+        "text": "will have to verify",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "to verify.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "employee badges upon entry.",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
       "time": "future",
       "aspect": "simple"
     },
-    "grammarNote": "「will have」為未來簡單式主動語態 (Future Simple Active)。主詞為「the security guards at the entrance」。",
-    "trainingId": "parker-30"
+    "grammarNote": "未來簡單式義務動詞 (will have to verify)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-30-q28",
-    "sentence": ". I'm interested in your weight loss program, and I'm wondering what I need to do.",
+    "trainingId": "parker-30",
+    "sentence": "I'm interested in your weight loss program and what I need to do to enroll.",
+    "translation": "我對貴中心的減重計畫很感興趣，想知道我需要辦理哪些手續來報名。",
     "chunks": [
       {
         "text": "I",
@@ -897,19 +831,13 @@
         "type": "subject"
       },
       {
-        "text": "'m",
+        "text": "'m interested in",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "interested",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "in your weight loss program, and I'm wondering what I need to do.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "your weight loss program and enrollment.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -918,75 +846,67 @@
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「'm」為現在簡單式主動語態 (Present Simple Active)。主詞為「I」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在簡單式形容詞片語 ('m interested in)。",
+    "topic": "Health"
   },
   {
     "id": "parker-30-q29",
-    "sentence": ". Sorry to call you after office hours, but I'm wondering if you have finished designing.",
+    "trainingId": "parker-30",
+    "sentence": "Sorry to call after hours, but I wonder if you finished the design layout.",
+    "translation": "抱歉下班時間打擾您，但我很想知道您是否已經完成了版面設計。",
     "chunks": [
       {
-        "text": "Sorry to call you after office hours, but",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "I",
+        "text": "Sorry to call after hours, but I",
         "isTargetSlot": false,
         "type": "subject"
       },
       {
-        "text": "'m wondering",
+        "text": "wonder",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "if you have finished designing.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "if you finished the design layout.",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
-      "aspect": "continuous"
+      "aspect": "simple"
     },
-    "grammarNote": "「'm wondering」為現在進行式主動語態 (Present Continuous Active)。主詞為「I」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在簡單式主動語態 (wonder)。",
+    "topic": "Technical areas"
   },
   {
     "id": "parker-30-q30",
-    "sentence": ". To be more environmental friendly, our hotel guests throughout the globe are being greeted by.",
+    "trainingId": "parker-30",
+    "sentence": "To be environmentally friendly, hotel guests are greeted by paperless check-in.",
+    "translation": "為了更加注重環保，全球各地的飯店住客現在都受到無紙化電子報到的熱情歡迎。",
     "chunks": [
       {
-        "text": "To be more environmental friendly",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "our hotel guests throughout the globe",
+        "text": "To be eco-friendly, hotel guests",
         "isTargetSlot": false,
         "type": "subject"
       },
       {
-        "text": "are being greeted",
+        "text": "are greeted by",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "by.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "paperless check-in.",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "passive",
       "time": "present",
-      "aspect": "continuous"
+      "aspect": "simple"
     },
-    "grammarNote": "「are being greeted」為現在進行式被動語態 (Present Continuous Passive)。主詞為「our hotel guests throughout the globe」。",
-    "trainingId": "parker-30"
+    "grammarNote": "現在簡單式被動語態 (are greeted)。",
+    "topic": "Travel"
   }
 ]

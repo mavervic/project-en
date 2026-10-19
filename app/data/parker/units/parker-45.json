@@ -1,7 +1,9 @@
 [
   {
     "id": "parker-45-q01",
+    "trainingId": "parker-45",
     "sentence": "The regional sales director will announce the quarterly bonus targets tomorrow.",
+    "translation": "區域業務總監將於明天正式宣布本季度的業績獎金發放考核標準。",
     "chunks": [
       {
         "text": "The regional sales director",
@@ -15,8 +17,7 @@
       },
       {
         "text": "the quarterly bonus targets tomorrow.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -25,12 +26,14 @@
       "time": "future",
       "aspect": "simple"
     },
-    "grammarNote": "「will announce」為未來簡單式主動語態 (Future Simple Active)。主詞為「The regional sales director」。",
-    "trainingId": "parker-45"
+    "grammarNote": "未來簡單式主動語態 (will announce)。",
+    "topic": "Personnel"
   },
   {
     "id": "parker-45-q02",
+    "trainingId": "parker-45",
     "sentence": "All defective hardware components were replaced by the maintenance contractor yesterday.",
+    "translation": "所有故障的硬體零件已於昨天全數由外包維修廠商更換完畢。",
     "chunks": [
       {
         "text": "All defective hardware components",
@@ -38,14 +41,13 @@
         "type": "subject"
       },
       {
-        "text": "were replaced",
+        "text": "were replaced by",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "by the maintenance contractor yesterday.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "the maintenance contractor yesterday.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -54,12 +56,14 @@
       "time": "past",
       "aspect": "simple"
     },
-    "grammarNote": "「were replaced」為過去簡單式被動語態 (Past Simple Passive)。主詞為「All defective hardware components」。",
-    "trainingId": "parker-45"
+    "grammarNote": "過去簡單式被動語態 (were replaced by)。",
+    "topic": "Manufacturing"
   },
   {
     "id": "parker-45-q03",
+    "trainingId": "parker-45",
     "sentence": "The engineering team is testing the autonomous navigation system in the warehouse.",
+    "translation": "工程研發團隊目前正在倉庫現場實地測試最新研發的自動導航系統。",
     "chunks": [
       {
         "text": "The engineering team",
@@ -73,8 +77,7 @@
       },
       {
         "text": "the autonomous navigation system in the warehouse.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -83,12 +86,14 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「is testing」為現在進行式主動語態 (Present Continuous Active)。主詞為「The engineering team」。",
-    "trainingId": "parker-45"
+    "grammarNote": "現在進行式主動語態 (is testing)。",
+    "topic": "Technical areas"
   },
   {
     "id": "parker-45-q04",
+    "trainingId": "parker-45",
     "sentence": "New safety guidelines have been distributed to all factory employees this morning.",
+    "translation": "最新修訂的廠區工安指引守則已於今天上午全面發放給全體工廠員工。",
     "chunks": [
       {
         "text": "New safety guidelines",
@@ -96,14 +101,13 @@
         "type": "subject"
       },
       {
-        "text": "have been distributed",
+        "text": "have been distributed to",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "to all factory employees this morning.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "all factory employees this morning.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -112,12 +116,14 @@
       "time": "present",
       "aspect": "perfect"
     },
-    "grammarNote": "「have been distributed」為現在完成式被動語態 (Present Perfect Passive)。主詞為「New safety guidelines」。",
-    "trainingId": "parker-45"
+    "grammarNote": "現在完成式被動語態 (have been distributed to)。",
+    "topic": "Manufacturing"
   },
   {
     "id": "parker-45-q05",
+    "trainingId": "parker-45",
     "sentence": "The client signed the revised commercial lease agreement after thorough legal review.",
+    "translation": "在經過嚴格周詳的法律條款審閱之後，客戶正式簽署了修訂後的商務租賃合約。",
     "chunks": [
       {
         "text": "The client",
@@ -130,14 +136,8 @@
         "type": "verb"
       },
       {
-        "text": "the revised commercial lease agreement",
-        "isTargetSlot": false,
-        "type": "object"
-      },
-      {
-        "text": "after thorough legal review.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "the revised commercial lease agreement after review.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -146,12 +146,14 @@
       "time": "past",
       "aspect": "simple"
     },
-    "grammarNote": "「signed」為過去簡單式主動語態 (Past Simple Active)。主詞為「The client」。",
-    "trainingId": "parker-45"
+    "grammarNote": "過去簡單式主動語態 (signed)。",
+    "topic": "General Business"
   },
   {
     "id": "parker-45-q06",
+    "trainingId": "parker-45",
     "sentence": "The shipping container is being loaded with heavy industrial machinery at port.",
+    "translation": "大型貨櫃正在港口碼頭吊裝裝載重型工業機械設備。",
     "chunks": [
       {
         "text": "The shipping container",
@@ -159,14 +161,13 @@
         "type": "subject"
       },
       {
-        "text": "is being loaded",
+        "text": "is being loaded with",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "with heavy industrial machinery at port.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "heavy industrial machinery at port.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -175,12 +176,14 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「is being loaded」為現在進行式被動語態 (Present Continuous Passive)。主詞為「The shipping container」。",
-    "trainingId": "parker-45"
+    "grammarNote": "現在進行式被動語態 (is being loaded with)。",
+    "topic": "Manufacturing"
   },
   {
     "id": "parker-45-q07",
+    "trainingId": "parker-45",
     "sentence": "Our customer support department handles hundreds of international inquiries daily.",
+    "translation": "我們的客戶技術支援部門每天需親切處理數百件來自全球各地的諮詢洽詢。",
     "chunks": [
       {
         "text": "Our customer support department",
@@ -194,8 +197,7 @@
       },
       {
         "text": "hundreds of international inquiries daily.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -204,12 +206,14 @@
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「handles」為現在簡單式主動語態 (Present Simple Active)。主詞為「Our customer support department」。",
-    "trainingId": "parker-45"
+    "grammarNote": "現在簡單式第三人稱單數主動語態 (handles)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-45-q08",
+    "trainingId": "parker-45",
     "sentence": "The annual financial audit will be conducted by an external accounting firm.",
+    "translation": "公司年度財務帳目專案稽核將由一家聲譽卓著的獨立外部會計師事務所負責執行。",
     "chunks": [
       {
         "text": "The annual financial audit",
@@ -217,14 +221,13 @@
         "type": "subject"
       },
       {
-        "text": "will be conducted",
+        "text": "will be conducted by",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "by an external accounting firm.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "an external accounting firm.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -233,12 +236,14 @@
       "time": "future",
       "aspect": "simple"
     },
-    "grammarNote": "「will be conducted」為未來簡單式被動語態 (Future Simple Passive)。主詞為「The annual financial audit」。",
-    "trainingId": "parker-45"
+    "grammarNote": "未來簡單式被動語態 (will be conducted by)。",
+    "topic": "Financing & Budgeting"
   },
   {
     "id": "parker-45-q09",
+    "trainingId": "parker-45",
     "sentence": "Several passengers are boarding the express commuter train at platform three.",
+    "translation": "數名趕時間的旅客正在第三月台依序登上直達通勤城際列車。",
     "chunks": [
       {
         "text": "Several passengers",
@@ -252,8 +257,7 @@
       },
       {
         "text": "the express commuter train at platform three.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -262,12 +266,14 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「are boarding」為現在進行式主動語態 (Present Continuous Active)。主詞為「Several passengers」。",
-    "trainingId": "parker-45"
+    "grammarNote": "現在進行式主動語態 (are boarding)。",
+    "topic": "Travel"
   },
   {
     "id": "parker-45-q10",
+    "trainingId": "parker-45",
     "sentence": "The senior marketing specialist has organized a series of promotional webinars.",
+    "translation": "資深行銷企劃專家已成功統籌籌辦了一系列線上的行銷推廣專題研討講座。",
     "chunks": [
       {
         "text": "The senior marketing specialist",
@@ -281,8 +287,7 @@
       },
       {
         "text": "a series of promotional webinars.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -291,12 +296,14 @@
       "time": "present",
       "aspect": "perfect"
     },
-    "grammarNote": "「has organized」為現在完成式主動語態 (Present Perfect Active)。主詞為「The senior marketing specialist」。",
-    "trainingId": "parker-45"
+    "grammarNote": "現在完成式主動語態 (has organized)。",
+    "topic": "Corporate Development"
   },
   {
     "id": "parker-45-q11",
+    "trainingId": "parker-45",
     "sentence": "Confidential patient documents were archived in a secure digital vault.",
+    "translation": "極具機密隱私的病患醫療病歷文件已被妥善歸檔於高安全規格的加密數位保險庫中。",
     "chunks": [
       {
         "text": "Confidential patient documents",
@@ -304,14 +311,13 @@
         "type": "subject"
       },
       {
-        "text": "were archived",
+        "text": "were archived in",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "in a secure digital vault.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "a secure digital vault.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -320,12 +326,14 @@
       "time": "past",
       "aspect": "simple"
     },
-    "grammarNote": "「were archived」為過去簡單式被動語態 (Past Simple Passive)。主詞為「Confidential patient documents」。",
-    "trainingId": "parker-45"
+    "grammarNote": "過去簡單式被動語態 (were archived in)。",
+    "topic": "Health"
   },
   {
     "id": "parker-45-q12",
+    "trainingId": "parker-45",
     "sentence": "The flight attendant will demonstrate essential aircraft safety procedures shortly.",
+    "translation": "客艙空服員稍後將在客艙前方親自為全體乘客示範緊急逃生機上安全操作程序。",
     "chunks": [
       {
         "text": "The flight attendant",
@@ -339,8 +347,7 @@
       },
       {
         "text": "essential aircraft safety procedures shortly.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -349,12 +356,14 @@
       "time": "future",
       "aspect": "simple"
     },
-    "grammarNote": "「will demonstrate」為未來簡單式主動語態 (Future Simple Active)。主詞為「The flight attendant」。",
-    "trainingId": "parker-45"
+    "grammarNote": "未來簡單式主動語態 (will demonstrate)。",
+    "topic": "Travel"
   },
   {
     "id": "parker-45-q13",
+    "trainingId": "parker-45",
     "sentence": "A modern solar installation is being inspected by the local utility inspector.",
+    "translation": "一座新型屋頂太陽能光電設備目前正由當地公用電力事業檢驗員進行嚴格安全驗收。",
     "chunks": [
       {
         "text": "A modern solar installation",
@@ -362,14 +371,13 @@
         "type": "subject"
       },
       {
-        "text": "is being inspected",
+        "text": "is being inspected by",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "by the local utility inspector.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "the local utility inspector.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -378,12 +386,14 @@
       "time": "present",
       "aspect": "continuous"
     },
-    "grammarNote": "「is being inspected」為現在進行式被動語態 (Present Continuous Passive)。主詞為「A modern solar installation」。",
-    "trainingId": "parker-45"
+    "grammarNote": "現在進行式被動語態 (is being inspected by)。",
+    "topic": "Technical areas"
   },
   {
     "id": "parker-45-q14",
+    "trainingId": "parker-45",
     "sentence": "The human resources committee scheduled interviews with all five final candidates.",
+    "translation": "人力資源甄選委員會已完成排定與進入最終決選的全部五位優秀應試者的面試時間。",
     "chunks": [
       {
         "text": "The human resources committee",
@@ -391,28 +401,29 @@
         "type": "subject"
       },
       {
-        "text": "scheduled",
+        "text": "scheduled interviews with",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "interviews with all five final candidates.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "all five final candidates.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
-      "time": "present",
+      "time": "past",
       "aspect": "simple"
     },
-    "grammarNote": "「scheduled」為現在簡單式主動語態 (Present Simple Active)。主詞為「The human resources committee」。",
-    "trainingId": "parker-45"
+    "grammarNote": "過去簡單式動詞片語 (scheduled interviews with)。",
+    "topic": "Personnel"
   },
   {
     "id": "parker-45-q15",
+    "trainingId": "parker-45",
     "sentence": "All laboratory specimens have been verified according to international standards.",
+    "translation": "所有臨床實驗室送檢檢體均已按照嚴格的國際標準規範逐一核驗完成。",
     "chunks": [
       {
         "text": "All laboratory specimens",
@@ -426,8 +437,7 @@
       },
       {
         "text": "according to international standards.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -436,7 +446,7 @@
       "time": "present",
       "aspect": "perfect"
     },
-    "grammarNote": "「have been verified」為現在完成式被動語態 (Present Perfect Passive)。主詞為「All laboratory specimens」。",
-    "trainingId": "parker-45"
+    "grammarNote": "現在完成式被動語態 (have been verified)。",
+    "topic": "Health"
   }
 ]

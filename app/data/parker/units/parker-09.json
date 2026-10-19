@@ -1,7 +1,9 @@
 [
   {
     "id": "parker-09-q01",
+    "trainingId": "parker-09",
     "sentence": "The client contacted me this morning and asked if it was too late to alter the design.",
+    "translation": "客戶今天早上聯絡了我，詢問現在修改設計是否為時已晚。",
     "chunks": [
       {
         "text": "The client",
@@ -9,19 +11,17 @@
         "type": "subject"
       },
       {
-        "text": "contacted",
+        "text": "contacted me this morning",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "me this morning and asked if it was too late",
-        "isTargetSlot": false,
-        "type": "object"
+        "text": "and asked",
+        "isTargetSlot": false
       },
       {
-        "text": "to alter the design.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "if it was too late to alter the design.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -30,51 +30,48 @@
       "time": "past",
       "aspect": "simple"
     },
-    "grammarNote": "「contacted」為過去簡單式主動語態 (Past Simple Active)。主詞為「The client」。",
-    "trainingId": "parker-09"
+    "grammarNote": "過去簡單式主動語態 (contacted)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-09-q02",
-    "sentence": "Hello I have a reservation for a for night stay it should be under the name George McKenzie hello I have a reservation for a fornight stay it should be under the name George McKenzie George McKenzie.",
+    "trainingId": "parker-09",
+    "sentence": "Hello, I have a reservation for a four-night stay under the name George McKenzie.",
+    "translation": "您好，我預訂了入住四個晚上，登記姓名應該是喬治・麥肯齊。",
     "chunks": [
       {
-        "text": "Hello",
-        "isTargetSlot": false,
-        "type": "clause"
-      },
-      {
-        "text": "I",
+        "text": "Hello, I",
         "isTargetSlot": false,
         "type": "subject"
       },
       {
-        "text": "have",
+        "text": "have a reservation",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "a reservation",
-        "isTargetSlot": false,
-        "type": "object"
+        "text": "for a four-night stay",
+        "isTargetSlot": false
       },
       {
-        "text": "for a for night stay it should be under the name George McKenzie hello I have a reservation for a fornight stay it should be under the name George McKenzie George McKenzie.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "under the name George McKenzie.",
+        "isTargetSlot": false
       }
     ],
-    "targetSlotIndex": 2,
+    "targetSlotIndex": 1,
     "correctAnswers": {
       "voice": "active",
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「have」為現在簡單式主動語態 (Present Simple Active)。主詞為「I」。",
-    "trainingId": "parker-09"
+    "grammarNote": "現在簡單式主動語態 (have)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-09-q03",
-    "sentence": "The results of the market analysis showed a lot of potential demand for our services in Singapore.",
+    "trainingId": "parker-09",
+    "sentence": "The results of the market analysis showed a lot of potential demand in Singapore.",
+    "translation": "市場分析的結果顯示我們在新加坡的服務有著龐大的潛在需求。",
     "chunks": [
       {
         "text": "The results of the market analysis",
@@ -88,13 +85,11 @@
       },
       {
         "text": "a lot of potential demand",
-        "isTargetSlot": false,
-        "type": "object"
+        "isTargetSlot": false
       },
       {
-        "text": "for our services in Singapore.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "in Singapore.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -103,12 +98,14 @@
       "time": "past",
       "aspect": "simple"
     },
-    "grammarNote": "「showed」為過去簡單式主動語態 (Past Simple Active)。主詞為「The results of the market analysis」。",
-    "trainingId": "parker-09"
+    "grammarNote": "過去簡單式主動語態 (showed)。",
+    "topic": "Offices"
   },
   {
     "id": "parker-09-q04",
-    "sentence": "Visitors are encouraged to take advantage of the guided tour starting every hour on the hour.",
+    "trainingId": "parker-09",
+    "sentence": "Visitors are encouraged to take advantage of the guided tour starting every hour.",
+    "translation": "鼓勵參觀訪客多加利用每個整點出發的導覽行程。",
     "chunks": [
       {
         "text": "Visitors",
@@ -116,14 +113,17 @@
         "type": "subject"
       },
       {
-        "text": "are encouraged",
+        "text": "are encouraged to take advantage of",
         "isTargetSlot": true,
         "type": "verb"
       },
       {
-        "text": "to take advantage of the guided tour starting every hour on the hour.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "the guided tour",
+        "isTargetSlot": false
+      },
+      {
+        "text": "starting every hour.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -132,12 +132,14 @@
       "time": "present",
       "aspect": "simple"
     },
-    "grammarNote": "「are encouraged」為現在簡單式被動語態 (Present Simple Passive)。主詞為「Visitors」。",
-    "trainingId": "parker-09"
+    "grammarNote": "現在簡單式被動語態 (are encouraged)。",
+    "topic": "Entertainment"
   },
   {
     "id": "parker-09-q05",
+    "trainingId": "parker-09",
     "sentence": "The assembly plants in Mumbai will be closed for a week for the annual safety inspection.",
+    "translation": "位於孟買的組裝廠將停工關閉一週，進行年度安全檢查。",
     "chunks": [
       {
         "text": "The assembly plants in Mumbai",
@@ -150,9 +152,12 @@
         "type": "verb"
       },
       {
-        "text": "for a week for the annual safety inspection.",
-        "isTargetSlot": false,
-        "type": "clause"
+        "text": "for a week",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for the annual safety inspection.",
+        "isTargetSlot": false
       }
     ],
     "targetSlotIndex": 1,
@@ -161,7 +166,7 @@
       "time": "future",
       "aspect": "simple"
     },
-    "grammarNote": "「will be closed」為未來簡單式被動語態 (Future Simple Passive)。主詞為「The assembly plants in Mumbai」。",
-    "trainingId": "parker-09"
+    "grammarNote": "未來簡單式被動語態 (will be closed)。",
+    "topic": "Manufacturing"
   }
 ]
