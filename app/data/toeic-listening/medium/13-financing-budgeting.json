@@ -1,0 +1,826 @@
+[
+  {
+    "id": "listening-13-medium-01",
+    "trainingId": "listening-13-medium",
+    "sentence": "Although raw material inflation escalated unexpectedly, the corporate finance committee managed operating costs within budget parameters.",
+    "translation": "儘管原物料通膨出現預期之外的攀升，企業財務委員會依然將營運成本控制在預算範圍內。",
+    "chunks": [
+      {
+        "text": "Although raw material inflation escalated unexpectedly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate finance committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "managed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "operating costs within budget parameters."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "managed (控管/駕馭) 為過去簡單式主動語態，承接讓步轉折子句。"
+  },
+  {
+    "id": "listening-13-medium-02",
+    "trainingId": "listening-13-medium",
+    "sentence": "Because discrepancy indicators were identified in bookkeeping ledgers, an independent external forensic audit was ordered immediately.",
+    "translation": "由於在會計帳簿中發現了異常數據指標，公司隨即委任獨立的外部鑑識會計機構進行查帳審計。",
+    "chunks": [
+      {
+        "text": "Because discrepancy indicators were identified in ledgers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "an independent external forensic audit",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was ordered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediately."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "審計被下令執行，was ordered 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-medium-03",
+    "trainingId": "listening-13-medium",
+    "sentence": "All departmental managers must balance quarterly expenditure budgets before supplemental capital equipment allowances are approved.",
+    "translation": "在核准追加資本設備預算配額之前，所有部門經理必須先結平各季度的支出預算。",
+    "chunks": [
+      {
+        "text": "All departmental managers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must balance",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly budgets before equipment allowances are approved."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "must balance 表預算平衡義務，情態助動詞主動語態。"
+  },
+  {
+    "id": "listening-13-medium-04",
+    "trainingId": "listening-13-medium",
+    "sentence": "While tax advisors were reviewing statutory deduction provisions, the corporate comptroller submitted annual corporate revenue filings.",
+    "translation": "在稅務顧問審查法定扣抵扣減規定的同時，企業主計長已提交了年度公司營收所得稅申報書。",
+    "chunks": [
+      {
+        "text": "While tax advisors were reviewing deduction provisions,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate comptroller",
+        "isTargetSlot": false
+      },
+      {
+        "text": "submitted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annual corporate revenue filings."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "submitted (提交) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-medium-05",
+    "trainingId": "listening-13-medium",
+    "sentence": "Quarterly shareholder dividends are deposited electronically into registered investor brokerage accounts on the final trading day.",
+    "translation": "季度股東股利在最後一個交易日以電子轉帳方式存入登記投資人的證券交割帳戶中。",
+    "chunks": [
+      {
+        "text": "Quarterly shareholder dividends",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are deposited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "electronically into brokerage accounts on the final day."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "股息被存入，are deposited 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-13-medium-06",
+    "trainingId": "listening-13-medium",
+    "sentence": "The financial planning director is preparing capital expenditure forecasts to accommodate corporate office renovations.",
+    "translation": "財務規劃總監正在編制資本支出預測，以配合企業辦公室整修搬遷工程的需求。",
+    "chunks": [
+      {
+        "text": "The financial planning director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is preparing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "capital expenditure forecasts to accommodate renovations."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is preparing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-13-medium-07",
+    "trainingId": "listening-13-medium",
+    "sentence": "Unless commercial bank financing is finalized by Friday, real estate acquisition contracts will expire without execution.",
+    "translation": "除非在週五前完成商業銀行融資申貸手續，否則不動產收購合約將屆期失效無法執行。",
+    "chunks": [
+      {
+        "text": "Unless commercial bank financing is finalized by Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "real estate acquisition contracts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will expire",
+        "isTargetSlot": true
+      },
+      {
+        "text": "without execution."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will expire 表未來合約失效，未來簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-medium-08",
+    "trainingId": "listening-13-medium",
+    "sentence": "Although foreign exchange volatility impacted overseas margins, domestic revenue diversification cushioned financial performance.",
+    "translation": "儘管外匯劇烈波動侵蝕了海外利潤率，國內多元化的營收管道依然穩住了整體的財務表現。",
+    "chunks": [
+      {
+        "text": "Although foreign exchange volatility impacted margins,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "domestic revenue diversification",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cushioned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "financial performance."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "cushioned (緩衝/支撐) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-13-medium-09",
+    "trainingId": "listening-13-medium",
+    "sentence": "The annual audited balance sheet was released to major institutional financial analysts early this morning.",
+    "translation": "年度經會計師查核簽證的資產負債表已於今早公布給主要機構財經分析師。",
+    "chunks": [
+      {
+        "text": "The annual audited balance sheet",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to major financial analysts early this morning."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "資產負債表被發布，was released 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-medium-10",
+    "trainingId": "listening-13-medium",
+    "sentence": "Before approving the commercial loan refinancing, the bank's credit risk committee reviewed revenue projections.",
+    "translation": "在核准商業貸款借新還舊轉貸方案之前，銀行的授信風險委員會詳細審查了公司的營收獲利預測。",
+    "chunks": [
+      {
+        "text": "Before approving the commercial loan refinancing,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the bank's credit risk committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reviewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "revenue projections."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reviewed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-medium-11",
+    "trainingId": "listening-13-medium",
+    "sentence": "Corporate dividend policy revisions will be discussed by board members during the upcoming executive retreat.",
+    "translation": "企業股利政策修訂案將於即將召開的高階主管共識營期間由董事會成員進行研商討論。",
+    "chunks": [
+      {
+        "text": "Corporate dividend policy revisions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be discussed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by board members during the upcoming retreat."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "政策將被討論，will be discussed 為未來被動式。"
+  },
+  {
+    "id": "listening-13-medium-12",
+    "trainingId": "listening-13-medium",
+    "sentence": "Because operating expenses surged unexpectedly in the logistics division, the finance department enforced strict travel curbs.",
+    "translation": "由於物流部門營運支出出現預期之外的暴增，財務部下達了嚴格的差旅報銷限縮管制令。",
+    "chunks": [
+      {
+        "text": "Because operating expenses surged in logistics,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the finance department",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enforced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "strict travel curbs."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "enforced (實施/強制執行) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-medium-13",
+    "trainingId": "listening-13-medium",
+    "sentence": "A revolving commercial credit line has been established with an international syndicate to support global acquisitions.",
+    "translation": "公司已與一家國際聯貸銀行團建立了一筆循環商業信用額度，以支援全球併購擴張布局。",
+    "chunks": [
+      {
+        "text": "A revolving commercial credit line",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been established",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with an international syndicate to support acquisitions."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "額度已被設立，has been established 為現在完成被動式。"
+  },
+  {
+    "id": "listening-13-medium-14",
+    "trainingId": "listening-13-medium",
+    "sentence": "The treasury manager rebalances foreign currency holdings to hedge against sudden macroeconomic shocks.",
+    "translation": "財務資金經理定期重新配置外幣持有部位，以規避突發性總體經濟波動衝擊的風險。",
+    "chunks": [
+      {
+        "text": "The treasury manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "rebalances",
+        "isTargetSlot": true
+      },
+      {
+        "text": "currency holdings to hedge against sudden shocks."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "rebalances (重新平衡調整) 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-medium-15",
+    "trainingId": "listening-13-medium",
+    "sentence": "Tax liability deductions were calculated by senior accountants before final fiscal corporate filings were transmitted.",
+    "translation": "在送出最終會計年度公司納稅申報之前，資深會計師已精確計算出了應納稅額的可扣抵項目。",
+    "chunks": [
+      {
+        "text": "Tax liability deductions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were calculated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by senior accountants before final filings were transmitted."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "稅額被計算，were calculated 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-medium-16",
+    "trainingId": "listening-13-medium",
+    "sentence": "Rather than issuing additional corporate debt, the board financed capital acquisitions through accumulated cash reserves.",
+    "translation": "董事會沒有額外發行公司債籌資，而是動用累積的自有現金儲備支應了資本收購支出。",
+    "chunks": [
+      {
+        "text": "Rather than issuing additional corporate debt,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the board",
+        "isTargetSlot": false
+      },
+      {
+        "text": "financed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "capital acquisitions through cash reserves."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "financed (資助/融通) 為過去簡單式主動語態，對比 Rather than。"
+  },
+  {
+    "id": "listening-13-medium-17",
+    "trainingId": "listening-13-medium",
+    "sentence": "Corporate expenditure accounts are audited quarterly by accredited external accounting firms to assure regulatory compliance.",
+    "translation": "企業支出帳戶每季均由合格的外部會計師事務所查核審計，以確保完全符合法規規範要求。",
+    "chunks": [
+      {
+        "text": "Corporate expenditure accounts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are audited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly by external accounting firms to assure compliance."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "帳戶被審計，are audited 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-13-medium-18",
+    "trainingId": "listening-13-medium",
+    "sentence": "The senior budget analyst is updating the five-year capital expenditure forecast following tax rate adjustments.",
+    "translation": "在稅率修訂調整之後，資深預算分析師正在更新未來五年的資本支出預測模型。",
+    "chunks": [
+      {
+        "text": "The senior budget analyst",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is updating",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the five-year forecast following tax adjustments."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is updating 表當前正持續更新中，現在進行式。"
+  },
+  {
+    "id": "listening-13-medium-19",
+    "trainingId": "listening-13-medium",
+    "sentence": "Employee stock option allocations will be formalized during the upcoming executive compensation meeting next week.",
+    "translation": "員工認股權分配方案將於下週即將召開的高階薪酬委員會上正式敲定頒布。",
+    "chunks": [
+      {
+        "text": "Employee stock option allocations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be formalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "during the compensation meeting next week."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "分配將被正式定案，will be formalized 為未來被動式。"
+  },
+  {
+    "id": "listening-13-medium-20",
+    "trainingId": "listening-13-medium",
+    "sentence": "Even though commercial lending interest rates spiked dramatically, the company secured affordable fixed-rate financing terms.",
+    "translation": "即便商業借貸利率大幅飆升，該公司依然順利爭取到了平價合宜的固定利率融資條件。",
+    "chunks": [
+      {
+        "text": "Even though commercial interest rates spiked dramatically,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "secured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "affordable fixed-rate financing terms."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "secured (爭取到/確保) 為過去簡單式主動語態，轉折 Even though。"
+  },
+  {
+    "id": "listening-13-medium-21",
+    "trainingId": "listening-13-medium",
+    "sentence": "Internal accounting controls have been overhauled by compliance officers following recommendations from regulatory inspectors.",
+    "translation": "在監管機構審查員提出改善建言後，合規主管已對內部會計控制機制進行了全面的翻修革新。",
+    "chunks": [
+      {
+        "text": "Internal accounting controls",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been overhauled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by compliance officers following inspectors' recommendations."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "機制已被翻修，have been overhauled 為現在完成被動式。"
+  },
+  {
+    "id": "listening-13-medium-22",
+    "trainingId": "listening-13-medium",
+    "sentence": "The corporate treasurer balances liquid cash holdings against long-term government bond investment yields.",
+    "translation": "公司財務主管在流動性現金部位與長期公債投資殖利率之間維持嚴密的平衡配置。",
+    "chunks": [
+      {
+        "text": "The corporate treasurer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "balances",
+        "isTargetSlot": true
+      },
+      {
+        "text": "liquid cash holdings against bond yields."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "balances 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-medium-23",
+    "trainingId": "listening-13-medium",
+    "sentence": "Unamortized capital depreciation expenses were reconciled by audit teams prior to publication of the annual financial report.",
+    "translation": "未攤銷的資本折舊費用在年度財務報告正式對外公布前，已由審計小組全數調節對帳無誤。",
+    "chunks": [
+      {
+        "text": "Unamortized capital depreciation expenses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were reconciled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by audit teams prior to publication of the report."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "費用被調節對帳，were reconciled 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-medium-24",
+    "trainingId": "listening-13-medium",
+    "sentence": "In order to reduce short-term interest obligations, the financial director repaid expensive credit facilities early.",
+    "translation": "為了減輕短期利息負擔，財務總監提前償還了利息費用較高昂的信用借貸部位。",
+    "chunks": [
+      {
+        "text": "In order to reduce short-term interest obligations,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the financial director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "repaid",
+        "isTargetSlot": true
+      },
+      {
+        "text": "expensive credit facilities early."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "repaid (償還) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-medium-25",
+    "trainingId": "listening-13-medium",
+    "sentence": "Supplemental research grants will be disbursed to product development divisions upon achievement of key milestones.",
+    "translation": "產品研發部門一旦達成關鍵技術里程碑，額外的專案研究補助款即會撥發到位。",
+    "chunks": [
+      {
+        "text": "Supplemental research grants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be disbursed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to development divisions upon achievement of milestones."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "補助金將被撥發，will be disbursed 為未來被動式。"
+  },
+  {
+    "id": "listening-13-medium-26",
+    "trainingId": "listening-13-medium",
+    "sentence": "The senior accountant reconciled international subsidiary bank balances before generating final quarterly consolidated statements.",
+    "translation": "資深會計師在產出最終的季度合併財務報表之前，調解核對了所有海外子公司的銀行餘額對帳單。",
+    "chunks": [
+      {
+        "text": "The senior accountant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reconciled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "subsidiary bank balances before generating statements."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reconciled 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-13-medium-27",
+    "trainingId": "listening-13-medium",
+    "sentence": "Corporate petty cash allocations were audited by financial controllers across regional branch offices last week.",
+    "translation": "上週各區域分公司的零用金撥付與報銷帳目均已接受了財務主計人員的專案查核。",
+    "chunks": [
+      {
+        "text": "Corporate petty cash allocations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were audited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by financial controllers across regional branches."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "零用金被審查，were audited 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-13-medium-28",
+    "trainingId": "listening-13-medium",
+    "sentence": "Although equity market turbulence depressed investment portfolios, fixed-income yields stabilized total corporate revenue.",
+    "translation": "儘管股市劇烈動盪打擊了股權投資組合，穩健的固定收益利息依舊穩住了公司的總體收益。",
+    "chunks": [
+      {
+        "text": "Although equity market turbulence depressed portfolios,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "fixed-income yields",
+        "isTargetSlot": false
+      },
+      {
+        "text": "stabilized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "total corporate revenue."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "stabilized (穩固) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-13-medium-29",
+    "trainingId": "listening-13-medium",
+    "sentence": "The corporate restructuring bond package has been oversubscribed by institutional investors within forty-eight hours.",
+    "translation": "企業重組轉型債券專案在發行四十八小時內便獲得各機構法人投資人的超額認購。",
+    "chunks": [
+      {
+        "text": "The corporate restructuring bond package",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been oversubscribed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by institutional investors within forty-eight hours."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "債券已被超額認購，has been oversubscribed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-13-medium-30",
+    "trainingId": "listening-13-medium",
+    "sentence": "The chief financial officer will present the annual audited financial statements during the shareholder meeting.",
+    "translation": "財務長將在年度股東大會上，正式提報經審計簽證的年度財務報表。",
+    "chunks": [
+      {
+        "text": "The chief financial officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will present",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the annual audited statements during the meeting."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will present 表未來提報，未來簡單式主動語態。"
+  }
+]

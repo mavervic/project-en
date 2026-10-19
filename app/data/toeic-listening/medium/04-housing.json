@@ -1,0 +1,830 @@
+[
+  {
+    "id": "listening-04-medium-01",
+    "trainingId": "listening-04-medium",
+    "sentence": "Although commercial property rental rates increased substantially downtown, our firm negotiated favorable terms for a five-year office lease.",
+    "translation": "儘管市中心商辦租金大幅上漲，我們公司仍談妥了一份五年期辦公室租賃的優惠條件。",
+    "chunks": [
+      {
+        "text": "Although property rental rates increased substantially downtown,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our firm",
+        "isTargetSlot": false
+      },
+      {
+        "text": "negotiated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "favorable terms for a five-year office lease."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "negotiated (談判/協議達成) 為過去簡單式主動語態，承接前面的讓步轉折子句。"
+  },
+  {
+    "id": "listening-04-medium-02",
+    "trainingId": "listening-04-medium",
+    "sentence": "Because the corporate relocation deadline is approaching, all partition walls must be assembled before electrical wiring starts.",
+    "translation": "由於企業搬遷期限逼近，所有隔間牆必須在電線配線工程動工前組裝完成。",
+    "chunks": [
+      {
+        "text": "Because the corporate relocation deadline is approaching,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all partition walls",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must be assembled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "before electrical wiring starts."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "牆體必須被組裝，must be assembled 為情態動詞被動語態。"
+  },
+  {
+    "id": "listening-04-medium-03",
+    "trainingId": "listening-04-medium",
+    "sentence": "While architects were finalizing the interior blueprint, the real estate committee surveyed employee commuting preferences.",
+    "translation": "在建築師敲定室內裝修藍圖的同時，房地產遴選委員會對員工的通勤偏好進行了調查。",
+    "chunks": [
+      {
+        "text": "While architects were finalizing the interior blueprint,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the real estate committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "surveyed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "employee commuting preferences."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "surveyed (調查) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-04-medium-04",
+    "trainingId": "listening-04-medium",
+    "sentence": "To comply with municipal environmental standards, energy-efficient insulation was installed throughout the newly acquired branch facility.",
+    "translation": "為符合市府環保標準，新購置的分部大樓全面安裝了節能隔熱建材。",
+    "chunks": [
+      {
+        "text": "To comply with municipal environmental standards,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "energy-efficient insulation",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "throughout the newly acquired facility."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "建材被安裝，was installed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-04-medium-05",
+    "trainingId": "listening-04-medium",
+    "sentence": "The building maintenance contractor conducts quarterly structural inspections to detect plumbing leaks early.",
+    "translation": "大樓維護承包商每季進行結構檢查，以及早發現管線滲漏問題。",
+    "chunks": [
+      {
+        "text": "The building maintenance contractor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "conducts",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly structural inspections to detect leaks early."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "conducts 表承包商例行巡檢，現在簡單式。"
+  },
+  {
+    "id": "listening-04-medium-06",
+    "trainingId": "listening-04-medium",
+    "sentence": "The property manager is discussing lease extension clauses with corporate tenants in conference room three.",
+    "translation": "物業經理正在第三會議室與企業租戶洽談續租條款細節。",
+    "chunks": [
+      {
+        "text": "The property manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is discussing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "lease extension clauses with corporate tenants."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is discussing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-04-medium-07",
+    "trainingId": "listening-04-medium",
+    "sentence": "Unless zoning permission is granted by city councilors next month, commercial construction work will be suspended.",
+    "translation": "除非下個月獲得市議員的土地分區許可，否則商辦營建工程將被迫暫停。",
+    "chunks": [
+      {
+        "text": "Unless zoning permission is granted by city councilors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial construction work",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "indefinitely."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "工程將被暫停，will be suspended 為未來被動式。"
+  },
+  {
+    "id": "listening-04-medium-08",
+    "trainingId": "listening-04-medium",
+    "sentence": "Although the commercial property required minor cosmetic repairs, the purchasing consortium recognized its tremendous long-term value.",
+    "translation": "儘管這處商業房產需要進行小規模修繕，但收購財團仍看好其巨大的長期潛在價值。",
+    "chunks": [
+      {
+        "text": "Although the property required minor cosmetic repairs,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the purchasing consortium",
+        "isTargetSlot": false
+      },
+      {
+        "text": "recognized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its tremendous long-term value."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "recognized (識別/認可) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-04-medium-09",
+    "trainingId": "listening-04-medium",
+    "sentence": "The executive suite was repainted with neutral tones to project a contemporary corporate identity.",
+    "translation": "主管套房以中性色調重新粉刷，以展現現代企業的品牌形象。",
+    "chunks": [
+      {
+        "text": "The executive suite",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was repainted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with neutral tones to project corporate identity."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "房間被重新粉刷，was repainted 為過去被動式。"
+  },
+  {
+    "id": "listening-04-medium-10",
+    "trainingId": "listening-04-medium",
+    "sentence": "Before signing the binding commercial lease, our legal team reviewed all tenant covenants thoroughly.",
+    "translation": "在簽署具有法律約束力的商業租約之前，我們的法律團隊徹底審查了所有承租人約款。",
+    "chunks": [
+      {
+        "text": "Before signing the binding commercial lease,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our legal team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reviewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all tenant covenants thoroughly."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reviewed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-04-medium-11",
+    "trainingId": "listening-04-medium",
+    "sentence": "Temporary access badges will be issued to construction contractors while the central lobby is remodeled.",
+    "translation": "在中央大廳翻新施工期間，施工承包商將獲發臨時門禁識別卡證。",
+    "chunks": [
+      {
+        "text": "Temporary access badges",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be issued",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to construction contractors while the lobby is remodeled."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "門禁卡將被核發，will be issued 為未來被動式。"
+  },
+  {
+    "id": "listening-04-medium-12",
+    "trainingId": "listening-04-medium",
+    "sentence": "Because the heating ventilation unit malfunctioned unexpectedly, office workers complained about cold room temperatures.",
+    "translation": "由於暖通空調機組突發故障，辦公室同仁對室內過低的溫度表示抱怨。",
+    "chunks": [
+      {
+        "text": "Because the ventilation unit malfunctioned unexpectedly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "office workers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "complained",
+        "isTargetSlot": true
+      },
+      {
+        "text": "about cold room temperatures."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "complained 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-04-medium-13",
+    "trainingId": "listening-04-medium",
+    "sentence": "Comprehensive property liability insurance has been renewed by the landlord for the upcoming calendar year.",
+    "translation": "房東已為即將到來的曆年續保了全方位的產物責任險。",
+    "chunks": [
+      {
+        "text": "Comprehensive property liability insurance",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been renewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the landlord for the upcoming year."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "保險已被續約，has been renewed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-04-medium-14",
+    "trainingId": "listening-04-medium",
+    "sentence": "The leasing director oversees rental negotiations across six regional commercial business complexes.",
+    "translation": "租賃總監負責督導六座區域性商業辦公大樓的租約談判。",
+    "chunks": [
+      {
+        "text": "The leasing director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "oversees",
+        "isTargetSlot": true
+      },
+      {
+        "text": "rental negotiations across six commercial complexes."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "oversees 表職責監督，現在簡單式。"
+  },
+  {
+    "id": "listening-04-medium-15",
+    "trainingId": "listening-04-medium",
+    "sentence": "Fire suppression sprinklers were tested by city inspectors before the high-rise received its occupancy permit.",
+    "translation": "在這座高層大樓獲得使用執照之前，市府檢查員對自動灑水滅火系統進行了測試。",
+    "chunks": [
+      {
+        "text": "Fire suppression sprinklers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were tested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by city inspectors before receiving occupancy permit."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "設備被測試，were tested 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-04-medium-16",
+    "trainingId": "listening-04-medium",
+    "sentence": "Rather than continuing to lease suburban space, the executive board decided to purchase a freehold building downtown.",
+    "translation": "董事會沒有繼續租賃郊區場地，而是決定在市中心購置一棟永久產權大樓。",
+    "chunks": [
+      {
+        "text": "Rather than continuing to lease suburban space,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the executive board",
+        "isTargetSlot": false
+      },
+      {
+        "text": "decided",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to purchase a freehold building downtown."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "decided 為過去簡單式主動語態，對比前面的 Rather than。"
+  },
+  {
+    "id": "listening-04-medium-17",
+    "trainingId": "listening-04-medium",
+    "sentence": "The commercial building entrance was secured with electronic biometric gates after recent security audits.",
+    "translation": "在近期完成安檢審計後，商辦大樓入口已裝設生物辨識電子閘門加強管制。",
+    "chunks": [
+      {
+        "text": "The commercial building entrance",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was secured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with biometric gates after recent security audits."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "大門被升級安全措施，was secured 為過去被動式。"
+  },
+  {
+    "id": "listening-04-medium-18",
+    "trainingId": "listening-04-medium",
+    "sentence": "The project architect is drafting interior floor plans to maximize natural daylight across workstation desks.",
+    "translation": "專案建築師正在繪製室內平面配置圖，以使各工位桌面的自然採光最大化。",
+    "chunks": [
+      {
+        "text": "The project architect",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is drafting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "interior floor plans to maximize natural daylight."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is drafting 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-04-medium-19",
+    "trainingId": "listening-04-medium",
+    "sentence": "A formal handover inspection will be scheduled between the landlord and tenant prior to move-in day.",
+    "translation": "在正式搬遷入駐日前，房東與租戶雙方將排定一次正式的點交驗收。",
+    "chunks": [
+      {
+        "text": "A formal handover inspection",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be scheduled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "between landlord and tenant prior to move-in day."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "驗收將被排程，will be scheduled 為未來被動式。"
+  },
+  {
+    "id": "listening-04-medium-20",
+    "trainingId": "listening-04-medium",
+    "sentence": "Even though interior construction was delayed by material shortages, the contractor completed the project within budget.",
+    "translation": "即便室內裝修因建材短缺而遭遇延誤，承包商仍在原定預算範圍內完成了該專案。",
+    "chunks": [
+      {
+        "text": "Even though interior construction was delayed,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the contractor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the project within budget."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "completed (完成) 為過去簡單式主動語態，轉折 Even though。"
+  },
+  {
+    "id": "listening-04-medium-21",
+    "trainingId": "listening-04-medium",
+    "sentence": "Energy-saving light sensors have been installed throughout hallway corridors to diminish utility expenditures.",
+    "translation": "各樓層走廊已全面安裝節能感應燈具，以縮減水電公用事業開支。",
+    "chunks": [
+      {
+        "text": "Energy-saving light sensors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "throughout corridors to diminish expenditures."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "感應器已被安裝，have been installed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-04-medium-22",
+    "trainingId": "listening-04-medium",
+    "sentence": "The facility administrator monitors building water consumption to ensure sustainable resource management.",
+    "translation": "設施管理員密切監控大樓用水量，以確保資源永續管理。",
+    "chunks": [
+      {
+        "text": "The facility administrator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "monitors",
+        "isTargetSlot": true
+      },
+      {
+        "text": "building water consumption to ensure sustainability."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "monitors 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-04-medium-23",
+    "trainingId": "listening-04-medium",
+    "sentence": "Rental security deposits were refunded to previous tenants after the vacant office passed exit inspections.",
+    "translation": "在空置辦公室通過退租驗收後，租賃押金已全額退還給前租戶。",
+    "chunks": [
+      {
+        "text": "Rental security deposits",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were refunded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to previous tenants after passing exit inspections."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "押金被退還，were refunded 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-04-medium-24",
+    "trainingId": "listening-04-medium",
+    "sentence": "In order to accommodate growing staff numbers, the technology firm expanded its workspace into the adjacent suite.",
+    "translation": "為容納不斷增加的員工名額，這家科技公司將其工作空間擴充至隔壁相鄰的辦公室。",
+    "chunks": [
+      {
+        "text": "In order to accommodate growing staff numbers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the technology firm",
+        "isTargetSlot": false
+      },
+      {
+        "text": "expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its workspace into the adjacent suite."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "expanded 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-04-medium-25",
+    "trainingId": "listening-04-medium",
+    "sentence": "Emergency evacuation routes will be reviewed during the mandatory building tenant meeting on Thursday morning.",
+    "translation": "緊急疏散路線將於週四上午的強制性大樓住戶會議上進行宣導檢討。",
+    "chunks": [
+      {
+        "text": "Emergency evacuation routes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be reviewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "during the mandatory tenant meeting on Thursday."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "路線將被檢討，will be reviewed 為未來被動式。"
+  },
+  {
+    "id": "listening-04-medium-26",
+    "trainingId": "listening-04-medium",
+    "sentence": "The real estate broker found an ideal commercial property that satisfied all our expansion specifications.",
+    "translation": "房地產經紀人找到了一處理想的商用物業，完全符合我們所有擴充規格條件。",
+    "chunks": [
+      {
+        "text": "The real estate broker",
+        "isTargetSlot": false
+      },
+      {
+        "text": "found",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an ideal commercial property satisfying specifications."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "found 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-04-medium-27",
+    "trainingId": "listening-04-medium",
+    "sentence": "All perimeter fencing was inspected by structural engineers following the torrential rainstorm yesterday.",
+    "translation": "在昨日的暴雨過後，結構工程師對所有周邊圍欄進行了徹底巡檢。",
+    "chunks": [
+      {
+        "text": "All perimeter fencing",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was inspected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by structural engineers following the rainstorm."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "圍欄被檢查，was inspected 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-04-medium-28",
+    "trainingId": "listening-04-medium",
+    "sentence": "Although leasing overheads escalated, the strategic location substantially enhances client accessibility and brand prestige.",
+    "translation": "儘管租金經常性開銷有所攀升，但其戰略位置大幅提升了客戶造訪的便利性與品牌聲譽。",
+    "chunks": [
+      {
+        "text": "Although leasing overheads escalated,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the strategic location",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enhances",
+        "isTargetSlot": true
+      },
+      {
+        "text": "client accessibility and brand prestige substantially."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "enhances 為現在簡單式主動語態，對比讓步子句。"
+  },
+  {
+    "id": "listening-04-medium-29",
+    "trainingId": "listening-04-medium",
+    "sentence": "The corporate headquarters lease has been renewed for seven additional years under favorable indexing rates.",
+    "translation": "企業總部大樓租約已依有利的物價指數連動費率成功續約七年。",
+    "chunks": [
+      {
+        "text": "The corporate headquarters lease",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been renewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for seven additional years under favorable rates."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "租約已被續約，has been renewed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-04-medium-30",
+    "trainingId": "listening-04-medium",
+    "sentence": "The construction developer will unveil the architectural scale model at the commercial real estate expo.",
+    "translation": "營建開發商將在商業不動產博覽會上展示其建築等比模型。",
+    "chunks": [
+      {
+        "text": "The construction developer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will unveil",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the architectural scale model at the real estate expo."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will unveil 表未來揭幕展示，未來簡單式主動語態。"
+  }
+]

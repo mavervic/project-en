@@ -3,23 +3,40 @@ import type {
   QuestionBank,
   QuestionBankMeta,
   TrainingGroup,
+  TrainingUnitMeta,
 } from '../../types/chunkflow';
 
-import travelQuestions from './easy/01-travel.json';
-import diningOutQuestions from './easy/02-dining-out.json';
-import entertainmentQuestions from './easy/03-entertainment.json';
-import housingQuestions from './easy/04-housing.json';
-import purchasingQuestions from './easy/05-purchasing.json';
-import personnelQuestions from './easy/06-personnel.json';
-import officesQuestions from './easy/07-offices.json';
-import healthQuestions from './easy/08-health.json';
-import generalBusinessQuestions from './easy/09-general-business.json';
-import manufacturingQuestions from './easy/10-manufacturing.json';
-import corporateDevQuestions from './easy/11-corporate-development.json';
-import technicalAreasQuestions from './easy/12-technical-areas.json';
-import financingBudgetingQuestions from './easy/13-financing-budgeting.json';
+// Easy tier question datasets
+import travelEasyQuestions from './easy/01-travel.json';
+import diningOutEasyQuestions from './easy/02-dining-out.json';
+import entertainmentEasyQuestions from './easy/03-entertainment.json';
+import housingEasyQuestions from './easy/04-housing.json';
+import purchasingEasyQuestions from './easy/05-purchasing.json';
+import personnelEasyQuestions from './easy/06-personnel.json';
+import officesEasyQuestions from './easy/07-offices.json';
+import healthEasyQuestions from './easy/08-health.json';
+import generalBusinessEasyQuestions from './easy/09-general-business.json';
+import manufacturingEasyQuestions from './easy/10-manufacturing.json';
+import corporateDevEasyQuestions from './easy/11-corporate-development.json';
+import technicalAreasEasyQuestions from './easy/12-technical-areas.json';
+import financingBudgetingEasyQuestions from './easy/13-financing-budgeting.json';
 
-export const TOEIC_LISTENING_UNITS = [
+// Medium tier question datasets
+import travelMediumQuestions from './medium/01-travel.json';
+import diningOutMediumQuestions from './medium/02-dining-out.json';
+import entertainmentMediumQuestions from './medium/03-entertainment.json';
+import housingMediumQuestions from './medium/04-housing.json';
+import purchasingMediumQuestions from './medium/05-purchasing.json';
+import personnelMediumQuestions from './medium/06-personnel.json';
+import officesMediumQuestions from './medium/07-offices.json';
+import healthMediumQuestions from './medium/08-health.json';
+import generalBusinessMediumQuestions from './medium/09-general-business.json';
+import manufacturingMediumQuestions from './medium/10-manufacturing.json';
+import corporateDevMediumQuestions from './medium/11-corporate-development.json';
+import technicalAreasMediumQuestions from './medium/12-technical-areas.json';
+import financingBudgetingMediumQuestions from './medium/13-financing-budgeting.json';
+
+export const TOEIC_LISTENING_EASY_UNITS: TrainingUnitMeta[] = [
   {
     trainingId: 'listening-01-easy',
     title: 'Travel (Easy)',
@@ -113,6 +130,105 @@ export const TOEIC_LISTENING_UNITS = [
   },
 ];
 
+export const TOEIC_LISTENING_MEDIUM_UNITS: TrainingUnitMeta[] = [
+  {
+    trainingId: 'listening-01-medium',
+    title: 'Travel (Medium)',
+    unitNumber: 14,
+    difficulty: 'Medium' as const,
+    tags: ['出差轉機', '延誤因應', '商務行程'],
+  },
+  {
+    trainingId: 'listening-02-medium',
+    title: 'Dining out (Medium)',
+    unitNumber: 15,
+    difficulty: 'Medium' as const,
+    tags: ['晚宴接待', '菜單特調', '飲食限制'],
+  },
+  {
+    trainingId: 'listening-03-medium',
+    title: 'Entertainment (Medium)',
+    unitNumber: 16,
+    difficulty: 'Medium' as const,
+    tags: ['文化藝術', '贊助門票', '展演參訪'],
+  },
+  {
+    trainingId: 'listening-04-medium',
+    title: 'Housing (Medium)',
+    unitNumber: 17,
+    difficulty: 'Medium' as const,
+    tags: ['商辦租賃', '空間裝修', '物業管理'],
+  },
+  {
+    trainingId: 'listening-05-medium',
+    title: 'Purchasing (Medium)',
+    unitNumber: 18,
+    difficulty: 'Medium' as const,
+    tags: ['大宗採購', '供應商評鑑', '物流保險'],
+  },
+  {
+    trainingId: 'listening-06-medium',
+    title: 'Personnel (Medium)',
+    unitNumber: 19,
+    difficulty: 'Medium' as const,
+    tags: ['人才獵聘', '績效考評', '勞資制度'],
+  },
+  {
+    trainingId: 'listening-07-medium',
+    title: 'Offices (Medium)',
+    unitNumber: 20,
+    difficulty: 'Medium' as const,
+    tags: ['行政管理', '設備整合', '視訊會議'],
+  },
+  {
+    trainingId: 'listening-08-medium',
+    title: 'Health (Medium)',
+    unitNumber: 21,
+    difficulty: 'Medium' as const,
+    tags: ['職業醫學', '心理健康', '工安防護'],
+  },
+  {
+    trainingId: 'listening-09-medium',
+    title: 'General Business (Medium)',
+    unitNumber: 22,
+    difficulty: 'Medium' as const,
+    tags: ['策略聯盟', '市場調研', '商業談判'],
+  },
+  {
+    trainingId: 'listening-10-medium',
+    title: 'Manufacturing (Medium)',
+    unitNumber: 23,
+    difficulty: 'Medium' as const,
+    tags: ['精密加工', '自動化製程', '產能優化'],
+  },
+  {
+    trainingId: 'listening-11-medium',
+    title: 'Corporate Development (Medium)',
+    unitNumber: 24,
+    difficulty: 'Medium' as const,
+    tags: ['股權收購', '專利布局', '跨國擴張'],
+  },
+  {
+    trainingId: 'listening-12-medium',
+    title: 'Technical areas (Medium)',
+    unitNumber: 25,
+    difficulty: 'Medium' as const,
+    tags: ['雲端架構', '資安防護', '資料庫容錯'],
+  },
+  {
+    trainingId: 'listening-13-medium',
+    title: 'Financing & Budgeting (Medium)',
+    unitNumber: 26,
+    difficulty: 'Medium' as const,
+    tags: ['審計對帳', '資本支出', '外匯避險'],
+  },
+];
+
+export const TOEIC_LISTENING_UNITS: TrainingUnitMeta[] = [
+  ...TOEIC_LISTENING_EASY_UNITS,
+  ...TOEIC_LISTENING_MEDIUM_UNITS,
+];
+
 const SITUATION_TITLES = [
   'Travel',
   'Dining out',
@@ -132,29 +248,46 @@ const SITUATION_TITLES = [
 export const TOEIC_LISTENING_GROUPS: TrainingGroup[] = SITUATION_TITLES.map(
   (situationTitle, idx) => {
     const pad = String(idx + 1).padStart(2, '0');
-    const unit = TOEIC_LISTENING_UNITS[idx];
+    const easyUnit = TOEIC_LISTENING_EASY_UNITS[idx];
+    const mediumUnit = TOEIC_LISTENING_MEDIUM_UNITS[idx];
     return {
       id: `group-listening-${pad}`,
       title: `${pad}. ${situationTitle}`,
-      units: [unit],
+      units: [easyUnit, mediumUnit],
     };
   }
 );
 
 export const TOEIC_LISTENING_QUESTIONS: Question[] = [
-  ...(travelQuestions as Question[]),
-  ...(diningOutQuestions as Question[]),
-  ...(entertainmentQuestions as Question[]),
-  ...(housingQuestions as Question[]),
-  ...(purchasingQuestions as Question[]),
-  ...(personnelQuestions as Question[]),
-  ...(officesQuestions as Question[]),
-  ...(healthQuestions as Question[]),
-  ...(generalBusinessQuestions as Question[]),
-  ...(manufacturingQuestions as Question[]),
-  ...(corporateDevQuestions as Question[]),
-  ...(technicalAreasQuestions as Question[]),
-  ...(financingBudgetingQuestions as Question[]),
+  // Easy questions (390)
+  ...(travelEasyQuestions as Question[]),
+  ...(diningOutEasyQuestions as Question[]),
+  ...(entertainmentEasyQuestions as Question[]),
+  ...(housingEasyQuestions as Question[]),
+  ...(purchasingEasyQuestions as Question[]),
+  ...(personnelEasyQuestions as Question[]),
+  ...(officesEasyQuestions as Question[]),
+  ...(healthEasyQuestions as Question[]),
+  ...(generalBusinessEasyQuestions as Question[]),
+  ...(manufacturingEasyQuestions as Question[]),
+  ...(corporateDevEasyQuestions as Question[]),
+  ...(technicalAreasEasyQuestions as Question[]),
+  ...(financingBudgetingEasyQuestions as Question[]),
+
+  // Medium questions (390)
+  ...(travelMediumQuestions as Question[]),
+  ...(diningOutMediumQuestions as Question[]),
+  ...(entertainmentMediumQuestions as Question[]),
+  ...(housingMediumQuestions as Question[]),
+  ...(purchasingMediumQuestions as Question[]),
+  ...(personnelMediumQuestions as Question[]),
+  ...(officesMediumQuestions as Question[]),
+  ...(healthMediumQuestions as Question[]),
+  ...(generalBusinessMediumQuestions as Question[]),
+  ...(manufacturingMediumQuestions as Question[]),
+  ...(corporateDevMediumQuestions as Question[]),
+  ...(technicalAreasMediumQuestions as Question[]),
+  ...(financingBudgetingMediumQuestions as Question[]),
 ];
 
 export const TOEIC_LISTENING_META: QuestionBankMeta = {

@@ -1,0 +1,826 @@
+[
+  {
+    "id": "listening-09-medium-01",
+    "trainingId": "listening-09-medium",
+    "sentence": "Although domestic sales declined slightly during the second quarter, international overseas distribution channels expanded by twelve percent.",
+    "translation": "儘管第二季度國內銷售額微幅下滑，但海外國際經銷通路的營收卻成長了百分之十二。",
+    "chunks": [
+      {
+        "text": "Although domestic sales declined slightly during the second quarter,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "international distribution channels",
+        "isTargetSlot": false
+      },
+      {
+        "text": "expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by twelve percent."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "expanded (擴張/增長) 為過去簡單式主動語態，承接前面的讓步轉折子句。"
+  },
+  {
+    "id": "listening-09-medium-02",
+    "trainingId": "listening-09-medium",
+    "sentence": "Because market conditions shifted unpredictably, the corporate marketing strategy was restructured by the executive committee.",
+    "translation": "由於市場環境發生難以預料的轉變，企業行銷策略已由執行委員會進行了全面重組調整。",
+    "chunks": [
+      {
+        "text": "Because market conditions shifted unpredictably,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate marketing strategy",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was restructured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the executive committee."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "策略被重整，was restructured 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-09-medium-03",
+    "trainingId": "listening-09-medium",
+    "sentence": "Senior account managers must finalize commercial partnership agreements before the annual industry exhibition opens next week.",
+    "translation": "資深業務客戶經理必須在下週年度產業展覽會開幕前，敲定商業合作協議的最終內容。",
+    "chunks": [
+      {
+        "text": "Senior account managers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must finalize",
+        "isTargetSlot": true
+      },
+      {
+        "text": "commercial partnership agreements before the exhibition opens."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "must finalize 表必須完成的義務，情態助動詞主動語態。"
+  },
+  {
+    "id": "listening-09-medium-04",
+    "trainingId": "listening-09-medium",
+    "sentence": "While analysts were compiling competitor pricing benchmarks, our sales representatives surveyed customer satisfaction across three key regions.",
+    "translation": "當分析師正在彙整競爭對手的定價基準時，我們的業務代表對三大關鍵區域的客戶滿意度進行了調查。",
+    "chunks": [
+      {
+        "text": "While analysts were compiling competitor benchmarks,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our sales representatives",
+        "isTargetSlot": false
+      },
+      {
+        "text": "surveyed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "customer satisfaction across three regions."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "surveyed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-medium-05",
+    "trainingId": "listening-09-medium",
+    "sentence": "Quarterly earnings statements are published on the investor relations portal following approval by certified public accountants.",
+    "translation": "經合格會計師核可確認後，季度盈餘財務報告會公布在投資人關係網站上。",
+    "chunks": [
+      {
+        "text": "Quarterly earnings statements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are published",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on the portal following approval by certified accountants."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "報表被發布，are published 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-09-medium-06",
+    "trainingId": "listening-09-medium",
+    "sentence": "The managing director is negotiating strategic alliance terms with European commercial partners in Brussels.",
+    "translation": "常務董事正在布魯塞爾與歐洲商業夥伴就策略聯盟條款進行洽商。",
+    "chunks": [
+      {
+        "text": "The managing director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is negotiating",
+        "isTargetSlot": true
+      },
+      {
+        "text": "strategic alliance terms with European commercial partners."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is negotiating 表當前正在進行跨國洽商，現在進行式。"
+  },
+  {
+    "id": "listening-09-medium-07",
+    "trainingId": "listening-09-medium",
+    "sentence": "Unless shareholder proxies approve the commercial restructuring plan, the cross-border merger will not proceed.",
+    "translation": "除非股東委託書表決通過該項商業重組方案，否則這項跨國併購案將無法推進實施。",
+    "chunks": [
+      {
+        "text": "Unless shareholder proxies approve the plan,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the cross-border merger",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will not proceed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "as previously scheduled."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will not proceed (將不會推進) 為未來簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-medium-08",
+    "trainingId": "listening-09-medium",
+    "sentence": "Although client demands evolved rapidly, our software consulting team adapted our enterprise product offerings successfully.",
+    "translation": "儘管客戶需求轉變迅速，我們的軟體諮詢顧問團隊仍成功調整了企業產品服務組合。",
+    "chunks": [
+      {
+        "text": "Although client demands evolved rapidly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our software consulting team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "adapted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "our enterprise product offerings successfully."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "adapted (順應/調整) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-09-medium-09",
+    "trainingId": "listening-09-medium",
+    "sentence": "The annual promotional advertising campaign was launched across social media platforms early this morning.",
+    "translation": "年度促銷宣傳廣告企劃已於今早全面在各大社群媒體平台上線發布。",
+    "chunks": [
+      {
+        "text": "The annual promotional advertising campaign",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was launched",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across social media platforms early this morning."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "活動被發布推展，was launched 為過去被動式。"
+  },
+  {
+    "id": "listening-09-medium-10",
+    "trainingId": "listening-09-medium",
+    "sentence": "Before launching the international marketing offensive, executive leaders reviewed regional intellectual property protections.",
+    "translation": "在發動國際行銷攻勢前，高階領導主管詳細檢視了當地的智慧財產權保護措施。",
+    "chunks": [
+      {
+        "text": "Before launching the marketing offensive,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "executive leaders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reviewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "regional intellectual property protections."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reviewed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-medium-11",
+    "trainingId": "listening-09-medium",
+    "sentence": "Key promotional milestone announcements will be broadcast via live streaming during the global tech summit.",
+    "translation": "重大促銷里程碑公告將在世界科技高峰會期間透過線上即時直播對外發表。",
+    "chunks": [
+      {
+        "text": "Key promotional milestone announcements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be broadcast",
+        "isTargetSlot": true
+      },
+      {
+        "text": "via live streaming during the global tech summit."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "公告將被轉播宣達，will be broadcast 為未來被動式（broadcast 三態同形）。"
+  },
+  {
+    "id": "listening-09-medium-12",
+    "trainingId": "listening-09-medium",
+    "sentence": "Because consumer sentiment improved remarkably, regional retail chains increased quarterly inventory purchase orders.",
+    "translation": "由於消費者信心顯著好轉，各區域零售連鎖店增加了季度的庫存採購訂單量。",
+    "chunks": [
+      {
+        "text": "Because consumer sentiment improved remarkably,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "regional retail chains",
+        "isTargetSlot": false
+      },
+      {
+        "text": "increased",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly inventory purchase orders."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "increased 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-medium-13",
+    "trainingId": "listening-09-medium",
+    "sentence": "A formal cooperative business alliance has been signed by both chief executives to expand retail reach.",
+    "translation": "兩位執行長已正式簽署了商業合作聯盟協定，以共同擴大零售市場版圖。",
+    "chunks": [
+      {
+        "text": "A formal cooperative business alliance",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been signed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by both chief executives to expand retail reach."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "聯盟已被簽署，has been signed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-09-medium-14",
+    "trainingId": "listening-09-medium",
+    "sentence": "The business development vice president evaluates commercial acquisition targets across burgeoning technological sectors.",
+    "translation": "業務拓展副總裁負責評估新興科技領域中的商業收購併購標的。",
+    "chunks": [
+      {
+        "text": "The business development vice president",
+        "isTargetSlot": false
+      },
+      {
+        "text": "evaluates",
+        "isTargetSlot": true
+      },
+      {
+        "text": "commercial acquisition targets across technological sectors."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "evaluates 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-medium-15",
+    "trainingId": "listening-09-medium",
+    "sentence": "Consumer focus group sessions were conducted by external research consultants to analyze product packaging preferences.",
+    "translation": "焦點消費者訪談會議由外部研究顧問公司主持，以分析大眾對產品包裝的偏好。",
+    "chunks": [
+      {
+        "text": "Consumer focus group sessions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by external research consultants to analyze preferences."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "訪談被進行，were conducted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-09-medium-16",
+    "trainingId": "listening-09-medium",
+    "sentence": "Rather than engaging in destructive price competition, the firm emphasized superior post-sale customer support.",
+    "translation": "該公司沒有陷入破壞性的價格削價競爭，而是著重強調其卓越的售後客戶支援服務。",
+    "chunks": [
+      {
+        "text": "Rather than engaging in price competition,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the firm",
+        "isTargetSlot": false
+      },
+      {
+        "text": "emphasized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "superior post-sale customer support."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "emphasized (著重強調) 為過去簡單式主動語態，對比 Rather than。"
+  },
+  {
+    "id": "listening-09-medium-17",
+    "trainingId": "listening-09-medium",
+    "sentence": "Key performance indicators are tracked systematically through enterprise software dashboards by sales directors.",
+    "translation": "業務總監透過企業軟體儀表板，有系統地追蹤各項關鍵績效指標（KPI）。",
+    "chunks": [
+      {
+        "text": "Key performance indicators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are tracked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "systematically through software dashboards by directors."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "指標被追蹤，are tracked 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-09-medium-18",
+    "trainingId": "listening-09-medium",
+    "sentence": "The brand communications manager is drafting an official press statement regarding the joint commercial venture.",
+    "translation": "品牌傳播經理正在起草一份關於合資商業項目的官方新聞聲明稿。",
+    "chunks": [
+      {
+        "text": "The brand communications manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is drafting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an official press statement regarding the venture."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is drafting 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-09-medium-19",
+    "trainingId": "listening-09-medium",
+    "sentence": "Revised pricing catalogs will be distributed to international wholesale agents before the autumn commercial season.",
+    "translation": "在秋季商業銷售檔期展開前，修訂後的價格目錄將發放給各國批發代理商。",
+    "chunks": [
+      {
+        "text": "Revised pricing catalogs",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to international wholesale agents before autumn."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "目錄將被分發，will be distributed 為未來被動式。"
+  },
+  {
+    "id": "listening-09-medium-20",
+    "trainingId": "listening-09-medium",
+    "sentence": "Even though economic growth slowed down globally, our enterprise retained ninety-five percent of recurring corporate subscribers.",
+    "translation": "即便全球經濟成長放緩，我們企業仍成功留住了百分之九十五的長期訂閱企業用戶。",
+    "chunks": [
+      {
+        "text": "Even though economic growth slowed down globally,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our enterprise",
+        "isTargetSlot": false
+      },
+      {
+        "text": "retained",
+        "isTargetSlot": true
+      },
+      {
+        "text": "ninety-five percent of recurring corporate subscribers."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "retained (留住/維繫) 為過去簡單式主動語態，轉折 Even though。"
+  },
+  {
+    "id": "listening-09-medium-21",
+    "trainingId": "listening-09-medium",
+    "sentence": "Commercial franchise agreements have been extended for five additional years across twelve metropolitan areas.",
+    "translation": "商用特許連鎖加盟合約已在十二個大都會區順利展延續約五年。",
+    "chunks": [
+      {
+        "text": "Commercial franchise agreements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been extended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for five additional years across twelve areas."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "加盟合約已被延長，have been extended 為現在完成被動式。"
+  },
+  {
+    "id": "listening-09-medium-22",
+    "trainingId": "listening-09-medium",
+    "sentence": "The strategic planner recommends proactive investments in automated cloud infrastructure to outpace competitors.",
+    "translation": "策略規劃師建議超前部署投資自動化雲端基礎架構，以超越同業競爭者。",
+    "chunks": [
+      {
+        "text": "The strategic planner",
+        "isTargetSlot": false
+      },
+      {
+        "text": "recommends",
+        "isTargetSlot": true
+      },
+      {
+        "text": "investments in cloud infrastructure to outpace competitors."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "recommends 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-medium-23",
+    "trainingId": "listening-09-medium",
+    "sentence": "A confidential market feasibility assessment was prepared by management consultants before opening the new overseas subsidiary.",
+    "translation": "在成立新的海外子公司之前，管理顧問團隊已撰寫了一份機密的市場可行性評估報告。",
+    "chunks": [
+      {
+        "text": "A confidential market feasibility assessment",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was prepared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by consultants before opening the overseas subsidiary."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "評估報告被準備，was prepared 為過去被動式。"
+  },
+  {
+    "id": "listening-09-medium-24",
+    "trainingId": "listening-09-medium",
+    "sentence": "In order to safeguard trade secrets, the technology company strengthened its nondisclosure legal agreements.",
+    "translation": "為了嚴密保護商業營業機密，這家科技公司強化升級了其保密法律協定條款。",
+    "chunks": [
+      {
+        "text": "In order to safeguard trade secrets,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the technology company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "strengthened",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its nondisclosure legal agreements."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "strengthened (強化) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-medium-25",
+    "trainingId": "listening-09-medium",
+    "sentence": "Commercial dispute arbitration hearings will be conducted by neutral legal mediators early next month.",
+    "translation": "商業爭端仲裁公聽會將於下月初由中立的法律調解人主持舉行。",
+    "chunks": [
+      {
+        "text": "Commercial dispute arbitration hearings",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by neutral legal mediators early next month."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "聽證會將被舉行，will be conducted 為未來被動式。"
+  },
+  {
+    "id": "listening-09-medium-26",
+    "trainingId": "listening-09-medium",
+    "sentence": "The senior marketing executive secured exclusive sponsorship rights for the upcoming international sports championship.",
+    "translation": "資深行銷主管為即將到來的國際體育錦標賽爭取到了獨家贊助權益。",
+    "chunks": [
+      {
+        "text": "The senior marketing executive",
+        "isTargetSlot": false
+      },
+      {
+        "text": "secured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "exclusive sponsorship rights for the sports championship."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "secured 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-09-medium-27",
+    "trainingId": "listening-09-medium",
+    "sentence": "Customer feedback data was cross-referenced with quarterly sales figures to evaluate marketing effectiveness.",
+    "translation": "客戶回饋資料已與季度銷售數據進行交叉比對，以精準評估行銷宣傳的實際成效。",
+    "chunks": [
+      {
+        "text": "Customer feedback data",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was cross-referenced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with quarterly sales figures to evaluate effectiveness."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "數據被交叉比對，was cross-referenced 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-09-medium-28",
+    "trainingId": "listening-09-medium",
+    "sentence": "Although trade tariffs increased across several product categories, product innovation safeguarded our competitive market position.",
+    "translation": "儘管多項產品類別面臨關稅調漲，持續的產品創新依然穩固了我們具競爭力的市場地位。",
+    "chunks": [
+      {
+        "text": "Although trade tariffs increased across categories,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "product innovation",
+        "isTargetSlot": false
+      },
+      {
+        "text": "safeguarded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "our competitive market position."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "safeguarded (捍衛/穩固) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-09-medium-29",
+    "trainingId": "listening-09-medium",
+    "sentence": "The amended partnership terms have been ratified by both corporate boards following extensive legal discussions.",
+    "translation": "經長時間深入的法律商榷後，修訂後的合夥條款已獲得雙方公司董事會的正式批准認可。",
+    "chunks": [
+      {
+        "text": "The amended partnership terms",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been ratified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by both corporate boards following legal discussions."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "條款已被批准，have been ratified 為現在完成被動式。"
+  },
+  {
+    "id": "listening-09-medium-30",
+    "trainingId": "listening-09-medium",
+    "sentence": "The chief executive officer will outline the five-year strategic growth blueprint during the annual general meeting.",
+    "translation": "執行長將在年度股東大會上發表闡述公司未來五年的戰略成長藍圖。",
+    "chunks": [
+      {
+        "text": "The chief executive officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will outline",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the five-year strategic growth blueprint at the meeting."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will outline 表未來概述規劃，未來簡單式主動語態。"
+  }
+]

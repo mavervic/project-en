@@ -1,0 +1,826 @@
+[
+  {
+    "id": "listening-08-medium-01",
+    "trainingId": "listening-08-medium",
+    "sentence": "Although annual medical checkups were completely optional, over ninety percent of company employees participated enthusiastically.",
+    "translation": "儘管年度健康檢查採自由參加性質，超過百分之九十的公司員工仍積極踴躍地報名參與。",
+    "chunks": [
+      {
+        "text": "Although annual medical checkups were optional,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "over ninety percent of company employees",
+        "isTargetSlot": false
+      },
+      {
+        "text": "participated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "enthusiastically."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "participated (參加/參與) 為過去簡單式主動語態，轉折 Although 關係。"
+  },
+  {
+    "id": "listening-08-medium-02",
+    "trainingId": "listening-08-medium",
+    "sentence": "Because several staff members developed repetitive strain symptoms, adjustable ergonomic keyboard trays were installed immediately.",
+    "translation": "由於數位同仁出現重複性勞損症狀，公司隨即加裝了可調節的人體工學鍵盤托架。",
+    "chunks": [
+      {
+        "text": "Because staff members developed repetitive strain symptoms,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "adjustable ergonomic keyboard trays",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediately."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "托架被安裝，were installed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-08-medium-03",
+    "trainingId": "listening-08-medium",
+    "sentence": "All employees seeking medical expense reimbursement must provide itemized clinic receipts and diagnostic summaries.",
+    "translation": "所有申請醫療費用報銷的員工，必須提供詳列明細的診所收據與診斷摘要證明。",
+    "chunks": [
+      {
+        "text": "All employees seeking medical reimbursement",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must provide",
+        "isTargetSlot": true
+      },
+      {
+        "text": "itemized clinic receipts and diagnostic summaries."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "must provide 表申請理賠的規定，情態助動詞主動語態。"
+  },
+  {
+    "id": "listening-08-medium-04",
+    "trainingId": "listening-08-medium",
+    "sentence": "While the company nurse was reviewing seasonal influenza statistics, the wellness committee planned voluntary vaccination clinics.",
+    "translation": "在廠護審視季節性流感統計數據時，健康促進委員會已著手籌劃自願性疫苗接種站。",
+    "chunks": [
+      {
+        "text": "While the company nurse was reviewing influenza statistics,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the wellness committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "planned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "voluntary vaccination clinics."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "planned 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-medium-05",
+    "trainingId": "listening-08-medium",
+    "sentence": "Prescription medications for chronic workplace conditions are subsidized generously under the corporate health insurance package.",
+    "translation": "針對慢性職業疾病的處方藥品，在公司團體健康保險方案下均享有相當優渥的給付補貼。",
+    "chunks": [
+      {
+        "text": "Prescription medications for chronic conditions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are subsidized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "generously under the corporate health insurance package."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "藥品被補貼，are subsidized 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-08-medium-06",
+    "trainingId": "listening-08-medium",
+    "sentence": "The corporate wellness counselor is conducting confidential stress management consultations for project teams this week.",
+    "translation": "企業心理諮商師本週正在為專案團隊進行一對一的機密壓力管理輔導會談。",
+    "chunks": [
+      {
+        "text": "The corporate wellness counselor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is conducting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "confidential stress management consultations this week."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is conducting 表目前正持續進行的輔導，現在進行式。"
+  },
+  {
+    "id": "listening-08-medium-07",
+    "trainingId": "listening-08-medium",
+    "sentence": "Unless employees complete the mandatory occupational safety assessment by Friday, laboratory access permissions will be revoked.",
+    "translation": "除非同仁在週五前完成強制性職業安全評估，否則其進出實驗室的門禁權限將被撤銷。",
+    "chunks": [
+      {
+        "text": "Unless employees complete the safety assessment by Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "laboratory access permissions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be revoked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "temporarily."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "權限將被撤銷，will be revoked 為未來被動式。"
+  },
+  {
+    "id": "listening-08-medium-08",
+    "trainingId": "listening-08-medium",
+    "sentence": "Although dental benefits cover standard cleaning checkups, major orthodontic surgery requires formal pre-authorization.",
+    "translation": "儘管牙科保險涵蓋標準洗牙檢查，但重大的齒顎矯正手術仍需先取得正式的事先核准。",
+    "chunks": [
+      {
+        "text": "Although dental benefits cover standard cleanings,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "major orthodontic surgery",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requires",
+        "isTargetSlot": true
+      },
+      {
+        "text": "formal pre-authorization."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "requires 為現在簡單式主動語態，對比讓步子句。"
+  },
+  {
+    "id": "listening-08-medium-09",
+    "trainingId": "listening-08-medium",
+    "sentence": "A comprehensive ergonomics workshop was organized by human resources to instruct workers on lumbar health.",
+    "translation": "人資部舉辦了一場全方位人體工學工作坊，向同仁宣導腰椎保健知識。",
+    "chunks": [
+      {
+        "text": "A comprehensive ergonomics workshop",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was organized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by human resources to instruct workers on lumbar health."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "工作坊被舉辦，was organized 為過去被動式。"
+  },
+  {
+    "id": "listening-08-medium-10",
+    "trainingId": "listening-08-medium",
+    "sentence": "Before returning to active duty on the manufacturing line, the injured technician secured formal medical clearance.",
+    "translation": "在重回製造產線正常上工前，受傷的技術員取得了正式的醫師康復許可證明。",
+    "chunks": [
+      {
+        "text": "Before returning to active duty on the line,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the injured technician",
+        "isTargetSlot": false
+      },
+      {
+        "text": "secured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "formal medical clearance."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "secured (獲取) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-medium-11",
+    "trainingId": "listening-08-medium",
+    "sentence": "Influenza vaccination vouchers will be distributed electronically to all remote employees next Wednesday.",
+    "translation": "流感疫苗接種券將於下週三以電子形式發放給所有遠距辦公同仁。",
+    "chunks": [
+      {
+        "text": "Influenza vaccination vouchers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "electronically to all remote employees next Wednesday."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "接種券將被發放，will be distributed 為未來被動式。"
+  },
+  {
+    "id": "listening-08-medium-12",
+    "trainingId": "listening-08-medium",
+    "sentence": "Because the staff physician noticed early indicators of hypertension, she suggested targeted dietary modifications.",
+    "translation": "由於廠醫察覺到早期高血壓的跡象，她建議進行有針對性的飲食調理調整。",
+    "chunks": [
+      {
+        "text": "Because the physician noticed indicators of hypertension,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "she",
+        "isTargetSlot": false
+      },
+      {
+        "text": "suggested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "targeted dietary modifications."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "suggested 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-medium-13",
+    "trainingId": "listening-08-medium",
+    "sentence": "Automated external defibrillators have been installed on every manufacturing floor to protect emergency response readiness.",
+    "translation": "各生產廠房樓層均已設置自動體外心臟去顫器（AED），以強化緊急應變救護能力。",
+    "chunks": [
+      {
+        "text": "Automated external defibrillators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on every manufacturing floor to protect emergency readiness."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "去顫器已被安裝，have been installed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-08-medium-14",
+    "trainingId": "listening-08-medium",
+    "sentence": "The wellness director coordinates nutritional counseling programs that assist shift workers in maintaining balanced vitality.",
+    "translation": "健康促進總監統籌規劃營養諮詢方案，協助輪班人員維持均衡充沛的體力。",
+    "chunks": [
+      {
+        "text": "The wellness director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "coordinates",
+        "isTargetSlot": true
+      },
+      {
+        "text": "nutritional counseling programs assisting shift workers."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "coordinates 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-medium-15",
+    "trainingId": "listening-08-medium",
+    "sentence": "Detailed occupational hazard logs were compiled by safety representatives before governmental labor inspections commenced.",
+    "translation": "在政府勞動檢查開始之前，工安代表已詳實彙整了職業危害紀錄清單。",
+    "chunks": [
+      {
+        "text": "Detailed occupational hazard logs",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were compiled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by safety representatives before inspections commenced."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "紀錄被彙編，were compiled 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-08-medium-16",
+    "trainingId": "listening-08-medium",
+    "sentence": "Rather than taking synthetic painkillers, the injured warehouse associate preferred targeted physical therapy rehabilitation.",
+    "translation": "該位受傷的倉庫同仁沒有服用化學合成止痛藥，而是選擇了針對性的物理治療復健。",
+    "chunks": [
+      {
+        "text": "Rather than taking synthetic painkillers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the injured warehouse associate",
+        "isTargetSlot": false
+      },
+      {
+        "text": "preferred",
+        "isTargetSlot": true
+      },
+      {
+        "text": "targeted physical therapy rehabilitation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "preferred (偏好) 為過去簡單式主動語態，對比 Rather than。"
+  },
+  {
+    "id": "listening-08-medium-17",
+    "trainingId": "listening-08-medium",
+    "sentence": "Drinking water filtration systems are tested monthly by environmental technicians to safeguard staff hydration quality.",
+    "translation": "環衛技術員每個月對飲用水過濾系統進行檢驗，以確保同仁飲用水的水質衛生。",
+    "chunks": [
+      {
+        "text": "Drinking water filtration systems",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are tested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "monthly by technicians to safeguard hydration quality."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "系統被檢驗，are tested 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-08-medium-18",
+    "trainingId": "listening-08-medium",
+    "sentence": "The occupational health nurse is updating medical emergency contact details for foreign project consultants.",
+    "translation": "職業衛生護理師正在為外籍專案顧問更新緊急醫療聯絡資訊。",
+    "chunks": [
+      {
+        "text": "The occupational health nurse",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is updating",
+        "isTargetSlot": true
+      },
+      {
+        "text": "medical emergency contact details for consultants."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is updating 表當前正持續更新，現在進行式。"
+  },
+  {
+    "id": "listening-08-medium-19",
+    "trainingId": "listening-08-medium",
+    "sentence": "Annual vision examination reimbursements will be processed by payroll upon receipt of verified optometrist statements.",
+    "translation": "在收到驗光師出具的查驗明細單據後，薪資部將處理年度視力檢查的報銷費用。",
+    "chunks": [
+      {
+        "text": "Annual vision examination reimbursements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by payroll upon receipt of optometrist statements."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "費用將被核算處理，will be processed 為未來被動式。"
+  },
+  {
+    "id": "listening-08-medium-20",
+    "trainingId": "listening-08-medium",
+    "sentence": "Even though ergonomic sit-stand desks required substantial upfront capital, employee back complaints dropped remarkably.",
+    "translation": "即便人體工學電動升降桌需要較高的前期投入成本，員工腰背不適的投訴案件卻大幅減少。",
+    "chunks": [
+      {
+        "text": "Even though ergonomic desks required substantial capital,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "employee back complaints",
+        "isTargetSlot": false
+      },
+      {
+        "text": "dropped",
+        "isTargetSlot": true
+      },
+      {
+        "text": "remarkably."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "dropped (下降/減少) 為過去簡單式主動語態，轉折 Even though。"
+  },
+  {
+    "id": "listening-08-medium-21",
+    "trainingId": "listening-08-medium",
+    "sentence": "Air disinfection units have been deployed inside dining lounges to diminish seasonal respiratory infection transmissions.",
+    "translation": "員工餐廳內部已部署空氣消毒清淨機組，以降低季節性呼吸道傳染病的傳播風險。",
+    "chunks": [
+      {
+        "text": "Air disinfection units",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been deployed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "inside dining lounges to diminish infection transmissions."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "機組已被布設，have been deployed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-08-medium-22",
+    "trainingId": "listening-08-medium",
+    "sentence": "The wellness officer promotes mindfulness exercises that help employees unwind during intense project deadlines.",
+    "translation": "健康促進專員推廣正念舒壓練習，協助同仁在面臨緊迫專案截止日時放鬆身心。",
+    "chunks": [
+      {
+        "text": "The wellness officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "promotes",
+        "isTargetSlot": true
+      },
+      {
+        "text": "mindfulness exercises helping employees unwind during deadlines."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "promotes 表專員倡導推廣，現在簡單式。"
+  },
+  {
+    "id": "listening-08-medium-23",
+    "trainingId": "listening-08-medium",
+    "sentence": "Cardiopulmonary resuscitation procedures were demonstrated by paramedics during the mandatory safety seminar yesterday.",
+    "translation": "救護技術員在昨日的強制安全研討會上，現場示範了心肺復甦術（CPR）的操作流程。",
+    "chunks": [
+      {
+        "text": "Cardiopulmonary resuscitation procedures",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were demonstrated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by paramedics during the mandatory safety seminar."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "急救流程被示範，were demonstrated 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-08-medium-24",
+    "trainingId": "listening-08-medium",
+    "sentence": "In order to mitigate chronic eye fatigue, the IT department installed antiglare monitor filters across all workstations.",
+    "translation": "為減緩慢性眼部疲勞，資訊部門在全體員工的工作站螢幕上均安裝了防眩光濾鏡保護貼。",
+    "chunks": [
+      {
+        "text": "In order to mitigate chronic eye fatigue,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the IT department",
+        "isTargetSlot": false
+      },
+      {
+        "text": "installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "antiglare monitor filters across all workstations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "installed (安裝) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-medium-25",
+    "trainingId": "listening-08-medium",
+    "sentence": "Prescription medication orders will be filled by the licensed pharmacy coordinator within three business days.",
+    "translation": "處方藥物訂單將由合格特約藥師在三個工作天內配發完成。",
+    "chunks": [
+      {
+        "text": "Prescription medication orders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be filled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the pharmacy coordinator within three business days."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "處方將被調配配發，will be filled 為未來被動式。"
+  },
+  {
+    "id": "listening-08-medium-26",
+    "trainingId": "listening-08-medium",
+    "sentence": "The company ergonomic committee recommended custom lumbar supports for logistics dispatchers who sit for extended periods.",
+    "translation": "公司人體工學委員會為長時間久坐的物流調度員建議配備客製化腰靠支撐墊。",
+    "chunks": [
+      {
+        "text": "The company ergonomic committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "recommended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "custom lumbar supports for dispatchers sitting for extended periods."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "recommended 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-08-medium-27",
+    "trainingId": "listening-08-medium",
+    "sentence": "First aid medical boxes were restocked by clinic attendants prior to the commencement of the chemical handling trial.",
+    "translation": "在化學品操作試驗展開之前，醫護室人員已將急救箱內的藥品物資補齊妥當。",
+    "chunks": [
+      {
+        "text": "First aid medical boxes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were restocked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by clinic attendants prior to the chemical trial."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "急救箱被補齊補充，were restocked 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-08-medium-28",
+    "trainingId": "listening-08-medium",
+    "sentence": "Although seasonal pollen counts reached historic peaks, advanced HVAC air filters protected indoor breathing conditions.",
+    "translation": "儘管季節性花粉濃度達到歷史新高，先進的空調過濾裝置依然保障了室內的優良空氣品質。",
+    "chunks": [
+      {
+        "text": "Although seasonal pollen counts reached historic peaks,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "advanced HVAC air filters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "protected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "indoor breathing conditions."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "protected (防護/保障) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-08-medium-29",
+    "trainingId": "listening-08-medium",
+    "sentence": "The corporate wellness subsidy policy has been expanded to include therapeutic massage sessions for injured personnel.",
+    "translation": "企業健康補助政策已完成擴大修訂，將受傷員工的物理按摩調理療程納入補助範圍。",
+    "chunks": [
+      {
+        "text": "The corporate wellness subsidy policy",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to include therapeutic massage sessions."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "政策已被擴展放寬，has been expanded 為現在完成被動式。"
+  },
+  {
+    "id": "listening-08-medium-30",
+    "trainingId": "listening-08-medium",
+    "sentence": "The consulting occupational physician will present injury reduction analytics during the quarterly management retreat.",
+    "translation": "特聘職業醫學顧問醫師將在季度主管共識營上，發表職業傷害減量分析報告。",
+    "chunks": [
+      {
+        "text": "The consulting occupational physician",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will present",
+        "isTargetSlot": true
+      },
+      {
+        "text": "injury reduction analytics during the retreat."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will present 為未來簡單式主動語態。"
+  }
+]

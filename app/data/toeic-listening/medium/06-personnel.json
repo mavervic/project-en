@@ -1,0 +1,826 @@
+[
+  {
+    "id": "listening-06-medium-01",
+    "trainingId": "listening-06-medium",
+    "sentence": "Although hundreds of qualified applicants applied for the executive opening, the search committee shortlisted only three candidates.",
+    "translation": "儘管有數百名合格的求職者應徵該高階主管職缺，遴選委員會最終僅篩選出三位決選候選人。",
+    "chunks": [
+      {
+        "text": "Although hundreds of applicants applied for the opening,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the search committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "shortlisted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "only three candidates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "shortlisted (編入決選名單) 為過去簡單式主動語態，轉折 Although 關係。"
+  },
+  {
+    "id": "listening-06-medium-02",
+    "trainingId": "listening-06-medium",
+    "sentence": "Because employee turnover escalated in regional branches, comprehensive retention bonuses were authorized by corporate leadership.",
+    "translation": "由於區域分部員工流動率升高，企業領導層批准了全面的留任獎金方案。",
+    "chunks": [
+      {
+        "text": "Because employee turnover escalated in regional branches,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "comprehensive retention bonuses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were authorized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by corporate leadership."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "獎金被授權核准，were authorized 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-06-medium-03",
+    "trainingId": "listening-06-medium",
+    "sentence": "Human resources specialists must verify academic credentials and employment references before job offers are officially transmitted.",
+    "translation": "人資專員在正式發送錄取通知之前，必須查證學歷證明與前雇主推薦信函。",
+    "chunks": [
+      {
+        "text": "Human resources specialists",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must verify",
+        "isTargetSlot": true
+      },
+      {
+        "text": "academic credentials before job offers are transmitted."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "must verify 表招聘流程常規義務，情態助動詞主動語態。"
+  },
+  {
+    "id": "listening-06-medium-04",
+    "trainingId": "listening-06-medium",
+    "sentence": "While new hires were completing digital orientation modules, the training coordinator answered inquiries regarding healthcare benefits.",
+    "translation": "當新進同仁正在線上完成新人培訓模組時，培訓協調員回答了關於健保福利的各項詢問。",
+    "chunks": [
+      {
+        "text": "While new hires were completing digital modules,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the training coordinator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "answered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "inquiries regarding healthcare benefits."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "answered 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-05",
+    "trainingId": "listening-06-medium",
+    "sentence": "Performance evaluation criteria are revised annually by department directors to reflect shifting market objectives.",
+    "translation": "各部門主管每年均會修訂績效考評標準，以反映不斷變化的市場目標。",
+    "chunks": [
+      {
+        "text": "Performance evaluation criteria",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are revised",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annually by department directors to reflect market objectives."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "指標被修訂，are revised 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-06-medium-06",
+    "trainingId": "listening-06-medium",
+    "sentence": "The recruitment coordinator is scheduling virtual interviews for senior engineering candidates located overseas.",
+    "translation": "招募協調員正在為身處海外的資深工程師應徵者安排遠距視訊面試。",
+    "chunks": [
+      {
+        "text": "The recruitment coordinator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is scheduling",
+        "isTargetSlot": true
+      },
+      {
+        "text": "virtual interviews for engineering candidates located overseas."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is scheduling 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-07",
+    "trainingId": "listening-06-medium",
+    "sentence": "Unless formal sick leave requests are submitted through the portal, unexcused absences will impact quarterly attendance stipends.",
+    "translation": "除非透過系統入口提交正式病假申請，否則無故曠職將會影響季度全勤津貼。",
+    "chunks": [
+      {
+        "text": "Unless leave requests are submitted through the portal,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "unexcused absences",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will impact",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly attendance stipends."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will impact 表未來的懲戒影響，未來簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-08",
+    "trainingId": "listening-06-medium",
+    "sentence": "Although the applicant possessed limited formal credentials, interviewers admired her exceptional practical experience.",
+    "translation": "儘管該應試者擁有的正式學歷證書有限，但面試官對其卓越的實務經驗深為讚賞。",
+    "chunks": [
+      {
+        "text": "Although the applicant possessed limited credentials,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "interviewers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "admired",
+        "isTargetSlot": true
+      },
+      {
+        "text": "her exceptional practical experience."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "admired (欣賞/讚揚) 為過去簡單式主動語態，轉折讓步關係。"
+  },
+  {
+    "id": "listening-06-medium-09",
+    "trainingId": "listening-06-medium",
+    "sentence": "The leadership development course was organized by the corporate university to prepare future branch general managers.",
+    "translation": "這門領導力培訓課程由企業大學主辦，旨在培養未來的分行總經理人才。",
+    "chunks": [
+      {
+        "text": "The leadership development course",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was organized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the corporate university to prepare future managers."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "課程被籌辦，was organized 為過去被動式。"
+  },
+  {
+    "id": "listening-06-medium-10",
+    "trainingId": "listening-06-medium",
+    "sentence": "Before assuming managerial responsibilities, newly promoted supervisors attended intensive conflict resolution workshops.",
+    "translation": "在承擔管理職責之前，新晉升的主管參加了密集的衝突解決實務工作坊。",
+    "chunks": [
+      {
+        "text": "Before assuming managerial responsibilities,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "newly promoted supervisors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "attended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "intensive conflict resolution workshops."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "attended 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-11",
+    "trainingId": "listening-06-medium",
+    "sentence": "Annual bonus distributions will be communicated to staff members following executive board signoff next month.",
+    "translation": "年度分紅發放事宜將在下個月董事會簽署確認後，向全體員工公告宣達。",
+    "chunks": [
+      {
+        "text": "Annual bonus distributions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be communicated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to staff members following executive board signoff."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "事項將被通知溝通，will be communicated 為未來被動式。"
+  },
+  {
+    "id": "listening-06-medium-12",
+    "trainingId": "listening-06-medium",
+    "sentence": "Because the sales representative surpassed all quarterly performance quotas, management awarded her a commendation plaque.",
+    "translation": "由於該業務代表超額達成了所有季度業績目標，管理層向她頒發了一面榮譽表彰獎牌。",
+    "chunks": [
+      {
+        "text": "Because the representative surpassed all quarterly quotas,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "awarded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "her a commendation plaque."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "awarded 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-13",
+    "trainingId": "listening-06-medium",
+    "sentence": "Flexible hybrid work arrangements have been adopted across corporate departments following successful trial periods.",
+    "translation": "在歷經成功的試辦期之後，彈性混合辦公制度已在各企業部門間全面施行。",
+    "chunks": [
+      {
+        "text": "Flexible hybrid work arrangements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been adopted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across corporate departments following successful trials."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "制度已被採納，have been adopted 為現在完成被動式。"
+  },
+  {
+    "id": "listening-06-medium-14",
+    "trainingId": "listening-06-medium",
+    "sentence": "The human resources administrator coordinates relocation assistance packages for transferred branch executives.",
+    "translation": "人資管理師為調任的分部主管統籌協調外派搬遷安置補助方案。",
+    "chunks": [
+      {
+        "text": "The human resources administrator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "coordinates",
+        "isTargetSlot": true
+      },
+      {
+        "text": "relocation assistance packages for transferred executives."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "coordinates 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-15",
+    "trainingId": "listening-06-medium",
+    "sentence": "Exit interviews were conducted by neutral counselors to gather honest feedback regarding workplace morale.",
+    "translation": "離職面談由中立的心理輔導員主持進行，以蒐集關於職場工作士氣的客觀回饋。",
+    "chunks": [
+      {
+        "text": "Exit interviews",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by neutral counselors to gather honest feedback."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "面談被執行，were conducted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-06-medium-16",
+    "trainingId": "listening-06-medium",
+    "sentence": "Rather than hiring costly external recruitment agencies, the firm promoted talented internal associates.",
+    "translation": "該公司沒有聘用收費高昂的外部獵人頭機構，而是拔擢了內部深具潛力的人才。",
+    "chunks": [
+      {
+        "text": "Rather than hiring external recruitment agencies,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the firm",
+        "isTargetSlot": false
+      },
+      {
+        "text": "promoted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "talented internal associates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "promoted (晉升/提拔) 為過去簡單式主動語態，對比 Rather than。"
+  },
+  {
+    "id": "listening-06-medium-17",
+    "trainingId": "listening-06-medium",
+    "sentence": "Mandatory corporate anti-harassment training is completed online by all permanent and contracted employees annually.",
+    "translation": "全體正職員工與約聘同仁每年均需在線上完成強制性的職場反騷擾宣導培訓。",
+    "chunks": [
+      {
+        "text": "Mandatory corporate anti-harassment training",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "online by all employees annually."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "培訓被完成，is completed 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-06-medium-18",
+    "trainingId": "listening-06-medium",
+    "sentence": "The payroll director is investigating discrepancies in travel allowance reimbursement calculations.",
+    "translation": "薪資總監正在調查差旅津貼報銷計算中出現的幾處數據出入。",
+    "chunks": [
+      {
+        "text": "The payroll director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is investigating",
+        "isTargetSlot": true
+      },
+      {
+        "text": "discrepancies in travel allowance calculations."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is investigating 表當前正調查，現在進行式。"
+  },
+  {
+    "id": "listening-06-medium-19",
+    "trainingId": "listening-06-medium",
+    "sentence": "Comprehensive parental leave guidelines will be posted on the employee portal early next week.",
+    "translation": "完整的育嬰留職停薪準則將於下週初公布在員工入口網站上。",
+    "chunks": [
+      {
+        "text": "Comprehensive parental leave guidelines",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be posted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on the employee portal early next week."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "公告將被張貼，will be posted 為未來被動式。"
+  },
+  {
+    "id": "listening-06-medium-20",
+    "trainingId": "listening-06-medium",
+    "sentence": "Even though overtime work was demanding during the software rollout, employees appreciated the double compensation bonus.",
+    "translation": "即便在軟體上線期間加班任務繁重，員工們對公司發放的雙倍加班獎金深表肯定。",
+    "chunks": [
+      {
+        "text": "Even though overtime work was demanding,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "employees",
+        "isTargetSlot": false
+      },
+      {
+        "text": "appreciated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the double compensation bonus."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "appreciated (感激/肯定) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-21",
+    "trainingId": "listening-06-medium",
+    "sentence": "Confidential employee health records have been transferred to secure encrypted database archives.",
+    "translation": "機密員工健康檔案已轉移存放至具備加密防護的資料庫檔案系統中。",
+    "chunks": [
+      {
+        "text": "Confidential employee health records",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been transferred",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to secure encrypted database archives."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "檔案已被轉移，have been transferred 為現在完成被動式。"
+  },
+  {
+    "id": "listening-06-medium-22",
+    "trainingId": "listening-06-medium",
+    "sentence": "The human resources manager facilitates weekly team-building seminars for customer support personnel.",
+    "translation": "人資經理每週為客服人員主持團隊共識凝聚專題講座。",
+    "chunks": [
+      {
+        "text": "The human resources manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "facilitates",
+        "isTargetSlot": true
+      },
+      {
+        "text": "weekly team-building seminars for support personnel."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "facilitates 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-23",
+    "trainingId": "listening-06-medium",
+    "sentence": "An achievement medal was awarded to the safety officer for maintaining zero workplace injuries over three years.",
+    "translation": "該安全主任因連續三年達成零工傷紀錄而獲頒了一枚傑出成就獎章。",
+    "chunks": [
+      {
+        "text": "An achievement medal",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was awarded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the safety officer for maintaining zero injuries."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "獎章被授予，was awarded 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-06-medium-24",
+    "trainingId": "listening-06-medium",
+    "sentence": "In order to cultivate internal talent, the company sponsored graduate study tuition for promising research scientists.",
+    "translation": "為了培育內部研發專才，該公司為深具發展潛力的研究人員全額贊助研究所學費。",
+    "chunks": [
+      {
+        "text": "In order to cultivate internal talent,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sponsored",
+        "isTargetSlot": true
+      },
+      {
+        "text": "graduate study tuition for research scientists."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "sponsored (贊助) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-25",
+    "trainingId": "listening-06-medium",
+    "sentence": "Electronic employee identification badges will be distributed by facility security next Monday morning.",
+    "translation": "電子員工識別證將於下週一上午由設施安全部門發放完畢。",
+    "chunks": [
+      {
+        "text": "Electronic employee identification badges",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by facility security next Monday morning."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "證件將被分發，will be distributed 為未來被動式。"
+  },
+  {
+    "id": "listening-06-medium-26",
+    "trainingId": "listening-06-medium",
+    "sentence": "The director introduced an innovative mentoring scheme that pairs junior analysts with seasoned industry veterans.",
+    "translation": "處長引進了一項創新的導師傳承計畫，讓初階分析師與資深業界前輩結對學習。",
+    "chunks": [
+      {
+        "text": "The director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "introduced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an innovative mentoring scheme pairing junior analysts with veterans."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "introduced 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-06-medium-27",
+    "trainingId": "listening-06-medium",
+    "sentence": "All overtime claim records were checked by compliance auditors before payroll disbursement was authorized.",
+    "translation": "在授權核撥薪資之前，合規審計員核實了所有的加班請領紀錄。",
+    "chunks": [
+      {
+        "text": "All overtime claim records",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were checked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by compliance auditors before disbursement was authorized."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "加班單被查核，were checked 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-06-medium-28",
+    "trainingId": "listening-06-medium",
+    "sentence": "Although organizational restructuring caused initial apprehension, leadership maintained open communication channels throughout.",
+    "translation": "儘管組織架構調整最初引發了部分疑慮，但主管層在整個過程中均保持暢通的溝通管道。",
+    "chunks": [
+      {
+        "text": "Although organizational restructuring caused apprehension,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "leadership",
+        "isTargetSlot": false
+      },
+      {
+        "text": "maintained",
+        "isTargetSlot": true
+      },
+      {
+        "text": "open communication channels throughout."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "maintained (保持/維持) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-06-medium-29",
+    "trainingId": "listening-06-medium",
+    "sentence": "The revised staff handbook has been uploaded to the company intranet for immediate reference by employees.",
+    "translation": "修訂版員工工作守則手冊已上傳至公司內部網，供同仁即時查閱。",
+    "chunks": [
+      {
+        "text": "The revised staff handbook",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been uploaded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the company intranet for immediate reference."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "手冊已被上傳，has been uploaded 為現在完成被動式。"
+  },
+  {
+    "id": "listening-06-medium-30",
+    "trainingId": "listening-06-medium",
+    "sentence": "The executive committee will appoint an independent advisory panel to oversee annual workforce compensation reviews.",
+    "translation": "執行委員會將指派一個獨立顧問小組，以督導年度員工薪酬結構考核。",
+    "chunks": [
+      {
+        "text": "The executive committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will appoint",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an independent advisory panel to oversee compensation reviews."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will appoint 表未來任命指派，未來簡單式主動語態。"
+  }
+]

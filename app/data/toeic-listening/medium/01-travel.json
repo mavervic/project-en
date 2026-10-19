@@ -1,0 +1,854 @@
+[
+  {
+    "id": "listening-01-medium-01",
+    "trainingId": "listening-01-medium",
+    "sentence": "Although passenger volume increased noticeably this morning, the airport ground staff processed all international check-ins without major delays.",
+    "translation": "儘管今早旅客人數明顯攀升，地勤人員仍順利處理了所有國際航班的登機手續，未出現嚴重延誤。",
+    "chunks": [
+      {
+        "text": "Although passenger volume increased noticeably this morning,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the airport ground staff",
+        "isTargetSlot": false
+      },
+      {
+        "text": "processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all international check-ins without major delays."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although 引導轉折，主節主詞 ground staff 執行 processed，為主動過去簡單式。"
+  },
+  {
+    "id": "listening-01-medium-02",
+    "trainingId": "listening-01-medium",
+    "sentence": "Because of severe turbulence over the mountains, flight attendants were instructed to suspend beverage service temporarily.",
+    "translation": "由於山區上空遭遇強烈亂流，空服員接獲指示暫停飲料服務。",
+    "chunks": [
+      {
+        "text": "Because of severe turbulence over the mountains,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "flight attendants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were instructed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to suspend beverage service temporarily."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果情境，were instructed (were + p.p.) 表接獲指令，為過去簡單被動式。"
+  },
+  {
+    "id": "listening-01-medium-03",
+    "trainingId": "listening-01-medium",
+    "sentence": "Travelers heading to European destinations must confirm their connecting gates before entering the transit security area.",
+    "translation": "前往歐洲目的地的旅客在進入過境安檢區之前，必須先確認其轉機登機門。",
+    "chunks": [
+      {
+        "text": "Travelers heading to European destinations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must confirm",
+        "isTargetSlot": true
+      },
+      {
+        "text": "their connecting gates",
+        "isTargetSlot": false
+      },
+      {
+        "text": "before entering the transit security area."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在情態動詞 must confirm 搭配原形動詞，表必要義務與規則提醒。"
+  },
+  {
+    "id": "listening-01-medium-04",
+    "trainingId": "listening-01-medium",
+    "sentence": "While our business delegation was traveling by express train, the regional sales conference was officially rescheduled for next month.",
+    "translation": "當我們的商務代表團搭乘特快列車途中，區域業務會議已正式改期至下個月舉行。",
+    "chunks": [
+      {
+        "text": "While our business delegation was traveling by express train,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the regional sales conference",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was rescheduled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for next month."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "時間子句引導背景，主節會議被改期 was rescheduled 為過去被動式。"
+  },
+  {
+    "id": "listening-01-medium-05",
+    "trainingId": "listening-01-medium",
+    "sentence": "Due to unexpected mechanical difficulties, complimentary hotel vouchers have been distributed to all stranded passengers.",
+    "translation": "由於突發機械故障，免費飯店住宿券已發放給所有滯留旅客。",
+    "chunks": [
+      {
+        "text": "Due to unexpected mechanical difficulties,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "complimentary hotel vouchers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to all stranded passengers."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "住宿券已被發放，have been distributed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-01-medium-06",
+    "trainingId": "listening-01-medium",
+    "sentence": "The travel coordinator is arranging customized itinerary adjustments for corporate executives visiting foreign manufacturing plants.",
+    "translation": "差旅協調專員正在為參觀海外工廠的企業主管安排客製化行程調整。",
+    "chunks": [
+      {
+        "text": "The travel coordinator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is arranging",
+        "isTargetSlot": true
+      },
+      {
+        "text": "customized itinerary adjustments",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for corporate executives visiting foreign plants."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is arranging 為現在進行式主動語態，描述當前正在進行的行程協調。"
+  },
+  {
+    "id": "listening-01-medium-07",
+    "trainingId": "listening-01-medium",
+    "sentence": "Unless passengers claim their oversized baggage promptly at carousel four, unclaimed items will be moved to lost property storage.",
+    "translation": "除非旅客立刻在第四行李轉盤提領超大件行李，否則未認領物品將被移至遺失物保管處。",
+    "chunks": [
+      {
+        "text": "Unless passengers claim their oversized baggage promptly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "unclaimed items",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be moved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to lost property storage."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句，主節 will be moved 為一般未來被動式。"
+  },
+  {
+    "id": "listening-01-medium-08",
+    "trainingId": "listening-01-medium",
+    "sentence": "Although our original direct flight was canceled, we secured alternative connecting tickets through an affiliated partner carrier.",
+    "translation": "儘管我們原本的直飛航班被取消了，但我們透過合作夥伴航空公司取得替代的轉機機票。",
+    "chunks": [
+      {
+        "text": "Although our original direct flight was canceled,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "we",
+        "isTargetSlot": false
+      },
+      {
+        "text": "secured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "alternative connecting tickets through a partner carrier."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "secured (獲取/確保) 為過去簡單式主動語態，表達克服轉折困境的行動。"
+  },
+  {
+    "id": "listening-01-medium-09",
+    "trainingId": "listening-01-medium",
+    "sentence": "The rental car agency requires international permits from drivers intending to hire commercial vehicles overseas.",
+    "translation": "該租車公司要求有意在海外租賃商用車輛的駕駛員出示國際駕照。",
+    "chunks": [
+      {
+        "text": "The rental car agency",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requires",
+        "isTargetSlot": true
+      },
+      {
+        "text": "international permits from drivers intending to hire vehicles."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "requires 為現在簡單式，表達租車政策的常規性規章。"
+  },
+  {
+    "id": "listening-01-medium-10",
+    "trainingId": "listening-01-medium",
+    "sentence": "After runway visibility dropped significantly in heavy fog, incoming aircraft were diverted to nearby domestic airports.",
+    "translation": "在大霧中跑道能見度大幅下降後，入境飛機已改降至鄰近的國內機場。",
+    "chunks": [
+      {
+        "text": "After runway visibility dropped significantly in heavy fog,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "incoming aircraft",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were diverted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to nearby domestic airports."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "飛機被轉降，were diverted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-01-medium-11",
+    "trainingId": "listening-01-medium",
+    "sentence": "The executive assistant will finalize travel accommodations as soon as corporate budget approvals are granted.",
+    "translation": "行政助理一旦獲得公司預算批准，將立即敲定差旅住宿事宜。",
+    "chunks": [
+      {
+        "text": "The executive assistant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will finalize",
+        "isTargetSlot": true
+      },
+      {
+        "text": "travel accommodations as soon as budget approvals are granted."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will finalize 表未來即將完成的事項，搭配 as soon as 時間子句。"
+  },
+  {
+    "id": "listening-01-medium-12",
+    "trainingId": "listening-01-medium",
+    "sentence": "Because the bullet train was delayed by railway signaling repairs, several conference participants missed the keynote opening address.",
+    "translation": "由於高速鐵路因號誌維修而延誤，數名會議與會者錯過了開幕主題演講。",
+    "chunks": [
+      {
+        "text": "Because the train was delayed by signaling repairs,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "several conference participants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "missed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the keynote opening address."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "missed 為過去簡單式主動語態，表因延誤而錯過演講。"
+  },
+  {
+    "id": "listening-01-medium-13",
+    "trainingId": "listening-01-medium",
+    "sentence": "Priority boarding privileges have been extended to elite business club members traveling across transnational routes.",
+    "translation": "跨國航線的商務菁英俱樂部會員已獲得優先登機禮遇延展。",
+    "chunks": [
+      {
+        "text": "Priority boarding privileges",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been extended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to elite business club members traveling across routes."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "禮遇已被延展提供，have been extended 為現在完成被動式。"
+  },
+  {
+    "id": "listening-01-medium-14",
+    "trainingId": "listening-01-medium",
+    "sentence": "In order to expedite border processing, customs officials are inspecting declaration documents before passengers reach baggage inspection.",
+    "translation": "為了加速通關進度，海關人員在旅客到達行李檢查站前即先行查驗申報文件。",
+    "chunks": [
+      {
+        "text": "In order to expedite border processing,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "customs officials",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are inspecting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "declaration documents before baggage inspection."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "are inspecting 表當前正在執行中的檢查作業，現在進行式。"
+  },
+  {
+    "id": "listening-01-medium-15",
+    "trainingId": "listening-01-medium",
+    "sentence": "Whenever foreign visitors enter the country for commercial purposes, formal corporate invitation letters must be presented.",
+    "translation": "凡外國訪客因商務目的入境該國時，均必須出示正式的企業邀請函。",
+    "chunks": [
+      {
+        "text": "Whenever foreign visitors enter the country,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "formal corporate invitation letters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must be presented",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at immigration checkpoints."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "must be presented (情態助動詞 + be + p.p.) 表必須被出示，被動語態。"
+  },
+  {
+    "id": "listening-01-medium-16",
+    "trainingId": "listening-01-medium",
+    "sentence": "Even though flight crews were notified about severe headwinds, the airliner landed thirty minutes ahead of estimated schedule.",
+    "translation": "即便機組人員收到了強烈逆風的通知，該客機仍比預計時程提前三十分鐘降落。",
+    "chunks": [
+      {
+        "text": "Even though flight crews were notified about severe headwinds,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the airliner",
+        "isTargetSlot": false
+      },
+      {
+        "text": "landed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "thirty minutes ahead of estimated schedule."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步轉折子句 Even though，主節 landed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-01-medium-17",
+    "trainingId": "listening-01-medium",
+    "sentence": "Hotel reservation specialists confirmed that suite upgrades would be honored during the peak tourism convention weekend.",
+    "translation": "飯店預訂專員確認在旅遊高峰年會週末期間仍將提供套房升等服務。",
+    "chunks": [
+      {
+        "text": "Hotel reservation specialists",
+        "isTargetSlot": false
+      },
+      {
+        "text": "confirmed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "that suite upgrades would be honored during the weekend."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "confirmed 為主要子句動詞，過去簡單主動式，帶出名詞子句承諾。"
+  },
+  {
+    "id": "listening-01-medium-18",
+    "trainingId": "listening-01-medium",
+    "sentence": "Subway renovation work is being conducted along the airport express line to enhance passenger commuting efficiency.",
+    "translation": "機場快線沿線正在進行地鐵整修工程，以提升旅客的通勤效率。",
+    "chunks": [
+      {
+        "text": "Subway renovation work",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is being conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "along the airport express line to enhance efficiency."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "工程正在進行中，is being conducted 為現在進行被動式。"
+  },
+  {
+    "id": "listening-01-medium-19",
+    "trainingId": "listening-01-medium",
+    "sentence": "Before boarding the high-speed shuttle bus, passengers should verify their reservation barcodes on their mobile devices.",
+    "translation": "在搭乘高速接駁車之前，乘客應在行動裝置上確認其預約條碼。",
+    "chunks": [
+      {
+        "text": "Before boarding the high-speed shuttle bus,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "passengers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "should verify",
+        "isTargetSlot": true
+      },
+      {
+        "text": "their reservation barcodes on mobile devices."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "should verify 帶出建議動作，現在情態主動語態。"
+  },
+  {
+    "id": "listening-01-medium-20",
+    "trainingId": "listening-01-medium",
+    "sentence": "A comprehensive travel insurance policy was purchased by the human resources team prior to sending technicians abroad.",
+    "translation": "人資團隊在派遣技術人員出國前，已購買了全面的旅遊保險保單。",
+    "chunks": [
+      {
+        "text": "A comprehensive travel insurance policy",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was purchased",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the human resources team prior to sending technicians."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "保單被購買，was purchased 為過去被動式。"
+  },
+  {
+    "id": "listening-01-medium-21",
+    "trainingId": "listening-01-medium",
+    "sentence": "While travelers were queuing at the security checkpoint, terminal announcements alerted passengers about an impending gate change.",
+    "translation": "當旅客在安檢站排隊時，航廈廣播提醒乘客即將更換登機門。",
+    "chunks": [
+      {
+        "text": "While travelers were queuing at the security checkpoint,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "terminal announcements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "alerted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "passengers about an impending gate change."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "alerted 為過去簡單式主動語態，描述突發事件提醒。"
+  },
+  {
+    "id": "listening-01-medium-22",
+    "trainingId": "listening-01-medium",
+    "sentence": "International customs forms will be distributed by cabin attendants shortly before the airplane begins its final descent.",
+    "translation": "在飛機開始最終下降前不久，機艙服務人員將發放國際海關申報單。",
+    "chunks": [
+      {
+        "text": "International customs forms",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by cabin attendants shortly before descent."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "申報單將被發放，will be distributed 為未來被動式。"
+  },
+  {
+    "id": "listening-01-medium-23",
+    "trainingId": "listening-01-medium",
+    "sentence": "The hotel concierge recommends local transit passes for visitors who wish to explore historical landmarks downtown.",
+    "translation": "飯店禮賓專員向希望探索市中心歷史地標的旅客推薦當地交通通票。",
+    "chunks": [
+      {
+        "text": "The hotel concierge",
+        "isTargetSlot": false
+      },
+      {
+        "text": "recommends",
+        "isTargetSlot": true
+      },
+      {
+        "text": "local transit passes for visitors exploring downtown."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "recommends 表禮賓人員例行推薦服務，現在簡單式。"
+  },
+  {
+    "id": "listening-01-medium-24",
+    "trainingId": "listening-01-medium",
+    "sentence": "All damaged suitcases were inspected by the baggage claim supervisor before reimbursement claims were approved.",
+    "translation": "在核准理賠申請前，所有受損的行李箱均經過行李認領主管的檢查。",
+    "chunks": [
+      {
+        "text": "All damaged suitcases",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were inspected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the supervisor before reimbursement was approved."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "行李被檢查，were inspected 為過去被動式。"
+  },
+  {
+    "id": "listening-01-medium-25",
+    "trainingId": "listening-01-medium",
+    "sentence": "Rather than taking an expensive airport taxi, the business delegate elected to ride the express train to the hotel.",
+    "translation": "這位商務代表沒有選擇搭乘昂貴的機場計程車，而是決定搭乘特快列車前往飯店。",
+    "chunks": [
+      {
+        "text": "Rather than taking an expensive airport taxi,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the business delegate",
+        "isTargetSlot": false
+      },
+      {
+        "text": "elected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to ride the express train to the hotel."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "elected (選擇/決定) 為過去簡單式主動語態，展現細節對比 (Rather than)。"
+  },
+  {
+    "id": "listening-01-medium-26",
+    "trainingId": "listening-01-medium",
+    "sentence": "Extra transit shuttle services will be scheduled during the international trade fair to accommodate foreign visitors.",
+    "translation": "在國際貿易展覽會期間，將排定額外的接駁車班次以疏運國外訪客。",
+    "chunks": [
+      {
+        "text": "Extra transit shuttle services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be scheduled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "during the international trade fair to accommodate visitors."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "車次將被安排，will be scheduled 為未來被動式。"
+  },
+  {
+    "id": "listening-01-medium-27",
+    "trainingId": "listening-01-medium",
+    "sentence": "Corporate executives who commute frequently between branches appreciate the enhanced legroom in premier business cabins.",
+    "translation": "經常在各分部間往返通勤的企業主管，對頂級商務艙更寬敞的腿部空間深表滿意。",
+    "chunks": [
+      {
+        "text": "Corporate executives commuting frequently between branches",
+        "isTargetSlot": false
+      },
+      {
+        "text": "appreciate",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the enhanced legroom in premier cabins."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "appreciate 為現在簡單式主動語態，主詞為複數 executives。"
+  },
+  {
+    "id": "listening-01-medium-28",
+    "trainingId": "listening-01-medium",
+    "sentence": "Because the ferry terminal was undergoing extensive renovation, temporary ticket counters were set up near pier two.",
+    "translation": "由於渡輪碼頭正進行大規模翻修，二號碼頭附近設立了臨時售票櫃檯。",
+    "chunks": [
+      {
+        "text": "Because the ferry terminal was undergoing renovation,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "temporary ticket counters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were set up",
+        "isTargetSlot": true
+      },
+      {
+        "text": "near pier two."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "售票處被設立，were set up 為過去被動片語動詞。"
+  },
+  {
+    "id": "listening-01-medium-29",
+    "trainingId": "listening-01-medium",
+    "sentence": "The logistics manager is reviewing updated flight schedules to guarantee smooth transport of urgent exhibition samples.",
+    "translation": "物流經理正在審視最新的航班時程表，以確保緊急展覽樣品能順暢運抵。",
+    "chunks": [
+      {
+        "text": "The logistics manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "updated flight schedules to guarantee smooth transport."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is reviewing 表當前正仔細審視，現在進行式主動語態。"
+  },
+  {
+    "id": "listening-01-medium-30",
+    "trainingId": "listening-01-medium",
+    "sentence": "Although seasonal flight tariffs escalated recently, corporate booking discounts have protected our quarterly travel budget.",
+    "translation": "儘管季節性航空票價近期上漲，但企業訂位優惠折扣保障了我們的季度差旅預算。",
+    "chunks": [
+      {
+        "text": "Although seasonal flight tariffs escalated recently,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate booking discounts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have protected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "our quarterly travel budget."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "轉折語氣 Although，主節 have protected (保護/減緩) 為現在完成式。"
+  }
+]

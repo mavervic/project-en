@@ -1,0 +1,826 @@
+[
+  {
+    "id": "listening-12-medium-01",
+    "trainingId": "listening-12-medium",
+    "sentence": "Although network traffic surged following the software release, load-balancing servers distributed user requests without performance degradation.",
+    "translation": "儘管新軟體版本發布後網路流量暴增，負載平衡伺服器依然順暢分流了使用者的連線請求，未造成效能衰退。",
+    "chunks": [
+      {
+        "text": "Although network traffic surged following the release,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "load-balancing servers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "user requests without performance degradation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "distributed (分流/派送) 為過去簡單式主動語態，轉折 Although 關係。"
+  },
+  {
+    "id": "listening-12-medium-02",
+    "trainingId": "listening-12-medium",
+    "sentence": "Because the legacy database suffered frequent latency bottlenecks, customer data was migrated to a scalable cloud storage cluster.",
+    "translation": "由於舊版資料庫頻繁出現延遲瓶頸，客戶資料已被全面遷移至具備擴充彈性的雲端儲存叢集。",
+    "chunks": [
+      {
+        "text": "Because the legacy database suffered latency bottlenecks,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "customer data",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was migrated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to a scalable cloud storage cluster."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "資料被遷移，was migrated 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-medium-03",
+    "trainingId": "listening-12-medium",
+    "sentence": "System administrators must configure multi-factor authentication protocols before remote employees can access sensitive corporate networks.",
+    "translation": "系統管理員在遠距員工存取機密企業網路前，必須先配置完成多因素身分驗證協定。",
+    "chunks": [
+      {
+        "text": "System administrators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must configure",
+        "isTargetSlot": true
+      },
+      {
+        "text": "multi-factor authentication protocols before access is permitted."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "must configure 表資安配置義務，情態助動詞主動語態。"
+  },
+  {
+    "id": "listening-12-medium-04",
+    "trainingId": "listening-12-medium",
+    "sentence": "While software engineers were patching code vulnerabilities, the cybersecurity officer monitored firewall event logs for unauthorized intrusion attempts.",
+    "translation": "當軟體工程師正在修補程式碼安全弱點時，資安長嚴密監控防火牆日誌是否有未經授權的入侵企圖。",
+    "chunks": [
+      {
+        "text": "While software engineers were patching vulnerabilities,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the cybersecurity officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "monitored",
+        "isTargetSlot": true
+      },
+      {
+        "text": "firewall event logs for intrusion attempts."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "monitored (監控) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-medium-05",
+    "trainingId": "listening-12-medium",
+    "sentence": "Automated software test suites are executed continuously by development pipelines to detect regressions prior to deployment.",
+    "translation": "自動化軟體測試套件由開發流水線持續執行測試，以便在版本正式部署前偵測回歸錯誤。",
+    "chunks": [
+      {
+        "text": "Automated software test suites",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are executed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "continuously by pipelines to detect regressions."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "測試被執行，are executed 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-12-medium-06",
+    "trainingId": "listening-12-medium",
+    "sentence": "The database administrator is optimizing complex SQL query executions to accelerate online transaction processing speeds.",
+    "translation": "資料庫管理師正在優化複雜的 SQL 查詢執行效能，以大幅加速線上交易處理速度。",
+    "chunks": [
+      {
+        "text": "The database administrator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is optimizing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "complex SQL query executions to accelerate transaction speeds."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is optimizing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-12-medium-07",
+    "trainingId": "listening-12-medium",
+    "sentence": "Unless legacy hardware components are replaced before the upcoming quarter, corporate email server stability will be compromised.",
+    "translation": "除非在下個季度前替換掉老舊硬體組件，否則企業電子郵件伺服器的穩定度將受到威脅威脅。",
+    "chunks": [
+      {
+        "text": "Unless legacy hardware components are replaced,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate email server stability",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be compromised",
+        "isTargetSlot": true
+      },
+      {
+        "text": "severely."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "穩定度將受到危害，will be compromised 為未來被動式。"
+  },
+  {
+    "id": "listening-12-medium-08",
+    "trainingId": "listening-12-medium",
+    "sentence": "Although the major system upgrade required extensive server downtime, the migration team completed all steps within the maintenance window.",
+    "translation": "儘管大型系統升級需要長時間的伺服器停機，資料遷移團隊依然在排定的維護時段內完成了所有步驟。",
+    "chunks": [
+      {
+        "text": "Although the system upgrade required extensive downtime,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the migration team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all steps within the maintenance window."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "completed (完成) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-12-medium-09",
+    "trainingId": "listening-12-medium",
+    "sentence": "A dedicated backup optical fiber connection was installed in the data center to guarantee uninterrupted network transmission.",
+    "translation": "資料中心內部鋪設了一條專屬的備援光纖線路，以確保網路傳輸順暢不中斷。",
+    "chunks": [
+      {
+        "text": "A dedicated backup optical fiber connection",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in the data center to guarantee transmission."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "線路被安裝，was installed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-medium-10",
+    "trainingId": "listening-12-medium",
+    "sentence": "Before deploying the software patch to production servers, the lead developer conducted rigorous load simulations.",
+    "translation": "在將軟體修補程式部署至正式生產環境伺服器之前，首席開發人員進行了嚴格的負載壓力模擬。",
+    "chunks": [
+      {
+        "text": "Before deploying the patch to production servers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the lead developer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "rigorous load simulations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "conducted 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-medium-11",
+    "trainingId": "listening-12-medium",
+    "sentence": "Updated corporate endpoint security software will be deployed automatically across all employee laptops tonight.",
+    "translation": "最新版企業終端安全防護軟體將於今晚自動推送部署至所有員工的筆記型電腦中。",
+    "chunks": [
+      {
+        "text": "Updated corporate endpoint security software",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be deployed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically across all laptops tonight."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "軟體將被部署，will be deployed 為未來被動式。"
+  },
+  {
+    "id": "listening-12-medium-12",
+    "trainingId": "listening-12-medium",
+    "sentence": "Because the primary power supply unit overheated suddenly, backup generators engaged within milliseconds to prevent server shutdowns.",
+    "translation": "由於主電源供應模組突發過熱，備用發電機組在毫秒內自動切換啟動，防止伺服器斷電關機。",
+    "chunks": [
+      {
+        "text": "Because the power supply unit overheated suddenly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "backup generators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "engaged",
+        "isTargetSlot": true
+      },
+      {
+        "text": "within milliseconds to prevent shutdowns."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "engaged (接合啟動) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-medium-13",
+    "trainingId": "listening-12-medium",
+    "sentence": "A zero-trust corporate security architecture has been adopted across all technological subsidiaries this quarter.",
+    "translation": "本季度各科技子公司已全面採用零信任（Zero Trust）企業資安架構體系。",
+    "chunks": [
+      {
+        "text": "A zero-trust corporate security architecture",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been adopted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across all technological subsidiaries this quarter."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "架構已被採用，has been adopted 為現在完成被動式。"
+  },
+  {
+    "id": "listening-12-medium-14",
+    "trainingId": "listening-12-medium",
+    "sentence": "The infrastructure architect designs high-availability cloud topologies that withstand regional network outages gracefully.",
+    "translation": "雲端架構師設計具備高可用性的雲端拓撲結構，使其能從容應對區域性網路中斷故障。",
+    "chunks": [
+      {
+        "text": "The infrastructure architect",
+        "isTargetSlot": false
+      },
+      {
+        "text": "designs",
+        "isTargetSlot": true
+      },
+      {
+        "text": "high-availability topologies withstanding regional outages."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "designs 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-medium-15",
+    "trainingId": "listening-12-medium",
+    "sentence": "Damaged storage server disks were swapped out by technical engineers during the scheduled weekend maintenance.",
+    "translation": "損壞的儲存伺服器硬碟在排定的週末維修時段中已由技術工程師完成了熱插拔更換。",
+    "chunks": [
+      {
+        "text": "Damaged storage server disks",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were swapped out",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by technical engineers during the maintenance."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "硬碟被替換，were swapped out 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-medium-16",
+    "trainingId": "listening-12-medium",
+    "sentence": "Rather than building complex in-house machine learning models, the technology team integrated commercial cognitive APIs.",
+    "translation": "該科技團隊沒有自行從頭研發複雜的機器學習模型，而是直接串接了商用認知運算 API。",
+    "chunks": [
+      {
+        "text": "Rather than building in-house machine learning models,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the technology team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "integrated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "commercial cognitive APIs."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "integrated (整合) 為過去簡單式主動語態，對比 Rather than。"
+  },
+  {
+    "id": "listening-12-medium-17",
+    "trainingId": "listening-12-medium",
+    "sentence": "Cryptographic security keys are rotated automatically every sixty days by the key management system.",
+    "translation": "加密安全金鑰由金鑰管理系統每六十天自動輪替更新一次。",
+    "chunks": [
+      {
+        "text": "Cryptographic security keys",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are rotated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically every sixty days by the system."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "金鑰被定期輪換，are rotated 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-12-medium-18",
+    "trainingId": "listening-12-medium",
+    "sentence": "The senior systems engineer is diagnosing intermittent packet loss affecting inter-branch video conferences.",
+    "translation": "資深系統工程師正在診斷影響各分部視訊會議品質的間歇性封包遺失問題。",
+    "chunks": [
+      {
+        "text": "The senior systems engineer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is diagnosing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "intermittent packet loss affecting video conferences."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is diagnosing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-12-medium-19",
+    "trainingId": "listening-12-medium",
+    "sentence": "Comprehensive cybersecurity awareness training will be conducted for all departmental employees next Tuesday afternoon.",
+    "translation": "全方位的資安意識培訓講習將於下週二下午為所有部門同仁舉行。",
+    "chunks": [
+      {
+        "text": "Comprehensive cybersecurity awareness training",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for all employees next Tuesday afternoon."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "培訓將被舉行，will be conducted 為未來被動式。"
+  },
+  {
+    "id": "listening-12-medium-20",
+    "trainingId": "listening-12-medium",
+    "sentence": "Even though external cloud providers experienced regional network outages, automated failover mechanisms maintained system availability.",
+    "translation": "即便外部雲端服務商遭遇區域性網路故障，自動容錯移轉機制依然維持住了系統的可用性。",
+    "chunks": [
+      {
+        "text": "Even though cloud providers experienced network outages,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "automated failover mechanisms",
+        "isTargetSlot": false
+      },
+      {
+        "text": "maintained",
+        "isTargetSlot": true
+      },
+      {
+        "text": "system availability."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "maintained (保持) 為過去簡單式主動語態，轉折 Even though。"
+  },
+  {
+    "id": "listening-12-medium-21",
+    "trainingId": "listening-12-medium",
+    "sentence": "Production database replicas have been synchronized across two geodistributed data centers to eliminate data loss.",
+    "translation": "生產環境資料庫副本已在兩個異地地理分散的資料中心間完成同步，徹底杜絕資料遺失風險。",
+    "chunks": [
+      {
+        "text": "Production database replicas",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been synchronized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across two data centers to eliminate data loss."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "副本已被同步，have been synchronized 為現在完成被動式。"
+  },
+  {
+    "id": "listening-12-medium-22",
+    "trainingId": "listening-12-medium",
+    "sentence": "The IT helpdesk coordinator assigns support tickets according to technical urgency and business impact.",
+    "translation": "IT 服務台協調人員依據技術緊急度與業務衝擊影響程度分配派發支援工單。",
+    "chunks": [
+      {
+        "text": "The IT helpdesk coordinator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "assigns",
+        "isTargetSlot": true
+      },
+      {
+        "text": "support tickets according to technical urgency and impact."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "assigns 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-medium-23",
+    "trainingId": "listening-12-medium",
+    "sentence": "Suspicious unauthorized network login attempts were blocked by automated intrusion prevention software early this morning.",
+    "translation": "可疑的未經授權網路登入企圖已於今晨被自動入侵防禦軟體成功攔截阻擋。",
+    "chunks": [
+      {
+        "text": "Suspicious unauthorized network login attempts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were blocked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by intrusion prevention software early this morning."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "攻擊被阻擋，were blocked 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-12-medium-24",
+    "trainingId": "listening-12-medium",
+    "sentence": "In order to improve database query responsiveness, developers reindexed thirty critical transaction tables over the weekend.",
+    "translation": "為提升資料庫查詢回應敏捷度，開發人員在週末期間為三十個關鍵交易資料表重建了索引。",
+    "chunks": [
+      {
+        "text": "In order to improve database responsiveness,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "developers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reindexed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "thirty critical transaction tables."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reindexed (重建索引) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-medium-25",
+    "trainingId": "listening-12-medium",
+    "sentence": "Upgraded wireless networking access points will be installed across all meeting facilities during the winter recess.",
+    "translation": "升級版無線網路基地台（AP）將於寒假休會期間安裝於所有會議空間場域。",
+    "chunks": [
+      {
+        "text": "Upgraded wireless networking access points",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across all meeting facilities during the winter recess."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "基地台將被安裝，will be installed 為未來被動式。"
+  },
+  {
+    "id": "listening-12-medium-26",
+    "trainingId": "listening-12-medium",
+    "sentence": "The DevOps specialist resolved the continuous deployment container failure within twenty minutes of the build error.",
+    "translation": "DevOps 專員在建置報錯發生後的二十分鐘內，迅速排解了持續部署容器執行崩潰的問題。",
+    "chunks": [
+      {
+        "text": "The DevOps specialist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "resolved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the container failure within twenty minutes."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "resolved 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-12-medium-27",
+    "trainingId": "listening-12-medium",
+    "sentence": "All critical business communications are encrypted with advanced military-grade algorithms during cloud transmission.",
+    "translation": "所有關鍵商業通訊資料在進行雲端傳輸時，均透過先進的軍規演算法進行高強度加密。",
+    "chunks": [
+      {
+        "text": "All critical business communications",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are encrypted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with advanced algorithms during cloud transmission."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "通訊被加密，are encrypted 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-12-medium-28",
+    "trainingId": "listening-12-medium",
+    "sentence": "Although cyberattack complexity increased globally, proactive penetration testing safeguarded our enterprise data assets.",
+    "translation": "儘管全球網路攻擊複雜度持續攀升，積極的事前滲透測試依然全面捍衛了我們的企業數據資產。",
+    "chunks": [
+      {
+        "text": "Although cyberattack complexity increased globally,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "proactive penetration testing",
+        "isTargetSlot": false
+      },
+      {
+        "text": "safeguarded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "our enterprise data assets."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "safeguarded (捍衛) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-12-medium-29",
+    "trainingId": "listening-12-medium",
+    "sentence": "The digital disaster recovery framework has been verified successfully during our annual unannounced simulated blackout drill.",
+    "translation": "數位災難復原架構體系已在我們年度突擊無預警模擬斷電演習中順利通過實測驗證。",
+    "chunks": [
+      {
+        "text": "The digital disaster recovery framework",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been verified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "successfully during our simulated blackout drill."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "架構已被驗證，has been verified 為現在完成被動式。"
+  },
+  {
+    "id": "listening-12-medium-30",
+    "trainingId": "listening-12-medium",
+    "sentence": "The chief information officer will present a comprehensive digital transformation report at the executive leadership conference.",
+    "translation": "資訊長將在企業高階領導年會上，發表一份全方位的企業數位轉型年度報告。",
+    "chunks": [
+      {
+        "text": "The chief information officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will present",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a digital transformation report at the conference."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will present 表未來發表，未來簡單式主動語態。"
+  }
+]

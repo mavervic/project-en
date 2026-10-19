@@ -188,4 +188,24 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
     const inProgressRow = screen.getByTestId('training-row-listening-01-easy') as HTMLButtonElement;
     expect(inProgressRow.title).toContain('2/30');
   });
+
+  it('renders both Easy and Medium training unit rows within situational groups', () => {
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={mockTelemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+        banks={[TOEIC_LISTENING_META]}
+        activeBankId="toeic-listening"
+      />
+    );
+
+    for (let i = 1; i <= 13; i++) {
+      const pad = String(i).padStart(2, '0');
+      expect(screen.getByTestId(`training-row-listening-${pad}-easy`)).toBeDefined();
+      expect(screen.getByTestId(`training-row-listening-${pad}-medium`)).toBeDefined();
+    }
+  });
 });

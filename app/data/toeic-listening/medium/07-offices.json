@@ -1,0 +1,826 @@
+[
+  {
+    "id": "listening-07-medium-01",
+    "trainingId": "listening-07-medium",
+    "sentence": "Although the central boardroom was reserved for the shareholder summit, the facilities team prepared an auxiliary conference hall.",
+    "translation": "儘管大會議室已被股東高峰會預約，設施團隊依然為我們準備了備用會議廳。",
+    "chunks": [
+      {
+        "text": "Although the boardroom was reserved for the summit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the facilities team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "prepared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an auxiliary conference hall."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "prepared (準備/安排) 為過去簡單式主動語態，承接前面的讓步轉折子句。"
+  },
+  {
+    "id": "listening-07-medium-02",
+    "trainingId": "listening-07-medium",
+    "sentence": "Because the commercial photocopier jammed frequently during peak hours, a replacement multifunction machine was ordered immediately.",
+    "translation": "由於商用影印機在尖峰時段頻繁卡紙，公司隨即訂購了一台全新的多功能事務機做為替換。",
+    "chunks": [
+      {
+        "text": "Because the photocopier jammed frequently during peak hours,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "a replacement multifunction machine",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was ordered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediately."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "事務機被訂購，was ordered 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-medium-03",
+    "trainingId": "listening-07-medium",
+    "sentence": "All visiting guests must display visitor identification passes conspicuously while traversing secure research laboratories.",
+    "translation": "所有來訪賓客在走動參觀管制級研究實驗室時，必須全程醒目佩戴訪客識別證。",
+    "chunks": [
+      {
+        "text": "All visiting guests",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must display",
+        "isTargetSlot": true
+      },
+      {
+        "text": "visitor identification passes conspicuously while in laboratories."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "must display 表安全規範強制要求，情態助動詞主動語態。"
+  },
+  {
+    "id": "listening-07-medium-04",
+    "trainingId": "listening-07-medium",
+    "sentence": "While telecommunications engineers were servicing network cables, the office internet connection was temporarily disrupted.",
+    "translation": "在電信工程師維修網路纜線時，辦公室網際網路連線曾短暫中斷。",
+    "chunks": [
+      {
+        "text": "While engineers were servicing network cables,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the office internet connection",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was disrupted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "temporarily."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "網路被中斷，was disrupted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-medium-05",
+    "trainingId": "listening-07-medium",
+    "sentence": "Office stationery and printer cartridges are distributed by administrative clerks every Tuesday afternoon.",
+    "translation": "辦公文具與印表機碳粉匣每週二下午由行政人員負責統籌配發。",
+    "chunks": [
+      {
+        "text": "Office stationery and printer cartridges",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by administrative clerks every Tuesday afternoon."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "文具用品被分發，are distributed 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-07-medium-06",
+    "trainingId": "listening-07-medium",
+    "sentence": "The office manager is reconfiguring desk workstation cubicles to foster interdepartmental collaboration among project analysts.",
+    "translation": "辦公室經理正在重新配置桌位隔間，以促進專案分析師之間的跨部門協作。",
+    "chunks": [
+      {
+        "text": "The office manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is reconfiguring",
+        "isTargetSlot": true
+      },
+      {
+        "text": "desk cubicles to foster interdepartmental collaboration."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is reconfiguring 表當前正重新調整佈局，現在進行式。"
+  },
+  {
+    "id": "listening-07-medium-07",
+    "trainingId": "listening-07-medium",
+    "sentence": "Unless conference room reservations are confirmed fifteen minutes beforehand, the automated system will release the booking.",
+    "translation": "除非在十五分鐘前確認會議室預約，否則自動化排程系統將釋出該時段供他人使用。",
+    "chunks": [
+      {
+        "text": "Unless reservations are confirmed fifteen minutes beforehand,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the automated system",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will release",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the booking."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will release 表系統即將釋出的未來動作，一般未來式。"
+  },
+  {
+    "id": "listening-07-medium-08",
+    "trainingId": "listening-07-medium",
+    "sentence": "Although building management adjusted central heating settings, employees near window perimeters still requested electric space heaters.",
+    "translation": "儘管大樓管理處調升了中央暖氣溫度，靠窗邊的員工依然申請了小型電暖器。",
+    "chunks": [
+      {
+        "text": "Although management adjusted central heating settings,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "employees near window perimeters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "electric space heaters."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "requested (要求/提出申請) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-medium-09",
+    "trainingId": "listening-07-medium",
+    "sentence": "High-definition video conference equipment was installed in room four to facilitate transnational executive discussions.",
+    "translation": "第四會議室安裝了高畫質視訊會議設備，以便利跨國高階主管會談。",
+    "chunks": [
+      {
+        "text": "High-definition video conference equipment",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in room four to facilitate transnational discussions."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "設備被安裝，was installed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-medium-10",
+    "trainingId": "listening-07-medium",
+    "sentence": "Before leaving the headquarters building, the night security guard checked all perimeter doors and windows carefully.",
+    "translation": "在交班離開總部大樓前，夜間警衛仔細檢查了周邊所有的門窗安全。",
+    "chunks": [
+      {
+        "text": "Before leaving the headquarters building,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the night security guard",
+        "isTargetSlot": false
+      },
+      {
+        "text": "checked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all perimeter doors and windows carefully."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "checked 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-medium-11",
+    "trainingId": "listening-07-medium",
+    "sentence": "Emergency evacuation floor plans will be posted near all elevator vestibules early next week.",
+    "translation": "緊急疏散樓層平面圖將於下週初張貼在所有電梯梯廳旁。",
+    "chunks": [
+      {
+        "text": "Emergency evacuation floor plans",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be posted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "near all elevator vestibules early next week."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "圖面將被張貼，will be posted 為未來被動式。"
+  },
+  {
+    "id": "listening-07-medium-12",
+    "trainingId": "listening-07-medium",
+    "sentence": "Because the paper shredder machine overheated during bulk document destruction, office staff waited for the motor to cool.",
+    "translation": "由於碎紙機在銷毀大量文件時過熱，辦公室同仁等待馬達冷卻後再行操作。",
+    "chunks": [
+      {
+        "text": "Because the paper shredder overheated during document destruction,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "office staff",
+        "isTargetSlot": false
+      },
+      {
+        "text": "waited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for the motor to cool."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "waited 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-medium-13",
+    "trainingId": "listening-07-medium",
+    "sentence": "Commercial carpet deep cleaning has been scheduled across all administrative floors for Saturday evening.",
+    "translation": "所有行政樓層的商用深層地毯清洗已排定於週六傍晚進行。",
+    "chunks": [
+      {
+        "text": "Commercial carpet deep cleaning",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been scheduled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across all administrative floors for Saturday evening."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "清洗已被排定，has been scheduled 為現在完成被動式。"
+  },
+  {
+    "id": "listening-07-medium-14",
+    "trainingId": "listening-07-medium",
+    "sentence": "The executive secretary maintains confidential board meeting archives in secured digital vaults.",
+    "translation": "執行秘書將機密的董事會會議檔案妥善存放在安全防護的數位資料保險箱中。",
+    "chunks": [
+      {
+        "text": "The executive secretary",
+        "isTargetSlot": false
+      },
+      {
+        "text": "maintains",
+        "isTargetSlot": true
+      },
+      {
+        "text": "confidential board meeting archives in secured digital vaults."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "maintains (保管/維護) 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-medium-15",
+    "trainingId": "listening-07-medium",
+    "sentence": "Electronic keycard door scanners were upgraded to support contact-free smartphone authentication protocols.",
+    "translation": "電子感應門禁讀卡機已完成升級，全面支援非接觸式智慧型手機身分驗證協定。",
+    "chunks": [
+      {
+        "text": "Electronic keycard door scanners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were upgraded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to support contact-free smartphone authentication."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "設備被升級，were upgraded 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-medium-16",
+    "trainingId": "listening-07-medium",
+    "sentence": "Rather than printing extensive paper handouts, the presenter distributed electronic presentation slide copies.",
+    "translation": "簡報者沒有大量印製紙本講義，而是發送了電子版的簡報簡報投影檔案。",
+    "chunks": [
+      {
+        "text": "Rather than printing extensive paper handouts,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the presenter",
+        "isTargetSlot": false
+      },
+      {
+        "text": "distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "electronic presentation slide copies."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "distributed (發送) 為過去簡單式主動語態，對比 Rather than。"
+  },
+  {
+    "id": "listening-07-medium-17",
+    "trainingId": "listening-07-medium",
+    "sentence": "Coffee bean hoppers and espresso valves are sanitized daily by catering contractors to maintain impeccable hygiene.",
+    "translation": "咖啡豆槽與義式咖啡機閥門每日均由餐飲包商進行消毒清洗，以確保最高衛生水準。",
+    "chunks": [
+      {
+        "text": "Coffee bean hoppers and espresso valves",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are sanitized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "daily by catering contractors to maintain hygiene."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "機器被消毒清潔，are sanitized 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-07-medium-18",
+    "trainingId": "listening-07-medium",
+    "sentence": "The building supervisor is investigating a ventilation airflow issue reported by accounting personnel on floor five.",
+    "translation": "大樓主管正在調查五樓會計人員所回報的通風氣流換氣異常問題。",
+    "chunks": [
+      {
+        "text": "The building supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is investigating",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a ventilation airflow issue reported on floor five."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is investigating 表當前正進行巡檢調查，現在進行式。"
+  },
+  {
+    "id": "listening-07-medium-19",
+    "trainingId": "listening-07-medium",
+    "sentence": "Ergonomic keyboard accessories will be delivered to corporate workstation desks on Friday afternoon.",
+    "translation": "人體工學鍵盤配件將於週五下午送達各企業員工的辦公工位桌面上。",
+    "chunks": [
+      {
+        "text": "Ergonomic keyboard accessories",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be delivered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to workstation desks on Friday afternoon."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "配件將被送達，will be delivered 為未來被動式。"
+  },
+  {
+    "id": "listening-07-medium-20",
+    "trainingId": "listening-07-medium",
+    "sentence": "Even though lighting ballast units malfunctioned during the staff meeting, the IT department rectified the problem promptly.",
+    "translation": "即便在員工大會期間燈具安定器發生故障，IT 部門仍在極短時間內修復了該問題。",
+    "chunks": [
+      {
+        "text": "Even though lighting ballast units malfunctioned,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the IT department",
+        "isTargetSlot": false
+      },
+      {
+        "text": "rectified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the problem promptly."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "rectified (矯正/修復) 為過去簡單式主動語態，轉折 Even though。"
+  },
+  {
+    "id": "listening-07-medium-21",
+    "trainingId": "listening-07-medium",
+    "sentence": "Corporate mail sorting procedures have been automated with barcode scanners to accelerate package delivery.",
+    "translation": "企業郵件分揀流程已採用條碼掃描儀進行自動化升級，大幅加速包裹派送時效。",
+    "chunks": [
+      {
+        "text": "Corporate mail sorting procedures",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been automated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with barcode scanners to accelerate delivery."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "流程已被自動化，have been automated 為現在完成被動式。"
+  },
+  {
+    "id": "listening-07-medium-22",
+    "trainingId": "listening-07-medium",
+    "sentence": "The administrative assistant orders specialized drafting paper for engineering architects every month.",
+    "translation": "行政助理每個月為工程建築師訂購專用的專業繪圖紙材。",
+    "chunks": [
+      {
+        "text": "The administrative assistant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "orders",
+        "isTargetSlot": true
+      },
+      {
+        "text": "specialized drafting paper for engineering architects every month."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "orders 表例行訂購，現在簡單式。"
+  },
+  {
+    "id": "listening-07-medium-23",
+    "trainingId": "listening-07-medium",
+    "sentence": "Emergency exit battery packs were inspected by fire safety officials before building licenses were renewed.",
+    "translation": "在建築物使用執照獲得展延前，消防安全人員已全面檢查了逃生出口的備用電池組。",
+    "chunks": [
+      {
+        "text": "Emergency exit battery packs",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were inspected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by fire safety officials before licenses were renewed."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "電池被檢查，were inspected 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-medium-24",
+    "trainingId": "listening-07-medium",
+    "sentence": "In order to promote sustainability, the company replaced single-use paper cups with washable ceramic mugs.",
+    "translation": "為倡導環保永續理念，該公司以可重複清洗的陶瓷馬克杯全面替換一次性紙杯。",
+    "chunks": [
+      {
+        "text": "In order to promote sustainability,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the company",
+        "isTargetSlot": false
+      },
+      {
+        "text": "replaced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "single-use paper cups with washable ceramic mugs."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "replaced (替換) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-medium-25",
+    "trainingId": "listening-07-medium",
+    "sentence": "Digital message boards will be installed across common reception hallways before the international visitor tour.",
+    "translation": "在國際訪客代表團參訪前，公共接待走廊兩側將安裝數位電子布告欄。",
+    "chunks": [
+      {
+        "text": "Digital message boards",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across common reception hallways before the visitor tour."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "看版將被安裝，will be installed 為未來被動式。"
+  },
+  {
+    "id": "listening-07-medium-26",
+    "trainingId": "listening-07-medium",
+    "sentence": "The receptionist verified visitor credentials before distributing temporary magnetic parking passes.",
+    "translation": "接待員在發放臨時磁卡停車證之前，先詳細核對了訪客的身分證明文件。",
+    "chunks": [
+      {
+        "text": "The receptionist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "verified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "visitor credentials before distributing parking passes."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "verified 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-07-medium-27",
+    "trainingId": "listening-07-medium",
+    "sentence": "All air purifier filter cartridges were replaced by maintenance technicians following building renovation works.",
+    "translation": "在室內整修工程告一段落後，維修技術員更換了所有的空氣清淨機濾網濾芯。",
+    "chunks": [
+      {
+        "text": "All air purifier filter cartridges",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were replaced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by maintenance technicians following building renovation."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "濾網被更換，were replaced 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-07-medium-28",
+    "trainingId": "listening-07-medium",
+    "sentence": "Although building elevators experienced heavy lunchtime traffic, automated destination dispatching kept queues surprisingly short.",
+    "translation": "儘管大樓電梯在午餐尖峰時段承受龐大人流，但智慧目的樓層派車系統將排隊等候時間維持得相當短暫。",
+    "chunks": [
+      {
+        "text": "Although building elevators experienced heavy lunchtime traffic,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "automated destination dispatching",
+        "isTargetSlot": false
+      },
+      {
+        "text": "kept",
+        "isTargetSlot": true
+      },
+      {
+        "text": "queues surprisingly short."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "kept (保持) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-07-medium-29",
+    "trainingId": "listening-07-medium",
+    "sentence": "The corporate stationery inventory has been cataloged in the shared enterprise database for transparent monitoring.",
+    "translation": "辦公文具庫存已建檔於企業共享資料庫中，以實現透明化監管。",
+    "chunks": [
+      {
+        "text": "The corporate stationery inventory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been cataloged",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in the shared database for transparent monitoring."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "庫存已被建檔，has been cataloged 為現在完成被動式。"
+  },
+  {
+    "id": "listening-07-medium-30",
+    "trainingId": "listening-07-medium",
+    "sentence": "The building custodian will inspect all fire exit doors before the municipal safety review on Wednesday.",
+    "translation": "大樓管理員將在週三的市府安全檢查之前，全面查驗所有逃生安全門。",
+    "chunks": [
+      {
+        "text": "The building custodian",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will inspect",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all fire exit doors before the safety review on Wednesday."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will inspect 表未來的預先巡檢，未來簡單式主動語態。"
+  }
+]

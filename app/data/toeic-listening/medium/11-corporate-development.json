@@ -1,0 +1,826 @@
+[
+  {
+    "id": "listening-11-medium-01",
+    "trainingId": "listening-11-medium",
+    "sentence": "Although preliminary regulatory antitrust hurdles arose, the corporate board finalized the acquisition of the artificial intelligence firm.",
+    "translation": "儘管最初遭遇了反壟斷法規監管障礙，公司董事會最終依然敲定完成了對該人工智慧企業的併購案。",
+    "chunks": [
+      {
+        "text": "Although antitrust hurdles arose,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate board",
+        "isTargetSlot": false
+      },
+      {
+        "text": "finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the acquisition of the artificial intelligence firm."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "finalized (拍板定案) 為過去簡單式主動語態，轉折 Although 關係。"
+  },
+  {
+    "id": "listening-11-medium-02",
+    "trainingId": "listening-11-medium",
+    "sentence": "Because global consumer habits evolved, corporate research investments were reallocated toward renewable energy technologies.",
+    "translation": "由於全球消費者習慣轉變，企業研發投資已重新配置轉移至再生能源技術領域。",
+    "chunks": [
+      {
+        "text": "Because global consumer habits evolved,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate research investments",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were reallocated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "toward renewable energy technologies."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "資金被重新分配，were reallocated 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-medium-03",
+    "trainingId": "listening-11-medium",
+    "sentence": "Corporate strategists must evaluate long-term geopolitical stability before authorizing capital investments in foreign manufacturing facilities.",
+    "translation": "企業策略家在核准投資海外製造基地資本支出之前，必須深入評估長期的地緣政治穩定度。",
+    "chunks": [
+      {
+        "text": "Corporate strategists",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must evaluate",
+        "isTargetSlot": true
+      },
+      {
+        "text": "geopolitical stability before authorizing capital investments."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "must evaluate 表投資前的必要評估義務，情態助動詞主動語態。"
+  },
+  {
+    "id": "listening-11-medium-04",
+    "trainingId": "listening-11-medium",
+    "sentence": "While investment bankers were performing financial audits, corporate attorneys scrutinized joint venture contractual indemnities.",
+    "translation": "在投資銀行家進行財務稽核審查的同時，公司律師細緻查驗了合資合約中的各項免責賠償條款。",
+    "chunks": [
+      {
+        "text": "While investment bankers were performing financial audits,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate attorneys",
+        "isTargetSlot": false
+      },
+      {
+        "text": "scrutinized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "joint venture contractual indemnities."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "scrutinized (仔細檢視/審視) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-medium-05",
+    "trainingId": "listening-11-medium",
+    "sentence": "A modern corporate brand identity was unveiled at the international shareholder summit to symbolize sustainable business practices.",
+    "translation": "全新現代化的企業品牌形象識別在國際股東大會上正式亮相，象徵永續商業營運的決心。",
+    "chunks": [
+      {
+        "text": "A modern corporate brand identity",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was unveiled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "at the summit to symbolize sustainable business practices."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "品牌識別被揭幕亮相，was unveiled 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-medium-06",
+    "trainingId": "listening-11-medium",
+    "sentence": "The strategic development director is orchestrating a merger proposal that combines two leading telecom providers.",
+    "translation": "戰略發展總監正在精心策劃一項整合兩家主要電信服務商的併購整合企劃提案。",
+    "chunks": [
+      {
+        "text": "The strategic development director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is orchestrating",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a merger proposal combining two leading telecom providers."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is orchestrating (精心統籌籌劃) 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-11-medium-07",
+    "trainingId": "listening-11-medium",
+    "sentence": "Unless regulatory commissions ratify the telecom spectrum sale, regional network integration will be halted.",
+    "translation": "除非監管委員會正式核准這筆電信頻譜交易，否則區域網路整合工程將被勒令暫停。",
+    "chunks": [
+      {
+        "text": "Unless regulatory commissions ratify the spectrum sale,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "regional network integration",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be halted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediately."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "整合將被終止，will be halted 為未來被動式。"
+  },
+  {
+    "id": "listening-11-medium-08",
+    "trainingId": "listening-11-medium",
+    "sentence": "Although initial venture capital negotiations stalled over valuation, the parties resumed discussions and settled terms.",
+    "translation": "儘管創投融資談判起初因企業估值問題陷入停滯，雙方隨後重啟會談並順利敲定了條款。",
+    "chunks": [
+      {
+        "text": "Although initial venture capital negotiations stalled,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the parties",
+        "isTargetSlot": false
+      },
+      {
+        "text": "resumed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "discussions and settled terms."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "resumed (重啟) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-11-medium-09",
+    "trainingId": "listening-11-medium",
+    "sentence": "A dedicated regional innovation laboratory was established in Singapore to spearhead smart city software developments.",
+    "translation": "在新加坡設立了一座專屬的區域創新研發實驗室，以帶領智慧城市軟體研發潮流。",
+    "chunks": [
+      {
+        "text": "A dedicated regional innovation laboratory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was established",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in Singapore to spearhead smart city developments."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "實驗室被建立，was established 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-medium-10",
+    "trainingId": "listening-11-medium",
+    "sentence": "Before completing the equity buyout, executive auditors scrutinized the target firm's outstanding patent portfolio.",
+    "translation": "在完成股權收購之前，主管審計人員仔細查核了目標公司現有的各項有效專利資產。",
+    "chunks": [
+      {
+        "text": "Before completing the equity buyout,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "executive auditors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "scrutinized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the target firm's outstanding patent portfolio."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "scrutinized 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-medium-11",
+    "trainingId": "listening-11-medium",
+    "sentence": "The newly merged corporate entity will be inaugurated during a press ceremony in early November.",
+    "translation": "新合併成立的企業實體將於十一月初的新聞發布會上隆重揭幕亮相。",
+    "chunks": [
+      {
+        "text": "The newly merged corporate entity",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be inaugurated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "during a press ceremony in early November."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "實體將被啟用成立，will be inaugurated 為未來被動式。"
+  },
+  {
+    "id": "listening-11-medium-12",
+    "trainingId": "listening-11-medium",
+    "sentence": "Because domestic retail growth saturated, executive leadership accelerated expansion into South American consumer markets.",
+    "translation": "由於國內零售市場成長趨於飽和，高階領導團隊加速了進軍南美消費市場的拓展腳步。",
+    "chunks": [
+      {
+        "text": "Because domestic retail growth saturated,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "executive leadership",
+        "isTargetSlot": false
+      },
+      {
+        "text": "accelerated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "expansion into South American consumer markets."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "accelerated 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-medium-13",
+    "trainingId": "listening-11-medium",
+    "sentence": "Strategic joint ventures have been formed with prominent academic universities to pioneer quantum computing breakthroughs.",
+    "translation": "公司已與知名學術頂尖大學建立策略合資合作，以共同開拓量子運算技術的突破。",
+    "chunks": [
+      {
+        "text": "Strategic joint ventures",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been formed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with prominent universities to pioneer quantum breakthroughs."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "合資組織已被成立，have been formed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-11-medium-14",
+    "trainingId": "listening-11-medium",
+    "sentence": "The corporate venture capitalist assesses seed-stage biotechnology ventures seeking equity funding.",
+    "translation": "這位企業創投家專門評估正在尋求股權融資的早期種子輪生技新創企業。",
+    "chunks": [
+      {
+        "text": "The corporate venture capitalist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "assesses",
+        "isTargetSlot": true
+      },
+      {
+        "text": "seed-stage biotechnology ventures seeking funding."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "assesses (評估) 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-medium-15",
+    "trainingId": "listening-11-medium",
+    "sentence": "Global expansion milestones were reviewed by the executive steering committee during yesterday's quarterly summit.",
+    "translation": "全球業務擴張里程碑已由執行指導委員會在昨日的季度峰會上完成了通盤檢討。",
+    "chunks": [
+      {
+        "text": "Global expansion milestones",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were reviewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the executive steering committee during yesterday's summit."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "里程碑被檢視，were reviewed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-medium-16",
+    "trainingId": "listening-11-medium",
+    "sentence": "Rather than building proprietary infrastructure, the organization partnered with established cloud hosting providers.",
+    "translation": "該機構沒有耗費巨資自建專用基礎設施，而是選擇與深具規模的既有雲端託管供應商結盟。",
+    "chunks": [
+      {
+        "text": "Rather than building proprietary infrastructure,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the organization",
+        "isTargetSlot": false
+      },
+      {
+        "text": "partnered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with established cloud hosting providers."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "partnered (建立夥伴關係) 為過去簡單式主動語態，對比 Rather than。"
+  },
+  {
+    "id": "listening-11-medium-17",
+    "trainingId": "listening-11-medium",
+    "sentence": "Commercial patents are filed internationally through the Patent Cooperation Treaty by corporate intellectual attorneys.",
+    "translation": "商業專利由公司智慧財產權專利律師透過《專利合作條約》（PCT）向多國進行國際申請。",
+    "chunks": [
+      {
+        "text": "Commercial patents",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are filed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "internationally through the Treaty by corporate attorneys."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "專利被申請，are filed 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-11-medium-18",
+    "trainingId": "listening-11-medium",
+    "sentence": "The chief technology officer is evaluating advanced artificial intelligence platforms to automate internal business analytics.",
+    "translation": "技術長正在評估先進的人工智慧平台，以實現內部商業數據分析的自動化。",
+    "chunks": [
+      {
+        "text": "The chief technology officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is evaluating",
+        "isTargetSlot": true
+      },
+      {
+        "text": "advanced AI platforms to automate internal analytics."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is evaluating 表正持續評估，現在進行式。"
+  },
+  {
+    "id": "listening-11-medium-19",
+    "trainingId": "listening-11-medium",
+    "sentence": "Strategic subsidiary operations will be relocated to Singapore before international commercial treaties come into effect.",
+    "translation": "在國際商貿條約正式生效之前，戰略性子公司的營運業務將全面遷移至新加坡。",
+    "chunks": [
+      {
+        "text": "Strategic subsidiary operations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be relocated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to Singapore before commercial treaties take effect."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "業務將被搬遷，will be relocated 為未來被動式。"
+  },
+  {
+    "id": "listening-11-medium-20",
+    "trainingId": "listening-11-medium",
+    "sentence": "Even though overseas markets presented intense competition, the multinational firm captured significant market share.",
+    "translation": "即便海外市場呈現白熱化的激烈競爭，這家跨國企業依然奪下了顯著的市佔率。",
+    "chunks": [
+      {
+        "text": "Even though overseas markets presented intense competition,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the multinational firm",
+        "isTargetSlot": false
+      },
+      {
+        "text": "captured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "significant market share."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "captured (奪下/佔據) 為過去簡單式主動語態，轉折 Even though。"
+  },
+  {
+    "id": "listening-11-medium-21",
+    "trainingId": "listening-11-medium",
+    "sentence": "Cross-border data sharing protocols have been ratified by international affiliates to assure strict privacy compliance.",
+    "translation": "跨國數據共享規範已由各國際關係企業共同簽署批准，以確保嚴格符合個資隱私法規。",
+    "chunks": [
+      {
+        "text": "Cross-border data sharing protocols",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been ratified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by international affiliates to assure privacy compliance."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "協定已被批准，have been ratified 為現在完成被動式。"
+  },
+  {
+    "id": "listening-11-medium-22",
+    "trainingId": "listening-11-medium",
+    "sentence": "The head of corporate strategy pioneers sustainability metrics that elevate long-term enterprise valuation.",
+    "translation": "企業策略部門主管引領開創永續指標體系，有效提升了企業長期的市場估值。",
+    "chunks": [
+      {
+        "text": "The head of corporate strategy",
+        "isTargetSlot": false
+      },
+      {
+        "text": "pioneers",
+        "isTargetSlot": true
+      },
+      {
+        "text": "sustainability metrics that elevate enterprise valuation."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "pioneers 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-medium-23",
+    "trainingId": "listening-11-medium",
+    "sentence": "A formal licensing agreement was concluded with an electric vehicle pioneer to produce lightweight battery cells.",
+    "translation": "公司已與一家電動車先驅企業締結正式技術授權協議，共同生產輕量化電池芯。",
+    "chunks": [
+      {
+        "text": "A formal licensing agreement",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was concluded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with an EV pioneer to produce lightweight battery cells."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "協議被締結，was concluded 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-medium-24",
+    "trainingId": "listening-11-medium",
+    "sentence": "In order to accelerate digital transformation, the organization recruited leading artificial intelligence specialists.",
+    "translation": "為了加速企業數位轉型腳步，該組織招募聘請了業界頂尖的人工智慧專家。",
+    "chunks": [
+      {
+        "text": "In order to accelerate digital transformation,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the organization",
+        "isTargetSlot": false
+      },
+      {
+        "text": "recruited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "leading artificial intelligence specialists."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "recruited (招募) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-medium-25",
+    "trainingId": "listening-11-medium",
+    "sentence": "Innovative corporate restructuring plans will be presented to major institutional investors during the roadshow.",
+    "translation": "創新的企業重組改造計畫將在法人說明會巡迴期間向主要機構投資人做詳細簡報。",
+    "chunks": [
+      {
+        "text": "Innovative corporate restructuring plans",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be presented",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to major institutional investors during the roadshow."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "計畫將被展示呈現，will be presented 為未來被動式。"
+  },
+  {
+    "id": "listening-11-medium-26",
+    "trainingId": "listening-11-medium",
+    "sentence": "The executive vice president finalized a cross-industry agreement that unlocks new consumer loyalty revenue streams.",
+    "translation": "執行副總裁敲定了一項跨產業結盟協議，為公司開啟全新的消費者忠誠度營收來源。",
+    "chunks": [
+      {
+        "text": "The executive vice president",
+        "isTargetSlot": false
+      },
+      {
+        "text": "finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a cross-industry agreement unlocking new revenue streams."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "finalized 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-11-medium-27",
+    "trainingId": "listening-11-medium",
+    "sentence": "Strategic divestiture proposals were approved by shareholders during the special extraordinary voting session.",
+    "translation": "戰略性資產剝離撤資提案已在特別臨時股東大會表決程序中獲得股東批准認可。",
+    "chunks": [
+      {
+        "text": "Strategic divestiture proposals",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by shareholders during the special voting session."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "提案被批准，were approved 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-11-medium-28",
+    "trainingId": "listening-11-medium",
+    "sentence": "Although currency volatility created operational friction, strategic financial hedging protected enterprise profit margins.",
+    "translation": "儘管匯率劇烈波動帶來了營運阻礙，嚴密的戰略財務避險依然守護住了企業的淨利潤率。",
+    "chunks": [
+      {
+        "text": "Although currency volatility created friction,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "strategic financial hedging",
+        "isTargetSlot": false
+      },
+      {
+        "text": "protected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "enterprise profit margins."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "protected (保護/守護) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-11-medium-29",
+    "trainingId": "listening-11-medium",
+    "sentence": "A comprehensive patent litigation settlement has been executed with our principal technology competitor.",
+    "translation": "我們已與主要科技競爭同業達成並簽署了一項全方位的專利侵權訴訟和解協議。",
+    "chunks": [
+      {
+        "text": "A comprehensive patent litigation settlement",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been executed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with our principal technology competitor."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "和解已被執行簽署，has been executed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-11-medium-30",
+    "trainingId": "listening-11-medium",
+    "sentence": "The corporate development team will explore strategic joint ventures during upcoming international commercial trade summits.",
+    "translation": "企業策略發展團隊將在即將登場的國際商務經貿峰會期間，深入探尋潛在的合資戰略契機。",
+    "chunks": [
+      {
+        "text": "The corporate development team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will explore",
+        "isTargetSlot": true
+      },
+      {
+        "text": "strategic joint ventures during upcoming trade summits."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will explore 表未來探索調研，未來簡單式主動語態。"
+  }
+]

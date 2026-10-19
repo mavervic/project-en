@@ -1,0 +1,830 @@
+[
+  {
+    "id": "listening-02-medium-01",
+    "trainingId": "listening-02-medium",
+    "sentence": "Although the executive dining room was fully booked for the banquet, the restaurant manager accommodated our unexpected overseas guests.",
+    "translation": "儘管主管專用餐廳的宴會預訂已額滿，餐廳經理仍為我們臨時到訪的海外貴賓妥善安排了座位。",
+    "chunks": [
+      {
+        "text": "Although the executive dining room was fully booked,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the restaurant manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "accommodated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "our unexpected overseas guests."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "accommodated (通融/安置) 為過去簡單式主動語態，承接前面的讓步轉折子句。"
+  },
+  {
+    "id": "listening-02-medium-02",
+    "trainingId": "listening-02-medium",
+    "sentence": "To ensure an uninterrupted culinary experience, special dietary preferences must be indicated upon placing the corporate reservation.",
+    "translation": "為確保用餐體驗順暢無阻，在進行企業訂位時必須註明特殊飲食偏好。",
+    "chunks": [
+      {
+        "text": "To ensure an uninterrupted culinary experience,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "special dietary preferences",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must be indicated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "upon placing the corporate reservation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "偏好必須被註明，must be indicated 為情態助動詞被動語態。"
+  },
+  {
+    "id": "listening-02-medium-03",
+    "trainingId": "listening-02-medium",
+    "sentence": "While our catering team was preparing seasonal dessert platters, the head chef revised the ingredient list for tomorrow's banquet.",
+    "translation": "當外燴團隊正在準備季節性甜點拼盤時，主廚修訂了明天宴會的食材清單。",
+    "chunks": [
+      {
+        "text": "While our catering team was preparing dessert platters,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the head chef",
+        "isTargetSlot": false
+      },
+      {
+        "text": "revised",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the ingredient list for tomorrow's banquet."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "revised 為過去簡單式主動語態，描述主廚修訂食材的主動決策。"
+  },
+  {
+    "id": "listening-02-medium-04",
+    "trainingId": "listening-02-medium",
+    "sentence": "Because the banquet hall had been decorated with fresh floral centerpieces, the client expressed immense satisfaction with the venue.",
+    "translation": "由於宴會廳已裝飾了新鮮花藝桌花，客戶對該場地表達了極高的滿意度。",
+    "chunks": [
+      {
+        "text": "Because the hall had been decorated with floral centerpieces,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the client",
+        "isTargetSlot": false
+      },
+      {
+        "text": "expressed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immense satisfaction with the venue."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "expressed 為過去簡單式主動語態，表達客戶滿意之情。"
+  },
+  {
+    "id": "listening-02-medium-05",
+    "trainingId": "listening-02-medium",
+    "sentence": "Organic produce and certified dairy items are sourced directly from sustainable local farms by our culinary division.",
+    "translation": "有機農產品與認證乳製品均由我們的烹飪部門直接向在地永續農場採購。",
+    "chunks": [
+      {
+        "text": "Organic produce and certified dairy items",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are sourced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "directly from sustainable local farms by our division."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "食材被採購採買，are sourced 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-02-medium-06",
+    "trainingId": "listening-02-medium",
+    "sentence": "The catering supervisor is coordinating dining arrangements with the conference center to satisfy strict dietary constraints.",
+    "translation": "餐飲主管正在與會議中心協調用餐安排，以符合嚴格的飲食限制規定。",
+    "chunks": [
+      {
+        "text": "The catering supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is coordinating",
+        "isTargetSlot": true
+      },
+      {
+        "text": "dining arrangements to satisfy strict constraints."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is coordinating 表當前正進行的跨單位協調，現在進行式。"
+  },
+  {
+    "id": "listening-02-medium-07",
+    "trainingId": "listening-02-medium",
+    "sentence": "Unless corporate dinner reservations are canceled at least twenty-four hours in advance, a nominal cancellation fee will be charged.",
+    "translation": "除非企業晚餐預訂至少提前二十四小時取消，否則將酌收一筆取消費用。",
+    "chunks": [
+      {
+        "text": "Unless dinner reservations are canceled twenty-four hours in advance,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "a nominal cancellation fee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be charged",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to the corporate account."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件子句後，費用將被扣除，will be charged 為未來被動式。"
+  },
+  {
+    "id": "listening-02-medium-08",
+    "trainingId": "listening-02-medium",
+    "sentence": "Although international cuisine is widely available downtown, our visiting partners specifically requested authentic regional seafood dishes.",
+    "translation": "儘管市中心普遍有各國美食，我們的外國合作夥伴仍特別要求品嚐道地的在地海鮮料理。",
+    "chunks": [
+      {
+        "text": "Although international cuisine is widely available downtown,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our visiting partners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "authentic regional seafood dishes."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "requested 為過去簡單式主動語態，同義替換 desired/asked for。"
+  },
+  {
+    "id": "listening-02-medium-09",
+    "trainingId": "listening-02-medium",
+    "sentence": "The restaurant terrace was enclosed with glass panels so patrons could enjoy harbor views regardless of ambient weather.",
+    "translation": "餐廳戶外露台安裝了玻璃幃幕封閉式隔屏，使顧客不受天氣影響皆能欣賞港灣景致。",
+    "chunks": [
+      {
+        "text": "The restaurant terrace",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was enclosed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with glass panels so patrons could enjoy harbor views."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "露台被封閉裝修，was enclosed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-02-medium-10",
+    "trainingId": "listening-02-medium",
+    "sentence": "Before presenting the dessert course, the head server verified whether any guests had developed sudden allergic symptoms.",
+    "translation": "在送上甜點之前，領班服務員先確認是否有賓客產生突發過敏症狀。",
+    "chunks": [
+      {
+        "text": "Before presenting the dessert course,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the head server",
+        "isTargetSlot": false
+      },
+      {
+        "text": "verified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "whether any guests had developed sudden allergic symptoms."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "verified (查證/確認) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-02-medium-11",
+    "trainingId": "listening-02-medium",
+    "sentence": "Complimentary champagne was served to all invited executives as they entered the grand ballroom for the reception.",
+    "translation": "當獲邀主管進入大宴會廳參加拿酒會時，現場提供了免費招待的香檳。",
+    "chunks": [
+      {
+        "text": "Complimentary champagne",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was served",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to all invited executives as they entered the ballroom."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "香檳被遞送端上，was served 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-02-medium-12",
+    "trainingId": "listening-02-medium",
+    "sentence": "Because the downtown steakhouse holds multiple culinary awards, business clients frequently choose it for critical contract celebrations.",
+    "translation": "由於市中心的牛排館屢獲烹飪大獎，商務客戶經常選擇在此慶祝重大合約的簽署。",
+    "chunks": [
+      {
+        "text": "Because the steakhouse holds multiple culinary awards,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "business clients",
+        "isTargetSlot": false
+      },
+      {
+        "text": "choose",
+        "isTargetSlot": true
+      },
+      {
+        "text": "it for critical contract celebrations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "choose 為現在簡單式主動語態，描述常態性商務選擇。"
+  },
+  {
+    "id": "listening-02-medium-13",
+    "trainingId": "listening-02-medium",
+    "sentence": "The annual catering budget will be finalized next week after comparing competitive proposals from four vendor candidates.",
+    "translation": "在評比四家候選廠商的競爭性報價提案後，年度外燴預算將於下週定案。",
+    "chunks": [
+      {
+        "text": "The annual catering budget",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "next week after comparing competitive proposals."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "預算將被敲定，will be finalized 為未來被動式。"
+  },
+  {
+    "id": "listening-02-medium-14",
+    "trainingId": "listening-02-medium",
+    "sentence": "The restaurant sommelier introduced an exclusive vintage wine selection that complemented the roasted duck entree exquisitely.",
+    "translation": "餐廳侍酒師介紹了一款獨家陳年佳釀，完美襯托了烤鴨主菜的風味。",
+    "chunks": [
+      {
+        "text": "The restaurant sommelier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "introduced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an exclusive vintage wine selection complementing the entree."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "introduced 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-02-medium-15",
+    "trainingId": "listening-02-medium",
+    "sentence": "Private dining rooms are reserved primarily for diplomatic delegations and top-tier enterprise accounts requiring discreet hospitality.",
+    "translation": "獨立包廂主要保留給需要隱密接待服務的外交代表團與頂級企業客戶。",
+    "chunks": [
+      {
+        "text": "Private dining rooms",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are reserved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "primarily for delegations and top-tier accounts."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "包廂被保留，are reserved 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-02-medium-16",
+    "trainingId": "listening-02-medium",
+    "sentence": "Rather than settling for standard banquet choices, the event committee opted for a customized fusion menu.",
+    "translation": "活動籌備委員會沒有選擇標準的宴會菜色，而是選擇了客製化的無國界創意料理。",
+    "chunks": [
+      {
+        "text": "Rather than settling for standard banquet choices,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the event committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "opted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for a customized fusion menu."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "opted (選擇/決定) 為過去簡單式主動語態，對比標準菜單。"
+  },
+  {
+    "id": "listening-02-medium-17",
+    "trainingId": "listening-02-medium",
+    "sentence": "An electronic feedback survey was emailed to all conference delegates who attended the gala dinner yesterday evening.",
+    "translation": "電子滿意度問卷已寄送給所有昨晚參加歡迎晚宴的會議代表。",
+    "chunks": [
+      {
+        "text": "An electronic feedback survey",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was emailed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to all conference delegates who attended the dinner."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "問卷被寄出，was emailed 為過去被動式。"
+  },
+  {
+    "id": "listening-02-medium-18",
+    "trainingId": "listening-02-medium",
+    "sentence": "The executive sous-chef is inspecting incoming seafood consignments to confirm maximum freshness before dinner service commences.",
+    "translation": "行政副主廚正在檢查進貨的海鮮食材，以確保在晚餐營業開始前達到最高新鮮度。",
+    "chunks": [
+      {
+        "text": "The executive sous-chef",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is inspecting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "incoming seafood consignments to confirm freshness."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is inspecting 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-02-medium-19",
+    "trainingId": "listening-02-medium",
+    "sentence": "Table linens and formal silverware will be replaced between luncheon sessions to preserve impeccable banquet standards.",
+    "translation": "午宴場次之間將更換桌布與正式銀質餐具，以維持無可挑剔的宴席水準。",
+    "chunks": [
+      {
+        "text": "Table linens and formal silverware",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be replaced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "between luncheon sessions to preserve standards."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "餐具用品將被替換，will be replaced 為未來被動式。"
+  },
+  {
+    "id": "listening-02-medium-20",
+    "trainingId": "listening-02-medium",
+    "sentence": "Even though peak dinner hours were approaching rapidly, kitchen staff maintained exceptional calmness during the rush.",
+    "translation": "儘管用餐尖峰時段迅速逼近，廚房工作人員在忙碌高峰中依然保持極佳的沉著冷靜。",
+    "chunks": [
+      {
+        "text": "Even though peak dinner hours were approaching rapidly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "kitchen staff",
+        "isTargetSlot": false
+      },
+      {
+        "text": "maintained",
+        "isTargetSlot": true
+      },
+      {
+        "text": "exceptional calmness during the rush."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "maintained (維持/保持) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-02-medium-21",
+    "trainingId": "listening-02-medium",
+    "sentence": "Beverage service charges have been waived for corporate patrons attending the quarterly recognition celebration.",
+    "translation": "參加季度表揚慶祝活動的企業顧客，其飲品服務費已被免除。",
+    "chunks": [
+      {
+        "text": "Beverage service charges",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been waived",
+        "isTargetSlot": true
+      },
+      {
+        "text": "for corporate patrons attending the celebration."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "服務費已被免除，have been waived 為現在完成被動式。"
+  },
+  {
+    "id": "listening-02-medium-22",
+    "trainingId": "listening-02-medium",
+    "sentence": "The cafe proprietress decorates dining spaces with seasonal flora to create an inviting atmosphere for midday patrons.",
+    "translation": "這家咖啡廳的女店主用季節花卉佈置用餐空間，為正午顧客營造舒適宜人的氛圍。",
+    "chunks": [
+      {
+        "text": "The cafe proprietress",
+        "isTargetSlot": false
+      },
+      {
+        "text": "decorates",
+        "isTargetSlot": true
+      },
+      {
+        "text": "dining spaces with seasonal flora to create inviting atmosphere."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "decorates 表常態性佈置，現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-02-medium-23",
+    "trainingId": "listening-02-medium",
+    "sentence": "Nutritional allergen information was clearly printed on banquet menus to safeguard vulnerable conference attendees.",
+    "translation": "宴會菜單上清楚標明了營養過敏原資訊，以保護容易過敏的與會人員。",
+    "chunks": [
+      {
+        "text": "Nutritional allergen information",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was printed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "on banquet menus to safeguard vulnerable attendees."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "資訊被印刷標註，was printed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-02-medium-24",
+    "trainingId": "listening-02-medium",
+    "sentence": "After analyzing guest reviews thoroughly, the bistro management upgraded its beverage roster to include nonalcoholic options.",
+    "translation": "在徹底分析顧客評論後，小酒館管理層升級了飲品清單，增添了多樣無酒精選擇。",
+    "chunks": [
+      {
+        "text": "After analyzing guest reviews thoroughly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the bistro management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "upgraded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its beverage roster to include nonalcoholic options."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "upgraded (提升/更新) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-02-medium-25",
+    "trainingId": "listening-02-medium",
+    "sentence": "Extra banquet seating will be arranged along the outdoor colonnade if weather conditions remain warm and dry.",
+    "translation": "若天氣狀況保持溫暖乾燥，室外柱廊旁將安排額外的宴會座位。",
+    "chunks": [
+      {
+        "text": "Extra banquet seating",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be arranged",
+        "isTargetSlot": true
+      },
+      {
+        "text": "along the outdoor colonnade if weather remains warm."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件句引導，主節 will be arranged 為未來被動式。"
+  },
+  {
+    "id": "listening-02-medium-26",
+    "trainingId": "listening-02-medium",
+    "sentence": "The administrative assistant booked a private dining room so partners could converse without ambient interruptions.",
+    "translation": "行政助理預訂了一間獨立包廂，以便合夥人能在無外界干擾的環境下會談。",
+    "chunks": [
+      {
+        "text": "The administrative assistant",
+        "isTargetSlot": false
+      },
+      {
+        "text": "booked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a private dining room so partners could converse without interruptions."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "booked 為過去簡單式主動語態，同義替換 reserved。"
+  },
+  {
+    "id": "listening-02-medium-27",
+    "trainingId": "listening-02-medium",
+    "sentence": "Fresh bakery items are prepared every dawn by artisan bakers using traditional stone milling flour.",
+    "translation": "新鮮烘焙點心每天拂曉由專業糕餅師傅以傳統石磨麵粉烘製。",
+    "chunks": [
+      {
+        "text": "Fresh bakery items",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are prepared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "every dawn by artisan bakers using stone milling flour."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "點心被製作，are prepared 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-02-medium-28",
+    "trainingId": "listening-02-medium",
+    "sentence": "Although the restaurant was experiencing heavy dinner traffic, the waitstaff fulfilled all customer requests courteously.",
+    "translation": "儘管餐廳正逢龐大晚餐客流，服務人員仍彬彬有禮地滿足了所有客人的需求。",
+    "chunks": [
+      {
+        "text": "Although the restaurant was experiencing heavy traffic,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the waitstaff",
+        "isTargetSlot": false
+      },
+      {
+        "text": "fulfilled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all customer requests courteously."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "fulfilled (履行/滿足) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-02-medium-29",
+    "trainingId": "listening-02-medium",
+    "sentence": "The catering agreement has been signed by both organizations following extensive negotiations regarding menu selections.",
+    "translation": "在就菜單選擇進行廣泛協商後，兩家機構已共同簽署了餐飲合約。",
+    "chunks": [
+      {
+        "text": "The catering agreement",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been signed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by both organizations following extensive negotiations."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "合約已被簽署，has been signed 為現在完成被動式。"
+  },
+  {
+    "id": "listening-02-medium-30",
+    "trainingId": "listening-02-medium",
+    "sentence": "The head sommelier will host an educational wine pairing workshop for corporate hospitality staff on Tuesday.",
+    "translation": "首席侍酒師將於週二為企業接待人員主持一場品酒搭配教學工作坊。",
+    "chunks": [
+      {
+        "text": "The head sommelier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will host",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an educational wine pairing workshop on Tuesday."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will host 為未來簡單式主動語態。"
+  }
+]

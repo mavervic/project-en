@@ -1,0 +1,830 @@
+[
+  {
+    "id": "listening-03-medium-01",
+    "trainingId": "listening-03-medium",
+    "sentence": "Although tickets for the evening philharmonic concert were completely sold out, our sponsor secured premium orchestra seats for visiting executives.",
+    "translation": "儘管今晚愛樂交響樂團音樂會的門票已全數售罄，我們的贊助商仍為來訪主管爭取到了前排貴賓席。",
+    "chunks": [
+      {
+        "text": "Although tickets for the concert were sold out,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our sponsor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "secured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "premium orchestra seats for visiting executives."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "secured (獲取/取得) 為過去簡單式主動語態，轉折讓步關係。"
+  },
+  {
+    "id": "listening-03-medium-02",
+    "trainingId": "listening-03-medium",
+    "sentence": "To commemorate the milestone anniversary, an exclusive documentary film was screened in the private screening lounge.",
+    "translation": "為了紀念這個里程碑週年，私人放映廳放映了一部獨家紀錄片。",
+    "chunks": [
+      {
+        "text": "To commemorate the milestone anniversary,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "an exclusive documentary film",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was screened",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in the private screening lounge."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "電影被放映，was screened 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-03-medium-03",
+    "trainingId": "listening-03-medium",
+    "sentence": "While museum curators were preparing the impressionist gallery, visiting dignitaries toured the newly renovated sculpture pavilion.",
+    "translation": "當博物館策展人正在佈置印象派展廳時，來訪的政要貴賓參觀了剛翻新落成的雕塑館。",
+    "chunks": [
+      {
+        "text": "While curators were preparing the impressionist gallery,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "visiting dignitaries",
+        "isTargetSlot": false
+      },
+      {
+        "text": "toured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the newly renovated sculpture pavilion."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "toured 為過去簡單式主動語態，描繪貴賓參觀過程。"
+  },
+  {
+    "id": "listening-03-medium-04",
+    "trainingId": "listening-03-medium",
+    "sentence": "Because the open-air theater was threatened by sudden rain showers, the theatrical performance was moved inside the civic hall.",
+    "translation": "由於露天劇場受到突如其來的陣雨威脅，戲劇演出改至市民大廳室內舉行。",
+    "chunks": [
+      {
+        "text": "Because the theater was threatened by rain showers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the theatrical performance",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was moved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "inside the civic hall."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "演出被更換地點，was moved 為過去被動式。"
+  },
+  {
+    "id": "listening-03-medium-05",
+    "trainingId": "listening-03-medium",
+    "sentence": "Corporate hospitality passes allow registered delegates complimentary admission to major art institutions across the metropolis.",
+    "translation": "企業貴賓接待通行證允許註冊代表免費參觀大都會區的各大藝術機構。",
+    "chunks": [
+      {
+        "text": "Corporate hospitality passes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "allow",
+        "isTargetSlot": true
+      },
+      {
+        "text": "registered delegates complimentary admission to art institutions."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "allow 為現在簡單式主動語態，表通行證常態權限。"
+  },
+  {
+    "id": "listening-03-medium-06",
+    "trainingId": "listening-03-medium",
+    "sentence": "The event coordinator is finalizing acoustic sound checks before theater patrons begin filling the auditorium.",
+    "translation": "活動協調員正在劇院觀眾開始入座前，進行最後的音響測試確認。",
+    "chunks": [
+      {
+        "text": "The event coordinator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is finalizing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "acoustic sound checks before patrons fill the auditorium."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is finalizing 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-03-medium-07",
+    "trainingId": "listening-03-medium",
+    "sentence": "Unless festival organizers receive municipal safety approvals by Friday, the weekend cultural fair will be postponed.",
+    "translation": "除非文化節主辦方在週五前取得市府安全許可，否則週末文化市集將被延期。",
+    "chunks": [
+      {
+        "text": "Unless organizers receive municipal safety approvals by Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the weekend cultural fair",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be postponed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "until next month."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "活動將被延期，will be postponed 為未來被動式。"
+  },
+  {
+    "id": "listening-03-medium-08",
+    "trainingId": "listening-03-medium",
+    "sentence": "Although classical ballet tickets commanded high prices, our overseas clients thoroughly enjoyed the spectacular choreography.",
+    "translation": "儘管古典芭蕾舞門票價格不菲，我們的國外客戶依然非常享受這場精彩絕倫的編舞表演。",
+    "chunks": [
+      {
+        "text": "Although classical ballet tickets commanded high prices,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our overseas clients",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enjoyed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the spectacular choreography."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "enjoyed 為過去簡單式主動語態，對比前面的讓步高價子句。"
+  },
+  {
+    "id": "listening-03-medium-09",
+    "trainingId": "listening-03-medium",
+    "sentence": "The museum gallery was illuminated with energy-efficient spotlights to highlight delicate ceramic artifacts.",
+    "translation": "博物館展廳採用節能投射燈照明，以凸顯精緻陶瓷文物的細部。",
+    "chunks": [
+      {
+        "text": "The museum gallery",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was illuminated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with energy-efficient spotlights to highlight artifacts."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "展廳被照明，was illuminated 為過去被動式。"
+  },
+  {
+    "id": "listening-03-medium-10",
+    "trainingId": "listening-03-medium",
+    "sentence": "Before attending the gala opening, international delegates collected their credentials at the conference registration pavilion.",
+    "translation": "在參加開幕晚會前，各國代表在會議註冊大廳領取了他們的身份識別證件。",
+    "chunks": [
+      {
+        "text": "Before attending the gala opening,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "international delegates",
+        "isTargetSlot": false
+      },
+      {
+        "text": "collected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "their credentials at the conference pavilion."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "collected (領取/收集) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-03-medium-11",
+    "trainingId": "listening-03-medium",
+    "sentence": "Exclusive guided tour brochures will be distributed to convention guests upon arrival at the historic landmark.",
+    "translation": "專屬導覽手冊將在與會賓客抵達該歷史地標時發放。",
+    "chunks": [
+      {
+        "text": "Exclusive guided tour brochures",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to convention guests upon arrival at the landmark."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "手冊將被分發，will be distributed 為未來被動式。"
+  },
+  {
+    "id": "listening-03-medium-12",
+    "trainingId": "listening-03-medium",
+    "sentence": "Because the musical ensemble performed exceptionally well, spectators awarded the artists a thunderous standing ovation.",
+    "translation": "由於室內樂團的演奏水準卓越，現場觀眾起立給予藝術家們雷鳴般的掌聲喝采。",
+    "chunks": [
+      {
+        "text": "Because the ensemble performed exceptionally well,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "spectators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "awarded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the artists a thunderous standing ovation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "awarded 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-03-medium-13",
+    "trainingId": "listening-03-medium",
+    "sentence": "Photography restrictions have been implemented inside the antique manuscript gallery to protect rare historical documents.",
+    "translation": "古籍手稿展廳內已實施拍照限制規定，以保護珍貴的歷史文獻。",
+    "chunks": [
+      {
+        "text": "Photography restrictions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been implemented",
+        "isTargetSlot": true
+      },
+      {
+        "text": "inside the gallery to protect rare documents."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "限制已被實施，have been implemented 為現在完成被動式。"
+  },
+  {
+    "id": "listening-03-medium-14",
+    "trainingId": "listening-03-medium",
+    "sentence": "The festival committee organizes annual cultural exchanges that bridge international understanding through creative arts.",
+    "translation": "文化節組委會主辦年度文化交流活動，透過創意藝術促進各國間的理解。",
+    "chunks": [
+      {
+        "text": "The festival committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "organizes",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annual cultural exchanges bridging international understanding."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "organizes 為現在簡單式主動語態，表組委會年度常態職能。"
+  },
+  {
+    "id": "listening-03-medium-15",
+    "trainingId": "listening-03-medium",
+    "sentence": "Stage lighting rigs were calibrated by technical crews hours before the theatrical premiere commenced.",
+    "translation": "舞台燈光懸吊設備在舞台劇首演開始前數小時已由技術團隊校準完畢。",
+    "chunks": [
+      {
+        "text": "Stage lighting rigs",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were calibrated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by technical crews hours before the premiere."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "設備被校準，were calibrated 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-03-medium-16",
+    "trainingId": "listening-03-medium",
+    "sentence": "Rather than waiting in line at the venue box office, many theatergoers booked electronic tickets via mobile apps.",
+    "translation": "許多劇迷沒有在現場售票處排隊等候，而是透過手機應用程式預訂了電子票券。",
+    "chunks": [
+      {
+        "text": "Rather than waiting in line at the box office,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "many theatergoers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "booked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "electronic tickets via mobile apps."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "booked 為過去簡單式主動語態，與前方的 Rather than 形成鮮明對照。"
+  },
+  {
+    "id": "listening-03-medium-17",
+    "trainingId": "listening-03-medium",
+    "sentence": "The symphony orchestra rehearsal was interrupted briefly when building technicians tested fire safety announcement speakers.",
+    "translation": "當大樓技術員測試消防安全廣播揚聲器時，交響樂團的彩排曾短暫中斷。",
+    "chunks": [
+      {
+        "text": "The symphony orchestra rehearsal",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was interrupted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "briefly when technicians tested fire safety speakers."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "彩排被中斷，was interrupted 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-03-medium-18",
+    "trainingId": "listening-03-medium",
+    "sentence": "The museum curator is preparing an informative lecture series on contemporary architectural developments worldwide.",
+    "translation": "博物館策展人正在籌劃一系列關於全球當代建築發展的知性講座。",
+    "chunks": [
+      {
+        "text": "The museum curator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is preparing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an informative lecture series on architectural developments."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is preparing 表策展人目前正籌備中，現在進行式。"
+  },
+  {
+    "id": "listening-03-medium-19",
+    "trainingId": "listening-03-medium",
+    "sentence": "VIP entertainment passes will be shipped to corporate sponsors immediately following payment verification.",
+    "translation": "在付款查驗核准後，貴賓入場通行證將立即寄送給企業贊助商。",
+    "chunks": [
+      {
+        "text": "VIP entertainment passes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be shipped",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to corporate sponsors following payment verification."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "通行證將被寄送，will be shipped 為未來被動式。"
+  },
+  {
+    "id": "listening-03-medium-20",
+    "trainingId": "listening-03-medium",
+    "sentence": "Even though regional weather forecasts predicted heavy rain, outdoor festival attendance exceeded preliminary corporate estimates.",
+    "translation": "儘管區域氣象預報顯示有強降雨，戶外文化節的參與人數仍超出了企業的初步預估。",
+    "chunks": [
+      {
+        "text": "Even though weather forecasts predicted heavy rain,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "outdoor festival attendance",
+        "isTargetSlot": false
+      },
+      {
+        "text": "exceeded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "preliminary corporate estimates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "exceeded (超出/超越) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-03-medium-21",
+    "trainingId": "listening-03-medium",
+    "sentence": "Historical palace exhibits have been restored meticulously by certified conservation specialists over the past decade.",
+    "translation": "過去十年中，歷史宮殿文物已由合格的文物修復專家進行了精細的修復。",
+    "chunks": [
+      {
+        "text": "Historical palace exhibits",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been restored",
+        "isTargetSlot": true
+      },
+      {
+        "text": "meticulously by certified conservation specialists."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "文物已被修復，have been restored 為現在完成被動式。"
+  },
+  {
+    "id": "listening-03-medium-22",
+    "trainingId": "listening-03-medium",
+    "sentence": "The theater director selects international stage plays that challenge contemporary social perspectives.",
+    "translation": "該劇院總監挑選挑戰當代社會視角的國際舞台劇作品。",
+    "chunks": [
+      {
+        "text": "The theater director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "selects",
+        "isTargetSlot": true
+      },
+      {
+        "text": "international stage plays that challenge social perspectives."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "selects 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-03-medium-23",
+    "trainingId": "listening-03-medium",
+    "sentence": "Security screening measures were upgraded after intelligence analysts identified potential crowd management risks.",
+    "translation": "在情資分析師識別出潛在的人流管理風險後，安檢措施隨即進行了升級。",
+    "chunks": [
+      {
+        "text": "Security screening measures",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were upgraded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "after analysts identified potential crowd risks."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "措施被升級，were upgraded 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-03-medium-24",
+    "trainingId": "listening-03-medium",
+    "sentence": "In order to accommodate international tourists, the municipal art gallery provides multilingual audio guides.",
+    "translation": "為了接待外國遊客，市立美術館提供多種語言的語音導覽服務。",
+    "chunks": [
+      {
+        "text": "In order to accommodate international tourists,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the municipal art gallery",
+        "isTargetSlot": false
+      },
+      {
+        "text": "provides",
+        "isTargetSlot": true
+      },
+      {
+        "text": "multilingual audio guides."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "provides 為現在簡單式主動語態，表機構固定服務。"
+  },
+  {
+    "id": "listening-03-medium-25",
+    "trainingId": "listening-03-medium",
+    "sentence": "An encore musical piece will be performed by the orchestra if audience applause continues past midnight.",
+    "translation": "如果現場觀眾的掌聲持續到午夜過後，樂團將加演一首安可曲目。",
+    "chunks": [
+      {
+        "text": "An encore musical piece",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be performed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the orchestra if applause continues."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "安可曲將被演奏，will be performed 為未來被動式。"
+  },
+  {
+    "id": "listening-03-medium-26",
+    "trainingId": "listening-03-medium",
+    "sentence": "The marketing director negotiated corporate sponsorship packages that featured prominent banner placement throughout the auditorium.",
+    "translation": "行銷總監洽談了企業贊助方案，讓贊助商在整個演藝廳享有顯著的橫幅展示版面。",
+    "chunks": [
+      {
+        "text": "The marketing director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "negotiated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "corporate sponsorship packages featuring banner placement."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "negotiated 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-03-medium-27",
+    "trainingId": "listening-03-medium",
+    "sentence": "Costumes and stage props are inspected thoroughly by wardrobe supervisors prior to every theatrical performance.",
+    "translation": "在每場戲劇演出前，服裝主管都會徹底檢查戲服與舞台道具。",
+    "chunks": [
+      {
+        "text": "Costumes and stage props",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are inspected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "thoroughly by wardrobe supervisors before every performance."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "服裝道具被檢查，are inspected 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-03-medium-28",
+    "trainingId": "listening-03-medium",
+    "sentence": "Although contemporary cinema attracts massive audiences, traditional live theater maintains a loyal following among cultural enthusiasts.",
+    "translation": "儘管當代電影吸引了大量受眾，傳統現場舞台劇在文化愛好者中依然保有一群忠實擁護者。",
+    "chunks": [
+      {
+        "text": "Although contemporary cinema attracts massive audiences,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "traditional live theater",
+        "isTargetSlot": false
+      },
+      {
+        "text": "maintains",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a loyal following among cultural enthusiasts."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "maintains 為現在簡單式主動語態，對比讓步子句。"
+  },
+  {
+    "id": "listening-03-medium-29",
+    "trainingId": "listening-03-medium",
+    "sentence": "The museum membership roster has been updated to reflect new corporate donors who contributed to the wing expansion.",
+    "translation": "博物館會員名冊已完成更新，列入對擴建側翼展廳慷慨解囊的新企業捐助者。",
+    "chunks": [
+      {
+        "text": "The museum membership roster",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been updated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to reflect new donors who contributed to expansion."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "名冊已被更新，has been updated 為現在完成被動式。"
+  },
+  {
+    "id": "listening-03-medium-30",
+    "trainingId": "listening-03-medium",
+    "sentence": "The festival master of ceremonies will introduce guest speakers before musical acts take the outdoor amphitheater stage.",
+    "translation": "文化節司儀將在音樂表演團隊登上戶外圓形劇場舞台前，介紹特別來賓。",
+    "chunks": [
+      {
+        "text": "The festival master of ceremonies",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will introduce",
+        "isTargetSlot": true
+      },
+      {
+        "text": "guest speakers before musical acts take the stage."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will introduce 為未來簡單式主動語態。"
+  }
+]

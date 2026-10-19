@@ -1,0 +1,826 @@
+[
+  {
+    "id": "listening-05-medium-01",
+    "trainingId": "listening-05-medium",
+    "sentence": "Although raw material procurement prices escalated recently, the procurement team negotiated a five percent volume discount with key suppliers.",
+    "translation": "儘管原物料採購價格近期上揚，採購團隊仍與主要供應商洽談爭取到了百分之五的大宗折扣。",
+    "chunks": [
+      {
+        "text": "Although raw material procurement prices escalated recently,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the procurement team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "negotiated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a five percent volume discount with key suppliers."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "negotiated (協商達成) 為過去簡單式主動語態，承接前面的讓步轉折子句。"
+  },
+  {
+    "id": "listening-05-medium-02",
+    "trainingId": "listening-05-medium",
+    "sentence": "Because the electronic component shipment was delayed in customs transit, production line supervisors adjusted the manufacturing schedule.",
+    "translation": "由於電子零件貨物在海關轉運時遭到延誤，生產線主管隨即調整了製造時程表。",
+    "chunks": [
+      {
+        "text": "Because the component shipment was delayed in transit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "production line supervisors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "adjusted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the manufacturing schedule."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "adjusted 為過去簡單式主動語態，描述主管針對物流延誤所做出的因應。"
+  },
+  {
+    "id": "listening-05-medium-03",
+    "trainingId": "listening-05-medium",
+    "sentence": "Detailed merchandise specifications must be submitted by vendors before competitive bidding tenders are formally evaluated.",
+    "translation": "在正式評估投標標單之前，供應商必須先繳交詳細的商品規格清單。",
+    "chunks": [
+      {
+        "text": "Detailed merchandise specifications",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must be submitted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by vendors before competitive tenders are evaluated."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "規格必須被繳交，must be submitted 為情態動詞被動語態。"
+  },
+  {
+    "id": "listening-05-medium-04",
+    "trainingId": "listening-05-medium",
+    "sentence": "While warehouse inventory counts were being compiled, the logistics director spotted an unexplained variance in packaging supplies.",
+    "translation": "在彙整倉庫庫存清點數據的同時，物流總監發現了包裝耗材中一處不明的數量差異。",
+    "chunks": [
+      {
+        "text": "While warehouse inventory counts were being compiled,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the logistics director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "spotted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an unexplained variance in packaging supplies."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "spotted (察覺/發現) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-05-medium-05",
+    "trainingId": "listening-05-medium",
+    "sentence": "Electronic invoices are processed automatically by the financial accounting platform within twenty-four hours of item delivery.",
+    "translation": "在貨物送達後的二十四小時內，電子發票會由財務會計平台自動進行處理。",
+    "chunks": [
+      {
+        "text": "Electronic invoices",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically by the platform within twenty-four hours."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "發票被處理，are processed 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-05-medium-06",
+    "trainingId": "listening-05-medium",
+    "sentence": "The purchasing agent is reviewing competitive price estimates from international distributors to trim operating expenditures.",
+    "translation": "採購專員正在審閱來自國際經銷商的競爭性報價估算，以縮減營運支出。",
+    "chunks": [
+      {
+        "text": "The purchasing agent",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "competitive price estimates to trim expenditures."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is reviewing 表目前正在進行比價審閱，現在進行式。"
+  },
+  {
+    "id": "listening-05-medium-07",
+    "trainingId": "listening-05-medium",
+    "sentence": "Unless defective merchandise is reported within thirty days of arrival, replacement claims will not be honored.",
+    "translation": "除非在到貨後三十天內回報瑕疵品，否則將不予受理更換申請。",
+    "chunks": [
+      {
+        "text": "Unless defective merchandise is reported within thirty days,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "replacement claims",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will not be honored",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the supplier."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "理賠申請將不被受理，will not be honored 為未來被動式。"
+  },
+  {
+    "id": "listening-05-medium-08",
+    "trainingId": "listening-05-medium",
+    "sentence": "Although our previous freight contractor offered affordable tariffs, we switched to a courier with superior tracking technology.",
+    "translation": "儘管我們之前的貨運承包商提供較便宜的運費，我們仍改用具備更先進追蹤技術的快遞公司。",
+    "chunks": [
+      {
+        "text": "Although our previous contractor offered affordable tariffs,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "we",
+        "isTargetSlot": false
+      },
+      {
+        "text": "switched",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to a courier with superior tracking technology."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "switched (切換/轉用) 為過去簡單式主動語態，轉折語氣。"
+  },
+  {
+    "id": "listening-05-medium-09",
+    "trainingId": "listening-05-medium",
+    "sentence": "A formal purchase requisition was submitted to executive management before ordering high-value industrial machinery.",
+    "translation": "在訂購高單價工業機械設備之前，正式採購請購單已呈報給管理高層。",
+    "chunks": [
+      {
+        "text": "A formal purchase requisition",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was submitted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to executive management before ordering machinery."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "請購單被呈報，was submitted 為過去被動式。"
+  },
+  {
+    "id": "listening-05-medium-10",
+    "trainingId": "listening-05-medium",
+    "sentence": "Before authorizing the wire transfer, the accounts payable supervisor verified supplier banking credentials.",
+    "translation": "在授權電匯付款之前，應付帳款主管核實了供應商的銀行帳戶資料。",
+    "chunks": [
+      {
+        "text": "Before authorizing the wire transfer,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the accounts payable supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "verified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "supplier banking credentials."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "verified 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-05-medium-11",
+    "trainingId": "listening-05-medium",
+    "sentence": "Emergency spare components will be dispatched by express cargo flight to prevent assembly interruptions.",
+    "translation": "緊急備用零件將以空運貨機特快寄出，以避免組裝線停工中斷。",
+    "chunks": [
+      {
+        "text": "Emergency spare components",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be dispatched",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by express cargo flight to prevent interruptions."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "零件將被調度寄送，will be dispatched 為未來被動式。"
+  },
+  {
+    "id": "listening-05-medium-12",
+    "trainingId": "listening-05-medium",
+    "sentence": "Because the vendor failed to satisfy quality specifications, the purchasing committee terminated the supply contract.",
+    "translation": "由於該供應商未能符合品質規格，採購委員會終止了供貨合約。",
+    "chunks": [
+      {
+        "text": "Because the vendor failed to satisfy specifications,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the purchasing committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "terminated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the supply contract."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "terminated (終止) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-05-medium-13",
+    "trainingId": "listening-05-medium",
+    "sentence": "A comprehensive supplier appraisal system has been implemented across the purchasing division this quarter.",
+    "translation": "本季度採購部門全面實施了一套全方位的供應商評鑑制度。",
+    "chunks": [
+      {
+        "text": "A comprehensive supplier appraisal system",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been implemented",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across the purchasing division this quarter."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "制度已被實施，has been implemented 為現在完成被動式。"
+  },
+  {
+    "id": "listening-05-medium-14",
+    "trainingId": "listening-05-medium",
+    "sentence": "The inventory specialist monitors raw material stock thresholds to avert costly manufacturing stoppages.",
+    "translation": "庫存專員嚴密監控原物料庫存警戒水位，以防範代價高昂的停產事故。",
+    "chunks": [
+      {
+        "text": "The inventory specialist",
+        "isTargetSlot": false
+      },
+      {
+        "text": "monitors",
+        "isTargetSlot": true
+      },
+      {
+        "text": "stock thresholds to avert manufacturing stoppages."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "monitors 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-05-medium-15",
+    "trainingId": "listening-05-medium",
+    "sentence": "Damaged shipping cartons were set aside by dock workers before the formal delivery manifest was endorsed.",
+    "translation": "在簽署正式送貨清單前，碼頭工人將受損的貨運紙箱挑出放置於一旁。",
+    "chunks": [
+      {
+        "text": "Damaged shipping cartons",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were set aside",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by dock workers before the manifest was endorsed."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "紙箱被挪開放置，were set aside 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-05-medium-16",
+    "trainingId": "listening-05-medium",
+    "sentence": "Rather than importing expensive overseas stationery, the administrative director chose reliable regional suppliers.",
+    "translation": "行政總監沒有進口昂貴的國外文具，而是選擇了信譽良好的本地供應商。",
+    "chunks": [
+      {
+        "text": "Rather than importing expensive stationery,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the administrative director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "chose",
+        "isTargetSlot": true
+      },
+      {
+        "text": "reliable regional suppliers."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "chose (選擇) 為過去簡單式主動語態，對比 Rather than。"
+  },
+  {
+    "id": "listening-05-medium-17",
+    "trainingId": "listening-05-medium",
+    "sentence": "Bulk order purchase agreements are reviewed annually by legal advisors to incorporate statutory consumer protections.",
+    "translation": "大宗訂單採購合約每年均由法律顧問進行審核，以納入最新的法定消費者保障條款。",
+    "chunks": [
+      {
+        "text": "Bulk order purchase agreements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are reviewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annually by legal advisors to incorporate protections."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "合約被審查，are reviewed 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-05-medium-18",
+    "trainingId": "listening-05-medium",
+    "sentence": "The logistics officer is inspecting refrigerated cargo containers to ensure temperature compliance during transport.",
+    "translation": "物流主管正在檢查冷藏貨櫃，以確保在運送過程中維持合規的溫控條件。",
+    "chunks": [
+      {
+        "text": "The logistics officer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is inspecting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "refrigerated cargo containers to ensure compliance."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is inspecting 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-05-medium-19",
+    "trainingId": "listening-05-medium",
+    "sentence": "Final balance settlements will be released once engineering supervisors verify that equipment installations operate correctly.",
+    "translation": "一旦工程主管確認設備安裝運轉無誤，尾款結算款項即會撥付發放。",
+    "chunks": [
+      {
+        "text": "Final balance settlements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "once supervisors verify that installations operate."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "款項將被撥付，will be released 為未來被動式。"
+  },
+  {
+    "id": "listening-05-medium-20",
+    "trainingId": "listening-05-medium",
+    "sentence": "Even though shipping freight charges spiked during peak season, negotiated container rates minimized corporate expenses.",
+    "translation": "即便在旺季期間海運費率暴漲，已議定的貨櫃合約費率依然將企業支出降到了最低。",
+    "chunks": [
+      {
+        "text": "Even though freight charges spiked during peak season,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "negotiated container rates",
+        "isTargetSlot": false
+      },
+      {
+        "text": "minimized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "corporate expenses."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "minimized (縮減至最低) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-05-medium-21",
+    "trainingId": "listening-05-medium",
+    "sentence": "Warehouse pallet storage configurations have been reorganized to expedite order retrieval for delivery drivers.",
+    "translation": "倉庫棧板存放配置已重新規劃整頓，以加速外送司機取貨的速度。",
+    "chunks": [
+      {
+        "text": "Warehouse pallet storage configurations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been reorganized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to expedite order retrieval for delivery drivers."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "配置已被重組優化，have been reorganized 為現在完成被動式。"
+  },
+  {
+    "id": "listening-05-medium-22",
+    "trainingId": "listening-05-medium",
+    "sentence": "The purchasing director selects manufacturing partners that maintain transparent carbon accounting protocols.",
+    "translation": "採購總監遴選具備透明碳盤查計算機制的製造合作夥伴。",
+    "chunks": [
+      {
+        "text": "The purchasing director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "selects",
+        "isTargetSlot": true
+      },
+      {
+        "text": "manufacturing partners maintaining transparent carbon protocols."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "selects 表總監的選商原則，現在簡單式。"
+  },
+  {
+    "id": "listening-05-medium-23",
+    "trainingId": "listening-05-medium",
+    "sentence": "A formal tender invitation was published in commercial trade journals to attract qualified building contractors.",
+    "translation": "正式招標公告已刊登於商務經貿刊物上，以吸引具資格的營建承包商競標。",
+    "chunks": [
+      {
+        "text": "A formal tender invitation",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was published",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in trade journals to attract qualified contractors."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "標案被刊登發布，was published 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-05-medium-24",
+    "trainingId": "listening-05-medium",
+    "sentence": "In order to resolve the persistent component defect, the purchasing team met with the lead industrial engineer.",
+    "translation": "為了徹底解決持續出現的零件瑕疵，採購團隊與首席工業工程師進行了會商。",
+    "chunks": [
+      {
+        "text": "In order to resolve the persistent component defect,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the purchasing team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "met",
+        "isTargetSlot": true
+      },
+      {
+        "text": "with the lead industrial engineer."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "met 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-05-medium-25",
+    "trainingId": "listening-05-medium",
+    "sentence": "Revised supplier performance scorecards will be distributed to vendor representatives at the quarterly symposium.",
+    "translation": "修訂後的供應商績效評分表將於季度研討會上分發給各廠商代表。",
+    "chunks": [
+      {
+        "text": "Revised supplier performance scorecards",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be distributed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to vendor representatives at the quarterly symposium."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "評分表將被發送，will be distributed 為未來被動式。"
+  },
+  {
+    "id": "listening-05-medium-26",
+    "trainingId": "listening-05-medium",
+    "sentence": "The senior buyer negotiated flexible consignment payment schedules that accommodated seasonal revenue fluctuations.",
+    "translation": "資深採購員洽談成了彈性的寄售付款期程，以配合淡旺季營收波動。",
+    "chunks": [
+      {
+        "text": "The senior buyer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "negotiated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "flexible consignment payment schedules."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "negotiated 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-05-medium-27",
+    "trainingId": "listening-05-medium",
+    "sentence": "All customs documentation was verified by certified freight forwarders before air cargo planes departed.",
+    "translation": "所有報關文件在空運貨機起飛前均已由認證報關代理人核驗無訛。",
+    "chunks": [
+      {
+        "text": "All customs documentation",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was verified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by freight forwarders before planes departed."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "報關文件被核驗，was verified 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-05-medium-28",
+    "trainingId": "listening-05-medium",
+    "sentence": "Although fuel surcharges fluctuated wildly, long-term procurement hedging preserved operational profitability.",
+    "translation": "儘管燃油附加費大幅劇烈波動，長期的採購避險策略仍保住了公司的營運獲利能力。",
+    "chunks": [
+      {
+        "text": "Although fuel surcharges fluctuated wildly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "long-term procurement hedging",
+        "isTargetSlot": false
+      },
+      {
+        "text": "preserved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "operational profitability."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "preserved (維護/保住) 為過去簡單式主動語態，轉折語氣。"
+  },
+  {
+    "id": "listening-05-medium-29",
+    "trainingId": "listening-05-medium",
+    "sentence": "The revised distribution agreement has been ratified by both executive committees following prolonged deliberations.",
+    "translation": "在歷經長時間的慎重研議後，修訂後的經銷合約已由雙方執行委員會正式批准。",
+    "chunks": [
+      {
+        "text": "The revised distribution agreement",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been ratified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by both executive committees following deliberations."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "合約已被批准生效，has been ratified 為現在完成被動式。"
+  },
+  {
+    "id": "listening-05-medium-30",
+    "trainingId": "listening-05-medium",
+    "sentence": "The purchasing vice president will present sustainable sourcing metrics at the upcoming global executive forum.",
+    "translation": "採購副總裁將在即將登場的全球主管論壇上，發表永續採購指標成果。",
+    "chunks": [
+      {
+        "text": "The purchasing vice president",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will present",
+        "isTargetSlot": true
+      },
+      {
+        "text": "sustainable sourcing metrics at the global forum."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will present 為未來簡單式主動語態。"
+  }
+]

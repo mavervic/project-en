@@ -1,0 +1,826 @@
+[
+  {
+    "id": "listening-10-medium-01",
+    "trainingId": "listening-10-medium",
+    "sentence": "Although automated robotic equipment encountered temporary software calibration glitches, factory technicians restored production speed within minutes.",
+    "translation": "儘管自動化機器人設備遭遇了短暫的軟體校準異常，工廠技術員仍在幾分鐘內恢復了正常的生產速度。",
+    "chunks": [
+      {
+        "text": "Although automated equipment encountered calibration glitches,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "factory technicians",
+        "isTargetSlot": false
+      },
+      {
+        "text": "restored",
+        "isTargetSlot": true
+      },
+      {
+        "text": "production speed within minutes."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "restored (恢復) 為過去簡單式主動語態，轉折 Although 關係。"
+  },
+  {
+    "id": "listening-10-medium-02",
+    "trainingId": "listening-10-medium",
+    "sentence": "Because stringent international safety guidelines were enacted, protective face shields must be worn across all welding workstations.",
+    "translation": "由於頒布了嚴格的國際安全指引，所有焊接工作站均必須全面配戴防護面罩。",
+    "chunks": [
+      {
+        "text": "Because stringent safety guidelines were enacted,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "protective face shields",
+        "isTargetSlot": false
+      },
+      {
+        "text": "must be worn",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across all welding workstations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "面罩必須被配戴，must be worn 為情態助動詞被動語態。"
+  },
+  {
+    "id": "listening-10-medium-03",
+    "trainingId": "listening-10-medium",
+    "sentence": "Quality assurance inspectors verify component tolerance dimensions using digital calipers before components proceed to final packaging.",
+    "translation": "品管檢驗員在零件送往最終包裝前，使用數位游標卡尺查驗零件公差尺寸。",
+    "chunks": [
+      {
+        "text": "Quality assurance inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "verify",
+        "isTargetSlot": true
+      },
+      {
+        "text": "tolerance dimensions before components proceed to packaging."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "verify 為現在簡單式主動語態，表例行檢測程序。"
+  },
+  {
+    "id": "listening-10-medium-04",
+    "trainingId": "listening-10-medium",
+    "sentence": "While maintenance engineers were lubricating conveyor gears, the manufacturing operations manager reviewed daily assembly quotas.",
+    "translation": "在維修工程師對輸送機齒輪進行潤滑保養的同時，製造營運經理審查了每日的組裝配額。",
+    "chunks": [
+      {
+        "text": "While engineers were lubricating conveyor gears,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the manufacturing operations manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "reviewed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "daily assembly quotas."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "reviewed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-medium-05",
+    "trainingId": "listening-10-medium",
+    "sentence": "Defective semiconductor chips are isolated immediately by optical inspection scanners to prevent substandard assemblies.",
+    "translation": "不良半導體晶片會立即被光學檢測掃描機台挑出隔離，以防產出不合格的組裝品。",
+    "chunks": [
+      {
+        "text": "Defective semiconductor chips",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are isolated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediately by optical scanners to prevent defects."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "晶片被隔離淘汰，are isolated 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-10-medium-06",
+    "trainingId": "listening-10-medium",
+    "sentence": "The plant supervisor is monitoring chemical reaction chamber pressures to ensure steady production stability.",
+    "translation": "廠長正在密切監控化學反應艙的氣壓數值，以確保穩定的生產穩定度。",
+    "chunks": [
+      {
+        "text": "The plant supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is monitoring",
+        "isTargetSlot": true
+      },
+      {
+        "text": "reaction chamber pressures to ensure production stability."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is monitoring 表正在監控中，現在進行式。"
+  },
+  {
+    "id": "listening-10-medium-07",
+    "trainingId": "listening-10-medium",
+    "sentence": "Unless preventative servicing is executed according to schedule, high-speed motor warranties will be invalidated.",
+    "translation": "除非按排定時程執行預防性保養維護，否則高速馬達的原廠保固將會失效作廢。",
+    "chunks": [
+      {
+        "text": "Unless preventative servicing is executed according to schedule,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "high-speed motor warranties",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be invalidated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the manufacturer."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "保固將被宣告無效，will be invalidated 為未來被動式。"
+  },
+  {
+    "id": "listening-10-medium-08",
+    "trainingId": "listening-10-medium",
+    "sentence": "Although raw material shipments arrived behind schedule, plant workers accelerated shifts to meet customer delivery commitments.",
+    "translation": "儘管原物料到貨晚於預定時程，工廠同仁仍加快交替輪班以如期履行對客戶的交貨承諾。",
+    "chunks": [
+      {
+        "text": "Although raw material shipments arrived behind schedule,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "plant workers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "accelerated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "shifts to meet customer delivery commitments."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "accelerated (加速) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-10-medium-09",
+    "trainingId": "listening-10-medium",
+    "sentence": "An environmental emission compliance audit was performed by independent certification regulators yesterday afternoon.",
+    "translation": "獨立認證監管機構昨天下午對廠區進行了一次環境廢氣排放合規審計。",
+    "chunks": [
+      {
+        "text": "An environmental emission compliance audit",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was performed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by independent regulators yesterday afternoon."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "審計被執行，was performed 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-10-medium-10",
+    "trainingId": "listening-10-medium",
+    "sentence": "Before approving bulk commercial manufacturing, chemical engineers evaluated formula stability through small batch trials.",
+    "translation": "在核准進入大規模商業量產之前，化學工程師透過小批次試驗評估了配方的穩定性。",
+    "chunks": [
+      {
+        "text": "Before approving bulk commercial manufacturing,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "chemical engineers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "evaluated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "formula stability through small batch trials."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "evaluated 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-medium-11",
+    "trainingId": "listening-10-medium",
+    "sentence": "Automated guided warehouse vehicles will be introduced across our manufacturing facility during the summer retooling.",
+    "translation": "在夏季產線設備改裝期間，我們的製造工廠將全面引進無人自動導引搬運車（AGV）。",
+    "chunks": [
+      {
+        "text": "Automated guided warehouse vehicles",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be introduced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "during the summer facility retooling."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "車輛設備將被引進，will be introduced 為未來被動式。"
+  },
+  {
+    "id": "listening-10-medium-12",
+    "trainingId": "listening-10-medium",
+    "sentence": "Because assembly line machinery generated excessive friction heat, operators installed supplemental cooling fans.",
+    "translation": "由於組裝線機械產生了過高的摩擦熱，操作員加裝了輔助散熱風扇。",
+    "chunks": [
+      {
+        "text": "Because machinery generated excessive friction heat,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "operators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "installed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "supplemental cooling fans."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "installed 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-medium-13",
+    "trainingId": "listening-10-medium",
+    "sentence": "A comprehensive digital supply chain tracking tool has been integrated across manufacturing operations this month.",
+    "translation": "本月份製造營運體系中已全面整合了一套全方位的數位供應鏈追蹤系統工具。",
+    "chunks": [
+      {
+        "text": "A comprehensive digital supply chain tool",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has been integrated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across manufacturing operations this month."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "系統已被整合導入，has been integrated 為現在完成被動式。"
+  },
+  {
+    "id": "listening-10-medium-14",
+    "trainingId": "listening-10-medium",
+    "sentence": "The manufacturing director optimizes component procurement cycles to maintain continuous assembly flow.",
+    "translation": "製造總監持續優化零組件採購週期，以維持生產組裝流程的不間斷順暢運作。",
+    "chunks": [
+      {
+        "text": "The manufacturing director",
+        "isTargetSlot": false
+      },
+      {
+        "text": "optimizes",
+        "isTargetSlot": true
+      },
+      {
+        "text": "component procurement cycles to maintain continuous assembly flow."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "optimizes 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-medium-15",
+    "trainingId": "listening-10-medium",
+    "sentence": "Finished automobile engines were tested under simulated extreme weather conditions before shipping authorization.",
+    "translation": "在核發出貨許可前，組裝完成的汽車發動機均在模擬極端氣候條件下接受了測試運轉。",
+    "chunks": [
+      {
+        "text": "Finished automobile engines",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were tested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "under simulated conditions before shipping authorization."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "引擎被測試，were tested 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-10-medium-16",
+    "trainingId": "listening-10-medium",
+    "sentence": "Rather than disposing of industrial metal scraps, the factory recycled aluminum shavings to minimize raw material waste.",
+    "translation": "工廠沒有直接報廢工業金屬廢料，而是回收鋁屑以最大程度減少原物料浪費。",
+    "chunks": [
+      {
+        "text": "Rather than disposing of metal scraps,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the factory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "recycled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "aluminum shavings to minimize waste."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "recycled (回收再利用) 為過去簡單式主動語態，對比 Rather than。"
+  },
+  {
+    "id": "listening-10-medium-17",
+    "trainingId": "listening-10-medium",
+    "sentence": "Calibration standards are verified twice weekly by precision instrumentation engineers to prevent measuring inaccuracies.",
+    "translation": "精密儀控工程師每週兩次查驗校準基準，以防範量測誤差失準。",
+    "chunks": [
+      {
+        "text": "Calibration standards",
+        "isTargetSlot": false
+      },
+      {
+        "text": "are verified",
+        "isTargetSlot": true
+      },
+      {
+        "text": "twice weekly by engineers to prevent inaccuracies."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "校準標準被查驗，are verified 為現在簡單被動式。"
+  },
+  {
+    "id": "listening-10-medium-18",
+    "trainingId": "listening-10-medium",
+    "sentence": "The quality manager is inspecting newly fabricated metal panels for structural micro-fractures under UV light.",
+    "translation": "品管經理正在紫外線燈光下檢查剛沖壓成型的金屬面板，檢測是否有細微的結構微裂紋。",
+    "chunks": [
+      {
+        "text": "The quality manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "is inspecting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "fabricated metal panels for micro-fractures under UV light."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "is inspecting 為現在進行式主動語態。"
+  },
+  {
+    "id": "listening-10-medium-19",
+    "trainingId": "listening-10-medium",
+    "sentence": "Safety emergency drills will be conducted across all fabrication workshops on Thursday afternoon.",
+    "translation": "工安緊急應變演練將於週四下午在所有的生產加工廠房全面進行。",
+    "chunks": [
+      {
+        "text": "Safety emergency drills",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be conducted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "across all fabrication workshops on Thursday afternoon."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "演習將被進行，will be conducted 為未來被動式。"
+  },
+  {
+    "id": "listening-10-medium-20",
+    "trainingId": "listening-10-medium",
+    "sentence": "Even though night shift operations were hindered by electrical brownouts, the production team achieved its target quota.",
+    "translation": "即便大夜班作業受到電壓偏低供電不穩的干擾，生產團隊依然達成了目標配額。",
+    "chunks": [
+      {
+        "text": "Even though operations were hindered by brownouts,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the production team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "achieved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its target quota."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "achieved (達成) 為過去簡單式主動語態，轉折 Even though。"
+  },
+  {
+    "id": "listening-10-medium-21",
+    "trainingId": "listening-10-medium",
+    "sentence": "Automated laser cutting tools have been reconfigured to accommodate thicker titanium alloy sheets.",
+    "translation": "自動雷射切割機具已重新設定配置，以適應厚度更厚的鈦合金板材加工。",
+    "chunks": [
+      {
+        "text": "Automated laser cutting tools",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been reconfigured",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to accommodate thicker titanium alloy sheets."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "機台已被重新配置，have been reconfigured 為現在完成被動式。"
+  },
+  {
+    "id": "listening-10-medium-22",
+    "trainingId": "listening-10-medium",
+    "sentence": "The warehouse foreman oversees logistics dispatching to coordinate container departures with vessel sailing times.",
+    "translation": "倉庫領班督導物流調度作業，以使貨櫃出車時間與貨輪開航船期完美銜接。",
+    "chunks": [
+      {
+        "text": "The warehouse foreman",
+        "isTargetSlot": false
+      },
+      {
+        "text": "oversees",
+        "isTargetSlot": true
+      },
+      {
+        "text": "logistics dispatching to coordinate container departures."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "oversees 為現在簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-medium-23",
+    "trainingId": "listening-10-medium",
+    "sentence": "Industrial ventilation fan blades were cleaned thoroughly during the scheduled weekend facility shutdown.",
+    "translation": "工業排風風扇葉片在排定的週末全廠停工檢修期間進行了徹底的清潔保養。",
+    "chunks": [
+      {
+        "text": "Industrial ventilation fan blades",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were cleaned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "thoroughly during the scheduled facility shutdown."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "葉片被清潔，were cleaned 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-10-medium-24",
+    "trainingId": "listening-10-medium",
+    "sentence": "In order to meet booming consumer electronics demand, the factory added an auxiliary overnight assembly shift.",
+    "translation": "為滿足消費性電子產品激增的市場需求，工廠增設了一班大夜間組裝輔助輪班班次。",
+    "chunks": [
+      {
+        "text": "In order to meet booming consumer electronics demand,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the factory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "added",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an auxiliary overnight assembly shift."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "added (增設) 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-medium-25",
+    "trainingId": "listening-10-medium",
+    "sentence": "Smart inventory sensors will be deployed throughout raw material holding bins by the engineering crew next month.",
+    "translation": "工程團隊下個月將在所有原物料儲存料倉中全面佈署智慧庫存感測儀器。",
+    "chunks": [
+      {
+        "text": "Smart inventory sensors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be deployed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "throughout raw material holding bins next month."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "感測器將被佈署，will be deployed 為未來被動式。"
+  },
+  {
+    "id": "listening-10-medium-26",
+    "trainingId": "listening-10-medium",
+    "sentence": "The chief production engineer resolved the microchip soldering flaw through precise thermal profiling adjustments.",
+    "translation": "首席製造工程師透過精確的熱分佈溫控調整，成功解決了微晶片焊接瑕疵問題。",
+    "chunks": [
+      {
+        "text": "The chief production engineer",
+        "isTargetSlot": false
+      },
+      {
+        "text": "resolved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the soldering flaw through precise adjustments."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "resolved 為過去簡單式主動語態。"
+  },
+  {
+    "id": "listening-10-medium-27",
+    "trainingId": "listening-10-medium",
+    "sentence": "Industrial ear muffs and steel-toed boots were issued to all temporary contract workers on their first morning.",
+    "translation": "所有約聘派遣工在報到第一天上午均獲發了工業級防音耳罩與鋼頭安全防護鞋。",
+    "chunks": [
+      {
+        "text": "Industrial ear muffs and steel-toed boots",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were issued",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to contract workers on their first morning."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "防護裝備被發放，were issued 為過去簡單被動式。"
+  },
+  {
+    "id": "listening-10-medium-28",
+    "trainingId": "listening-10-medium",
+    "sentence": "Although electricity tariffs surged during summer months, high-efficiency solar panel installations mitigated manufacturing costs.",
+    "translation": "儘管夏季月份工業電價大漲，高效能太陽能板發電裝置仍大幅緩解了製造電費成本。",
+    "chunks": [
+      {
+        "text": "Although electricity tariffs surged during summer,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "high-efficiency solar installations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "mitigated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "manufacturing costs."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "mitigated (緩解/減輕) 為過去簡單式主動語態，轉折 Although。"
+  },
+  {
+    "id": "listening-10-medium-29",
+    "trainingId": "listening-10-medium",
+    "sentence": "Manufacturing defect rates have been lowered to record historic minimums following six months of Kaizen process optimization.",
+    "translation": "在歷經六個月的持續改善（Kaizen）製程優化後，產品製造不良率已降至歷史新低紀錄。",
+    "chunks": [
+      {
+        "text": "Manufacturing defect rates",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been lowered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to record historic minimums following optimization."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "不良率已被降低，have been lowered 為現在完成被動式。"
+  },
+  {
+    "id": "listening-10-medium-30",
+    "trainingId": "listening-10-medium",
+    "sentence": "The manufacturing vice president will unveil a carbon-neutral manufacturing roadmap at the automotive supplier convention.",
+    "translation": "製造副總裁將在汽車零配件供應商大會上，揭曉公布碳中和綠色製造轉型路線圖。",
+    "chunks": [
+      {
+        "text": "The manufacturing vice president",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will unveil",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a carbon-neutral roadmap at the supplier convention."
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "will unveil 表未來發表，未來簡單式主動語態。"
+  }
+]
