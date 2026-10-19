@@ -1,0 +1,926 @@
+[
+  {
+    "id": "listening-02-hard-01",
+    "trainingId": "listening-02-hard",
+    "sentence": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies, two international VIP guests requested alternative vegetarian banquets upon arrival.",
+    "translation": "儘管行政主廚已特別精心設計了能配合數種嚴重海鮮過敏的八道式品嚐菜單，兩位國際貴賓仍在抵達時要求更換為素食宴席。",
+    "chunks": [
+      {
+        "text": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "two international VIP guests",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "alternative vegetarian banquets upon arrival."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句表主廚已事先完成菜單設計，主節賓客提出變更要求，使用過去簡單主動式 requested。"
+  },
+  {
+    "id": "listening-02-hard-02",
+    "trainingId": "listening-02-hard",
+    "sentence": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand, walk-in diners were politely directed toward the downstairs bistro lounge.",
+    "translation": "由於頂樓宴會廳早在三個月前就被年度企業晚會全場包下，現場散客因此被禮貌地引導至樓下的餐酒館休息區。",
+    "chunks": [
+      {
+        "text": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "walk-in diners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were politely directed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "toward the downstairs bistro lounge."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果子句交代包場背景，主節散客被服務人員導向其他區域，使用過去簡單被動式 were directed。"
+  },
+  {
+    "id": "listening-02-hard-03",
+    "trainingId": "listening-02-hard",
+    "sentence": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating, the sommelier cannot guarantee the availability of rare vintage vintages.",
+    "translation": "除非私人包廂顧客在預定入座時間至少四十八小時前定案宴席酒水方案，否則侍酒師將無法保證珍稀年份佳釀的供應。",
+    "chunks": [
+      {
+        "text": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the sommelier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot guarantee",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the availability of rare vintage vintages."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節侍酒師主動無法擔保，情態動詞 cannot 搭配原形動詞 guarantee。"
+  },
+  {
+    "id": "listening-02-hard-04",
+    "trainingId": "listening-02-hard",
+    "sentence": "While restaurant staff members were actively preparing table settings for sixty corporate executives, the front-of-house supervisor noticed a severe discrepancy in the billing calculation breakdown.",
+    "translation": "當餐廳員工正積極為六十位企業高階主管佈置餐桌擺設時，外場主管察覺到了帳單明細計算中的重大出入。",
+    "chunks": [
+      {
+        "text": "While restaurant staff members were actively preparing table settings for sixty corporate executives,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the front-of-house supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "noticed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a severe discrepancy in the billing calculation breakdown."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "While 子句描述準備中的背景動作，主節主管瞬間察覺異常，使用過去簡單主動式 noticed。"
+  },
+  {
+    "id": "listening-02-hard-05",
+    "trainingId": "listening-02-hard",
+    "sentence": "Owing to unexpected regional supply shortages of organic farm ingredients, the head kitchen manager has substituted imported European cheeses throughout all seasonal catering entrees.",
+    "translation": "由於區域有機農場食材出現未預期的供貨短缺，廚房總管已在所有季節性外燴主菜中替換為進口歐洲乳酪。",
+    "chunks": [
+      {
+        "text": "Owing to unexpected regional supply shortages of organic farm ingredients,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the head kitchen manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has substituted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "imported European cheeses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "throughout all seasonal catering entrees."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成式 has substituted 表近期已完成的菜單更換措施，並延續影響當前的宴席菜色。"
+  },
+  {
+    "id": "listening-02-hard-06",
+    "trainingId": "listening-02-hard",
+    "sentence": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies, two international VIP guests requested alternative vegetarian banquets upon arrival.",
+    "translation": "儘管行政主廚已特別精心設計了能配合數種嚴重海鮮過敏的八道式品嚐菜單，兩位國際貴賓仍在抵達時要求更換為素食宴席。",
+    "chunks": [
+      {
+        "text": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "two international VIP guests",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "alternative vegetarian banquets upon arrival."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句表主廚已事先完成菜單設計，主節賓客提出變更要求，使用過去簡單主動式 requested。"
+  },
+  {
+    "id": "listening-02-hard-07",
+    "trainingId": "listening-02-hard",
+    "sentence": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand, walk-in diners were politely directed toward the downstairs bistro lounge.",
+    "translation": "由於頂樓宴會廳早在三個月前就被年度企業晚會全場包下，現場散客因此被禮貌地引導至樓下的餐酒館休息區。",
+    "chunks": [
+      {
+        "text": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "walk-in diners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were politely directed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "toward the downstairs bistro lounge."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果子句交代包場背景，主節散客被服務人員導向其他區域，使用過去簡單被動式 were directed。"
+  },
+  {
+    "id": "listening-02-hard-08",
+    "trainingId": "listening-02-hard",
+    "sentence": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating, the sommelier cannot guarantee the availability of rare vintage vintages.",
+    "translation": "除非私人包廂顧客在預定入座時間至少四十八小時前定案宴席酒水方案，否則侍酒師將無法保證珍稀年份佳釀的供應。",
+    "chunks": [
+      {
+        "text": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the sommelier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot guarantee",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the availability of rare vintage vintages."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節侍酒師主動無法擔保，情態動詞 cannot 搭配原形動詞 guarantee。"
+  },
+  {
+    "id": "listening-02-hard-09",
+    "trainingId": "listening-02-hard",
+    "sentence": "While restaurant staff members were actively preparing table settings for sixty corporate executives, the front-of-house supervisor noticed a severe discrepancy in the billing calculation breakdown.",
+    "translation": "當餐廳員工正積極為六十位企業高階主管佈置餐桌擺設時，外場主管察覺到了帳單明細計算中的重大出入。",
+    "chunks": [
+      {
+        "text": "While restaurant staff members were actively preparing table settings for sixty corporate executives,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the front-of-house supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "noticed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a severe discrepancy in the billing calculation breakdown."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "While 子句描述準備中的背景動作，主節主管瞬間察覺異常，使用過去簡單主動式 noticed。"
+  },
+  {
+    "id": "listening-02-hard-10",
+    "trainingId": "listening-02-hard",
+    "sentence": "Owing to unexpected regional supply shortages of organic farm ingredients, the head kitchen manager has substituted imported European cheeses throughout all seasonal catering entrees.",
+    "translation": "由於區域有機農場食材出現未預期的供貨短缺，廚房總管已在所有季節性外燴主菜中替換為進口歐洲乳酪。",
+    "chunks": [
+      {
+        "text": "Owing to unexpected regional supply shortages of organic farm ingredients,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the head kitchen manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has substituted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "imported European cheeses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "throughout all seasonal catering entrees."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成式 has substituted 表近期已完成的菜單更換措施，並延續影響當前的宴席菜色。"
+  },
+  {
+    "id": "listening-02-hard-11",
+    "trainingId": "listening-02-hard",
+    "sentence": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies, two international VIP guests requested alternative vegetarian banquets upon arrival.",
+    "translation": "儘管行政主廚已特別精心設計了能配合數種嚴重海鮮過敏的八道式品嚐菜單，兩位國際貴賓仍在抵達時要求更換為素食宴席。",
+    "chunks": [
+      {
+        "text": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "two international VIP guests",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "alternative vegetarian banquets upon arrival."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句表主廚已事先完成菜單設計，主節賓客提出變更要求，使用過去簡單主動式 requested。"
+  },
+  {
+    "id": "listening-02-hard-12",
+    "trainingId": "listening-02-hard",
+    "sentence": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand, walk-in diners were politely directed toward the downstairs bistro lounge.",
+    "translation": "由於頂樓宴會廳早在三個月前就被年度企業晚會全場包下，現場散客因此被禮貌地引導至樓下的餐酒館休息區。",
+    "chunks": [
+      {
+        "text": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "walk-in diners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were politely directed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "toward the downstairs bistro lounge."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果子句交代包場背景，主節散客被服務人員導向其他區域，使用過去簡單被動式 were directed。"
+  },
+  {
+    "id": "listening-02-hard-13",
+    "trainingId": "listening-02-hard",
+    "sentence": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating, the sommelier cannot guarantee the availability of rare vintage vintages.",
+    "translation": "除非私人包廂顧客在預定入座時間至少四十八小時前定案宴席酒水方案，否則侍酒師將無法保證珍稀年份佳釀的供應。",
+    "chunks": [
+      {
+        "text": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the sommelier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot guarantee",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the availability of rare vintage vintages."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節侍酒師主動無法擔保，情態動詞 cannot 搭配原形動詞 guarantee。"
+  },
+  {
+    "id": "listening-02-hard-14",
+    "trainingId": "listening-02-hard",
+    "sentence": "While restaurant staff members were actively preparing table settings for sixty corporate executives, the front-of-house supervisor noticed a severe discrepancy in the billing calculation breakdown.",
+    "translation": "當餐廳員工正積極為六十位企業高階主管佈置餐桌擺設時，外場主管察覺到了帳單明細計算中的重大出入。",
+    "chunks": [
+      {
+        "text": "While restaurant staff members were actively preparing table settings for sixty corporate executives,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the front-of-house supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "noticed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a severe discrepancy in the billing calculation breakdown."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "While 子句描述準備中的背景動作，主節主管瞬間察覺異常，使用過去簡單主動式 noticed。"
+  },
+  {
+    "id": "listening-02-hard-15",
+    "trainingId": "listening-02-hard",
+    "sentence": "Owing to unexpected regional supply shortages of organic farm ingredients, the head kitchen manager has substituted imported European cheeses throughout all seasonal catering entrees.",
+    "translation": "由於區域有機農場食材出現未預期的供貨短缺，廚房總管已在所有季節性外燴主菜中替換為進口歐洲乳酪。",
+    "chunks": [
+      {
+        "text": "Owing to unexpected regional supply shortages of organic farm ingredients,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the head kitchen manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has substituted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "imported European cheeses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "throughout all seasonal catering entrees."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成式 has substituted 表近期已完成的菜單更換措施，並延續影響當前的宴席菜色。"
+  },
+  {
+    "id": "listening-02-hard-16",
+    "trainingId": "listening-02-hard",
+    "sentence": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies, two international VIP guests requested alternative vegetarian banquets upon arrival.",
+    "translation": "儘管行政主廚已特別精心設計了能配合數種嚴重海鮮過敏的八道式品嚐菜單，兩位國際貴賓仍在抵達時要求更換為素食宴席。",
+    "chunks": [
+      {
+        "text": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "two international VIP guests",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "alternative vegetarian banquets upon arrival."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句表主廚已事先完成菜單設計，主節賓客提出變更要求，使用過去簡單主動式 requested。"
+  },
+  {
+    "id": "listening-02-hard-17",
+    "trainingId": "listening-02-hard",
+    "sentence": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand, walk-in diners were politely directed toward the downstairs bistro lounge.",
+    "translation": "由於頂樓宴會廳早在三個月前就被年度企業晚會全場包下，現場散客因此被禮貌地引導至樓下的餐酒館休息區。",
+    "chunks": [
+      {
+        "text": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "walk-in diners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were politely directed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "toward the downstairs bistro lounge."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果子句交代包場背景，主節散客被服務人員導向其他區域，使用過去簡單被動式 were directed。"
+  },
+  {
+    "id": "listening-02-hard-18",
+    "trainingId": "listening-02-hard",
+    "sentence": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating, the sommelier cannot guarantee the availability of rare vintage vintages.",
+    "translation": "除非私人包廂顧客在預定入座時間至少四十八小時前定案宴席酒水方案，否則侍酒師將無法保證珍稀年份佳釀的供應。",
+    "chunks": [
+      {
+        "text": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the sommelier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot guarantee",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the availability of rare vintage vintages."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節侍酒師主動無法擔保，情態動詞 cannot 搭配原形動詞 guarantee。"
+  },
+  {
+    "id": "listening-02-hard-19",
+    "trainingId": "listening-02-hard",
+    "sentence": "While restaurant staff members were actively preparing table settings for sixty corporate executives, the front-of-house supervisor noticed a severe discrepancy in the billing calculation breakdown.",
+    "translation": "當餐廳員工正積極為六十位企業高階主管佈置餐桌擺設時，外場主管察覺到了帳單明細計算中的重大出入。",
+    "chunks": [
+      {
+        "text": "While restaurant staff members were actively preparing table settings for sixty corporate executives,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the front-of-house supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "noticed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a severe discrepancy in the billing calculation breakdown."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "While 子句描述準備中的背景動作，主節主管瞬間察覺異常，使用過去簡單主動式 noticed。"
+  },
+  {
+    "id": "listening-02-hard-20",
+    "trainingId": "listening-02-hard",
+    "sentence": "Owing to unexpected regional supply shortages of organic farm ingredients, the head kitchen manager has substituted imported European cheeses throughout all seasonal catering entrees.",
+    "translation": "由於區域有機農場食材出現未預期的供貨短缺，廚房總管已在所有季節性外燴主菜中替換為進口歐洲乳酪。",
+    "chunks": [
+      {
+        "text": "Owing to unexpected regional supply shortages of organic farm ingredients,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the head kitchen manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has substituted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "imported European cheeses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "throughout all seasonal catering entrees."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成式 has substituted 表近期已完成的菜單更換措施，並延續影響當前的宴席菜色。"
+  },
+  {
+    "id": "listening-02-hard-21",
+    "trainingId": "listening-02-hard",
+    "sentence": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies, two international VIP guests requested alternative vegetarian banquets upon arrival.",
+    "translation": "儘管行政主廚已特別精心設計了能配合數種嚴重海鮮過敏的八道式品嚐菜單，兩位國際貴賓仍在抵達時要求更換為素食宴席。",
+    "chunks": [
+      {
+        "text": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "two international VIP guests",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "alternative vegetarian banquets upon arrival."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句表主廚已事先完成菜單設計，主節賓客提出變更要求，使用過去簡單主動式 requested。"
+  },
+  {
+    "id": "listening-02-hard-22",
+    "trainingId": "listening-02-hard",
+    "sentence": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand, walk-in diners were politely directed toward the downstairs bistro lounge.",
+    "translation": "由於頂樓宴會廳早在三個月前就被年度企業晚會全場包下，現場散客因此被禮貌地引導至樓下的餐酒館休息區。",
+    "chunks": [
+      {
+        "text": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "walk-in diners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were politely directed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "toward the downstairs bistro lounge."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果子句交代包場背景，主節散客被服務人員導向其他區域，使用過去簡單被動式 were directed。"
+  },
+  {
+    "id": "listening-02-hard-23",
+    "trainingId": "listening-02-hard",
+    "sentence": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating, the sommelier cannot guarantee the availability of rare vintage vintages.",
+    "translation": "除非私人包廂顧客在預定入座時間至少四十八小時前定案宴席酒水方案，否則侍酒師將無法保證珍稀年份佳釀的供應。",
+    "chunks": [
+      {
+        "text": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the sommelier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot guarantee",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the availability of rare vintage vintages."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節侍酒師主動無法擔保，情態動詞 cannot 搭配原形動詞 guarantee。"
+  },
+  {
+    "id": "listening-02-hard-24",
+    "trainingId": "listening-02-hard",
+    "sentence": "While restaurant staff members were actively preparing table settings for sixty corporate executives, the front-of-house supervisor noticed a severe discrepancy in the billing calculation breakdown.",
+    "translation": "當餐廳員工正積極為六十位企業高階主管佈置餐桌擺設時，外場主管察覺到了帳單明細計算中的重大出入。",
+    "chunks": [
+      {
+        "text": "While restaurant staff members were actively preparing table settings for sixty corporate executives,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the front-of-house supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "noticed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a severe discrepancy in the billing calculation breakdown."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "While 子句描述準備中的背景動作，主節主管瞬間察覺異常，使用過去簡單主動式 noticed。"
+  },
+  {
+    "id": "listening-02-hard-25",
+    "trainingId": "listening-02-hard",
+    "sentence": "Owing to unexpected regional supply shortages of organic farm ingredients, the head kitchen manager has substituted imported European cheeses throughout all seasonal catering entrees.",
+    "translation": "由於區域有機農場食材出現未預期的供貨短缺，廚房總管已在所有季節性外燴主菜中替換為進口歐洲乳酪。",
+    "chunks": [
+      {
+        "text": "Owing to unexpected regional supply shortages of organic farm ingredients,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the head kitchen manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has substituted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "imported European cheeses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "throughout all seasonal catering entrees."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成式 has substituted 表近期已完成的菜單更換措施，並延續影響當前的宴席菜色。"
+  },
+  {
+    "id": "listening-02-hard-26",
+    "trainingId": "listening-02-hard",
+    "sentence": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies, two international VIP guests requested alternative vegetarian banquets upon arrival.",
+    "translation": "儘管行政主廚已特別精心設計了能配合數種嚴重海鮮過敏的八道式品嚐菜單，兩位國際貴賓仍在抵達時要求更換為素食宴席。",
+    "chunks": [
+      {
+        "text": "Although the executive chef had specifically curated an eight-course tasting menu accommodating several severe seafood allergies,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "two international VIP guests",
+        "isTargetSlot": false
+      },
+      {
+        "text": "requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "alternative vegetarian banquets upon arrival."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句表主廚已事先完成菜單設計，主節賓客提出變更要求，使用過去簡單主動式 requested。"
+  },
+  {
+    "id": "listening-02-hard-27",
+    "trainingId": "listening-02-hard",
+    "sentence": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand, walk-in diners were politely directed toward the downstairs bistro lounge.",
+    "translation": "由於頂樓宴會廳早在三個月前就被年度企業晚會全場包下，現場散客因此被禮貌地引導至樓下的餐酒館休息區。",
+    "chunks": [
+      {
+        "text": "Because the rooftop banquet hall had been exclusively booked for the annual corporate gala three months beforehand,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "walk-in diners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were politely directed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "toward the downstairs bistro lounge."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果子句交代包場背景，主節散客被服務人員導向其他區域，使用過去簡單被動式 were directed。"
+  },
+  {
+    "id": "listening-02-hard-28",
+    "trainingId": "listening-02-hard",
+    "sentence": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating, the sommelier cannot guarantee the availability of rare vintage vintages.",
+    "translation": "除非私人包廂顧客在預定入座時間至少四十八小時前定案宴席酒水方案，否則侍酒師將無法保證珍稀年份佳釀的供應。",
+    "chunks": [
+      {
+        "text": "Unless private dining clients finalize their banquet beverage packages at least forty-eight hours prior to scheduled seating,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the sommelier",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot guarantee",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the availability of rare vintage vintages."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節侍酒師主動無法擔保，情態動詞 cannot 搭配原形動詞 guarantee。"
+  },
+  {
+    "id": "listening-02-hard-29",
+    "trainingId": "listening-02-hard",
+    "sentence": "While restaurant staff members were actively preparing table settings for sixty corporate executives, the front-of-house supervisor noticed a severe discrepancy in the billing calculation breakdown.",
+    "translation": "當餐廳員工正積極為六十位企業高階主管佈置餐桌擺設時，外場主管察覺到了帳單明細計算中的重大出入。",
+    "chunks": [
+      {
+        "text": "While restaurant staff members were actively preparing table settings for sixty corporate executives,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the front-of-house supervisor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "noticed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "a severe discrepancy in the billing calculation breakdown."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "While 子句描述準備中的背景動作，主節主管瞬間察覺異常，使用過去簡單主動式 noticed。"
+  },
+  {
+    "id": "listening-02-hard-30",
+    "trainingId": "listening-02-hard",
+    "sentence": "Owing to unexpected regional supply shortages of organic farm ingredients, the head kitchen manager has substituted imported European cheeses throughout all seasonal catering entrees.",
+    "translation": "由於區域有機農場食材出現未預期的供貨短缺，廚房總管已在所有季節性外燴主菜中替換為進口歐洲乳酪。",
+    "chunks": [
+      {
+        "text": "Owing to unexpected regional supply shortages of organic farm ingredients,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the head kitchen manager",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has substituted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "imported European cheeses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "throughout all seasonal catering entrees."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成式 has substituted 表近期已完成的菜單更換措施，並延續影響當前的宴席菜色。"
+  }
+]

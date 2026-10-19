@@ -1,0 +1,902 @@
+[
+  {
+    "id": "listening-12-hard-01",
+    "trainingId": "listening-12-hard",
+    "sentence": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet, sophisticated cyber intrusions breached edge database servers during last night's automated backup.",
+    "translation": "儘管企業網路工程師已在企業內部網路全面部署了多層防火牆協定，精密的網路入侵仍於昨夜的自動備份作業期間攻破了邊緣資料庫伺服器。",
+    "chunks": [
+      {
+        "text": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sophisticated cyber intrusions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "breached",
+        "isTargetSlot": true
+      },
+      {
+        "text": "edge database servers during last night's automated backup."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had implemented，主節網路入侵發動攻擊並攻破防線，動詞 breached 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-12-hard-02",
+    "trainingId": "listening-12-hard",
+    "sentence": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches, automated load-balancing clusters will disconnect all active user sessions without prior notification.",
+    "translation": "除非雲端基礎架構管理員在部署系統修補程式前驗證加密存取金鑰，否則自動化負載平衡叢集將在無事前通知的情況下中斷所有活躍的使用者連線。",
+    "chunks": [
+      {
+        "text": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "automated load-balancing clusters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will disconnect",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all active user sessions without prior notification."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節叢集將執行中斷連線，使用未來簡單主動式 will disconnect。"
+  },
+  {
+    "id": "listening-12-hard-03",
+    "trainingId": "listening-12-hard",
+    "sentence": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox, information security auditors were conducting rigorous vulnerability scans on production application programming interfaces.",
+    "translation": "當軟體研發工程師在測試沙盒內重構舊版資料庫查詢演算法時，資安稽核員正在正式環境應用程式介面（API）上執行嚴格的漏洞掃描。",
+    "chunks": [
+      {
+        "text": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "information security auditors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were conducting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "rigorous vulnerability scans on production application programming interfaces."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節稽查人員執行掃描動作，使用過去進行主動式 were conducting。"
+  },
+  {
+    "id": "listening-12-hard-04",
+    "trainingId": "listening-12-hard",
+    "sentence": "Because critical software dependencies had introduced severe remote code execution vulnerabilities, the cybersecurity incident response team has quarantined three core web service containers indefinitely.",
+    "translation": "由於關鍵軟體相依套件引入了嚴重的遠端程式碼執行漏洞，網路資安緊急應變團隊已無限期隔離了三個核心網路服務容器。",
+    "chunks": [
+      {
+        "text": "Because critical software dependencies had introduced severe remote code execution vulnerabilities,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the cybersecurity incident response team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has quarantined",
+        "isTargetSlot": true
+      },
+      {
+        "text": "three core web service containers indefinitely."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，資安團隊完成隔離處置並持續維持防護，使用現在完成主動式 has quarantined。"
+  },
+  {
+    "id": "listening-12-hard-05",
+    "trainingId": "listening-12-hard",
+    "sentence": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred, enterprise cloud services would not have suffered catastrophic operational downtimes.",
+    "translation": "倘若資料中心設施主管在區域電網發生故障前就安裝了備援柴油發電機，企業雲端服務當初就不會遭遇災難性的營運停機中斷了。",
+    "chunks": [
+      {
+        "text": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enterprise cloud services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would not have suffered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "catastrophic operational downtimes."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... installed），主節主詞 services 承受損失，否定形式使用 would not have suffered。"
+  },
+  {
+    "id": "listening-12-hard-06",
+    "trainingId": "listening-12-hard",
+    "sentence": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet, sophisticated cyber intrusions breached edge database servers during last night's automated backup.",
+    "translation": "儘管企業網路工程師已在企業內部網路全面部署了多層防火牆協定，精密的網路入侵仍於昨夜的自動備份作業期間攻破了邊緣資料庫伺服器。",
+    "chunks": [
+      {
+        "text": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sophisticated cyber intrusions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "breached",
+        "isTargetSlot": true
+      },
+      {
+        "text": "edge database servers during last night's automated backup."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had implemented，主節網路入侵發動攻擊並攻破防線，動詞 breached 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-12-hard-07",
+    "trainingId": "listening-12-hard",
+    "sentence": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches, automated load-balancing clusters will disconnect all active user sessions without prior notification.",
+    "translation": "除非雲端基礎架構管理員在部署系統修補程式前驗證加密存取金鑰，否則自動化負載平衡叢集將在無事前通知的情況下中斷所有活躍的使用者連線。",
+    "chunks": [
+      {
+        "text": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "automated load-balancing clusters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will disconnect",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all active user sessions without prior notification."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節叢集將執行中斷連線，使用未來簡單主動式 will disconnect。"
+  },
+  {
+    "id": "listening-12-hard-08",
+    "trainingId": "listening-12-hard",
+    "sentence": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox, information security auditors were conducting rigorous vulnerability scans on production application programming interfaces.",
+    "translation": "當軟體研發工程師在測試沙盒內重構舊版資料庫查詢演算法時，資安稽核員正在正式環境應用程式介面（API）上執行嚴格的漏洞掃描。",
+    "chunks": [
+      {
+        "text": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "information security auditors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were conducting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "rigorous vulnerability scans on production application programming interfaces."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節稽查人員執行掃描動作，使用過去進行主動式 were conducting。"
+  },
+  {
+    "id": "listening-12-hard-09",
+    "trainingId": "listening-12-hard",
+    "sentence": "Because critical software dependencies had introduced severe remote code execution vulnerabilities, the cybersecurity incident response team has quarantined three core web service containers indefinitely.",
+    "translation": "由於關鍵軟體相依套件引入了嚴重的遠端程式碼執行漏洞，網路資安緊急應變團隊已無限期隔離了三個核心網路服務容器。",
+    "chunks": [
+      {
+        "text": "Because critical software dependencies had introduced severe remote code execution vulnerabilities,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the cybersecurity incident response team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has quarantined",
+        "isTargetSlot": true
+      },
+      {
+        "text": "three core web service containers indefinitely."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，資安團隊完成隔離處置並持續維持防護，使用現在完成主動式 has quarantined。"
+  },
+  {
+    "id": "listening-12-hard-10",
+    "trainingId": "listening-12-hard",
+    "sentence": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred, enterprise cloud services would not have suffered catastrophic operational downtimes.",
+    "translation": "倘若資料中心設施主管在區域電網發生故障前就安裝了備援柴油發電機，企業雲端服務當初就不會遭遇災難性的營運停機中斷了。",
+    "chunks": [
+      {
+        "text": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enterprise cloud services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would not have suffered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "catastrophic operational downtimes."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... installed），主節主詞 services 承受損失，否定形式使用 would not have suffered。"
+  },
+  {
+    "id": "listening-12-hard-11",
+    "trainingId": "listening-12-hard",
+    "sentence": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet, sophisticated cyber intrusions breached edge database servers during last night's automated backup.",
+    "translation": "儘管企業網路工程師已在企業內部網路全面部署了多層防火牆協定，精密的網路入侵仍於昨夜的自動備份作業期間攻破了邊緣資料庫伺服器。",
+    "chunks": [
+      {
+        "text": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sophisticated cyber intrusions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "breached",
+        "isTargetSlot": true
+      },
+      {
+        "text": "edge database servers during last night's automated backup."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had implemented，主節網路入侵發動攻擊並攻破防線，動詞 breached 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-12-hard-12",
+    "trainingId": "listening-12-hard",
+    "sentence": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches, automated load-balancing clusters will disconnect all active user sessions without prior notification.",
+    "translation": "除非雲端基礎架構管理員在部署系統修補程式前驗證加密存取金鑰，否則自動化負載平衡叢集將在無事前通知的情況下中斷所有活躍的使用者連線。",
+    "chunks": [
+      {
+        "text": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "automated load-balancing clusters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will disconnect",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all active user sessions without prior notification."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節叢集將執行中斷連線，使用未來簡單主動式 will disconnect。"
+  },
+  {
+    "id": "listening-12-hard-13",
+    "trainingId": "listening-12-hard",
+    "sentence": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox, information security auditors were conducting rigorous vulnerability scans on production application programming interfaces.",
+    "translation": "當軟體研發工程師在測試沙盒內重構舊版資料庫查詢演算法時，資安稽核員正在正式環境應用程式介面（API）上執行嚴格的漏洞掃描。",
+    "chunks": [
+      {
+        "text": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "information security auditors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were conducting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "rigorous vulnerability scans on production application programming interfaces."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節稽查人員執行掃描動作，使用過去進行主動式 were conducting。"
+  },
+  {
+    "id": "listening-12-hard-14",
+    "trainingId": "listening-12-hard",
+    "sentence": "Because critical software dependencies had introduced severe remote code execution vulnerabilities, the cybersecurity incident response team has quarantined three core web service containers indefinitely.",
+    "translation": "由於關鍵軟體相依套件引入了嚴重的遠端程式碼執行漏洞，網路資安緊急應變團隊已無限期隔離了三個核心網路服務容器。",
+    "chunks": [
+      {
+        "text": "Because critical software dependencies had introduced severe remote code execution vulnerabilities,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the cybersecurity incident response team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has quarantined",
+        "isTargetSlot": true
+      },
+      {
+        "text": "three core web service containers indefinitely."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，資安團隊完成隔離處置並持續維持防護，使用現在完成主動式 has quarantined。"
+  },
+  {
+    "id": "listening-12-hard-15",
+    "trainingId": "listening-12-hard",
+    "sentence": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred, enterprise cloud services would not have suffered catastrophic operational downtimes.",
+    "translation": "倘若資料中心設施主管在區域電網發生故障前就安裝了備援柴油發電機，企業雲端服務當初就不會遭遇災難性的營運停機中斷了。",
+    "chunks": [
+      {
+        "text": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enterprise cloud services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would not have suffered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "catastrophic operational downtimes."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... installed），主節主詞 services 承受損失，否定形式使用 would not have suffered。"
+  },
+  {
+    "id": "listening-12-hard-16",
+    "trainingId": "listening-12-hard",
+    "sentence": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet, sophisticated cyber intrusions breached edge database servers during last night's automated backup.",
+    "translation": "儘管企業網路工程師已在企業內部網路全面部署了多層防火牆協定，精密的網路入侵仍於昨夜的自動備份作業期間攻破了邊緣資料庫伺服器。",
+    "chunks": [
+      {
+        "text": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sophisticated cyber intrusions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "breached",
+        "isTargetSlot": true
+      },
+      {
+        "text": "edge database servers during last night's automated backup."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had implemented，主節網路入侵發動攻擊並攻破防線，動詞 breached 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-12-hard-17",
+    "trainingId": "listening-12-hard",
+    "sentence": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches, automated load-balancing clusters will disconnect all active user sessions without prior notification.",
+    "translation": "除非雲端基礎架構管理員在部署系統修補程式前驗證加密存取金鑰，否則自動化負載平衡叢集將在無事前通知的情況下中斷所有活躍的使用者連線。",
+    "chunks": [
+      {
+        "text": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "automated load-balancing clusters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will disconnect",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all active user sessions without prior notification."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節叢集將執行中斷連線，使用未來簡單主動式 will disconnect。"
+  },
+  {
+    "id": "listening-12-hard-18",
+    "trainingId": "listening-12-hard",
+    "sentence": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox, information security auditors were conducting rigorous vulnerability scans on production application programming interfaces.",
+    "translation": "當軟體研發工程師在測試沙盒內重構舊版資料庫查詢演算法時，資安稽核員正在正式環境應用程式介面（API）上執行嚴格的漏洞掃描。",
+    "chunks": [
+      {
+        "text": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "information security auditors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were conducting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "rigorous vulnerability scans on production application programming interfaces."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節稽查人員執行掃描動作，使用過去進行主動式 were conducting。"
+  },
+  {
+    "id": "listening-12-hard-19",
+    "trainingId": "listening-12-hard",
+    "sentence": "Because critical software dependencies had introduced severe remote code execution vulnerabilities, the cybersecurity incident response team has quarantined three core web service containers indefinitely.",
+    "translation": "由於關鍵軟體相依套件引入了嚴重的遠端程式碼執行漏洞，網路資安緊急應變團隊已無限期隔離了三個核心網路服務容器。",
+    "chunks": [
+      {
+        "text": "Because critical software dependencies had introduced severe remote code execution vulnerabilities,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the cybersecurity incident response team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has quarantined",
+        "isTargetSlot": true
+      },
+      {
+        "text": "three core web service containers indefinitely."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，資安團隊完成隔離處置並持續維持防護，使用現在完成主動式 has quarantined。"
+  },
+  {
+    "id": "listening-12-hard-20",
+    "trainingId": "listening-12-hard",
+    "sentence": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred, enterprise cloud services would not have suffered catastrophic operational downtimes.",
+    "translation": "倘若資料中心設施主管在區域電網發生故障前就安裝了備援柴油發電機，企業雲端服務當初就不會遭遇災難性的營運停機中斷了。",
+    "chunks": [
+      {
+        "text": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enterprise cloud services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would not have suffered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "catastrophic operational downtimes."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... installed），主節主詞 services 承受損失，否定形式使用 would not have suffered。"
+  },
+  {
+    "id": "listening-12-hard-21",
+    "trainingId": "listening-12-hard",
+    "sentence": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet, sophisticated cyber intrusions breached edge database servers during last night's automated backup.",
+    "translation": "儘管企業網路工程師已在企業內部網路全面部署了多層防火牆協定，精密的網路入侵仍於昨夜的自動備份作業期間攻破了邊緣資料庫伺服器。",
+    "chunks": [
+      {
+        "text": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sophisticated cyber intrusions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "breached",
+        "isTargetSlot": true
+      },
+      {
+        "text": "edge database servers during last night's automated backup."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had implemented，主節網路入侵發動攻擊並攻破防線，動詞 breached 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-12-hard-22",
+    "trainingId": "listening-12-hard",
+    "sentence": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches, automated load-balancing clusters will disconnect all active user sessions without prior notification.",
+    "translation": "除非雲端基礎架構管理員在部署系統修補程式前驗證加密存取金鑰，否則自動化負載平衡叢集將在無事前通知的情況下中斷所有活躍的使用者連線。",
+    "chunks": [
+      {
+        "text": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "automated load-balancing clusters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will disconnect",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all active user sessions without prior notification."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節叢集將執行中斷連線，使用未來簡單主動式 will disconnect。"
+  },
+  {
+    "id": "listening-12-hard-23",
+    "trainingId": "listening-12-hard",
+    "sentence": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox, information security auditors were conducting rigorous vulnerability scans on production application programming interfaces.",
+    "translation": "當軟體研發工程師在測試沙盒內重構舊版資料庫查詢演算法時，資安稽核員正在正式環境應用程式介面（API）上執行嚴格的漏洞掃描。",
+    "chunks": [
+      {
+        "text": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "information security auditors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were conducting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "rigorous vulnerability scans on production application programming interfaces."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節稽查人員執行掃描動作，使用過去進行主動式 were conducting。"
+  },
+  {
+    "id": "listening-12-hard-24",
+    "trainingId": "listening-12-hard",
+    "sentence": "Because critical software dependencies had introduced severe remote code execution vulnerabilities, the cybersecurity incident response team has quarantined three core web service containers indefinitely.",
+    "translation": "由於關鍵軟體相依套件引入了嚴重的遠端程式碼執行漏洞，網路資安緊急應變團隊已無限期隔離了三個核心網路服務容器。",
+    "chunks": [
+      {
+        "text": "Because critical software dependencies had introduced severe remote code execution vulnerabilities,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the cybersecurity incident response team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has quarantined",
+        "isTargetSlot": true
+      },
+      {
+        "text": "three core web service containers indefinitely."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，資安團隊完成隔離處置並持續維持防護，使用現在完成主動式 has quarantined。"
+  },
+  {
+    "id": "listening-12-hard-25",
+    "trainingId": "listening-12-hard",
+    "sentence": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred, enterprise cloud services would not have suffered catastrophic operational downtimes.",
+    "translation": "倘若資料中心設施主管在區域電網發生故障前就安裝了備援柴油發電機，企業雲端服務當初就不會遭遇災難性的營運停機中斷了。",
+    "chunks": [
+      {
+        "text": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enterprise cloud services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would not have suffered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "catastrophic operational downtimes."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... installed），主節主詞 services 承受損失，否定形式使用 would not have suffered。"
+  },
+  {
+    "id": "listening-12-hard-26",
+    "trainingId": "listening-12-hard",
+    "sentence": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet, sophisticated cyber intrusions breached edge database servers during last night's automated backup.",
+    "translation": "儘管企業網路工程師已在企業內部網路全面部署了多層防火牆協定，精密的網路入侵仍於昨夜的自動備份作業期間攻破了邊緣資料庫伺服器。",
+    "chunks": [
+      {
+        "text": "Although enterprise network engineers had implemented multi-layered firewall protocols throughout the corporate intranet,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "sophisticated cyber intrusions",
+        "isTargetSlot": false
+      },
+      {
+        "text": "breached",
+        "isTargetSlot": true
+      },
+      {
+        "text": "edge database servers during last night's automated backup."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had implemented，主節網路入侵發動攻擊並攻破防線，動詞 breached 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-12-hard-27",
+    "trainingId": "listening-12-hard",
+    "sentence": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches, automated load-balancing clusters will disconnect all active user sessions without prior notification.",
+    "translation": "除非雲端基礎架構管理員在部署系統修補程式前驗證加密存取金鑰，否則自動化負載平衡叢集將在無事前通知的情況下中斷所有活躍的使用者連線。",
+    "chunks": [
+      {
+        "text": "Unless cloud infrastructure administrators verify cryptographic access keys prior to deploying system patches,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "automated load-balancing clusters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will disconnect",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all active user sessions without prior notification."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節叢集將執行中斷連線，使用未來簡單主動式 will disconnect。"
+  },
+  {
+    "id": "listening-12-hard-28",
+    "trainingId": "listening-12-hard",
+    "sentence": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox, information security auditors were conducting rigorous vulnerability scans on production application programming interfaces.",
+    "translation": "當軟體研發工程師在測試沙盒內重構舊版資料庫查詢演算法時，資安稽核員正在正式環境應用程式介面（API）上執行嚴格的漏洞掃描。",
+    "chunks": [
+      {
+        "text": "While software development engineers were refactoring legacy database query algorithms inside the test sandbox,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "information security auditors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were conducting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "rigorous vulnerability scans on production application programming interfaces."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節稽查人員執行掃描動作，使用過去進行主動式 were conducting。"
+  },
+  {
+    "id": "listening-12-hard-29",
+    "trainingId": "listening-12-hard",
+    "sentence": "Because critical software dependencies had introduced severe remote code execution vulnerabilities, the cybersecurity incident response team has quarantined three core web service containers indefinitely.",
+    "translation": "由於關鍵軟體相依套件引入了嚴重的遠端程式碼執行漏洞，網路資安緊急應變團隊已無限期隔離了三個核心網路服務容器。",
+    "chunks": [
+      {
+        "text": "Because critical software dependencies had introduced severe remote code execution vulnerabilities,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the cybersecurity incident response team",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has quarantined",
+        "isTargetSlot": true
+      },
+      {
+        "text": "three core web service containers indefinitely."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，資安團隊完成隔離處置並持續維持防護，使用現在完成主動式 has quarantined。"
+  },
+  {
+    "id": "listening-12-hard-30",
+    "trainingId": "listening-12-hard",
+    "sentence": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred, enterprise cloud services would not have suffered catastrophic operational downtimes.",
+    "translation": "倘若資料中心設施主管在區域電網發生故障前就安裝了備援柴油發電機，企業雲端服務當初就不會遭遇災難性的營運停機中斷了。",
+    "chunks": [
+      {
+        "text": "Had data center facility supervisors installed redundant diesel generators before regional power grid failures occurred,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "enterprise cloud services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would not have suffered",
+        "isTargetSlot": true
+      },
+      {
+        "text": "catastrophic operational downtimes."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... installed），主節主詞 services 承受損失，否定形式使用 would not have suffered。"
+  }
+]

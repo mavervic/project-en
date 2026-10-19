@@ -36,6 +36,21 @@ import corporateDevMediumQuestions from './medium/11-corporate-development.json'
 import technicalAreasMediumQuestions from './medium/12-technical-areas.json';
 import financingBudgetingMediumQuestions from './medium/13-financing-budgeting.json';
 
+// Hard tier question datasets
+import travelHardQuestions from './hard/01-travel.json';
+import diningOutHardQuestions from './hard/02-dining-out.json';
+import entertainmentHardQuestions from './hard/03-entertainment.json';
+import housingHardQuestions from './hard/04-housing.json';
+import purchasingHardQuestions from './hard/05-purchasing.json';
+import personnelHardQuestions from './hard/06-personnel.json';
+import officesHardQuestions from './hard/07-offices.json';
+import healthHardQuestions from './hard/08-health.json';
+import generalBusinessHardQuestions from './hard/09-general-business.json';
+import manufacturingHardQuestions from './hard/10-manufacturing.json';
+import corporateDevHardQuestions from './hard/11-corporate-development.json';
+import technicalAreasHardQuestions from './hard/12-technical-areas.json';
+import financingBudgetingHardQuestions from './hard/13-financing-budgeting.json';
+
 export const TOEIC_LISTENING_EASY_UNITS: TrainingUnitMeta[] = [
   {
     trainingId: 'listening-01-easy',
@@ -224,9 +239,104 @@ export const TOEIC_LISTENING_MEDIUM_UNITS: TrainingUnitMeta[] = [
   },
 ];
 
+export const TOEIC_LISTENING_HARD_UNITS: TrainingUnitMeta[] = [
+  {
+    trainingId: 'listening-01-hard',
+    title: 'Travel (Hard)',
+    unitNumber: 27,
+    difficulty: 'Hard' as const,
+    tags: ['高階差旅', '突發改票', '跨國轉機'],
+  },
+  {
+    trainingId: 'listening-02-hard',
+    title: 'Dining out (Hard)',
+    unitNumber: 28,
+    difficulty: 'Hard' as const,
+    tags: ['高規格宴請', '食材過敏應變', '預約協調'],
+  },
+  {
+    trainingId: 'listening-03-hard',
+    title: 'Entertainment (Hard)',
+    unitNumber: 29,
+    difficulty: 'Hard' as const,
+    tags: ['文化外交', '大型展演贊助', '文資保存'],
+  },
+  {
+    trainingId: 'listening-04-hard',
+    title: 'Housing (Hard)',
+    unitNumber: 30,
+    difficulty: 'Hard' as const,
+    tags: ['商辦長期租約', '物業工程查驗', '違約終止條款'],
+  },
+  {
+    trainingId: 'listening-05-hard',
+    title: 'Purchasing (Hard)',
+    unitNumber: 31,
+    difficulty: 'Hard' as const,
+    tags: ['跨國半導體採購', '供應鏈斷鏈應變', '仲裁合約'],
+  },
+  {
+    trainingId: 'listening-06-hard',
+    title: 'Personnel (Hard)',
+    unitNumber: 32,
+    difficulty: 'Hard' as const,
+    tags: ['高階獵才決策', '跨國併購留任', '勞資仲裁法庭'],
+  },
+  {
+    trainingId: 'listening-07-hard',
+    title: 'Offices (Hard)',
+    unitNumber: 33,
+    difficulty: 'Hard' as const,
+    tags: ['關鍵設施故障', '全域通訊備援', '合規審計'],
+  },
+  {
+    trainingId: 'listening-08-hard',
+    title: 'Health (Hard)',
+    unitNumber: 34,
+    difficulty: 'Hard' as const,
+    tags: ['重大工安停工', '危險物質整頓', '勞動法遵罰則'],
+  },
+  {
+    trainingId: 'listening-09-hard',
+    title: 'General Business (Hard)',
+    unitNumber: 35,
+    difficulty: 'Hard' as const,
+    tags: ['跨國合資談判', '智財權糾紛', '市場准入限制'],
+  },
+  {
+    trainingId: 'listening-10-hard',
+    title: 'Manufacturing (Hard)',
+    unitNumber: 36,
+    difficulty: 'Hard' as const,
+    tags: ['精密製程異常', '產線緊急停機', '環保排污查核'],
+  },
+  {
+    trainingId: 'listening-11-hard',
+    title: 'Corporate Development (Hard)',
+    unitNumber: 37,
+    difficulty: 'Hard' as const,
+    tags: ['跨國收購要約', '反壟斷合規', '股權資產分割'],
+  },
+  {
+    trainingId: 'listening-12-hard',
+    title: 'Technical areas (Hard)',
+    unitNumber: 38,
+    difficulty: 'Hard' as const,
+    tags: ['高階資安防護', '邊緣伺服器漏洞', '災難復原中斷'],
+  },
+  {
+    trainingId: 'listening-13-hard',
+    title: 'Financing & Budgeting (Hard)',
+    unitNumber: 39,
+    difficulty: 'Hard' as const,
+    tags: ['跨國交叉換匯', '主權債信評估', '外幣審計核對'],
+  },
+];
+
 export const TOEIC_LISTENING_UNITS: TrainingUnitMeta[] = [
   ...TOEIC_LISTENING_EASY_UNITS,
   ...TOEIC_LISTENING_MEDIUM_UNITS,
+  ...TOEIC_LISTENING_HARD_UNITS,
 ];
 
 const SITUATION_TITLES = [
@@ -250,10 +360,11 @@ export const TOEIC_LISTENING_GROUPS: TrainingGroup[] = SITUATION_TITLES.map(
     const pad = String(idx + 1).padStart(2, '0');
     const easyUnit = TOEIC_LISTENING_EASY_UNITS[idx];
     const mediumUnit = TOEIC_LISTENING_MEDIUM_UNITS[idx];
+    const hardUnit = TOEIC_LISTENING_HARD_UNITS[idx];
     return {
       id: `group-listening-${pad}`,
       title: `${pad}. ${situationTitle}`,
-      units: [easyUnit, mediumUnit],
+      units: [easyUnit, mediumUnit, hardUnit],
     };
   }
 );
@@ -288,6 +399,21 @@ export const TOEIC_LISTENING_QUESTIONS: Question[] = [
   ...(corporateDevMediumQuestions as Question[]),
   ...(technicalAreasMediumQuestions as Question[]),
   ...(financingBudgetingMediumQuestions as Question[]),
+
+  // Hard questions (390)
+  ...(travelHardQuestions as Question[]),
+  ...(diningOutHardQuestions as Question[]),
+  ...(entertainmentHardQuestions as Question[]),
+  ...(housingHardQuestions as Question[]),
+  ...(purchasingHardQuestions as Question[]),
+  ...(personnelHardQuestions as Question[]),
+  ...(officesHardQuestions as Question[]),
+  ...(healthHardQuestions as Question[]),
+  ...(generalBusinessHardQuestions as Question[]),
+  ...(manufacturingHardQuestions as Question[]),
+  ...(corporateDevHardQuestions as Question[]),
+  ...(technicalAreasHardQuestions as Question[]),
+  ...(financingBudgetingHardQuestions as Question[]),
 ];
 
 export const TOEIC_LISTENING_META: QuestionBankMeta = {

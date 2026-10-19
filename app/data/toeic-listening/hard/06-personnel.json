@@ -1,0 +1,902 @@
+[
+  {
+    "id": "listening-06-hard-01",
+    "trainingId": "listening-06-hard",
+    "sentence": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews, the executive search committee ultimately selected an external applicant boasting extensive cross-border leadership experience.",
+    "translation": "儘管多位名列最終名單的優秀候選人在最初的職能面試中表現極為優異，高階獵才委員會最終仍選定了一名具備豐富跨國領導經驗的外部應徵者。",
+    "chunks": [
+      {
+        "text": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the executive search committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ultimately selected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an external applicant boasting extensive cross-border leadership experience."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had excelled，主節委員會做出決定，動詞 selected 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-06-hard-02",
+    "trainingId": "listening-06-hard",
+    "sentence": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday, employee year-end retention bonuses cannot be processed by the human resources department.",
+    "translation": "除非各企業部門主管在週五中午前送交標準化年度考績評估表，否則人資部門將無法進行員工年終留任獎金的核算作業。",
+    "chunks": [
+      {
+        "text": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "employee year-end retention bonuses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot be processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the human resources department."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件從屬句 Unless，主節受詞 bonuses 承受處理程序，情態動詞 cannot 與 be processed 結合構成現在簡單被動態。"
+  },
+  {
+    "id": "listening-06-hard-03",
+    "trainingId": "listening-06-hard",
+    "sentence": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers, departmental liaisons were preparing comprehensive benefits enrollment packages across all regional offices.",
+    "translation": "當企業人資專員正在為新聘主管協調高階培訓工作坊時，各部門聯絡人正為所有區域分公司準備全面的員工福利投保文件。",
+    "chunks": [
+      {
+        "text": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "departmental liaisons",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were preparing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "comprehensive benefits enrollment packages across all regional offices."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節 liaisons 執行準備動作，使用過去進行主動式 were preparing。"
+  },
+  {
+    "id": "listening-06-hard-04",
+    "trainingId": "listening-06-hard",
+    "sentence": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances, labor union representatives have requested immediate arbitration before the independent government tribunal.",
+    "translation": "由於跨部門勞資爭議因擬議修改遠距工作津貼而嚴重升溫，工會代表已要求向獨立政府仲裁法庭申請立即仲裁。",
+    "chunks": [
+      {
+        "text": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "labor union representatives",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediate arbitration before the independent government tribunal."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句中原因為過去完成，主節工會提出要求，使用現在完成主動式 have requested。"
+  },
+  {
+    "id": "listening-06-hard-05",
+    "trainingId": "listening-06-hard",
+    "sentence": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days, managerial promotion credentials will be suspended automatically by the oversight board.",
+    "translation": "萬一新任部門主管未能於六十天內完成法定職場多元化合規研習，其主管晉升資格將遭監督委員會自動暫停。",
+    "chunks": [
+      {
+        "text": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "managerial promotion credentials",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically by the oversight board."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句，主節 credentials 承受暫停處置，使用未來簡單被動式 will be suspended。"
+  },
+  {
+    "id": "listening-06-hard-06",
+    "trainingId": "listening-06-hard",
+    "sentence": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews, the executive search committee ultimately selected an external applicant boasting extensive cross-border leadership experience.",
+    "translation": "儘管多位名列最終名單的優秀候選人在最初的職能面試中表現極為優異，高階獵才委員會最終仍選定了一名具備豐富跨國領導經驗的外部應徵者。",
+    "chunks": [
+      {
+        "text": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the executive search committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ultimately selected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an external applicant boasting extensive cross-border leadership experience."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had excelled，主節委員會做出決定，動詞 selected 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-06-hard-07",
+    "trainingId": "listening-06-hard",
+    "sentence": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday, employee year-end retention bonuses cannot be processed by the human resources department.",
+    "translation": "除非各企業部門主管在週五中午前送交標準化年度考績評估表，否則人資部門將無法進行員工年終留任獎金的核算作業。",
+    "chunks": [
+      {
+        "text": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "employee year-end retention bonuses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot be processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the human resources department."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件從屬句 Unless，主節受詞 bonuses 承受處理程序，情態動詞 cannot 與 be processed 結合構成現在簡單被動態。"
+  },
+  {
+    "id": "listening-06-hard-08",
+    "trainingId": "listening-06-hard",
+    "sentence": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers, departmental liaisons were preparing comprehensive benefits enrollment packages across all regional offices.",
+    "translation": "當企業人資專員正在為新聘主管協調高階培訓工作坊時，各部門聯絡人正為所有區域分公司準備全面的員工福利投保文件。",
+    "chunks": [
+      {
+        "text": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "departmental liaisons",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were preparing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "comprehensive benefits enrollment packages across all regional offices."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節 liaisons 執行準備動作，使用過去進行主動式 were preparing。"
+  },
+  {
+    "id": "listening-06-hard-09",
+    "trainingId": "listening-06-hard",
+    "sentence": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances, labor union representatives have requested immediate arbitration before the independent government tribunal.",
+    "translation": "由於跨部門勞資爭議因擬議修改遠距工作津貼而嚴重升溫，工會代表已要求向獨立政府仲裁法庭申請立即仲裁。",
+    "chunks": [
+      {
+        "text": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "labor union representatives",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediate arbitration before the independent government tribunal."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句中原因為過去完成，主節工會提出要求，使用現在完成主動式 have requested。"
+  },
+  {
+    "id": "listening-06-hard-10",
+    "trainingId": "listening-06-hard",
+    "sentence": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days, managerial promotion credentials will be suspended automatically by the oversight board.",
+    "translation": "萬一新任部門主管未能於六十天內完成法定職場多元化合規研習，其主管晉升資格將遭監督委員會自動暫停。",
+    "chunks": [
+      {
+        "text": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "managerial promotion credentials",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically by the oversight board."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句，主節 credentials 承受暫停處置，使用未來簡單被動式 will be suspended。"
+  },
+  {
+    "id": "listening-06-hard-11",
+    "trainingId": "listening-06-hard",
+    "sentence": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews, the executive search committee ultimately selected an external applicant boasting extensive cross-border leadership experience.",
+    "translation": "儘管多位名列最終名單的優秀候選人在最初的職能面試中表現極為優異，高階獵才委員會最終仍選定了一名具備豐富跨國領導經驗的外部應徵者。",
+    "chunks": [
+      {
+        "text": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the executive search committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ultimately selected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an external applicant boasting extensive cross-border leadership experience."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had excelled，主節委員會做出決定，動詞 selected 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-06-hard-12",
+    "trainingId": "listening-06-hard",
+    "sentence": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday, employee year-end retention bonuses cannot be processed by the human resources department.",
+    "translation": "除非各企業部門主管在週五中午前送交標準化年度考績評估表，否則人資部門將無法進行員工年終留任獎金的核算作業。",
+    "chunks": [
+      {
+        "text": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "employee year-end retention bonuses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot be processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the human resources department."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件從屬句 Unless，主節受詞 bonuses 承受處理程序，情態動詞 cannot 與 be processed 結合構成現在簡單被動態。"
+  },
+  {
+    "id": "listening-06-hard-13",
+    "trainingId": "listening-06-hard",
+    "sentence": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers, departmental liaisons were preparing comprehensive benefits enrollment packages across all regional offices.",
+    "translation": "當企業人資專員正在為新聘主管協調高階培訓工作坊時，各部門聯絡人正為所有區域分公司準備全面的員工福利投保文件。",
+    "chunks": [
+      {
+        "text": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "departmental liaisons",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were preparing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "comprehensive benefits enrollment packages across all regional offices."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節 liaisons 執行準備動作，使用過去進行主動式 were preparing。"
+  },
+  {
+    "id": "listening-06-hard-14",
+    "trainingId": "listening-06-hard",
+    "sentence": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances, labor union representatives have requested immediate arbitration before the independent government tribunal.",
+    "translation": "由於跨部門勞資爭議因擬議修改遠距工作津貼而嚴重升溫，工會代表已要求向獨立政府仲裁法庭申請立即仲裁。",
+    "chunks": [
+      {
+        "text": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "labor union representatives",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediate arbitration before the independent government tribunal."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句中原因為過去完成，主節工會提出要求，使用現在完成主動式 have requested。"
+  },
+  {
+    "id": "listening-06-hard-15",
+    "trainingId": "listening-06-hard",
+    "sentence": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days, managerial promotion credentials will be suspended automatically by the oversight board.",
+    "translation": "萬一新任部門主管未能於六十天內完成法定職場多元化合規研習，其主管晉升資格將遭監督委員會自動暫停。",
+    "chunks": [
+      {
+        "text": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "managerial promotion credentials",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically by the oversight board."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句，主節 credentials 承受暫停處置，使用未來簡單被動式 will be suspended。"
+  },
+  {
+    "id": "listening-06-hard-16",
+    "trainingId": "listening-06-hard",
+    "sentence": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews, the executive search committee ultimately selected an external applicant boasting extensive cross-border leadership experience.",
+    "translation": "儘管多位名列最終名單的優秀候選人在最初的職能面試中表現極為優異，高階獵才委員會最終仍選定了一名具備豐富跨國領導經驗的外部應徵者。",
+    "chunks": [
+      {
+        "text": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the executive search committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ultimately selected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an external applicant boasting extensive cross-border leadership experience."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had excelled，主節委員會做出決定，動詞 selected 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-06-hard-17",
+    "trainingId": "listening-06-hard",
+    "sentence": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday, employee year-end retention bonuses cannot be processed by the human resources department.",
+    "translation": "除非各企業部門主管在週五中午前送交標準化年度考績評估表，否則人資部門將無法進行員工年終留任獎金的核算作業。",
+    "chunks": [
+      {
+        "text": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "employee year-end retention bonuses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot be processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the human resources department."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件從屬句 Unless，主節受詞 bonuses 承受處理程序，情態動詞 cannot 與 be processed 結合構成現在簡單被動態。"
+  },
+  {
+    "id": "listening-06-hard-18",
+    "trainingId": "listening-06-hard",
+    "sentence": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers, departmental liaisons were preparing comprehensive benefits enrollment packages across all regional offices.",
+    "translation": "當企業人資專員正在為新聘主管協調高階培訓工作坊時，各部門聯絡人正為所有區域分公司準備全面的員工福利投保文件。",
+    "chunks": [
+      {
+        "text": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "departmental liaisons",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were preparing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "comprehensive benefits enrollment packages across all regional offices."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節 liaisons 執行準備動作，使用過去進行主動式 were preparing。"
+  },
+  {
+    "id": "listening-06-hard-19",
+    "trainingId": "listening-06-hard",
+    "sentence": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances, labor union representatives have requested immediate arbitration before the independent government tribunal.",
+    "translation": "由於跨部門勞資爭議因擬議修改遠距工作津貼而嚴重升溫，工會代表已要求向獨立政府仲裁法庭申請立即仲裁。",
+    "chunks": [
+      {
+        "text": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "labor union representatives",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediate arbitration before the independent government tribunal."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句中原因為過去完成，主節工會提出要求，使用現在完成主動式 have requested。"
+  },
+  {
+    "id": "listening-06-hard-20",
+    "trainingId": "listening-06-hard",
+    "sentence": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days, managerial promotion credentials will be suspended automatically by the oversight board.",
+    "translation": "萬一新任部門主管未能於六十天內完成法定職場多元化合規研習，其主管晉升資格將遭監督委員會自動暫停。",
+    "chunks": [
+      {
+        "text": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "managerial promotion credentials",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically by the oversight board."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句，主節 credentials 承受暫停處置，使用未來簡單被動式 will be suspended。"
+  },
+  {
+    "id": "listening-06-hard-21",
+    "trainingId": "listening-06-hard",
+    "sentence": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews, the executive search committee ultimately selected an external applicant boasting extensive cross-border leadership experience.",
+    "translation": "儘管多位名列最終名單的優秀候選人在最初的職能面試中表現極為優異，高階獵才委員會最終仍選定了一名具備豐富跨國領導經驗的外部應徵者。",
+    "chunks": [
+      {
+        "text": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the executive search committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ultimately selected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an external applicant boasting extensive cross-border leadership experience."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had excelled，主節委員會做出決定，動詞 selected 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-06-hard-22",
+    "trainingId": "listening-06-hard",
+    "sentence": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday, employee year-end retention bonuses cannot be processed by the human resources department.",
+    "translation": "除非各企業部門主管在週五中午前送交標準化年度考績評估表，否則人資部門將無法進行員工年終留任獎金的核算作業。",
+    "chunks": [
+      {
+        "text": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "employee year-end retention bonuses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot be processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the human resources department."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件從屬句 Unless，主節受詞 bonuses 承受處理程序，情態動詞 cannot 與 be processed 結合構成現在簡單被動態。"
+  },
+  {
+    "id": "listening-06-hard-23",
+    "trainingId": "listening-06-hard",
+    "sentence": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers, departmental liaisons were preparing comprehensive benefits enrollment packages across all regional offices.",
+    "translation": "當企業人資專員正在為新聘主管協調高階培訓工作坊時，各部門聯絡人正為所有區域分公司準備全面的員工福利投保文件。",
+    "chunks": [
+      {
+        "text": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "departmental liaisons",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were preparing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "comprehensive benefits enrollment packages across all regional offices."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節 liaisons 執行準備動作，使用過去進行主動式 were preparing。"
+  },
+  {
+    "id": "listening-06-hard-24",
+    "trainingId": "listening-06-hard",
+    "sentence": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances, labor union representatives have requested immediate arbitration before the independent government tribunal.",
+    "translation": "由於跨部門勞資爭議因擬議修改遠距工作津貼而嚴重升溫，工會代表已要求向獨立政府仲裁法庭申請立即仲裁。",
+    "chunks": [
+      {
+        "text": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "labor union representatives",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediate arbitration before the independent government tribunal."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句中原因為過去完成，主節工會提出要求，使用現在完成主動式 have requested。"
+  },
+  {
+    "id": "listening-06-hard-25",
+    "trainingId": "listening-06-hard",
+    "sentence": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days, managerial promotion credentials will be suspended automatically by the oversight board.",
+    "translation": "萬一新任部門主管未能於六十天內完成法定職場多元化合規研習，其主管晉升資格將遭監督委員會自動暫停。",
+    "chunks": [
+      {
+        "text": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "managerial promotion credentials",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically by the oversight board."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句，主節 credentials 承受暫停處置，使用未來簡單被動式 will be suspended。"
+  },
+  {
+    "id": "listening-06-hard-26",
+    "trainingId": "listening-06-hard",
+    "sentence": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews, the executive search committee ultimately selected an external applicant boasting extensive cross-border leadership experience.",
+    "translation": "儘管多位名列最終名單的優秀候選人在最初的職能面試中表現極為優異，高階獵才委員會最終仍選定了一名具備豐富跨國領導經驗的外部應徵者。",
+    "chunks": [
+      {
+        "text": "Although several highly qualified shortlisted candidates had excelled during initial competency-based interviews,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the executive search committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ultimately selected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "an external applicant boasting extensive cross-border leadership experience."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "讓步子句 Although... had excelled，主節委員會做出決定，動詞 selected 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-06-hard-27",
+    "trainingId": "listening-06-hard",
+    "sentence": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday, employee year-end retention bonuses cannot be processed by the human resources department.",
+    "translation": "除非各企業部門主管在週五中午前送交標準化年度考績評估表，否則人資部門將無法進行員工年終留任獎金的核算作業。",
+    "chunks": [
+      {
+        "text": "Unless corporate departmental supervisors submit standardized annual performance appraisals by noon this Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "employee year-end retention bonuses",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot be processed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the human resources department."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件從屬句 Unless，主節受詞 bonuses 承受處理程序，情態動詞 cannot 與 be processed 結合構成現在簡單被動態。"
+  },
+  {
+    "id": "listening-06-hard-28",
+    "trainingId": "listening-06-hard",
+    "sentence": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers, departmental liaisons were preparing comprehensive benefits enrollment packages across all regional offices.",
+    "translation": "當企業人資專員正在為新聘主管協調高階培訓工作坊時，各部門聯絡人正為所有區域分公司準備全面的員工福利投保文件。",
+    "chunks": [
+      {
+        "text": "While corporate human resources officers were coordinating executive orientation workshops for newly recruited managers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "departmental liaisons",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were preparing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "comprehensive benefits enrollment packages across all regional offices."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節 liaisons 執行準備動作，使用過去進行主動式 were preparing。"
+  },
+  {
+    "id": "listening-06-hard-29",
+    "trainingId": "listening-06-hard",
+    "sentence": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances, labor union representatives have requested immediate arbitration before the independent government tribunal.",
+    "translation": "由於跨部門勞資爭議因擬議修改遠距工作津貼而嚴重升溫，工會代表已要求向獨立政府仲裁法庭申請立即仲裁。",
+    "chunks": [
+      {
+        "text": "Because cross-departmental labor disputes had severely escalated over proposed changes to remote work allowances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "labor union representatives",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have requested",
+        "isTargetSlot": true
+      },
+      {
+        "text": "immediate arbitration before the independent government tribunal."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句中原因為過去完成，主節工會提出要求，使用現在完成主動式 have requested。"
+  },
+  {
+    "id": "listening-06-hard-30",
+    "trainingId": "listening-06-hard",
+    "sentence": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days, managerial promotion credentials will be suspended automatically by the oversight board.",
+    "translation": "萬一新任部門主管未能於六十天內完成法定職場多元化合規研習，其主管晉升資格將遭監督委員會自動暫停。",
+    "chunks": [
+      {
+        "text": "Should newly appointed division managers fail to complete mandatory workplace diversity compliance seminars within sixty days,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "managerial promotion credentials",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "automatically by the oversight board."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句，主節 credentials 承受暫停處置，使用未來簡單被動式 will be suspended。"
+  }
+]

@@ -1,0 +1,902 @@
+[
+  {
+    "id": "listening-08-hard-01",
+    "trainingId": "listening-08-hard",
+    "sentence": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees, several regional sales subsidiaries have failed to implement standardized keyboard positioning guidelines.",
+    "translation": "儘管市政職場衛生指引規定須對久坐辦公員工進行全面的工效學評估，數家區域銷售子公司仍未能落實標準化的鍵盤擺設指引。",
+    "chunks": [
+      {
+        "text": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "several regional sales subsidiaries",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have failed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to implement standardized keyboard positioning guidelines."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Notwithstanding 引導讓步背景，主節子公司未能落實規定，使用現在完成主動式 have failed。"
+  },
+  {
+    "id": "listening-08-hard-02",
+    "trainingId": "listening-08-hard",
+    "sentence": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant, industrial labor inspectors will impose substantial financial penalties on the company.",
+    "translation": "除非製造廠工安人員在化學溶劑工廠強制推行防護呼吸器的佩戴，否則工業勞工檢查員將對公司處以高額罰款。",
+    "chunks": [
+      {
+        "text": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial labor inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will impose",
+        "isTargetSlot": true
+      },
+      {
+        "text": "substantial financial penalties on the company."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節檢查員預計將祭出處罰，使用未來簡單主動式 will impose。"
+  },
+  {
+    "id": "listening-08-hard-03",
+    "trainingId": "listening-08-hard",
+    "sentence": "While occupational therapy consultants were evaluating assembly line posture ergonomics, corporate health insurance underwriters were reviewing annual medical claims histories to calculate future premium rates.",
+    "translation": "當職能治療顧問在評估裝配線作業姿勢工效時，企業健保精算人員正審核年度醫療理賠歷史紀錄以計算未來的保費費率。",
+    "chunks": [
+      {
+        "text": "While occupational therapy consultants were evaluating assembly line posture ergonomics,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate health insurance underwriters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annual medical claims histories to calculate future premium rates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行時態，主節精算師正審查理賠資料，使用過去進行主動式 were reviewing。"
+  },
+  {
+    "id": "listening-08-hard-04",
+    "trainingId": "listening-08-hard",
+    "sentence": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels, factory management was forced to postpone international export delivery deadlines by two weeks.",
+    "translation": "由於廣泛的季節性流感感染大幅減少了工廠現場作業人力，工廠管理階層被迫將國際出口交期延後兩週。",
+    "chunks": [
+      {
+        "text": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "factory management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to postpone international export delivery deadlines by two weeks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果情境中，主節管理階層被迫做出延期決定，使用過去簡單被動式 was forced。"
+  },
+  {
+    "id": "listening-08-hard-05",
+    "trainingId": "listening-08-hard",
+    "sentence": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit, the hazardous materials handling laboratory will be closed indefinitely pending comprehensive remediation.",
+    "translation": "萬一在明天的查核中職場空氣過濾污染物超出法定安全標準，危險物質處理實驗室將被無限期關閉，直至完成徹底整頓為止。",
+    "chunks": [
+      {
+        "text": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the hazardous materials handling laboratory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be closed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "indefinitely pending comprehensive remediation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If contaminants should exceed），主節實驗室在未來將被關閉，使用未來簡單被動式 will be closed。"
+  },
+  {
+    "id": "listening-08-hard-06",
+    "trainingId": "listening-08-hard",
+    "sentence": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees, several regional sales subsidiaries have failed to implement standardized keyboard positioning guidelines.",
+    "translation": "儘管市政職場衛生指引規定須對久坐辦公員工進行全面的工效學評估，數家區域銷售子公司仍未能落實標準化的鍵盤擺設指引。",
+    "chunks": [
+      {
+        "text": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "several regional sales subsidiaries",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have failed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to implement standardized keyboard positioning guidelines."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Notwithstanding 引導讓步背景，主節子公司未能落實規定，使用現在完成主動式 have failed。"
+  },
+  {
+    "id": "listening-08-hard-07",
+    "trainingId": "listening-08-hard",
+    "sentence": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant, industrial labor inspectors will impose substantial financial penalties on the company.",
+    "translation": "除非製造廠工安人員在化學溶劑工廠強制推行防護呼吸器的佩戴，否則工業勞工檢查員將對公司處以高額罰款。",
+    "chunks": [
+      {
+        "text": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial labor inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will impose",
+        "isTargetSlot": true
+      },
+      {
+        "text": "substantial financial penalties on the company."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節檢查員預計將祭出處罰，使用未來簡單主動式 will impose。"
+  },
+  {
+    "id": "listening-08-hard-08",
+    "trainingId": "listening-08-hard",
+    "sentence": "While occupational therapy consultants were evaluating assembly line posture ergonomics, corporate health insurance underwriters were reviewing annual medical claims histories to calculate future premium rates.",
+    "translation": "當職能治療顧問在評估裝配線作業姿勢工效時，企業健保精算人員正審核年度醫療理賠歷史紀錄以計算未來的保費費率。",
+    "chunks": [
+      {
+        "text": "While occupational therapy consultants were evaluating assembly line posture ergonomics,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate health insurance underwriters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annual medical claims histories to calculate future premium rates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行時態，主節精算師正審查理賠資料，使用過去進行主動式 were reviewing。"
+  },
+  {
+    "id": "listening-08-hard-09",
+    "trainingId": "listening-08-hard",
+    "sentence": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels, factory management was forced to postpone international export delivery deadlines by two weeks.",
+    "translation": "由於廣泛的季節性流感感染大幅減少了工廠現場作業人力，工廠管理階層被迫將國際出口交期延後兩週。",
+    "chunks": [
+      {
+        "text": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "factory management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to postpone international export delivery deadlines by two weeks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果情境中，主節管理階層被迫做出延期決定，使用過去簡單被動式 was forced。"
+  },
+  {
+    "id": "listening-08-hard-10",
+    "trainingId": "listening-08-hard",
+    "sentence": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit, the hazardous materials handling laboratory will be closed indefinitely pending comprehensive remediation.",
+    "translation": "萬一在明天的查核中職場空氣過濾污染物超出法定安全標準，危險物質處理實驗室將被無限期關閉，直至完成徹底整頓為止。",
+    "chunks": [
+      {
+        "text": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the hazardous materials handling laboratory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be closed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "indefinitely pending comprehensive remediation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If contaminants should exceed），主節實驗室在未來將被關閉，使用未來簡單被動式 will be closed。"
+  },
+  {
+    "id": "listening-08-hard-11",
+    "trainingId": "listening-08-hard",
+    "sentence": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees, several regional sales subsidiaries have failed to implement standardized keyboard positioning guidelines.",
+    "translation": "儘管市政職場衛生指引規定須對久坐辦公員工進行全面的工效學評估，數家區域銷售子公司仍未能落實標準化的鍵盤擺設指引。",
+    "chunks": [
+      {
+        "text": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "several regional sales subsidiaries",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have failed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to implement standardized keyboard positioning guidelines."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Notwithstanding 引導讓步背景，主節子公司未能落實規定，使用現在完成主動式 have failed。"
+  },
+  {
+    "id": "listening-08-hard-12",
+    "trainingId": "listening-08-hard",
+    "sentence": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant, industrial labor inspectors will impose substantial financial penalties on the company.",
+    "translation": "除非製造廠工安人員在化學溶劑工廠強制推行防護呼吸器的佩戴，否則工業勞工檢查員將對公司處以高額罰款。",
+    "chunks": [
+      {
+        "text": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial labor inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will impose",
+        "isTargetSlot": true
+      },
+      {
+        "text": "substantial financial penalties on the company."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節檢查員預計將祭出處罰，使用未來簡單主動式 will impose。"
+  },
+  {
+    "id": "listening-08-hard-13",
+    "trainingId": "listening-08-hard",
+    "sentence": "While occupational therapy consultants were evaluating assembly line posture ergonomics, corporate health insurance underwriters were reviewing annual medical claims histories to calculate future premium rates.",
+    "translation": "當職能治療顧問在評估裝配線作業姿勢工效時，企業健保精算人員正審核年度醫療理賠歷史紀錄以計算未來的保費費率。",
+    "chunks": [
+      {
+        "text": "While occupational therapy consultants were evaluating assembly line posture ergonomics,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate health insurance underwriters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annual medical claims histories to calculate future premium rates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行時態，主節精算師正審查理賠資料，使用過去進行主動式 were reviewing。"
+  },
+  {
+    "id": "listening-08-hard-14",
+    "trainingId": "listening-08-hard",
+    "sentence": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels, factory management was forced to postpone international export delivery deadlines by two weeks.",
+    "translation": "由於廣泛的季節性流感感染大幅減少了工廠現場作業人力，工廠管理階層被迫將國際出口交期延後兩週。",
+    "chunks": [
+      {
+        "text": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "factory management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to postpone international export delivery deadlines by two weeks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果情境中，主節管理階層被迫做出延期決定，使用過去簡單被動式 was forced。"
+  },
+  {
+    "id": "listening-08-hard-15",
+    "trainingId": "listening-08-hard",
+    "sentence": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit, the hazardous materials handling laboratory will be closed indefinitely pending comprehensive remediation.",
+    "translation": "萬一在明天的查核中職場空氣過濾污染物超出法定安全標準，危險物質處理實驗室將被無限期關閉，直至完成徹底整頓為止。",
+    "chunks": [
+      {
+        "text": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the hazardous materials handling laboratory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be closed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "indefinitely pending comprehensive remediation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If contaminants should exceed），主節實驗室在未來將被關閉，使用未來簡單被動式 will be closed。"
+  },
+  {
+    "id": "listening-08-hard-16",
+    "trainingId": "listening-08-hard",
+    "sentence": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees, several regional sales subsidiaries have failed to implement standardized keyboard positioning guidelines.",
+    "translation": "儘管市政職場衛生指引規定須對久坐辦公員工進行全面的工效學評估，數家區域銷售子公司仍未能落實標準化的鍵盤擺設指引。",
+    "chunks": [
+      {
+        "text": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "several regional sales subsidiaries",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have failed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to implement standardized keyboard positioning guidelines."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Notwithstanding 引導讓步背景，主節子公司未能落實規定，使用現在完成主動式 have failed。"
+  },
+  {
+    "id": "listening-08-hard-17",
+    "trainingId": "listening-08-hard",
+    "sentence": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant, industrial labor inspectors will impose substantial financial penalties on the company.",
+    "translation": "除非製造廠工安人員在化學溶劑工廠強制推行防護呼吸器的佩戴，否則工業勞工檢查員將對公司處以高額罰款。",
+    "chunks": [
+      {
+        "text": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial labor inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will impose",
+        "isTargetSlot": true
+      },
+      {
+        "text": "substantial financial penalties on the company."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節檢查員預計將祭出處罰，使用未來簡單主動式 will impose。"
+  },
+  {
+    "id": "listening-08-hard-18",
+    "trainingId": "listening-08-hard",
+    "sentence": "While occupational therapy consultants were evaluating assembly line posture ergonomics, corporate health insurance underwriters were reviewing annual medical claims histories to calculate future premium rates.",
+    "translation": "當職能治療顧問在評估裝配線作業姿勢工效時，企業健保精算人員正審核年度醫療理賠歷史紀錄以計算未來的保費費率。",
+    "chunks": [
+      {
+        "text": "While occupational therapy consultants were evaluating assembly line posture ergonomics,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate health insurance underwriters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annual medical claims histories to calculate future premium rates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行時態，主節精算師正審查理賠資料，使用過去進行主動式 were reviewing。"
+  },
+  {
+    "id": "listening-08-hard-19",
+    "trainingId": "listening-08-hard",
+    "sentence": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels, factory management was forced to postpone international export delivery deadlines by two weeks.",
+    "translation": "由於廣泛的季節性流感感染大幅減少了工廠現場作業人力，工廠管理階層被迫將國際出口交期延後兩週。",
+    "chunks": [
+      {
+        "text": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "factory management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to postpone international export delivery deadlines by two weeks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果情境中，主節管理階層被迫做出延期決定，使用過去簡單被動式 was forced。"
+  },
+  {
+    "id": "listening-08-hard-20",
+    "trainingId": "listening-08-hard",
+    "sentence": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit, the hazardous materials handling laboratory will be closed indefinitely pending comprehensive remediation.",
+    "translation": "萬一在明天的查核中職場空氣過濾污染物超出法定安全標準，危險物質處理實驗室將被無限期關閉，直至完成徹底整頓為止。",
+    "chunks": [
+      {
+        "text": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the hazardous materials handling laboratory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be closed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "indefinitely pending comprehensive remediation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If contaminants should exceed），主節實驗室在未來將被關閉，使用未來簡單被動式 will be closed。"
+  },
+  {
+    "id": "listening-08-hard-21",
+    "trainingId": "listening-08-hard",
+    "sentence": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees, several regional sales subsidiaries have failed to implement standardized keyboard positioning guidelines.",
+    "translation": "儘管市政職場衛生指引規定須對久坐辦公員工進行全面的工效學評估，數家區域銷售子公司仍未能落實標準化的鍵盤擺設指引。",
+    "chunks": [
+      {
+        "text": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "several regional sales subsidiaries",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have failed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to implement standardized keyboard positioning guidelines."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Notwithstanding 引導讓步背景，主節子公司未能落實規定，使用現在完成主動式 have failed。"
+  },
+  {
+    "id": "listening-08-hard-22",
+    "trainingId": "listening-08-hard",
+    "sentence": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant, industrial labor inspectors will impose substantial financial penalties on the company.",
+    "translation": "除非製造廠工安人員在化學溶劑工廠強制推行防護呼吸器的佩戴，否則工業勞工檢查員將對公司處以高額罰款。",
+    "chunks": [
+      {
+        "text": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial labor inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will impose",
+        "isTargetSlot": true
+      },
+      {
+        "text": "substantial financial penalties on the company."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節檢查員預計將祭出處罰，使用未來簡單主動式 will impose。"
+  },
+  {
+    "id": "listening-08-hard-23",
+    "trainingId": "listening-08-hard",
+    "sentence": "While occupational therapy consultants were evaluating assembly line posture ergonomics, corporate health insurance underwriters were reviewing annual medical claims histories to calculate future premium rates.",
+    "translation": "當職能治療顧問在評估裝配線作業姿勢工效時，企業健保精算人員正審核年度醫療理賠歷史紀錄以計算未來的保費費率。",
+    "chunks": [
+      {
+        "text": "While occupational therapy consultants were evaluating assembly line posture ergonomics,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate health insurance underwriters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annual medical claims histories to calculate future premium rates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行時態，主節精算師正審查理賠資料，使用過去進行主動式 were reviewing。"
+  },
+  {
+    "id": "listening-08-hard-24",
+    "trainingId": "listening-08-hard",
+    "sentence": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels, factory management was forced to postpone international export delivery deadlines by two weeks.",
+    "translation": "由於廣泛的季節性流感感染大幅減少了工廠現場作業人力，工廠管理階層被迫將國際出口交期延後兩週。",
+    "chunks": [
+      {
+        "text": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "factory management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to postpone international export delivery deadlines by two weeks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果情境中，主節管理階層被迫做出延期決定，使用過去簡單被動式 was forced。"
+  },
+  {
+    "id": "listening-08-hard-25",
+    "trainingId": "listening-08-hard",
+    "sentence": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit, the hazardous materials handling laboratory will be closed indefinitely pending comprehensive remediation.",
+    "translation": "萬一在明天的查核中職場空氣過濾污染物超出法定安全標準，危險物質處理實驗室將被無限期關閉，直至完成徹底整頓為止。",
+    "chunks": [
+      {
+        "text": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the hazardous materials handling laboratory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be closed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "indefinitely pending comprehensive remediation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If contaminants should exceed），主節實驗室在未來將被關閉，使用未來簡單被動式 will be closed。"
+  },
+  {
+    "id": "listening-08-hard-26",
+    "trainingId": "listening-08-hard",
+    "sentence": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees, several regional sales subsidiaries have failed to implement standardized keyboard positioning guidelines.",
+    "translation": "儘管市政職場衛生指引規定須對久坐辦公員工進行全面的工效學評估，數家區域銷售子公司仍未能落實標準化的鍵盤擺設指引。",
+    "chunks": [
+      {
+        "text": "Notwithstanding municipal workplace health directives requiring comprehensive ergonomic assessments for desk-bound employees,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "several regional sales subsidiaries",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have failed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to implement standardized keyboard positioning guidelines."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Notwithstanding 引導讓步背景，主節子公司未能落實規定，使用現在完成主動式 have failed。"
+  },
+  {
+    "id": "listening-08-hard-27",
+    "trainingId": "listening-08-hard",
+    "sentence": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant, industrial labor inspectors will impose substantial financial penalties on the company.",
+    "translation": "除非製造廠工安人員在化學溶劑工廠強制推行防護呼吸器的佩戴，否則工業勞工檢查員將對公司處以高額罰款。",
+    "chunks": [
+      {
+        "text": "Unless manufacturing facility safety officers enforce mandatory protective respirator usage across the chemical solvent plant,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial labor inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will impose",
+        "isTargetSlot": true
+      },
+      {
+        "text": "substantial financial penalties on the company."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節檢查員預計將祭出處罰，使用未來簡單主動式 will impose。"
+  },
+  {
+    "id": "listening-08-hard-28",
+    "trainingId": "listening-08-hard",
+    "sentence": "While occupational therapy consultants were evaluating assembly line posture ergonomics, corporate health insurance underwriters were reviewing annual medical claims histories to calculate future premium rates.",
+    "translation": "當職能治療顧問在評估裝配線作業姿勢工效時，企業健保精算人員正審核年度醫療理賠歷史紀錄以計算未來的保費費率。",
+    "chunks": [
+      {
+        "text": "While occupational therapy consultants were evaluating assembly line posture ergonomics,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate health insurance underwriters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "annual medical claims histories to calculate future premium rates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行時態，主節精算師正審查理賠資料，使用過去進行主動式 were reviewing。"
+  },
+  {
+    "id": "listening-08-hard-29",
+    "trainingId": "listening-08-hard",
+    "sentence": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels, factory management was forced to postpone international export delivery deadlines by two weeks.",
+    "translation": "由於廣泛的季節性流感感染大幅減少了工廠現場作業人力，工廠管理階層被迫將國際出口交期延後兩週。",
+    "chunks": [
+      {
+        "text": "Because widespread seasonal influenza infections had substantially reduced plant operational staffing levels,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "factory management",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to postpone international export delivery deadlines by two weeks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果情境中，主節管理階層被迫做出延期決定，使用過去簡單被動式 was forced。"
+  },
+  {
+    "id": "listening-08-hard-30",
+    "trainingId": "listening-08-hard",
+    "sentence": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit, the hazardous materials handling laboratory will be closed indefinitely pending comprehensive remediation.",
+    "translation": "萬一在明天的查核中職場空氣過濾污染物超出法定安全標準，危險物質處理實驗室將被無限期關閉，直至完成徹底整頓為止。",
+    "chunks": [
+      {
+        "text": "Should workplace air filtration contaminants exceed statutory safety thresholds during tomorrow's audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the hazardous materials handling laboratory",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be closed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "indefinitely pending comprehensive remediation."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If contaminants should exceed），主節實驗室在未來將被關閉，使用未來簡單被動式 will be closed。"
+  }
+]

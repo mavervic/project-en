@@ -189,7 +189,7 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
     expect(inProgressRow.title).toContain('2/30');
   });
 
-  it('renders both Easy and Medium training unit rows within situational groups', () => {
+  it('renders Easy, Medium, and Hard training unit rows within situational groups', () => {
     render(
       <TrainingMatrixDrawer
         isOpen={true}
@@ -206,6 +206,7 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
       const pad = String(i).padStart(2, '0');
       expect(screen.getByTestId(`training-row-listening-${pad}-easy`)).toBeDefined();
       expect(screen.getByTestId(`training-row-listening-${pad}-medium`)).toBeDefined();
+      expect(screen.getByTestId(`training-row-listening-${pad}-hard`)).toBeDefined();
     }
   });
 });

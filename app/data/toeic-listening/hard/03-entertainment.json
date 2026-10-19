@@ -1,0 +1,950 @@
+[
+  {
+    "id": "listening-03-hard-01",
+    "trainingId": "listening-03-hard",
+    "sentence": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances, all complimentary sponsor passes were officially revoked due to severe auditorium capacity regulations.",
+    "translation": "儘管首演夜管弦樂團演出的區域票房需求空前熱烈，所有贊助商公關招待票仍因嚴格的音樂廳容留人數限制而遭正式撤銷。",
+    "chunks": [
+      {
+        "text": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all complimentary sponsor passes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were officially revoked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "due to severe auditorium capacity regulations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "Notwithstanding 介系詞引導讓步關係，主節受詞 passes 被主管機關撤銷，使用過去簡單被動式 were revoked。"
+  },
+  {
+    "id": "listening-03-hard-02",
+    "trainingId": "listening-03-hard",
+    "sentence": "Even if international museum curators secure comprehensive overseas insurance coverage next month, fragile archaeological antiquities will not be exhibited without direct authorization from the cultural heritage ministry.",
+    "translation": "即使國際博物館策展人下個月取得了全面的海外保險保障，在未獲文化部直接授權的情況下，脆弱的考古文物仍將不得對外展出。",
+    "chunks": [
+      {
+        "text": "Even if international museum curators secure comprehensive overseas insurance coverage next month,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "fragile archaeological antiquities",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will not be exhibited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "without direct authorization from the cultural heritage ministry."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Even if 引導假設讓步子句，主節文物承受被展出之動作，否定形式使用未來被動態 will not be exhibited。"
+  },
+  {
+    "id": "listening-03-hard-03",
+    "trainingId": "listening-03-hard",
+    "sentence": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater, the principal musical conductor was reviewing revised musical scores alongside the artistic director.",
+    "translation": "當舞台製作技術人員在露天劇場內校準先進音響設備之際，首席音樂指揮正與藝術總監一同審核修訂後的樂譜。",
+    "chunks": [
+      {
+        "text": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the principal musical conductor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "revised musical scores",
+        "isTargetSlot": false
+      },
+      {
+        "text": "alongside the artistic director."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "雙重過去進行式結構，主節 conductor 正進行審查動作，使用過去進行主動式 was reviewing。"
+  },
+  {
+    "id": "listening-03-hard-04",
+    "trainingId": "listening-03-hard",
+    "sentence": "Because the international charity gala had already exceeded its initial fundraising target by forty percent, organizing committee members have approved additional grant disbursements for local conservatory students.",
+    "translation": "由於國際慈善晚會的籌款金額早已突破原訂目標百分之四十，籌委會成員已核准向當地音樂學院學生發放額外的獎助學金。",
+    "chunks": [
+      {
+        "text": "Because the international charity gala had already exceeded its initial fundraising target by forty percent,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "organizing committee members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "additional grant disbursements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for local conservatory students."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句述及過去完成之籌款成果，主節委員做出撥款決定，使用現在完成主動式 have approved。"
+  },
+  {
+    "id": "listening-03-hard-05",
+    "trainingId": "listening-03-hard",
+    "sentence": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff, all unreserved pavilion suites will be released to public sports club members.",
+    "translation": "除非企業招待客戶在開賽四十八小時前確認專屬包廂席位安排，否則所有未預約的貴賓包廂都將釋出予大眾俱樂部會員訂購。",
+    "chunks": [
+      {
+        "text": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all unreserved pavilion suites",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to public sports club members."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節包廂 suites 在未來將被釋出，使用未來簡單被動式 will be released。"
+  },
+  {
+    "id": "listening-03-hard-06",
+    "trainingId": "listening-03-hard",
+    "sentence": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances, all complimentary sponsor passes were officially revoked due to severe auditorium capacity regulations.",
+    "translation": "儘管首演夜管弦樂團演出的區域票房需求空前熱烈，所有贊助商公關招待票仍因嚴格的音樂廳容留人數限制而遭正式撤銷。",
+    "chunks": [
+      {
+        "text": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all complimentary sponsor passes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were officially revoked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "due to severe auditorium capacity regulations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "Notwithstanding 介系詞引導讓步關係，主節受詞 passes 被主管機關撤銷，使用過去簡單被動式 were revoked。"
+  },
+  {
+    "id": "listening-03-hard-07",
+    "trainingId": "listening-03-hard",
+    "sentence": "Even if international museum curators secure comprehensive overseas insurance coverage next month, fragile archaeological antiquities will not be exhibited without direct authorization from the cultural heritage ministry.",
+    "translation": "即使國際博物館策展人下個月取得了全面的海外保險保障，在未獲文化部直接授權的情況下，脆弱的考古文物仍將不得對外展出。",
+    "chunks": [
+      {
+        "text": "Even if international museum curators secure comprehensive overseas insurance coverage next month,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "fragile archaeological antiquities",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will not be exhibited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "without direct authorization from the cultural heritage ministry."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Even if 引導假設讓步子句，主節文物承受被展出之動作，否定形式使用未來被動態 will not be exhibited。"
+  },
+  {
+    "id": "listening-03-hard-08",
+    "trainingId": "listening-03-hard",
+    "sentence": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater, the principal musical conductor was reviewing revised musical scores alongside the artistic director.",
+    "translation": "當舞台製作技術人員在露天劇場內校準先進音響設備之際，首席音樂指揮正與藝術總監一同審核修訂後的樂譜。",
+    "chunks": [
+      {
+        "text": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the principal musical conductor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "revised musical scores",
+        "isTargetSlot": false
+      },
+      {
+        "text": "alongside the artistic director."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "雙重過去進行式結構，主節 conductor 正進行審查動作，使用過去進行主動式 was reviewing。"
+  },
+  {
+    "id": "listening-03-hard-09",
+    "trainingId": "listening-03-hard",
+    "sentence": "Because the international charity gala had already exceeded its initial fundraising target by forty percent, organizing committee members have approved additional grant disbursements for local conservatory students.",
+    "translation": "由於國際慈善晚會的籌款金額早已突破原訂目標百分之四十，籌委會成員已核准向當地音樂學院學生發放額外的獎助學金。",
+    "chunks": [
+      {
+        "text": "Because the international charity gala had already exceeded its initial fundraising target by forty percent,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "organizing committee members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "additional grant disbursements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for local conservatory students."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句述及過去完成之籌款成果，主節委員做出撥款決定，使用現在完成主動式 have approved。"
+  },
+  {
+    "id": "listening-03-hard-10",
+    "trainingId": "listening-03-hard",
+    "sentence": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff, all unreserved pavilion suites will be released to public sports club members.",
+    "translation": "除非企業招待客戶在開賽四十八小時前確認專屬包廂席位安排，否則所有未預約的貴賓包廂都將釋出予大眾俱樂部會員訂購。",
+    "chunks": [
+      {
+        "text": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all unreserved pavilion suites",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to public sports club members."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節包廂 suites 在未來將被釋出，使用未來簡單被動式 will be released。"
+  },
+  {
+    "id": "listening-03-hard-11",
+    "trainingId": "listening-03-hard",
+    "sentence": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances, all complimentary sponsor passes were officially revoked due to severe auditorium capacity regulations.",
+    "translation": "儘管首演夜管弦樂團演出的區域票房需求空前熱烈，所有贊助商公關招待票仍因嚴格的音樂廳容留人數限制而遭正式撤銷。",
+    "chunks": [
+      {
+        "text": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all complimentary sponsor passes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were officially revoked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "due to severe auditorium capacity regulations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "Notwithstanding 介系詞引導讓步關係，主節受詞 passes 被主管機關撤銷，使用過去簡單被動式 were revoked。"
+  },
+  {
+    "id": "listening-03-hard-12",
+    "trainingId": "listening-03-hard",
+    "sentence": "Even if international museum curators secure comprehensive overseas insurance coverage next month, fragile archaeological antiquities will not be exhibited without direct authorization from the cultural heritage ministry.",
+    "translation": "即使國際博物館策展人下個月取得了全面的海外保險保障，在未獲文化部直接授權的情況下，脆弱的考古文物仍將不得對外展出。",
+    "chunks": [
+      {
+        "text": "Even if international museum curators secure comprehensive overseas insurance coverage next month,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "fragile archaeological antiquities",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will not be exhibited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "without direct authorization from the cultural heritage ministry."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Even if 引導假設讓步子句，主節文物承受被展出之動作，否定形式使用未來被動態 will not be exhibited。"
+  },
+  {
+    "id": "listening-03-hard-13",
+    "trainingId": "listening-03-hard",
+    "sentence": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater, the principal musical conductor was reviewing revised musical scores alongside the artistic director.",
+    "translation": "當舞台製作技術人員在露天劇場內校準先進音響設備之際，首席音樂指揮正與藝術總監一同審核修訂後的樂譜。",
+    "chunks": [
+      {
+        "text": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the principal musical conductor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "revised musical scores",
+        "isTargetSlot": false
+      },
+      {
+        "text": "alongside the artistic director."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "雙重過去進行式結構，主節 conductor 正進行審查動作，使用過去進行主動式 was reviewing。"
+  },
+  {
+    "id": "listening-03-hard-14",
+    "trainingId": "listening-03-hard",
+    "sentence": "Because the international charity gala had already exceeded its initial fundraising target by forty percent, organizing committee members have approved additional grant disbursements for local conservatory students.",
+    "translation": "由於國際慈善晚會的籌款金額早已突破原訂目標百分之四十，籌委會成員已核准向當地音樂學院學生發放額外的獎助學金。",
+    "chunks": [
+      {
+        "text": "Because the international charity gala had already exceeded its initial fundraising target by forty percent,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "organizing committee members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "additional grant disbursements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for local conservatory students."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句述及過去完成之籌款成果，主節委員做出撥款決定，使用現在完成主動式 have approved。"
+  },
+  {
+    "id": "listening-03-hard-15",
+    "trainingId": "listening-03-hard",
+    "sentence": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff, all unreserved pavilion suites will be released to public sports club members.",
+    "translation": "除非企業招待客戶在開賽四十八小時前確認專屬包廂席位安排，否則所有未預約的貴賓包廂都將釋出予大眾俱樂部會員訂購。",
+    "chunks": [
+      {
+        "text": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all unreserved pavilion suites",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to public sports club members."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節包廂 suites 在未來將被釋出，使用未來簡單被動式 will be released。"
+  },
+  {
+    "id": "listening-03-hard-16",
+    "trainingId": "listening-03-hard",
+    "sentence": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances, all complimentary sponsor passes were officially revoked due to severe auditorium capacity regulations.",
+    "translation": "儘管首演夜管弦樂團演出的區域票房需求空前熱烈，所有贊助商公關招待票仍因嚴格的音樂廳容留人數限制而遭正式撤銷。",
+    "chunks": [
+      {
+        "text": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all complimentary sponsor passes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were officially revoked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "due to severe auditorium capacity regulations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "Notwithstanding 介系詞引導讓步關係，主節受詞 passes 被主管機關撤銷，使用過去簡單被動式 were revoked。"
+  },
+  {
+    "id": "listening-03-hard-17",
+    "trainingId": "listening-03-hard",
+    "sentence": "Even if international museum curators secure comprehensive overseas insurance coverage next month, fragile archaeological antiquities will not be exhibited without direct authorization from the cultural heritage ministry.",
+    "translation": "即使國際博物館策展人下個月取得了全面的海外保險保障，在未獲文化部直接授權的情況下，脆弱的考古文物仍將不得對外展出。",
+    "chunks": [
+      {
+        "text": "Even if international museum curators secure comprehensive overseas insurance coverage next month,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "fragile archaeological antiquities",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will not be exhibited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "without direct authorization from the cultural heritage ministry."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Even if 引導假設讓步子句，主節文物承受被展出之動作，否定形式使用未來被動態 will not be exhibited。"
+  },
+  {
+    "id": "listening-03-hard-18",
+    "trainingId": "listening-03-hard",
+    "sentence": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater, the principal musical conductor was reviewing revised musical scores alongside the artistic director.",
+    "translation": "當舞台製作技術人員在露天劇場內校準先進音響設備之際，首席音樂指揮正與藝術總監一同審核修訂後的樂譜。",
+    "chunks": [
+      {
+        "text": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the principal musical conductor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "revised musical scores",
+        "isTargetSlot": false
+      },
+      {
+        "text": "alongside the artistic director."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "雙重過去進行式結構，主節 conductor 正進行審查動作，使用過去進行主動式 was reviewing。"
+  },
+  {
+    "id": "listening-03-hard-19",
+    "trainingId": "listening-03-hard",
+    "sentence": "Because the international charity gala had already exceeded its initial fundraising target by forty percent, organizing committee members have approved additional grant disbursements for local conservatory students.",
+    "translation": "由於國際慈善晚會的籌款金額早已突破原訂目標百分之四十，籌委會成員已核准向當地音樂學院學生發放額外的獎助學金。",
+    "chunks": [
+      {
+        "text": "Because the international charity gala had already exceeded its initial fundraising target by forty percent,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "organizing committee members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "additional grant disbursements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for local conservatory students."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句述及過去完成之籌款成果，主節委員做出撥款決定，使用現在完成主動式 have approved。"
+  },
+  {
+    "id": "listening-03-hard-20",
+    "trainingId": "listening-03-hard",
+    "sentence": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff, all unreserved pavilion suites will be released to public sports club members.",
+    "translation": "除非企業招待客戶在開賽四十八小時前確認專屬包廂席位安排，否則所有未預約的貴賓包廂都將釋出予大眾俱樂部會員訂購。",
+    "chunks": [
+      {
+        "text": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all unreserved pavilion suites",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to public sports club members."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節包廂 suites 在未來將被釋出，使用未來簡單被動式 will be released。"
+  },
+  {
+    "id": "listening-03-hard-21",
+    "trainingId": "listening-03-hard",
+    "sentence": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances, all complimentary sponsor passes were officially revoked due to severe auditorium capacity regulations.",
+    "translation": "儘管首演夜管弦樂團演出的區域票房需求空前熱烈，所有贊助商公關招待票仍因嚴格的音樂廳容留人數限制而遭正式撤銷。",
+    "chunks": [
+      {
+        "text": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all complimentary sponsor passes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were officially revoked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "due to severe auditorium capacity regulations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "Notwithstanding 介系詞引導讓步關係，主節受詞 passes 被主管機關撤銷，使用過去簡單被動式 were revoked。"
+  },
+  {
+    "id": "listening-03-hard-22",
+    "trainingId": "listening-03-hard",
+    "sentence": "Even if international museum curators secure comprehensive overseas insurance coverage next month, fragile archaeological antiquities will not be exhibited without direct authorization from the cultural heritage ministry.",
+    "translation": "即使國際博物館策展人下個月取得了全面的海外保險保障，在未獲文化部直接授權的情況下，脆弱的考古文物仍將不得對外展出。",
+    "chunks": [
+      {
+        "text": "Even if international museum curators secure comprehensive overseas insurance coverage next month,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "fragile archaeological antiquities",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will not be exhibited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "without direct authorization from the cultural heritage ministry."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Even if 引導假設讓步子句，主節文物承受被展出之動作，否定形式使用未來被動態 will not be exhibited。"
+  },
+  {
+    "id": "listening-03-hard-23",
+    "trainingId": "listening-03-hard",
+    "sentence": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater, the principal musical conductor was reviewing revised musical scores alongside the artistic director.",
+    "translation": "當舞台製作技術人員在露天劇場內校準先進音響設備之際，首席音樂指揮正與藝術總監一同審核修訂後的樂譜。",
+    "chunks": [
+      {
+        "text": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the principal musical conductor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "revised musical scores",
+        "isTargetSlot": false
+      },
+      {
+        "text": "alongside the artistic director."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "雙重過去進行式結構，主節 conductor 正進行審查動作，使用過去進行主動式 was reviewing。"
+  },
+  {
+    "id": "listening-03-hard-24",
+    "trainingId": "listening-03-hard",
+    "sentence": "Because the international charity gala had already exceeded its initial fundraising target by forty percent, organizing committee members have approved additional grant disbursements for local conservatory students.",
+    "translation": "由於國際慈善晚會的籌款金額早已突破原訂目標百分之四十，籌委會成員已核准向當地音樂學院學生發放額外的獎助學金。",
+    "chunks": [
+      {
+        "text": "Because the international charity gala had already exceeded its initial fundraising target by forty percent,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "organizing committee members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "additional grant disbursements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for local conservatory students."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句述及過去完成之籌款成果，主節委員做出撥款決定，使用現在完成主動式 have approved。"
+  },
+  {
+    "id": "listening-03-hard-25",
+    "trainingId": "listening-03-hard",
+    "sentence": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff, all unreserved pavilion suites will be released to public sports club members.",
+    "translation": "除非企業招待客戶在開賽四十八小時前確認專屬包廂席位安排，否則所有未預約的貴賓包廂都將釋出予大眾俱樂部會員訂購。",
+    "chunks": [
+      {
+        "text": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all unreserved pavilion suites",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to public sports club members."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節包廂 suites 在未來將被釋出，使用未來簡單被動式 will be released。"
+  },
+  {
+    "id": "listening-03-hard-26",
+    "trainingId": "listening-03-hard",
+    "sentence": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances, all complimentary sponsor passes were officially revoked due to severe auditorium capacity regulations.",
+    "translation": "儘管首演夜管弦樂團演出的區域票房需求空前熱烈，所有贊助商公關招待票仍因嚴格的音樂廳容留人數限制而遭正式撤銷。",
+    "chunks": [
+      {
+        "text": "Notwithstanding unprecedented regional box office demand for opening-night orchestra performances,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all complimentary sponsor passes",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were officially revoked",
+        "isTargetSlot": true
+      },
+      {
+        "text": "due to severe auditorium capacity regulations."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "Notwithstanding 介系詞引導讓步關係，主節受詞 passes 被主管機關撤銷，使用過去簡單被動式 were revoked。"
+  },
+  {
+    "id": "listening-03-hard-27",
+    "trainingId": "listening-03-hard",
+    "sentence": "Even if international museum curators secure comprehensive overseas insurance coverage next month, fragile archaeological antiquities will not be exhibited without direct authorization from the cultural heritage ministry.",
+    "translation": "即使國際博物館策展人下個月取得了全面的海外保險保障，在未獲文化部直接授權的情況下，脆弱的考古文物仍將不得對外展出。",
+    "chunks": [
+      {
+        "text": "Even if international museum curators secure comprehensive overseas insurance coverage next month,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "fragile archaeological antiquities",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will not be exhibited",
+        "isTargetSlot": true
+      },
+      {
+        "text": "without direct authorization from the cultural heritage ministry."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Even if 引導假設讓步子句，主節文物承受被展出之動作，否定形式使用未來被動態 will not be exhibited。"
+  },
+  {
+    "id": "listening-03-hard-28",
+    "trainingId": "listening-03-hard",
+    "sentence": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater, the principal musical conductor was reviewing revised musical scores alongside the artistic director.",
+    "translation": "當舞台製作技術人員在露天劇場內校準先進音響設備之際，首席音樂指揮正與藝術總監一同審核修訂後的樂譜。",
+    "chunks": [
+      {
+        "text": "While stage production technicians were calibrating advanced acoustic equipment inside the amphitheater,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the principal musical conductor",
+        "isTargetSlot": false
+      },
+      {
+        "text": "was reviewing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "revised musical scores",
+        "isTargetSlot": false
+      },
+      {
+        "text": "alongside the artistic director."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "雙重過去進行式結構，主節 conductor 正進行審查動作，使用過去進行主動式 was reviewing。"
+  },
+  {
+    "id": "listening-03-hard-29",
+    "trainingId": "listening-03-hard",
+    "sentence": "Because the international charity gala had already exceeded its initial fundraising target by forty percent, organizing committee members have approved additional grant disbursements for local conservatory students.",
+    "translation": "由於國際慈善晚會的籌款金額早已突破原訂目標百分之四十，籌委會成員已核准向當地音樂學院學生發放額外的獎助學金。",
+    "chunks": [
+      {
+        "text": "Because the international charity gala had already exceeded its initial fundraising target by forty percent,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "organizing committee members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have approved",
+        "isTargetSlot": true
+      },
+      {
+        "text": "additional grant disbursements",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for local conservatory students."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果子句述及過去完成之籌款成果，主節委員做出撥款決定，使用現在完成主動式 have approved。"
+  },
+  {
+    "id": "listening-03-hard-30",
+    "trainingId": "listening-03-hard",
+    "sentence": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff, all unreserved pavilion suites will be released to public sports club members.",
+    "translation": "除非企業招待客戶在開賽四十八小時前確認專屬包廂席位安排，否則所有未預約的貴賓包廂都將釋出予大眾俱樂部會員訂購。",
+    "chunks": [
+      {
+        "text": "Unless corporate hospitality clients confirm their private box seating arrangements forty-eight hours before kickoff,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all unreserved pavilion suites",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be released",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to public sports club members."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件句中，主節包廂 suites 在未來將被釋出，使用未來簡單被動式 will be released。"
+  }
+]

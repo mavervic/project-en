@@ -1,0 +1,926 @@
+[
+  {
+    "id": "listening-13-hard-01",
+    "trainingId": "listening-13-hard",
+    "sentence": "Despite prolonged economic recessionary pressures across prime retail consumer markets, corporate finance directors have declared quarterly dividend distributions to equity shareholders following unexpectedly strong export revenues.",
+    "translation": "儘管主要零售消費市場面臨長期的經濟衰退壓力，但在意外強勁的出口營收支撐下，企業財務總監仍已向普通股股東宣布發放季度股利分配。",
+    "chunks": [
+      {
+        "text": "Despite prolonged economic recessionary pressures across prime retail consumer markets,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate finance directors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have declared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly dividend distributions to equity shareholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "following unexpectedly strong export revenues."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Despite 介系詞片語引導讓步背景，主節財務總監宣布發放股利，使用現在完成主動式 have declared。"
+  },
+  {
+    "id": "listening-13-hard-02",
+    "trainingId": "listening-13-hard",
+    "sentence": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing, independent external examiners will issue qualified financial reporting statements.",
+    "translation": "除非合格會計師在年度審計結帳前核對調和所有外幣避險差額，否則獨立外部查核機構將發布附保留意見的財務報告書。",
+    "chunks": [
+      {
+        "text": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "independent external examiners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will issue",
+        "isTargetSlot": true
+      },
+      {
+        "text": "qualified financial reporting statements."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節查核機構預計將發布意見，使用未來簡單主動式 will issue。"
+  },
+  {
+    "id": "listening-13-hard-03",
+    "trainingId": "listening-13-hard",
+    "sentence": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps, senior risk analysts were assessing international sovereign debt credit ratings across emerging markets.",
+    "translation": "當企業財務部專家正在執行演算法交叉貨幣利率交換交易時，資深風控分析師正評估新興市場的國際主權債券信用評等。",
+    "chunks": [
+      {
+        "text": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "senior risk analysts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were assessing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "international sovereign debt credit ratings across emerging markets."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節分析師執行評估動作，使用過去進行主動式 were assessing。"
+  },
+  {
+    "id": "listening-13-hard-04",
+    "trainingId": "listening-13-hard",
+    "sentence": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly, the corporate investment committee has postponed long-term factory construction bond issuances.",
+    "translation": "由於空前的通膨飆升大幅推高了浮動資本支出成本，企業投資委員會已推遲了長期建廠債券的發行計畫。",
+    "chunks": [
+      {
+        "text": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate investment committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has postponed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "long-term factory construction bond issuances."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，投資委員會已採取推遲決策，使用現在完成主動式 has postponed。"
+  },
+  {
+    "id": "listening-13-hard-05",
+    "trainingId": "listening-13-hard",
+    "sentence": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded, the multinational manufacturing conglomerate would have expanded its domestic research facilities.",
+    "translation": "倘若市政稅務機關在會計年度結束前核准了法定商業投資抵減稅額，該跨國製造集團當初就會擴建其國內研發設施了。",
+    "chunks": [
+      {
+        "text": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the multinational manufacturing conglomerate",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its domestic research facilities."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... approved），主節集團採取擴充動作，使用 would have expanded。"
+  },
+  {
+    "id": "listening-13-hard-06",
+    "trainingId": "listening-13-hard",
+    "sentence": "Despite prolonged economic recessionary pressures across prime retail consumer markets, corporate finance directors have declared quarterly dividend distributions to equity shareholders following unexpectedly strong export revenues.",
+    "translation": "儘管主要零售消費市場面臨長期的經濟衰退壓力，但在意外強勁的出口營收支撐下，企業財務總監仍已向普通股股東宣布發放季度股利分配。",
+    "chunks": [
+      {
+        "text": "Despite prolonged economic recessionary pressures across prime retail consumer markets,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate finance directors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have declared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly dividend distributions to equity shareholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "following unexpectedly strong export revenues."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Despite 介系詞片語引導讓步背景，主節財務總監宣布發放股利，使用現在完成主動式 have declared。"
+  },
+  {
+    "id": "listening-13-hard-07",
+    "trainingId": "listening-13-hard",
+    "sentence": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing, independent external examiners will issue qualified financial reporting statements.",
+    "translation": "除非合格會計師在年度審計結帳前核對調和所有外幣避險差額，否則獨立外部查核機構將發布附保留意見的財務報告書。",
+    "chunks": [
+      {
+        "text": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "independent external examiners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will issue",
+        "isTargetSlot": true
+      },
+      {
+        "text": "qualified financial reporting statements."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節查核機構預計將發布意見，使用未來簡單主動式 will issue。"
+  },
+  {
+    "id": "listening-13-hard-08",
+    "trainingId": "listening-13-hard",
+    "sentence": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps, senior risk analysts were assessing international sovereign debt credit ratings across emerging markets.",
+    "translation": "當企業財務部專家正在執行演算法交叉貨幣利率交換交易時，資深風控分析師正評估新興市場的國際主權債券信用評等。",
+    "chunks": [
+      {
+        "text": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "senior risk analysts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were assessing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "international sovereign debt credit ratings across emerging markets."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節分析師執行評估動作，使用過去進行主動式 were assessing。"
+  },
+  {
+    "id": "listening-13-hard-09",
+    "trainingId": "listening-13-hard",
+    "sentence": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly, the corporate investment committee has postponed long-term factory construction bond issuances.",
+    "translation": "由於空前的通膨飆升大幅推高了浮動資本支出成本，企業投資委員會已推遲了長期建廠債券的發行計畫。",
+    "chunks": [
+      {
+        "text": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate investment committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has postponed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "long-term factory construction bond issuances."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，投資委員會已採取推遲決策，使用現在完成主動式 has postponed。"
+  },
+  {
+    "id": "listening-13-hard-10",
+    "trainingId": "listening-13-hard",
+    "sentence": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded, the multinational manufacturing conglomerate would have expanded its domestic research facilities.",
+    "translation": "倘若市政稅務機關在會計年度結束前核准了法定商業投資抵減稅額，該跨國製造集團當初就會擴建其國內研發設施了。",
+    "chunks": [
+      {
+        "text": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the multinational manufacturing conglomerate",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its domestic research facilities."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... approved），主節集團採取擴充動作，使用 would have expanded。"
+  },
+  {
+    "id": "listening-13-hard-11",
+    "trainingId": "listening-13-hard",
+    "sentence": "Despite prolonged economic recessionary pressures across prime retail consumer markets, corporate finance directors have declared quarterly dividend distributions to equity shareholders following unexpectedly strong export revenues.",
+    "translation": "儘管主要零售消費市場面臨長期的經濟衰退壓力，但在意外強勁的出口營收支撐下，企業財務總監仍已向普通股股東宣布發放季度股利分配。",
+    "chunks": [
+      {
+        "text": "Despite prolonged economic recessionary pressures across prime retail consumer markets,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate finance directors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have declared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly dividend distributions to equity shareholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "following unexpectedly strong export revenues."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Despite 介系詞片語引導讓步背景，主節財務總監宣布發放股利，使用現在完成主動式 have declared。"
+  },
+  {
+    "id": "listening-13-hard-12",
+    "trainingId": "listening-13-hard",
+    "sentence": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing, independent external examiners will issue qualified financial reporting statements.",
+    "translation": "除非合格會計師在年度審計結帳前核對調和所有外幣避險差額，否則獨立外部查核機構將發布附保留意見的財務報告書。",
+    "chunks": [
+      {
+        "text": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "independent external examiners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will issue",
+        "isTargetSlot": true
+      },
+      {
+        "text": "qualified financial reporting statements."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節查核機構預計將發布意見，使用未來簡單主動式 will issue。"
+  },
+  {
+    "id": "listening-13-hard-13",
+    "trainingId": "listening-13-hard",
+    "sentence": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps, senior risk analysts were assessing international sovereign debt credit ratings across emerging markets.",
+    "translation": "當企業財務部專家正在執行演算法交叉貨幣利率交換交易時，資深風控分析師正評估新興市場的國際主權債券信用評等。",
+    "chunks": [
+      {
+        "text": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "senior risk analysts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were assessing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "international sovereign debt credit ratings across emerging markets."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節分析師執行評估動作，使用過去進行主動式 were assessing。"
+  },
+  {
+    "id": "listening-13-hard-14",
+    "trainingId": "listening-13-hard",
+    "sentence": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly, the corporate investment committee has postponed long-term factory construction bond issuances.",
+    "translation": "由於空前的通膨飆升大幅推高了浮動資本支出成本，企業投資委員會已推遲了長期建廠債券的發行計畫。",
+    "chunks": [
+      {
+        "text": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate investment committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has postponed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "long-term factory construction bond issuances."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，投資委員會已採取推遲決策，使用現在完成主動式 has postponed。"
+  },
+  {
+    "id": "listening-13-hard-15",
+    "trainingId": "listening-13-hard",
+    "sentence": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded, the multinational manufacturing conglomerate would have expanded its domestic research facilities.",
+    "translation": "倘若市政稅務機關在會計年度結束前核准了法定商業投資抵減稅額，該跨國製造集團當初就會擴建其國內研發設施了。",
+    "chunks": [
+      {
+        "text": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the multinational manufacturing conglomerate",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its domestic research facilities."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... approved），主節集團採取擴充動作，使用 would have expanded。"
+  },
+  {
+    "id": "listening-13-hard-16",
+    "trainingId": "listening-13-hard",
+    "sentence": "Despite prolonged economic recessionary pressures across prime retail consumer markets, corporate finance directors have declared quarterly dividend distributions to equity shareholders following unexpectedly strong export revenues.",
+    "translation": "儘管主要零售消費市場面臨長期的經濟衰退壓力，但在意外強勁的出口營收支撐下，企業財務總監仍已向普通股股東宣布發放季度股利分配。",
+    "chunks": [
+      {
+        "text": "Despite prolonged economic recessionary pressures across prime retail consumer markets,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate finance directors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have declared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly dividend distributions to equity shareholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "following unexpectedly strong export revenues."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Despite 介系詞片語引導讓步背景，主節財務總監宣布發放股利，使用現在完成主動式 have declared。"
+  },
+  {
+    "id": "listening-13-hard-17",
+    "trainingId": "listening-13-hard",
+    "sentence": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing, independent external examiners will issue qualified financial reporting statements.",
+    "translation": "除非合格會計師在年度審計結帳前核對調和所有外幣避險差額，否則獨立外部查核機構將發布附保留意見的財務報告書。",
+    "chunks": [
+      {
+        "text": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "independent external examiners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will issue",
+        "isTargetSlot": true
+      },
+      {
+        "text": "qualified financial reporting statements."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節查核機構預計將發布意見，使用未來簡單主動式 will issue。"
+  },
+  {
+    "id": "listening-13-hard-18",
+    "trainingId": "listening-13-hard",
+    "sentence": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps, senior risk analysts were assessing international sovereign debt credit ratings across emerging markets.",
+    "translation": "當企業財務部專家正在執行演算法交叉貨幣利率交換交易時，資深風控分析師正評估新興市場的國際主權債券信用評等。",
+    "chunks": [
+      {
+        "text": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "senior risk analysts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were assessing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "international sovereign debt credit ratings across emerging markets."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節分析師執行評估動作，使用過去進行主動式 were assessing。"
+  },
+  {
+    "id": "listening-13-hard-19",
+    "trainingId": "listening-13-hard",
+    "sentence": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly, the corporate investment committee has postponed long-term factory construction bond issuances.",
+    "translation": "由於空前的通膨飆升大幅推高了浮動資本支出成本，企業投資委員會已推遲了長期建廠債券的發行計畫。",
+    "chunks": [
+      {
+        "text": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate investment committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has postponed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "long-term factory construction bond issuances."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，投資委員會已採取推遲決策，使用現在完成主動式 has postponed。"
+  },
+  {
+    "id": "listening-13-hard-20",
+    "trainingId": "listening-13-hard",
+    "sentence": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded, the multinational manufacturing conglomerate would have expanded its domestic research facilities.",
+    "translation": "倘若市政稅務機關在會計年度結束前核准了法定商業投資抵減稅額，該跨國製造集團當初就會擴建其國內研發設施了。",
+    "chunks": [
+      {
+        "text": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the multinational manufacturing conglomerate",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its domestic research facilities."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... approved），主節集團採取擴充動作，使用 would have expanded。"
+  },
+  {
+    "id": "listening-13-hard-21",
+    "trainingId": "listening-13-hard",
+    "sentence": "Despite prolonged economic recessionary pressures across prime retail consumer markets, corporate finance directors have declared quarterly dividend distributions to equity shareholders following unexpectedly strong export revenues.",
+    "translation": "儘管主要零售消費市場面臨長期的經濟衰退壓力，但在意外強勁的出口營收支撐下，企業財務總監仍已向普通股股東宣布發放季度股利分配。",
+    "chunks": [
+      {
+        "text": "Despite prolonged economic recessionary pressures across prime retail consumer markets,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate finance directors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have declared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly dividend distributions to equity shareholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "following unexpectedly strong export revenues."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Despite 介系詞片語引導讓步背景，主節財務總監宣布發放股利，使用現在完成主動式 have declared。"
+  },
+  {
+    "id": "listening-13-hard-22",
+    "trainingId": "listening-13-hard",
+    "sentence": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing, independent external examiners will issue qualified financial reporting statements.",
+    "translation": "除非合格會計師在年度審計結帳前核對調和所有外幣避險差額，否則獨立外部查核機構將發布附保留意見的財務報告書。",
+    "chunks": [
+      {
+        "text": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "independent external examiners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will issue",
+        "isTargetSlot": true
+      },
+      {
+        "text": "qualified financial reporting statements."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節查核機構預計將發布意見，使用未來簡單主動式 will issue。"
+  },
+  {
+    "id": "listening-13-hard-23",
+    "trainingId": "listening-13-hard",
+    "sentence": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps, senior risk analysts were assessing international sovereign debt credit ratings across emerging markets.",
+    "translation": "當企業財務部專家正在執行演算法交叉貨幣利率交換交易時，資深風控分析師正評估新興市場的國際主權債券信用評等。",
+    "chunks": [
+      {
+        "text": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "senior risk analysts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were assessing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "international sovereign debt credit ratings across emerging markets."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節分析師執行評估動作，使用過去進行主動式 were assessing。"
+  },
+  {
+    "id": "listening-13-hard-24",
+    "trainingId": "listening-13-hard",
+    "sentence": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly, the corporate investment committee has postponed long-term factory construction bond issuances.",
+    "translation": "由於空前的通膨飆升大幅推高了浮動資本支出成本，企業投資委員會已推遲了長期建廠債券的發行計畫。",
+    "chunks": [
+      {
+        "text": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate investment committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has postponed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "long-term factory construction bond issuances."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，投資委員會已採取推遲決策，使用現在完成主動式 has postponed。"
+  },
+  {
+    "id": "listening-13-hard-25",
+    "trainingId": "listening-13-hard",
+    "sentence": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded, the multinational manufacturing conglomerate would have expanded its domestic research facilities.",
+    "translation": "倘若市政稅務機關在會計年度結束前核准了法定商業投資抵減稅額，該跨國製造集團當初就會擴建其國內研發設施了。",
+    "chunks": [
+      {
+        "text": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the multinational manufacturing conglomerate",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its domestic research facilities."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... approved），主節集團採取擴充動作，使用 would have expanded。"
+  },
+  {
+    "id": "listening-13-hard-26",
+    "trainingId": "listening-13-hard",
+    "sentence": "Despite prolonged economic recessionary pressures across prime retail consumer markets, corporate finance directors have declared quarterly dividend distributions to equity shareholders following unexpectedly strong export revenues.",
+    "translation": "儘管主要零售消費市場面臨長期的經濟衰退壓力，但在意外強勁的出口營收支撐下，企業財務總監仍已向普通股股東宣布發放季度股利分配。",
+    "chunks": [
+      {
+        "text": "Despite prolonged economic recessionary pressures across prime retail consumer markets,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate finance directors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have declared",
+        "isTargetSlot": true
+      },
+      {
+        "text": "quarterly dividend distributions to equity shareholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "following unexpectedly strong export revenues."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "Despite 介系詞片語引導讓步背景，主節財務總監宣布發放股利，使用現在完成主動式 have declared。"
+  },
+  {
+    "id": "listening-13-hard-27",
+    "trainingId": "listening-13-hard",
+    "sentence": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing, independent external examiners will issue qualified financial reporting statements.",
+    "translation": "除非合格會計師在年度審計結帳前核對調和所有外幣避險差額，否則獨立外部查核機構將發布附保留意見的財務報告書。",
+    "chunks": [
+      {
+        "text": "Unless certified public accountants reconcile all foreign currency hedging discrepancies prior to the annual audit closing,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "independent external examiners",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will issue",
+        "isTargetSlot": true
+      },
+      {
+        "text": "qualified financial reporting statements."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節查核機構預計將發布意見，使用未來簡單主動式 will issue。"
+  },
+  {
+    "id": "listening-13-hard-28",
+    "trainingId": "listening-13-hard",
+    "sentence": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps, senior risk analysts were assessing international sovereign debt credit ratings across emerging markets.",
+    "translation": "當企業財務部專家正在執行演算法交叉貨幣利率交換交易時，資深風控分析師正評估新興市場的國際主權債券信用評等。",
+    "chunks": [
+      {
+        "text": "While corporate treasury specialists were executing algorithmic cross-currency interest rate swaps,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "senior risk analysts",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were assessing",
+        "isTargetSlot": true
+      },
+      {
+        "text": "international sovereign debt credit ratings across emerging markets."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行背景，主節分析師執行評估動作，使用過去進行主動式 were assessing。"
+  },
+  {
+    "id": "listening-13-hard-29",
+    "trainingId": "listening-13-hard",
+    "sentence": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly, the corporate investment committee has postponed long-term factory construction bond issuances.",
+    "translation": "由於空前的通膨飆升大幅推高了浮動資本支出成本，企業投資委員會已推遲了長期建廠債券的發行計畫。",
+    "chunks": [
+      {
+        "text": "Because unprecedented inflationary spikes had escalated variable capital expenditure costs significantly,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the corporate investment committee",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has postponed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "long-term factory construction bond issuances."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，投資委員會已採取推遲決策，使用現在完成主動式 has postponed。"
+  },
+  {
+    "id": "listening-13-hard-30",
+    "trainingId": "listening-13-hard",
+    "sentence": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded, the multinational manufacturing conglomerate would have expanded its domestic research facilities.",
+    "translation": "倘若市政稅務機關在會計年度結束前核准了法定商業投資抵減稅額，該跨國製造集團當初就會擴建其國內研發設施了。",
+    "chunks": [
+      {
+        "text": "Had municipal tax authorities approved statutory commercial investment credits before the fiscal year concluded,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the multinational manufacturing conglomerate",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have expanded",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its domestic research facilities."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... approved），主節集團採取擴充動作，使用 would have expanded。"
+  }
+]

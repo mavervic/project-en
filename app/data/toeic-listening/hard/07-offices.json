@@ -1,0 +1,902 @@
+[
+  {
+    "id": "listening-07-hard-01",
+    "trainingId": "listening-07-hard",
+    "sentence": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors, central air conditioning compressors in tower B malfunctioned repeatedly during last week's heatwave.",
+    "translation": "儘管合格電氣承包商已執行了嚴謹的季度設施巡檢，B 棟大樓的中央空調壓縮機在上週熱浪期間仍屢次發生故障。",
+    "chunks": [
+      {
+        "text": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "central air conditioning compressors in tower B",
+        "isTargetSlot": false
+      },
+      {
+        "text": "malfunctioned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "repeatedly during last week's heatwave."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "In spite of 介系詞片語引導讓步，主節主詞 compressors 自行發生故障，動詞 malfunctioned 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-07-hard-02",
+    "trainingId": "listening-07-hard",
+    "sentence": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit, multi-function copying devices will be disconnected from the corporate local area network.",
+    "translation": "除非行政辦公室經理在年度會計審計前授權預定的印表機韌體更新，否則多功能事務影印機將自企業內部網路離線切斷。",
+    "chunks": [
+      {
+        "text": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "multi-function copying devices",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be disconnected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "from the corporate local area network."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬句中，主節設備 devices 在未來被斷開連線，使用未來簡單被動式 will be disconnected。"
+  },
+  {
+    "id": "listening-07-hard-03",
+    "trainingId": "listening-07-hard",
+    "sentence": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites, administrative staff members were holding all scheduled project meetings in temporary annex rooms.",
+    "translation": "當總務工程人員在主管會議套間升級高速光纖網路配線時，行政同仁正在臨時附屬會議室進行所有預定的專案會議。",
+    "chunks": [
+      {
+        "text": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "administrative staff members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were holding",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all scheduled project meetings in temporary annex rooms."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行狀態，主節同仁執行開會動作，使用過去進行主動式 were holding。"
+  },
+  {
+    "id": "listening-07-hard-04",
+    "trainingId": "listening-07-hard",
+    "sentence": "Because consecutive power surges had permanently damaged central document telecommunication servers, IT systems administrators have deployed temporary backup cloud routing protocols to restore communications.",
+    "translation": "由於連續的突波電壓已永久損壞中央文件通訊伺服器，IT 系統管理員已部署臨時備份雲端路由協議以恢復通訊。",
+    "chunks": [
+      {
+        "text": "Because consecutive power surges had permanently damaged central document telecommunication servers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "IT systems administrators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have deployed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "temporary backup cloud routing protocols to restore communications."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，管理員部署備援協議並已完成生效，使用現在完成主動式 have deployed。"
+  },
+  {
+    "id": "listening-07-hard-05",
+    "trainingId": "listening-07-hard",
+    "sentence": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began, corporate headquarters would have completed its workplace redesign on schedule.",
+    "translation": "倘若大樓營運協調員在全球家具供應鏈中斷前就採購了組合式辦公隔屏，企業總部早就能依原訂進度完成職場重新設計了。",
+    "chunks": [
+      {
+        "text": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate headquarters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its workplace redesign on schedule."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... procured），主節主詞 headquarters 執行完成工作，使用 would have completed。"
+  },
+  {
+    "id": "listening-07-hard-06",
+    "trainingId": "listening-07-hard",
+    "sentence": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors, central air conditioning compressors in tower B malfunctioned repeatedly during last week's heatwave.",
+    "translation": "儘管合格電氣承包商已執行了嚴謹的季度設施巡檢，B 棟大樓的中央空調壓縮機在上週熱浪期間仍屢次發生故障。",
+    "chunks": [
+      {
+        "text": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "central air conditioning compressors in tower B",
+        "isTargetSlot": false
+      },
+      {
+        "text": "malfunctioned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "repeatedly during last week's heatwave."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "In spite of 介系詞片語引導讓步，主節主詞 compressors 自行發生故障，動詞 malfunctioned 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-07-hard-07",
+    "trainingId": "listening-07-hard",
+    "sentence": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit, multi-function copying devices will be disconnected from the corporate local area network.",
+    "translation": "除非行政辦公室經理在年度會計審計前授權預定的印表機韌體更新，否則多功能事務影印機將自企業內部網路離線切斷。",
+    "chunks": [
+      {
+        "text": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "multi-function copying devices",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be disconnected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "from the corporate local area network."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬句中，主節設備 devices 在未來被斷開連線，使用未來簡單被動式 will be disconnected。"
+  },
+  {
+    "id": "listening-07-hard-08",
+    "trainingId": "listening-07-hard",
+    "sentence": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites, administrative staff members were holding all scheduled project meetings in temporary annex rooms.",
+    "translation": "當總務工程人員在主管會議套間升級高速光纖網路配線時，行政同仁正在臨時附屬會議室進行所有預定的專案會議。",
+    "chunks": [
+      {
+        "text": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "administrative staff members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were holding",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all scheduled project meetings in temporary annex rooms."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行狀態，主節同仁執行開會動作，使用過去進行主動式 were holding。"
+  },
+  {
+    "id": "listening-07-hard-09",
+    "trainingId": "listening-07-hard",
+    "sentence": "Because consecutive power surges had permanently damaged central document telecommunication servers, IT systems administrators have deployed temporary backup cloud routing protocols to restore communications.",
+    "translation": "由於連續的突波電壓已永久損壞中央文件通訊伺服器，IT 系統管理員已部署臨時備份雲端路由協議以恢復通訊。",
+    "chunks": [
+      {
+        "text": "Because consecutive power surges had permanently damaged central document telecommunication servers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "IT systems administrators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have deployed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "temporary backup cloud routing protocols to restore communications."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，管理員部署備援協議並已完成生效，使用現在完成主動式 have deployed。"
+  },
+  {
+    "id": "listening-07-hard-10",
+    "trainingId": "listening-07-hard",
+    "sentence": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began, corporate headquarters would have completed its workplace redesign on schedule.",
+    "translation": "倘若大樓營運協調員在全球家具供應鏈中斷前就採購了組合式辦公隔屏，企業總部早就能依原訂進度完成職場重新設計了。",
+    "chunks": [
+      {
+        "text": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate headquarters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its workplace redesign on schedule."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... procured），主節主詞 headquarters 執行完成工作，使用 would have completed。"
+  },
+  {
+    "id": "listening-07-hard-11",
+    "trainingId": "listening-07-hard",
+    "sentence": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors, central air conditioning compressors in tower B malfunctioned repeatedly during last week's heatwave.",
+    "translation": "儘管合格電氣承包商已執行了嚴謹的季度設施巡檢，B 棟大樓的中央空調壓縮機在上週熱浪期間仍屢次發生故障。",
+    "chunks": [
+      {
+        "text": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "central air conditioning compressors in tower B",
+        "isTargetSlot": false
+      },
+      {
+        "text": "malfunctioned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "repeatedly during last week's heatwave."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "In spite of 介系詞片語引導讓步，主節主詞 compressors 自行發生故障，動詞 malfunctioned 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-07-hard-12",
+    "trainingId": "listening-07-hard",
+    "sentence": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit, multi-function copying devices will be disconnected from the corporate local area network.",
+    "translation": "除非行政辦公室經理在年度會計審計前授權預定的印表機韌體更新，否則多功能事務影印機將自企業內部網路離線切斷。",
+    "chunks": [
+      {
+        "text": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "multi-function copying devices",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be disconnected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "from the corporate local area network."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬句中，主節設備 devices 在未來被斷開連線，使用未來簡單被動式 will be disconnected。"
+  },
+  {
+    "id": "listening-07-hard-13",
+    "trainingId": "listening-07-hard",
+    "sentence": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites, administrative staff members were holding all scheduled project meetings in temporary annex rooms.",
+    "translation": "當總務工程人員在主管會議套間升級高速光纖網路配線時，行政同仁正在臨時附屬會議室進行所有預定的專案會議。",
+    "chunks": [
+      {
+        "text": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "administrative staff members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were holding",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all scheduled project meetings in temporary annex rooms."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行狀態，主節同仁執行開會動作，使用過去進行主動式 were holding。"
+  },
+  {
+    "id": "listening-07-hard-14",
+    "trainingId": "listening-07-hard",
+    "sentence": "Because consecutive power surges had permanently damaged central document telecommunication servers, IT systems administrators have deployed temporary backup cloud routing protocols to restore communications.",
+    "translation": "由於連續的突波電壓已永久損壞中央文件通訊伺服器，IT 系統管理員已部署臨時備份雲端路由協議以恢復通訊。",
+    "chunks": [
+      {
+        "text": "Because consecutive power surges had permanently damaged central document telecommunication servers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "IT systems administrators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have deployed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "temporary backup cloud routing protocols to restore communications."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，管理員部署備援協議並已完成生效，使用現在完成主動式 have deployed。"
+  },
+  {
+    "id": "listening-07-hard-15",
+    "trainingId": "listening-07-hard",
+    "sentence": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began, corporate headquarters would have completed its workplace redesign on schedule.",
+    "translation": "倘若大樓營運協調員在全球家具供應鏈中斷前就採購了組合式辦公隔屏，企業總部早就能依原訂進度完成職場重新設計了。",
+    "chunks": [
+      {
+        "text": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate headquarters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its workplace redesign on schedule."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... procured），主節主詞 headquarters 執行完成工作，使用 would have completed。"
+  },
+  {
+    "id": "listening-07-hard-16",
+    "trainingId": "listening-07-hard",
+    "sentence": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors, central air conditioning compressors in tower B malfunctioned repeatedly during last week's heatwave.",
+    "translation": "儘管合格電氣承包商已執行了嚴謹的季度設施巡檢，B 棟大樓的中央空調壓縮機在上週熱浪期間仍屢次發生故障。",
+    "chunks": [
+      {
+        "text": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "central air conditioning compressors in tower B",
+        "isTargetSlot": false
+      },
+      {
+        "text": "malfunctioned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "repeatedly during last week's heatwave."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "In spite of 介系詞片語引導讓步，主節主詞 compressors 自行發生故障，動詞 malfunctioned 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-07-hard-17",
+    "trainingId": "listening-07-hard",
+    "sentence": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit, multi-function copying devices will be disconnected from the corporate local area network.",
+    "translation": "除非行政辦公室經理在年度會計審計前授權預定的印表機韌體更新，否則多功能事務影印機將自企業內部網路離線切斷。",
+    "chunks": [
+      {
+        "text": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "multi-function copying devices",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be disconnected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "from the corporate local area network."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬句中，主節設備 devices 在未來被斷開連線，使用未來簡單被動式 will be disconnected。"
+  },
+  {
+    "id": "listening-07-hard-18",
+    "trainingId": "listening-07-hard",
+    "sentence": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites, administrative staff members were holding all scheduled project meetings in temporary annex rooms.",
+    "translation": "當總務工程人員在主管會議套間升級高速光纖網路配線時，行政同仁正在臨時附屬會議室進行所有預定的專案會議。",
+    "chunks": [
+      {
+        "text": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "administrative staff members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were holding",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all scheduled project meetings in temporary annex rooms."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行狀態，主節同仁執行開會動作，使用過去進行主動式 were holding。"
+  },
+  {
+    "id": "listening-07-hard-19",
+    "trainingId": "listening-07-hard",
+    "sentence": "Because consecutive power surges had permanently damaged central document telecommunication servers, IT systems administrators have deployed temporary backup cloud routing protocols to restore communications.",
+    "translation": "由於連續的突波電壓已永久損壞中央文件通訊伺服器，IT 系統管理員已部署臨時備份雲端路由協議以恢復通訊。",
+    "chunks": [
+      {
+        "text": "Because consecutive power surges had permanently damaged central document telecommunication servers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "IT systems administrators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have deployed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "temporary backup cloud routing protocols to restore communications."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，管理員部署備援協議並已完成生效，使用現在完成主動式 have deployed。"
+  },
+  {
+    "id": "listening-07-hard-20",
+    "trainingId": "listening-07-hard",
+    "sentence": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began, corporate headquarters would have completed its workplace redesign on schedule.",
+    "translation": "倘若大樓營運協調員在全球家具供應鏈中斷前就採購了組合式辦公隔屏，企業總部早就能依原訂進度完成職場重新設計了。",
+    "chunks": [
+      {
+        "text": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate headquarters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its workplace redesign on schedule."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... procured），主節主詞 headquarters 執行完成工作，使用 would have completed。"
+  },
+  {
+    "id": "listening-07-hard-21",
+    "trainingId": "listening-07-hard",
+    "sentence": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors, central air conditioning compressors in tower B malfunctioned repeatedly during last week's heatwave.",
+    "translation": "儘管合格電氣承包商已執行了嚴謹的季度設施巡檢，B 棟大樓的中央空調壓縮機在上週熱浪期間仍屢次發生故障。",
+    "chunks": [
+      {
+        "text": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "central air conditioning compressors in tower B",
+        "isTargetSlot": false
+      },
+      {
+        "text": "malfunctioned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "repeatedly during last week's heatwave."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "In spite of 介系詞片語引導讓步，主節主詞 compressors 自行發生故障，動詞 malfunctioned 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-07-hard-22",
+    "trainingId": "listening-07-hard",
+    "sentence": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit, multi-function copying devices will be disconnected from the corporate local area network.",
+    "translation": "除非行政辦公室經理在年度會計審計前授權預定的印表機韌體更新，否則多功能事務影印機將自企業內部網路離線切斷。",
+    "chunks": [
+      {
+        "text": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "multi-function copying devices",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be disconnected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "from the corporate local area network."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬句中，主節設備 devices 在未來被斷開連線，使用未來簡單被動式 will be disconnected。"
+  },
+  {
+    "id": "listening-07-hard-23",
+    "trainingId": "listening-07-hard",
+    "sentence": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites, administrative staff members were holding all scheduled project meetings in temporary annex rooms.",
+    "translation": "當總務工程人員在主管會議套間升級高速光纖網路配線時，行政同仁正在臨時附屬會議室進行所有預定的專案會議。",
+    "chunks": [
+      {
+        "text": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "administrative staff members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were holding",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all scheduled project meetings in temporary annex rooms."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行狀態，主節同仁執行開會動作，使用過去進行主動式 were holding。"
+  },
+  {
+    "id": "listening-07-hard-24",
+    "trainingId": "listening-07-hard",
+    "sentence": "Because consecutive power surges had permanently damaged central document telecommunication servers, IT systems administrators have deployed temporary backup cloud routing protocols to restore communications.",
+    "translation": "由於連續的突波電壓已永久損壞中央文件通訊伺服器，IT 系統管理員已部署臨時備份雲端路由協議以恢復通訊。",
+    "chunks": [
+      {
+        "text": "Because consecutive power surges had permanently damaged central document telecommunication servers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "IT systems administrators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have deployed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "temporary backup cloud routing protocols to restore communications."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，管理員部署備援協議並已完成生效，使用現在完成主動式 have deployed。"
+  },
+  {
+    "id": "listening-07-hard-25",
+    "trainingId": "listening-07-hard",
+    "sentence": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began, corporate headquarters would have completed its workplace redesign on schedule.",
+    "translation": "倘若大樓營運協調員在全球家具供應鏈中斷前就採購了組合式辦公隔屏，企業總部早就能依原訂進度完成職場重新設計了。",
+    "chunks": [
+      {
+        "text": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate headquarters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its workplace redesign on schedule."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... procured），主節主詞 headquarters 執行完成工作，使用 would have completed。"
+  },
+  {
+    "id": "listening-07-hard-26",
+    "trainingId": "listening-07-hard",
+    "sentence": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors, central air conditioning compressors in tower B malfunctioned repeatedly during last week's heatwave.",
+    "translation": "儘管合格電氣承包商已執行了嚴謹的季度設施巡檢，B 棟大樓的中央空調壓縮機在上週熱浪期間仍屢次發生故障。",
+    "chunks": [
+      {
+        "text": "In spite of rigorous quarterly facility inspections conducted by certified electrical contractors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "central air conditioning compressors in tower B",
+        "isTargetSlot": false
+      },
+      {
+        "text": "malfunctioned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "repeatedly during last week's heatwave."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "In spite of 介系詞片語引導讓步，主節主詞 compressors 自行發生故障，動詞 malfunctioned 為過去簡單主動式。"
+  },
+  {
+    "id": "listening-07-hard-27",
+    "trainingId": "listening-07-hard",
+    "sentence": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit, multi-function copying devices will be disconnected from the corporate local area network.",
+    "translation": "除非行政辦公室經理在年度會計審計前授權預定的印表機韌體更新，否則多功能事務影印機將自企業內部網路離線切斷。",
+    "chunks": [
+      {
+        "text": "Unless administrative office managers authorize scheduled printer firmware updates prior to the annual fiscal audit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "multi-function copying devices",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be disconnected",
+        "isTargetSlot": true
+      },
+      {
+        "text": "from the corporate local area network."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬句中，主節設備 devices 在未來被斷開連線，使用未來簡單被動式 will be disconnected。"
+  },
+  {
+    "id": "listening-07-hard-28",
+    "trainingId": "listening-07-hard",
+    "sentence": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites, administrative staff members were holding all scheduled project meetings in temporary annex rooms.",
+    "translation": "當總務工程人員在主管會議套間升級高速光纖網路配線時，行政同仁正在臨時附屬會議室進行所有預定的專案會議。",
+    "chunks": [
+      {
+        "text": "While facilities management engineers were upgrading high-speed fiber internet cabling throughout the executive boardroom suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "administrative staff members",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were holding",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all scheduled project meetings in temporary annex rooms."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導平行過去進行狀態，主節同仁執行開會動作，使用過去進行主動式 were holding。"
+  },
+  {
+    "id": "listening-07-hard-29",
+    "trainingId": "listening-07-hard",
+    "sentence": "Because consecutive power surges had permanently damaged central document telecommunication servers, IT systems administrators have deployed temporary backup cloud routing protocols to restore communications.",
+    "translation": "由於連續的突波電壓已永久損壞中央文件通訊伺服器，IT 系統管理員已部署臨時備份雲端路由協議以恢復通訊。",
+    "chunks": [
+      {
+        "text": "Because consecutive power surges had permanently damaged central document telecommunication servers,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "IT systems administrators",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have deployed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "temporary backup cloud routing protocols to restore communications."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "因果情境中，管理員部署備援協議並已完成生效，使用現在完成主動式 have deployed。"
+  },
+  {
+    "id": "listening-07-hard-30",
+    "trainingId": "listening-07-hard",
+    "sentence": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began, corporate headquarters would have completed its workplace redesign on schedule.",
+    "translation": "倘若大樓營運協調員在全球家具供應鏈中斷前就採購了組合式辦公隔屏，企業總部早就能依原訂進度完成職場重新設計了。",
+    "chunks": [
+      {
+        "text": "Had building operations coordinators procured modular workstation partitions before global furniture supply chain disruptions began,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate headquarters",
+        "isTargetSlot": false
+      },
+      {
+        "text": "would have completed",
+        "isTargetSlot": true
+      },
+      {
+        "text": "its workplace redesign on schedule."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "與過去事實相反的倒裝假設法（Had... procured），主節主詞 headquarters 執行完成工作，使用 would have completed。"
+  }
+]

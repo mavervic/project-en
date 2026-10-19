@@ -1,0 +1,986 @@
+[
+  {
+    "id": "listening-01-hard-01",
+    "trainingId": "listening-01-hard",
+    "sentence": "Considering that regional airspace restrictions have forced several commercial carriers to reroute their overnight journeys, our corporate travel coordinator will reschedule tomorrow's flight to Frankfurt without incurring supplementary penalty fees.",
+    "translation": "鑑於區域領空限制已迫使數家商業航空公司更改夜航航線，我們的企業差旅協調員將重新安排明日飛往法蘭克福的航班，且無須支付額外的改票罰金。",
+    "chunks": [
+      {
+        "text": "Considering that regional airspace restrictions have forced several commercial carriers to reroute their overnight journeys,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our corporate travel coordinator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will reschedule",
+        "isTargetSlot": true
+      },
+      {
+        "text": "tomorrow's flight to Frankfurt",
+        "isTargetSlot": false
+      },
+      {
+        "text": "without incurring supplementary penalty fees."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在分詞片語 Considering that 引導長因果子句，主節以 coordinator 作主詞，助動詞 will 搭配原形動詞 reschedule 表未來主動規劃。"
+  },
+  {
+    "id": "listening-01-hard-02",
+    "trainingId": "listening-01-hard",
+    "sentence": "Although the executive passenger had repeatedly requested an aisle seat near the emergency exit, all priority reservations had been assigned to senior delegates before check-in commenced.",
+    "translation": "儘管該名主管級旅客曾多次要求安排鄰近緊急出口的走道座位，但在報到手續開始前，所有優先保留位便已被分配給資深代表了。",
+    "chunks": [
+      {
+        "text": "Although the executive passenger had repeatedly requested an aisle seat near the emergency exit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all priority reservations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "had been assigned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to senior delegates",
+        "isTargetSlot": false
+      },
+      {
+        "text": "before check-in commenced."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "時間副詞子句 before... 引導過去時間點，主節發生在其之前且主詞為事物 reservations，使用過去完成被動式 had been assigned。"
+  },
+  {
+    "id": "listening-01-hard-03",
+    "trainingId": "listening-01-hard",
+    "sentence": "Unless inbound international flights can clear customs inspection before midnight tonight, transfer passengers will be accommodated in airport hotels at the airline's expense until tomorrow morning.",
+    "translation": "除非入境國際航班能夠在今晚午夜前完成海關查驗，否則轉機旅客將由航空公司全額負擔費用安置於機場飯店，直至明日早晨為止。",
+    "chunks": [
+      {
+        "text": "Unless inbound international flights can clear customs inspection before midnight tonight,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "transfer passengers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be accommodated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in airport hotels at the airline's expense",
+        "isTargetSlot": false
+      },
+      {
+        "text": "until tomorrow morning."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件從屬連接詞 Unless 引導限制，主節 passengers 接受安置安排，使用未來簡單被動式 will be accommodated。"
+  },
+  {
+    "id": "listening-01-hard-04",
+    "trainingId": "listening-01-hard",
+    "sentence": "While terminal modernization works were being carried out across the central departure concourse, ground handling crews were redirecting all charter travelers toward provisional boarding gates.",
+    "translation": "當中央出境大廳正在全面進行航廈現代化工程之際，地面作業人員正將所有包機旅客引導至臨時登機門。",
+    "chunks": [
+      {
+        "text": "While terminal modernization works were being carried out across the central departure concourse,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ground handling crews",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were redirecting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all charter travelers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "toward provisional boarding gates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 連接詞描寫過去正在進行之背景，主節主詞 crews 執行引導動作，使用過去進行主動式 were redirecting。"
+  },
+  {
+    "id": "listening-01-hard-05",
+    "trainingId": "listening-01-hard",
+    "sentence": "Because locomotive engine maintenance protocols were not rigorously finalized by certified inspectors, the high-speed rail authority has suspended all regional express services pending a thorough safety review.",
+    "translation": "由於機車引擎保養程序未獲合格檢驗員嚴格核定，高鐵管理局已暫停所有區域特快列車服務，以待全面的安全審查。",
+    "chunks": [
+      {
+        "text": "Because locomotive engine maintenance protocols were not rigorously finalized by certified inspectors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the high-speed rail authority",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all regional express services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "pending a thorough safety review."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成式 has suspended 表從過去發生並對當前營運造成直接停擺影響之動作。"
+  },
+  {
+    "id": "listening-01-hard-06",
+    "trainingId": "listening-01-hard",
+    "sentence": "In response to sudden heavy blizzard warnings throughout northern transportation corridors, airline operations supervisors have been monitoring incoming radar reports continuously to avoid ground collisions.",
+    "translation": "為因應北部交通走廊突如其來的暴風雪警報，航空公司營運主管持續監控傳入的雷達報告，以避免地面碰撞事故。",
+    "chunks": [
+      {
+        "text": "In response to sudden heavy blizzard warnings throughout northern transportation corridors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "airline operations supervisors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been monitoring",
+        "isTargetSlot": true
+      },
+      {
+        "text": "incoming radar reports continuously",
+        "isTargetSlot": false
+      },
+      {
+        "text": "to avoid ground collisions."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在完成進行式 have been monitoring 強調從過去持續至現在且仍在進行中的密集監控動作。"
+  },
+  {
+    "id": "listening-01-hard-07",
+    "trainingId": "listening-01-hard",
+    "sentence": "Should unexpected passport discrepancies emerge during electronic biometric verification, affected passengers will be escorted directly to the consular liaison station for comprehensive document authentication.",
+    "translation": "萬一在電子生物辨識驗證過程中出現未預期的護照資料不符，受影響旅客將被直接護送至領事聯絡站進行全面的文件認證。",
+    "chunks": [
+      {
+        "text": "Should unexpected passport discrepancies emerge during electronic biometric verification,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "affected passengers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be escorted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "directly to the consular liaison station",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for comprehensive document authentication."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "倒裝條件句 Should... emerge（相當於 If... should emerge），主節使用未來被動式 will be escorted。"
+  },
+  {
+    "id": "listening-01-hard-08",
+    "trainingId": "listening-01-hard",
+    "sentence": "Even though maritime ferry operators had substantially reinforced vessel mooring lines before the tropical cyclone reached coastal waters, two commercial piers were severely damaged by turbulent tidal surges.",
+    "translation": "儘管海上渡輪營運商在熱帶氣旋抵達沿海水域前已大幅加固船隻繫泊纜繩，兩座商業碼頭仍遭洶湧的潮汐巨浪嚴重損毀。",
+    "chunks": [
+      {
+        "text": "Even though maritime ferry operators had substantially reinforced vessel mooring lines before the tropical cyclone reached coastal waters,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "two commercial piers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were severely damaged",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by turbulent tidal surges."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "Even though 引導讓步子句，主節受詞 piers 遭受海浪損害，使用過去簡單被動式 were damaged。"
+  },
+  {
+    "id": "listening-01-hard-09",
+    "trainingId": "listening-01-hard",
+    "sentence": "Unless corporate travelers retain their original boarding passes alongside detailed fuel payment receipts, travel reimbursement claims cannot be authorized by the central accounting division.",
+    "translation": "除非商務出差人員妥善保留登機證正本及詳細的燃油付款收據，否則差旅核銷申請將無法獲中央會計部門審核批准。",
+    "chunks": [
+      {
+        "text": "Unless corporate travelers retain their original boarding passes alongside detailed fuel payment receipts,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "travel reimbursement claims",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot be authorized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the central accounting division."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 cannot 與被動態 be authorized 結合，表達規則規範下不具備授權資格之現在被動態。"
+  },
+  {
+    "id": "listening-01-hard-10",
+    "trainingId": "listening-01-hard",
+    "sentence": "Given that cross-border train ticketing databases are currently undergoing scheduled software upgrades, online seat reservations will be temporarily disabled until seven o'clock tomorrow morning.",
+    "translation": "鑑於跨境鐵路票務資料庫目前正在進行預定的軟體升級，線上訂位功能將暫時關閉，直至明日早晨七點為止。",
+    "chunks": [
+      {
+        "text": "Given that cross-border train ticketing databases are currently undergoing scheduled software upgrades,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "online seat reservations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be temporarily disabled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "until seven o'clock tomorrow morning."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Given that 引導客觀事實因果，主節 reservations 將在未來被停用，使用未來簡單被動式 will be disabled。"
+  },
+  {
+    "id": "listening-01-hard-11",
+    "trainingId": "listening-01-hard",
+    "sentence": "Considering that regional airspace restrictions have forced several commercial carriers to reroute their overnight journeys, our corporate travel coordinator will reschedule tomorrow's flight to Frankfurt without incurring supplementary penalty fees.",
+    "translation": "鑑於區域領空限制已迫使數家商業航空公司更改夜航航線，我們的企業差旅協調員將重新安排明日飛往法蘭克福的航班，且無須支付額外的改票罰金。",
+    "chunks": [
+      {
+        "text": "Considering that regional airspace restrictions have forced several commercial carriers to reroute their overnight journeys,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our corporate travel coordinator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will reschedule",
+        "isTargetSlot": true
+      },
+      {
+        "text": "tomorrow's flight to Frankfurt",
+        "isTargetSlot": false
+      },
+      {
+        "text": "without incurring supplementary penalty fees."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在分詞片語 Considering that 引導長因果子句，主節以 coordinator 作主詞，助動詞 will 搭配原形動詞 reschedule 表未來主動規劃。"
+  },
+  {
+    "id": "listening-01-hard-12",
+    "trainingId": "listening-01-hard",
+    "sentence": "Although the executive passenger had repeatedly requested an aisle seat near the emergency exit, all priority reservations had been assigned to senior delegates before check-in commenced.",
+    "translation": "儘管該名主管級旅客曾多次要求安排鄰近緊急出口的走道座位，但在報到手續開始前，所有優先保留位便已被分配給資深代表了。",
+    "chunks": [
+      {
+        "text": "Although the executive passenger had repeatedly requested an aisle seat near the emergency exit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all priority reservations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "had been assigned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to senior delegates",
+        "isTargetSlot": false
+      },
+      {
+        "text": "before check-in commenced."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "時間副詞子句 before... 引導過去時間點，主節發生在其之前且主詞為事物 reservations，使用過去完成被動式 had been assigned。"
+  },
+  {
+    "id": "listening-01-hard-13",
+    "trainingId": "listening-01-hard",
+    "sentence": "Unless inbound international flights can clear customs inspection before midnight tonight, transfer passengers will be accommodated in airport hotels at the airline's expense until tomorrow morning.",
+    "translation": "除非入境國際航班能夠在今晚午夜前完成海關查驗，否則轉機旅客將由航空公司全額負擔費用安置於機場飯店，直至明日早晨為止。",
+    "chunks": [
+      {
+        "text": "Unless inbound international flights can clear customs inspection before midnight tonight,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "transfer passengers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be accommodated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in airport hotels at the airline's expense",
+        "isTargetSlot": false
+      },
+      {
+        "text": "until tomorrow morning."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件從屬連接詞 Unless 引導限制，主節 passengers 接受安置安排，使用未來簡單被動式 will be accommodated。"
+  },
+  {
+    "id": "listening-01-hard-14",
+    "trainingId": "listening-01-hard",
+    "sentence": "While terminal modernization works were being carried out across the central departure concourse, ground handling crews were redirecting all charter travelers toward provisional boarding gates.",
+    "translation": "當中央出境大廳正在全面進行航廈現代化工程之際，地面作業人員正將所有包機旅客引導至臨時登機門。",
+    "chunks": [
+      {
+        "text": "While terminal modernization works were being carried out across the central departure concourse,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ground handling crews",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were redirecting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all charter travelers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "toward provisional boarding gates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 連接詞描寫過去正在進行之背景，主節主詞 crews 執行引導動作，使用過去進行主動式 were redirecting。"
+  },
+  {
+    "id": "listening-01-hard-15",
+    "trainingId": "listening-01-hard",
+    "sentence": "Because locomotive engine maintenance protocols were not rigorously finalized by certified inspectors, the high-speed rail authority has suspended all regional express services pending a thorough safety review.",
+    "translation": "由於機車引擎保養程序未獲合格檢驗員嚴格核定，高鐵管理局已暫停所有區域特快列車服務，以待全面的安全審查。",
+    "chunks": [
+      {
+        "text": "Because locomotive engine maintenance protocols were not rigorously finalized by certified inspectors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the high-speed rail authority",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all regional express services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "pending a thorough safety review."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成式 has suspended 表從過去發生並對當前營運造成直接停擺影響之動作。"
+  },
+  {
+    "id": "listening-01-hard-16",
+    "trainingId": "listening-01-hard",
+    "sentence": "In response to sudden heavy blizzard warnings throughout northern transportation corridors, airline operations supervisors have been monitoring incoming radar reports continuously to avoid ground collisions.",
+    "translation": "為因應北部交通走廊突如其來的暴風雪警報，航空公司營運主管持續監控傳入的雷達報告，以避免地面碰撞事故。",
+    "chunks": [
+      {
+        "text": "In response to sudden heavy blizzard warnings throughout northern transportation corridors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "airline operations supervisors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been monitoring",
+        "isTargetSlot": true
+      },
+      {
+        "text": "incoming radar reports continuously",
+        "isTargetSlot": false
+      },
+      {
+        "text": "to avoid ground collisions."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在完成進行式 have been monitoring 強調從過去持續至現在且仍在進行中的密集監控動作。"
+  },
+  {
+    "id": "listening-01-hard-17",
+    "trainingId": "listening-01-hard",
+    "sentence": "Should unexpected passport discrepancies emerge during electronic biometric verification, affected passengers will be escorted directly to the consular liaison station for comprehensive document authentication.",
+    "translation": "萬一在電子生物辨識驗證過程中出現未預期的護照資料不符，受影響旅客將被直接護送至領事聯絡站進行全面的文件認證。",
+    "chunks": [
+      {
+        "text": "Should unexpected passport discrepancies emerge during electronic biometric verification,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "affected passengers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be escorted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "directly to the consular liaison station",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for comprehensive document authentication."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "倒裝條件句 Should... emerge（相當於 If... should emerge），主節使用未來被動式 will be escorted。"
+  },
+  {
+    "id": "listening-01-hard-18",
+    "trainingId": "listening-01-hard",
+    "sentence": "Even though maritime ferry operators had substantially reinforced vessel mooring lines before the tropical cyclone reached coastal waters, two commercial piers were severely damaged by turbulent tidal surges.",
+    "translation": "儘管海上渡輪營運商在熱帶氣旋抵達沿海水域前已大幅加固船隻繫泊纜繩，兩座商業碼頭仍遭洶湧的潮汐巨浪嚴重損毀。",
+    "chunks": [
+      {
+        "text": "Even though maritime ferry operators had substantially reinforced vessel mooring lines before the tropical cyclone reached coastal waters,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "two commercial piers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were severely damaged",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by turbulent tidal surges."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "Even though 引導讓步子句，主節受詞 piers 遭受海浪損害，使用過去簡單被動式 were damaged。"
+  },
+  {
+    "id": "listening-01-hard-19",
+    "trainingId": "listening-01-hard",
+    "sentence": "Unless corporate travelers retain their original boarding passes alongside detailed fuel payment receipts, travel reimbursement claims cannot be authorized by the central accounting division.",
+    "translation": "除非商務出差人員妥善保留登機證正本及詳細的燃油付款收據，否則差旅核銷申請將無法獲中央會計部門審核批准。",
+    "chunks": [
+      {
+        "text": "Unless corporate travelers retain their original boarding passes alongside detailed fuel payment receipts,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "travel reimbursement claims",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot be authorized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the central accounting division."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 cannot 與被動態 be authorized 結合，表達規則規範下不具備授權資格之現在被動態。"
+  },
+  {
+    "id": "listening-01-hard-20",
+    "trainingId": "listening-01-hard",
+    "sentence": "Given that cross-border train ticketing databases are currently undergoing scheduled software upgrades, online seat reservations will be temporarily disabled until seven o'clock tomorrow morning.",
+    "translation": "鑑於跨境鐵路票務資料庫目前正在進行預定的軟體升級，線上訂位功能將暫時關閉，直至明日早晨七點為止。",
+    "chunks": [
+      {
+        "text": "Given that cross-border train ticketing databases are currently undergoing scheduled software upgrades,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "online seat reservations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be temporarily disabled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "until seven o'clock tomorrow morning."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Given that 引導客觀事實因果，主節 reservations 將在未來被停用，使用未來簡單被動式 will be disabled。"
+  },
+  {
+    "id": "listening-01-hard-21",
+    "trainingId": "listening-01-hard",
+    "sentence": "Considering that regional airspace restrictions have forced several commercial carriers to reroute their overnight journeys, our corporate travel coordinator will reschedule tomorrow's flight to Frankfurt without incurring supplementary penalty fees.",
+    "translation": "鑑於區域領空限制已迫使數家商業航空公司更改夜航航線，我們的企業差旅協調員將重新安排明日飛往法蘭克福的航班，且無須支付額外的改票罰金。",
+    "chunks": [
+      {
+        "text": "Considering that regional airspace restrictions have forced several commercial carriers to reroute their overnight journeys,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "our corporate travel coordinator",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will reschedule",
+        "isTargetSlot": true
+      },
+      {
+        "text": "tomorrow's flight to Frankfurt",
+        "isTargetSlot": false
+      },
+      {
+        "text": "without incurring supplementary penalty fees."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在分詞片語 Considering that 引導長因果子句，主節以 coordinator 作主詞，助動詞 will 搭配原形動詞 reschedule 表未來主動規劃。"
+  },
+  {
+    "id": "listening-01-hard-22",
+    "trainingId": "listening-01-hard",
+    "sentence": "Although the executive passenger had repeatedly requested an aisle seat near the emergency exit, all priority reservations had been assigned to senior delegates before check-in commenced.",
+    "translation": "儘管該名主管級旅客曾多次要求安排鄰近緊急出口的走道座位，但在報到手續開始前，所有優先保留位便已被分配給資深代表了。",
+    "chunks": [
+      {
+        "text": "Although the executive passenger had repeatedly requested an aisle seat near the emergency exit,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "all priority reservations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "had been assigned",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to senior delegates",
+        "isTargetSlot": false
+      },
+      {
+        "text": "before check-in commenced."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "perfect"
+    },
+    "grammarNote": "時間副詞子句 before... 引導過去時間點，主節發生在其之前且主詞為事物 reservations，使用過去完成被動式 had been assigned。"
+  },
+  {
+    "id": "listening-01-hard-23",
+    "trainingId": "listening-01-hard",
+    "sentence": "Unless inbound international flights can clear customs inspection before midnight tonight, transfer passengers will be accommodated in airport hotels at the airline's expense until tomorrow morning.",
+    "translation": "除非入境國際航班能夠在今晚午夜前完成海關查驗，否則轉機旅客將由航空公司全額負擔費用安置於機場飯店，直至明日早晨為止。",
+    "chunks": [
+      {
+        "text": "Unless inbound international flights can clear customs inspection before midnight tonight,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "transfer passengers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be accommodated",
+        "isTargetSlot": true
+      },
+      {
+        "text": "in airport hotels at the airline's expense",
+        "isTargetSlot": false
+      },
+      {
+        "text": "until tomorrow morning."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "條件從屬連接詞 Unless 引導限制，主節 passengers 接受安置安排，使用未來簡單被動式 will be accommodated。"
+  },
+  {
+    "id": "listening-01-hard-24",
+    "trainingId": "listening-01-hard",
+    "sentence": "While terminal modernization works were being carried out across the central departure concourse, ground handling crews were redirecting all charter travelers toward provisional boarding gates.",
+    "translation": "當中央出境大廳正在全面進行航廈現代化工程之際，地面作業人員正將所有包機旅客引導至臨時登機門。",
+    "chunks": [
+      {
+        "text": "While terminal modernization works were being carried out across the central departure concourse,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "ground handling crews",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were redirecting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all charter travelers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "toward provisional boarding gates."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 連接詞描寫過去正在進行之背景，主節主詞 crews 執行引導動作，使用過去進行主動式 were redirecting。"
+  },
+  {
+    "id": "listening-01-hard-25",
+    "trainingId": "listening-01-hard",
+    "sentence": "Because locomotive engine maintenance protocols were not rigorously finalized by certified inspectors, the high-speed rail authority has suspended all regional express services pending a thorough safety review.",
+    "translation": "由於機車引擎保養程序未獲合格檢驗員嚴格核定，高鐵管理局已暫停所有區域特快列車服務，以待全面的安全審查。",
+    "chunks": [
+      {
+        "text": "Because locomotive engine maintenance protocols were not rigorously finalized by certified inspectors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "the high-speed rail authority",
+        "isTargetSlot": false
+      },
+      {
+        "text": "has suspended",
+        "isTargetSlot": true
+      },
+      {
+        "text": "all regional express services",
+        "isTargetSlot": false
+      },
+      {
+        "text": "pending a thorough safety review."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成式 has suspended 表從過去發生並對當前營運造成直接停擺影響之動作。"
+  },
+  {
+    "id": "listening-01-hard-26",
+    "trainingId": "listening-01-hard",
+    "sentence": "In response to sudden heavy blizzard warnings throughout northern transportation corridors, airline operations supervisors have been monitoring incoming radar reports continuously to avoid ground collisions.",
+    "translation": "為因應北部交通走廊突如其來的暴風雪警報，航空公司營運主管持續監控傳入的雷達報告，以避免地面碰撞事故。",
+    "chunks": [
+      {
+        "text": "In response to sudden heavy blizzard warnings throughout northern transportation corridors,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "airline operations supervisors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have been monitoring",
+        "isTargetSlot": true
+      },
+      {
+        "text": "incoming radar reports continuously",
+        "isTargetSlot": false
+      },
+      {
+        "text": "to avoid ground collisions."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在完成進行式 have been monitoring 強調從過去持續至現在且仍在進行中的密集監控動作。"
+  },
+  {
+    "id": "listening-01-hard-27",
+    "trainingId": "listening-01-hard",
+    "sentence": "Should unexpected passport discrepancies emerge during electronic biometric verification, affected passengers will be escorted directly to the consular liaison station for comprehensive document authentication.",
+    "translation": "萬一在電子生物辨識驗證過程中出現未預期的護照資料不符，受影響旅客將被直接護送至領事聯絡站進行全面的文件認證。",
+    "chunks": [
+      {
+        "text": "Should unexpected passport discrepancies emerge during electronic biometric verification,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "affected passengers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be escorted",
+        "isTargetSlot": true
+      },
+      {
+        "text": "directly to the consular liaison station",
+        "isTargetSlot": false
+      },
+      {
+        "text": "for comprehensive document authentication."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "倒裝條件句 Should... emerge（相當於 If... should emerge），主節使用未來被動式 will be escorted。"
+  },
+  {
+    "id": "listening-01-hard-28",
+    "trainingId": "listening-01-hard",
+    "sentence": "Even though maritime ferry operators had substantially reinforced vessel mooring lines before the tropical cyclone reached coastal waters, two commercial piers were severely damaged by turbulent tidal surges.",
+    "translation": "儘管海上渡輪營運商在熱帶氣旋抵達沿海水域前已大幅加固船隻繫泊纜繩，兩座商業碼頭仍遭洶湧的潮汐巨浪嚴重損毀。",
+    "chunks": [
+      {
+        "text": "Even though maritime ferry operators had substantially reinforced vessel mooring lines before the tropical cyclone reached coastal waters,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "two commercial piers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were severely damaged",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by turbulent tidal surges."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "Even though 引導讓步子句，主節受詞 piers 遭受海浪損害，使用過去簡單被動式 were damaged。"
+  },
+  {
+    "id": "listening-01-hard-29",
+    "trainingId": "listening-01-hard",
+    "sentence": "Unless corporate travelers retain their original boarding passes alongside detailed fuel payment receipts, travel reimbursement claims cannot be authorized by the central accounting division.",
+    "translation": "除非商務出差人員妥善保留登機證正本及詳細的燃油付款收據，否則差旅核銷申請將無法獲中央會計部門審核批准。",
+    "chunks": [
+      {
+        "text": "Unless corporate travelers retain their original boarding passes alongside detailed fuel payment receipts,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "travel reimbursement claims",
+        "isTargetSlot": false
+      },
+      {
+        "text": "cannot be authorized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "by the central accounting division."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "情態動詞 cannot 與被動態 be authorized 結合，表達規則規範下不具備授權資格之現在被動態。"
+  },
+  {
+    "id": "listening-01-hard-30",
+    "trainingId": "listening-01-hard",
+    "sentence": "Given that cross-border train ticketing databases are currently undergoing scheduled software upgrades, online seat reservations will be temporarily disabled until seven o'clock tomorrow morning.",
+    "translation": "鑑於跨境鐵路票務資料庫目前正在進行預定的軟體升級，線上訂位功能將暫時關閉，直至明日早晨七點為止。",
+    "chunks": [
+      {
+        "text": "Given that cross-border train ticketing databases are currently undergoing scheduled software upgrades,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "online seat reservations",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will be temporarily disabled",
+        "isTargetSlot": true
+      },
+      {
+        "text": "until seven o'clock tomorrow morning."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Given that 引導客觀事實因果，主節 reservations 將在未來被停用，使用未來簡單被動式 will be disabled。"
+  }
+]

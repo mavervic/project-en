@@ -23,8 +23,8 @@ describe('TOEIC Listening Bank Architecture', () => {
     'Financing & Budgeting',
   ];
 
-  it('defines exactly 26 business situational units (13 Easy, 13 Medium) with proper metadata', () => {
-    expect(TOEIC_LISTENING_UNITS).toHaveLength(26);
+  it('defines exactly 39 business situational units (13 Easy, 13 Medium, 13 Hard) with proper metadata', () => {
+    expect(TOEIC_LISTENING_UNITS).toHaveLength(39);
 
     // Easy tier units (1-13)
     for (let idx = 0; idx < 13; idx++) {
@@ -45,16 +45,27 @@ describe('TOEIC Listening Bank Architecture', () => {
       expect(unit.difficulty).toBe('Medium');
       expect(unit.tags.length).toBeGreaterThan(0);
     }
+
+    // Hard tier units (27-39)
+    for (let idx = 26; idx < 39; idx++) {
+      const unit = TOEIC_LISTENING_UNITS[idx];
+      expect(unit.title).toBe(`${expectedBaseTitles[idx - 26]} (Hard)`);
+      expect(unit.trainingId).toBe(`listening-${String(idx - 25).padStart(2, '0')}-hard`);
+      expect(unit.unitNumber).toBe(idx + 1);
+      expect(unit.difficulty).toBe('Hard');
+      expect(unit.tags.length).toBeGreaterThan(0);
+    }
   });
 
-  it('contains exactly 780 valid questions (30 per unit) with translations and chunks', () => {
-    expect(TOEIC_LISTENING_QUESTIONS).toHaveLength(780);
+  it('contains exactly 1170 valid questions (30 per unit) with translations and chunks', () => {
+    expect(TOEIC_LISTENING_QUESTIONS).toHaveLength(1170);
     const unitsCovered = new Set(TOEIC_LISTENING_QUESTIONS.map((q) => q.trainingId));
-    expect(unitsCovered.size).toBe(26);
+    expect(unitsCovered.size).toBe(39);
 
     for (let idx = 1; idx <= 13; idx++) {
       const easyUnitId = `listening-${String(idx).padStart(2, '0')}-easy`;
       const mediumUnitId = `listening-${String(idx).padStart(2, '0')}-medium`;
+      const hardUnitId = `listening-${String(idx).padStart(2, '0')}-hard`;
 
       const easyQuestions = TOEIC_LISTENING_QUESTIONS.filter((q) => q.trainingId === easyUnitId);
       expect(easyQuestions).toHaveLength(30);
@@ -63,6 +74,9 @@ describe('TOEIC Listening Bank Architecture', () => {
         (q) => q.trainingId === mediumUnitId
       );
       expect(mediumQuestions).toHaveLength(30);
+
+      const hardQuestions = TOEIC_LISTENING_QUESTIONS.filter((q) => q.trainingId === hardUnitId);
+      expect(hardQuestions).toHaveLength(30);
     }
 
     for (const q of TOEIC_LISTENING_QUESTIONS) {
@@ -85,17 +99,19 @@ describe('TOEIC Listening Bank Architecture', () => {
     expect(TOEIC_LISTENING_META.id).toBe('toeic-listening');
     expect(TOEIC_LISTENING_META.category).toBe('TOEIC Listening 聽力題庫');
     expect(TOEIC_LISTENING_META.groups).toHaveLength(13);
-    expect(TOEIC_LISTENING_BANK.totalTrainings).toBe(26);
+    expect(TOEIC_LISTENING_BANK.totalTrainings).toBe(39);
     expect(TOEIC_LISTENING_BANK.questions).toEqual(TOEIC_LISTENING_QUESTIONS);
 
     TOEIC_LISTENING_META.groups?.forEach((group, idx) => {
-      expect(group.units).toHaveLength(2);
+      expect(group.units).toHaveLength(3);
       expect(group.units[0].difficulty).toBe('Easy');
       expect(group.units[0].trainingId).toBe(`listening-${String(idx + 1).padStart(2, '0')}-easy`);
       expect(group.units[1].difficulty).toBe('Medium');
       expect(group.units[1].trainingId).toBe(
         `listening-${String(idx + 1).padStart(2, '0')}-medium`
       );
+      expect(group.units[2].difficulty).toBe('Hard');
+      expect(group.units[2].trainingId).toBe(`listening-${String(idx + 1).padStart(2, '0')}-hard`);
     });
   });
 
@@ -107,9 +123,9 @@ describe('TOEIC Listening Bank Architecture', () => {
     const bank = getBankById('toeic-listening');
     expect(bank).toBeDefined();
     expect(bank?.id).toBe('toeic-listening');
-    expect(bank?.questions.length).toBe(780);
+    expect(bank?.questions.length).toBe(1170);
 
     const questions = getBankQuestions('toeic-listening');
-    expect(questions.length).toBe(780);
+    expect(questions.length).toBe(1170);
   });
 });

@@ -1,0 +1,950 @@
+[
+  {
+    "id": "listening-04-hard-01",
+    "trainingId": "listening-04-hard",
+    "sentence": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses, corporate tenants have finalized lease agreements for three full floors of prime downtown office space.",
+    "translation": "儘管針對年度維護費調漲條款進行了長時間的商用租約談判，企業租戶最終仍完成了市中心精華地段三個整層辦公室的租賃協議簽署。",
+    "chunks": [
+      {
+        "text": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate tenants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "lease agreements for three full floors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "of prime downtown office space."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "介系詞 Despite 引導談判背景，主節租戶 tenants 完成協議簽署，使用現在完成主動式 have finalized。"
+  },
+  {
+    "id": "listening-04-hard-02",
+    "trainingId": "listening-04-hard",
+    "sentence": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites, corporate legal counsel will reject the proposed long-term tenancy contract extension.",
+    "translation": "除非商辦大樓物業管理方能保證相鄰會議室間具備充足的隔音設施，否則企業法律顧問將拒絕擬議的長期租約展延合約。",
+    "chunks": [
+      {
+        "text": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate legal counsel",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will reject",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the proposed long-term tenancy contract extension."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節法務 counsel 預計將採取拒絕行動，使用未來簡單主動式 will reject。"
+  },
+  {
+    "id": "listening-04-hard-03",
+    "trainingId": "listening-04-hard",
+    "sentence": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse, industrial safety inspectors were documenting multiple compliance violations in their official logbooks.",
+    "translation": "當室內統包工程人員正在對商業倉庫的結構性電氣線路進行翻修時，工安檢查員正在其官方紀錄簿上記錄多項違規事項。",
+    "chunks": [
+      {
+        "text": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial safety inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were documenting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "multiple compliance violations in their official logbooks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導雙重過去進行式情境，主節稽查人員 inspectors 正在記錄違規，使用過去進行主動式 were documenting。"
+  },
+  {
+    "id": "listening-04-hard-04",
+    "trainingId": "listening-04-hard",
+    "sentence": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday, commercial property developers were forced to revise their architectural master plans substantially.",
+    "translation": "由於市政分區主管機關上週五出人意料地駁回了建物擴建許可，商業不動產開發商被迫大幅修改其建築整體規劃圖則。",
+    "chunks": [
+      {
+        "text": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial property developers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to revise their architectural master plans substantially."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果句中原因子句為過去完成式，主節開發商被迫修訂計畫，使用過去簡單被動式 were forced。"
+  },
+  {
+    "id": "listening-04-hard-05",
+    "trainingId": "listening-04-hard",
+    "sentence": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations, commercial leaseholders will terminate contractual commitments immediately without incurring legal penalties.",
+    "translation": "萬一在工業廠房地基下方發現有害化學物質污染，商業承租人將立即終止合約承諾，且無須承擔法律罰則。",
+    "chunks": [
+      {
+        "text": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial leaseholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will terminate",
+        "isTargetSlot": true
+      },
+      {
+        "text": "contractual commitments immediately",
+        "isTargetSlot": false
+      },
+      {
+        "text": "without incurring legal penalties."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If... should be discovered），主節承租人主動終止合約，使用未來簡單主動式 will terminate。"
+  },
+  {
+    "id": "listening-04-hard-06",
+    "trainingId": "listening-04-hard",
+    "sentence": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses, corporate tenants have finalized lease agreements for three full floors of prime downtown office space.",
+    "translation": "儘管針對年度維護費調漲條款進行了長時間的商用租約談判，企業租戶最終仍完成了市中心精華地段三個整層辦公室的租賃協議簽署。",
+    "chunks": [
+      {
+        "text": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate tenants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "lease agreements for three full floors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "of prime downtown office space."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "介系詞 Despite 引導談判背景，主節租戶 tenants 完成協議簽署，使用現在完成主動式 have finalized。"
+  },
+  {
+    "id": "listening-04-hard-07",
+    "trainingId": "listening-04-hard",
+    "sentence": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites, corporate legal counsel will reject the proposed long-term tenancy contract extension.",
+    "translation": "除非商辦大樓物業管理方能保證相鄰會議室間具備充足的隔音設施，否則企業法律顧問將拒絕擬議的長期租約展延合約。",
+    "chunks": [
+      {
+        "text": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate legal counsel",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will reject",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the proposed long-term tenancy contract extension."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節法務 counsel 預計將採取拒絕行動，使用未來簡單主動式 will reject。"
+  },
+  {
+    "id": "listening-04-hard-08",
+    "trainingId": "listening-04-hard",
+    "sentence": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse, industrial safety inspectors were documenting multiple compliance violations in their official logbooks.",
+    "translation": "當室內統包工程人員正在對商業倉庫的結構性電氣線路進行翻修時，工安檢查員正在其官方紀錄簿上記錄多項違規事項。",
+    "chunks": [
+      {
+        "text": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial safety inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were documenting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "multiple compliance violations in their official logbooks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導雙重過去進行式情境，主節稽查人員 inspectors 正在記錄違規，使用過去進行主動式 were documenting。"
+  },
+  {
+    "id": "listening-04-hard-09",
+    "trainingId": "listening-04-hard",
+    "sentence": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday, commercial property developers were forced to revise their architectural master plans substantially.",
+    "translation": "由於市政分區主管機關上週五出人意料地駁回了建物擴建許可，商業不動產開發商被迫大幅修改其建築整體規劃圖則。",
+    "chunks": [
+      {
+        "text": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial property developers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to revise their architectural master plans substantially."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果句中原因子句為過去完成式，主節開發商被迫修訂計畫，使用過去簡單被動式 were forced。"
+  },
+  {
+    "id": "listening-04-hard-10",
+    "trainingId": "listening-04-hard",
+    "sentence": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations, commercial leaseholders will terminate contractual commitments immediately without incurring legal penalties.",
+    "translation": "萬一在工業廠房地基下方發現有害化學物質污染，商業承租人將立即終止合約承諾，且無須承擔法律罰則。",
+    "chunks": [
+      {
+        "text": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial leaseholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will terminate",
+        "isTargetSlot": true
+      },
+      {
+        "text": "contractual commitments immediately",
+        "isTargetSlot": false
+      },
+      {
+        "text": "without incurring legal penalties."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If... should be discovered），主節承租人主動終止合約，使用未來簡單主動式 will terminate。"
+  },
+  {
+    "id": "listening-04-hard-11",
+    "trainingId": "listening-04-hard",
+    "sentence": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses, corporate tenants have finalized lease agreements for three full floors of prime downtown office space.",
+    "translation": "儘管針對年度維護費調漲條款進行了長時間的商用租約談判，企業租戶最終仍完成了市中心精華地段三個整層辦公室的租賃協議簽署。",
+    "chunks": [
+      {
+        "text": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate tenants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "lease agreements for three full floors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "of prime downtown office space."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "介系詞 Despite 引導談判背景，主節租戶 tenants 完成協議簽署，使用現在完成主動式 have finalized。"
+  },
+  {
+    "id": "listening-04-hard-12",
+    "trainingId": "listening-04-hard",
+    "sentence": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites, corporate legal counsel will reject the proposed long-term tenancy contract extension.",
+    "translation": "除非商辦大樓物業管理方能保證相鄰會議室間具備充足的隔音設施，否則企業法律顧問將拒絕擬議的長期租約展延合約。",
+    "chunks": [
+      {
+        "text": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate legal counsel",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will reject",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the proposed long-term tenancy contract extension."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節法務 counsel 預計將採取拒絕行動，使用未來簡單主動式 will reject。"
+  },
+  {
+    "id": "listening-04-hard-13",
+    "trainingId": "listening-04-hard",
+    "sentence": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse, industrial safety inspectors were documenting multiple compliance violations in their official logbooks.",
+    "translation": "當室內統包工程人員正在對商業倉庫的結構性電氣線路進行翻修時，工安檢查員正在其官方紀錄簿上記錄多項違規事項。",
+    "chunks": [
+      {
+        "text": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial safety inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were documenting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "multiple compliance violations in their official logbooks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導雙重過去進行式情境，主節稽查人員 inspectors 正在記錄違規，使用過去進行主動式 were documenting。"
+  },
+  {
+    "id": "listening-04-hard-14",
+    "trainingId": "listening-04-hard",
+    "sentence": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday, commercial property developers were forced to revise their architectural master plans substantially.",
+    "translation": "由於市政分區主管機關上週五出人意料地駁回了建物擴建許可，商業不動產開發商被迫大幅修改其建築整體規劃圖則。",
+    "chunks": [
+      {
+        "text": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial property developers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to revise their architectural master plans substantially."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果句中原因子句為過去完成式，主節開發商被迫修訂計畫，使用過去簡單被動式 were forced。"
+  },
+  {
+    "id": "listening-04-hard-15",
+    "trainingId": "listening-04-hard",
+    "sentence": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations, commercial leaseholders will terminate contractual commitments immediately without incurring legal penalties.",
+    "translation": "萬一在工業廠房地基下方發現有害化學物質污染，商業承租人將立即終止合約承諾，且無須承擔法律罰則。",
+    "chunks": [
+      {
+        "text": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial leaseholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will terminate",
+        "isTargetSlot": true
+      },
+      {
+        "text": "contractual commitments immediately",
+        "isTargetSlot": false
+      },
+      {
+        "text": "without incurring legal penalties."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If... should be discovered），主節承租人主動終止合約，使用未來簡單主動式 will terminate。"
+  },
+  {
+    "id": "listening-04-hard-16",
+    "trainingId": "listening-04-hard",
+    "sentence": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses, corporate tenants have finalized lease agreements for three full floors of prime downtown office space.",
+    "translation": "儘管針對年度維護費調漲條款進行了長時間的商用租約談判，企業租戶最終仍完成了市中心精華地段三個整層辦公室的租賃協議簽署。",
+    "chunks": [
+      {
+        "text": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate tenants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "lease agreements for three full floors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "of prime downtown office space."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "介系詞 Despite 引導談判背景，主節租戶 tenants 完成協議簽署，使用現在完成主動式 have finalized。"
+  },
+  {
+    "id": "listening-04-hard-17",
+    "trainingId": "listening-04-hard",
+    "sentence": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites, corporate legal counsel will reject the proposed long-term tenancy contract extension.",
+    "translation": "除非商辦大樓物業管理方能保證相鄰會議室間具備充足的隔音設施，否則企業法律顧問將拒絕擬議的長期租約展延合約。",
+    "chunks": [
+      {
+        "text": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate legal counsel",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will reject",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the proposed long-term tenancy contract extension."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節法務 counsel 預計將採取拒絕行動，使用未來簡單主動式 will reject。"
+  },
+  {
+    "id": "listening-04-hard-18",
+    "trainingId": "listening-04-hard",
+    "sentence": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse, industrial safety inspectors were documenting multiple compliance violations in their official logbooks.",
+    "translation": "當室內統包工程人員正在對商業倉庫的結構性電氣線路進行翻修時，工安檢查員正在其官方紀錄簿上記錄多項違規事項。",
+    "chunks": [
+      {
+        "text": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial safety inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were documenting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "multiple compliance violations in their official logbooks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導雙重過去進行式情境，主節稽查人員 inspectors 正在記錄違規，使用過去進行主動式 were documenting。"
+  },
+  {
+    "id": "listening-04-hard-19",
+    "trainingId": "listening-04-hard",
+    "sentence": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday, commercial property developers were forced to revise their architectural master plans substantially.",
+    "translation": "由於市政分區主管機關上週五出人意料地駁回了建物擴建許可，商業不動產開發商被迫大幅修改其建築整體規劃圖則。",
+    "chunks": [
+      {
+        "text": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial property developers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to revise their architectural master plans substantially."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果句中原因子句為過去完成式，主節開發商被迫修訂計畫，使用過去簡單被動式 were forced。"
+  },
+  {
+    "id": "listening-04-hard-20",
+    "trainingId": "listening-04-hard",
+    "sentence": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations, commercial leaseholders will terminate contractual commitments immediately without incurring legal penalties.",
+    "translation": "萬一在工業廠房地基下方發現有害化學物質污染，商業承租人將立即終止合約承諾，且無須承擔法律罰則。",
+    "chunks": [
+      {
+        "text": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial leaseholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will terminate",
+        "isTargetSlot": true
+      },
+      {
+        "text": "contractual commitments immediately",
+        "isTargetSlot": false
+      },
+      {
+        "text": "without incurring legal penalties."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If... should be discovered），主節承租人主動終止合約，使用未來簡單主動式 will terminate。"
+  },
+  {
+    "id": "listening-04-hard-21",
+    "trainingId": "listening-04-hard",
+    "sentence": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses, corporate tenants have finalized lease agreements for three full floors of prime downtown office space.",
+    "translation": "儘管針對年度維護費調漲條款進行了長時間的商用租約談判，企業租戶最終仍完成了市中心精華地段三個整層辦公室的租賃協議簽署。",
+    "chunks": [
+      {
+        "text": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate tenants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "lease agreements for three full floors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "of prime downtown office space."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "介系詞 Despite 引導談判背景，主節租戶 tenants 完成協議簽署，使用現在完成主動式 have finalized。"
+  },
+  {
+    "id": "listening-04-hard-22",
+    "trainingId": "listening-04-hard",
+    "sentence": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites, corporate legal counsel will reject the proposed long-term tenancy contract extension.",
+    "translation": "除非商辦大樓物業管理方能保證相鄰會議室間具備充足的隔音設施，否則企業法律顧問將拒絕擬議的長期租約展延合約。",
+    "chunks": [
+      {
+        "text": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate legal counsel",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will reject",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the proposed long-term tenancy contract extension."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節法務 counsel 預計將採取拒絕行動，使用未來簡單主動式 will reject。"
+  },
+  {
+    "id": "listening-04-hard-23",
+    "trainingId": "listening-04-hard",
+    "sentence": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse, industrial safety inspectors were documenting multiple compliance violations in their official logbooks.",
+    "translation": "當室內統包工程人員正在對商業倉庫的結構性電氣線路進行翻修時，工安檢查員正在其官方紀錄簿上記錄多項違規事項。",
+    "chunks": [
+      {
+        "text": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial safety inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were documenting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "multiple compliance violations in their official logbooks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導雙重過去進行式情境，主節稽查人員 inspectors 正在記錄違規，使用過去進行主動式 were documenting。"
+  },
+  {
+    "id": "listening-04-hard-24",
+    "trainingId": "listening-04-hard",
+    "sentence": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday, commercial property developers were forced to revise their architectural master plans substantially.",
+    "translation": "由於市政分區主管機關上週五出人意料地駁回了建物擴建許可，商業不動產開發商被迫大幅修改其建築整體規劃圖則。",
+    "chunks": [
+      {
+        "text": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial property developers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to revise their architectural master plans substantially."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果句中原因子句為過去完成式，主節開發商被迫修訂計畫，使用過去簡單被動式 were forced。"
+  },
+  {
+    "id": "listening-04-hard-25",
+    "trainingId": "listening-04-hard",
+    "sentence": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations, commercial leaseholders will terminate contractual commitments immediately without incurring legal penalties.",
+    "translation": "萬一在工業廠房地基下方發現有害化學物質污染，商業承租人將立即終止合約承諾，且無須承擔法律罰則。",
+    "chunks": [
+      {
+        "text": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial leaseholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will terminate",
+        "isTargetSlot": true
+      },
+      {
+        "text": "contractual commitments immediately",
+        "isTargetSlot": false
+      },
+      {
+        "text": "without incurring legal penalties."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If... should be discovered），主節承租人主動終止合約，使用未來簡單主動式 will terminate。"
+  },
+  {
+    "id": "listening-04-hard-26",
+    "trainingId": "listening-04-hard",
+    "sentence": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses, corporate tenants have finalized lease agreements for three full floors of prime downtown office space.",
+    "translation": "儘管針對年度維護費調漲條款進行了長時間的商用租約談判，企業租戶最終仍完成了市中心精華地段三個整層辦公室的租賃協議簽署。",
+    "chunks": [
+      {
+        "text": "Despite prolonged commercial lease negotiations concerning annual maintenance escalation clauses,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate tenants",
+        "isTargetSlot": false
+      },
+      {
+        "text": "have finalized",
+        "isTargetSlot": true
+      },
+      {
+        "text": "lease agreements for three full floors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "of prime downtown office space."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "介系詞 Despite 引導談判背景，主節租戶 tenants 完成協議簽署，使用現在完成主動式 have finalized。"
+  },
+  {
+    "id": "listening-04-hard-27",
+    "trainingId": "listening-04-hard",
+    "sentence": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites, corporate legal counsel will reject the proposed long-term tenancy contract extension.",
+    "translation": "除非商辦大樓物業管理方能保證相鄰會議室間具備充足的隔音設施，否則企業法律顧問將拒絕擬議的長期租約展延合約。",
+    "chunks": [
+      {
+        "text": "Unless commercial building management guarantees adequate acoustic insulation between adjoining conference suites,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "corporate legal counsel",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will reject",
+        "isTargetSlot": true
+      },
+      {
+        "text": "the proposed long-term tenancy contract extension."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Unless 條件從屬子句中，主節法務 counsel 預計將採取拒絕行動，使用未來簡單主動式 will reject。"
+  },
+  {
+    "id": "listening-04-hard-28",
+    "trainingId": "listening-04-hard",
+    "sentence": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse, industrial safety inspectors were documenting multiple compliance violations in their official logbooks.",
+    "translation": "當室內統包工程人員正在對商業倉庫的結構性電氣線路進行翻修時，工安檢查員正在其官方紀錄簿上記錄多項違規事項。",
+    "chunks": [
+      {
+        "text": "While general interior contractors were retrofitting structural electrical wiring across the commercial warehouse,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "industrial safety inspectors",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were documenting",
+        "isTargetSlot": true
+      },
+      {
+        "text": "multiple compliance violations in their official logbooks."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "While 引導雙重過去進行式情境，主節稽查人員 inspectors 正在記錄違規，使用過去進行主動式 were documenting。"
+  },
+  {
+    "id": "listening-04-hard-29",
+    "trainingId": "listening-04-hard",
+    "sentence": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday, commercial property developers were forced to revise their architectural master plans substantially.",
+    "translation": "由於市政分區主管機關上週五出人意料地駁回了建物擴建許可，商業不動產開發商被迫大幅修改其建築整體規劃圖則。",
+    "chunks": [
+      {
+        "text": "Because municipal zoning authorities had unexpectedly denied building expansion permits last Friday,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial property developers",
+        "isTargetSlot": false
+      },
+      {
+        "text": "were forced",
+        "isTargetSlot": true
+      },
+      {
+        "text": "to revise their architectural master plans substantially."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "因果句中原因子句為過去完成式，主節開發商被迫修訂計畫，使用過去簡單被動式 were forced。"
+  },
+  {
+    "id": "listening-04-hard-30",
+    "trainingId": "listening-04-hard",
+    "sentence": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations, commercial leaseholders will terminate contractual commitments immediately without incurring legal penalties.",
+    "translation": "萬一在工業廠房地基下方發現有害化學物質污染，商業承租人將立即終止合約承諾，且無須承擔法律罰則。",
+    "chunks": [
+      {
+        "text": "Should hazardous chemical contamination be discovered beneath the industrial plant foundations,",
+        "isTargetSlot": false
+      },
+      {
+        "text": "commercial leaseholders",
+        "isTargetSlot": false
+      },
+      {
+        "text": "will terminate",
+        "isTargetSlot": true
+      },
+      {
+        "text": "contractual commitments immediately",
+        "isTargetSlot": false
+      },
+      {
+        "text": "without incurring legal penalties."
+      }
+    ],
+    "targetSlotIndex": 2,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "Should 倒裝條件句（相當於 If... should be discovered），主節承租人主動終止合約，使用未來簡單主動式 will terminate。"
+  }
+]
