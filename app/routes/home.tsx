@@ -50,6 +50,7 @@ export default function Home() {
     speakListeningSequence,
     stop,
     isSpeaking,
+    listeningProgressPercent,
     canSelectAccents,
     voices,
     selectedVoiceURI,
@@ -84,6 +85,8 @@ export default function Home() {
     markedChunkIndices,
     markedChunks,
     markedChunksCountMap,
+    activeObstacles,
+    handleToggleObstacle,
     handleToggleMarkChunk,
     handleRemoveMarkedChunk,
     handleClearMarkedChunks,
@@ -201,7 +204,7 @@ export default function Home() {
   const handleBankChange = useCallback(
     (bankId: string) => {
       handleSelectBank(bankId);
-      if (bankId === 'toeic-listening') {
+      if (bankId === 'toeic-listening' || bankId === 'parker') {
         enableNarration();
       }
     },
@@ -332,6 +335,7 @@ export default function Home() {
           onToggleBlindMode={handleToggleBlindMode}
           onSpeakChunk={(text) => speak(text, { force: true })}
           isListeningMode={isListeningMode}
+          listeningProgressPercent={listeningProgressPercent}
         />
 
         {/* Action Controls & Hotkey Buttons */}
@@ -351,6 +355,8 @@ export default function Home() {
           onNextQuestion={advanceToNextQuestion}
           onReplayAudio={handleRestartQuestion}
           isAudioPlaying={isSpeaking}
+          activeObstacles={activeObstacles}
+          onToggleObstacle={handleToggleObstacle}
         />
 
         {/* Keyboard Shortcut Guidance Bar (desktop only) */}

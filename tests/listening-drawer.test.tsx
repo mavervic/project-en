@@ -3,6 +3,8 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { TrainingMatrixDrawer } from '../app/components/chunkflow/TrainingMatrixDrawer';
 import { TOEIC_LISTENING_META } from '../app/data/toeic-listening';
+import { PARKER_BANK_META } from '../app/data/parker';
+import { computeTrainingTelemetry } from '../app/utils/storage';
 import type { TrainingUnitTelemetry } from '../app/types/chunkflow';
 
 describe('TrainingMatrixDrawer - Listening Badges', () => {
@@ -208,5 +210,139 @@ describe('TrainingMatrixDrawer - Listening Badges', () => {
       expect(screen.getByTestId(`training-row-listening-${pad}-medium`)).toBeDefined();
       expect(screen.getByTestId(`training-row-listening-${pad}-hard`)).toBeDefined();
     }
+  });
+
+  it('renders Parker Bank with 10 curriculum groups, unit rows, and marked chunk badges', () => {
+    const onSelectTraining = vi.fn();
+    const markedMap = {
+      'parker-01': 5,
+      'parker-02': 2,
+    };
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={{}}
+        activeTrainingId={null}
+        onSelectTraining={onSelectTraining}
+        banks={[PARKER_BANK_META]}
+        activeBankId="parker"
+        markedChunksCountMap={markedMap}
+      />
+    );
+
+    // 5 distinct comprehensive training groups exist for Parker Bank
+    for (let i = 1; i <= 5; i++) {
+      const groupId = `group-parker-${String(i).padStart(2, '0')}`;
+      expect(screen.getByTestId(`training-group-${groupId}`)).toBeDefined();
+    }
+
+    // Units in Group 1 (Lessons 01–10)
+    for (let i = 1; i <= 10; i++) {
+      const unitId = `parker-${String(i).padStart(2, '0')}`;
+      expect(screen.getByTestId(`training-row-${unitId}`)).toBeDefined();
+    }
+
+    // Marked chunk badges
+    const badge1 = screen.getByTestId('marked-chunk-badge-parker-01');
+    expect(badge1.textContent).toContain('5 語塊');
+
+    const badge2 = screen.getByTestId('marked-chunk-badge-parker-02');
+    expect(badge2.textContent).toContain('2 語塊');
+
+    expect(screen.queryByTestId('marked-chunk-badge-parker-03')).toBeNull();
+
+    // Clicking unit row triggers selection
+    fireEvent.click(screen.getByTestId('training-row-parker-01'));
+    expect(onSelectTraining).toHaveBeenCalledWith('parker-01');
+  });
+
+  it('renders green checkmark status-completed when listening unit questions are all completed', () => {
+    const customTelemetry = {
+      ...mockTelemetry,
+      'listening-01-easy': {
+        ...mockTelemetry['listening-01-easy'],
+        totalQuestions: 15,
+        attemptedQuestions: 15,
+        isCompleted: true,
+      },
+      'listening-02-easy': {
+        ...mockTelemetry['listening-02-easy'],
+        totalQuestions: 15,
+        attemptedQuestions: 1,
+        isCompleted: false,
+      },
+    };
+
+    render(
+      <TrainingMatrixDrawer
+        isOpen={true}
+        onClose={vi.fn()}
+        telemetry={customTelemetry}
+        activeTrainingId={null}
+        onSelectTraining={vi.fn()}
+        banks={[TOEIC_LISTENING_META]}
+        activeBankId="toeic-listening"
+      />
+    );
+
+    // Completed unit has status-completed svg
+    expect(screen.getByTestId('status-completed-listening-01-easy')).toBeDefined();
+    expect(screen.queryByTestId('status-uncompleted-listening-01-easy')).toBeNull();
+
+    // In-progress unit has status-uncompleted svg
+    expect(screen.getByTestId('status-uncompleted-listening-02-easy')).toBeDefined();
+    expect(screen.queryByTestId('status-completed-listening-02-easy')).toBeNull();
+  });
+
+  it('increments attempted questions and marks unit completed via computeTrainingTelemetry when listening history accumulates', () => {
+    const sampleQuestions = [
+      {
+        id: 'q1',
+        trainingId: 'parker-01',
+        chunks: [],
+        sentence: '',
+        correctAnswers: { voice: 'active', time: 'present' },
+      },
+      {
+        id: 'q2',
+        trainingId: 'parker-01',
+        chunks: [],
+        sentence: '',
+        correctAnswers: { voice: 'active', time: 'present' },
+      },
+    ] as any;
+
+    const history1: any[] = [
+      {
+        questionId: 'q1',
+        isCorrect: true,
+        latencyMs: 500,
+        timestamp: Date.now(),
+        targetCategory: 'Travel',
+      },
+    ];
+
+    const tel1 = computeTrainingTelemetry(history1, sampleQuestions);
+    expect(tel1['parker-01'].attemptedQuestions).toBe(1);
+    expect(tel1['parker-01'].totalQuestions).toBe(2);
+    expect(tel1['parker-01'].isCompleted).toBe(false);
+
+    const history2: any[] = [
+      ...history1,
+      {
+        questionId: 'q2',
+        isCorrect: true,
+        latencyMs: 600,
+        timestamp: Date.now(),
+        targetCategory: 'Travel',
+      },
+    ];
+
+    const tel2 = computeTrainingTelemetry(history2, sampleQuestions);
+    expect(tel2['parker-01'].attemptedQuestions).toBe(2);
+    expect(tel2['parker-01'].totalQuestions).toBe(2);
+    expect(tel2['parker-01'].isCompleted).toBe(true);
   });
 });

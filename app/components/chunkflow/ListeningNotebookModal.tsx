@@ -77,6 +77,18 @@ export const ListeningNotebookModal: React.FC<ListeningNotebookModalProps> = ({
         if (item.translation) {
           md += `  - 中文翻譯: ${item.translation}\n`;
         }
+        if (item.topic) {
+          md += `  - 主題情境: ${item.topic}\n`;
+        }
+        if (item.obstacles && item.obstacles.length > 0) {
+          const obsLabels: Record<string, string> = {
+            'too-fast': '速度太快',
+            'sentence-too-long': '句子太長',
+            liaison: '連音',
+            accent: '口音',
+          };
+          md += `  - 聽力障礙: ${item.obstacles.map((o) => obsLabels[o] || o).join(', ')}\n`;
+        }
       }
       md += '\n';
     }
@@ -100,6 +112,18 @@ export const ListeningNotebookModal: React.FC<ListeningNotebookModalProps> = ({
         text += `  句子: ${item.sentence}\n`;
         if (item.translation) {
           text += `  翻譯: ${item.translation}\n`;
+        }
+        if (item.topic) {
+          text += `  情境: ${item.topic}\n`;
+        }
+        if (item.obstacles && item.obstacles.length > 0) {
+          const obsLabels: Record<string, string> = {
+            'too-fast': '速度太快',
+            'sentence-too-long': '句子太長',
+            liaison: '連音',
+            accent: '口音',
+          };
+          text += `  障礙: ${item.obstacles.map((o) => obsLabels[o] || o).join(', ')}\n`;
         }
         text += '\n';
       }
@@ -258,6 +282,38 @@ export const ListeningNotebookModal: React.FC<ListeningNotebookModalProps> = ({
                     <span className="px-2 py-0.5 rounded text-[10px] font-medium bg-zinc-800 text-zinc-400">
                       {getTopicTitle(item.trainingId)}
                     </span>
+                    {item.topic && (
+                      <span
+                        data-testid={`notebook-item-topic-${item.id}`}
+                        className="px-2 py-0.5 rounded text-[10px] font-semibold bg-cyan-950/60 text-cyan-300 border border-cyan-800/60"
+                      >
+                        {item.topic}
+                      </span>
+                    )}
+                    {item.obstacles && item.obstacles.length > 0 && (
+                      <div
+                        className="flex items-center gap-1 flex-wrap"
+                        data-testid={`notebook-item-obstacles-${item.id}`}
+                      >
+                        {item.obstacles.map((obs) => {
+                          const labels: Record<string, string> = {
+                            'too-fast': '⚡ 速度太快',
+                            'sentence-too-long': '📏 句子太長',
+                            liaison: '🔗 連音',
+                            accent: '🗣️ 口音',
+                          };
+                          return (
+                            <span
+                              key={obs}
+                              data-testid={`notebook-obstacle-tag-${item.id}-${obs}`}
+                              className="px-1.5 py-0.5 rounded text-[10px] font-medium bg-amber-500/15 text-amber-300 border border-amber-500/30"
+                            >
+                              {labels[obs] || obs}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    )}
                   </div>
                   {onRemoveChunk && (
                     <button

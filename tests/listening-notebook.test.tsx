@@ -56,6 +56,35 @@ describe('ListeningNotebookModal Component', () => {
     expect(screen.getByText('前往東京的航班延誤了。')).toBeDefined();
   });
 
+  it('renders topic badges and obstacle chips for marked chunks with obstacles', () => {
+    const recordsWithObstacles: MarkedChunkRecord[] = [
+      {
+        id: 'parker-01-q01-0',
+        questionId: 'parker-01-q01',
+        trainingId: 'parker-01',
+        chunkText: 'A woman',
+        chunkIndex: 0,
+        sentence: 'A woman is watering plants.',
+        translation: '一位女士正在給植物澆水。',
+        topic: 'Housing',
+        obstacles: ['too-fast', 'liaison'],
+        timestamp: 1000,
+      },
+    ];
+
+    render(
+      <ListeningNotebookModal isOpen={true} onClose={vi.fn()} markedChunks={recordsWithObstacles} />
+    );
+
+    expect(screen.getByTestId('notebook-item-topic-parker-01-q01-0')).toBeDefined();
+    expect(screen.getByText('Housing')).toBeDefined();
+    expect(screen.getByTestId('notebook-item-obstacles-parker-01-q01-0')).toBeDefined();
+    expect(screen.getByTestId('notebook-obstacle-tag-parker-01-q01-0-too-fast')).toBeDefined();
+    expect(screen.getByTestId('notebook-obstacle-tag-parker-01-q01-0-liaison')).toBeDefined();
+    expect(screen.getByText('⚡ 速度太快')).toBeDefined();
+    expect(screen.getByText('🔗 連音')).toBeDefined();
+  });
+
   it('displays empty state when there are no marked chunks', () => {
     render(<ListeningNotebookModal isOpen={true} onClose={vi.fn()} markedChunks={[]} />);
 

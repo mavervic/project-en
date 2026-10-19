@@ -72,6 +72,7 @@ export function useSpeechNarration() {
   );
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
+  const [listeningProgressPercent, setListeningProgressPercent] = useState<number>(0);
   const [canSelectAccents, setCanSelectAccents] = useState<boolean>(false);
   const activeUtteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const speechTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -90,6 +91,7 @@ export function useSpeechNarration() {
         window.speechSynthesis.cancel();
         activeUtteranceRef.current = null;
       }
+      setListeningProgressPercent(0);
     };
   }, []);
 
@@ -199,6 +201,7 @@ export function useSpeechNarration() {
       window.speechSynthesis.cancel();
       activeUtteranceRef.current = null;
       setIsSpeaking(false);
+      setListeningProgressPercent(0);
     }
   }, []);
 
@@ -332,6 +335,7 @@ export function useSpeechNarration() {
       if (window.speechSynthesis.speaking || window.speechSynthesis.pending) {
         window.speechSynthesis.cancel();
       }
+      setListeningProgressPercent(0);
 
       const mode = options?.mode || loadListeningNarrationMode();
       const interval = options?.pauseIntervalMs ?? loadListeningPauseInterval();
@@ -371,11 +375,14 @@ export function useSpeechNarration() {
         if (index >= steps.length) {
           activeUtteranceRef.current = null;
           setIsSpeaking(false);
+          setListeningProgressPercent(100);
           options?.onComplete?.();
           return;
         }
 
         const currentStep = steps[index];
+        const stepProgress = Math.round(((index + 1) / steps.length) * 100);
+        setListeningProgressPercent(stepProgress);
         options?.onStep?.(index, steps.length, currentStep.lang);
 
         const utterance = new SpeechSynthesisUtterance(currentStep.text);
@@ -406,6 +413,7 @@ export function useSpeechNarration() {
           } else {
             activeUtteranceRef.current = null;
             setIsSpeaking(false);
+            setListeningProgressPercent(100);
             options?.onComplete?.();
           }
         };
@@ -435,6 +443,7 @@ export function useSpeechNarration() {
     speakListeningSequence,
     stop,
     isSpeaking,
+    listeningProgressPercent,
     canSelectAccents,
     hasChineseVoice,
     voices,

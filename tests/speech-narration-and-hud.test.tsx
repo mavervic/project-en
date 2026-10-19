@@ -495,6 +495,7 @@ describe('ChunkFlowArena Audio Controls & Replay Integration', () => {
       configurable: true,
     });
 
+    window.localStorage.setItem('chunkflow_active_bank_v1', 'starter');
     const { default: Home } = await import('../app/routes/home');
     render(<Home />);
 
@@ -543,6 +544,7 @@ describe('ChunkFlowArena Audio Controls & Replay Integration', () => {
       configurable: true,
     });
 
+    window.localStorage.setItem('chunkflow_active_bank_v1', 'starter');
     const { default: Home } = await import('../app/routes/home');
     render(<Home />);
 

@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import type {
+  ListeningObstacle,
   MarkedChunkRecord,
   Question,
   TimeChoice,
@@ -24,6 +25,7 @@ import {
   loadPerformanceRecords,
   removeMarkedChunk,
   saveActiveBankId,
+  saveAllMarkedChunks,
   saveBlindModeEnabled,
   saveCustomQuestions,
   saveMarkedChunk,
@@ -60,12 +62,17 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
   const [history, setHistory] = useState<UserPerformance[]>([]);
   const [practiceMode, setPracticeMode] = useState<'smart' | 'random'>('smart');
 
+  const isListeningBank = useCallback(
+    (id?: string | null) => id === 'toeic-listening' || id === 'parker',
+    []
+  );
+
   // Load history & custom questions on mount, resolving progressive curriculum
   useEffect(() => {
     const records = loadPerformanceRecords();
     setHistory(records);
     const initialBankId = loadActiveBankId();
-    const isListening = initialBankId === 'toeic-listening';
+    const isListening = isListeningBank(initialBankId);
     const initialBlind = isListening ? true : loadBlindModeEnabled();
     blindModeRef.current = initialBlind;
     setBlindModeEnabledState(initialBlind);
@@ -130,22 +137,62 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
   const [markedChunksCountMap, setMarkedChunksCountMap] = useState<Record<string, number>>(() =>
     getMarkedChunksCountMap()
   );
+  const [currentQuestionObstacles, setCurrentQuestionObstacles] = useState<ListeningObstacle[]>([]);
 
   const refreshMarkedChunks = useCallback(() => {
     const list = loadMarkedChunks();
     setMarkedChunks(list);
     setMarkedChunksCountMap(getMarkedChunksCountMap());
     if (currentQuestion?.id) {
-      const forThisQ = list
-        .filter((m) => m.questionId === currentQuestion.id)
-        .map((m) => m.chunkIndex);
-      setMarkedChunkIndices(forThisQ);
+      const forThisQ = list.filter((m) => m.questionId === currentQuestion.id);
+      setMarkedChunkIndices(forThisQ.map((m) => m.chunkIndex));
+      const existingObstacles = forThisQ.find(
+        (m) => m.obstacles && m.obstacles.length > 0
+      )?.obstacles;
+      if (existingObstacles) {
+        setCurrentQuestionObstacles(existingObstacles);
+      } else {
+        setCurrentQuestionObstacles([]);
+      }
+    } else {
+      setCurrentQuestionObstacles([]);
     }
   }, [currentQuestion?.id]);
 
   useEffect(() => {
     refreshMarkedChunks();
   }, [currentQuestion?.id, refreshMarkedChunks]);
+
+  const handleToggleObstacle = useCallback(
+    (obstacle: ListeningObstacle) => {
+      setCurrentQuestionObstacles((prev) => {
+        const next = prev.includes(obstacle)
+          ? prev.filter((o) => o !== obstacle)
+          : [...prev, obstacle];
+
+        if (currentQuestion?.id) {
+          const list = loadMarkedChunks();
+          let changed = false;
+          const updated = list.map((record) => {
+            if (record.questionId === currentQuestion.id) {
+              changed = true;
+              return {
+                ...record,
+                obstacles: next.length > 0 ? next : undefined,
+              };
+            }
+            return record;
+          });
+          if (changed) {
+            saveAllMarkedChunks(updated);
+            setMarkedChunks(updated);
+          }
+        }
+        return next;
+      });
+    },
+    [currentQuestion?.id]
+  );
 
   const handleToggleMarkChunk = useCallback(
     (chunkIndex: number) => {
@@ -167,14 +214,16 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
           chunkIndex,
           sentence: currentQuestion.sentence,
           translation: currentQuestion.translation,
-          topic: currentQuestion.trainingId,
+          topic: currentQuestion.topic || currentQuestion.trainingId,
+          obstacles:
+            currentQuestionObstacles.length > 0 ? [...currentQuestionObstacles] : undefined,
           timestamp: Date.now(),
         };
         saveMarkedChunk(newRecord);
       }
       refreshMarkedChunks();
     },
-    [currentQuestion, markedChunkIndices, refreshMarkedChunks]
+    [currentQuestion, currentQuestionObstacles, markedChunkIndices, refreshMarkedChunks]
   );
 
   const handleRemoveMarkedChunk = useCallback(
@@ -222,6 +271,23 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
 
   // Advance to next question
   const advanceToNextQuestion = useCallback(() => {
+    const isListening = isListeningBank(activeBankId);
+    let currentHistory = history;
+
+    if (isListening && showFeedback && currentQuestion?.id) {
+      const endTime = Date.now();
+      const latencyMs = Math.max(80, endTime - questionStartTimeRef.current);
+      const record: UserPerformance = {
+        questionId: currentQuestion.id,
+        latencyMs,
+        isCorrect: true,
+        timestamp: endTime,
+        targetCategory: getQuestionCategory(currentQuestion),
+      };
+      currentHistory = savePerformanceRecord(record);
+      setHistory(currentHistory);
+    }
+
     selectedVoiceRef.current = null;
     selectedTimeRef.current = null;
     setSelectedVoice(null);
@@ -230,7 +296,6 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     setShowFeedback(false);
     setChunkMisfireIndex(null);
 
-    const isListening = activeBankId === 'toeic-listening';
     if (isListening) {
       blindModeRef.current = true;
       setBlindModeEnabledState(true);
@@ -238,7 +303,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     }
 
     let nextQ: Question;
-    const { unattemptedQuestions } = computeUnitStatus(activeQuestions, history);
+    const { unattemptedQuestions } = computeUnitStatus(activeQuestions, currentHistory);
     const unattemptedRemaining = unattemptedQuestions.filter((q) => q.id !== currentQuestion.id);
 
     if (unattemptedRemaining.length > 0) {
@@ -250,7 +315,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
       );
       nextQ = shuffled[0];
     } else if (practiceMode === 'smart') {
-      nextQ = selectNextQuestion(activeQuestions, history, currentQuestion.id);
+      nextQ = selectNextQuestion(activeQuestions, currentHistory, currentQuestion.id);
     } else {
       const candidates = activeQuestions.filter((q) => q.id !== currentQuestion.id);
       nextQ = candidates[Math.floor(Math.random() * candidates.length)] || activeQuestions[0];
@@ -262,7 +327,16 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     setCurrentQuestion(nextQ);
     questionStartTimeRef.current = Date.now();
     startTimer();
-  }, [practiceMode, activeQuestions, history, currentQuestion.id, activeBankId, startTimer]);
+  }, [
+    practiceMode,
+    activeQuestions,
+    history,
+    currentQuestion,
+    activeBankId,
+    startTimer,
+    showFeedback,
+    isListeningBank,
+  ]);
 
   // Restart / re-enter current question (re-doing the current question from initial blind state)
   const restartCurrentQuestion = useCallback(() => {
@@ -274,7 +348,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     setShowFeedback(false);
     setChunkMisfireIndex(null);
 
-    const isListening = activeBankId === 'toeic-listening';
+    const isListening = isListeningBank(activeBankId);
     if (isListening) {
       blindModeRef.current = true;
       setBlindModeEnabledState(true);
@@ -431,7 +505,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
       setActiveTrainingIdState(progressive.trainingId);
       setCurrentQuestion(targetQ);
 
-      const isListening = bankId === 'toeic-listening';
+      const isListening = isListeningBank(bankId);
       if (isListening) {
         blindModeRef.current = true;
         setBlindModeEnabledState(true);
@@ -462,7 +536,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
           const nextQ = getNextQuestionInUnit(filtered, history);
           setCurrentQuestion(nextQ);
 
-          const isListening = activeBankId === 'toeic-listening';
+          const isListening = isListeningBank(activeBankId);
           if (isListening) {
             blindModeRef.current = true;
             setBlindModeEnabledState(true);
@@ -507,7 +581,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     setLastEvaluation(null);
     setShowFeedback(false);
     setChunkMisfireIndex(null);
-    const isListening = activeBankId === 'toeic-listening';
+    const isListening = isListeningBank(activeBankId);
     if (isListening) {
       blindModeRef.current = true;
       setBlindModeEnabledState(true);
@@ -521,14 +595,14 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     );
     questionStartTimeRef.current = Date.now();
     startTimer();
-  }, [activeBankId, initialQuestions, isSubjectVerbDrill, startTimer]);
+  }, [activeBankId, initialQuestions, isListeningBank, isSubjectVerbDrill, startTimer]);
 
   const isCustomBank = useMemo(() => {
     if (typeof window === 'undefined') return false;
     return loadCustomQuestions().length > 0;
   }, [questions]);
 
-  const isListeningMode = activeBankId === 'toeic-listening';
+  const isListeningMode = isListeningBank(activeBankId);
 
   const handleListeningNarrationComplete = useCallback(() => {
     setShowFeedback(true);
@@ -560,6 +634,8 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     markedChunkIndices,
     markedChunks,
     markedChunksCountMap,
+    activeObstacles: currentQuestionObstacles,
+    handleToggleObstacle,
     handleToggleMarkChunk,
     handleRemoveMarkedChunk,
     handleClearMarkedChunks,

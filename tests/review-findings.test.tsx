@@ -28,6 +28,7 @@ import Home from '../app/routes/home';
 describe('Review Findings Verification (RED phase before fix)', () => {
   describe('Finding 1: Keyboard shortcuts must be disabled when modals are open in Home', () => {
     it('disables shortcuts in Home when a modal is open', async () => {
+      window.localStorage.setItem('chunkflow_active_bank_v1', 'starter');
       render(<Home />);
 
       // Open settings modal

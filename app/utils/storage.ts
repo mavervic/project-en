@@ -521,6 +521,16 @@ export function clearMarkedChunks(): void {
   }
 }
 
+export function saveAllMarkedChunks(records: MarkedChunkRecord[]): void {
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.setItem(LISTENING_NOTEBOOK_STORAGE_KEY, JSON.stringify(records));
+    } catch (err) {
+      console.warn('Failed to save marked chunks to localStorage', err);
+    }
+  }
+}
+
 export function getMarkedChunksCountByTrainingId(trainingId: string): number {
   const chunks = loadMarkedChunks();
   return chunks.filter((c) => c.trainingId === trainingId).length;

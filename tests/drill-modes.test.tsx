@@ -3,6 +3,7 @@ import { cleanup } from '@testing-library/react';
 import {
   loadBlindModeEnabled,
   loadSubjectVerbDrill,
+  saveActiveBankId,
   saveBlindModeEnabled,
   saveSubjectVerbDrill,
 } from '../app/utils/storage';
@@ -44,6 +45,10 @@ describe('Subject-Verb Drill Mode Settings Specification', () => {
   });
 
   describe('Sequential Stage Chaining in useChunkFlowGame', () => {
+    beforeEach(() => {
+      saveActiveBankId('toeic-part5');
+    });
+
     it('progresses from subject -> verb -> classify when isSubjectVerbDrill is true', async () => {
       const { renderHook, act } = await import('@testing-library/react');
       const { useChunkFlowGame } = await import('../app/hooks/useChunkFlowGame');
@@ -235,6 +240,7 @@ describe('Subject-Verb Drill Mode Settings Specification', () => {
       const { renderHook, act } = await import('@testing-library/react');
       const { useChunkFlowGame } = await import('../app/hooks/useChunkFlowGame');
 
+      saveActiveBankId('toeic-part5');
       const { result } = renderHook(() => useChunkFlowGame());
 
       // Starts in 'subject' when blindModeEnabled is false

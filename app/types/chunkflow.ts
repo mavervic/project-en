@@ -17,6 +17,7 @@ export interface Question {
   };
   grammarNote: string; // 解答與範例說明
   trainingId?: string; // e.g., 'parker-01'
+  topic?: string; // e.g., 'Travel', 'Personnel', 'Offices'
 }
 
 export interface UserPerformance {
@@ -62,6 +63,8 @@ export type SpeechAccent = 'AU' | 'GB' | 'US' | 'CA';
 
 export type NarrationSequenceMode = 'en2-zh1-en1' | 'en2' | 'en1';
 
+export type ListeningObstacle = 'too-fast' | 'sentence-too-long' | 'liaison' | 'accent';
+
 export interface MarkedChunkRecord {
   id: string; // e.g. `${questionId}-${chunkIndex}`
   questionId: string;
@@ -71,6 +74,7 @@ export interface MarkedChunkRecord {
   sentence: string;
   translation?: string;
   topic?: string;
+  obstacles?: ListeningObstacle[];
   timestamp: number;
 }
 

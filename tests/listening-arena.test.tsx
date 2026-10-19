@@ -46,6 +46,66 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
     expect(screen.getByTestId('revealed-english-sentence')).toBeDefined();
   });
 
+  it('suppresses stats strip and renders listening audio progress bar in listening mode', () => {
+    const dummyStats = {
+      totalAttempts: 10,
+      correctAttempts: 9,
+      accuracy: 90,
+      avgLatencyMs: 420,
+      chunksPerMin: 120,
+      currentStreak: 5,
+      bestStreak: 8,
+      recent: {
+        sampleSize: 10,
+        totalAttempts: 10,
+        correctAttempts: 9,
+        avgLatencyMs: 400,
+        chunksPerMin: 125,
+        accuracy: 90,
+      },
+      byCategory: {} as any,
+    };
+
+    // When isListeningMode is true: stats-strip is NOT rendered, listening-progress-bar is rendered
+    const { rerender } = render(
+      <ChunkFlowArena
+        question={sampleQuestion}
+        focusState="idle"
+        progressPercent={50}
+        lastEvaluation={null}
+        showFeedback={false}
+        blindModeEnabled={true}
+        isListeningMode={true}
+        listeningProgressPercent={45}
+        stats={dummyStats}
+      />
+    );
+
+    expect(screen.queryByTestId('stats-strip')).toBeNull();
+    const listeningBar = screen.getByTestId('listening-progress-bar');
+    expect(listeningBar).toBeDefined();
+    expect(listeningBar.style.width).toBe('45%');
+
+    // When isListeningMode is false: stats-strip is rendered, focus-progress-bar is rendered
+    rerender(
+      <ChunkFlowArena
+        question={sampleQuestion}
+        focusState="focusing"
+        progressPercent={75}
+        lastEvaluation={null}
+        showFeedback={false}
+        blindModeEnabled={false}
+        isListeningMode={false}
+        stats={dummyStats}
+      />
+    );
+
+    expect(screen.getByTestId('stats-strip')).toBeDefined();
+    const focusBar = screen.getByTestId('focus-progress-bar');
+    expect(focusBar).toBeDefined();
+    expect(focusBar.style.width).toBe('75%');
+  });
+
   it('auto-activates blind mode and sets classify round stage when switching to toeic-listening bank', () => {
     window.localStorage.clear();
     const { result } = renderHook(() => useChunkFlowGame());
@@ -77,7 +137,7 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
     expect(result.current.showFeedback).toBe(true);
   });
 
-  it('resets to blind mode on advancing to next question in listening mode', () => {
+  it('records completion record and resets to blind mode on advancing to next question in listening mode', () => {
     window.localStorage.clear();
     const { result } = renderHook(() => useChunkFlowGame());
 
@@ -86,7 +146,9 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
       result.current.handleListeningNarrationComplete();
     });
 
+    const completedQuestionId = result.current.currentQuestion.id;
     expect(result.current.showFeedback).toBe(true);
+    expect(result.current.history.length).toBe(0);
 
     act(() => {
       result.current.advanceToNextQuestion();
@@ -94,9 +156,16 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
 
     expect(result.current.showFeedback).toBe(false);
     expect(result.current.blindModeEnabled).toBe(true);
+
+    // Performance record is saved
+    expect(result.current.history.length).toBe(1);
+    const record = result.current.history[0];
+    expect(record.questionId).toBe(completedQuestionId);
+    expect(record.isCorrect).toBe(true);
+    expect(record.latencyMs).toBeGreaterThanOrEqual(80);
   });
 
-  it('resets showFeedback and restores blind mode on restartCurrentQuestion', () => {
+  it('resets showFeedback and restores blind mode without saving completion record on restartCurrentQuestion', () => {
     window.localStorage.clear();
     const { result } = renderHook(() => useChunkFlowGame());
 
@@ -107,6 +176,7 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
 
     const currentId = result.current.currentQuestion.id;
     expect(result.current.showFeedback).toBe(true);
+    expect(result.current.history.length).toBe(0);
 
     act(() => {
       result.current.restartCurrentQuestion();
@@ -115,6 +185,7 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
     expect(result.current.currentQuestion.id).toBe(currentId);
     expect(result.current.showFeedback).toBe(false);
     expect(result.current.blindModeEnabled).toBe(true);
+    expect(result.current.history.length).toBe(0);
   });
 
   it('omits blind-mode-toggle-btn and narration-toggle-btn in listening mode while keeping replay button', () => {
@@ -147,6 +218,7 @@ describe('Listening Arena - Audio-First Blind Question Flow', () => {
   it('enforces auto-unmute and enables narration when switching to toeic-listening bank in Home', async () => {
     window.localStorage.clear();
     window.localStorage.setItem('chunkflow_narration_enabled_v1', 'false');
+    window.localStorage.setItem('chunkflow_active_bank_v1', 'starter');
     window.localStorage.setItem('chunkflow_active_bank_id_v1', 'starter');
 
     const mockSpeak = vi.fn();

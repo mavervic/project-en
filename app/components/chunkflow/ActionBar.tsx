@@ -1,5 +1,5 @@
 import React from 'react';
-import type { SlotChunk, TimeChoice, VoiceChoice } from '../../types/chunkflow';
+import type { ListeningObstacle, SlotChunk, TimeChoice, VoiceChoice } from '../../types/chunkflow';
 import { ListeningChunkBar } from './ListeningChunkBar';
 
 export interface ActionBarProps {
@@ -16,6 +16,8 @@ export interface ActionBarProps {
   onNextQuestion?: () => void;
   onReplayAudio?: () => void;
   isAudioPlaying?: boolean;
+  activeObstacles?: ListeningObstacle[];
+  onToggleObstacle?: (obstacle: ListeningObstacle) => void;
 }
 
 export const ActionBar: React.FC<ActionBarProps> = ({
@@ -32,6 +34,8 @@ export const ActionBar: React.FC<ActionBarProps> = ({
   onNextQuestion,
   onReplayAudio,
   isAudioPlaying = false,
+  activeObstacles = [],
+  onToggleObstacle,
 }) => {
   if (isListeningMode) {
     return (
@@ -44,6 +48,8 @@ export const ActionBar: React.FC<ActionBarProps> = ({
         disabled={disabled}
         onReplayAudio={onReplayAudio}
         isAudioPlaying={isAudioPlaying}
+        activeObstacles={activeObstacles}
+        onToggleObstacle={onToggleObstacle}
       />
     );
   }

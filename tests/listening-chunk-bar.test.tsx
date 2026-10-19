@@ -129,4 +129,56 @@ describe('ListeningChunkBar and ActionBar Delegation', () => {
     const replayBtn = screen.getByTestId('listening-replay-btn');
     expect(replayBtn.textContent).toContain('播放中...');
   });
+
+  it('renders listening obstacle chips when narration completes and triggers onToggleObstacle', () => {
+    const onToggleObstacle = vi.fn();
+    render(
+      <ListeningChunkBar
+        chunks={sampleChunks}
+        markedChunkIndices={[]}
+        onToggleMarkChunk={vi.fn()}
+        isNarrationPlaying={false}
+        activeObstacles={['too-fast']}
+        onToggleObstacle={onToggleObstacle}
+      />
+    );
+
+    expect(screen.getByTestId('listening-obstacle-bar')).toBeDefined();
+    expect(screen.getByText('這題聽不懂的障礙感受？（可多選）：')).toBeDefined();
+
+    const tooFastChip = screen.getByTestId('obstacle-chip-too-fast');
+    expect(tooFastChip.className).toContain('text-amber-300');
+
+    const accentChip = screen.getByTestId('obstacle-chip-accent');
+    expect(accentChip.className).toContain('text-zinc-400');
+
+    fireEvent.click(accentChip);
+    expect(onToggleObstacle).toHaveBeenCalledWith('accent');
+  });
+
+  it('ActionBar forwards activeObstacles and onToggleObstacle to ListeningChunkBar in listening mode', () => {
+    const onToggleObstacle = vi.fn();
+    render(
+      <ActionBar
+        selectedVoice={null}
+        selectedTime={null}
+        onSelectVoice={vi.fn()}
+        onSelectTime={vi.fn()}
+        isListeningMode={true}
+        chunks={sampleChunks}
+        markedChunkIndices={[]}
+        onToggleMarkChunk={vi.fn()}
+        isNarrationPlaying={false}
+        activeObstacles={['liaison']}
+        onToggleObstacle={onToggleObstacle}
+      />
+    );
+
+    const liaisonChip = screen.getByTestId('obstacle-chip-liaison');
+    expect(liaisonChip.className).toContain('text-amber-300');
+
+    const tooFastChip = screen.getByTestId('obstacle-chip-too-fast');
+    fireEvent.click(tooFastChip);
+    expect(onToggleObstacle).toHaveBeenCalledWith('too-fast');
+  });
 });

@@ -62,11 +62,81 @@ describe('Structured 50-Unit Parker TOEIC Question Bank', () => {
     }
   });
 
-  it('provides Parker bank metadata with 50 units', () => {
+  it('provides Parker bank metadata with 50 units organized into 5 comprehensive training clusters', () => {
     expect(PARKER_BANK_META.id).toBe('parker');
     expect(PARKER_BANK_META.name).toBe('怕渴題庫');
     expect(PARKER_BANK_META.totalTrainings).toBe(50);
     expect(PARKER_BANK_META.totalQuestions).toBe(PARKER_QUESTIONS.length);
+    expect(PARKER_BANK_META.groups).toBeDefined();
+    expect(PARKER_BANK_META.groups).toHaveLength(5);
+
+    let totalUnitsInGroups = 0;
+    PARKER_BANK_META.groups!.forEach((group, gIdx) => {
+      expect(group.id).toBe(`group-parker-${String(gIdx + 1).padStart(2, '0')}`);
+      expect(group.title).toBeDefined();
+      expect(group.units).toHaveLength(10);
+      group.units.forEach((unit) => {
+        expect(unit.trainingId).toMatch(/^parker-\d{2}$/);
+        expect(unit.title).toContain('Easy');
+        expect(unit.difficulty).toBe('Easy');
+        expect(unit.unitNumber).toBeGreaterThan(0);
+        totalUnitsInGroups++;
+      });
+    });
+    expect(totalUnitsInGroups).toBe(50);
+  });
+
+  it('provides 100% Traditional Chinese translation, ETS scenario topics, and clean auditory chunking for all 50 units (Units 01-50)', async () => {
+    const { PARKER_QUESTIONS_BY_UNIT } = await import('../app/data/parker/index');
+    const VALID_TOPICS = [
+      'Travel',
+      'Dining out',
+      'Entertainment',
+      'Housing',
+      'Purchasing',
+      'Personnel',
+      'Offices',
+      'Health',
+      'General Business',
+      'Manufacturing',
+      'Corporate Development',
+      'Technical areas',
+      'Financing & Budgeting',
+    ];
+
+    for (let i = 1; i <= 50; i++) {
+      const unitId = `parker-${String(i).padStart(2, '0')}`;
+      const questions = PARKER_QUESTIONS_BY_UNIT[unitId];
+      expect(questions).toBeDefined();
+      expect(questions.length).toBeGreaterThan(0);
+
+      for (const q of questions) {
+        // Translation coverage
+        expect(q.translation).toBeDefined();
+        expect(typeof q.translation).toBe('string');
+        expect(q.translation!.trim().length).toBeGreaterThan(0);
+
+        // Topic coverage
+        expect(q.topic).toBeDefined();
+        expect(VALID_TOPICS).toContain(q.topic);
+
+        // Prosodic auditory chunks
+        expect(q.chunks.length).toBeGreaterThanOrEqual(2);
+        expect(q.chunks.length).toBeLessThanOrEqual(4);
+
+        // Single predicate verb target slot
+        const targetChunks = q.chunks.filter((c) => c.isTargetSlot);
+        expect(targetChunks).toHaveLength(1);
+        expect(q.chunks[q.targetSlotIndex].isTargetSlot).toBe(true);
+        expect(q.chunks[q.targetSlotIndex].type).toBe('verb');
+
+        // Punctuation rules
+        for (const chunk of q.chunks) {
+          expect(chunk.text.startsWith('.')).toBe(false);
+          expect(['.', '?', '!', ',']).not.toContain(chunk.text.trim());
+        }
+      }
+    }
   });
 
   it('partitions questions across 50 dedicated unit JSON files', async () => {

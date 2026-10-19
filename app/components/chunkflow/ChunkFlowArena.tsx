@@ -23,6 +23,7 @@ interface ChunkFlowArenaProps {
   onToggleBlindMode?: () => void;
   onSpeakChunk?: (text: string) => void;
   isListeningMode?: boolean;
+  listeningProgressPercent?: number;
 }
 
 export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
@@ -47,6 +48,7 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   onToggleBlindMode,
   onSpeakChunk,
   isListeningMode = false,
+  listeningProgressPercent,
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
   const [isCopied, setIsCopied] = useState(false);
@@ -118,8 +120,11 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-4">
       {/* Telemetry Metrics Bar (2x2 on Mobile, 4-column on sm+) */}
       {/* Telemetry Metrics Bar: Recent-10 Rolling Window (2x2 on Mobile, 4-column on sm+) */}
-      {stats && (
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 px-2 py-1 text-xs font-mono">
+      {!isListeningMode && stats && (
+        <div
+          data-testid="stats-strip"
+          className="w-full grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 px-2 py-1 text-xs font-mono"
+        >
           <div
             className="flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2"
             title="Rolling accuracy over the last 10 attempts"
@@ -186,19 +191,38 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
         </div>
       )}
 
-      {/* Top Countdown / Focus Bar */}
+      {/* Top Progress Bar: Audio Playback Progress Bar in Listening Mode, or Countdown Bar in Grammar Mode */}
       <div className="w-full bg-zinc-900/80 h-1.5 rounded-full overflow-hidden border border-zinc-800/80">
         <div
+          data-testid={isListeningMode ? 'listening-progress-bar' : 'focus-progress-bar'}
           className={`h-full transition-all ease-linear ${
-            showFeedback
-              ? isCorrect
-                ? 'bg-emerald-400'
-                : 'bg-rose-500'
-              : focusState === 'focusing'
-                ? 'bg-gradient-to-r from-cyan-500 to-indigo-500'
-                : 'bg-zinc-600'
+            isListeningMode
+              ? showFeedback
+                ? 'bg-emerald-400 duration-300'
+                : isSpeaking
+                  ? 'bg-gradient-to-r from-cyan-400 to-indigo-500 duration-300 animate-pulse'
+                  : 'bg-zinc-700 duration-200'
+              : showFeedback
+                ? isCorrect
+                  ? 'bg-emerald-400'
+                  : 'bg-rose-500'
+                : focusState === 'focusing'
+                  ? 'bg-gradient-to-r from-cyan-500 to-indigo-500'
+                  : 'bg-zinc-600'
           }`}
-          style={{ width: `${Math.max(0, Math.min(100, progressPercent))}%` }}
+          style={{
+            width: `${Math.max(
+              0,
+              Math.min(
+                100,
+                isListeningMode
+                  ? showFeedback
+                    ? 100
+                    : (listeningProgressPercent ?? (isSpeaking ? 50 : 0))
+                  : progressPercent
+              )
+            )}%`,
+          }}
         />
       </div>
 
