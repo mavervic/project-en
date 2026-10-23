@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { ModalShell } from './ModalShell';
 import type { Question } from '../../types/chunkflow';
 import { validateQuestionsJson } from '../../utils/storage';
 
@@ -162,28 +163,18 @@ export const ImportQuestionsModal: React.FC<ImportQuestionsModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl bg-zinc-950 border border-zinc-800 shadow-2xl p-6 md:p-8 flex flex-col gap-6">
-        {/* Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-zinc-800">
-          <div>
-            <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
-              <span className="text-cyan-400">Custom</span> Questions
-            </h2>
-            <p className="text-xs text-zinc-400 mt-1">
-              Import personal TOEIC Part 5 mistakes or copy the prompt for AI conversion.
-            </p>
-          </div>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer"
-            aria-label="Close modal"
-          >
-            ✕
-          </button>
-        </div>
-
-        {/* Tab Switcher */}
+    <ModalShell
+      isOpen={isOpen}
+      onClose={onClose}
+      title={
+        <>
+          <span className="text-cyan-400">Custom</span> Questions
+        </>
+      }
+      subtitle="Import personal TOEIC Part 5 mistakes or copy the prompt for AI conversion."
+      maxWidthClass="max-w-2xl"
+      closeAriaLabel="Close modal"
+      headerBottom={
         <div className="flex items-center gap-2 border-b border-zinc-800/80 pb-2">
           <button
             onClick={() => setActiveTab('import')}
@@ -209,52 +200,201 @@ export const ImportQuestionsModal: React.FC<ImportQuestionsModalProps> = ({
             </span>
           </button>
         </div>
-
-        {/* Tab 1: Import JSON */}
-        {activeTab === 'import' && (
-          <div className="flex flex-col gap-5">
-            {/* Question Bank Status Bar */}
-            <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800/80 text-xs font-mono">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-                <span className="text-zinc-400">Current Question Pool:</span>
-                <strong className="text-zinc-100">{totalQuestions} questions</strong>
-                {isCustomBank && (
-                  <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-                    Custom Bank Active
-                  </span>
-                )}
-              </div>
-
+      }
+    >
+      {/* Tab 1: Import JSON */}
+      {activeTab === 'import' && (
+        <div className="flex flex-col gap-5">
+          {/* Question Bank Status Bar */}
+          <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800/80 text-xs font-mono">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              <span className="text-zinc-400">Current Question Pool:</span>
+              <strong className="text-zinc-100">{totalQuestions} questions</strong>
               {isCustomBank && (
-                <button
-                  onClick={onResetToDefaults}
-                  className="px-2.5 py-1 rounded bg-zinc-800 hover:bg-rose-950/60 hover:text-rose-300 border border-zinc-700 hover:border-rose-500/50 text-zinc-300 transition-colors cursor-pointer"
-                >
-                  Restore Default Questions
-                </button>
+                <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                  Custom Bank Active
+                </span>
               )}
             </div>
 
-            {/* Paste or Upload Area */}
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between">
-                <label className="text-xs font-mono text-zinc-300 font-semibold">
-                  Paste JSON Array or Object:
-                </label>
-                <div className="flex items-center gap-2">
-                  <input
-                    type="file"
-                    ref={fileInputRef}
-                    accept=".json,application/json"
-                    onChange={handleFileChange}
-                    className="hidden"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => fileInputRef.current?.click()}
-                    className="px-3 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-mono text-cyan-300 border border-zinc-700 hover:border-cyan-500/50 transition-colors cursor-pointer flex items-center gap-1.5"
+            {isCustomBank && (
+              <button
+                onClick={onResetToDefaults}
+                className="px-2.5 py-1 rounded bg-zinc-800 hover:bg-rose-950/60 hover:text-rose-300 border border-zinc-700 hover:border-rose-500/50 text-zinc-300 transition-colors cursor-pointer"
+              >
+                Restore Default Questions
+              </button>
+            )}
+          </div>
+
+          {/* Paste or Upload Area */}
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <label className="text-xs font-mono text-zinc-300 font-semibold">
+                Paste JSON Array or Object:
+              </label>
+              <div className="flex items-center gap-2">
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  accept=".json,application/json"
+                  onChange={handleFileChange}
+                  className="hidden"
+                />
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="px-3 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-mono text-cyan-300 border border-zinc-700 hover:border-cyan-500/50 transition-colors cursor-pointer flex items-center gap-1.5"
+                >
+                  <svg
+                    className="w-3.5 h-3.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                    />
+                  </svg>
+                  Upload .json File
+                </button>
+              </div>
+            </div>
+
+            <textarea
+              value={jsonText}
+              onChange={(e) => {
+                setJsonText(e.target.value);
+                setErrors([]);
+              }}
+              rows={9}
+              placeholder={`[\n  {\n    "sentence": "The strategic distribution contract between the two pharmaceutical companies had been signed before the press conference began.",\n    "translation": "兩家製藥公司之間的策略經銷合約在記者會開始前便已簽署完成。",\n    "chunks": [\n      { "text": "The strategic distribution contract", "isTargetSlot": false, "type": "subject" },\n      { "text": "between the two", "isTargetSlot": false, "type": "clause" },\n      { "text": "pharmaceutical companies", "isTargetSlot": false, "type": "clause" },\n      { "text": "had been signed", "isTargetSlot": true, "type": "verb" },\n      { "text": "before the press conference began.", "isTargetSlot": false, "type": "clause" }\n    ],\n    "targetSlotIndex": 3,\n    "correctAnswers": { "voice": "passive", "time": "past" },\n    "grammarNote": "過去完成被動語態 (had been + p.p.)。"\n  }\n]`}
+              className="w-full p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 font-mono text-xs text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-y"
+            />
+          </div>
+
+          {/* Validation Feedback */}
+          {errors.length > 0 && (
+            <div className="p-3.5 rounded-xl bg-rose-950/30 border border-rose-500/40 flex flex-col gap-1.5 text-xs font-mono text-rose-300">
+              <span className="font-bold flex items-center gap-1.5">
+                <span>⚠</span> Validation Errors ({errors.length}):
+              </span>
+              <ul className="list-disc list-inside space-y-1 text-rose-200/90">
+                {errors.map((err, i) => (
+                  <li key={i}>{err}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {successMessage && (
+            <div className="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/40 text-xs font-mono text-emerald-300 font-semibold flex items-center gap-2">
+              <span>✓</span>
+              <span>{successMessage}</span>
+            </div>
+          )}
+
+          {/* Import Mode Radio Options & Action Button */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-2 border-t border-zinc-900">
+            <div className="flex items-center gap-4 text-xs font-mono text-zinc-400">
+              <label className="flex items-center gap-1.5 cursor-pointer">
+                <input
+                  type="radio"
+                  name="importMode"
+                  value="append"
+                  checked={importMode === 'append'}
+                  onChange={() => setImportMode('append')}
+                  className="accent-cyan-400"
+                />
+                <span>Append to bank</span>
+              </label>
+              <label className="flex items-center gap-1.5 cursor-pointer">
+                <input
+                  type="radio"
+                  name="importMode"
+                  value="replace"
+                  checked={importMode === 'replace'}
+                  onChange={() => setImportMode('replace')}
+                  className="accent-cyan-400"
+                />
+                <span>Replace entire bank</span>
+              </label>
+            </div>
+
+            <div className="flex items-center gap-2.5">
+              <button
+                type="button"
+                onClick={onClose}
+                className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 text-xs font-semibold transition-colors cursor-pointer"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={handleExecuteImport}
+                className="px-5 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-zinc-950 text-xs font-bold tracking-wide shadow-md hover:shadow-cyan-500/25 transition-all cursor-pointer"
+              >
+                Import Questions
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Tab 2: AI Prompt Helper */}
+      {activeTab === 'prompt' && (
+        <div className="flex flex-col gap-4">
+          <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80 text-xs text-zinc-300 leading-relaxed flex flex-col gap-2">
+            <span className="font-semibold text-white flex items-center gap-1.5">
+              <span className="text-cyan-400">💡</span> How to use with ChatGPT / Claude / Gemini:
+            </span>
+            <ol className="list-decimal list-inside space-y-1 text-zinc-400">
+              <li>
+                Click <strong className="text-zinc-200">"Copy AI Prompt"</strong> below.
+              </li>
+              <li>Open your AI tool (ChatGPT, Claude, Gemini, etc.) and paste the prompt.</li>
+              <li>
+                Paste your raw TOEIC Part 5 mistake questions into the designated section at the
+                bottom.
+              </li>
+              <li>
+                Copy the generated JSON array and paste it into the{' '}
+                <strong className="text-cyan-300">"Import JSON"</strong> tab!
+              </li>
+            </ol>
+          </div>
+
+          {/* Copy Error Notice (e.g. non-secure HTTP context) */}
+          {copyError && (
+            <div className="p-3.5 rounded-xl bg-amber-950/40 border border-amber-500/50 text-xs font-mono text-amber-200 flex items-center gap-2">
+              <span>⚠</span>
+              <span>{copyError}</span>
+            </div>
+          )}
+
+          {/* Prompt Preview & Copy Button */}
+          <div className="relative rounded-xl border border-zinc-800 bg-black/60 overflow-hidden">
+            <div className="flex items-center justify-between px-4 py-2.5 bg-zinc-900/90 border-b border-zinc-800 text-xs font-mono text-zinc-400">
+              <span>Standardized TOEIC Part 5 Prompt Template</span>
+              <button
+                onClick={handleCopyPrompt}
+                className={`px-3 py-1 rounded-md text-xs font-mono font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                  isCopied
+                    ? 'bg-emerald-500 text-zinc-950'
+                    : 'bg-cyan-500 hover:bg-cyan-400 text-zinc-950 shadow-sm'
+                }`}
+              >
+                {isCopied ? (
+                  <>
+                    <span>✓</span>
+                    <span>Copied!</span>
+                  </>
+                ) : (
+                  <>
                     <svg
                       className="w-3.5 h-3.5"
                       fill="none"
@@ -265,170 +405,21 @@ export const ImportQuestionsModal: React.FC<ImportQuestionsModalProps> = ({
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
-                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                        d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
                       />
                     </svg>
-                    Upload .json File
-                  </button>
-                </div>
-              </div>
-
-              <textarea
-                value={jsonText}
-                onChange={(e) => {
-                  setJsonText(e.target.value);
-                  setErrors([]);
-                }}
-                rows={9}
-                placeholder={`[\n  {\n    "sentence": "The strategic distribution contract between the two pharmaceutical companies had been signed before the press conference began.",\n    "translation": "兩家製藥公司之間的策略經銷合約在記者會開始前便已簽署完成。",\n    "chunks": [\n      { "text": "The strategic distribution contract", "isTargetSlot": false, "type": "subject" },\n      { "text": "between the two", "isTargetSlot": false, "type": "clause" },\n      { "text": "pharmaceutical companies", "isTargetSlot": false, "type": "clause" },\n      { "text": "had been signed", "isTargetSlot": true, "type": "verb" },\n      { "text": "before the press conference began.", "isTargetSlot": false, "type": "clause" }\n    ],\n    "targetSlotIndex": 3,\n    "correctAnswers": { "voice": "passive", "time": "past" },\n    "grammarNote": "過去完成被動語態 (had been + p.p.)。"\n  }\n]`}
-                className="w-full p-3.5 rounded-xl bg-zinc-900/90 border border-zinc-800 font-mono text-xs text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-y"
-              />
+                    <span>Copy AI Prompt</span>
+                  </>
+                )}
+              </button>
             </div>
 
-            {/* Validation Feedback */}
-            {errors.length > 0 && (
-              <div className="p-3.5 rounded-xl bg-rose-950/30 border border-rose-500/40 flex flex-col gap-1.5 text-xs font-mono text-rose-300">
-                <span className="font-bold flex items-center gap-1.5">
-                  <span>⚠</span> Validation Errors ({errors.length}):
-                </span>
-                <ul className="list-disc list-inside space-y-1 text-rose-200/90">
-                  {errors.map((err, i) => (
-                    <li key={i}>{err}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {successMessage && (
-              <div className="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/40 text-xs font-mono text-emerald-300 font-semibold flex items-center gap-2">
-                <span>✓</span>
-                <span>{successMessage}</span>
-              </div>
-            )}
-
-            {/* Import Mode Radio Options & Action Button */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-2 border-t border-zinc-900">
-              <div className="flex items-center gap-4 text-xs font-mono text-zinc-400">
-                <label className="flex items-center gap-1.5 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="importMode"
-                    value="append"
-                    checked={importMode === 'append'}
-                    onChange={() => setImportMode('append')}
-                    className="accent-cyan-400"
-                  />
-                  <span>Append to bank</span>
-                </label>
-                <label className="flex items-center gap-1.5 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="importMode"
-                    value="replace"
-                    checked={importMode === 'replace'}
-                    onChange={() => setImportMode('replace')}
-                    className="accent-cyan-400"
-                  />
-                  <span>Replace entire bank</span>
-                </label>
-              </div>
-
-              <div className="flex items-center gap-2.5">
-                <button
-                  type="button"
-                  onClick={onClose}
-                  className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 text-xs font-semibold transition-colors cursor-pointer"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="button"
-                  onClick={handleExecuteImport}
-                  className="px-5 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-zinc-950 text-xs font-bold tracking-wide shadow-md hover:shadow-cyan-500/25 transition-all cursor-pointer"
-                >
-                  Import Questions
-                </button>
-              </div>
-            </div>
+            <pre className="p-4 text-[11px] font-mono text-zinc-300 leading-relaxed overflow-x-auto max-h-72 select-all">
+              {TOEIC_AI_PROMPT_TEMPLATE}
+            </pre>
           </div>
-        )}
-
-        {/* Tab 2: AI Prompt Helper */}
-        {activeTab === 'prompt' && (
-          <div className="flex flex-col gap-4">
-            <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80 text-xs text-zinc-300 leading-relaxed flex flex-col gap-2">
-              <span className="font-semibold text-white flex items-center gap-1.5">
-                <span className="text-cyan-400">💡</span> How to use with ChatGPT / Claude / Gemini:
-              </span>
-              <ol className="list-decimal list-inside space-y-1 text-zinc-400">
-                <li>
-                  Click <strong className="text-zinc-200">"Copy AI Prompt"</strong> below.
-                </li>
-                <li>Open your AI tool (ChatGPT, Claude, Gemini, etc.) and paste the prompt.</li>
-                <li>
-                  Paste your raw TOEIC Part 5 mistake questions into the designated section at the
-                  bottom.
-                </li>
-                <li>
-                  Copy the generated JSON array and paste it into the{' '}
-                  <strong className="text-cyan-300">"Import JSON"</strong> tab!
-                </li>
-              </ol>
-            </div>
-
-            {/* Copy Error Notice (e.g. non-secure HTTP context) */}
-            {copyError && (
-              <div className="p-3.5 rounded-xl bg-amber-950/40 border border-amber-500/50 text-xs font-mono text-amber-200 flex items-center gap-2">
-                <span>⚠</span>
-                <span>{copyError}</span>
-              </div>
-            )}
-
-            {/* Prompt Preview & Copy Button */}
-            <div className="relative rounded-xl border border-zinc-800 bg-black/60 overflow-hidden">
-              <div className="flex items-center justify-between px-4 py-2.5 bg-zinc-900/90 border-b border-zinc-800 text-xs font-mono text-zinc-400">
-                <span>Standardized TOEIC Part 5 Prompt Template</span>
-                <button
-                  onClick={handleCopyPrompt}
-                  className={`px-3 py-1 rounded-md text-xs font-mono font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
-                    isCopied
-                      ? 'bg-emerald-500 text-zinc-950'
-                      : 'bg-cyan-500 hover:bg-cyan-400 text-zinc-950 shadow-sm'
-                  }`}
-                >
-                  {isCopied ? (
-                    <>
-                      <span>✓</span>
-                      <span>Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <svg
-                        className="w-3.5 h-3.5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
-                        />
-                      </svg>
-                      <span>Copy AI Prompt</span>
-                    </>
-                  )}
-                </button>
-              </div>
-
-              <pre className="p-4 text-[11px] font-mono text-zinc-300 leading-relaxed overflow-x-auto max-h-72 select-all">
-                {TOEIC_AI_PROMPT_TEMPLATE}
-              </pre>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
+        </div>
+      )}
+    </ModalShell>
   );
 };

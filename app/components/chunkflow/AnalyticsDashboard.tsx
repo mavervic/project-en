@@ -1,4 +1,5 @@
 import React from 'react';
+import { ModalShell } from './ModalShell';
 import type { CategoryStat, PerformanceStats, UserPerformance } from '../../types/chunkflow';
 
 interface AnalyticsDashboardProps {
@@ -34,27 +35,44 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
   });
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl bg-zinc-950 border border-zinc-800 shadow-2xl p-6 md:p-8 flex flex-col gap-6">
-        {/* Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-zinc-800">
-          <div>
-            <h2 className="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center gap-2">
-              <span className="text-cyan-400">Keybr-Style</span> Performance Analytics
-            </h2>
-            <p className="text-xs text-zinc-400 mt-1">
-              Local telemetry tracking reaction latency, streak retention, and syntactic category
-              weaknesses.
-            </p>
+    <ModalShell
+      isOpen={isOpen}
+      onClose={onClose}
+      title={
+        <>
+          <span className="text-cyan-400">Keybr-Style</span> Performance Analytics
+        </>
+      }
+      subtitle="Local telemetry tracking reaction latency, streak retention, and syntactic category weaknesses."
+      maxWidthClass="max-w-3xl"
+      closeAriaLabel="Close analytics"
+      footer={
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={onTogglePracticeMode}
+              className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-xs font-semibold text-zinc-200 tracking-wide transition-colors cursor-pointer"
+            >
+              Mode: {practiceMode === 'smart' ? 'Weakness-Weighted Drill' : 'Uniform Random'}
+            </button>
+            <button
+              onClick={onResetData}
+              className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-rose-950/60 border border-zinc-800 hover:border-rose-500/50 text-xs font-semibold text-zinc-400 hover:text-rose-300 tracking-wide transition-colors cursor-pointer"
+            >
+              Reset Saved Stats
+            </button>
           </div>
+
           <button
             onClick={onClose}
-            className="p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer"
+            className="w-full sm:w-auto px-6 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-zinc-950 text-xs font-bold tracking-wide transition-colors cursor-pointer"
           >
-            ✕
+            Done
           </button>
         </div>
-
+      }
+    >
+      <div className="flex flex-col gap-6">
         {/* Global Summary Metrics (Lifetime & Strategic Diagnostics) */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
@@ -231,32 +249,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
             </div>
           )}
         </div>
-
-        {/* Footer Actions */}
-        <div className="pt-4 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <button
-              onClick={onTogglePracticeMode}
-              className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-xs font-semibold text-zinc-200 tracking-wide transition-colors cursor-pointer"
-            >
-              Mode: {practiceMode === 'smart' ? 'Weakness-Weighted Drill' : 'Uniform Random'}
-            </button>
-            <button
-              onClick={onResetData}
-              className="px-4 py-2 rounded-lg bg-zinc-900 hover:bg-rose-950/60 border border-zinc-800 hover:border-rose-500/50 text-xs font-semibold text-zinc-400 hover:text-rose-300 tracking-wide transition-colors cursor-pointer"
-            >
-              Reset Saved Stats
-            </button>
-          </div>
-
-          <button
-            onClick={onClose}
-            className="w-full sm:w-auto px-6 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-zinc-950 text-xs font-bold tracking-wide transition-colors cursor-pointer"
-          >
-            Done
-          </button>
-        </div>
       </div>
-    </div>
+    </ModalShell>
   );
 };
