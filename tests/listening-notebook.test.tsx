@@ -175,6 +175,27 @@ describe('ListeningNotebookModal Component', () => {
       expect(screen.getByTestId('copy-feedback-toast')).toBeDefined();
     });
   });
+  it('triggers onPlayAudio for full sentence and isolated chunk when clicked', () => {
+    const onPlayAudio = vi.fn();
+    render(
+      <ListeningNotebookModal
+        isOpen={true}
+        onClose={vi.fn()}
+        markedChunks={sampleRecords}
+        onPlayAudio={onPlayAudio}
+      />
+    );
+
+    const playSentenceBtn = screen.getByTestId('play-sentence-q1-0');
+    expect(playSentenceBtn).toBeDefined();
+    fireEvent.click(playSentenceBtn);
+    expect(onPlayAudio).toHaveBeenCalledWith('The flight to Tokyo has been delayed.');
+
+    const playChunkBtn = screen.getByTestId('play-chunk-q1-0');
+    expect(playChunkBtn).toBeDefined();
+    fireEvent.click(playChunkBtn);
+    expect(onPlayAudio).toHaveBeenCalledWith('The flight to Tokyo');
+  });
 });
 
 describe('HeaderHUD - Listening Notebook Integration', () => {

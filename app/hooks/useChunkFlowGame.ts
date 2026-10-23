@@ -46,6 +46,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     loadBlindModeEnabled()
   );
   const blindModeRef = useRef<boolean>(blindModeEnabled);
+  const [isBlindSpotReviewMode, setIsBlindSpotReviewMode] = useState<boolean>(false);
 
   const [questions, setQuestions] = useState<Question[]>(() => {
     if (initialQuestions && initialQuestions.length > 0) {
@@ -247,14 +248,32 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     [history, questions]
   );
 
-  // Filter candidates by activeTrainingId if set
+  const getAllListeningQuestions = useCallback((): Question[] => {
+    const toeic = getBankQuestions('toeic-listening');
+    const parker = getBankQuestions('parker');
+    const map = new Map<string, Question>();
+    for (const q of [...toeic, ...parker, ...questions]) {
+      if (q && q.id && !map.has(q.id)) {
+        map.set(q.id, q);
+      }
+    }
+    return Array.from(map.values());
+  }, [questions]);
+
+  // Filter candidates by activeTrainingId or blind-spot review mode
   const activeQuestions = useMemo(() => {
+    if (isBlindSpotReviewMode) {
+      const markedQIds = new Set(markedChunks.map((m) => m.questionId));
+      const pool = getAllListeningQuestions();
+      const filtered = pool.filter((q) => markedQIds.has(q.id));
+      if (filtered.length > 0) return filtered;
+    }
     if (activeTrainingId) {
       const filtered = questions.filter((q) => q.trainingId === activeTrainingId);
       if (filtered.length > 0) return filtered;
     }
     return questions;
-  }, [questions, activeTrainingId]);
+  }, [isBlindSpotReviewMode, markedChunks, getAllListeningQuestions, activeTrainingId, questions]);
 
   const toggleBlindMode = useCallback((): boolean => {
     const next = !blindModeRef.current;
@@ -271,7 +290,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
 
   // Advance to next question
   const advanceToNextQuestion = useCallback(() => {
-    const isListening = isListeningBank(activeBankId);
+    const isListening = isListeningBank(activeBankId) || isBlindSpotReviewMode;
     let currentHistory = history;
 
     if (isListening && showFeedback && currentQuestion?.id) {
@@ -303,22 +322,30 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     }
 
     let nextQ: Question;
-    const { unattemptedQuestions } = computeUnitStatus(activeQuestions, currentHistory);
-    const unattemptedRemaining = unattemptedQuestions.filter((q) => q.id !== currentQuestion.id);
-
-    if (unattemptedRemaining.length > 0) {
-      const prevCategory = getQuestionCategory(currentQuestion);
-      const shuffled = constrainedShuffle(
-        unattemptedRemaining,
-        (q) => getQuestionCategory(q),
-        prevCategory
-      );
-      nextQ = shuffled[0];
-    } else if (practiceMode === 'smart') {
-      nextQ = selectNextQuestion(activeQuestions, currentHistory, currentQuestion.id);
+    if (isBlindSpotReviewMode) {
+      const markedQIds = new Set(markedChunks.map((m) => m.questionId));
+      const pool = getAllListeningQuestions();
+      const candidates = pool.filter((q) => markedQIds.has(q.id));
+      const remaining = candidates.filter((q) => q.id !== currentQuestion.id);
+      nextQ = remaining.length > 0 ? remaining[0] : candidates[0] || currentQuestion;
     } else {
-      const candidates = activeQuestions.filter((q) => q.id !== currentQuestion.id);
-      nextQ = candidates[Math.floor(Math.random() * candidates.length)] || activeQuestions[0];
+      const { unattemptedQuestions } = computeUnitStatus(activeQuestions, currentHistory);
+      const unattemptedRemaining = unattemptedQuestions.filter((q) => q.id !== currentQuestion.id);
+
+      if (unattemptedRemaining.length > 0) {
+        const prevCategory = getQuestionCategory(currentQuestion);
+        const shuffled = constrainedShuffle(
+          unattemptedRemaining,
+          (q) => getQuestionCategory(q),
+          prevCategory
+        );
+        nextQ = shuffled[0];
+      } else if (practiceMode === 'smart') {
+        nextQ = selectNextQuestion(activeQuestions, currentHistory, currentQuestion.id);
+      } else {
+        const candidates = activeQuestions.filter((q) => q.id !== currentQuestion.id);
+        nextQ = candidates[Math.floor(Math.random() * candidates.length)] || activeQuestions[0];
+      }
     }
 
     const hasSubject = nextQ.chunks.some((c) => c.type === 'subject');
@@ -336,6 +363,9 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     startTimer,
     showFeedback,
     isListeningBank,
+    isBlindSpotReviewMode,
+    markedChunks,
+    getAllListeningQuestions,
   ]);
 
   // Restart / re-enter current question (re-doing the current question from initial blind state)
@@ -361,6 +391,123 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     questionStartTimeRef.current = Date.now();
     startTimer();
   }, [activeBankId, currentQuestion, startTimer]);
+
+  const startBlindSpotReview = useCallback((): boolean => {
+    const currentMarked = loadMarkedChunks();
+    if (currentMarked.length === 0) {
+      return false;
+    }
+    const markedQIds = new Set(currentMarked.map((m) => m.questionId));
+    const pool = getAllListeningQuestions();
+    const candidateQs = pool.filter((q) => markedQIds.has(q.id));
+    if (candidateQs.length === 0) {
+      return false;
+    }
+
+    setIsBlindSpotReviewMode(true);
+    blindModeRef.current = true;
+    setBlindModeEnabledState(true);
+    saveBlindModeEnabled(true);
+
+    const firstQ = candidateQs[0];
+    setCurrentQuestion(firstQ);
+
+    selectedVoiceRef.current = null;
+    selectedTimeRef.current = null;
+    setSelectedVoice(null);
+    setSelectedTime(null);
+    setLastEvaluation(null);
+    setShowFeedback(false);
+    setChunkMisfireIndex(null);
+    setRoundStage('classify');
+    questionStartTimeRef.current = Date.now();
+    startTimer();
+    return true;
+  }, [getAllListeningQuestions, startTimer]);
+
+  const exitBlindSpotReview = useCallback(() => {
+    setIsBlindSpotReviewMode(false);
+    const bankQs = getBankQuestions(activeBankId);
+    setQuestions(bankQs);
+    const progressive = resolveProgressiveCurriculum(bankQs, history, activeTrainingId);
+    const nextQ = progressive.question || bankQs[0];
+    setCurrentQuestion(nextQ);
+
+    const isListening = isListeningBank(activeBankId);
+    const targetBlind = isListening ? true : loadBlindModeEnabled();
+    blindModeRef.current = targetBlind;
+    setBlindModeEnabledState(targetBlind);
+
+    selectedVoiceRef.current = null;
+    selectedTimeRef.current = null;
+    setSelectedVoice(null);
+    setSelectedTime(null);
+    setLastEvaluation(null);
+    setShowFeedback(false);
+    setChunkMisfireIndex(null);
+    const hasSubject = nextQ?.chunks.some((c) => c.type === 'subject');
+    setRoundStage(!targetBlind && hasSubject && !isListening ? 'subject' : 'classify');
+    questionStartTimeRef.current = Date.now();
+    startTimer();
+  }, [activeBankId, activeTrainingId, history, isListeningBank, startTimer]);
+
+  const handleMasterChunk = useCallback(
+    (chunkId?: string) => {
+      if (chunkId) {
+        removeMarkedChunk(chunkId);
+      } else if (currentQuestion?.id) {
+        const list = loadMarkedChunks();
+        const forThisQ = list.filter((m) => m.questionId === currentQuestion.id);
+        forThisQ.forEach((m) => removeMarkedChunk(m.id));
+      }
+
+      const updatedMarked = loadMarkedChunks();
+      setMarkedChunks(updatedMarked);
+      setMarkedChunksCountMap(getMarkedChunksCountMap());
+
+      if (isBlindSpotReviewMode) {
+        const remainingQIds = new Set(updatedMarked.map((m) => m.questionId));
+        if (remainingQIds.size === 0) {
+          setMarkedChunkIndices([]);
+          return;
+        }
+
+        const allListening = getAllListeningQuestions();
+        const remainingQs = allListening.filter(
+          (q) => remainingQIds.has(q.id) && q.id !== currentQuestion?.id
+        );
+        const nextQ =
+          remainingQs.length > 0
+            ? remainingQs[0]
+            : allListening.find((q) => remainingQIds.has(q.id));
+
+        if (nextQ) {
+          setCurrentQuestion(nextQ);
+          selectedVoiceRef.current = null;
+          selectedTimeRef.current = null;
+          setSelectedVoice(null);
+          setSelectedTime(null);
+          setLastEvaluation(null);
+          setShowFeedback(false);
+          setChunkMisfireIndex(null);
+          blindModeRef.current = true;
+          setBlindModeEnabledState(true);
+          setRoundStage('classify');
+          questionStartTimeRef.current = Date.now();
+          startTimer();
+        }
+      } else {
+        refreshMarkedChunks();
+      }
+    },
+    [
+      currentQuestion?.id,
+      isBlindSpotReviewMode,
+      getAllListeningQuestions,
+      startTimer,
+      refreshMarkedChunks,
+    ]
+  );
 
   const handleSelectChunk = useCallback(
     (chunkIndex: number) => {
@@ -495,6 +642,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
 
   const handleSelectBank = useCallback(
     (bankId: string) => {
+      setIsBlindSpotReviewMode(false);
       setActiveBankIdState(bankId);
       saveActiveBankId(bankId);
       clearCustomQuestions();
@@ -524,11 +672,12 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
       questionStartTimeRef.current = Date.now();
       startTimer();
     },
-    [history, startTimer]
+    [history, isListeningBank, startTimer]
   );
 
   const handleSelectTraining = useCallback(
     (trainingId: string | null) => {
+      setIsBlindSpotReviewMode(false);
       setActiveTrainingIdState(trainingId);
       if (trainingId) {
         const filtered = questions.filter((q) => q.trainingId === trainingId);
@@ -559,7 +708,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
         }
       }
     },
-    [questions, history, activeBankId, startTimer]
+    [questions, history, activeBankId, isListeningBank, startTimer]
   );
 
   const handleResetQuestions = useCallback(() => {
@@ -602,7 +751,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     return loadCustomQuestions().length > 0;
   }, [questions]);
 
-  const isListeningMode = isListeningBank(activeBankId);
+  const isListeningMode = isListeningBank(activeBankId) || isBlindSpotReviewMode;
 
   const handleListeningNarrationComplete = useCallback(() => {
     setShowFeedback(true);
@@ -631,6 +780,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     activeBankId,
     activeTrainingId,
     isListeningMode,
+    isBlindSpotReviewMode,
     markedChunkIndices,
     markedChunks,
     markedChunksCountMap,
@@ -650,6 +800,9 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     handleSelectTime,
     advanceToNextQuestion,
     restartCurrentQuestion,
+    startBlindSpotReview,
+    exitBlindSpotReview,
+    handleMasterChunk,
     handleResetHistory,
     handleImportQuestions,
     handleResetQuestions,

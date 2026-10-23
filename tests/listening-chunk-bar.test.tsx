@@ -181,4 +181,47 @@ describe('ListeningChunkBar and ActionBar Delegation', () => {
     fireEvent.click(tooFastChip);
     expect(onToggleObstacle).toHaveBeenCalledWith('too-fast');
   });
+
+  it('renders solo chunk audio button and triggers onPlayChunk with chunk text', () => {
+    const onPlayChunk = vi.fn();
+    render(
+      <ListeningChunkBar
+        chunks={sampleChunks}
+        markedChunkIndices={[]}
+        onToggleMarkChunk={vi.fn()}
+        isNarrationPlaying={false}
+        onPlayChunk={onPlayChunk}
+      />
+    );
+
+    const chunkAudioBtn1 = screen.getByTestId('chunk-audio-btn-1');
+    expect(chunkAudioBtn1).toBeDefined();
+
+    fireEvent.click(chunkAudioBtn1);
+    expect(onPlayChunk).toHaveBeenCalledTimes(1);
+    expect(onPlayChunk).toHaveBeenCalledWith('has been moved');
+  });
+
+  it('ActionBar forwards onPlayChunk to ListeningChunkBar in listening mode', () => {
+    const onPlayChunk = vi.fn();
+    render(
+      <ActionBar
+        selectedVoice={null}
+        selectedTime={null}
+        onSelectVoice={vi.fn()}
+        onSelectTime={vi.fn()}
+        isListeningMode={true}
+        chunks={sampleChunks}
+        markedChunkIndices={[]}
+        onToggleMarkChunk={vi.fn()}
+        isNarrationPlaying={false}
+        onPlayChunk={onPlayChunk}
+      />
+    );
+
+    const chunkAudioBtn0 = screen.getByTestId('chunk-audio-btn-0');
+    fireEvent.click(chunkAudioBtn0);
+    expect(onPlayChunk).toHaveBeenCalledTimes(1);
+    expect(onPlayChunk).toHaveBeenCalledWith('The departure gate');
+  });
 });

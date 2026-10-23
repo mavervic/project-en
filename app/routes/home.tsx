@@ -82,6 +82,7 @@ export default function Home() {
     activeBankId,
     activeTrainingId,
     isListeningMode,
+    isBlindSpotReviewMode,
     markedChunkIndices,
     markedChunks,
     markedChunksCountMap,
@@ -100,6 +101,9 @@ export default function Home() {
     handleSelectTime,
     advanceToNextQuestion,
     restartCurrentQuestion,
+    startBlindSpotReview,
+    exitBlindSpotReview,
+    handleMasterChunk,
     handleResetHistory,
     handleImportQuestions,
     handleResetQuestions,
@@ -336,6 +340,10 @@ export default function Home() {
           onSpeakChunk={(text) => speak(text, { force: true })}
           isListeningMode={isListeningMode}
           listeningProgressPercent={listeningProgressPercent}
+          isBlindSpotReviewMode={isBlindSpotReviewMode}
+          onMasterChunk={handleMasterChunk}
+          onExitReview={exitBlindSpotReview}
+          remainingBlindSpotsCount={markedChunks.length}
         />
 
         {/* Action Controls & Hotkey Buttons */}
@@ -357,6 +365,7 @@ export default function Home() {
           isAudioPlaying={isSpeaking}
           activeObstacles={activeObstacles}
           onToggleObstacle={handleToggleObstacle}
+          onPlayChunk={(text) => speak(text, { force: true })}
         />
 
         {/* Keyboard Shortcut Guidance Bar (desktop only) */}
@@ -450,6 +459,8 @@ export default function Home() {
         markedChunks={markedChunks}
         onRemoveChunk={handleRemoveMarkedChunk}
         onClearAll={handleClearMarkedChunks}
+        onPlayAudio={(text) => speak(text, { force: true })}
+        onStartReviewDrill={startBlindSpotReview}
       />
     </div>
   );

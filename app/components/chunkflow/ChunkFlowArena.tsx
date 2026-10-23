@@ -24,6 +24,10 @@ interface ChunkFlowArenaProps {
   onSpeakChunk?: (text: string) => void;
   isListeningMode?: boolean;
   listeningProgressPercent?: number;
+  isBlindSpotReviewMode?: boolean;
+  onMasterChunk?: () => void;
+  onExitReview?: () => void;
+  remainingBlindSpotsCount?: number;
 }
 
 export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
@@ -49,6 +53,10 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
   onSpeakChunk,
   isListeningMode = false,
   listeningProgressPercent,
+  isBlindSpotReviewMode = false,
+  onMasterChunk,
+  onExitReview,
+  remainingBlindSpotsCount,
 }) => {
   const isCorrect = lastEvaluation?.isCorrect;
   const [isCopied, setIsCopied] = useState(false);
@@ -426,34 +434,49 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
 
         {/* Dedicated Drill Stage Status Row (Centered, pill style) */}
         {(isSubjectVerbDrill || blindModeEnabled || isListeningMode) && (
-          <div className="w-full flex justify-center items-center my-2 sm:my-3">
+          <div className="w-full flex justify-center items-center gap-2 my-2 sm:my-3">
             <span
               className={`px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold tracking-wider text-center shadow-sm max-w-full ${
-                isListeningMode
-                  ? showFeedback
-                    ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
-                    : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
-                  : blindModeEnabled
-                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
-                    : roundStage === 'subject'
-                      ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse'
-                      : roundStage === 'verb'
-                        ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
-                        : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                isBlindSpotReviewMode
+                  ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold'
+                  : isListeningMode
+                    ? showFeedback
+                      ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                      : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
+                    : blindModeEnabled
+                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                      : roundStage === 'subject'
+                        ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse'
+                        : roundStage === 'verb'
+                          ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 animate-pulse'
+                          : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
               }`}
             >
-              {isListeningMode
-                ? showFeedback
-                  ? '✓ 聽力播放完成 → 點選下方語塊標記盲點'
-                  : '🎧 聽音辨識中...'
-                : blindModeEnabled
-                  ? '🎧 Listening Mode → Classify Voice & Tense'
-                  : roundStage === 'subject'
-                    ? '1. Tap Subject Chunk'
-                    : roundStage === 'verb'
-                      ? '✓ Subject Locked → 2. Tap Verb Chunk'
-                      : '✓ S+V Locked → 3. Classify Voice & Tense'}
+              {isBlindSpotReviewMode
+                ? '🎯 盲點專項特訓'
+                : isListeningMode
+                  ? showFeedback
+                    ? '✓ 聽力播放完成 → 點選下方語塊標記盲點'
+                    : '🎧 聽音辨識中...'
+                  : blindModeEnabled
+                    ? '🎧 Listening Mode → Classify Voice & Tense'
+                    : roundStage === 'subject'
+                      ? '1. Tap Subject Chunk'
+                      : roundStage === 'verb'
+                        ? '✓ Subject Locked → 2. Tap Verb Chunk'
+                        : '✓ S+V Locked → 3. Classify Voice & Tense'}
             </span>
+            {isBlindSpotReviewMode && onExitReview && (
+              <button
+                type="button"
+                data-testid="exit-review-mode-btn"
+                onClick={onExitReview}
+                title="退出盲點特訓，返回常規題庫練習"
+                className="px-2 py-0.5 rounded-full text-[10px] font-mono border border-zinc-700 bg-zinc-800 text-zinc-400 hover:text-zinc-200 hover:border-zinc-500 transition-colors cursor-pointer"
+              >
+                ✕ 結束特訓
+              </button>
+            )}
           </div>
         )}
 
@@ -586,11 +609,21 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             <div className="flex items-center gap-2.5 flex-wrap">
               {isListeningMode ? (
                 <>
-                  <span className="px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase bg-cyan-500 text-zinc-950">
-                    LISTEN & DECODE
+                  <span
+                    className={`px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase ${
+                      isBlindSpotReviewMode
+                        ? 'bg-amber-500 text-zinc-950'
+                        : 'bg-cyan-500 text-zinc-950'
+                    }`}
+                  >
+                    {isBlindSpotReviewMode ? 'BLIND-SPOT REMEDIATION' : 'LISTEN & DECODE'}
                   </span>
                   <span className="text-xs font-mono text-zinc-400">
-                    點選下方語塊標記盲點，完成後前往下一題
+                    {isBlindSpotReviewMode
+                      ? remainingBlindSpotsCount !== undefined
+                        ? `剩餘 ${remainingBlindSpotsCount} 個盲點語塊`
+                        : '複習盲點語塊'
+                      : '點選下方語塊標記盲點，完成後前往下一題'}
                   </span>
                 </>
               ) : (
@@ -642,13 +675,47 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
             )}
           </div>
 
-          {onNextQuestion && (
+          <div className="flex items-center gap-2 self-end sm:self-center shrink-0">
+            {isBlindSpotReviewMode && onMasterChunk && (
+              <button
+                type="button"
+                onClick={onMasterChunk}
+                data-testid="master-chunk-btn"
+                className="px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 text-sm font-bold tracking-wide shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 active:scale-95"
+              >
+                <span>✓ 已掌握</span>
+              </button>
+            )}
+            {onNextQuestion && (
+              <button
+                onClick={onNextQuestion}
+                data-testid="next-question-btn"
+                className="px-5 py-2.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 text-sm font-semibold tracking-wide shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap"
+              >
+                Next Sentence →
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Banner when all blind spots are cleared in review drill */}
+      {isBlindSpotReviewMode && remainingBlindSpotsCount === 0 && (
+        <div
+          data-testid="all-blind-spots-cleared-banner"
+          className="rounded-xl border border-emerald-500/40 bg-emerald-950/30 p-5 text-center flex flex-col items-center justify-center gap-3"
+        >
+          <span className="text-3xl">🎉</span>
+          <h3 className="text-emerald-300 font-bold text-base">所有聽力盲點皆已掌握！</h3>
+          <p className="text-xs text-zinc-400 font-mono">恭喜清除所有標記的聽力盲點，繼續保持！</p>
+          {onExitReview && (
             <button
-              onClick={onNextQuestion}
-              data-testid="next-question-btn"
-              className="px-5 py-2.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 text-sm font-semibold tracking-wide shadow-md hover:shadow-lg transition-all self-end sm:self-center cursor-pointer whitespace-nowrap"
+              type="button"
+              data-testid="exit-review-drill-btn"
+              onClick={onExitReview}
+              className="mt-1 px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-zinc-950 text-xs font-bold transition-all cursor-pointer shadow"
             >
-              Next Sentence →
+              返回常規題庫練習
             </button>
           )}
         </div>

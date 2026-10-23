@@ -18,6 +18,7 @@ export interface ActionBarProps {
   isAudioPlaying?: boolean;
   activeObstacles?: ListeningObstacle[];
   onToggleObstacle?: (obstacle: ListeningObstacle) => void;
+  onPlayChunk?: (chunkText: string) => void;
 }
 
 export const ActionBar: React.FC<ActionBarProps> = ({
@@ -36,6 +37,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({
   isAudioPlaying = false,
   activeObstacles = [],
   onToggleObstacle,
+  onPlayChunk,
 }) => {
   if (isListeningMode) {
     return (
@@ -50,6 +52,7 @@ export const ActionBar: React.FC<ActionBarProps> = ({
         isAudioPlaying={isAudioPlaying}
         activeObstacles={activeObstacles}
         onToggleObstacle={onToggleObstacle}
+        onPlayChunk={onPlayChunk}
       />
     );
   }

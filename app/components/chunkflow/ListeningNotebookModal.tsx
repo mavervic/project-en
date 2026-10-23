@@ -9,6 +9,8 @@ export interface ListeningNotebookModalProps {
   markedChunks: MarkedChunkRecord[];
   onRemoveChunk?: (id: string) => void;
   onClearAll?: () => void;
+  onPlayAudio?: (text: string) => void;
+  onStartReviewDrill?: () => void;
 }
 
 export const ListeningNotebookModal: React.FC<ListeningNotebookModalProps> = ({
@@ -17,6 +19,8 @@ export const ListeningNotebookModal: React.FC<ListeningNotebookModalProps> = ({
   markedChunks,
   onRemoveChunk,
   onClearAll,
+  onPlayAudio,
+  onStartReviewDrill,
 }) => {
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -198,6 +202,23 @@ export const ListeningNotebookModal: React.FC<ListeningNotebookModalProps> = ({
         <div className="flex items-center gap-2 shrink-0">
           {markedChunks.length > 0 && (
             <>
+              {onStartReviewDrill && (
+                <button
+                  type="button"
+                  data-testid="start-review-drill-btn"
+                  onClick={() => {
+                    onClose();
+                    onStartReviewDrill();
+                  }}
+                  title="進入盲點特訓模式，只針對有標記盲點的句子進行專項練習"
+                  className="px-2.5 py-1.5 rounded-lg border border-amber-400 bg-amber-500 hover:bg-amber-400 text-zinc-950 text-xs font-bold transition-all cursor-pointer shadow-sm hover:scale-105 active:scale-95 flex items-center gap-1.5"
+                >
+                  <span>🎯 開始盲點特訓</span>
+                  <span className="px-1.5 py-0.2 rounded-full bg-zinc-950/20 text-zinc-950 font-mono text-[10px]">
+                    {markedChunks.length}
+                  </span>
+                </button>
+              )}
               <button
                 type="button"
                 data-testid="export-markdown-btn"
@@ -328,6 +349,32 @@ export const ListeningNotebookModal: React.FC<ListeningNotebookModalProps> = ({
                 <p className="text-xs text-zinc-400 border-t border-zinc-800/60 pt-1.5 mt-0.5 font-sans">
                   {item.translation}
                 </p>
+              )}
+
+              {/* In-Situ Audio Audition Controls */}
+              {onPlayAudio && (
+                <div className="flex items-center gap-2 pt-2 border-t border-zinc-800/60 mt-1">
+                  <button
+                    type="button"
+                    data-testid={`play-sentence-${item.id}`}
+                    onClick={() => onPlayAudio(item.sentence)}
+                    title="播放完整句子"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-zinc-800 hover:bg-zinc-700 text-zinc-200 transition-colors cursor-pointer"
+                  >
+                    <span>🔊</span>
+                    <span>播整句</span>
+                  </button>
+                  <button
+                    type="button"
+                    data-testid={`play-chunk-${item.id}`}
+                    onClick={() => onPlayAudio(item.chunkText)}
+                    title="播放此語塊"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/30 transition-colors cursor-pointer"
+                  >
+                    <span>🎧</span>
+                    <span>播語塊</span>
+                  </button>
+                </div>
               )}
             </div>
           ))

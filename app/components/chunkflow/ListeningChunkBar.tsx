@@ -12,6 +12,7 @@ export interface ListeningChunkBarProps {
   isAudioPlaying?: boolean;
   activeObstacles?: import('../../types/chunkflow').ListeningObstacle[];
   onToggleObstacle?: (obstacle: import('../../types/chunkflow').ListeningObstacle) => void;
+  onPlayChunk?: (chunkText: string) => void;
 }
 
 export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
@@ -25,6 +26,7 @@ export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
   isAudioPlaying = false,
   activeObstacles = [],
   onToggleObstacle,
+  onPlayChunk,
 }) => {
   return (
     <div
@@ -127,31 +129,57 @@ export const ListeningChunkBar: React.FC<ListeningChunkBarProps> = ({
               {chunks.map((chunk, index) => {
                 const isMarked = markedChunkIndices.includes(index);
                 return (
-                  <button
+                  <div
                     key={`${chunk.text}-${index}`}
-                    type="button"
-                    data-testid={`chunk-chip-${index}`}
-                    disabled={disabled}
-                    onClick={() => onToggleMarkChunk(index)}
-                    aria-pressed={isMarked}
-                    title={isMarked ? '點擊取消標記' : '點擊標記為聽力盲點/生詞'}
-                    className={`relative px-4 py-2 rounded-xl border text-sm sm:text-base font-semibold tracking-wide transition-all cursor-pointer flex items-center gap-2 active:scale-95 ${
+                    className={`inline-flex items-center rounded-xl border transition-all ${
                       isMarked
-                        ? 'bg-amber-500/20 text-amber-200 border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.35)] ring-2 ring-amber-400/30 font-bold'
-                        : 'bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 border-zinc-700/80 hover:border-zinc-500'
-                    } ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        ? 'bg-amber-500/20 border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.35)] ring-2 ring-amber-400/30 font-bold'
+                        : 'bg-zinc-900/90 hover:bg-zinc-800 border-zinc-700/80 hover:border-zinc-500'
+                    } ${disabled ? 'opacity-50' : ''}`}
                   >
-                    <span>{chunk.text}</span>
-                    {isMarked ? (
-                      <span className="text-[10px] px-1.5 py-0.2 rounded bg-amber-500 text-zinc-950 font-mono font-bold">
-                        盲點
-                      </span>
-                    ) : (
-                      <span className="text-[10px] text-zinc-500 font-mono font-normal">
-                        #{index + 1}
-                      </span>
+                    <button
+                      type="button"
+                      data-testid={`chunk-chip-${index}`}
+                      disabled={disabled}
+                      onClick={() => onToggleMarkChunk(index)}
+                      aria-pressed={isMarked}
+                      title={isMarked ? '點擊取消標記' : '點擊標記為聽力盲點/生詞'}
+                      className={`px-3 py-2 text-sm sm:text-base font-semibold tracking-wide transition-all cursor-pointer flex items-center gap-2 active:scale-95 ${
+                        isMarked ? 'text-amber-200' : 'text-zinc-200'
+                      } ${disabled ? 'cursor-not-allowed' : ''}`}
+                    >
+                      <span>{chunk.text}</span>
+                      {isMarked ? (
+                        <span className="text-[10px] px-1.5 py-0.2 rounded bg-amber-500 text-zinc-950 font-mono font-bold">
+                          盲點
+                        </span>
+                      ) : (
+                        <span className="text-[10px] text-zinc-500 font-mono font-normal">
+                          #{index + 1}
+                        </span>
+                      )}
+                    </button>
+                    {onPlayChunk && (
+                      <button
+                        type="button"
+                        data-testid={`chunk-audio-btn-${index}`}
+                        disabled={disabled}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onPlayChunk(chunk.text);
+                        }}
+                        aria-label={`單獨播放語塊: ${chunk.text}`}
+                        title={`單獨聆聽: ${chunk.text}`}
+                        className={`pr-2.5 pl-1 py-2 text-zinc-400 hover:text-cyan-300 transition-colors flex items-center justify-center cursor-pointer ${
+                          disabled ? 'cursor-not-allowed' : 'active:scale-95'
+                        }`}
+                      >
+                        <span className="text-xs" aria-hidden="true">
+                          🔊
+                        </span>
+                      </button>
                     )}
-                  </button>
+                  </div>
                 );
               })}
             </div>
