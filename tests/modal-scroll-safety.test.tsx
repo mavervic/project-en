@@ -167,9 +167,16 @@ describe('All Application Modals Conform to Mobile Scroll and Viewport Clamping 
       accuracy: 90,
       avgLatencyMs: 1200,
       chunksPerMin: 45,
-      streak: 5,
+      currentStreak: 5,
       bestStreak: 12,
-      recent: { sampleSize: 10, accuracy: 90, avgLatencyMs: 1200 },
+      recent: {
+        sampleSize: 10,
+        accuracy: 90,
+        avgLatencyMs: 1200,
+        totalAttempts: 10,
+        correctAttempts: 9,
+        chunksPerMin: 45,
+      },
     };
 
     render(
