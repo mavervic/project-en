@@ -22,6 +22,7 @@ import {
   LOL_WORLDS_LISTENING_QUESTIONS,
 } from './lol-worlds-listening';
 import { NBA_LISTENING_BANK, NBA_LISTENING_META, NBA_LISTENING_QUESTIONS } from './nba-listening';
+import { F1_LISTENING_BANK, F1_LISTENING_META, F1_LISTENING_QUESTIONS } from './f1-listening';
 
 export const STARTER_BANK_META: QuestionBankMeta = {
   id: 'starter',
@@ -41,6 +42,7 @@ export const STARTER_BANK: QuestionBank = {
 };
 
 export const REGISTERED_BANKS: Record<string, QuestionBank> = {
+  'f1-listening': F1_LISTENING_BANK,
   'nba-listening': NBA_LISTENING_BANK,
   'lol-worlds-listening': LOL_WORLDS_LISTENING_BANK,
   'toeic-listening': TOEIC_LISTENING_BANK,
@@ -60,6 +62,7 @@ export function getRegisteredBanks(): QuestionBankMeta[] {
     TOEIC_LISTENING_META,
     LOL_WORLDS_LISTENING_META,
     NBA_LISTENING_META,
+    F1_LISTENING_META,
   ];
 }
 
@@ -87,4 +90,7 @@ export {
   NBA_LISTENING_BANK,
   NBA_LISTENING_META,
   NBA_LISTENING_QUESTIONS,
+  F1_LISTENING_BANK,
+  F1_LISTENING_META,
+  F1_LISTENING_QUESTIONS,
 };

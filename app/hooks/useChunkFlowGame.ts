@@ -68,7 +68,8 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
       id === 'toeic-listening' ||
       id === 'parker' ||
       id === 'lol-worlds-listening' ||
-      id === 'nba-listening',
+      id === 'nba-listening' ||
+      id === 'f1-listening',
     []
   );
 

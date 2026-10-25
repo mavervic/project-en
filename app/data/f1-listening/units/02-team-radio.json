@@ -1,0 +1,342 @@
+[
+  {
+    "id": "f1-02-01",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "The race engineer shouted box box box this lap.",
+    "translation": "比賽工程師在無線電中大喊這圈立刻進站。",
+    "chunks": [
+      {
+        "text": "The race engineer",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "shouted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "box box box",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "this lap.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (shouted)。\n• 【術語解說】box box box 是 F1 賽車中最著名的無線電通話代碼，源自德語 Boxenstop，意思是指令車手「本圈立刻進維修站換胎（pit in now）」，重複三次是為了在高速噪音中確保車手確實聽清指令。\n• 【跨界連結】相當於 NBA 總教練在場邊比出暫停手勢大喊「Timeout!」，或是英雄聯盟隊長狂點信號指揮全隊「回城整補」。",
+    "topic": "Team Radio & Strategy"
+  },
+  {
+    "id": "f1-02-02",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "We are executing the undercut against our rival.",
+    "translation": "我們正在對競爭對手執行進站提前翻越戰術。",
+    "chunks": [
+      {
+        "text": "We",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are executing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the undercut",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "against our rival.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are executing)。\n• 【術語解說】undercut（進站提前翻越）是 F1 核心戰術：在前車進站前提前一到兩圈換上全新熱胎，藉由乾淨氣流與新胎抓地力跑出極速「出圈（out-lap）」，待對手下一圈進站出來時已成功超越對手。\n• 【跨界連結】就像英雄聯盟中搶先回城買大件裝備後傳送到線上壓制對手，或 NBA 趁對方主力換下休息時發動快攻波追平比分。",
+    "topic": "Team Radio & Strategy"
+  },
+  {
+    "id": "f1-02-03",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "The pit crew has changed all four tyres in two seconds.",
+    "translation": "後勤技師團隊在兩秒鐘內完成了全部四條輪胎的更換。",
+    "chunks": [
+      {
+        "text": "The pit crew",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has changed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "all four tyres",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in two seconds.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has changed)。\n• 【術語解說】pit crew（維修站後勤技師團隊）約有 20 人，各司其職負責千斤頂頂起車身、氣動扳手拆裝螺帽、換胎與放車，世界頂級車隊最快換胎紀錄僅約 1.8 秒。\n• 【日常開車比喻】一般去保養廠或路邊換一個備胎需要15到30分鐘，而 F1 團隊換完整整四條輪胎只需眨眼兩秒鐘！",
+    "topic": "Team Radio & Strategy"
+  },
+  {
+    "id": "f1-02-04",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "The team will switch to the hard compound.",
+    "translation": "車隊將會換上硬胎配方輪胎。",
+    "chunks": [
+      {
+        "text": "The team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will switch",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to the hard compound.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will switch)。\n• 【術語解說】hard compound（硬胎，白色輪胎壁標誌）具備最長的里程耐磨性，升溫慢但衰退慢；對比 soft（紅標軟胎）抓地力最強但磨損極快，medium（黃標中性胎）則介於兩者之間。\n• 【日常比喻】就像馬拉松跑者選擇耐磨大底跑鞋，雖然起步沉重但能穩定撐完後半段長距離。",
+    "topic": "Team Radio & Strategy"
+  },
+  {
+    "id": "f1-02-05",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "The rear tyres were degraded by the high track temperature.",
+    "translation": "後輪因為過高的賽道溫度而嚴重衰退。",
+    "chunks": [
+      {
+        "text": "The rear tyres",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were degraded",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the high track temperature.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (were degraded)。\n• 【術語解說】tyre degradation（輪胎性能衰退 / 掉胎）是 F1 策略的核心，高賽道溫度加速熱衰竭（thermal degradation）與胎面起泡（blistering），導致後輪滑移失去動力輸出。\n• 【跨界連結】宛如籃球賽事第四節球員體力耗盡導致防守橫移變慢、投籃命中率大幅滑落。",
+    "topic": "Team Radio & Strategy"
+  },
+  {
+    "id": "f1-02-06",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "He was told to maintain a positive delta.",
+    "translation": "他被要求維持正值時間差數值。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was told",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to maintain a positive delta.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was told)。\n• 【術語解說】delta time 是指方向盤螢幕上顯示的「即時時間差差值」。在虛擬安全車（VSC）或排位出圈時，車手必須保持 delta 為正數（positive delta），代表車速低於規定上限，否則將被賽會判罰。\n• 【日常開車比喻】就像公路測速照相或區間測速，你必須隨時注意儀表板平均車速不可超速。",
+    "topic": "Team Radio & Strategy"
+  },
+  {
+    "id": "f1-02-07",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "The driver is complaining about severe tire vibrations.",
+    "translation": "車手正在抱怨輪胎產生了劇烈的震動。",
+    "chunks": [
+      {
+        "text": "The driver",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is complaining",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "about severe tire vibrations.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is complaining)。\n• 【術語解說】severe vibrations（劇烈抖動）通常是因為重煞車導致輪胎鎖死擦出平斑（flat spot），方圓不平整的輪胎在時速300公里轉動下會引發整個方向盤懸吊劇烈抖動。\n• 【日常開車比喻】就像開車輪胎配重平衡塊脫落或胎皮變形時方向盤高速抖動的感覺。",
+    "topic": "Team Radio & Strategy"
+  },
+  {
+    "id": "f1-02-08",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "We have extended our first stint by five laps.",
+    "translation": "我們將第一賽段的行駛里程延長了五圈。",
+    "chunks": [
+      {
+        "text": "We",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "have extended",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "our first stint",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "by five laps.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (have extended)。\n• 【術語解說】stint 指兩次進站之間的「單一續航階段/賽段」；延長第一賽段可採取 overcut（晚進站策略），等待安全車出動或在比賽末段使用更新的輪胎猛烈反擊。\n• 【跨界連結】相當於 NBA 季後賽球星打滿整節不換下休息以維持追分節奏，或是英雄聯盟賴線農兵累積經濟優勢。",
+    "topic": "Team Radio & Strategy"
+  },
+  {
+    "id": "f1-02-09",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "The engineer will inform the driver of the pit window.",
+    "translation": "工程師將會通知車手進站時間窗口。",
+    "chunks": [
+      {
+        "text": "The engineer",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will inform",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the driver",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "of the pit window.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will inform)。\n• 【術語解說】pit window（進站時間窗口）是車隊策略演算法計算出最理想的進站圈數區間，進站出來時能避開塞車（traffic）並落在乾淨空氣區。\n• 【跨界連結】好比 NBA 輪替陣容設定的換人時間點，或是英雄聯盟隊伍在巴龍刷新前一分鐘的回家補裝窗口。",
+    "topic": "Team Radio & Strategy"
+  },
+  {
+    "id": "f1-02-10",
+    "trainingId": "f1-02-team-radio",
+    "sentence": "He manages fuel consumption carefully throughout the middle phase.",
+    "translation": "他在比賽中段謹慎地掌控著賽車的燃油消耗。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "manages",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "fuel consumption",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "carefully throughout the middle phase.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動態 (manages)。\n• 【術語解說】fuel consumption（油耗管理）：現代 F1 比賽禁止中途加油，車載燃油上限嚴格限制在 110 公斤以內，車手必須運用滑行煞車（lift and coast）技巧省油以確保完賽。\n• 【日常開車比喻】如同長途高速公路巡航時透過輕踩油門減少瞬間油耗以省油。",
+    "topic": "Team Radio & Strategy"
+  }
+]

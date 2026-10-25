@@ -200,7 +200,7 @@ describe('TOEIC Part 5 Question Banks', () => {
   describe('Bank Registry Integration', () => {
     it('registers unified toeic-part5 along with other registered banks', () => {
       const banks = getRegisteredBanks();
-      expect(banks).toHaveLength(6);
+      expect(banks).toHaveLength(7);
 
       const bankIds = banks.map((b) => b.id);
       expect(bankIds).toEqual([
@@ -210,6 +210,7 @@ describe('TOEIC Part 5 Question Banks', () => {
         'toeic-listening',
         'lol-worlds-listening',
         'nba-listening',
+        'f1-listening',
       ]);
 
       const part5Banks = banks.filter((b) => b.category === 'TOEIC Part 5 文法句型');
@@ -223,8 +224,8 @@ describe('TOEIC Part 5 Question Banks', () => {
       expect(listeningBanks.map((b) => b.id)).toEqual(['parker', 'toeic-listening']);
       expect(esportsBanks).toHaveLength(1);
       expect(esportsBanks.map((b) => b.id)).toEqual(['lol-worlds-listening']);
-      expect(sportsBanks).toHaveLength(1);
-      expect(sportsBanks.map((b) => b.id)).toEqual(['nba-listening']);
+      expect(sportsBanks).toHaveLength(2);
+      expect(sportsBanks.map((b) => b.id)).toEqual(['nba-listening', 'f1-listening']);
     });
 
     it('retrieves unified bank and questions correctly by ID', () => {

@@ -212,7 +212,8 @@ export default function Home() {
         bankId === 'toeic-listening' ||
         bankId === 'parker' ||
         bankId === 'lol-worlds-listening' ||
-        bankId === 'nba-listening'
+        bankId === 'nba-listening' ||
+        bankId === 'f1-listening'
       ) {
         enableNarration();
       }

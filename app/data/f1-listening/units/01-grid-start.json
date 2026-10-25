@@ -1,0 +1,332 @@
+[
+  {
+    "id": "f1-01-01",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "The pole sitter leads the pack onto the formation lap.",
+    "translation": "桿位車手帶領著整個車陣進入暖胎圈。",
+    "chunks": [
+      {
+        "text": "The pole sitter",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "leads",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the pack",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "onto the formation lap.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動態 (leads)。\n• 【術語解說】pole sitter 指「桿位車手」（排位賽最快獲得第1位發車），leads the pack 指帶領整個車陣，formation lap 為「暖胎圈/編隊圈」，車手在此圈左右搖擺讓輪胎與煞車達到理想工作溫度。\n• 【跨界連結】相當於 NBA 主場球隊賽前的跳球優勢，或是英雄聯盟開局搶先站位佔據河道視野。",
+    "topic": "Starting Grid & Lights Out"
+  },
+  {
+    "id": "f1-01-02",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "Twenty cars are lining up on the starting grid.",
+    "translation": "二十輛賽車正在起跑格上依序就位。",
+    "chunks": [
+      {
+        "text": "Twenty cars",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are lining up",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on the starting grid.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are lining up)。\n• 【術語解說】starting grid 是「起跑格/發車位」，20輛賽車依排位賽成績依序停入對應的發車格。\n• 【日常開車比喻】就像在紅綠燈路口精準停在停止線前，但 F1 車手必須精準將前輪卡進僅有幾公分寬的黃色定位線以內。",
+    "topic": "Starting Grid & Lights Out"
+  },
+  {
+    "id": "f1-01-03",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "The red lights went out after five seconds.",
+    "translation": "五盞紅燈在五秒鐘後熄滅。",
+    "chunks": [
+      {
+        "text": "The red lights",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "went out",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "after five seconds.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (went out)。\n• 【術語解說】lights out 是 F1 最經典的起跑瞬間。「It's lights out and away we go!」五盞紅燈逐一亮起，隨後全部熄滅，代表正式開賽。\n• 【跨界連結】比喻就像田徑或游泳的發令槍響瞬間，或 NBA 跳球裁判將球拋向空中的一剎那。",
+    "topic": "Starting Grid & Lights Out"
+  },
+  {
+    "id": "f1-01-04",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "He made a brilliant launch from the second row.",
+    "translation": "他從第二排起步完成了極為精彩的彈射起步。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "made",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a brilliant launch",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "from the second row.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (made)。\n• 【術語解說】launch 指起跑瞬間的起步彈射加速；second row 是「第二排發車」（第3、第4位）。精準掌控離合器咬合點（clutch bite point）避免輪胎空轉打滑是出色起步的關鍵。\n• 【日常比喻】如同一般車輛在斜坡起步時離合器與油門的完美配合，但在 F1 賽車上是零到百公里加速僅需約 2.5 秒的極限反應。",
+    "topic": "Starting Grid & Lights Out"
+  },
+  {
+    "id": "f1-01-05",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "Three cars collided into the first corner.",
+    "translation": "三輛賽車在一號彎發生了碰撞意外。",
+    "chunks": [
+      {
+        "text": "Three cars",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "collided",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "into the first corner.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (collided)。\n• 【術語解說】turn 1 (the first corner) 是每場大獎賽起跑後最混亂的瓶頸區（funnel effect），20輛車同時搶奪內線極易發生擦撞事故。\n• 【跨界連結】如同 NBA 爭搶防守籃板時禁區人仰馬翻的身體對抗，或是英雄聯盟開局一級團在野區窄口爆發的混戰。",
+    "topic": "Starting Grid & Lights Out"
+  },
+  {
+    "id": "f1-01-06",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "The driver is struggling on cold tyres.",
+    "translation": "這位車手在冷胎狀態下正艱難地維持車身穩定。",
+    "chunks": [
+      {
+        "text": "The driver",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is struggling",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on cold tyres.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is struggling)。\n• 【術語解說】cold tyres（冷胎）缺乏足夠抓地力（grip），賽車在起跑或剛出維修站前幾彎會劇烈滑動甚至打轉（spin）。\n• 【日常開車比喻】就像雨天開車經過金屬水溝蓋或結冰路面時輪胎打滑失去牽引力的驚險感覺。",
+    "topic": "Starting Grid & Lights Out"
+  },
+  {
+    "id": "f1-01-07",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "He has gained three positions on the opening lap.",
+    "translation": "他在開局第一圈就上升了三個名次。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has gained",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "three positions",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "on the opening lap.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has gained)。\n• 【術語解說】gained three positions 指超車上升三個名次，opening lap 是首圈，通常也是全場超車最多、風險最高的圈數。\n• 【跨界連結】類似 NBA 球隊第一節開局打出一波 10-0 的攻勢迅速擴大領先優勢。",
+    "topic": "Starting Grid & Lights Out"
+  },
+  {
+    "id": "f1-01-08",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "The stewards are investigating the start incident.",
+    "translation": "賽事裁判團正在調查這起起跑碰撞事故。",
+    "chunks": [
+      {
+        "text": "The stewards",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are investigating",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the start incident.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are investigating)。\n• 【術語解說】stewards 是賽事裁判團，負責透過重播與遙測數據判定起跑搶跑（jump start）或轉向擦撞（causing a collision）並給予罰秒或處罰。\n• 【跨界連結】相當於 NBA 裁判檢視回放中心判定惡意犯規（Flagrant Foul），或足球 VAR 視訊裁判判罰紅黃牌。",
+    "topic": "Starting Grid & Lights Out"
+  },
+  {
+    "id": "f1-01-09",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "The young rookie was passed on the main straight.",
+    "translation": "這位年輕新秀在主大直道上被對手超越。",
+    "chunks": [
+      {
+        "text": "The young rookie",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was passed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on the main straight.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was passed)。\n• 【術語解說】rookie 指新秀車手，main straight 是主大直道（起終點大直道），通常是賽道極速最高、最佳的超車熱點。\n• 【跨界連結】猶如 NBA 新秀在防守端被對手老將利用加速切入過掉得分。",
+    "topic": "Starting Grid & Lights Out"
+  },
+  {
+    "id": "f1-01-10",
+    "trainingId": "f1-01-grid-start",
+    "sentence": "He holds the race lead heading into sector two.",
+    "translation": "進入第二計時區段時他依然保持著比賽領跑優勢。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "holds",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the race lead",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "heading into sector two.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動態 (holds)。\n• 【術語解說】race lead 指領跑位置，sector two 是賽道第二計時段。F1 每條賽道都劃分為 Sector 1, 2, 3 三個計時區間來即時比對單圈秒數。\n• 【跨界連結】類似 NBA 比賽打完上半場第二節仍保持領先，或馬拉松跑者通過中間計時點保持第一。",
+    "topic": "Starting Grid & Lights Out"
+  }
+]

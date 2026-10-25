@@ -1,0 +1,322 @@
+[
+  {
+    "id": "f1-03-01",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "The race director has deployed the full safety car.",
+    "translation": "賽事總監已經出動了全場實體安全車。",
+    "chunks": [
+      {
+        "text": "The race director",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has deployed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the full safety car.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has deployed)。\n• 【術語解說】full safety car（安全車出動）：當賽道發生嚴重撞車或路面有危險障礙時，安全車進場領跑壓制所有賽車車速並禁止超車，原本分散的車距會被完全壓縮歸零。\n• 【跨界連結】比喻就像 NBA 比賽中裁判吹響死球哨音暫停比賽，原本領先 20 分的秒差優勢在安全車後瞬間被沒收追平。",
+    "topic": "Safety Car & Track Flags"
+  },
+  {
+    "id": "f1-03-02",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "The Virtual Safety Car was activated after the engine failure.",
+    "translation": "在引擎故障發生後虛擬安全車機制隨即啟動。",
+    "chunks": [
+      {
+        "text": "The Virtual Safety Car",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was activated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "after the engine failure.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was activated)。\n• 【術語解說】Virtual Safety Car (VSC，虛擬安全車)：不必出動實體安全車，各車手必須在儀表板保持正 delta 減速約 40%，車手在此時進站換胎耗費的時間代價只有正常比賽時的一半（cheap pit stop）。\n• 【日常開車比喻】如同全線高速公路臨時電子看板顯示全體降速限速 60 公里。",
+    "topic": "Safety Car & Track Flags"
+  },
+  {
+    "id": "f1-03-03",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "Track marshals are waving double waved yellow flags.",
+    "translation": "賽道工作人員正在揮舞雙黃旗。",
+    "chunks": [
+      {
+        "text": "Track marshals",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are waving",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "double waved yellow flags.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are waving)。\n• 【術語解說】double waved yellow flags（雙黃旗）：代表前方賽道完全受阻或有工作人員救援，車手必須大幅減速並隨時準備完全停車，該路段絕對嚴禁做出飛馳圈。\n• 【跨界連結】如同 NBA 現場有球員受傷倒地裁判立刻中止進攻，或足球場上隊醫進場的緊急暫停狀態。",
+    "topic": "Safety Car & Track Flags"
+  },
+  {
+    "id": "f1-03-04",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "A damaged front wing dropped carbon fibre debris.",
+    "translation": "損壞的前翼在賽道上散落了碳纖維碎片。",
+    "chunks": [
+      {
+        "text": "A damaged front wing",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "dropped",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "carbon fibre debris.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (dropped)。\n• 【術語解說】debris（殘骸碎片）：F1 賽車車身由輕質碳纖維打造，撞擊後會散落鋒利碎片，其他賽車壓過極易導致輪胎爆胎（puncture）。\n• 【日常開車比喻】如同行駛在高架橋上遇到散落的鐵條或碎玻璃，必須格外小心閃避避開爆胎危險。",
+    "topic": "Safety Car & Track Flags"
+  },
+  {
+    "id": "f1-03-05",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "The spun car was stranded in the gravel trap.",
+    "translation": "打轉失控的賽車受困在碎石緩衝區中無法動彈。",
+    "chunks": [
+      {
+        "text": "The spun car",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was stranded",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in the gravel trap.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was stranded)。\n• 【術語解說】gravel trap（碎石緩衝區）：賽道彎角外側鋪設的深碎石床，能使失控賽車迅速減速停下，但一旦陷入碎石底盤托底便很難自行脫困而被迫退賽（DNF）。\n• 【跨界連結】如同高爾夫球打進沙坑陷阱，或者在英雄聯盟中被對手控場技能禁錮動彈不得。",
+    "topic": "Safety Car & Track Flags"
+  },
+  {
+    "id": "f1-03-06",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "The safety car lights will turn off this lap.",
+    "translation": "安全車的指示燈號將在這一圈結束時熄滅。",
+    "chunks": [
+      {
+        "text": "The safety car lights",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will turn off",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "this lap.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will turn off)。\n• 【術語解說】safety car lights turn off（安全車滅燈）：代表安全車在該圈末將駛回維修區，領跑車手隨即掌控全場車速節奏，準備重啟比賽。\n• 【跨界連結】好比 NBA 暫停結束裁判鳴笛催促雙方球員回到場上，發邊線球即刻恢復對決。",
+    "topic": "Safety Car & Track Flags"
+  },
+  {
+    "id": "f1-03-07",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "The leader controls the pace before the restart line.",
+    "translation": "領跑車手在通過重新起跑控制線前掌握著車陣的節奏。",
+    "chunks": [
+      {
+        "text": "The leader",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "controls",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the pace",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before the restart line.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動態 (controls)。\n• 【術語解說】restart line（重新起跑控制線）：在安全車進站後到通過控制線之前，後方賽車不可超越領跑車，領跑者通常會壓低車速突然大腳踩油門起步以甩開對手。\n• 【跨界連結】宛如 NBA 控球後衛運球過半場在三分線頂弧壓時間、突然變向切入突破打亂防守節奏。",
+    "topic": "Safety Car & Track Flags"
+  },
+  {
+    "id": "f1-03-08",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "He received a ten-second time penalty for speeding in pit lane.",
+    "translation": "他因為在維修通道超速而被處以加罰十秒的處罰。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "received",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a ten-second time penalty",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for speeding in pit lane.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (received)。\n• 【術語解說】pit lane speed limit（維修通道限速，通常為 80 或 60 km/h），超速會被賽會處以加罰秒數（time penalty），在下次進站或完賽總成績上直接加罰。\n• 【日常開車比喻】如同進入收費站或學校周邊減速區超速吃罰單，但在賽事中 10 秒足以讓排名暴跌五個名次。",
+    "topic": "Safety Car & Track Flags"
+  },
+  {
+    "id": "f1-03-09",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "Track limits are being monitored at turn four.",
+    "translation": "賽會正嚴密監控四號彎的賽道邊界違規情況。",
+    "chunks": [
+      {
+        "text": "Track limits",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are being monitored",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "at turn four.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行被動態 (are being monitored)。\n• 【術語解說】track limits（賽道邊界白線）：賽車四輪若全部越過白線視為出界違規，累積四次出界會被出示黑白旗警告並領取罰秒處罰。\n• 【跨界連結】就像 NBA 球員踩出邊線出界（out of bounds）球權轉換，或網球球評鷹眼回放判定壓線出界。",
+    "topic": "Safety Car & Track Flags"
+  },
+  {
+    "id": "f1-03-10",
+    "trainingId": "f1-03-safety-car",
+    "sentence": "The session was red-flagged due to heavy rainfall.",
+    "translation": "由於強降雨天氣賽事被迫出示紅旗暫停。",
+    "chunks": [
+      {
+        "text": "The session",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was red-flagged",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "due to heavy rainfall.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was red-flagged)。\n• 【術語解說】red-flagged（出示紅旗）：賽事完全中止，所有賽車必須立刻減速有序駛回維修站通道等待天氣好轉或賽道修復。\n• 【跨界連結】相當於棒球比賽因暴雨暫停（rain delay）拉起大帆布蓋住內野紅土區。",
+    "topic": "Safety Car & Track Flags"
+  }
+]

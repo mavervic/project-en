@@ -1,0 +1,352 @@
+[
+  {
+    "id": "f1-04-01",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "The chasing car is within the one-second DRS detection zone.",
+    "translation": "後方追擊的賽車已經進入一秒以內的可變尾翼偵測區。",
+    "chunks": [
+      {
+        "text": "The chasing car",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "within the one-second DRS detection zone.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動態 (is)。\n• 【術語解說】DRS (Drag Reduction System，可變尾翼減阻系統)：當後車在偵測點（detection point）與前車差距在 1 秒以內時，在 DRS 區域可開啟尾翼翼片減少空氣阻力，尾速提升約 10-15 km/h。\n• 【跨界連結】相當於英雄聯盟開啟鬼步加速或閃現拉近距離，或 NBA 快攻奔馳直衝籃框的加速加成。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  },
+  {
+    "id": "f1-04-02",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "He is catching the slipstream down the long straight.",
+    "translation": "他在長直道上藉由前車尾流高速逼近。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is catching",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the slipstream",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "down the long straight.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is catching)。\n• 【術語解說】slipstream（尾流效應 / 破風效應）：緊跟前車後方時，前車衝開空氣形成低壓吸力真空區，使後車風阻大幅減小迅速貼近前車。\n• 【日常比喻】就像公路自行車隊中選手緊跟在破風手身後騎行以大幅節省體力破風推進。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  },
+  {
+    "id": "f1-04-03",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "He hit the apex perfectly on the exit.",
+    "translation": "他精準切中彎心並在出彎時全力加速。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "hit",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the apex",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "perfectly on the exit.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (hit)。\n• 【術語解說】apex（彎心 / 幾何中心點）：賽車在過彎時最切近內側路肩的切點。「外—內—外」線路精準命中 apex 才能在出彎時最早、最大角度全油門加速。\n• 【跨界連結】比喻為 NBA 射手投籃時手腕下壓與起跳點最完美的發力甜點區，弧度平順且出球流暢。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  },
+  {
+    "id": "f1-04-04",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "The driver was forced into dirty air behind the midfield traffic.",
+    "translation": "這位車手被中游車陣後方的亂流氣流嚴重干擾。",
+    "chunks": [
+      {
+        "text": "The driver",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was forced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "into dirty air",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      },
+      {
+        "text": "behind the midfield traffic.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was forced)。\n• 【術語解說】dirty air（髒空氣 / 亂流氣流）：賽車高速行駛後方排出的混亂氣流，使後車下壓力（downforce）暴跌、輪胎滑移過熱且難以貼身過彎。\n• 【日常開車比喻】就像開在大型貨櫃車後方，感受到強烈的側風亂流與前方揚起的水霧遮擋視線。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  },
+  {
+    "id": "f1-04-05",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "He outbraked his opponent into turn ten.",
+    "translation": "他在進入十號彎前透過晚煞車強勢超越了對手。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "outbraked",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "his opponent",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "into turn ten.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (outbraked)。\n• 【術語解說】outbrake（晚煞車超車 / 煞車點壓制）：在進入彎道前比對手更晚踩死煞車踏板，藉由驚人的煞車穩定性直接切進對手內線搶下路權。\n• 【跨界連結】相當於 NBA 球員在切入籃下時比防守者更晚起跳滯空完成對抗上籃得分。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  },
+  {
+    "id": "f1-04-06",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "The defending driver has covered the inside line.",
+    "translation": "防守方的車手已經封堵住了內側路線。",
+    "chunks": [
+      {
+        "text": "The defending driver",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has covered",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the inside line.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has covered)。\n• 【術語解說】inside line（內線防守線路）：進彎前將賽車移向內側線路堵死對手的超車路線，迫使進攻方只能冒險走外線大圈。\n• 【跨界連結】宛如 NBA 防守球員預判對手進攻意圖，提前在禁區卡好防守站位阻止對手切入突破。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  },
+  {
+    "id": "f1-04-07",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "Both cars were racing wheel-to-wheel through turn three.",
+    "translation": "兩輛賽車在三號彎上演了極為刺激的輪對輪並排對決。",
+    "chunks": [
+      {
+        "text": "Both cars",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were racing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "wheel-to-wheel",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "through turn three.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "continuous"
+    },
+    "grammarNote": "過去進行主動態 (were racing)。\n• 【術語解說】wheel-to-wheel（輪對輪貼身肉搏）：兩輛賽車在相距僅數公分的極近距離並排過彎，考驗兩位頂級車手之間的空間掌控與心理素質。\n• 【跨界連結】猶如 NBA 比賽最後幾秒進攻者與防守者貼胸肉搏、毫不退讓的緊迫盯防。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  },
+  {
+    "id": "f1-04-08",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "He set the fastest lap of the Grand Prix on the final tour.",
+    "translation": "他在最後一圈刷新了整場大獎賽的最快單圈紀錄。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "set",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the fastest lap",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "of the Grand Prix",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      },
+      {
+        "text": "on the final tour.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (set)。\n• 【術語解說】fastest lap（全場最快單圈）：完賽名列前十名並做出全場最快圈速的車手，可額外獲得 1 分錦標賽積分（championship point）。\n• 【跨界連結】比喻就像 NBA 季後賽球員打滿全場並在比賽最後時刻命中絕殺三分球刷新個人紀錄。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  },
+  {
+    "id": "f1-04-09",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "The race leader took the chequered flag after fifty laps.",
+    "translation": "比賽領跑者在完成五十圈後率先衝過黑白格子旗衝線奪冠。",
+    "chunks": [
+      {
+        "text": "The race leader",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "took",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the chequered flag",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "after fifty laps.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (took)。\n• 【術語解說】chequered flag（黑白格子旗）：由賽事官員在終點線看台揮動，代表比賽正式結束，第一個通過黑白格子旗的車手即為分站冠軍。\n• 【跨界連結】宛如 NBA 終場蜂鳴器（Buzzer）響起，比賽塵埃落定宣告勝利。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  },
+  {
+    "id": "f1-04-10",
+    "trainingId": "f1-04-wheel-to-wheel",
+    "sentence": "The top three finishers are celebrating on the podium.",
+    "translation": "前三名完賽的車手正在頒獎台上熱烈慶祝。",
+    "chunks": [
+      {
+        "text": "The top three finishers",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are celebrating",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on the podium.",
+        "isTargetSlot": false,
+        "type": "prepositional"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are celebrating)。\n• 【術語解說】podium（頒獎台）：大獎賽前三名車手登台領取獎盃、演奏國歌並噴灑氣泡香檳慶祝榮耀時刻。\n• 【跨界連結】如同奧運會獎牌頒發或 NBA 總冠軍頒發奧布萊恩獎盃的慶功典禮。",
+    "topic": "Wheel-to-Wheel & Chequered Flag"
+  }
+]
