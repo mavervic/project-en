@@ -670,8 +670,15 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
               </p>
             )}
 
-            {question.grammarNote && !isListeningMode && (
-              <p className="text-sm text-zinc-300 leading-relaxed mt-1">{question.grammarNote}</p>
+            {question.grammarNote && (
+              <div className="text-sm text-zinc-300 leading-relaxed mt-2 pt-2 border-t border-zinc-800/80">
+                <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-300 font-semibold mr-2 inline-block mb-1">
+                  解析筆記
+                </span>
+                <p className="whitespace-pre-line text-zinc-300 text-xs sm:text-sm">
+                  {question.grammarNote}
+                </p>
+              </div>
             )}
           </div>
 

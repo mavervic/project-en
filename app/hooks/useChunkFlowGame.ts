@@ -64,7 +64,8 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
   const [practiceMode, setPracticeMode] = useState<'smart' | 'random'>('smart');
 
   const isListeningBank = useCallback(
-    (id?: string | null) => id === 'toeic-listening' || id === 'parker',
+    (id?: string | null) =>
+      id === 'toeic-listening' || id === 'parker' || id === 'lol-worlds-listening',
     []
   );
 

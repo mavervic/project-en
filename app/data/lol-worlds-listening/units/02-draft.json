@@ -1,0 +1,342 @@
+[
+  {
+    "id": "lol-worlds-02-01",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "They will prioritize the engage tools in this pick-and-ban phase.",
+    "translation": "他們在這次選禁階段會優先選擇先手開團手段。",
+    "chunks": [
+      {
+        "text": "They",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will prioritize",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the engage tools",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in this pick-and-ban phase.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will prioritize)。\n• 【術語解說】engage tools 指隊伍中「能夠強行發起團戰、留人逼戰的技能或角色」（如遠程控制、大範圍衝陣、閃現控制）。缺少 engage tools 的隊伍往往只能被動挨打。\n• 【體育與生活類比】就像 NBA 籃球賽中球隊發起進攻的「擋拆戰術（Pick-and-Roll）」或是後場發動的「全場緊逼包夾（Full-court Trap）」，逼迫對手必須在短時間內正面接招，破壞對方的平穩陣型。",
+    "topic": "Draft Phase & Win Conditions"
+  },
+  {
+    "id": "lol-worlds-02-02",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "The enemy hypercarry was banned in the second rotation.",
+    "translation": "敵方的大後期主力核心在第二輪選禁中被禁用了。",
+    "chunks": [
+      {
+        "text": "The enemy hypercarry",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was banned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in the second rotation.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was banned)。\n• 【術語解說】hypercarry 指裝備成型後具有毀滅性輸出、一挑多的極限大後期英雄；second rotation 指選角中間的第二階段 Ban 流程。\n• 【體育與生活類比】相當於 NBA 季後賽針對對方絕對得分王（如字母哥、Curry）祭出全場一夾一釘人防守，在戰術沙盤上率先掐滅對方的致命武器。",
+    "topic": "Draft Phase & Win Conditions"
+  },
+  {
+    "id": "lol-worlds-02-03",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "The red team is hovering a comfort champion for their top laner.",
+    "translation": "紅方正在為他們的上路選手亮出自信拿手英雄。",
+    "chunks": [
+      {
+        "text": "The red team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is hovering",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a comfort champion",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for their top laner.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is hovering)。\n• 【術語解說】hovering 指選手在選角倒數時計時先點選亮出該角色頭像，但尚未鎖定確認（lock in）；comfort champion 指選手千錘百鍊、閉著眼睛都能玩得得心應手的「舒適角」。\n• 【體育與生活類比】就像網球名將在關鍵破發點預備使出最順手的高速外角發球，給予選手本人與隊伍極大心理定心丸。",
+    "topic": "Draft Phase & Win Conditions"
+  },
+  {
+    "id": "lol-worlds-02-04",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "The coaching staff locked in a flexible pick for the solo lanes.",
+    "translation": "教練組為單人線鎖下了一個搖擺位英雄。",
+    "chunks": [
+      {
+        "text": "The coaching staff",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "locked in",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a flexible pick",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for the solo lanes.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (locked in)。\n• 【術語解說】locked in 指按下記號最終選定角色；flexible pick（常簡稱 flex pick，搖擺角）指能走上路也能走中路（甚至打野或輔助）的多功能角色，能隱藏戰術意圖。\n• 【體育與生活類比】類似籃球場上的「全能鋒衛搖擺人（Point Forward，如 LeBron James）」，既能扛大前鋒抓籃板，又能拉到外線當控衛發牌，讓防守教練無法事先針對。",
+    "topic": "Draft Phase & Win Conditions"
+  },
+  {
+    "id": "lol-worlds-02-05",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "The blue side will sacrifice early dragon control for late-game scaling.",
+    "translation": "藍方將犧牲前期的小龍掌控權以換取大後期的發育曲線。",
+    "chunks": [
+      {
+        "text": "The blue side",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will sacrifice",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "early dragon control",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for late-game scaling.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will sacrifice)。\n• 【術語解說】scaling 指角色隨時間、等級與裝備累積後，戰鬥數值呈現等比級數爆發的「後期成長性」。\n• 【體育與生活類比】類似 F1 一級方程式賽車在起跑時刻意選用「白標硬胎（Hard Tyres）」，雖然起跑前十圈圈速不如軟胎，但比賽後段耐久度反超，採取放長線釣大魚的策略。",
+    "topic": "Draft Phase & Win Conditions"
+  },
+  {
+    "id": "lol-worlds-02-06",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "Three attack-damage carries were targeted by the opposing team during the draft.",
+    "translation": "在禁選過程中，對手針對性禁用了三位物理輸出射手。",
+    "chunks": [
+      {
+        "text": "Three attack-damage carries",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were targeted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the opposing team",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "during the draft.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (were targeted)。\n• 【術語解說】target ban 指專門封鎖對方某位明星選手特別擅長或版本強勢的特定英雄池（Attack-Damage Carries, ADCs）。\n• 【體育與生活類比】如同足球賽事前部署「專屬盯人戰術（Target strategy）」，或是排球比賽全隊集中把發球發給對方接發球較弱的單一球員，進行精準戰略打擊。",
+    "topic": "Draft Phase & Win Conditions"
+  },
+  {
+    "id": "lol-worlds-02-07",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "The analysts are discussing the front-to-back teamfight synergy.",
+    "translation": "賽評們正在討論這套前排到後排的團戰相性組合。",
+    "chunks": [
+      {
+        "text": "The analysts",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are discussing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the front-to-back teamfight synergy.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are discussing)。\n• 【術語解說】front-to-back（由前到後標準陣地戰）：坦克前排抗傷開路，後排射手與法師穩穩輸出；synergy 指陣容間相互配合產生的加成效應。\n• 【體育與生活類比】如同美式足球（NFL）進攻標準陣型：強壯的進攻前鋒線（Offensive Line）築起人肉盾牌擋住對手衝撞，為後方的四分衛騰出寬敞的瞄準與傳球口袋（Pocket）。",
+    "topic": "Draft Phase & Win Conditions"
+  },
+  {
+    "id": "lol-worlds-02-08",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "A surprise mid-lane assassin has been revealed on stage.",
+    "translation": "舞台螢幕上揭曉了一位出人意料的中路刺客英雄。",
+    "chunks": [
+      {
+        "text": "A surprise mid-lane assassin",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has been revealed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on stage.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成被動態 (has been revealed)。\n• 【術語解說】assassin（刺客型英雄），具備瞬間位移與極高單體爆發，專門獵殺敵方後排薄皮脆皮；surprise pick 即出其不意的奇兵選角。\n• 【體育與生活類比】相當於 NBA 季後賽中的「X 因子奇兵（X-factor）」，教練派上一位特化防守大閘或專門刺殺對手核心持球點的板凳殺手，以針對性功能徹底打亂對手節奏。",
+    "topic": "Draft Phase & Win Conditions"
+  },
+  {
+    "id": "lol-worlds-02-09",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "Their team composition relies on long-range poke damage before major objectives.",
+    "translation": "他們的陣容依賴在大型地圖物件刷新前進行長距離遠程消耗血量。",
+    "chunks": [
+      {
+        "text": "Their team composition",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "relies",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on long-range poke damage",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "before major objectives.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單主動態 (relies)。\n• 【術語解說】poke damage（遠程消耗／磨血），利用遠程技能不斷射擊敵方削弱血量，迫使對方在團戰開打前就得回城或失去接團體力。\n• 【體育與生活類比】就像拳擊手在擂台上不斷用「刺拳（Jab）」遠距離試探牽制、消耗對方體力，或足球隊在禁區外頻繁遠射威脅，讓守方疲於奔命。",
+    "topic": "Draft Phase & Win Conditions"
+  },
+  {
+    "id": "lol-worlds-02-10",
+    "trainingId": "lol-worlds-02-draft",
+    "sentence": "The global crowd was stunned by an off-meta blind pick.",
+    "translation": "全球觀眾被一次非版本主流的盲選所震驚。",
+    "chunks": [
+      {
+        "text": "The global crowd",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was stunned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by an off-meta blind pick.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was stunned)。\n• 【術語解說】off-meta 指脫離當前版本主流（Meta, Most Effective Tactic Available）的非傳統選角；blind pick 指在尚未得知對方對位選角時大膽選下。\n• 【體育與生活類比】類似在現代籃球小球風潮中，突然擺出罕見的雙塔復古長人陣型，完全打破常規數據模型的傳統邏輯，令全場驚豔。",
+    "topic": "Draft Phase & Win Conditions"
+  }
+]

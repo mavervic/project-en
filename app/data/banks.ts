@@ -16,6 +16,11 @@ import {
   TOEIC_LISTENING_META,
   TOEIC_LISTENING_QUESTIONS,
 } from './toeic-listening';
+import {
+  LOL_WORLDS_LISTENING_BANK,
+  LOL_WORLDS_LISTENING_META,
+  LOL_WORLDS_LISTENING_QUESTIONS,
+} from './lol-worlds-listening';
 
 export const STARTER_BANK_META: QuestionBankMeta = {
   id: 'starter',
@@ -35,6 +40,7 @@ export const STARTER_BANK: QuestionBank = {
 };
 
 export const REGISTERED_BANKS: Record<string, QuestionBank> = {
+  'lol-worlds-listening': LOL_WORLDS_LISTENING_BANK,
   'toeic-listening': TOEIC_LISTENING_BANK,
   'toeic-part5': TOEIC_PART5_BANK,
   'toeic-part5-l1': TOEIC_PART5_BANK,
@@ -45,7 +51,13 @@ export const REGISTERED_BANKS: Record<string, QuestionBank> = {
 };
 
 export function getRegisteredBanks(): QuestionBankMeta[] {
-  return [TOEIC_PART5_META, STARTER_BANK_META, PARKER_BANK_META, TOEIC_LISTENING_META];
+  return [
+    TOEIC_PART5_META,
+    STARTER_BANK_META,
+    PARKER_BANK_META,
+    TOEIC_LISTENING_META,
+    LOL_WORLDS_LISTENING_META,
+  ];
 }
 
 export function getBankById(id: string): QuestionBank | undefined {
@@ -62,4 +74,11 @@ export function getBankQuestions(id: string): Question[] {
   return REGISTERED_BANKS[id]?.questions ?? STARTER_BANK.questions;
 }
 
-export { PARKER_BANK, PARKER_BANK_META, PARKER_QUESTIONS };
+export {
+  PARKER_BANK,
+  PARKER_BANK_META,
+  PARKER_QUESTIONS,
+  LOL_WORLDS_LISTENING_BANK,
+  LOL_WORLDS_LISTENING_META,
+  LOL_WORLDS_LISTENING_QUESTIONS,
+};

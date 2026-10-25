@@ -1,0 +1,337 @@
+[
+  {
+    "id": "lol-worlds-04-01",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "Gen.G turned the teamfight around near the Baron pit.",
+    "translation": "Gen.G 在巴龍巢穴附近絕地逆轉了這場關鍵團戰。",
+    "chunks": [
+      {
+        "text": "Gen.G",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "turned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the teamfight around",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "near the Baron pit.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (turned ... around)。\n• 【術語解說】turn around 指形勢大逆轉、反敗為勝。Baron pit 指召喚峽谷中「巴龍（Baron Nashor）」棲息的半圓形凹陷坑洞。\n• 【字根與體育連結：pit 是什麼？】\n  1. 字根意涵：pit 原意指「地面的深坑、凹陷處、擂台」。在古代也指封閉的鬥獸場或地下搏擊擂台（Fighting pit）。\n  2. F1 賽車維修區（Pit Stop / Pit Lane）：F1 賽道旁的維修區就稱為 Pit！進 Pit 換胎或維修是整場賽車策略最致命的高壓分水嶺——進站速度稍慢 1 秒可能葬送整場領先，若策略得當也能利用 Undercut 成功翻盤。\n  3. 電競中的巴龍坑（Baron pit）：正如其名，巴龍坑是一個三面封閉、只有單一狹窄出口的凹坑。在裡面打巴龍極度危險（易遭關門打狗），但也是整場遊戲最能「瞬間逆轉局勢」的兵家必爭之地，就如同 F1 的 Pit Stop 一樣具有最高風險與最高回報！",
+    "topic": "Teamfights & Decisive Moments"
+  },
+  {
+    "id": "lol-worlds-04-02",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "The enemy Baron buff was stolen with a clutch smite.",
+    "translation": "敵方的巴龍增益在關鍵極限重擊之下被強行搶走了。",
+    "chunks": [
+      {
+        "text": "The enemy Baron buff",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was stolen",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with a clutch smite.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was stolen)。\n• 【術語解說】Baron buff 指擊殺巴龍後獲得的超強光環（小兵強化、高額雙攻與快速回城）；smite（重擊，打野對野怪的真實傷害召喚師技能）；clutch 指「大心臟、關鍵生死時刻的致命操作」。\n• 【體育與生活類比】相當於籃球比賽最後 0.5 秒直接給對手一記追魂火鍋並完成抄截（Clutch block / steal），在千鈞一髮之際靠極限神經反應掠奪勝利果實。",
+    "topic": "Teamfights & Decisive Moments"
+  },
+  {
+    "id": "lol-worlds-04-03",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "The support player flashed forward to initiate the decisive engage.",
+    "translation": "輔助選手向前閃現，果斷發起了決定勝負的關鍵開團。",
+    "chunks": [
+      {
+        "text": "The support player",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "flashed forward",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to initiate the decisive engage.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (flashed forward)。\n• 【術語解說】flash forward 指交出長冷卻召喚師技能「閃現」貼臉；initiate the engage 指啟動正面大規模交火。\n• 【體育與生活類比】相當於 NBA 防守球員在生死回合飛身撲向地板救球（Diving for loose ball），或是美式足球防守組啟動全員突擊四分衛（Blitz），果斷砸下所有籌碼開創戰機。",
+    "topic": "Teamfights & Decisive Moments"
+  },
+  {
+    "id": "lol-worlds-04-04",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "The ace has been announced by the broadcast caster after that explosive clash.",
+    "translation": "在那場毀滅性的正面交火之後，主播宣告了全滅團滅。",
+    "chunks": [
+      {
+        "text": "The ace",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has been announced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the broadcast caster",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "after that explosive clash.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成被動態 (has been announced)。\n• 【術語解說】Ace 指將敵方五名隊員全部擊殺、場上敵軍無人生還的「團滅」狀態。\n• 【體育與生活類比】相當於棒球比賽最後半局抓到的「再見雙殺／三殺」或拳擊台上擊倒裁判直接讀秒判 KO（Knockout），宣告對手徹底失去抵抗能力。",
+    "topic": "Teamfights & Decisive Moments"
+  },
+  {
+    "id": "lol-worlds-04-05",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "A split push will threaten the enemy inhibitor tower on the top side.",
+    "translation": "一波分推戰術將會威脅到敵方上半部的高地水晶防禦塔。",
+    "chunks": [
+      {
+        "text": "A split push",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will threaten",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the enemy inhibitor tower",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "on the top side.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will threaten)。\n• 【術語解說】split push（四一分推／單帶），主力四人在正面牽制對手，單挑能力強的選手在邊線長驅直入拆塔；inhibitor tower 指高地水晶防禦塔。\n• 【體育與生活類比】如同足球比賽中將球大範圍轉移至防守弱側的「邊路突襲（Switch of play）」或籃球中的「一星四射」單打，強迫對手防線首尾不能相顧。",
+    "topic": "Teamfights & Decisive Moments"
+  },
+  {
+    "id": "lol-worlds-04-06",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "The defending squad is collapsing onto the overextended marksman.",
+    "translation": "防守方戰隊正在全體收縮包夾那位走位過深的射手。",
+    "chunks": [
+      {
+        "text": "The defending squad",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is collapsing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "onto the overextended marksman.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is collapsing)。\n• 【術語解說】collapse 指多名隊員從四面八方向核心目標迅速合攏包夾；overextended 指選手離開隊友保護陣型、過於深入危險區域。\n• 【體育與生活類比】相當於 NBA 防守的「口袋收縮包夾（Defensive collapse）」：當敵方切入禁區太深時，周邊防守者如鐵桶般同時撲上，切斷所有傳球路徑。",
+    "topic": "Teamfights & Decisive Moments"
+  },
+  {
+    "id": "lol-worlds-04-07",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "The elder dragon buff was claimed after a desperate fifty-fifty smite fight.",
+    "translation": "遠古巨龍增益在一場搏命的五五開重擊拚搏後被成功拿下。",
+    "chunks": [
+      {
+        "text": "The elder dragon buff",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was claimed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "after a desperate fifty-fifty smite fight.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was claimed)。\n• 【術語解說】elder dragon（遠古巨龍，提供對低血量目標直接處決斬殺的最強 Buff）；fifty-fifty 指雙方打野同時進龍坑比拼重擊傷害的五五開賭博局。\n• 【體育與生活類比】就像足球淘汰賽中的「12碼點球大戰（Penalty Shootout）」或籃球爭球（Jump ball），勝負完全看毫秒之間的極限心臟與手速運氣。",
+    "topic": "Teamfights & Decisive Moments"
+  },
+  {
+    "id": "lol-worlds-04-08",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "They are pushing the mid lane waves straight into the enemy nexus.",
+    "translation": "他們正帶著中路小兵直搗敵方的主堡樞紐基地。",
+    "chunks": [
+      {
+        "text": "They",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are pushing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the mid lane waves",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "straight into the enemy nexus.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are pushing)。\n• 【術語解說】pushing the wave 指護送己方小兵前進推進；nexus 指決定勝負的核心建築物「主堡樞紐」，打碎即可獲勝。\n• 【體育與生活類比】相當於足球傷停補時最後一分鐘「全隊壓入對方禁區發動狂轟濫炸」，直奔球門發動絕殺一擊。",
+    "topic": "Teamfights & Decisive Moments"
+  },
+  {
+    "id": "lol-worlds-04-09",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "A remarkable comeback was completed by the reigning champions.",
+    "translation": "衛冕冠軍完成了一場令人讚嘆的史詩級絕地大逆轉。",
+    "chunks": [
+      {
+        "text": "A remarkable comeback",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was completed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the reigning champions.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was completed)。\n• 【術語解說】comeback 指在落後巨大經濟或人頭差情況下的逆境翻盤。\n• 【體育與生活類比】如同 2016 年 NBA 總決賽克里夫蘭騎士隊在 1-3 絕對劣勢下連扳三局逆轉金州勇士奪冠，體育史上最扣人心弦的奇蹟翻盤。",
+    "topic": "Teamfights & Decisive Moments"
+  },
+  {
+    "id": "lol-worlds-04-10",
+    "trainingId": "lol-worlds-04-teamfights",
+    "sentence": "The winning team will lift the Summoner's Cup under the glittering confetti.",
+    "translation": "勝利戰隊將在璀璨漫天的金色彩帶下高高舉起召喚師冠軍金盃。",
+    "chunks": [
+      {
+        "text": "The winning team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will lift",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the Summoner's Cup",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "under the glittering confetti.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will lift)。\n• 【術語解說】Summoner's Cup（召喚師之盃，英雄聯盟世界大賽最高榮譽獎盃）；confetti 指慶典頒獎時從天花板噴灑的彩色紙花／金色彩帶。\n• 【體育與生活類比】如同歐冠決賽或 NBA 總決賽封王時，全場灑下金色彩帶、隊長接過奧布萊恩冠軍金盃高舉過頭頂的榮耀巔峰加冕刻。",
+    "topic": "Teamfights & Decisive Moments"
+  }
+]

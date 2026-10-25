@@ -1,0 +1,337 @@
+[
+  {
+    "id": "lol-worlds-03-01",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "The first dragon was secured by the blue team without contest.",
+    "translation": "第一條飛龍由藍方在無人爭奪的情況下穩穩拿下。",
+    "chunks": [
+      {
+        "text": "The first dragon",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was secured",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the blue team",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "without contest.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was secured)。\n• 【術語解說】first dragon（首條元素飛龍，提供永久全隊被動加成）；without contest 指對手自知戰力落後或距離過遠，主動選擇放棄爭奪。\n• 【體育與生活類比】相當於足球比賽防守方主動全隊回縮禁區，讓進攻方在無阻礙（uncontested）狀態下輕鬆將球推進過半場；或 NBA 爭搶無人干擾的防守籃板（uncontested rebound）。",
+    "topic": "Early Game & Macro Objectives"
+  },
+  {
+    "id": "lol-worlds-03-02",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "The top laner is executing a lane swap to avoid a disadvantageous matchup.",
+    "translation": "上路選手正在執行換線戰術，以避開不利的對位劣勢。",
+    "chunks": [
+      {
+        "text": "The top laner",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is executing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a lane swap",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to avoid a disadvantageous matchup.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is executing)。\n• 【術語解說】lane swap 指原本走上路的單人線選手與下路雙人組互換兵線，藉此保護發育較弱的隊員不被對手單線壓制壓爆。\n• 【體育與生活類比】如同 NBA 比賽中的「擋拆尋找錯位防守（Hunting mismatch）」或故意執行「無限換防（Switch defense）」，透過空間站位調度巧妙化解身材劣勢硬碰硬。",
+    "topic": "Early Game & Macro Objectives"
+  },
+  {
+    "id": "lol-worlds-03-03",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "First blood has been claimed in the bottom lane.",
+    "translation": "下路已經產生了全場第一滴血的首殺。",
+    "chunks": [
+      {
+        "text": "First blood",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has been claimed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "in the bottom lane.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成被動態 (has been claimed)。\n• 【術語解說】first blood 指整場比賽的第一個擊殺，附帶額外金幣獎勵（First Blood bonus），能極大提振士氣並拉開對線裝備差距。\n• 【體育與生活類比】如同職業拳擊開局第 1 回合的首次重拳擊倒（Knockdown）或足球賽開場 3 分鐘的閃電進球破門，直接奪下全場心理主控權。",
+    "topic": "Early Game & Macro Objectives"
+  },
+  {
+    "id": "lol-worlds-03-04",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "The jungler will path toward the top river for the void grubs.",
+    "translation": "打野選手將會規劃向上半部河道移動，以爭奪虛空幼蟲。",
+    "chunks": [
+      {
+        "text": "The jungler",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will path",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "toward the top river",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "for the void grubs.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will path)。\n• 【術語解說】path 當動詞指「規劃野區清怪與游走路線（pathing）」；void grubs（虛空幼蟲）是前期能大幅提升全隊拆塔效率的核心地圖中立生物。\n• 【體育與生活類比】就像 F1 車手在賽道上精確計算「行車走線（Racing line）」與輪胎磨耗時機，精準安排每一圈的時間節奏以搶佔進站換胎窗口。",
+    "topic": "Early Game & Macro Objectives"
+  },
+  {
+    "id": "lol-worlds-03-05",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "They have destroyed three turret plates before the fourteen-minute mark.",
+    "translation": "他們在 14 分鐘鍍層掉落之前已經摧毀了三層防禦塔鍍層。",
+    "chunks": [
+      {
+        "text": "They",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "have destroyed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "three turret plates",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before the fourteen-minute mark.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has destroyed)。\n• 【術語解說】turret plates（塔皮／鍍層）是前期外塔的保護機制，每打掉一層就獎勵豐厚金幣；14 分鐘時鍍層會自動消失。\n• 【體育與生活類比】就像籃球比賽在第一節打出的「雙位數領先分差（10-point cushion）」，在限制時間內盡可能累積滾雪球優勢。",
+    "topic": "Early Game & Macro Objectives"
+  },
+  {
+    "id": "lol-worlds-03-06",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "The mid laner is freezing the minion wave near the outer tower.",
+    "translation": "中路選手正在外塔附近控線凍結小兵線。",
+    "chunks": [
+      {
+        "text": "The mid laner",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is freezing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the minion wave",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "near the outer tower.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is freezing)。\n• 【術語解說】freezing the wave 指刻意不打死小兵、僅補最後一下（Last hit），將小兵交火位置卡在自家塔前，使對手不敢上前吃兵否則容易遭 Gank。\n• 【體育與生活類比】如同足球比賽領先時在後場「倒腳控球（Possession play）」或是美式足球最後階段跪地耗盡比賽倒數計時（Kneel down），讓對手完全摸不到球。",
+    "topic": "Early Game & Macro Objectives"
+  },
+  {
+    "id": "lol-worlds-03-07",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "Vision control has been established around the dragon river basin.",
+    "translation": "小龍河道周圍的視野掌控已經全面建立完成。",
+    "chunks": [
+      {
+        "text": "Vision control",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has been established",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "around the dragon river basin.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成被動態 (has been established)。\n• 【術語解說】vision control（視野控制），透過插眼（wards）點亮陰影、排眼（sweeping lens）消除敵方視野，使戰鬥資訊單向透明化。\n• 【體育與生活類比】相當於籃球防守預判「卡位站好防守熱區（Defensive positioning）」或是現代軍事雷達偵察，驅散戰爭迷霧，不給對手任何偷襲空間。",
+    "topic": "Early Game & Macro Objectives"
+  },
+  {
+    "id": "lol-worlds-03-08",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "The carry player reached a significant two-item power spike.",
+    "translation": "主力核心選手達到了顯著的兩件裝戰力強勢期。",
+    "chunks": [
+      {
+        "text": "The carry player",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "reached",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a significant two-item power spike.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (reached)。\n• 【術語解說】power spike 指特定等級（如 6 等大招）或裝備合成成型時，角色作戰能力瞬間迎來飛躍式提升的黃金發力期。\n• 【體育與生活類比】相當於 F1 賽車進站換上全新軟胎後跑出的「最速圈爆發期」，或是 NBA 射手手感熱得發燙進入連進三分球的「神馳狂暴狀態（In the zone）」。",
+    "topic": "Early Game & Macro Objectives"
+  },
+  {
+    "id": "lol-worlds-03-09",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "A cross-map dive is being planned by the aggressive red squad.",
+    "translation": "打法極具侵略性的紅方戰隊正在策劃一場跨地圖的越塔強殺。",
+    "chunks": [
+      {
+        "text": "A cross-map dive",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is being planned",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the aggressive red squad.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行被動態 (is being planned)。\n• 【術語解說】dive / turret dive 指無視防禦塔攻擊，多人集結直接衝入敵方防禦塔射程內強殺殘血守軍；cross-map 指跨越半張地圖的大規模調動支援。\n• 【體育與生活類比】如同美式足球的四分衛長傳空接（Alley-oop / Hail Mary）或籃球發動「前場全場緊逼包夾多打少」，在對手防禦工事內實施暴力強拆。",
+    "topic": "Early Game & Macro Objectives"
+  },
+  {
+    "id": "lol-worlds-03-10",
+    "trainingId": "lol-worlds-03-macro",
+    "sentence": "The gold differential has widened to five thousand gold.",
+    "translation": "雙方的經濟分差已經擴大到了五千金幣。",
+    "chunks": [
+      {
+        "text": "The gold differential",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has widened",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to five thousand gold.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has widened)。\n• 【術語解說】gold differential（經濟差距），體現雙方防禦塔、吃兵數與擊殺賞金的總合差距；達到 5,000 金幣代表兩隊整體裝備相差超過一到兩件大裝。\n• 【體育與生活類比】相當於 NBA 比分在第 3 節被拉開到 15 分安全分差，落後方必須開始冒極高風險進行賭博式搶斷，否則將慢性死亡。",
+    "topic": "Early Game & Macro Objectives"
+  }
+]

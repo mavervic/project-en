@@ -1,0 +1,352 @@
+[
+  {
+    "id": "lol-worlds-01-01",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "T1 has dominated the mid lane matchup throughout this tournament.",
+    "translation": "T1 在本屆賽事中一直統治著中路對決。",
+    "chunks": [
+      {
+        "text": "T1",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has dominated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the mid lane matchup",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "throughout this tournament.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has dominated)。\n• 【術語解說】matchup 指「同位置選手的正面對決」。mid lane（中路）是地圖最短、資源輻射最快的兵線。\n• 【體育與生活類比】類似 NBA 季後賽球評特別強調的「Head-to-head matchup（如 Curry 對陣 Kyrie Irving）」。在英雄聯盟中，中路是戰術發動機，掌控中路就像籃球掌控了後場弧頂發動點。",
+    "topic": "Pre-Match & Narrative"
+  },
+  {
+    "id": "lol-worlds-01-02",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "Both teams are preparing their signature pocket picks for game five.",
+    "translation": "雙方戰隊正在為第五局準備各自的招牌口袋名單角色。",
+    "chunks": [
+      {
+        "text": "Both teams",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are preparing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "their signature pocket picks",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for game five.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are preparing)。\n• 【術語解說】pocket pick（口袋角／壓箱寶）指平時不輕易亮相、專為關鍵決戰留存的驚喜自信角色。\n• 【體育與生活類比】就像 NBA 搶七大戰（Game 7）總教練在暫停時掏出的「秘密戰術套路（secret adjustment）」，或是拳擊手深藏不露的特訓組合拳。",
+    "topic": "Pre-Match & Narrative"
+  },
+  {
+    "id": "lol-worlds-01-03",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "The rookie jungler was named the most valuable player of the semifinals.",
+    "translation": "這位新秀打野選手在準決賽中被評選為最有價值選手。",
+    "chunks": [
+      {
+        "text": "The rookie jungler",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was named",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the most valuable player",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "of the semifinals.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was named)。\n• 【術語解說】rookie（新秀）；jungler（打野選手），負責在地圖野區穿梭、支援三路發動突襲。\n• 【體育與生活類比】相當於 NBA 菜鳥初生之犢不畏虎，在分區冠軍賽斬獲 MVP。打野在電競中的角色如同美式足球的四分衛或足球的防守中場，穿針引線掌控全場節奏。",
+    "topic": "Pre-Match & Narrative"
+  },
+  {
+    "id": "lol-worlds-01-04",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "The reigning champions will defend their world title on the international stage.",
+    "translation": "衛冕冠軍將在國際大舞台上捍衛他們的世界冠軍頭銜。",
+    "chunks": [
+      {
+        "text": "The reigning champions",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will defend",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "their world title",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "on the international stage.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will defend)。\n• 【術語解說】reigning champions 指「現任衛冕冠軍」；world title 指全球最高榮譽象徵。\n• 【體育與生活類比】如同足球世界盃衛冕軍或 NBA 總冠軍隊伍面對全世界頂尖強隊的「衛冕之戰（title defense）」，承受極高心理期望與聚光燈檢視。",
+    "topic": "Pre-Match & Narrative"
+  },
+  {
+    "id": "lol-worlds-01-05",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "The crowd is chanting the team name inside the arena.",
+    "translation": "全場觀眾在場館內高聲齊呼戰隊名字。",
+    "chunks": [
+      {
+        "text": "The crowd",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is chanting",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the team name",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "inside the arena.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is chanting)。\n• 【術語解說】chant 指「節奏鮮明的齊聲吶喊／應援口號」；arena 專指大型體育館或室內競技舞台。\n• 【體育與生活類比】如同英超足球聯賽（如安菲爾德球場）或 NBA 季後賽主場球迷聲嘶力竭的助威聲浪，給客隊帶來巨大的主場窒息感。",
+    "topic": "Pre-Match & Narrative"
+  },
+  {
+    "id": "lol-worlds-01-06",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "The head coach has adjusted the drafting strategy after the opening defeat.",
+    "translation": "主教練在首局失利後調整了禁選策略。",
+    "chunks": [
+      {
+        "text": "The head coach",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has adjusted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the drafting strategy",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "after the opening defeat.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has adjusted)。\n• 【術語解說】drafting strategy（BP 選禁策略）；opening defeat（開局第一把落敗）。\n• 【體育與生活類比】類似 F1 賽車在排位賽後依天候緊急修正輪胎策略，或 NBA 總教練在第 1 節落後雙位數時立刻叫暫停變陣。",
+    "topic": "Pre-Match & Narrative"
+  },
+  {
+    "id": "lol-worlds-01-07",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "The heavy favorites were eliminated by an underdog squad yesterday.",
+    "translation": "奪冠大熱門隊伍昨天被一支出人意料的黑馬隊伍淘汰出局。",
+    "chunks": [
+      {
+        "text": "The heavy favorites",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were eliminated",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by an underdog squad",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "yesterday.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (were eliminated)。\n• 【術語解說】heavy favorites（勝率賠率極度看好的頭號種子）；underdog（下剋上黑馬隊伍）。\n• 【體育與生活類比】如同 NBA 季後賽著名的「老八傳奇（8th seed upset）」或足球世界盃沙烏地擊敗阿根廷，體育史上最令人熱血沸騰的爆冷冷門。",
+    "topic": "Pre-Match & Narrative"
+  },
+  {
+    "id": "lol-worlds-01-08",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "Analysts are predicting a close five-game series tonight.",
+    "translation": "賽評分析師預測今晚將會是一場勢均力敵的打滿五局大戰。",
+    "chunks": [
+      {
+        "text": "Analysts",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are predicting",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a close five-game series",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "tonight.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are predicting)。\n• 【術語解說】five-game series（五局三勝制 BO5）；close（比分緊咬膠著）。\n• 【體育與生活類比】類似美國職棒大聯盟（MLB 棒球）世界大賽或 NBA 總冠軍賽打到第 7 戰（Game 7），勝負不到最後一刻無法揭曉的高張力死鬥。",
+    "topic": "Pre-Match & Narrative"
+  },
+  {
+    "id": "lol-worlds-01-09",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "The veteran support player has attended six consecutive international finals.",
+    "translation": "這位資深輔助選手已經連續六度闖入國際賽總決賽。",
+    "chunks": [
+      {
+        "text": "The veteran support player",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has attended",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "six consecutive international finals.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has attended)。\n• 【術語解說】veteran（經驗豐富的老將）；support（輔助位，負責做視野、保後排與協調團隊）。\n• 【體育與生活類比】如同 LeBron James 連續 8 年挺進 NBA 總決賽，展現長年屹立不搖的競技穩定度與體育常青樹風采。",
+    "topic": "Pre-Match & Narrative"
+  },
+  {
+    "id": "lol-worlds-01-10",
+    "trainingId": "lol-worlds-01-prematch",
+    "sentence": "The winning conditions will depend on the early tempo of the game.",
+    "translation": "獲勝條件將取決於比賽的前期節奏推進。",
+    "chunks": [
+      {
+        "text": "The winning conditions",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will depend",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on the early tempo of the game.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will depend)。\n• 【術語解說】winning conditions / win condition 指「團隊邁向勝利必須滿足的戰術前提」；tempo 指「進攻營運的步調速度」。\n• 【體育與生活類比】如同 NBA 跑轟球隊（Run-and-Gun）的勝負關鍵在於能否把比賽「節奏（Pace）」拉快打轉換進攻，節奏一慢陷入半場陣地戰優勢便蕩然無存。",
+    "topic": "Pre-Match & Narrative"
+  }
+]

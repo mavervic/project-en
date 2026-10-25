@@ -208,7 +208,11 @@ export default function Home() {
   const handleBankChange = useCallback(
     (bankId: string) => {
       handleSelectBank(bankId);
-      if (bankId === 'toeic-listening' || bankId === 'parker') {
+      if (
+        bankId === 'toeic-listening' ||
+        bankId === 'parker' ||
+        bankId === 'lol-worlds-listening'
+      ) {
         enableNarration();
       }
     },
