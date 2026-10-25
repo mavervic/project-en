@@ -254,10 +254,23 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
   );
 
   const getAllListeningQuestions = useCallback((): Question[] => {
-    const toeic = getBankQuestions('toeic-listening');
-    const parker = getBankQuestions('parker');
+    const listeningBankIds = [
+      'toeic-listening',
+      'parker',
+      'lol-worlds-listening',
+      'nba-listening',
+      'f1-listening',
+    ];
     const map = new Map<string, Question>();
-    for (const q of [...toeic, ...parker, ...questions]) {
+    for (const bankId of listeningBankIds) {
+      const bankQs = getBankQuestions(bankId);
+      for (const q of bankQs) {
+        if (q && q.id && !map.has(q.id)) {
+          map.set(q.id, q);
+        }
+      }
+    }
+    for (const q of questions) {
       if (q && q.id && !map.has(q.id)) {
         map.set(q.id, q);
       }
@@ -457,8 +470,8 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
   }, [activeBankId, activeTrainingId, history, isListeningBank, startTimer]);
 
   const handleMasterChunk = useCallback(
-    (chunkId?: string) => {
-      if (chunkId) {
+    (chunkId?: string | unknown) => {
+      if (typeof chunkId === 'string' && chunkId.trim().length > 0) {
         removeMarkedChunk(chunkId);
       } else if (currentQuestion?.id) {
         const list = loadMarkedChunks();
@@ -474,6 +487,8 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
         const remainingQIds = new Set(updatedMarked.map((m) => m.questionId));
         if (remainingQIds.size === 0) {
           setMarkedChunkIndices([]);
+          setShowFeedback(false);
+          refreshMarkedChunks();
           return;
         }
 

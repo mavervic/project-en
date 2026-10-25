@@ -325,4 +325,117 @@ describe('Listening Blind-Spot Review Drill Mode', () => {
     // 7. Marked chunk eliminated and all blind spots cleared
     expect(result.current.markedChunks.length).toBe(0);
   });
+
+  it('supports cross-bank review drills with NBA and F1 questions and clears feedback on final mastery', () => {
+    // 1. Mark an NBA question chunk and an F1 question chunk
+    const nbaRecord: MarkedChunkRecord = {
+      id: 'nba-01-01-1',
+      questionId: 'nba-01-01',
+      trainingId: 'nba-01-pregame',
+      chunkText: 'is leading',
+      chunkIndex: 1,
+      sentence: 'The star forward is leading the league in scoring this season.',
+      translation: '這位明星前鋒本賽季在全聯盟得分榜上高居榜首。',
+      timestamp: Date.now(),
+    };
+    const f1Record: MarkedChunkRecord = {
+      id: 'f1-01-01-1',
+      questionId: 'f1-01-01',
+      trainingId: 'f1-01-grid-start',
+      chunkText: 'leads',
+      chunkIndex: 1,
+      sentence: 'The pole sitter leads the pack onto the formation lap.',
+      translation: '桿位車手帶領著整個車陣進入暖胎圈。',
+      timestamp: Date.now() + 10,
+    };
+    saveMarkedChunk(nbaRecord);
+    saveMarkedChunk(f1Record);
+
+    const { result } = renderHook(() => useChunkFlowGame());
+
+    // 2. Launch review drill
+    let drillStarted = false;
+    act(() => {
+      drillStarted = result.current.startBlindSpotReview();
+    });
+    expect(drillStarted).toBe(true);
+    expect(result.current.isBlindSpotReviewMode).toBe(true);
+    expect(['nba-01-01', 'f1-01-01']).toContain(result.current.currentQuestion.id);
+
+    // 3. Master the first question
+    act(() => {
+      result.current.handleMasterChunk();
+    });
+    expect(result.current.markedChunks.length).toBe(1);
+
+    // 4. Master the second (final) question
+    act(() => {
+      result.current.handleMasterChunk();
+    });
+    expect(result.current.markedChunks.length).toBe(0);
+    expect(result.current.showFeedback).toBe(false);
+
+    // 5. Render Arena in review mode with remaining count = 0
+    render(
+      <ChunkFlowArena
+        question={result.current.currentQuestion}
+        focusState="evaluated"
+        progressPercent={100}
+        lastEvaluation={null}
+        showFeedback={result.current.showFeedback}
+        isListeningMode={true}
+        isBlindSpotReviewMode={true}
+        onMasterChunk={result.current.handleMasterChunk}
+        remainingBlindSpotsCount={result.current.markedChunks.length}
+      />
+    );
+
+    // Cleared banner should be present and feedback card absent
+    expect(screen.getByTestId('all-blind-spots-cleared-banner')).toBeDefined();
+    expect(screen.queryByTestId('feedback-reveal-card')).toBeNull();
+  });
+
+  it('decrements markedChunks count in hook when user clicks master button in ChunkFlowArena with SyntheticEvent', () => {
+    const record: MarkedChunkRecord = {
+      id: 'f1-01-01-1',
+      questionId: 'f1-01-01',
+      trainingId: 'f1-01-grid-start',
+      chunkText: 'leads',
+      chunkIndex: 1,
+      sentence: 'The pole sitter leads the pack onto the formation lap.',
+      translation: '桿位車手帶領著整個車陣進入暖胎圈。',
+      timestamp: Date.now(),
+    };
+    saveMarkedChunk(record);
+
+    const { result } = renderHook(() => useChunkFlowGame());
+
+    act(() => {
+      result.current.startBlindSpotReview();
+      result.current.handleListeningNarrationComplete();
+    });
+
+    expect(result.current.markedChunks.length).toBe(1);
+
+    const { unmount } = render(
+      <ChunkFlowArena
+        question={result.current.currentQuestion}
+        focusState="evaluated"
+        progressPercent={100}
+        lastEvaluation={null}
+        showFeedback={true}
+        isListeningMode={true}
+        isBlindSpotReviewMode={true}
+        onMasterChunk={result.current.handleMasterChunk}
+        remainingBlindSpotsCount={result.current.markedChunks.length}
+      />
+    );
+
+    const masterBtn = screen.getByTestId('master-chunk-btn');
+    // Clicking fires onClick passing SyntheticMouseEvent
+    fireEvent.click(masterBtn);
+    unmount();
+
+    expect(result.current.markedChunks.length).toBe(0);
+  });
 });

@@ -594,117 +594,119 @@ export const ChunkFlowArena: React.FC<ChunkFlowArenaProps> = ({
       </div>
 
       {/* Feedback & Grammar Note Reveal (or Listening Mode Translation Reveal) */}
-      {showFeedback && (lastEvaluation || isListeningMode) && (
-        <div
-          data-testid="feedback-reveal-card"
-          className={`rounded-xl border p-5 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${
-            isListeningMode
-              ? 'bg-cyan-950/25 border-cyan-500/40 text-cyan-100 shadow-[0_0_30px_rgba(6,182,212,0.15)]'
-              : isCorrect
-                ? 'bg-emerald-950/30 border-emerald-500/40 text-emerald-200'
-                : 'bg-rose-950/30 border-rose-500/40 text-rose-200'
-          }`}
-        >
-          <div className="flex flex-col gap-1.5 flex-1">
-            <div className="flex items-center gap-2.5 flex-wrap">
-              {isListeningMode ? (
-                <>
-                  <span
-                    className={`px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase ${
-                      isBlindSpotReviewMode
-                        ? 'bg-amber-500 text-zinc-950'
-                        : 'bg-cyan-500 text-zinc-950'
-                    }`}
-                  >
-                    {isBlindSpotReviewMode ? 'BLIND-SPOT REMEDIATION' : 'LISTEN & DECODE'}
+      {showFeedback &&
+        (lastEvaluation || isListeningMode) &&
+        (!isBlindSpotReviewMode || remainingBlindSpotsCount !== 0) && (
+          <div
+            data-testid="feedback-reveal-card"
+            className={`rounded-xl border p-5 transition-all duration-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 ${
+              isListeningMode
+                ? 'bg-cyan-950/25 border-cyan-500/40 text-cyan-100 shadow-[0_0_30px_rgba(6,182,212,0.15)]'
+                : isCorrect
+                  ? 'bg-emerald-950/30 border-emerald-500/40 text-emerald-200'
+                  : 'bg-rose-950/30 border-rose-500/40 text-rose-200'
+            }`}
+          >
+            <div className="flex flex-col gap-1.5 flex-1">
+              <div className="flex items-center gap-2.5 flex-wrap">
+                {isListeningMode ? (
+                  <>
+                    <span
+                      className={`px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase ${
+                        isBlindSpotReviewMode
+                          ? 'bg-amber-500 text-zinc-950'
+                          : 'bg-cyan-500 text-zinc-950'
+                      }`}
+                    >
+                      {isBlindSpotReviewMode ? 'BLIND-SPOT REMEDIATION' : 'LISTEN & DECODE'}
+                    </span>
+                    <span className="text-xs font-mono text-zinc-400">
+                      {isBlindSpotReviewMode
+                        ? remainingBlindSpotsCount !== undefined
+                          ? `剩餘 ${remainingBlindSpotsCount} 個盲點語塊`
+                          : '複習盲點語塊'
+                        : '點選下方語塊標記盲點，完成後前往下一題'}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span
+                      className={`px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase ${
+                        isCorrect ? 'bg-emerald-500 text-zinc-950' : 'bg-rose-500 text-zinc-950'
+                      }`}
+                    >
+                      {isCorrect ? 'PERFECT MATCH' : 'INCORRECT'}
+                    </span>
+                    <span className="text-xs font-mono text-zinc-400">
+                      Reaction Time:{' '}
+                      <strong className="text-zinc-200">{lastEvaluation?.latencyMs}ms</strong>
+                    </span>
+                    <span className="text-xs font-mono text-zinc-400">
+                      Correct:{' '}
+                      <strong className="text-cyan-300 capitalize">
+                        {question.correctAnswers.time} {question.correctAnswers.voice}
+                      </strong>
+                    </span>
+                  </>
+                )}
+              </div>
+
+              {question.translation && (
+                <p
+                  data-testid="sentence-translation"
+                  className="text-sm font-medium text-zinc-200 mt-1 flex items-center gap-2"
+                >
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400 font-normal">
+                    中文翻譯
                   </span>
-                  <span className="text-xs font-mono text-zinc-400">
-                    {isBlindSpotReviewMode
-                      ? remainingBlindSpotsCount !== undefined
-                        ? `剩餘 ${remainingBlindSpotsCount} 個盲點語塊`
-                        : '複習盲點語塊'
-                      : '點選下方語塊標記盲點，完成後前往下一題'}
+                  <span>{question.translation}</span>
+                </p>
+              )}
+
+              {isListeningMode && (
+                <p
+                  data-testid="revealed-english-sentence"
+                  className="text-xs font-mono text-zinc-400 mt-0.5"
+                >
+                  {question.sentence}
+                </p>
+              )}
+
+              {question.grammarNote && (
+                <div className="text-sm text-zinc-300 leading-relaxed mt-2 pt-2 border-t border-zinc-800/80">
+                  <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-300 font-semibold mr-2 inline-block mb-1">
+                    解析筆記
                   </span>
-                </>
-              ) : (
-                <>
-                  <span
-                    className={`px-2.5 py-0.5 rounded text-xs font-mono font-bold tracking-wider uppercase ${
-                      isCorrect ? 'bg-emerald-500 text-zinc-950' : 'bg-rose-500 text-zinc-950'
-                    }`}
-                  >
-                    {isCorrect ? 'PERFECT MATCH' : 'INCORRECT'}
-                  </span>
-                  <span className="text-xs font-mono text-zinc-400">
-                    Reaction Time:{' '}
-                    <strong className="text-zinc-200">{lastEvaluation?.latencyMs}ms</strong>
-                  </span>
-                  <span className="text-xs font-mono text-zinc-400">
-                    Correct:{' '}
-                    <strong className="text-cyan-300 capitalize">
-                      {question.correctAnswers.time} {question.correctAnswers.voice}
-                    </strong>
-                  </span>
-                </>
+                  <p className="whitespace-pre-line text-zinc-300 text-xs sm:text-sm">
+                    {question.grammarNote}
+                  </p>
+                </div>
               )}
             </div>
 
-            {question.translation && (
-              <p
-                data-testid="sentence-translation"
-                className="text-sm font-medium text-zinc-200 mt-1 flex items-center gap-2"
-              >
-                <span className="text-[10px] px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400 font-normal">
-                  中文翻譯
-                </span>
-                <span>{question.translation}</span>
-              </p>
-            )}
-
-            {isListeningMode && (
-              <p
-                data-testid="revealed-english-sentence"
-                className="text-xs font-mono text-zinc-400 mt-0.5"
-              >
-                {question.sentence}
-              </p>
-            )}
-
-            {question.grammarNote && (
-              <div className="text-sm text-zinc-300 leading-relaxed mt-2 pt-2 border-t border-zinc-800/80">
-                <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-300 font-semibold mr-2 inline-block mb-1">
-                  解析筆記
-                </span>
-                <p className="whitespace-pre-line text-zinc-300 text-xs sm:text-sm">
-                  {question.grammarNote}
-                </p>
-              </div>
-            )}
+            <div className="flex items-center gap-2 self-end sm:self-center shrink-0">
+              {isBlindSpotReviewMode && onMasterChunk && (
+                <button
+                  type="button"
+                  onClick={() => onMasterChunk()}
+                  data-testid="master-chunk-btn"
+                  className="px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 text-sm font-bold tracking-wide shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 active:scale-95"
+                >
+                  <span>✓ 已掌握</span>
+                </button>
+              )}
+              {onNextQuestion && (
+                <button
+                  onClick={onNextQuestion}
+                  data-testid="next-question-btn"
+                  className="px-5 py-2.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 text-sm font-semibold tracking-wide shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap"
+                >
+                  Next Sentence →
+                </button>
+              )}
+            </div>
           </div>
-
-          <div className="flex items-center gap-2 self-end sm:self-center shrink-0">
-            {isBlindSpotReviewMode && onMasterChunk && (
-              <button
-                type="button"
-                onClick={onMasterChunk}
-                data-testid="master-chunk-btn"
-                className="px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 text-sm font-bold tracking-wide shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 active:scale-95"
-              >
-                <span>✓ 已掌握</span>
-              </button>
-            )}
-            {onNextQuestion && (
-              <button
-                onClick={onNextQuestion}
-                data-testid="next-question-btn"
-                className="px-5 py-2.5 rounded-lg bg-zinc-100 hover:bg-white text-zinc-950 text-sm font-semibold tracking-wide shadow-md hover:shadow-lg transition-all cursor-pointer whitespace-nowrap"
-              >
-                Next Sentence →
-              </button>
-            )}
-          </div>
-        </div>
-      )}
+        )}
 
       {/* Banner when all blind spots are cleared in review drill */}
       {isBlindSpotReviewMode && remainingBlindSpotsCount === 0 && (

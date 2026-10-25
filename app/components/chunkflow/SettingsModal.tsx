@@ -229,6 +229,30 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             })}
           </div>
 
+          {/* Staged Accent Training Guidance Card */}
+          <div
+            data-testid="accent-guidance-card"
+            className="text-[11px] bg-cyan-950/20 border border-cyan-800/40 rounded-xl p-3 flex flex-col gap-1.5 text-zinc-300"
+          >
+            <span className="font-semibold text-cyan-300 flex items-center gap-1.5">
+              <span>🎯</span> 口音循序訓練指南（聽力進階建議）
+            </span>
+            <div className="flex flex-col gap-1 text-zinc-400 leading-relaxed font-sans">
+              <p>
+                • <strong className="text-zinc-200">初期 / 一刷（建立自信）</strong>：優先選擇{' '}
+                <span className="text-cyan-300">🇺🇸 美式</span> 或{' '}
+                <span className="text-cyan-300">🇨🇦 加拿大</span>{' '}
+                口音。在熟悉的捲舌（Rhotic）與發音習慣下建立「聲音➔字義」快速連結，減少初期認知負擔。
+              </p>
+              <p>
+                • <strong className="text-zinc-200">進階 / 多刷（高壓特訓）</strong>：切換至{' '}
+                <span className="text-cyan-300">🇬🇧 英式</span> 或{' '}
+                <span className="text-cyan-300">🇦🇺 澳洲</span>{' '}
+                口音。重點適應非捲舌音（Non-rhotic）及母音位移，全方位攻克多益多國口音盲區。
+              </p>
+            </div>
+          </div>
+
           {/* Synthesized Voice Dropdown Select */}
           <div className="flex flex-col gap-1.5 mt-1">
             <label htmlFor="voice-dropdown-select" className="text-xs font-medium text-zinc-300">

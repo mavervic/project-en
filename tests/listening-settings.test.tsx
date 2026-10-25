@@ -99,4 +99,18 @@ describe('SettingsModal - Listening Drill Settings', () => {
 
     expect(screen.getByTestId('chinese-voice-fallback-hint')).toBeDefined();
   });
+
+  it('renders staged accent guidance card with US/CA and UK/AU recommendations', () => {
+    render(<SettingsModal isOpen={true} onClose={vi.fn()} hasChineseVoice={true} />);
+
+    const guidance = screen.getByTestId('accent-guidance-card');
+    expect(guidance).toBeDefined();
+    expect(guidance.textContent).toContain('口音循序訓練指南');
+    expect(guidance.textContent).toContain('初期 / 一刷（建立自信）');
+    expect(guidance.textContent).toContain('美式');
+    expect(guidance.textContent).toContain('加拿大');
+    expect(guidance.textContent).toContain('進階 / 多刷（高壓特訓）');
+    expect(guidance.textContent).toContain('英式');
+    expect(guidance.textContent).toContain('澳洲');
+  });
 });
