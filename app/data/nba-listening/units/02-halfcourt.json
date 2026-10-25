@@ -1,0 +1,352 @@
+[
+  {
+    "id": "nba-02-01",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "The point guard executed a perfect pick-and-roll at the top of the key.",
+    "translation": "控球後衛在三分弧頂執行了一次完美的擋拆戰術。",
+    "chunks": [
+      {
+        "text": "The point guard",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "executed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a perfect pick-and-roll",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "at the top of the key.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (executed)。\n• 【術語解說】pick-and-roll（擋拆戰術）是現代籃球最重要的雙人戰術發動機：隊友上前設立實質掩護（pick / screen），持球者藉此切入，掩護者隨即順勢空切籃下（roll to the basket）；top of the key 指三分弧頂罰球圈正中央區域。",
+    "topic": "Half-Court Sets & Ball Movement"
+  },
+  {
+    "id": "nba-02-02",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "The floor is spaced with four shooters around the perimeter.",
+    "translation": "四名射手散佈在外圍三分線周邊，將進攻空間徹底拉開。",
+    "chunks": [
+      {
+        "text": "The floor",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is spaced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with four shooters",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "around the perimeter.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "simple"
+    },
+    "grammarNote": "現在簡單被動態 (is spaced)。\n• 【術語解說】spacing（空間分佈／拉開空間）指球員分散站位以迫使防守球員擴大防守範圍；around the perimeter 意指「三分外線圓周區域」；四名射手拉開的戰術俗稱「一星四射（Drive-and-Kick system）」。",
+    "topic": "Half-Court Sets & Ball Movement"
+  },
+  {
+    "id": "nba-02-03",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "The veteran playmaker has created an open look with a backdoor cut.",
+    "translation": "這位資深組織核心透過一次後門空切製造出大空檔出手機會。",
+    "chunks": [
+      {
+        "text": "The veteran playmaker",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has created",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "an open look",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "with a backdoor cut.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has created)。\n• 【術語解說】playmaker 指「組織進攻發動機」；open look 指完全沒有防守者貼身干擾的絕佳出手機會；backdoor cut（走後門）指趁防守者過度撲前貼防時，無球球員突然轉身往籃下空切偷襲。",
+    "topic": "Half-Court Sets & Ball Movement"
+  },
+  {
+    "id": "nba-02-04",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "The dominant center is posting up against single coverage in the paint.",
+    "translation": "統治力十足的中鋒正在禁區油漆區背框單打一對一防守。",
+    "chunks": [
+      {
+        "text": "The dominant center",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is posting up",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "against single coverage",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "in the paint.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is posting up)。\n• 【術語解說】post up 指「低位背框單打」；single coverage 指防守方並未啟動雙人包夾（double-team），僅用一名防守者單防；in the paint 指罰球線至籃框之間的「禁區／油漆區」（因常塗有球隊專屬漆色而得名）。",
+    "topic": "Half-Court Sets & Ball Movement"
+  },
+  {
+    "id": "nba-02-05",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "The ball was swung quickly from side to side against the zone defense.",
+    "translation": "在面對區域聯防時，球在球場兩側迅速進行大範圍導傳轉移。",
+    "chunks": [
+      {
+        "text": "The ball",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was swung",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "quickly from side to side",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "against the zone defense.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was swung)。\n• 【術語解說】ball swing 指進攻方不黏球、迅速將球從強側轉移到弱側的「流暢導傳」；zone defense（區域聯防）各防守者看管特定區域而非緊盯單一球員，破聯防的秘訣正是高速導傳拉扯防線漏洞。",
+    "topic": "Half-Court Sets & Ball Movement"
+  },
+  {
+    "id": "nba-02-06",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "The isolation play will isolate the defender on the left wing.",
+    "translation": "這次單打戰術將在左側四十五度角側翼把防守球員徹底孤立。",
+    "chunks": [
+      {
+        "text": "The isolation play",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will isolate",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the defender",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "on the left wing.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will isolate)。\n• 【術語解說】isolation play（常簡稱 ISO，單打戰術）指其餘四名隊友全部拉到弱側清空空間，由隊內單挑高手進行一對一擊破；left wing 指球場左側四十五度角三分線側翼位置。",
+    "topic": "Half-Court Sets & Ball Movement"
+  },
+  {
+    "id": "nba-02-07",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "The athletic forward threw down an emphatic alley-oop dunk.",
+    "translation": "運動能力出眾的前鋒完成了一記力量感十足的霸氣空中接力扣籃。",
+    "chunks": [
+      {
+        "text": "The athletic forward",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "threw down",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "an emphatic alley-oop dunk.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (threw down)。\n• 【術語解說】throw down 在美式籃球俚語中專指「狠狠把球砸進籃框（灌籃）」；alley-oop 指控球者把球拋向籃框上方，隊友騰空躍起在空中抓球直接灌進；emphatic dunk 形容極具震撼力、力量十足的扣籃。",
+    "topic": "Half-Court Sets & Ball Movement"
+  },
+  {
+    "id": "nba-02-08",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "A high-post screen was set by the power forward near the elbow.",
+    "translation": "大前鋒在罰球線肘區附近設立了一次高位掩護。",
+    "chunks": [
+      {
+        "text": "A high-post screen",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was set",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the power forward",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "near the elbow.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was set)。\n• 【術語解說】high-post screen 指在罰球線高位（High post）設置的掩護；elbow（肘區）是籃球場上罰球線與禁區邊線交匯形成的兩個直角頂點，是許多戰術策應與中距離跳投的戰略要塞。",
+    "topic": "Half-Court Sets & Ball Movement"
+  },
+  {
+    "id": "nba-02-09",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "The sharp shooter has drained three consecutive jumpers from downtown.",
+    "translation": "神射手已經在外圍大號三分線外連續空心命中三記跳投。",
+    "chunks": [
+      {
+        "text": "The sharp shooter",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has drained",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "three consecutive jumpers",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "from downtown.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has drained)。\n• 【術語解說】drain the shot 是美國播報員極具特色的生動比喻，形容球像水流排入水管一樣乾淨俐落、空心入網；jumpers 即 jump shots（跳投）；from downtown 是經典名播報用語，專指距離籃框很遠的長程三分球。",
+    "topic": "Half-Court Sets & Ball Movement"
+  },
+  {
+    "id": "nba-02-10",
+    "trainingId": "nba-02-halfcourt",
+    "sentence": "The offensive rebound was secured for a second-chance putback.",
+    "translation": "進攻籃板被穩穩抓下，並完成了二次進攻補籃得分。",
+    "chunks": [
+      {
+        "text": "The offensive rebound",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was secured",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for a second-chance putback.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was secured)。\n• 【術語解說】offensive rebound（進攻籃板／前場籃板）；second-chance points（二次進攻得分）；putback 指在搶下進攻籃板後第一時間在空中或落地後直接補籃得分（putback layup / putback dunk）。",
+    "topic": "Half-Court Sets & Ball Movement"
+  }
+]

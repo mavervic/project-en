@@ -1,0 +1,352 @@
+[
+  {
+    "id": "nba-01-01",
+    "trainingId": "nba-01-pregame",
+    "sentence": "The star forward is leading the league in scoring this season.",
+    "translation": "這位明星前鋒本賽季在全聯盟得分榜上高居榜首。",
+    "chunks": [
+      {
+        "text": "The star forward",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is leading",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the league in scoring",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "this season.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is leading)。\n• 【術語解說】star forward 指「主力前鋒」（如小前鋒 SF 或大前鋒 PF）；leading the league in scoring 指場均得分領先全聯盟所有球員，是角逐賽季得分王（Scoring Champion）與 MVP 的核心指標。",
+    "topic": "Pre-Game & Matchups"
+  },
+  {
+    "id": "nba-01-02",
+    "trainingId": "nba-01-pregame",
+    "sentence": "Both teams have won eight of their last ten matchups.",
+    "translation": "兩支球隊在最近十場比賽對決中都贏下了八場。",
+    "chunks": [
+      {
+        "text": "Both teams",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "have won",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "eight of their last ten matchups.",
+        "isTargetSlot": false,
+        "type": "object"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (have won)。\n• 【術語解說】matchups 指球隊近期交手紀錄或同賽程對陣；「eight of their last ten（近十戰八勝）」是播報員賽前特別用來形容球隊正處於火燙連勝期（hot streak）的高頻慣用語。",
+    "topic": "Pre-Game & Matchups"
+  },
+  {
+    "id": "nba-01-03",
+    "trainingId": "nba-01-pregame",
+    "sentence": "The starting center was ruled out tonight due to back soreness.",
+    "translation": "先發中鋒今晚因背部痠痛已被列為缺陣無法出賽。",
+    "chunks": [
+      {
+        "text": "The starting center",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was ruled out",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "tonight",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "due to back soreness.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was ruled out)。\n• 【術語解說】starting center 指「先發五虎的中鋒（Center, C）」；ruled out 是 NBA 傷兵報告（Injury Report）的標準術語，代表醫療團隊正式裁定該球員本場無法上場。",
+    "topic": "Pre-Game & Matchups"
+  },
+  {
+    "id": "nba-01-04",
+    "trainingId": "nba-01-pregame",
+    "sentence": "The visiting squad will face a hostile crowd in the arena.",
+    "translation": "客場球隊將在球館中面對充滿敵意與狂熱呼嘯的主場球迷。",
+    "chunks": [
+      {
+        "text": "The visiting squad",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will face",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a hostile crowd",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in the arena.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will face)。\n• 【術語解說】visiting squad 指客隊（away team）；hostile crowd 形容主場球迷鋪天蓋地的噓聲與干擾噪音，形成巨大的主場優勢（home-court advantage）。",
+    "topic": "Pre-Game & Matchups"
+  },
+  {
+    "id": "nba-01-05",
+    "trainingId": "nba-01-pregame",
+    "sentence": "Head coaches are discussing the defensive assignments before tip-off.",
+    "translation": "總教練們正在開賽跳球前討論防守對位分配。",
+    "chunks": [
+      {
+        "text": "Head coaches",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are discussing",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the defensive assignments",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "before tip-off.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are discussing)。\n• 【術語解說】defensive assignments 指「防守對位任務」（指派誰去鎖死對方的核心持球得分手）；tip-off 指裁判在中圈把球高高拋起的「開賽跳球」。",
+    "topic": "Pre-Game & Matchups"
+  },
+  {
+    "id": "nba-01-06",
+    "trainingId": "nba-01-pregame",
+    "sentence": "The rookie guard has impressed analysts with his court vision.",
+    "translation": "這位新秀後衛憑藉出色的傳球大局觀給賽評們留下了深刻印象。",
+    "chunks": [
+      {
+        "text": "The rookie guard",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has impressed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "analysts",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "with his court vision.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has impressed)。\n• 【術語解說】rookie guard（新秀控衛／得分後衛）；court vision 指球員看穿全場防守破綻、在千分之一秒內將球精準傳達給空檔隊友的「球場視野／傳球大局觀」。",
+    "topic": "Pre-Game & Matchups"
+  },
+  {
+    "id": "nba-01-07",
+    "trainingId": "nba-01-pregame",
+    "sentence": "The reigning MVP was welcomed with loud cheers during player introductions.",
+    "translation": "現任最有價值球員在球員進場介紹時受到了全場熱烈歡呼。",
+    "chunks": [
+      {
+        "text": "The reigning MVP",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was welcomed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with loud cheers",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "during player introductions.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was welcomed)。\n• 【術語解說】reigning MVP 指「現任衛冕年度最有價值球員」；player introductions 指開賽前燈光全暗、播報員以激昂語調逐一唱名先發陣容的「進場介紹儀式」。",
+    "topic": "Pre-Game & Matchups"
+  },
+  {
+    "id": "nba-01-08",
+    "trainingId": "nba-01-pregame",
+    "sentence": "The underdog franchise will rely on three-point shooting tonight.",
+    "translation": "這支不被看好的球隊今晚將極度依賴外線三分投射。",
+    "chunks": [
+      {
+        "text": "The underdog franchise",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will rely",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "on three-point shooting",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "tonight.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will rely)。\n• 【術語解說】franchise 在職業體育中專指「職業球團／球隊特許經營權」；underdog 指實力或賠率居於下風的黑馬弱勢方；three-point shooting（三分外線投射）是現代籃球下剋上的最大戰略武器。",
+    "topic": "Pre-Game & Matchups"
+  },
+  {
+    "id": "nba-01-09",
+    "trainingId": "nba-01-pregame",
+    "sentence": "A physical battle has been predicted by the broadcast crew.",
+    "translation": "轉播球評團隊已經預測這將會是一場激烈的身體肉搏焦土戰。",
+    "chunks": [
+      {
+        "text": "A physical battle",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has been predicted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the broadcast crew.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成被動態 (has been predicted)。\n• 【術語解說】physical battle 形容充滿強烈身體碰撞、卡位強硬、防守裁判尺度較寬鬆的對抗戰；broadcast crew 指由賽事主述主播（Play-by-play）與專業球評（Color commentator）組成的轉播小組。",
+    "topic": "Pre-Game & Matchups"
+  },
+  {
+    "id": "nba-01-10",
+    "trainingId": "nba-01-pregame",
+    "sentence": "The home team will play their second game of a back-to-back schedule.",
+    "translation": "主場球隊將迎來他們連續兩天出戰的背靠背賽程第二戰。",
+    "chunks": [
+      {
+        "text": "The home team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will play",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "their second game",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "of a back-to-back schedule.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will play)。\n• 【術語解說】back-to-back 指在無休兵日的情況下「連續兩天出賽（B2B）」，球員在第四節常會出現腿部力量疲乏（heavy legs），極度考驗陣容深度與教練輪替調節。",
+    "topic": "Pre-Game & Matchups"
+  }
+]

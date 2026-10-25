@@ -1,0 +1,347 @@
+[
+  {
+    "id": "nba-03-01",
+    "trainingId": "nba-03-defense",
+    "sentence": "The loose ball was stolen by the defense for an easy transition dunk.",
+    "translation": "防守方抄截了未被掌控的地板球，發動了一次輕鬆的快攻反擊灌籃。",
+    "chunks": [
+      {
+        "text": "The loose ball",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was stolen",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the defense",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "for an easy transition dunk.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was stolen)。\n• 【術語解說】loose ball 指球脫手彈地、球權尚未明確歸屬的「無人掌控球」；transition dunk 指利用攻守轉換時間差（在對方防守回防站定位前）發動的「快攻扣籃」。",
+    "topic": "Defense & Fast Breaks"
+  },
+  {
+    "id": "nba-03-02",
+    "trainingId": "nba-03-defense",
+    "sentence": "The rim protector swatted the layup attempt off the backboard.",
+    "translation": "護框守護神將對手的上籃出手直接釘在籃板上狠狠封阻。",
+    "chunks": [
+      {
+        "text": "The rim protector",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "swatted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the layup attempt",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "off the backboard.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (swatted)。\n• 【術語解說】rim protector 指坐鎮禁區威懾力極強的「護框大閘／阻攻守護神」；swat 意指像拍蒼蠅一樣居高臨下將球大力拍飛（搧大火鍋）；layup attempt 指上籃出手；off the backboard 指將球死死拍在籃板上的「釘板火鍋（pin block）」。",
+    "topic": "Defense & Fast Breaks"
+  },
+  {
+    "id": "nba-03-03",
+    "trainingId": "nba-03-defense",
+    "sentence": "They are applying full-court pressure to force a turnover.",
+    "translation": "他們正在施加全場緊逼防守以迫使對手出現傳球失誤。",
+    "chunks": [
+      {
+        "text": "They",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "are applying",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "full-court pressure",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "to force a turnover.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (are applying)。\n• 【術語解說】full-court pressure（全場緊逼防守，又稱 full-court press），防守方從對手後場發球開始就採取寸土必爭的貼身壓迫或包夾；turnover 指傳球出界、八秒未過半場或被抄截等「攻守失誤」。",
+    "topic": "Defense & Fast Breaks"
+  },
+  {
+    "id": "nba-03-04",
+    "trainingId": "nba-03-defense",
+    "sentence": "The defensive rebound was corralled after a contested three-point miss.",
+    "translation": "在一次受到強烈干擾的三分球投石問路失手後，防守籃板被穩穩收下。",
+    "chunks": [
+      {
+        "text": "The defensive rebound",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was corralled",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "after a contested three-point miss.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was corralled)。\n• 【術語解說】defensive rebound（後場防守籃板）；corral 原意為「圍捕、集中收攏」，在播報中生動形容球員雙手牢牢把長籃板收進懷中；contested shot 指防守球員高舉雙手撲防貼近干擾下的高難度出手。",
+    "topic": "Defense & Fast Breaks"
+  },
+  {
+    "id": "nba-03-05",
+    "trainingId": "nba-03-defense",
+    "sentence": "The superstar forward has executed a signature chase-down block in transition.",
+    "translation": "這位超級巨星前鋒在攻守轉換中上演了一記招牌的追身大火鍋。",
+    "chunks": [
+      {
+        "text": "The superstar forward",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has executed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a signature chase-down block",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in transition.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has executed)。\n• 【術語解說】chase-down block 指球員在對手快攻看似十拿九穩時，全速從後方衝刺追趕、在空中將對手即將放進的球狠狠釘在籃板上的「追魂鍋」（LeBron James 在總冠軍賽的傳奇標誌代表作）。",
+    "topic": "Defense & Fast Breaks"
+  },
+  {
+    "id": "nba-03-06",
+    "trainingId": "nba-03-defense",
+    "sentence": "The perimeter defender deflected the pass toward the sideline.",
+    "translation": "外圍防守球員伸長手臂改變了傳球軌跡，將球破壞向場外邊線。",
+    "chunks": [
+      {
+        "text": "The perimeter defender",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "deflected",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the pass",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "toward the sideline.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (deflected)。\n• 【術語解說】perimeter defender 指負責在三分線外防守後衛或側翼的外圍大鎖；deflected 指防守者利用長臂展或敏銳預判，在空中用指尖點到球改變方向（deflection 是現代 NBA 衡量防守積極度的關鍵進階數據）。",
+    "topic": "Defense & Fast Breaks"
+  },
+  {
+    "id": "nba-03-07",
+    "trainingId": "nba-03-defense",
+    "sentence": "Two technical fouls were assessed by the lead referee.",
+    "translation": "兩次技術犯規被主裁判當場判處吹罰。",
+    "chunks": [
+      {
+        "text": "Two technical fouls",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were assessed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "by the lead referee.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (were assessed)。\n• 【術語解說】technical foul（常簡稱為 Tech 或 T，技術犯規），通常針對不尊重裁判判決、垃圾話挑釁或非體育道德行為吹罰；單場吞下兩記 T 的球員或教練將會被直接驅逐出場（ejected）。",
+    "topic": "Defense & Fast Breaks"
+  },
+  {
+    "id": "nba-03-08",
+    "trainingId": "nba-03-defense",
+    "sentence": "The energetic guard is diving for the loose ball near half court.",
+    "translation": "拼勁十足的後衛正在中場附近飛身魚躍撲搶地板球。",
+    "chunks": [
+      {
+        "text": "The energetic guard",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is diving",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "for the loose ball",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "near half court.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is diving)。\n• 【術語解說】diving for the loose ball（撲地救球）是體現防守鐵血與拼戰精神（hustle play）的最具感染力動作，往往能引爆全場觀眾最高分貝的歡呼鼓掌。",
+    "topic": "Defense & Fast Breaks"
+  },
+  {
+    "id": "nba-03-09",
+    "trainingId": "nba-03-defense",
+    "sentence": "A fast-break opportunity has been converted into three points.",
+    "translation": "一次快攻良機已經被成功轉化成了三分進球得分。",
+    "chunks": [
+      {
+        "text": "A fast-break opportunity",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has been converted",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "into three points.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成被動態 (has been converted)。\n• 【術語解說】fast break 指趁對手投籃失手或失誤時，全速向前奔跑推進的「快速反擊」；converted into points 指把握機會轉化為實質比分入袋（如快攻追身三分 pull-up three）。",
+    "topic": "Defense & Fast Breaks"
+  },
+  {
+    "id": "nba-03-10",
+    "trainingId": "nba-03-defense",
+    "sentence": "The defense will double-team the opposing superstar on every catch.",
+    "translation": "防守陣型將在對手超級巨星每次一接到球時立刻上前執行雙人包夾。",
+    "chunks": [
+      {
+        "text": "The defense",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will double-team",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the opposing superstar",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "on every catch.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will double-team)。\n• 【術語解說】double-team 指由兩名防守球員同時上前包夾持球者（又稱 trap），迫使對方不得不把球傳給其餘角色球員，考驗對手的破包夾傳球與隊友空檔把握度。",
+    "topic": "Defense & Fast Breaks"
+  }
+]

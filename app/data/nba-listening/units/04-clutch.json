@@ -1,0 +1,352 @@
+[
+  {
+    "id": "nba-04-01",
+    "trainingId": "nba-04-clutch",
+    "sentence": "He has drained a clutch step-back three at the buzzer.",
+    "translation": "他在比賽終場鳴笛壓哨時刻空心命中了一記關鍵的後撤步三分球。",
+    "chunks": [
+      {
+        "text": "He",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has drained",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "a clutch step-back three",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "at the buzzer.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has drained)。\n• 【術語解說】clutch 指分差五分以內、剩餘時間五分鐘以內的「決勝生死時刻」；step-back three（後撤步三分）是球員透過突然向後撤躍一步拉開與防守者距離的致命單打絕技；at the buzzer 指在計時器紅燈亮起、蜂鳴器大響瞬間球剛好離手空心破網。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  },
+  {
+    "id": "nba-04-02",
+    "trainingId": "nba-04-clutch",
+    "sentence": "A critical timeout was called with five seconds remaining on the game clock.",
+    "translation": "在比賽計時鐘僅剩最後五秒時，球隊請求了一次至關重要的暫停。",
+    "chunks": [
+      {
+        "text": "A critical timeout",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was called",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "with five seconds remaining",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "on the game clock.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was called)。\n• 【術語解說】critical timeout 指總教練在生死回合叫出的關鍵暫停，用以在戰術板上畫出最後一擊邊線發球戰術（inbounds play），並獲得將球推進至前場發球的巨大戰略優勢。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  },
+  {
+    "id": "nba-04-03",
+    "trainingId": "nba-04-clutch",
+    "sentence": "The franchise star will take the final shot in regulation.",
+    "translation": "球隊招牌球星將在第四節常規比賽時間內操刀執行最後一擊出手。",
+    "chunks": [
+      {
+        "text": "The franchise star",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will take",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the final shot",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "in regulation.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will take)。\n• 【術語解說】franchise star 指球團最頂尖的招牌基石球星；final shot（絕殺一擊）；in regulation 指標準四節的「常規時間」（相對於平手後進入的延長加時賽 Overtime, OT）。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  },
+  {
+    "id": "nba-04-04",
+    "trainingId": "nba-04-clutch",
+    "sentence": "The visiting team has forced overtime with a miraculous four-point play.",
+    "translation": "客場球隊憑藉一次不可思議的四分打神蹟將比賽強行拖入延長賽。",
+    "chunks": [
+      {
+        "text": "The visiting team",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has forced",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "overtime",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "with a miraculous four-point play.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has forced)。\n• 【術語解說】overtime（常簡稱 OT，延長加時賽）；four-point play 指進攻球員在投進高難度三分球的同時被防守者犯規（And-One），隨後走上罰球線再添 1 分完成一回合狂灌 4 分的神劇本。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  },
+  {
+    "id": "nba-04-05",
+    "trainingId": "nba-04-clutch",
+    "sentence": "Two pressure free throws were knocked down to ice the game.",
+    "translation": "兩記頂住高壓的罰球被穩穩命中，鎖定了比賽勝局。",
+    "chunks": [
+      {
+        "text": "Two pressure free throws",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "were knocked down",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to ice the game.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (were knocked down)。\n• 【術語解說】free throws（罰球）；knock down a shot 指「穩健命中投籃」；ice the game 是美式體育極富盛名的俚語，意思是「將比賽勝利放進冰箱（冰封勝利）」、徹底撲滅對手追分希望。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  },
+  {
+    "id": "nba-04-06",
+    "trainingId": "nba-04-clutch",
+    "sentence": "The crowd is chanting MVP for the hero of the night.",
+    "translation": "全場球迷正在為今晚的救世英雄齊聲高呼 MVP。",
+    "chunks": [
+      {
+        "text": "The crowd",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "is chanting",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "MVP",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "for the hero of the night.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "continuous"
+    },
+    "grammarNote": "現在進行主動態 (is chanting)。\n• 【術語解說】chanting MVP 指當一名球員在比賽末段隻手遮天狂砍高分或罰球時，全場兩萬名球迷異口同聲有節奏地高喊「M-V-P！M-V-P！」，象徵球員征服主場的最高崇敬之意。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  },
+  {
+    "id": "nba-04-07",
+    "trainingId": "nba-04-clutch",
+    "sentence": "An intentional foul was committed to stop the clock in the closing seconds.",
+    "translation": "在最後數秒鐘球員採取了戰術犯規，以凍結比賽計時鐘。",
+    "chunks": [
+      {
+        "text": "An intentional foul",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "was committed",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to stop the clock",
+        "isTargetSlot": false,
+        "type": "clause"
+      },
+      {
+        "text": "in the closing seconds.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "passive",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單被動態 (was committed)。\n• 【術語解說】intentional foul 指在比賽讀秒落後階段，落後方刻意上前輕拍持球者實施「戰術性犯規」，目的在於停止時間走動（stop the clock），賭對手罰球不中以搶得反擊球權。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  },
+  {
+    "id": "nba-04-08",
+    "trainingId": "nba-04-clutch",
+    "sentence": "The sharpshooter buried the game-winning jumper over two defenders.",
+    "translation": "神射手迎著兩名防守球員的強烈撲防，冷酷命中了絕殺致勝跳投。",
+    "chunks": [
+      {
+        "text": "The sharpshooter",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "buried",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the game-winning jumper",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "over two defenders.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "past",
+      "aspect": "simple"
+    },
+    "grammarNote": "過去簡單主動態 (buried)。\n• 【術語解說】bury a shot 在播報中指投籃俐落入網、「一劍封喉埋葬對手」；game-winning shot / jumper 專指在比賽最末端直接奠定勝局、使對手再無時間反撲的致勝得分球。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  },
+  {
+    "id": "nba-04-09",
+    "trainingId": "nba-04-clutch",
+    "sentence": "A dramatic buzzer beater has sent the home fans into pure frenzy.",
+    "translation": "一記戲劇性的壓哨絕殺讓現場主場球迷陷入了徹頭徹尾的瘋狂狂喜。",
+    "chunks": [
+      {
+        "text": "A dramatic buzzer beater",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "has sent",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "the home fans",
+        "isTargetSlot": false,
+        "type": "object"
+      },
+      {
+        "text": "into pure frenzy.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "present",
+      "aspect": "perfect"
+    },
+    "grammarNote": "現在完成主動態 (has sent)。\n• 【術語解說】buzzer beater 指球員在蜂鳴器鳴響前最後一刻出手並命中的「壓哨絕殺」（通常指絕殺比賽的經典鏡頭）；pure frenzy 形容全場觀眾激動得跳過圍欄、全隊衝上場相擁慶祝的狂熱狀態。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  },
+  {
+    "id": "nba-04-10",
+    "trainingId": "nba-04-clutch",
+    "sentence": "The championship contenders will advance to the conference finals.",
+    "translation": "這支爭冠勁旅將順利晉級挺進分區總決賽。",
+    "chunks": [
+      {
+        "text": "The championship contenders",
+        "isTargetSlot": false,
+        "type": "subject"
+      },
+      {
+        "text": "will advance",
+        "isTargetSlot": true,
+        "type": "verb"
+      },
+      {
+        "text": "to the conference finals.",
+        "isTargetSlot": false,
+        "type": "clause"
+      }
+    ],
+    "targetSlotIndex": 1,
+    "correctAnswers": {
+      "voice": "active",
+      "time": "future",
+      "aspect": "simple"
+    },
+    "grammarNote": "未來簡單主動態 (will advance)。\n• 【術語解說】championship contenders 指具備奪冠實力的大熱門球隊；advance 指系列賽過關晉級；conference finals 指 NBA 東區或西區總冠軍戰（Eastern / Western Conference Finals），贏家將獲頒分區冠軍並挺進 NBA 總決賽（NBA Finals）。",
+    "topic": "Clutch Time & Buzzer Beaters"
+  }
+]

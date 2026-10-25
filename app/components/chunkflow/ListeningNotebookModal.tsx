@@ -3,6 +3,7 @@ import { ModalShell } from './ModalShell';
 import type { MarkedChunkRecord } from '../../types/chunkflow';
 import { TOEIC_LISTENING_UNITS } from '../../data/toeic-listening';
 import { LOL_WORLDS_LISTENING_UNITS } from '../../data/lol-worlds-listening';
+import { NBA_LISTENING_UNITS } from '../../data/nba-listening';
 
 export interface ListeningNotebookModalProps {
   isOpen: boolean;
@@ -33,6 +34,9 @@ export const ListeningNotebookModal: React.FC<ListeningNotebookModalProps> = ({
         (u) => u.trainingId === trainingId || u.trainingId.startsWith(trainingId)
       ) ||
       LOL_WORLDS_LISTENING_UNITS.find(
+        (u) => u.trainingId === trainingId || u.trainingId.startsWith(trainingId)
+      ) ||
+      NBA_LISTENING_UNITS.find(
         (u) => u.trainingId === trainingId || u.trainingId.startsWith(trainingId)
       );
     return found ? found.title.replace(/\s*\((Easy|Medium|Hard)\)$/i, '') : trainingId;

@@ -65,7 +65,10 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
 
   const isListeningBank = useCallback(
     (id?: string | null) =>
-      id === 'toeic-listening' || id === 'parker' || id === 'lol-worlds-listening',
+      id === 'toeic-listening' ||
+      id === 'parker' ||
+      id === 'lol-worlds-listening' ||
+      id === 'nba-listening',
     []
   );
 
