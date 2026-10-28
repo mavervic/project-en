@@ -31,7 +31,12 @@ import {
   saveMarkedChunk,
   savePerformanceRecord,
 } from '../utils/storage';
-import { constrainedShuffle, getQuestionCategory, selectNextQuestion } from '../utils/sampling';
+import {
+  constrainedShuffle,
+  getQuestionCategory,
+  selectNextQuestion,
+  shuffleArray,
+} from '../utils/sampling';
 import {
   computeUnitStatus,
   getNextQuestionInUnit,
@@ -47,6 +52,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
   );
   const blindModeRef = useRef<boolean>(blindModeEnabled);
   const [isBlindSpotReviewMode, setIsBlindSpotReviewMode] = useState<boolean>(false);
+  const blindSpotQueueRef = useRef<string[]>([]);
 
   const [questions, setQuestions] = useState<Question[]>(() => {
     if (initialQuestions && initialQuestions.length > 0) {
@@ -343,9 +349,22 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
     if (isBlindSpotReviewMode) {
       const markedQIds = new Set(markedChunks.map((m) => m.questionId));
       const pool = getAllListeningQuestions();
-      const candidates = pool.filter((q) => markedQIds.has(q.id));
-      const remaining = candidates.filter((q) => q.id !== currentQuestion.id);
-      nextQ = remaining.length > 0 ? remaining[0] : candidates[0] || currentQuestion;
+      const validQueue = blindSpotQueueRef.current.filter((id) => markedQIds.has(id));
+      for (const id of markedQIds) {
+        if (!validQueue.includes(id)) {
+          validQueue.push(id);
+        }
+      }
+      blindSpotQueueRef.current = validQueue;
+
+      if (validQueue.length === 0) {
+        nextQ = currentQuestion;
+      } else {
+        const currentIndex = validQueue.indexOf(currentQuestion?.id);
+        const nextIndex = currentIndex !== -1 ? (currentIndex + 1) % validQueue.length : 0;
+        const nextId = validQueue[nextIndex];
+        nextQ = pool.find((q) => q.id === nextId) || currentQuestion;
+      }
     } else {
       const { unattemptedQuestions } = computeUnitStatus(activeQuestions, currentHistory);
       const unattemptedRemaining = unattemptedQuestions.filter((q) => q.id !== currentQuestion.id);
@@ -422,12 +441,15 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
       return false;
     }
 
+    const shuffled = candidateQs.length > 1 ? shuffleArray(candidateQs) : [...candidateQs];
+    blindSpotQueueRef.current = shuffled.map((q) => q.id);
+
     setIsBlindSpotReviewMode(true);
     blindModeRef.current = true;
     setBlindModeEnabledState(true);
     saveBlindModeEnabled(true);
 
-    const firstQ = candidateQs[0];
+    const firstQ = shuffled[0];
     setCurrentQuestion(firstQ);
 
     selectedVoiceRef.current = null;
@@ -444,6 +466,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
   }, [getAllListeningQuestions, startTimer]);
 
   const exitBlindSpotReview = useCallback(() => {
+    blindSpotQueueRef.current = [];
     setIsBlindSpotReviewMode(false);
     const bankQs = getBankQuestions(activeBankId);
     setQuestions(bankQs);
@@ -486,6 +509,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
       if (isBlindSpotReviewMode) {
         const remainingQIds = new Set(updatedMarked.map((m) => m.questionId));
         if (remainingQIds.size === 0) {
+          blindSpotQueueRef.current = [];
           setMarkedChunkIndices([]);
           setShowFeedback(false);
           refreshMarkedChunks();
@@ -493,13 +517,18 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
         }
 
         const allListening = getAllListeningQuestions();
-        const remainingQs = allListening.filter(
-          (q) => remainingQIds.has(q.id) && q.id !== currentQuestion?.id
-        );
-        const nextQ =
-          remainingQs.length > 0
-            ? remainingQs[0]
-            : allListening.find((q) => remainingQIds.has(q.id));
+        const prevIndex = blindSpotQueueRef.current.indexOf(currentQuestion?.id || '');
+        const validQueue = blindSpotQueueRef.current.filter((id) => remainingQIds.has(id));
+        blindSpotQueueRef.current = validQueue;
+
+        let nextQ: Question | undefined;
+        if (validQueue.length > 0) {
+          const nextIndex = prevIndex !== -1 ? prevIndex % validQueue.length : 0;
+          const nextId = validQueue[nextIndex];
+          nextQ = allListening.find((q) => q.id === nextId);
+        } else {
+          nextQ = allListening.find((q) => remainingQIds.has(q.id));
+        }
 
         if (nextQ) {
           setCurrentQuestion(nextQ);
@@ -662,6 +691,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
 
   const handleSelectBank = useCallback(
     (bankId: string) => {
+      blindSpotQueueRef.current = [];
       setIsBlindSpotReviewMode(false);
       setActiveBankIdState(bankId);
       saveActiveBankId(bankId);
@@ -697,6 +727,7 @@ export function useChunkFlowGame(initialQuestions?: Question[]) {
 
   const handleSelectTraining = useCallback(
     (trainingId: string | null) => {
+      blindSpotQueueRef.current = [];
       setIsBlindSpotReviewMode(false);
       setActiveTrainingIdState(trainingId);
       if (trainingId) {

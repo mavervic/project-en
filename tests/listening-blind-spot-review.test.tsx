@@ -438,4 +438,173 @@ describe('Listening Blind-Spot Review Drill Mode', () => {
 
     expect(result.current.markedChunks.length).toBe(0);
   });
+
+  it('cycles through all 3 marked questions in round-robin order without ping-pong deadlock when repeatedly calling advanceToNextQuestion', () => {
+    const record1: MarkedChunkRecord = {
+      id: 'listening-01-easy-01-0',
+      questionId: 'listening-01-easy-01',
+      trainingId: 'listening-01-easy',
+      chunkText: 'The departure gate',
+      chunkIndex: 0,
+      sentence: 'The departure gate has been moved to Terminal 2 due to scheduled maintenance.',
+      translation: '由於預定的維護工程，登機門已移至第二航廈。',
+      timestamp: Date.now(),
+    };
+    const record2: MarkedChunkRecord = {
+      id: 'listening-01-easy-02-1',
+      questionId: 'listening-01-easy-02',
+      trainingId: 'listening-01-easy',
+      chunkText: 'present their boarding passes',
+      chunkIndex: 1,
+      sentence: 'Passengers must present their boarding passes before entering the boarding area.',
+      translation: '乘客在進入登機區前必須出示登機證。',
+      timestamp: Date.now() + 10,
+    };
+    const record3: MarkedChunkRecord = {
+      id: 'listening-01-easy-03-0',
+      questionId: 'listening-01-easy-03',
+      trainingId: 'listening-01-easy',
+      chunkText: 'Flight 402 to Tokyo',
+      chunkIndex: 0,
+      sentence: 'Flight 402 to Tokyo is now boarding at Gate 15.',
+      translation: '飛往東京的第 402 班機現在正在 15 號登機門登機。',
+      timestamp: Date.now() + 20,
+    };
+    saveMarkedChunk(record1);
+    saveMarkedChunk(record2);
+    saveMarkedChunk(record3);
+
+    const { result } = renderHook(() => useChunkFlowGame());
+
+    act(() => {
+      result.current.startBlindSpotReview();
+    });
+
+    const expectedIds = ['listening-01-easy-01', 'listening-01-easy-02', 'listening-01-easy-03'];
+    const visitedIds: string[] = [result.current.currentQuestion.id];
+
+    // Advance 5 times
+    for (let i = 0; i < 5; i++) {
+      act(() => {
+        result.current.advanceToNextQuestion();
+      });
+      visitedIds.push(result.current.currentQuestion.id);
+    }
+
+    // The first 3 questions must cover all 3 distinct questions (no ping-pong between 2 items)
+    const firstCycle = visitedIds.slice(0, 3);
+    expect(new Set(firstCycle).size).toBe(3);
+    firstCycle.forEach((id) => expect(expectedIds).toContain(id));
+
+    // The next 3 questions must mirror the cycle order (cyclic permutation)
+    const secondCycle = visitedIds.slice(3, 6);
+    expect(secondCycle).toEqual(firstCycle);
+  });
+
+  it('randomizes the starting question across distinct review sessions based on shuffleArray', () => {
+    const record1: MarkedChunkRecord = {
+      id: 'listening-01-easy-01-0',
+      questionId: 'listening-01-easy-01',
+      trainingId: 'listening-01-easy',
+      chunkText: 'The departure gate',
+      chunkIndex: 0,
+      sentence: 'The departure gate has been moved to Terminal 2 due to scheduled maintenance.',
+      translation: '由於預定的維護工程，登機門已移至第二航廈。',
+      timestamp: Date.now(),
+    };
+    const record2: MarkedChunkRecord = {
+      id: 'listening-01-easy-02-1',
+      questionId: 'listening-01-easy-02',
+      trainingId: 'listening-01-easy',
+      chunkText: 'present their boarding passes',
+      chunkIndex: 1,
+      sentence: 'Passengers must present their boarding passes before entering the boarding area.',
+      translation: '乘客在進入登機區前必須出示登機證。',
+      timestamp: Date.now() + 10,
+    };
+    saveMarkedChunk(record1);
+    saveMarkedChunk(record2);
+
+    // Mock Math.random to force a specific reverse shuffle
+    const randomSpy = vi.spyOn(Math, 'random').mockReturnValue(0.99);
+
+    const { result } = renderHook(() => useChunkFlowGame());
+    act(() => {
+      result.current.startBlindSpotReview();
+    });
+
+    expect(['listening-01-easy-01', 'listening-01-easy-02']).toContain(
+      result.current.currentQuestion.id
+    );
+
+    randomSpy.mockRestore();
+  });
+
+  it('advances forward sequentially when mastering an intermediate item in the review queue', () => {
+    const record1: MarkedChunkRecord = {
+      id: 'listening-01-easy-01-0',
+      questionId: 'listening-01-easy-01',
+      trainingId: 'listening-01-easy',
+      chunkText: 'The departure gate',
+      chunkIndex: 0,
+      sentence: 'The departure gate has been moved to Terminal 2 due to scheduled maintenance.',
+      translation: '由於預定的維護工程，登機門已移至第二航廈。',
+      timestamp: Date.now(),
+    };
+    const record2: MarkedChunkRecord = {
+      id: 'listening-01-easy-02-1',
+      questionId: 'listening-01-easy-02',
+      trainingId: 'listening-01-easy',
+      chunkText: 'present their boarding passes',
+      chunkIndex: 1,
+      sentence: 'Passengers must present their boarding passes before entering the boarding area.',
+      translation: '乘客在進入登機區前必須出示登機證。',
+      timestamp: Date.now() + 10,
+    };
+    const record3: MarkedChunkRecord = {
+      id: 'listening-01-easy-03-0',
+      questionId: 'listening-01-easy-03',
+      trainingId: 'listening-01-easy',
+      chunkText: 'Flight 402 to Tokyo',
+      chunkIndex: 0,
+      sentence: 'Flight 402 to Tokyo is now boarding at Gate 15.',
+      translation: '飛往東京的第 402 班機現在正在 15 號登機門登機。',
+      timestamp: Date.now() + 20,
+    };
+    saveMarkedChunk(record1);
+    saveMarkedChunk(record2);
+    saveMarkedChunk(record3);
+
+    const { result } = renderHook(() => useChunkFlowGame());
+
+    act(() => {
+      result.current.startBlindSpotReview();
+    });
+
+    const q0 = result.current.currentQuestion.id;
+
+    // Advance once
+    act(() => {
+      result.current.advanceToNextQuestion();
+    });
+    const q1 = result.current.currentQuestion.id;
+    expect(q1).not.toBe(q0);
+
+    // Master q1
+    act(() => {
+      result.current.handleMasterChunk();
+    });
+    expect(result.current.markedChunks.length).toBe(2);
+
+    // After mastering q1, the new question should be the third question q2 (not resetting to q0)
+    const qAfterMaster = result.current.currentQuestion.id;
+    expect(qAfterMaster).not.toBe(q1);
+    expect(qAfterMaster).not.toBe(q0);
+
+    // Advancing once more should wrap around back to q0
+    act(() => {
+      result.current.advanceToNextQuestion();
+    });
+    expect(result.current.currentQuestion.id).toBe(q0);
+  });
 });
